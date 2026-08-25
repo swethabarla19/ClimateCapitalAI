@@ -37,10 +37,9 @@ superseded and link them to the replacement decision.
 - **Working state:** Documentation-only Git repository on `main`, connected to the
   public GitHub repository `swethabarla19/ClimateCapitalAI`; no application code or
   tooling exists yet. The Stage 1 and locked Stage 2 checkpoint is published.
-- **Most recent outcome:** Locked the January 2026 Historical Baseline as a
-  historical Austin Watershed decision-support simulation using the $125 million
-  Projects sub-envelope, with strict separation between City history,
-  ClimateCapital analysis, and analyst-created what-if scenarios.
+- **Most recent outcome:** Published and verified the complete Stage 1 and locked
+  Stage 2 documentation checkpoint on the public GitHub `main` branch. Local and
+  remote history are synchronized; Stage 3 is ready to begin.
 
 ## Project Definition
 
@@ -99,9 +98,10 @@ superseded and link them to the replacement decision.
 
 - **Goal:** Complete an approved Product and Design Lock for the September 7 MVP
   submission.
-- **Status:** Stage 1 and Stage 2 approved; Stage 3 not started.
+- **Status:** Stage 1 and Stage 2 approved, checkpointed locally, and published to
+  GitHub; Stage 3 not started.
 - **Owner:** User and Codex.
-- **Relevant files:** `PROJECT_PROGRESS.md`, `AGENTS.md`
+- **Relevant files:** `PROJECT_PROGRESS.md`, `AGENTS.md`, `README.md`
 - **Acceptance criteria:** Product vision, primary user and problem, goals and
   non-goals, prioritized backlog and acceptance criteria, primary journey,
   approved screens and wireframes, demo sequence, timeline, assumptions, risks,
@@ -119,6 +119,8 @@ superseded and link them to the replacement decision.
    the September 6 internal submission window.
 5. Verify organizer submission requirements and finalize the Product and Design
    Lock.
+6. Update this tracker and publish a Git checkpoint after each newly approved
+   planning stage.
 
 ## Completed Milestones
 
@@ -162,6 +164,10 @@ superseded and link them to the replacement decision.
   defines a clear inclusion threshold and labels them separately from core scores.
 - Historical source context and external evidence vintages could be conflated if
   January 21 is incorrectly applied as a blanket dataset-date requirement.
+- The `codex-process-jobs` Stop hook currently exits with code 127 because `node`
+  is unavailable. This did not affect the documentation checkpoint, but process-job
+  completion checks remain unreliable until the runtime or hook configuration is
+  fixed.
 
 ## Open Questions
 
@@ -196,12 +202,17 @@ Not established.
 
 ### Environments and External Services
 
-None established.
+- Public GitHub repository: `https://github.com/swethabarla19/ClimateCapitalAI`.
+- Local environment issue: `node` is unavailable, so the `codex-process-jobs`
+  Stop hook cannot execute its JavaScript helper.
 
 ### Common Commands
 
-None established. Add setup, development, test, lint, build, migration, and deploy
-commands here as they are introduced and verified.
+- `git status --short --branch` — verify working-tree and upstream status.
+- `git log --oneline --decorate --max-count=8` — inspect recent checkpoints.
+- `git push origin main` — publish an approved local checkpoint.
+- Add setup, development, test, lint, build, migration, and deploy commands when
+  application tooling is introduced and verified.
 
 ## Decision Log
 
@@ -235,6 +246,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-25 | Local/remote tracker reconciliation | Compared local `main` and GitHub commit history, remote URL, branch tracking, working-tree state, milestones, blockers, risks, decisions, technical map, and next actions | Passed; remote head matched local head before this tracker update |
 | 2026-08-25 | GitHub checkpoint publication | Verified repository ownership and public visibility, inspected and preserved the remote README commit, merged histories, and pushed `main` | Passed; local `main` tracks `origin/main` |
 | 2026-08-25 | Git and Stop-hook checkpoint | Verified repository root, `main` branch, author configuration, status, remotes, hook registration, and executable availability | Local Git ready; GitHub remote absent; process-jobs Stop hook lacks `node` |
 | 2026-08-25 | Stage 2 product definition | Checked the locked context against all 12 requested clarifications and confirmed that deferred scoring and cohort choices remain open | Passed |
@@ -244,6 +256,22 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-25 — Reconcile the local and remote progress tracker
+
+- **Objective:** Ensure the canonical tracker reflects all approved product work,
+  the local checkpoint, GitHub publication, current operational issue, and the next
+  planning stage.
+- **Completed:** Confirmed Stage 1 and Stage 2 milestones and constraints; verified
+  the public repository and commit history; updated the current snapshot,
+  workstream, risks, technical map, verified Git commands, and next-action handoff.
+- **Files changed:** `PROJECT_PROGRESS.md`.
+- **Verification:** Compared the local `main` history and clean upstream state with
+  GitHub's reported commits and reviewed every required tracker section for current
+  accuracy.
+- **Handoff:** Start Stage 3 by defining and prioritizing P0, P1, and Later user
+  stories with testable acceptance criteria; preserve the locked Stage 2
+  constraints.
 
 ### 2026-08-25 — Publish the Stage 1 and Stage 2 checkpoint to GitHub
 
