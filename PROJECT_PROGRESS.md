@@ -34,9 +34,9 @@ superseded and link them to the replacement decision.
 - **Current focus:** Convert the locked product context and Map → Projects →
   Portfolio journey into prioritized P0, P1, and Later user stories with acceptance
   criteria.
-- **Working state:** Documentation-only Git repository on `main`; no application
-  code or tooling exists yet. The Stage 1 and locked Stage 2 documentation is
-  captured in the initial local checkpoint.
+- **Working state:** Documentation-only Git repository on `main`, connected to the
+  public GitHub repository `swethabarla19/ClimateCapitalAI`; no application code or
+  tooling exists yet. The Stage 1 and locked Stage 2 checkpoint is published.
 - **Most recent outcome:** Locked the January 2026 Historical Baseline as a
   historical Austin Watershed decision-support simulation using the $125 million
   Projects sub-envelope, with strict separation between City history,
@@ -122,6 +122,9 @@ superseded and link them to the replacement decision.
 
 ## Completed Milestones
 
+- **2026-08-25 — Documentation checkpoint published to GitHub:** Connected the
+  public `swethabarla19/ClimateCapitalAI` repository, preserved its initial README,
+  and published the Stage 1 and locked Stage 2 history on `main`.
 - **2026-08-25 — Stage 1 and Stage 2 Git checkpoint created:** Captured the
   repository guidance and canonical product handoff in the initial local commit
   before beginning Stage 3.
@@ -140,9 +143,6 @@ superseded and link them to the replacement decision.
 ## Blockers
 
 - No blocker prevents continued product and UX planning.
-- No GitHub remote is configured; the local checkpoint cannot be pushed until an
-  existing repository URL is provided or creation of a new repository is explicitly
-  authorized.
 - Official judging criteria, submission artifact requirements, and conditional
   live-demo details remain unconfirmed.
 
@@ -189,8 +189,10 @@ Not established.
 
 - `AGENTS.md` — persistent instructions for agents working in this repository.
 - `PROJECT_PROGRESS.md` — canonical current state and cross-session handoff.
+- `README.md` — repository landing-page placeholder created during GitHub setup.
 - Local Git branch: `main`.
-- GitHub remote: Not configured.
+- GitHub remote: `origin` → `https://github.com/swethabarla19/ClimateCapitalAI.git`
+  (public).
 
 ### Environments and External Services
 
@@ -225,6 +227,7 @@ commands here as they are introduced and verified.
 | D-018 | 2026-08-25 | Defer scoring criteria, default weights, confidence methodology, and the final eligible cohort count beyond Stage 2. | These choices require later evidence and requirements work and must not be implied by the Stage 2 lock. | Active |
 | D-019 | 2026-08-25 | Lock Stage 2 decisions as constraints for subsequent planning unless material source evidence contradicts them. | Later stages should refine the product without silently reopening approved product context. | Active |
 | D-020 | 2026-08-25 | Create a local documentation checkpoint after Stage 1 and locked Stage 2, before beginning Stage 3. | The approved product context needs a recoverable baseline before backlog planning continues. | Active |
+| D-021 | 2026-08-25 | Publish the documentation checkpoint to the public `swethabarla19/ClimateCapitalAI` GitHub repository on `main`. | The remote checkpoint provides durable off-device recovery and a visible project history before Stage 3. | Active |
 
 ## Verification Record
 
@@ -232,6 +235,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-25 | GitHub checkpoint publication | Verified repository ownership and public visibility, inspected and preserved the remote README commit, merged histories, and pushed `main` | Passed; local `main` tracks `origin/main` |
 | 2026-08-25 | Git and Stop-hook checkpoint | Verified repository root, `main` branch, author configuration, status, remotes, hook registration, and executable availability | Local Git ready; GitHub remote absent; process-jobs Stop hook lacks `node` |
 | 2026-08-25 | Stage 2 product definition | Checked the locked context against all 12 requested clarifications and confirmed that deferred scoring and cohort choices remain open | Passed |
 | 2026-08-24 | P0 hazard and equity framing | Reconciled the selected option with the current watershed scope and Map → projects → portfolio journey | Passed |
@@ -240,6 +244,22 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-25 — Publish the Stage 1 and Stage 2 checkpoint to GitHub
+
+- **Objective:** Connect the authorized public GitHub repository and publish all
+  completed documentation before Stage 3.
+- **Completed:** Verified `swethabarla19/ClimateCapitalAI` ownership and public
+  visibility; added it as `origin`; inspected and preserved its one-line README
+  commit; merged the histories; and pushed the Stage 1 and locked Stage 2
+  checkpoint to `main`.
+- **Files changed:** `README.md` added from the remote history;
+  `PROJECT_PROGRESS.md` updated with the current repository state.
+- **Verification:** Confirmed GitHub admin and push permissions, fetched and
+  inspected `origin/main`, completed a non-destructive merge, pushed successfully,
+  and configured local `main` to track `origin/main`.
+- **Handoff:** Begin Stage 3 with the locked Stage 2 constraints and checkpointed
+  documentation.
 
 ### 2026-08-25 — Diagnose Stop hook and create documentation checkpoint
 
