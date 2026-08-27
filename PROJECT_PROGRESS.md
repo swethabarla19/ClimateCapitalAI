@@ -29,18 +29,18 @@ superseded and link them to the replacement decision.
 ## Current Snapshot
 
 - **Last updated:** 2026-08-26
-- **Project stage:** Stage 3 backlog approved and locked; Stage 4 screen and UX
-  definition has not started.
-- **Current focus:** Review and checkpoint the approved planning work through Stage
-  3, then define the minimum screen inventory, navigation, requirements, states,
-  and low-fidelity wireframes in Stage 4.
+- **Project stage:** Stage 4 Product and Design Lock approved and complete. Stages
+  1–3 remain locked and authoritative.
+- **Current focus:** Preserve the approved planning baseline through Stage 4, then
+  begin technical execution-readiness planning as a separate, explicitly started
+  work item without silently reopening product or UX scope.
 - **Working state:** Documentation-only Git repository on `main`, connected to the
   public GitHub repository `swethabarla19/ClimateCapitalAI`; no application code or
-  tooling exists yet. The Stage 1 and locked Stage 2 checkpoint is published, and
-  the Stage 3 documentation checkpoint is awaiting review before commit.
-- **Most recent outcome:** Approved and locked the required P0, conditional stretch
-  P0, P1, and Later backlog; story-level acceptance criteria; terminology and scope
-  boundaries; scenario-state rules; and deadline release gates.
+  tooling exists yet. Approved planning is documented through the final Stage 4
+  Product and Design Lock.
+- **Most recent outcome:** Approved and locked the minimum screen inventory,
+  navigation, screen-level requirements, contextual surfaces, important UI and
+  recovery states, low-fidelity wireframes, and three-minute demo sequence.
 
 ## Project Definition
 
@@ -410,43 +410,416 @@ This is the first scope-cut candidate and is not release-blocking.
 - Full mobile support.
 - Outcome tracking or prediction only after suitable validation.
 
+## Locked Stage 4 Product and Design Lock
+
+Stage 4 was approved and locked on 2026-08-26. This is the final Product and
+Design Lock for P0. It defines the minimum coherent analyst experience without
+changing the locked Stage 1–3 product, backlog, analytical, evidence, or release
+decisions. Evidence-dependent content remains unresolved until the evidence stage.
+
+Every project name, count, dollar amount, date, rank, benchmark value, and outcome
+inside the low-fidelity wireframes below is an illustrative placeholder. These
+examples are not source evidence, implementation constants, or later analytical
+decisions.
+
+### Experience and Information Architecture
+
+- Use a desktop-first, tablet-usable application shell with a narrow primary
+  sidebar: **Explore**, **Funding Plan**, **Data & Methodology**, and **Help &
+  Resources**.
+- Keep **Compare** conditional SP0-1. It is reached from existing project list or
+  detail paths only if the stretch story survives the release gates; it is not a
+  required primary destination.
+- Use the global context header to show **Decision: [current decision context]**,
+  **Scenario: [current confirmed scenario]**, and **Available Budget: [amount]**.
+  The current confirmed scenario may be the supported baseline/default result or
+  the active confirmed What-If. Do not label the Historical Benchmark as a
+  scenario or confuse either with the immutable Historical Baseline reference.
+- Preserve Explore state—map extent, active presentation filters, visible layers,
+  selected project, and scroll position—when opening and closing Project Detail or
+  navigating to a linked methodology section.
+- Search, sorting, and filters on Explore affect only visible map/list results.
+  They never change eligibility, scores, ranks, scenario inputs, optimization, or
+  Funding Plan membership.
+- Use progressive disclosure. The Layers popover is closed by default, Project
+  Detail stays hidden until inspection, and Scenario Settings stays hidden until
+  **Adjust Scenario** is invoked. Closing the Layers control does not imply that
+  all analytical layers are off; the approved default visualization may remain
+  active, and its final evidence-backed layer configuration is not a Stage 4
+  decision.
+- Keep full Funding Plan, scenario editing, Historical Benchmark, Reviewed Draft,
+  and permanently open Project Detail content out of Explore.
+
+**Primary navigation flow:** Begin in Explore; inspect a Recommended Projects row
+directly in the shared Project Detail panel or use marker preview → Project Detail;
+close detail without losing Explore state; use **View Funding Plan** to enter the
+dedicated Funding Plan workspace; invoke Scenario Settings, Historical Benchmark,
+Reviewed Draft confirmation, or compact Gemini from that workspace; and use
+anchored links to Data & Methodology or the primary sidebar without changing the
+confirmed scenario. Help & Resources remains independently available from the
+sidebar. The three-minute demo follows this flow but does not remove direct access
+to any primary destination.
+
+### Required Screens
+
+| Screen | Required P0 content and behavior |
+| --- | --- |
+| **Explore** | A large immersive map synchronized with a compact **Recommended Projects** list; the current decision/scenario context and Available Budget; compact approved summary metrics; search and presentation-only filters; a click/tap Layers control and legend; distinct matching and eligible-total counts; a slim current Funding Plan status with **View Funding Plan**; and a small proactive, grounded Gemini insight about the current extent, active filters/layers, and visible projects. |
+| **Funding Plan** | The full deterministic recommendation in grouped **Recommended** and **Not Included** sections; budget used, Available Budget, remainder, project counts, active constraints, and the later-approved objective; baseline-supported deltas for a confirmed What-If; **Adjust Scenario**; a secondary Historical Benchmark entry; compact on-demand Gemini explanation; and **Mark as Reviewed Draft** with current-session status. Individual Funding Priority remains separate from plan membership. |
+| **Data & Methodology** | One anchored, scannable page covering decision context and terminology; eligibility rules, eligible-candidate and excluded-source-record counts, excluded records and reasons; evidence sources and vintages; source versus derived fields; the later-approved transformations, scoring, ranking, confidence, and optimization method; the full-project assumption; missing-data treatment; limitations; and the strict separation of the Historical City Recommendation from ClimateCapital analysis. |
+| **Help & Resources** | A compact quick guide to the four decision contexts/results, how to use Explore and Funding Plan, what Gemini can and cannot do, how to interpret confidence and missingness once approved, accessibility/help guidance, and the historical-simulation/non-official disclaimer. Link to Data & Methodology for detailed provenance. |
+| **Compare — conditional SP0-1** | If retained, compare exactly two projects using existing governed fields, evidence, confidence, status, provenance, and bounded explanation. Do not introduce new calculations, custom metrics, saved comparisons, or comparison of three or more projects. |
+
+### Required Contextual Surfaces
+
+- **Layers popover:** Opens on click/tap, not hover. It lists only supported layers,
+  mirrors the current map visualization state, provides a legend or legend access,
+  and closes without resetting selections. Stage 4 does not decide which
+  evidence-backed layers are active by default.
+- **Map-marker preview:** A lightweight preview appears only after a map marker is
+  selected. It shows the project name, Department Request, supported concise
+  status/evidence, and **View Project Details**. It does not duplicate the full
+  detail panel.
+- **Project Detail:** A shared panel used by all project-inspection paths. A
+  Recommended Projects row opens it directly; a map marker reaches it through the
+  preview. It shows source versus derived values, Department Request, Funding
+  Priority/rank, Funding Plan status, and supported Importance, Climate Risk,
+  Community Vulnerability, and Community Equity measures; it also shows
+  methodology-driven confidence, sources/vintages, limitations, missingness, and
+  bounded Gemini actions. Both entry paths preserve Explore state. Any of these
+  measures appears only when its underlying metric is approved.
+- **Explore Gemini insight:** Compact and proactively visible because spatial
+  interpretation is central to Explore. It is grounded only in current map extent,
+  active filters/layers, and visible governed project results. Expansion stays in
+  the same contextual region and never hides deterministic map/list content.
+- **Scenario Settings:** A Funding Plan drawer opened by **Adjust Scenario**. It
+  edits only Available Budget and later-approved weights, shows current versus
+  proposed values and validation, and requires explicit recalculation/confirmation
+  before replacing the active What-If. Unapplied edits never change the visible
+  current result.
+- **Gemini scenario proposal:** P0-9 remains approved. One atomic, structured
+  proposal may change only budget and approved weights; it shows before/after
+  values and confirm/cancel actions. Confirmation routes through the same
+  validation and deterministic recalculation as manual controls. Gemini does not
+  edit Scenario Settings or analytical outcomes directly.
+- **Historical Benchmark:** A secondary Funding Plan view of the published January
+  2026 Historical City Recommendation. It uses City-specific inclusion terms,
+  preserves published amounts/treatment, shows supported overlap and divergence,
+  and never serves as a scenario input, target, score, or ground truth.
+- **Reviewed Draft confirmation:** An in-place confirmation dialog identifies the
+  current confirmed scenario, budget, weights, and supported outcomes; explains
+  that the designation is current-session, draft, and non-official; and offers
+  cancel/confirm. It does not create a saved scenario, approval, export, or
+  persistence workflow.
+- **Funding Plan Gemini:** Compact by default and expanded only on analyst request.
+  It can explain governed project, ranking, membership, constraint, and scenario
+  results but cannot block or replace deterministic results.
+
+### Important UI State and Recovery Model
+
+Use explicit state categories and local recovery. Never collapse the following
+conditions into a generic “no results” message.
+
+| Context | Required states and recovery behavior |
+| --- | --- |
+| **Explore counts and filters** | Always distinguish the rule-derived eligible cohort from the presentation-filter match count. With active filters, use wording such as **[matching count] matching · [eligible total] eligible total**. No filter matches keeps the eligible-total count, map/list frame, and active filters visible and offers **Clear filters**; it does not imply an empty eligible cohort. |
+| **No eligible projects** | State that documented eligibility produced no eligible candidates, suppress ranking and Funding Plan claims, and link to the eligibility audit in Data & Methodology. Do not present this as a filter result or system failure. |
+| **Missing project geometry** | Keep an otherwise eligible project in the list, ranking, Project Detail, and Funding Plan; label **Map location unavailable** and provide the non-map inspection path. Never invent a marker or exclude the project solely for display geometry. |
+| **Approved-field missingness** | If an approved metric is unavailable for one project, show explicit project-level missingness and the methodology-defined effect. Never display or interpret missing as zero, and Gemini must respect the same limitation. If a metric itself lacks evidence approval, omit it rather than showing a missing placeholder. |
+| **Eligible but not in plan** | Show **Eligible · Not Included in Funding Plan** separately from rank and explain only the supported deterministic constraint/selection reason. Do not imply ineligibility, low importance, or a City decision. |
+| **Valid zero-project plan** | If the deterministic method validly selects no projects under confirmed inputs, show a successful zero-project Funding Plan with the applicable constraint explanation. Distinguish this valid outcome from infeasibility and system failure. |
+| **No feasible optimized Funding Plan** | Show a dedicated analytical-infeasibility state with the relevant validated constraint explanation and a path back to Scenario Settings. Preserve the last successful deterministic Funding Plan and label the attempted inputs as not applied. If no prior result exists, show the dedicated unavailable plan state without fabricating membership. |
+| **Genuine system error** | Name the affected surface, preserve unaffected deterministic content, provide retry guidance, and avoid implying an analytical result. A map/list error, detail error, benchmark error, or methodology-section error is contained locally where possible. |
+| **Project Detail** | Support closed, loading, loaded, approved-field-missing, geometry-missing, locally unavailable, and retry states. Closing or retrying never resets Explore state. A row opens the panel directly; only a marker uses the preview first. |
+| **Funding Plan** | Support initial loading, successful baseline/default result, successful confirmed What-If, valid zero-project result, analytical infeasibility, locally unavailable/system error, and current-session Reviewed Draft indicators. Recommended and Not Included remain separately grouped in successful states. |
+| **Scenario Settings** | Support pristine, dirty/unapplied, invalid, ready to recalculate, recalculating, replacement confirmation, success, infeasible, and system-failure states. Dirty values do not change header context or the visible Funding Plan. On failure or infeasibility, retain attempted values for correction but label them not applied; preserve the previous confirmed scenario and last successful result. |
+| **Historical Benchmark** | Support closed, loading, available, partially supported/missing published fields, unavailable, and retry states. Missing benchmark data never changes ClimateCapital outputs, and City reasoning is never inferred. |
+| **Reviewed Draft** | Support not reviewed, confirmation open, marked for the current session, and cleared states. The designation binds to the exact confirmed result. Unapplied edits do not clear it; confirmation of a replacement What-If warns and clears an accepted What-If designation, after which the new result requires separate review. A failed recalculation leaves the existing designation intact because the confirmed result did not change. |
+| **Gemini explanation** | Support compact/idle, expanded, loading, grounded answer, bounded refusal, unavailable, and retry states. Failure or refusal never hides project evidence, methodology, or Funding Plan results. No required action depends on Gemini. |
+| **Gemini proposal** | Support proposal-ready, validation error, confirmation pending, cancelled, recalculating through the deterministic path, applied, infeasible, and failed. Nothing changes before confirmation; failed or infeasible proposals remain unapplied and preserve the last successful result. |
+| **Data & Methodology** | Support the complete page, anchored deep-link focus, locally loading section, approved-field/source missingness, locally unavailable section, and retry states. A failed linked section does not remove the rest of the methodology or reset the originating screen. |
+| **Help & Resources** | Provide readable content without Gemini. If a deep link is unavailable, keep the guide usable and offer a retry or route to the Data & Methodology landing page. |
+
+Low-confidence warnings appear only when the later-locked confidence methodology
+and threshold require them. Stage 4 introduces no UI-specific confidence judgment.
+
+### Low-Fidelity Wireframes
+
+The wireframes establish hierarchy and behavior, not visual styling or data
+values.
+
+#### Explore
+
+```text
+┌──────────────┬───────────────────────────────────────────────────────────────┐
+│ ClimateCapital│ Decision: [decision context]                                 │
+│              │ Scenario: [current confirmed scenario]                        │
+│ Explore      │ Available Budget: [amount]                                    │
+│ Funding Plan ├───────────────────────────────────────────────────────────────┤
+│ Data & Method│ [approved summary] [approved summary] [plan status]            │
+│ Help         │ [Search] [Presentation filters] [Layers]                       │
+│              ├───────────────────────────────┬───────────────────────────────┤
+│              │                               │ Recommended Projects          │
+│              │        IMMERSIVE MAP          │ [count] matching · [count]    │
+│              │        + legend               │ eligible total                │
+│              │                               │ [project row]                 │
+│              │                               │ [project row]                 │
+│              ├───────────────────────────────┴───────────────────────────────┤
+│              │ Funding Plan: [count] recommended · [budget use] [View Plan]  │
+│              │ Gemini insight: [grounded observation] [Expand]               │
+└──────────────┴───────────────────────────────────────────────────────────────┘
+```
+
+#### Layers popover
+
+```text
+[Layers ▾]
+┌──────────────────────────────┐
+│ Map layers                   │
+│ [current supported layer]    │
+│ [current supported layer]    │
+│ [Legend / layer explanation] │
+└──────────────────────────────┘
+```
+
+The control is closed by default. Checked/active states mirror the separately
+approved default map visualization; Stage 4 does not force all overlays off.
+
+#### Map-marker preview and Project Detail
+
+```text
+Marker click → ┌──────────────────────────┐
+               │ [Project name]           │
+               │ Request: [amount]        │
+               │ [supported brief status] │
+               │ [View Project Details]   │
+               └──────────────────────────┘
+
+Row click ───────────────────────────────┐
+Marker preview → View Project Details ───┤
+                                        ▼
+                         ┌─────────────────────────────────┐
+                         │ Project Detail              [×] │
+                         │ [source and derived values]     │
+                         │ Funding Priority: [rank/score]  │
+                         │ Funding Plan: [status]          │
+                         │ [supported evidence/confidence] │
+                         │ [missingness and limitations]   │
+                         │ [sources and vintages]          │
+                         │ [bounded Gemini action]         │
+                         └─────────────────────────────────┘
+```
+
+#### Explore Gemini insight
+
+```text
+Compact:  ┌───────────────────────────────────────────────┐
+          │ What stands out here: [grounded insight]       │
+          │ [Expand]                                       │
+          └───────────────────────────────────────────────┘
+
+Expanded: ┌───────────────────────────────────────────────┐
+          │ Based on [extent / filters / layers / projects]│
+          │ [grounded explanation + limitations]           │
+          │ [Collapse]                                     │
+          └───────────────────────────────────────────────┘
+```
+
+#### Funding Plan and Scenario Settings
+
+```text
+┌──────────────┬───────────────────────────────────────────────────────────────┐
+│ Navigation   │ Funding Plan · [current confirmed scenario]                  │
+│              │ [budget used] [Available Budget] [remainder] [project count] │
+│              │ [Adjust Scenario] [Historical Benchmark] [Mark Reviewed Draft]│
+│              ├──────────────────────────────┬────────────────────────────────┤
+│              │ Recommended                 │ Not Included                   │
+│              │ [project / request / rank]  │ [project / request / rank]     │
+│              │ [project / request / rank]  │ [supported reason/status]      │
+│              ├──────────────────────────────┴────────────────────────────────┤
+│              │ [constraints/objective] [baseline-supported deltas]          │
+│              │ Gemini explanation [Ask / Expand]                            │
+└──────────────┴───────────────────────────────────────────────────────────────┘
+
+Adjust Scenario → ┌─────────────────────────────────────────┐
+                  │ Scenario Settings                   [×] │
+                  │ Available Budget [current → proposed]   │
+                  │ Approved weights [current → proposed]   │
+                  │ [validation / unapplied status]         │
+                  │ [Cancel] [Recalculate and Confirm]      │
+                  └─────────────────────────────────────────┘
+```
+
+#### Reviewed Draft confirmation
+
+```text
+┌─────────────────────────────────────────────────────┐
+│ Mark this result as the Reviewed Draft?             │
+│ Scenario: [current confirmed scenario]              │
+│ Budget / weights / outcomes: [governed summary]     │
+│ Current-session only · Draft · Not an official plan │
+│                              [Cancel] [Mark Draft]   │
+└─────────────────────────────────────────────────────┘
+```
+
+#### Historical Benchmark
+
+```text
+┌───────────────────────────────────────────────────────────────┐
+│ Historical City Recommendation · [published benchmark date]   │
+│ Descriptive benchmark only · Not a ClimateCapital scenario    │
+│ [City allocation] [City-included count] [supported overlap]    │
+│ City-included            │ Not City-included                   │
+│ [published treatment]    │ [published treatment]               │
+│ [supported divergence; no inferred City reasoning]             │
+└───────────────────────────────────────────────────────────────┘
+```
+
+#### Data & Methodology
+
+```text
+┌──────────────┬───────────────────────────────────────────────────────────────┐
+│ Page anchors │ Data & Methodology                                            │
+│ Context      │ [decision/scenario/benchmark terminology]                     │
+│ Eligibility  │ [rules] [eligible count] [excluded-record count + reasons]    │
+│ Evidence     │ [sources/vintages] [source vs derived] [missingness]           │
+│ Scoring      │ [approved transformations/weights/ranking/confidence]          │
+│ Portfolio    │ [constraint/objective/full-project assumption]                │
+│ Limitations  │ [limits and City benchmark isolation]                         │
+└──────────────┴───────────────────────────────────────────────────────────────┘
+```
+
+#### Help & Resources
+
+```text
+┌──────────────┬───────────────────────────────────────────────────────────────┐
+│ Navigation   │ Help & Resources                                              │
+│              │ [Decision-context and scenario quick guide]                   │
+│              │ [How to Explore] [How to review a Funding Plan]               │
+│              │ [What Gemini can/cannot do] [Confidence/missingness guide]     │
+│              │ [Accessibility/help] [Historical simulation disclaimer]       │
+│              │ [Open Data & Methodology]                                     │
+└──────────────┴───────────────────────────────────────────────────────────────┘
+```
+
+#### Compare — conditional SP0-1
+
+```text
+┌───────────────────────────────────────────────────────────────┐
+│ Compare exactly two projects                                  │
+│ [Project A]                       │ [Project B]                │
+│ [existing governed fields]        │ [existing governed fields]│
+│ [evidence/confidence/missingness]  │ [evidence/confidence]     │
+│ [bounded supported explanation]                                │
+└───────────────────────────────────────────────────────────────┘
+```
+
+### Locked Demo Sequence
+
+The core demo must fit three minutes and follow the approved journey:
+
+1. **Orient:** Establish the January 2026 historical decision context, current
+   confirmed scenario, Available Budget, and historical-simulation disclaimer.
+2. **Explore:** Use the map and synchronized Recommended Projects list to reveal a
+   defensible flood/equity pattern and the proactive grounded spatial insight.
+3. **Inspect:** Open one Project Detail from a row or marker path and show source
+   evidence, Funding Priority, confidence/missingness, and Funding Plan status.
+4. **Review the Funding Plan:** Move to the dedicated workspace and show the
+   deterministic full-project recommendation, budget constraint, and why ranking
+   differs from constrained membership.
+5. **Run one governed What-If:** Adjust only budget or approved weights, confirm
+   deterministic recalculation, and show supported deltas from the immutable
+   Historical Baseline.
+6. **Explain and finish:** Invoke a grounded Gemini explanation, then mark the
+   reviewed result as the current-session Reviewed Draft with the non-official
+   disclaimer.
+
+A five-minute expansion may add the Historical Benchmark, deeper methodology and
+provenance, a second project, failure recovery, or Compare only if conditional
+SP0-1 survives. The Historical Benchmark is not required to interrupt the
+three-minute core sequence.
+
+### Stage 4 Assumptions, Dependencies, and Risks
+
+**Assumptions:**
+
+- P0 serves one capital planning analyst persona in a desktop-first experience.
+- One immutable Historical Baseline and at most one confirmed active What-If are
+  sufficient; the Reviewed Draft designation lasts only for the current session.
+- Deterministic evidence and results remain usable without Gemini.
+- Full-project inclusion/exclusion and presentation-only Explore controls remain
+  P0 constraints.
+
+**Dependencies and unresolved evidence decisions:**
+
+- The evidence stage must approve scoring dimensions, transformations, default and
+  editable weights, confidence methodology and warning threshold, optimization
+  objective, missing-evidence treatment, source vintages, final cohort, defensible
+  geometry, and supported portfolio metrics.
+- **People Potentially Benefiting** and **Implementation Readiness** appear only if
+  evidence decisions approve the underlying measures. If unsupported, omit them;
+  if approved but missing for one project, show explicit missingness.
+- Community Vulnerability and Community Equity remain distinct wherever they
+  represent different approved underlying measures.
+- The evidence stage, not Stage 4, determines the approved default analytical map
+  visualization/layers and any project-specific heat co-benefit treatment.
+- Official judging criteria, submission artifacts, and conditional demo details
+  still require verification.
+
+**Product and deadline risks:**
+
+- The required P0 is broad for the release window; conditional Compare remains the
+  first cut and no P1 work may displace required P0.
+- Dense evidence, scenario, and state information could overwhelm the three-minute
+  story; the locked hierarchy and progressive disclosure must be preserved.
+- Conflating the current confirmed scenario, immutable Historical Baseline, or
+  Historical Benchmark would undermine analytical trust.
+- Unsupported metrics, UI-invented confidence warnings, or missing-as-zero
+  treatment would create misleading results.
+- Failed recalculation or Gemini behavior could appear to overwrite authoritative
+  results unless the last-successful-result and unapplied-input rules are enforced.
+- Missing geometry may weaken the map demonstration, so synchronized non-map paths
+  and visible limitations are release-critical.
+
 ## Current Workstream
 
-- **Goal:** Complete an approved Product and Design Lock for the September 7 MVP
-  submission.
-- **Status:** Stage 1 and Stage 2 are approved and published; the deadline plan and
-  Stage 3 backlog are approved and locked. Stage 4 has not started. The current
-  documentation-only checkpoint is awaiting review before commit or push.
+- **Goal:** Carry the approved Product and Design Lock into a separate technical
+  execution-readiness stage while protecting the September 7 MVP scope and gates.
+- **Status:** Stages 1–4 are approved and locked. The Product and Design Lock is
+  complete, and no application implementation, architecture, data, analytics,
+  Gemini, cloud, dependency, or later-stage work has started.
 - **Owner:** User and Codex.
 - **Relevant files:** `PROJECT_PROGRESS.md`, `AGENTS.md`, `README.md`
-- **Acceptance criteria:** Product vision, primary user and problem, goals and
-  non-goals, prioritized backlog and acceptance criteria, primary journey,
-  approved screens and wireframes, demo sequence, timeline, assumptions, risks,
-  and open questions are documented and explicitly approved.
+- **Acceptance criteria:** The next separately approved plan must treat all Stage
+  1–4 locks, unresolved evidence gates, and release constraints as authoritative
+  and must not silently expand the required P0.
 
 ## Next Actions
 
-1. Review this Stage 3 documentation checkpoint and, only after explicit approval,
-   commit and push it.
-2. Begin Stage 4 by defining the minimum screen inventory, navigation flow, screen
-   requirements, states, and low-fidelity wireframes; obtain explicit Stage 4
-   approval before continuing.
-3. Finalize the primary demo sequence and complete the Product and Design Lock by
-   the August 27 gate.
-4. Verify organizer submission artifacts, judging criteria, and conditional live-
+1. Begin technical execution-readiness planning as a separate, explicitly
+   authorized work item; do not implement application functionality merely because
+   the Product and Design Lock is complete.
+2. Verify organizer submission artifacts, judging criteria, and conditional live-
    demo details.
-5. Resolve evidence-readiness decisions by August 29: governed scoring dimensions,
+3. Resolve evidence-readiness decisions by August 29: governed scoring dimensions,
    default weights, confidence methodology, rule-derived cohort, source vintages,
    supported portfolio metrics, and the heat co-benefit evidence threshold.
-6. Update this tracker and create an approved Git checkpoint after each newly
+4. Reconcile the technical plan and evidence decisions with the September 2
+   feature-freeze gate before beginning integrated feature work.
+5. Update this tracker and create an approved Git checkpoint after each newly
    locked planning stage.
 
 ## Completed Milestones
 
+- **2026-08-26 — Stage 4 Product and Design Lock approved and complete:** Locked
+  the minimum screen inventory, information architecture, contextual surfaces,
+  screen requirements, important state/recovery model, low-fidelity wireframes,
+  demo sequence, and UX assumptions, dependencies, and risks. Compare remains
+  conditional SP0-1, and evidence-dependent content remains unresolved.
 - **2026-08-26 — Stage 3 backlog approved and locked:** Prioritized 12 required P0
   stories, one conditional stretch P0 story, P1, and Later work; defined testable
   acceptance criteria, scenario-state rules, terminology, scope boundaries, and
-  release gates. Stage 4 remains unstarted.
+  release gates.
 - **2026-08-25 — Deadline plan approved:** Allocated approximately 67 hours through
   the September 6 internal submission window, set an August 27 Product and Design
   Lock, placed analytics risk before integration, set a September 2 feature freeze,
@@ -471,10 +844,12 @@ This is the first scope-cut candidate and is not release-blocking.
 
 ## Blockers
 
-- No blocker prevents continued product and UX planning.
+- No blocker remains in Stage 4 product or UX definition.
+- Evidence-stage decisions block implementation of analytical claims, governed
+  metrics, weights, confidence warnings, and default evidence visualizations.
 - Official judging criteria, submission artifact requirements, and conditional
   live-demo details remain unconfirmed and block final submission-package planning,
-  but not Stage 4 UX definition.
+  but not technical execution-readiness planning.
 
 ## Risks and Watch Items
 
@@ -485,10 +860,14 @@ This is the first scope-cut candidate and is not release-blocking.
   expected 15–30 range; the demo must not drive cohort selection.
 - Scoring criteria, default weights, and confidence treatment remain intentionally
   unresolved and could become a trust risk if rushed or presented as arbitrary.
-- The three scenario types may be confused unless names, dates, status, and change
-  provenance are consistently visible.
+- The Historical Decision Snapshot, Historical City Recommendation, current
+  confirmed scenario, and immutable Historical Baseline reference may be confused
+  unless the locked names, status, dates, header, and change provenance are applied
+  consistently.
 - A map-first journey could resemble a generic dashboard unless it reaches the
   constrained portfolio decision quickly.
+- Dense screen content could overwhelm the three-minute demo unless progressive
+  disclosure and the dedicated Funding Plan workspace are preserved.
 - Natural-language propose → review → confirm interactions add meaningful P0 scope
   and must not obscure which inputs changed or who authorized the rerun.
 - Eligible candidates without defensible display geometry will weaken the map-first
@@ -498,6 +877,10 @@ This is the first scope-cut candidate and is not release-blocking.
   usable if Gemini is unavailable.
 - Missing source or methodology support may restrict portfolio comparison metrics;
   P0 must not invent benefits, impacts, or optimization claims for demo appeal.
+- Recalculation failures could mislead analysts unless unapplied inputs remain
+  visibly separate and the last successful deterministic result is preserved.
+- Generic empty/error handling could conflate zero filter matches, no eligible
+  cohort, valid zero-project results, analytical infeasibility, and system errors.
 - Heat context or co-benefit claims could overstate the evidence unless the team
   defines a clear inclusion threshold and labels them separately from core scores.
 - Historical source context and external evidence vintages could be conflated if
@@ -509,6 +892,8 @@ This is the first scope-cut candidate and is not release-blocking.
 
 ## Open Questions
 
+- There are no unresolved Stage 4 screen, navigation, state, wireframe, or demo-
+  sequence decisions.
 - Which governed scoring dimensions, transformations, approved score breakdown,
   optimization objective, and default weights should P0 use?
 - How should missing analytical evidence, uncertainty, and confidence affect
@@ -520,6 +905,11 @@ This is the first scope-cut candidate and is not release-blocking.
   changes are supported by the approved methodology and evidence?
 - What evidence is sufficient to label a watershed project with an urban-heat
   co-benefit?
+- Are People Potentially Benefiting and Implementation Readiness supported well
+  enough to approve as product metrics, and how should project-level missingness be
+  represented if they are approved?
+- Which supported analytical layers, if any, should be visible in the default
+  Explore map state?
 - What are the official submission artifacts, judging criteria, finale date, and
   live-demo format?
 
@@ -600,6 +990,26 @@ Not established.
 | D-041 | 2026-08-26 | Treat draft acceptance as a current-session designation, not a persisted copy; replacing an accepted What-If clears the designation after warning. | This provides a clear end state without adding accounts, storage, versioning, or false workflow semantics. | Active |
 | D-042 | 2026-08-26 | Define Historical City Recommendation as the published January 2026 City Initial Recommendation and use City-specific inclusion terminology. | This preserves historical meaning and prevents City treatment from being confused with ClimateCapital selection. | Active |
 | D-043 | 2026-08-26 | Lock the Stage 3 backlog and acceptance criteria as constraints for Stage 4 and later planning unless material source evidence contradicts them. | Subsequent stages should define the experience and implementation without silently expanding or reopening approved scope. | Active |
+| D-044 | 2026-08-26 | Use Explore and Funding Plan as required primary decision destinations; keep Compare conditional SP0-1. | The smallest coherent P0 needs spatial inspection and a dedicated portfolio workspace, while comparison remains the first deadline cut. | Active |
+| D-045 | 2026-08-26 | Keep Explore map-dominant with a synchronized compact Recommended Projects list and presentation-only search, sorting, and filters. | The map should lead the spatial story without allowing display controls to change analytical results. | Active |
+| D-046 | 2026-08-26 | Use one shared Project Detail component with distinct map-marker and Recommended Projects row entry paths. | Marker clicks need a lightweight preview, while row clicks can open detail directly; both paths must preserve Explore state and converge on the same evidence. | Active |
+| D-047 | 2026-08-26 | Use context-dependent Gemini prominence and shared contextual regions. | Proactive spatial interpretation adds value on Explore, while Funding Plan and project contexts need bounded, optional explanations without permanent chat. | Active |
+| D-048 | 2026-08-26 | Evidence-gate optional metrics and drive low-confidence warnings only from the approved methodology and threshold. | The UI must not invent metrics, confidence judgments, or missing-as-zero interpretations. | Active |
+| D-049 | 2026-08-26 | Preserve optimizer-controlled Funding Plan membership with no manual project override. | P0 scenarios change only budget and approved weights, preserving deterministic portfolio authority. | Active |
+| D-050 | 2026-08-26 | Use one dedicated Funding Plan workspace with a progressive-disclosure Scenario Settings drawer and supported deltas from the immutable Historical Baseline. | The portfolio, governed scenario editing, and comparison need enough space while Explore remains focused. | Active |
+| D-051 | 2026-08-26 | Keep Historical Benchmark as a secondary Funding Plan view. | The published City recommendation is useful descriptive context but is not the current scenario, a target, or an analytical input. | Active |
+| D-052 | 2026-08-26 | Use in-place Reviewed Draft confirmation and bind review state to the exact current-session deterministic result. | This creates a clear demo end state without persistence, approval workflow, or false official status. | Active |
+| D-053 | 2026-08-26 | Use a narrow primary sidebar plus a header showing decision context, current confirmed scenario, and Available Budget. | Persistent context prevents the analyst from confusing the current result with historical references while preserving workspace width. | Active |
+| D-054 | 2026-08-26 | Place the eligibility audit and analytical chain on one anchored Data & Methodology page. | A single traceable source supports provenance without expanding P0 into a separate audit workspace. | Active |
+| D-055 | 2026-08-26 | Group Funding Plan candidates into Recommended and Not Included sections. | The analyst must see both portfolio membership outcomes while keeping individual Funding Priority separate. | Active |
+| D-056 | 2026-08-26 | Keep Help & Resources as a compact quick guide linked to detailed methodology. | Required orientation and limitations need a discoverable home without duplicating the full evidence documentation. | Active |
+| D-057 | 2026-08-26 | Use explicit, non-generic UI state categories and contain recoverable failures to the affected surface. | Zero matches, no eligible cohort, missingness, infeasibility, and system errors have different meanings and recovery paths. | Active |
+| D-058 | 2026-08-26 | Preserve the last successful deterministic Funding Plan across later failed or infeasible recalculation attempts. | Unapplied scenario changes must never overwrite or masquerade as the current confirmed result. | Active |
+| D-059 | 2026-08-26 | Distinguish the presentation-filter match count from the rule-derived eligible-cohort count everywhere. | Filtering changes visibility only and must not appear to change analytical eligibility. | Active |
+| D-060 | 2026-08-26 | Treat every value and name shown in Stage 4 low-fidelity wireframes as an illustrative placeholder. | UX examples must not preempt evidence decisions or become implementation constants. | Active |
+| D-061 | 2026-08-26 | Reaffirm structured Gemini-generated scenario proposals as an already-approved P0 capability. | P0-9, D-032, and D-040 already authorize bounded proposals for budget and approved weights with analyst confirmation and deterministic execution. | Active |
+| D-062 | 2026-08-26 | Keep the Layers control and popover closed by default without deciding default analytical-layer visibility in Stage 4. | Progressive disclosure governs the controls, while the evidence stage must determine the defensible default visualization. | Active |
+| D-063 | 2026-08-26 | Label the header with the current confirmed scenario while keeping the immutable Historical Baseline and Historical Benchmark conceptually separate. | The analyst must distinguish the active result, the baseline reference for supported deltas, and the descriptive City comparison. | Active |
 
 ## Verification Record
 
@@ -607,6 +1017,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-26 | Stage 4 Product and Design Lock closeout | Reviewed the complete documentation diff; ran `git diff --check`; confirmed the changed-file boundary, Stage 4 section coverage, 20 continuous decisions from D-044 through D-063, current-state terminology, and balanced Markdown code fences | Passed; only `PROJECT_PROGRESS.md` and `README.md` changed, Stage 1–3 remain unchanged in meaning, and no application or technical implementation was introduced |
 | 2026-08-26 | Stage 3 documentation checkpoint | Read all repository guidance and canonical documentation; ran `git diff --check`; counted 12 P0 stories, one stretch P0 story, and 13 acceptance-criteria blocks; checked decision-log continuity, stale terminology, branch, status, and remotes | Passed; only `PROJECT_PROGRESS.md` and `README.md` are modified, Stage 4 remains unstarted, and no commit or push was made |
 | 2026-08-25 | Local/remote tracker reconciliation | Compared local `main` and GitHub commit history, remote URL, branch tracking, working-tree state, milestones, blockers, risks, decisions, technical map, and next actions | Passed; remote head matched local head before this tracker update |
 | 2026-08-25 | GitHub checkpoint publication | Verified repository ownership and public visibility, inspected and preserved the remote README commit, merged histories, and pushed `main` | Passed; local `main` tracks `origin/main` |
@@ -618,6 +1029,27 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-26 — Lock Stage 4 Product and Design documentation
+
+- **Objective:** Persist the approved final Product and Design Lock using the
+  repository's existing documentation structure without beginning application or
+  technical implementation.
+- **Completed:** Marked Stage 4 complete; recorded the required screens, navigation
+  and contextual surfaces, screen requirements, important state/recovery model,
+  low-fidelity wireframes, demo sequence, assumptions, dependencies, risks, and
+  evidence deferrals; kept Compare conditional SP0-1; and added D-044 through
+  D-063 while preserving the Stage 1–3 locks.
+- **Files changed:** `PROJECT_PROGRESS.md`, `README.md`. No files were created, and
+  no application, architecture, data, analytics, Gemini, cloud, or dependency work
+  was performed.
+- **Verification:** Reviewed the complete documentation diff; `git diff --check`
+  passed; confirmed only the two intended documentation files changed, all 20 new
+  decisions appear once and in sequence, required Stage 4 content is present,
+  current-state language is updated, and Markdown code fences are balanced.
+- **Handoff:** The next planned work item is a separately authorized technical
+  execution-readiness plan, followed by evidence-stage decisions. Neither has
+  begun.
 
 ### 2026-08-26 — Prepare the locked Stage 3 documentation checkpoint
 
