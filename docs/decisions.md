@@ -90,6 +90,7 @@ and delivery specifications.
 | D-066 | 2026-08-27 / Documentation closeout | Keep PROJECT_PROGRESS.md as the only progress/status file; do not create docs/delivery/progress.md, and create/refine implementation, test, execution, and milestone plans after Architecture Lock. | One progress source avoids drift, while architecture-informed delivery documents provide durable milestone specifications. | Active |
 | D-067 | 2026-08-31 / Architecture planning | Pause Architecture Planning before Architecture Lock and perform authoritative-source evidence reconnaissance across the 37 official Austin Watershed projects as a controlled dependency-resolution step, not a new project phase or product reset. | Geometry, hazard, exposure, engineering, expected flood-reduction benefit, equity joins, identifiers, and vintages must be tested against real project-level evidence before the architecture can safely fix processing boundaries and analytical contracts. | Active |
 | D-068 | 2026-08-31 / Evidence reconnaissance | Establish the November 21, 2025 Watershed bond-project memo as the source from which to derive and preserve the 37-project reconnaissance universe, while preserving the January 21, 2026 Initial Draft Recommendation through a structurally separate benchmark-only path. | A stable official source universe supports complete project-by-project evidence auditing, while structural benchmark isolation prevents historical recommendation outcomes from leaking into ClimateCapital eligibility or analysis. | Active |
+| D-069 | 2026-08-31 / Source-ingestion foundation | Use a Git-tracked canonical source registry for source/vintage/provenance metadata and ignored deterministic local staging paths for immutable raw response bytes; record exact-byte SHA-256 and UTC retrieval time, refuse differing historical-snapshot overwrites, and keep bucket names and credentials outside source metadata and code. | This is the smallest reproducible provenance foundation that preserves authoritative source bytes without committing raw files or prematurely choosing production pipeline, cloud, architecture, or analytical methodology. | Active |
 
 ## Explicitly Recoverable Alternatives and Consequences
 
@@ -130,10 +131,11 @@ alternatives or consequences are recoverable from the approved planning record:
 - **D-064–D-066:** A monolithic progress file and a second progress tracker were
   rejected in favor of purpose-specific durable documents plus one canonical
   current-status file.
-- **D-067–D-068:** Locking architecture or methodology against assumed project
+- **D-067–D-069:** Locking architecture or methodology against assumed project
   evidence was rejected. The project will first test all 37 official source
   projects against authoritative evidence while keeping the later City
-  recommendation on a separate benchmark-only path.
+  recommendation on a separate benchmark-only path; the first source snapshots are
+  governed by a minimal registry, checksum, and immutable-fetch contract.
 
 ## Source-of-Truth Links
 

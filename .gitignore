@@ -1,0 +1,27 @@
+# Operating-system and Python artifacts
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local source-download and staging artifacts
+data/raw/
+data/staging/
+data/tmp/
+*.part
+*.tmp
+*.http-response
+*.api-response
+*.pdf
+*.geojson
+
+# Local credentials and secrets
+.env
+.env.*
+*.pem
+*.key
+application_default_credentials.json
+credentials*.json
+token*.json
+*service-account*.json
+*service_account*.json

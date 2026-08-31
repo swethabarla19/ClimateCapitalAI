@@ -53,18 +53,21 @@ access to prior chat conversations.
   Stage 4. Architecture Planning began and is intentionally paused before
   Architecture Lock for controlled evidence reconnaissance; this is not a new
   project phase or product reset.
-- **Current milestone:** Build an authoritative evidence repository and
-  project-by-project evidence matrix for the 37 official Austin Watershed projects.
-- **Next milestone:** Review the evidence findings and decide whether they are
-  sufficient to resume and complete the Architecture Lock proposal.
-- **Working state:** Documentation-only Git repository on main, connected to the
-  public swethabarla19/ClimateCapitalAI GitHub repository. No application code,
-  datasets, pipelines, dependencies, cloud resources, or architecture
-  implementation exist.
-- **Most recent outcome:** Architecture reconstruction identified project-level
-  evidence feasibility—especially comparable expected flood-reduction benefit—as
-  a prerequisite to safely locking processing boundaries, geospatial requirements,
-  data contracts, and analytical-engine assumptions.
+- **Current milestone:** Minimal reproducible source-ingestion and provenance
+  foundation complete; awaiting user review before any extraction or cloud work.
+- **Next milestone:** After explicit approval, derive the 37-project source universe
+  from the preserved November 21, 2025 memo without inferring eligibility or
+  analytical evidence.
+- **Working state:** Git repository on main, connected to the public
+  swethabarla19/ClimateCapitalAI GitHub repository, with documentation and a
+  minimal standard-library source registry/fetch/test foundation. Two raw PDF
+  snapshots exist only under ignored local staging paths. No project extraction,
+  production pipeline, application, dependency, Architecture Lock, or analytical
+  methodology exists.
+- **Most recent outcome:** Registered and downloaded the November 21, 2025
+  Watershed source-universe memo and January 21, 2026 benchmark document with
+  exact-byte SHA-256 checksums, UTC retrieval timestamps, deterministic ignored
+  paths, overwrite protection, and nine passing validation tests.
 
 ## Approved Locks
 
@@ -94,9 +97,11 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 - **Goal:** Establish what authoritative, historically valid, comparable evidence
   exists for each of the 37 official Watershed projects before resuming
   Architecture Lock decisions.
-- **Status:** Architecture Planning is paused before lock for evidence
-  reconnaissance. No Architecture Lock, scoring methodology, analytical
-  implementation, or production data pipeline is approved.
+- **Status:** The minimal source-ingestion/provenance foundation is implemented and
+  awaiting review. Architecture Planning remains paused; no project rows have been
+  extracted and no Architecture Lock, scoring methodology, analytical
+  implementation, cloud upload, BigQuery load, or production data pipeline is
+  approved.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file, the locked files under docs/product,
   docs/delivery/execution-plan.md, docs/decisions.md, and the non-authoritative
@@ -110,34 +115,44 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 
 ## Next Actions
 
-1. Preserve the November 21, 2025 Watershed bond-project memo and derive the
-   complete 37-project source universe without treating it as the final eligible
-   ClimateCapital cohort.
-2. Preserve the January 21, 2026 Initial Draft Recommendation in a structurally
-   separate benchmark-only path.
-3. Match all 37 official project identifiers to available Austin GIS geometry,
+1. Review the canonical source registry, fetcher, validation evidence, checksums,
+   ignored local snapshots, and provenance/implementation issues from this
+   milestone.
+2. Do not extract the 37 projects, upload to Cloud Storage, load BigQuery, or begin
+   further reconnaissance until the user explicitly authorizes the next task.
+3. If Cloud Storage upload is authorized next, obtain the exact existing raw-data
+   bucket name from the user; do not guess or provision a bucket.
+4. After explicit authorization, derive the complete 37-project source universe
+   from the November 21, 2025 memo without treating it as the final eligible
+   ClimateCapital cohort; retain the January 21 benchmark in its separate path.
+5. Match all 37 official project identifiers to available Austin GIS geometry,
    retaining unmatched projects and documenting every match decision.
-4. Investigate historically valid project-level flood-hazard and problem-severity
+6. Investigate historically valid project-level flood-hazard and problem-severity
    evidence.
-5. Investigate building, structure, and population-exposure evidence.
-6. Investigate equity and vulnerability evidence and defensible joins.
-7. Build a project-by-project engineering and expected flood-reduction benefit
+7. Investigate building, structure, and population-exposure evidence.
+8. Investigate equity and vulnerability evidence and defensible joins.
+9. Build a project-by-project engineering and expected flood-reduction benefit
    evidence inventory without inferring benefit from project/floodplain
    intersection.
-8. Determine which projects can defensibly participate in a common flood-priority
+10. Determine which projects can defensibly participate in a common flood-priority
    model; preserve exclusions and limitations explicitly without inventing values.
-9. Review the resulting 37-project evidence matrix and identify what remains
+11. Review the resulting 37-project evidence matrix and identify what remains
    incomparable, unavailable, or historically invalid.
-10. Use reviewed findings to resume Architecture Planning and decide build-time
+12. Use reviewed findings to resume Architecture Planning and decide build-time
     versus runtime work, geospatial processing, data contracts, historical
     snapshots, benefit comparability, and parameters deferred to methodology.
-11. Do not resume Architecture Lock, create approved architecture files, or begin
+13. Do not resume Architecture Lock, create approved architecture files, or begin
     production analytical implementation until the evidence findings are reviewed.
-12. Separately verify organizer submission artifacts, judging criteria, finale
+14. Separately verify organizer submission artifacts, judging criteria, finale
     date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-08-31 — Minimal source-ingestion foundation implemented:** Added the
+  canonical source registry, deterministic immutable local fetcher, Git protections,
+  and validation tests; downloaded and independently reconciled both authoritative
+  PDFs; performed no extraction, upload, BigQuery work, cloud provisioning,
+  architecture, methodology, or application work.
 - **2026-08-31 — Architecture Lock paused for evidence reconnaissance:** Preserved
   the approved product/design boundary, identified evidence comparability as an
   Architecture dependency, and established the 37-project authoritative-source
@@ -186,6 +201,8 @@ authorize implementation.
 
 ## Blockers
 
+- The exact existing raw-data Cloud Storage bucket name is unknown. This blocks any
+  future GCS upload but does not affect the completed local source preservation.
 - Architecture Lock is intentionally blocked pending review of the 37-project
   evidence matrix and, in particular, whether expected flood-reduction evidence is
   sufficiently available and comparable.
@@ -198,6 +215,11 @@ authorize implementation.
 
 ## Active Risks
 
+- Source-license/reuse terms remain unverified and are recorded as such in the
+  source registry.
+- The local Python 3.12 installation has no default CA bundle configured; verified
+  HTTPS succeeded only when `SSL_CERT_FILE=/etc/ssl/cert.pem` selected the host CA
+  bundle. Certificate verification was not disabled.
 - Comparable project-level expected flood-reduction evidence may not exist across
   the 37-project universe; project/floodplain intersection cannot substitute for
   benefit evidence.
@@ -230,6 +252,7 @@ authorize implementation.
 
 ### Evidence and methodology
 
+- What reuse and redistribution terms govern the two registered City documents?
 - What exact records and stable identifiers constitute the 37-project universe in
   the November 21, 2025 memo?
 - Which projects have authoritative geometry, and what evidence supports each
@@ -261,6 +284,11 @@ authorize implementation.
   deadline, cost, security, and reliability constraints?
 - What data-versioning, lineage, observability, and teardown approach is required?
 
+### Infrastructure handoff
+
+- What is the exact existing raw-data Cloud Storage bucket name if upload is
+  authorized as a later task?
+
 ### Submission
 
 - What are the official submission artifacts, judging criteria, finale date, and
@@ -279,10 +307,22 @@ constitute an Architecture Lock.
 
 ### Evidence Repository
 
-Not established yet. No source memo, benchmark snapshot, geometry, evidence
-matrix, schema, dataset, or reconnaissance artifact has been added to the
-repository. The Historical City Recommendation must remain structurally separate
-from ClimateCapital analytical evidence when these artifacts are created.
+The minimal foundation is established:
+
+- data/metadata/source_registry.csv — canonical Git-tracked source metadata with
+  the two authoritative sources, roles, vintages, caveats, retrieval timestamps,
+  and exact-byte SHA-256 checksums.
+- scripts/data/fetch_sources.py — standard-library HTTPS fetcher with deterministic
+  paths, PDF-byte validation, exact-byte persistence, and overwrite refusal.
+- tests/test_source_ingestion.py — registry, checksum, HTTPS, metadata-update, and
+  immutable-snapshot validation.
+- data/staging/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf —
+  ignored local raw source-universe snapshot.
+- data/staging/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf —
+  ignored local benchmark-only snapshot.
+
+No project rows, geometry, evidence matrix, derived data, Cloud Storage objects,
+or BigQuery tables have been created. Benchmark isolation remains explicit.
 
 ### Repository Structure
 
@@ -297,6 +337,11 @@ from ClimateCapital analytical evidence when these artifacts are created.
 - docs/decisions.md — authoritative durable decision history.
 - docs/reference/technical-architecture-reference.md — exploratory Architecture
   planning reference.
+- .gitignore — raw/staging, PDF, GeoJSON, temporary-response, Python, and common
+  credential-file protections.
+- data/metadata/source_registry.csv — canonical source and provenance registry.
+- scripts/data/fetch_sources.py — minimal reproducible source downloader.
+- tests/test_source_ingestion.py — lightweight source-ingestion validation suite.
 - docs/architecture/ — intentionally absent until explicit Architecture Lock.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md —
   intentionally absent until post-Architecture delivery planning.
@@ -306,7 +351,13 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 
 ### Environments and External Services
 
-- No application environment or cloud resource is established.
+- User-reported existing Google Cloud context: project `climatecapital-ai`, one
+  existing raw-data Cloud Storage bucket whose exact name has not been supplied,
+  and BigQuery datasets raw, staging, curated, and benchmark. This milestone did
+  not inspect, create, mutate, upload to, or load any Google Cloud resource.
+- Local runtime verified with Python 3.12.1 standard library. Its default CA bundle
+  is absent; `/etc/ssl/cert.pem` was used for verified HTTPS.
+- No application environment is established.
 - The local process-job Stop hook lacks the node runtime it expects.
 
 ### Common Commands
@@ -314,6 +365,11 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 - git status --short --branch — verify working tree and upstream.
 - git log --oneline --decorate --max-count=8 — inspect checkpoints.
 - git diff --check — validate documentation whitespace.
+- python3 -m unittest discover -s tests -v — run the source-ingestion suite.
+- python3 scripts/data/fetch_sources.py — fetch both registered sources when the
+  Python environment has a working default CA bundle.
+- SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/data/fetch_sources.py — verified
+  fetch command for the current local Python installation.
 - Add verified setup, test, lint, build, migration, and deploy commands only when
   tooling exists.
 
@@ -330,7 +386,9 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   reopening the approved product.
 - D-068 establishes the 37-project source-universe path and structurally separate
   Historical City Recommendation benchmark path.
-- Next available decision ID: **D-069**.
+- D-069 establishes the canonical registry and immutable raw-fetch/provenance
+  contract without selecting a production pipeline or architecture.
+- Next available decision ID: **D-070**.
 
 ## Verification Record
 
@@ -338,6 +396,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-31 | Minimal source-ingestion and provenance foundation | Ran `python3 -m unittest discover -s tests -v`, `python3 -m py_compile`, canonical-registry validation, `wc -c`, independent `shasum -a 256`, PDF file-type inspection, `git diff --check`, trailing-whitespace scan, `git check-ignore`, and tracked/ignored status review; fetched both sources over verified HTTPS using the host CA bundle | Passed: 9 tests; 2 valid registry rows; both HTTP 200 downloads reconciled byte-for-byte to registry checksums; raw PDFs and Python cache files are ignored; no cloud upload, BigQuery load, extraction, architecture, methodology, application, commit, or push occurred |
 | 2026-08-31 | Architecture pause and evidence-reconnaissance handoff | Reviewed the complete documentation diff; ran `git diff --check`; confirmed 68 continuous decision rows through D-068, next ID D-069, removal of stale “not started”/“ready” status, and preservation of the Product and Design Lock boundary | Passed; only PROJECT_PROGRESS.md, README.md, and docs/decisions.md changed; no architecture, methodology, source data, pipeline, application, cloud, or approved product specification changed |
 | 2026-08-27 | Documentation architecture normalization | Reviewed all repository documentation and the complete changed-file set; ran git diff --check; validated relative Markdown links, required/forbidden file boundaries, 12 required P0 plus one SP0-1 and 13 acceptance blocks, continuous D-001–D-066, required Stage 4 state coverage, balanced fences, and preservation of historical verification/session content | Passed; detailed planning now has purpose-specific authoritative homes, PROJECT_PROGRESS.md remains the only progress tracker, deferred architecture/delivery files are absent, and no application or architecture implementation changed |
 | 2026-08-26 | Stage 4 Product and Design Lock closeout | Reviewed the complete documentation diff; ran `git diff --check`; confirmed the changed-file boundary, Stage 4 section coverage, 20 continuous decisions from D-044 through D-063, current-state terminology, and balanced Markdown code fences | Passed; only `PROJECT_PROGRESS.md` and `README.md` changed, Stage 1–3 remain unchanged in meaning, and no application or technical implementation was introduced |
@@ -352,6 +411,39 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-31 — Implement the minimal source-ingestion foundation
+
+- **Objective:** Establish only the reproducible source registry, immutable local
+  fetch, provenance metadata, tests, and Git protections required to preserve the
+  first two authoritative City documents.
+- **Completed:** Added the exact 15-column canonical registry and registered the
+  November 21 source-universe memo as analytical and the January 21 recommendation
+  as benchmark-only; added a standard-library HTTPS fetcher with deterministic
+  paths, exact-byte SHA-256, UTC retrieval metadata, PDF/header checks, and
+  differing-snapshot overwrite refusal; downloaded both PDFs; added nine focused
+  tests and raw/temporary/credential Git protections; recorded D-069.
+- **Tests and results:** `python3 -m unittest discover -s tests -v` passed 9/9;
+  `python3 -m py_compile` passed; registry validation found two valid unique rows;
+  independent byte counts and `shasum -a 256` values matched the registry; both
+  files were recognized as PDF 1.7; `git diff --check` and the trailing-whitespace
+  scan passed; `git check-ignore` and status confirmed both raw PDFs are ignored.
+- **Files changed:** Added .gitignore, data/metadata/source_registry.csv,
+  scripts/data/fetch_sources.py, and tests/test_source_ingestion.py; updated
+  PROJECT_PROGRESS.md, README.md, and docs/decisions.md. The two downloaded PDFs
+  exist only in ignored data/staging paths.
+- **Deviations and issues:** The sandboxed attempt could not resolve the host. The
+  unrestricted Python retry then exposed a missing default CA bundle; verified
+  HTTPS succeeded with `SSL_CERT_FILE=/etc/ssl/cert.pem`. Certificate verification
+  was never disabled. License/reuse terms remain unverified. The exact existing GCS
+  bucket name was not supplied, so no upload was attempted.
+- **Boundaries preserved:** No PDF extraction, OCR, 37-project derivation,
+  eligibility, analytical evidence, scoring, optimization, Gemini, application,
+  BigQuery table/load, cloud provisioning, Architecture Lock, commit, or push.
+- **Handoff:** Await user review. If Cloud Storage upload is requested, obtain the
+  exact existing bucket name first. Otherwise, the recommended next separately
+  authorized milestone is source-only derivation of the 37 project records without
+  eligibility or analytical inference.
 
 ### 2026-08-31 — Pause Architecture Lock for evidence reconnaissance
 
