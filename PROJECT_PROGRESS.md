@@ -53,21 +53,23 @@ access to prior chat conversations.
   Stage 4. Architecture Planning began and is intentionally paused before
   Architecture Lock for controlled evidence reconnaissance; this is not a new
   project phase or product reset.
-- **Current milestone:** Minimal reproducible source-ingestion and provenance
-  foundation complete; awaiting user review before any extraction or cloud work.
+- **Current milestone:** Minimal reproducible source-ingestion, provenance, and raw
+  Cloud Storage preservation complete; awaiting user review before extraction or
+  further cloud work.
 - **Next milestone:** After explicit approval, derive the 37-project source universe
   from the preserved November 21, 2025 memo without inferring eligibility or
   analytical evidence.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation and a
   minimal standard-library source registry/fetch/test foundation. Two raw PDF
-  snapshots exist only under ignored local staging paths. No project extraction,
-  production pipeline, application, dependency, Architecture Lock, or analytical
-  methodology exists.
-- **Most recent outcome:** Registered and downloaded the November 21, 2025
-  Watershed source-universe memo and January 21, 2026 benchmark document with
-  exact-byte SHA-256 checksums, UTC retrieval timestamps, deterministic ignored
-  paths, overwrite protection, and nine passing validation tests.
+  snapshots exist under ignored local staging paths and at two exact object paths
+  in the existing raw-data Cloud Storage bucket. No project extraction, production
+  pipeline, application, dependency, Architecture Lock, or analytical methodology
+  exists.
+- **Most recent outcome:** Uploaded only the two registered raw PDFs to their exact
+  paths in `gs://climatecapital-ai-raw-swetha/` with create-only generation
+  preconditions, then streamed each generation back and verified byte count and
+  SHA-256 against the local snapshot, expected value, and canonical registry.
 
 ## Approved Locks
 
@@ -97,11 +99,11 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 - **Goal:** Establish what authoritative, historically valid, comparable evidence
   exists for each of the 37 official Watershed projects before resuming
   Architecture Lock decisions.
-- **Status:** The minimal source-ingestion/provenance foundation is implemented and
-  awaiting review. Architecture Planning remains paused; no project rows have been
-  extracted and no Architecture Lock, scoring methodology, analytical
-  implementation, cloud upload, BigQuery load, or production data pipeline is
-  approved.
+- **Status:** The minimal source-ingestion/provenance foundation and two-object raw
+  Cloud Storage preservation are complete and awaiting review. Architecture
+  Planning remains paused; no project rows have been extracted and no Architecture
+  Lock, scoring methodology, analytical implementation, BigQuery load, or
+  production data pipeline is approved.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file, the locked files under docs/product,
   docs/delivery/execution-plan.md, docs/decisions.md, and the non-authoritative
@@ -115,39 +117,43 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 
 ## Next Actions
 
-1. Review the canonical source registry, fetcher, validation evidence, checksums,
-   ignored local snapshots, and provenance/implementation issues from this
-   milestone.
-2. Do not extract the 37 projects, upload to Cloud Storage, load BigQuery, or begin
-   further reconnaissance until the user explicitly authorizes the next task.
-3. If Cloud Storage upload is authorized next, obtain the exact existing raw-data
-   bucket name from the user; do not guess or provision a bucket.
-4. After explicit authorization, derive the complete 37-project source universe
+1. Review the canonical source registry, fetcher, local and cloud checksums, object
+   generations, ignored local snapshots, and provenance/implementation issues from
+   this milestone.
+2. Do not extract the 37 projects, upload additional objects, load BigQuery, or
+   begin further reconnaissance until the user explicitly authorizes the next task.
+3. After explicit authorization, derive the complete 37-project source universe
    from the November 21, 2025 memo without treating it as the final eligible
    ClimateCapital cohort; retain the January 21 benchmark in its separate path.
-5. Match all 37 official project identifiers to available Austin GIS geometry,
+4. Match all 37 official project identifiers to available Austin GIS geometry,
    retaining unmatched projects and documenting every match decision.
-6. Investigate historically valid project-level flood-hazard and problem-severity
+5. Investigate historically valid project-level flood-hazard and problem-severity
    evidence.
-7. Investigate building, structure, and population-exposure evidence.
-8. Investigate equity and vulnerability evidence and defensible joins.
-9. Build a project-by-project engineering and expected flood-reduction benefit
+6. Investigate building, structure, and population-exposure evidence.
+7. Investigate equity and vulnerability evidence and defensible joins.
+8. Build a project-by-project engineering and expected flood-reduction benefit
    evidence inventory without inferring benefit from project/floodplain
    intersection.
-10. Determine which projects can defensibly participate in a common flood-priority
+9. Determine which projects can defensibly participate in a common flood-priority
    model; preserve exclusions and limitations explicitly without inventing values.
-11. Review the resulting 37-project evidence matrix and identify what remains
+10. Review the resulting 37-project evidence matrix and identify what remains
    incomparable, unavailable, or historically invalid.
-12. Use reviewed findings to resume Architecture Planning and decide build-time
+11. Use reviewed findings to resume Architecture Planning and decide build-time
     versus runtime work, geospatial processing, data contracts, historical
     snapshots, benefit comparability, and parameters deferred to methodology.
-13. Do not resume Architecture Lock, create approved architecture files, or begin
+12. Do not resume Architecture Lock, create approved architecture files, or begin
     production analytical implementation until the evidence findings are reviewed.
-14. Separately verify organizer submission artifacts, judging criteria, finale
+13. Separately verify organizer submission artifacts, judging criteria, finale
     date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-08-31 — Two raw source snapshots preserved in Cloud Storage:** Confirmed
+  local and registry checksums, authenticated project/bucket access, absence of both
+  destination objects, and create-only upload support; uploaded exactly two PDFs;
+  verified sizes, generations, and generation-specific streamed SHA-256 values;
+  changed no infrastructure, IAM, bucket settings, credentials, BigQuery, or
+  analytical state.
 - **2026-08-31 — Minimal source-ingestion foundation implemented:** Added the
   canonical source registry, deterministic immutable local fetcher, Git protections,
   and validation tests; downloaded and independently reconciled both authoritative
@@ -201,8 +207,6 @@ authorize implementation.
 
 ## Blockers
 
-- The exact existing raw-data Cloud Storage bucket name is unknown. This blocks any
-  future GCS upload but does not affect the completed local source preservation.
 - Architecture Lock is intentionally blocked pending review of the 37-project
   evidence matrix and, in particular, whether expected flood-reduction evidence is
   sufficiently available and comparable.
@@ -284,11 +288,6 @@ authorize implementation.
   deadline, cost, security, and reliability constraints?
 - What data-versioning, lineage, observability, and teardown approach is required?
 
-### Infrastructure handoff
-
-- What is the exact existing raw-data Cloud Storage bucket name if upload is
-  authorized as a later task?
-
 ### Submission
 
 - What are the official submission artifacts, judging criteria, finale date, and
@@ -320,9 +319,12 @@ The minimal foundation is established:
   ignored local raw source-universe snapshot.
 - data/staging/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf —
   ignored local benchmark-only snapshot.
+- gs://climatecapital-ai-raw-swetha/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf#1788210198102506 — verified cloud source-universe snapshot, 1,151,348 bytes, SHA-256 `d1c2731cc12ecb3938569d29ec0c92d0966d7706af919e0a519b48329493d88e`.
+- gs://climatecapital-ai-raw-swetha/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf#1788210202820922 — verified cloud benchmark-only snapshot, 412,820 bytes, SHA-256 `da85a00273a32afb63f057e0e7f5065078f5e226d2e8c73a3efba69ee4bd0359`.
 
-No project rows, geometry, evidence matrix, derived data, Cloud Storage objects,
-or BigQuery tables have been created. Benchmark isolation remains explicit.
+No project rows, geometry, evidence matrix, derived data, or BigQuery tables have
+been created. No Cloud Storage objects beyond the two raw source objects above
+have been created. Benchmark isolation remains explicit.
 
 ### Repository Structure
 
@@ -351,10 +353,12 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 
 ### Environments and External Services
 
-- User-reported existing Google Cloud context: project `climatecapital-ai`, one
-  existing raw-data Cloud Storage bucket whose exact name has not been supplied,
-  and BigQuery datasets raw, staging, curated, and benchmark. This milestone did
-  not inspect, create, mutate, upload to, or load any Google Cloud resource.
+- Verified Google Cloud context: configured project `climatecapital-ai`, active
+  gcloud authentication and ADC, and existing raw-data bucket
+  `gs://climatecapital-ai-raw-swetha/`. User-reported BigQuery datasets raw,
+  staging, curated, and benchmark were not inspected or changed. This milestone
+  created only the two explicitly authorized raw objects and changed no cloud
+  infrastructure, IAM, bucket settings, credentials, or BigQuery resources.
 - Local runtime verified with Python 3.12.1 standard library. Its default CA bundle
   is absent; `/etc/ssl/cert.pem` was used for verified HTTPS.
 - No application environment is established.
@@ -388,7 +392,9 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   Historical City Recommendation benchmark path.
 - D-069 establishes the canonical registry and immutable raw-fetch/provenance
   contract without selecting a production pipeline or architecture.
-- Next available decision ID: **D-070**.
+- D-070 establishes create-only two-object cloud preservation with independent
+  generation-specific SHA-256 verification.
+- Next available decision ID: **D-071**.
 
 ## Verification Record
 
@@ -396,6 +402,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-31 | Two-object Cloud Storage raw preservation | Confirmed local existence, byte sizes, independent SHA-256, and registry agreement; verified configured project, active gcloud auth, ADC, bucket access, initial object 404s, and create-only generation support; uploaded with `--if-generation-match=0`; described both objects; streamed each generation-specific object through independent SHA-256; ran `git diff --check`, credential scan, tracked/ignored status review, and repository-file review | Passed: exactly two objects created at the authorized paths; local, registry, expected, and cloud-streamed SHA-256 values and byte sizes match; generations 1788210198102506 and 1788210202820922 verified; raw PDFs remain ignored/untracked; no credentials, infrastructure, IAM, bucket settings, BigQuery, extraction, commit, or push changed |
 | 2026-08-31 | Minimal source-ingestion and provenance foundation | Ran `python3 -m unittest discover -s tests -v`, `python3 -m py_compile`, canonical-registry validation, `wc -c`, independent `shasum -a 256`, PDF file-type inspection, `git diff --check`, trailing-whitespace scan, `git check-ignore`, and tracked/ignored status review; fetched both sources over verified HTTPS using the host CA bundle | Passed: 9 tests; 2 valid registry rows; both HTTP 200 downloads reconciled byte-for-byte to registry checksums; raw PDFs and Python cache files are ignored; no cloud upload, BigQuery load, extraction, architecture, methodology, application, commit, or push occurred |
 | 2026-08-31 | Architecture pause and evidence-reconnaissance handoff | Reviewed the complete documentation diff; ran `git diff --check`; confirmed 68 continuous decision rows through D-068, next ID D-069, removal of stale “not started”/“ready” status, and preservation of the Product and Design Lock boundary | Passed; only PROJECT_PROGRESS.md, README.md, and docs/decisions.md changed; no architecture, methodology, source data, pipeline, application, cloud, or approved product specification changed |
 | 2026-08-27 | Documentation architecture normalization | Reviewed all repository documentation and the complete changed-file set; ran git diff --check; validated relative Markdown links, required/forbidden file boundaries, 12 required P0 plus one SP0-1 and 13 acceptance blocks, continuous D-001–D-066, required Stage 4 state coverage, balanced fences, and preservation of historical verification/session content | Passed; detailed planning now has purpose-specific authoritative homes, PROJECT_PROGRESS.md remains the only progress tracker, deferred architecture/delivery files are absent, and no application or architecture implementation changed |
@@ -411,6 +418,36 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-31 — Preserve the two raw snapshots in existing Cloud Storage
+
+- **Objective:** Upload only the two governed local raw PDFs to their exact paths in
+  the existing bucket without changing infrastructure or silently overwriting an
+  object, then independently verify cloud bytes against local and registry SHA-256.
+- **Completed:** Verified local existence, sizes, expected and registry checksums,
+  configured project `climatecapital-ai`, active gcloud authentication, ADC, and
+  access to `gs://climatecapital-ai-raw-swetha/`; confirmed both destination objects
+  were absent; uploaded each with `--if-generation-match=0`; recorded D-070.
+- **Cloud results:** The Watershed source object is generation
+  `1788210198102506`, 1,151,348 bytes. The benchmark object is generation
+  `1788210202820922`, 412,820 bytes. Both have metageneration 1 and content type
+  application/pdf.
+- **Integrity verification:** Streamed each generation-specific GCS object through
+  an independent SHA-256 calculation. Each cloud byte size and SHA-256 matched the
+  corresponding local file, expected digest, and canonical registry checksum.
+  GCS CRC32C and MD5 metadata were observed but were not treated as SHA-256.
+- **Files changed:** Updated PROJECT_PROGRESS.md and docs/decisions.md for durable
+  external-state handoff. No source metadata, raw local file, code, test, product,
+  design, architecture, or analytical file changed.
+- **Issues and warnings:** Sandboxed gcloud version/help checks could not write SDK
+  logs under the local gcloud configuration directory; authenticated commands were
+  executed with approved access and succeeded. No cloud conflict or integrity
+  warning occurred, and no token or credential content was printed or stored.
+- **Boundaries preserved:** No infrastructure, IAM, bucket setting, service account,
+  credential file, additional object, BigQuery resource, extraction, project table,
+  methodology, Architecture Planning, or push.
+- **Handoff:** Await user review. Do not extract the 37 projects or perform further
+  cloud work until separately authorized.
 
 ### 2026-08-31 — Implement the minimal source-ingestion foundation
 
