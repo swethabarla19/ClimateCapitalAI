@@ -92,6 +92,7 @@ and delivery specifications.
 | D-068 | 2026-08-31 / Evidence reconnaissance | Establish the November 21, 2025 Watershed bond-project memo as the source from which to derive and preserve the 37-project reconnaissance universe, while preserving the January 21, 2026 Initial Draft Recommendation through a structurally separate benchmark-only path. | A stable official source universe supports complete project-by-project evidence auditing, while structural benchmark isolation prevents historical recommendation outcomes from leaking into ClimateCapital eligibility or analysis. | Active |
 | D-069 | 2026-08-31 / Source-ingestion foundation | Use a Git-tracked canonical source registry for source/vintage/provenance metadata and ignored deterministic local staging paths for immutable raw response bytes; record exact-byte SHA-256 and UTC retrieval time, refuse differing historical-snapshot overwrites, and keep bucket names and credentials outside source metadata and code. | This is the smallest reproducible provenance foundation that preserves authoritative source bytes without committing raw files or prematurely choosing production pipeline, cloud, architecture, or analytical methodology. | Active |
 | D-070 | 2026-08-31 / Raw-source cloud preservation | Preserve only the two registered raw PDF snapshots at their exact paths in the existing `climatecapital-ai-raw-swetha` bucket, using create-only generation preconditions and generation-specific byte-stream SHA-256 verification against the local files and canonical registry. | Create-only uploads prevent silent overwrite, while independent SHA-256 verification proves cloud bytes match the governed local source without misrepresenting GCS CRC32C or MD5 metadata as SHA-256. This records raw preservation, not a production pipeline or architecture decision. | Active |
+| D-071 | 2026-08-31 / Watershed source-universe extraction | Derive the complete November 21, 2025 named-project table through checksum-gated deterministic PDF extraction; preserve official subproject IDs and source currency text as strings, record lossless integer-dollar values, 1-based physical PDF pages, and derived source-table order, and fail on structural ambiguity or differing-artifact overwrite. | The resulting 37-record artifact is reproducible and traceable to the governed source while preserving source order and wording. It establishes the reconnaissance universe only; source presence does not establish analytical eligibility, project type, geometry, or flood comparability. | Active |
 
 ## Explicitly Recoverable Alternatives and Consequences
 
@@ -132,12 +133,12 @@ alternatives or consequences are recoverable from the approved planning record:
 - **D-064–D-066:** A monolithic progress file and a second progress tracker were
   rejected in favor of purpose-specific durable documents plus one canonical
   current-status file.
-- **D-067–D-070:** Locking architecture or methodology against assumed project
+- **D-067–D-071:** Locking architecture or methodology against assumed project
   evidence was rejected. The project will first test all 37 official source
   projects against authoritative evidence while keeping the later City
   recommendation on a separate benchmark-only path; the first source snapshots are
-  governed by a minimal registry, checksum, immutable-fetch, and create-only cloud
-  preservation contract.
+  governed by a minimal registry, checksum, immutable-fetch, create-only cloud
+  preservation, and fail-closed deterministic source-universe extraction contract.
 
 ## Source-of-Truth Links
 

@@ -7,9 +7,10 @@ simulation of Austin Watershed project planning.
 Current planning status: Stage 4 Product and Design Lock is approved and remains
 in force. Architecture Planning began and is intentionally paused before
 Architecture Lock for controlled evidence reconnaissance across the 37 official
-Austin Watershed projects. A minimal source registry and immutable local-fetch
-foundation now exists; no project rows have been extracted, and no architecture or
-analytical methodology is approved.
+Austin Watershed projects. A minimal source registry, immutable local-fetch
+foundation, and checksum-gated 37-record source-universe extraction now exist;
+analytical eligibility remains unresolved, and no architecture or analytical
+methodology is approved.
 
 ## Repository Documentation
 
