@@ -1,7 +1,7 @@
 # ClimateCapital AI Decision History
 
 > **Status:** Authoritative durable decision log
-> **Last updated:** 2026-08-27
+> **Last updated:** 2026-08-31
 > **Rule:** Existing IDs are immutable and may not be renumbered. New decisions use
 > the next sequential ID. A decision remains active unless this file explicitly
 > marks it superseded and links the replacement.
@@ -88,6 +88,8 @@ and delivery specifications.
 | D-064 | 2026-08-27 / Documentation closeout | Adopt a purpose-specific repository-memory hierarchy: AGENTS.md for working rules, PROJECT_PROGRESS.md for current status/handoff, docs/product for approved product/design, docs/delivery for delivery plans, docs/reference for non-authoritative reference, and docs/decisions.md for decision history. | Fresh tasks must reconstruct approved context from the repository without relying on chat memory, while detailed specifications should not be duplicated in the progress tracker. | Active |
 | D-065 | 2026-08-27 / Documentation closeout | Treat technical-architecture-reference.md as exploratory reference only and create/finalize approved docs/architecture files only after explicit Architecture Lock. | Consolidating technical considerations must not silently approve a system design or preempt Architecture investigation. | Active |
 | D-066 | 2026-08-27 / Documentation closeout | Keep PROJECT_PROGRESS.md as the only progress/status file; do not create docs/delivery/progress.md, and create/refine implementation, test, execution, and milestone plans after Architecture Lock. | One progress source avoids drift, while architecture-informed delivery documents provide durable milestone specifications. | Active |
+| D-067 | 2026-08-31 / Architecture planning | Pause Architecture Planning before Architecture Lock and perform authoritative-source evidence reconnaissance across the 37 official Austin Watershed projects as a controlled dependency-resolution step, not a new project phase or product reset. | Geometry, hazard, exposure, engineering, expected flood-reduction benefit, equity joins, identifiers, and vintages must be tested against real project-level evidence before the architecture can safely fix processing boundaries and analytical contracts. | Active |
+| D-068 | 2026-08-31 / Evidence reconnaissance | Establish the November 21, 2025 Watershed bond-project memo as the source from which to derive and preserve the 37-project reconnaissance universe, while preserving the January 21, 2026 Initial Draft Recommendation through a structurally separate benchmark-only path. | A stable official source universe supports complete project-by-project evidence auditing, while structural benchmark isolation prevents historical recommendation outcomes from leaking into ClimateCapital eligibility or analysis. | Active |
 
 ## Explicitly Recoverable Alternatives and Consequences
 
@@ -128,6 +130,10 @@ alternatives or consequences are recoverable from the approved planning record:
 - **D-064–D-066:** A monolithic progress file and a second progress tracker were
   rejected in favor of purpose-specific durable documents plus one canonical
   current-status file.
+- **D-067–D-068:** Locking architecture or methodology against assumed project
+  evidence was rejected. The project will first test all 37 official source
+  projects against authoritative evidence while keeping the later City
+  recommendation on a separate benchmark-only path.
 
 ## Source-of-Truth Links
 

@@ -48,22 +48,23 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-08-27
-- **Project stage:** Product and Design planning is complete and locked through
-  Stage 4. Documentation normalization is complete; Architecture planning has not
-  started.
-- **Current milestone:** Hand off the approved Product and Design Lock to a fresh
-  Architecture planning task.
-- **Next milestone:** Investigate and explicitly approve an Architecture Lock before
-  creating/finalizing the approved architecture, data-design, cloud-cost, and
-  lineage documents.
+- **Last updated:** 2026-08-31
+- **Project stage:** Product and Design planning remains complete and locked through
+  Stage 4. Architecture Planning began and is intentionally paused before
+  Architecture Lock for controlled evidence reconnaissance; this is not a new
+  project phase or product reset.
+- **Current milestone:** Build an authoritative evidence repository and
+  project-by-project evidence matrix for the 37 official Austin Watershed projects.
+- **Next milestone:** Review the evidence findings and decide whether they are
+  sufficient to resume and complete the Architecture Lock proposal.
 - **Working state:** Documentation-only Git repository on main, connected to the
   public swethabarla19/ClimateCapitalAI GitHub repository. No application code,
   datasets, pipelines, dependencies, cloud resources, or architecture
   implementation exist.
-- **Most recent outcome:** Extracted the approved Stage 1–4 planning into
-  purpose-specific product, design, delivery, decision, and reference documents.
-  PROJECT_PROGRESS.md remains the sole current-status tracker.
+- **Most recent outcome:** Architecture reconstruction identified project-level
+  evidence feasibility—especially comparable expected flood-reduction benefit—as
+  a prerequisite to safely locking processing boundaries, geospatial requirements,
+  data contracts, and analytical-engine assumptions.
 
 ## Approved Locks
 
@@ -83,43 +84,64 @@ access to prior chat conversations.
 Stages 1–4 remain authoritative unless new source evidence creates a material
 contradiction. Full details are in docs/product and docs/decisions.md.
 
+The Architecture pause does not reopen ClimateCapital AI, the Austin Watershed P0
+pilot, the January 21, 2026 context, the $125 million Projects sub-envelope, the
+Map → Projects → Funding Plan journey, deterministic authority, benchmark
+isolation, the Gemini boundary, or any other approved Product and Design Lock.
+
 ## Current Workstream
 
-- **Goal:** Begin a fresh, decision-complete Architecture planning task without
-  reopening locked product/design scope or mistaking reference material for an
-  approved architecture.
-- **Status:** Ready for Architecture planning. No Architecture Lock or technical
-  implementation has begun.
+- **Goal:** Establish what authoritative, historically valid, comparable evidence
+  exists for each of the 37 official Watershed projects before resuming
+  Architecture Lock decisions.
+- **Status:** Architecture Planning is paused before lock for evidence
+  reconnaissance. No Architecture Lock, scoring methodology, analytical
+  implementation, or production data pipeline is approved.
 - **Owner:** User and Codex.
-- **Required reading:** AGENTS.md, this file, all files under docs/product,
-  docs/delivery/execution-plan.md, docs/decisions.md, and
-  docs/reference/technical-architecture-reference.md.
-- **Exit condition:** The user explicitly approves an Architecture Lock. Only then
-  may the approved architecture files under docs/architecture be
-  created/finalized.
+- **Required reading:** AGENTS.md, this file, the locked files under docs/product,
+  docs/delivery/execution-plan.md, docs/decisions.md, and the non-authoritative
+  docs/reference/technical-architecture-reference.md; reconnaissance must also use
+  preserved authoritative sources with explicit provenance.
+- **Exit condition:** A reviewed 37-project evidence matrix provides enough real
+  evidence to decide processing boundaries, geospatial needs, data contracts,
+  historical snapshot handling, benefit comparability, and methodology parameters;
+  Architecture Planning may then resume. Approved architecture files still require
+  explicit Architecture Lock.
 
 ## Next Actions
 
-1. Start a fresh Architecture planning task and read the required handoff set above.
-2. Reconcile current repository reality with the locked product/design constraints
-   and the non-authoritative technical reference.
-3. Investigate architecture alternatives, current cloud/service facts, data design,
-   security, observability, testing implications, and low-cost deployment.
-4. Present a decision-complete Architecture Lock proposal and obtain explicit
-   approval before creating/finalizing docs/architecture files.
-5. Resolve evidence readiness: sources, rule-derived cohort, vintages, defensible
-   geometry, scoring, default/editable weights, confidence methodology,
-   optimization objective, missingness, supported metrics, and map defaults.
-6. Verify organizer submission artifacts, judging criteria, finale date, and
-   conditional live-demo format.
-7. After Architecture Lock, start a fresh implementation/testing planning task to
-   create/refine implementation-plan.md, test-plan.md, execution-plan.md, and
-   milestones.md.
-8. Update this tracker and create an approved Git checkpoint after each locked
-   stage or meaningful delivery milestone.
+1. Preserve the November 21, 2025 Watershed bond-project memo and derive the
+   complete 37-project source universe without treating it as the final eligible
+   ClimateCapital cohort.
+2. Preserve the January 21, 2026 Initial Draft Recommendation in a structurally
+   separate benchmark-only path.
+3. Match all 37 official project identifiers to available Austin GIS geometry,
+   retaining unmatched projects and documenting every match decision.
+4. Investigate historically valid project-level flood-hazard and problem-severity
+   evidence.
+5. Investigate building, structure, and population-exposure evidence.
+6. Investigate equity and vulnerability evidence and defensible joins.
+7. Build a project-by-project engineering and expected flood-reduction benefit
+   evidence inventory without inferring benefit from project/floodplain
+   intersection.
+8. Determine which projects can defensibly participate in a common flood-priority
+   model; preserve exclusions and limitations explicitly without inventing values.
+9. Review the resulting 37-project evidence matrix and identify what remains
+   incomparable, unavailable, or historically invalid.
+10. Use reviewed findings to resume Architecture Planning and decide build-time
+    versus runtime work, geospatial processing, data contracts, historical
+    snapshots, benefit comparability, and parameters deferred to methodology.
+11. Do not resume Architecture Lock, create approved architecture files, or begin
+    production analytical implementation until the evidence findings are reviewed.
+12. Separately verify organizer submission artifacts, judging criteria, finale
+    date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-08-31 — Architecture Lock paused for evidence reconnaissance:** Preserved
+  the approved product/design boundary, identified evidence comparability as an
+  Architecture dependency, and established the 37-project authoritative-source
+  reconnaissance sequence before Architecture Planning resumes.
 - **2026-08-27 — Documentation architecture normalized:** Created authoritative
   product, story, screen, delivery, and decision documents plus a clearly
   non-authoritative technical reference; reduced this tracker to current status and
@@ -157,11 +179,18 @@ A missed gate cuts or freezes scope; it does not consume testing/submission
 contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
+The August 31 analytics-core checkpoint is not authorized while Architecture Lock
+is paused. The September 2 required-P0 feature-freeze gate is therefore at critical
+schedule risk; this status update does not revise the approved deadline or silently
+authorize implementation.
+
 ## Blockers
 
-- No blocker prevents Architecture investigation and planning.
-- No architecture is approved; this blocks architecture implementation and final
-  architecture documents.
+- Architecture Lock is intentionally blocked pending review of the 37-project
+  evidence matrix and, in particular, whether expected flood-reduction evidence is
+  sufficiently available and comparable.
+- No architecture is approved; this blocks architecture implementation, production
+  data pipelines, analytical implementation, and final architecture documents.
 - Evidence decisions block implementation of analytical claims, governed metrics,
   weights, confidence warnings, optimization, and default evidence visualizations.
 - Official judging criteria, submission artifacts, and conditional live-demo
@@ -169,6 +198,15 @@ unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 ## Active Risks
 
+- Comparable project-level expected flood-reduction evidence may not exist across
+  the 37-project universe; project/floodplain intersection cannot substitute for
+  benefit evidence.
+- Project identifiers, geometry, engineering evidence, hazard evidence, exposure,
+  and equity joins may be inconsistent across sources or valid only for different
+  historical vintages.
+- The current delivery baseline is at critical schedule risk because no
+  Architecture Lock, evidence matrix, application, pipeline, or analytical
+  implementation exists as of August 31.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
 - Architecture and evidence work are now on the critical path and must stay bounded.
@@ -192,6 +230,14 @@ unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 ### Evidence and methodology
 
+- What exact records and stable identifiers constitute the 37-project universe in
+  the November 21, 2025 memo?
+- Which projects have authoritative geometry, and what evidence supports each
+  identifier/geometry match?
+- Which historically valid hazard, severity, exposure, engineering, benefit,
+  equity, and vulnerability fields exist project by project?
+- Is expected flood-reduction benefit comparable across enough projects for a
+  common priority model, or must projects/metrics remain differentiated?
 - Which governed scoring dimensions, transformations, score breakdown,
   optimization objective, and default/editable weights should P0 use?
 - How should missing evidence, uncertainty, and confidence affect eligibility,
@@ -205,6 +251,8 @@ unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 ### Architecture
 
+- Which architecture choices can be decided from current constraints, and which
+  must remain parameterized until the evidence matrix is reviewed?
 - What is the smallest low-cost deployable system that satisfies required P0?
 - Which work is precomputed versus performed at runtime?
 - What governed contract separates deterministic analysis, UI, Historical
@@ -225,8 +273,16 @@ sequence decisions.
 
 ### Architecture
 
-Not established. The technical reference is exploratory and does not constitute an
-Architecture Lock.
+Not established. Architecture Planning is paused before lock for 37-project
+evidence reconnaissance. The technical reference remains exploratory and does not
+constitute an Architecture Lock.
+
+### Evidence Repository
+
+Not established yet. No source memo, benchmark snapshot, geometry, evidence
+matrix, schema, dataset, or reconnaissance artifact has been added to the
+repository. The Historical City Recommendation must remain structurally separate
+from ClimateCapital analytical evidence when these artifacts are created.
 
 ### Repository Structure
 
@@ -270,7 +326,11 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-065 keeps the technical reference non-authoritative until Architecture Lock.
 - D-066 keeps PROJECT_PROGRESS.md as the only progress file and defers
   architecture-informed delivery plans.
-- Next available decision ID: **D-067**.
+- D-067 pauses Architecture Lock for controlled evidence reconnaissance without
+  reopening the approved product.
+- D-068 establishes the 37-project source-universe path and structurally separate
+  Historical City Recommendation benchmark path.
+- Next available decision ID: **D-069**.
 
 ## Verification Record
 
@@ -278,6 +338,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-31 | Architecture pause and evidence-reconnaissance handoff | Reviewed the complete documentation diff; ran `git diff --check`; confirmed 68 continuous decision rows through D-068, next ID D-069, removal of stale “not started”/“ready” status, and preservation of the Product and Design Lock boundary | Passed; only PROJECT_PROGRESS.md, README.md, and docs/decisions.md changed; no architecture, methodology, source data, pipeline, application, cloud, or approved product specification changed |
 | 2026-08-27 | Documentation architecture normalization | Reviewed all repository documentation and the complete changed-file set; ran git diff --check; validated relative Markdown links, required/forbidden file boundaries, 12 required P0 plus one SP0-1 and 13 acceptance blocks, continuous D-001–D-066, required Stage 4 state coverage, balanced fences, and preservation of historical verification/session content | Passed; detailed planning now has purpose-specific authoritative homes, PROJECT_PROGRESS.md remains the only progress tracker, deferred architecture/delivery files are absent, and no application or architecture implementation changed |
 | 2026-08-26 | Stage 4 Product and Design Lock closeout | Reviewed the complete documentation diff; ran `git diff --check`; confirmed the changed-file boundary, Stage 4 section coverage, 20 continuous decisions from D-044 through D-063, current-state terminology, and balanced Markdown code fences | Passed; only `PROJECT_PROGRESS.md` and `README.md` changed, Stage 1–3 remain unchanged in meaning, and no application or technical implementation was introduced |
 | 2026-08-26 | Stage 3 documentation checkpoint | Read all repository guidance and canonical documentation; ran `git diff --check`; counted 12 P0 stories, one stretch P0 story, and 13 acceptance-criteria blocks; checked decision-log continuity, stale terminology, branch, status, and remotes | Passed; only `PROJECT_PROGRESS.md` and `README.md` are modified, Stage 4 remains unstarted, and no commit or push was made |
@@ -291,6 +352,27 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-31 — Pause Architecture Lock for evidence reconnaissance
+
+- **Objective:** Record the controlled Architecture Planning dependency-resolution
+  step needed to test the 37 official Watershed projects against authoritative,
+  historically valid evidence before architecture or methodology is locked.
+- **Completed:** Preserved every approved Product and Design Lock; paused
+  Architecture Planning before lock; made the 37-project evidence repository and
+  matrix the immediate objective; recorded the source-universe and benchmark-only
+  separation; updated blockers, risks, open questions, Next Actions, and the
+  Architecture handoff; added D-067 and D-068.
+- **Files changed:** PROJECT_PROGRESS.md, README.md, and docs/decisions.md. No
+  product specification, architecture file, methodology, source dataset, pipeline,
+  application code, dependency, Gemini integration, or cloud resource changed.
+- **Verification:** Reviewed the complete diff; `git diff --check` passed; confirmed
+  68 continuous decision rows through D-068, next ID D-069, and no stale current
+  status claiming Architecture Planning is unstarted or ready to lock.
+- **Handoff:** Begin with the November 21, 2025 source memo, preserve all 37 source
+  projects, keep the January 21, 2026 City recommendation structurally separate,
+  and build the evidence matrix without inventing benefit, geometry, exclusions,
+  or methodology. Resume Architecture Planning only after findings are reviewed.
 
 ### 2026-08-27 — Normalize durable planning documentation
 

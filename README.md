@@ -4,9 +4,10 @@ ClimateCapital AI is a public-sector decision-support concept for comparing and
 prioritizing climate-relevant capital projects. Its first pilot is a historical
 simulation of Austin Watershed project planning.
 
-Current planning status: Stage 4 Product and Design Lock approved and complete;
-documentation has been normalized for a fresh Architecture planning task.
-Architecture and evidence-stage work have not started.
+Current planning status: Stage 4 Product and Design Lock is approved and remains
+in force. Architecture Planning began and is intentionally paused before
+Architecture Lock for controlled evidence reconnaissance across the 37 official
+Austin Watershed projects. No architecture or analytical methodology is approved.
 
 ## Repository Documentation
 
