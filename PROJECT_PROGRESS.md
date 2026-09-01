@@ -48,32 +48,36 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-08-31
+- **Last updated:** 2026-09-01
 - **Project stage:** Product and Design planning remains complete and locked through
   Stage 4. Architecture Planning began and is intentionally paused before
   Architecture Lock for controlled evidence reconnaissance; this is not a new
   project phase or product reset.
-- **Current milestone:** Source-faithful 37-project Watershed raw table loaded to
-  BigQuery and independently validated through warehouse SQL; awaiting user review
-  before GIS matching or further evidence reconnaissance.
-- **Next milestone:** After explicit approval, match all 37 official subproject IDs
-  to available Austin GIS geometry while retaining unmatched records and documenting
-  every match decision.
+- **Current milestone:** Live Austin RNA Projects layer 8 preserved as an immutable,
+  generation-verified native ArcGIS JSON snapshot and matched by exact governed ID
+  against all 37 official projects; awaiting review before analytical-feasibility
+  reconnaissance continues.
+- **Next milestone:** After review, investigate historically valid project-level
+  flood-hazard and problem-severity evidence while preserving unsupported and
+  incomparable cases explicitly.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
   Watershed table extractor, a Git-tracked 37-record source-universe CSV, one
   pinned BigQuery client dependency, a create-only raw loader, durable SQL quality
-  checks, and focused validation tests. Two raw PDF snapshots remain ignored
-  locally and preserved at their exact Cloud Storage paths; the source-universe CSV
-  is preserved in one validated `raw` BigQuery table. No GIS matching, eligibility,
-  production pipeline, application, Architecture Lock, or analytical methodology
-  exists.
-- **Most recent outcome:** Verified
-  `climatecapital-ai.raw.watershed_projects_2025_11_21` in `us-central1` with the
-  exact nine-column REQUIRED schema, 37 rows, 37 unique project IDs,
-  $327,970,000, source-specific row associations, and a full ordered semantic
-  fingerprint matching the committed CSV.
+  checks, focused validation tests, a native ArcGIS acquisition/matching workflow,
+  and Git-tracked snapshot provenance and match artifacts. The raw PDFs and GIS
+  responses remain ignored locally and are preserved at exact generation-verified
+  Cloud Storage paths; the source-universe CSV remains in one validated `raw`
+  BigQuery table. No eligibility, production pipeline, application, Architecture
+  Lock, or analytical methodology exists.
+- **Most recent outcome:** Acquired the 20260901T183323Z live layer-8 snapshot with
+  577 polygon features, stable pre/post OBJECTID sets, lossless numeric-ID audit,
+  native 102739/2277 CRS, and no true curves. Exact governed-ID matching produced
+  15 single matches, 22 explicit zero matches, and no multiple matches; matched and
+  unmatched governed requests total $163,975,000 and $163,995,000 respectively,
+  reconciling to all 37 projects and $327,970,000. This current/live result does
+  not establish January 2026 geometry or eligibility.
 
 ## Approved Locks
 
@@ -104,9 +108,10 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
   exists for each of the 37 official Watershed projects before resuming
   Architecture Lock decisions.
 - **Status:** The source-ingestion/provenance foundation, raw preservation,
-  checksum-gated 37-record extraction, and independently validated source-faithful
-  BigQuery raw copy are complete and awaiting review. Architecture Planning remains
-  paused; no record has been declared eligible, matched to GIS, classified
+  checksum-gated 37-record extraction, independently validated source-faithful
+  BigQuery raw copy, and bounded live RNA layer-8 geometry reconnaissance are
+  complete and awaiting review. Architecture Planning remains paused; a live GIS
+  match is evidence only, and no record has been declared eligible, classified
   analytically, or used for scoring, optimization, or application work.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file, the locked files under docs/product,
@@ -121,36 +126,39 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 
 ## Next Actions
 
-1. Review the hardened create-only BigQuery loader, exact live schema, 21 passing
-   warehouse quality checks, source-specific rows, semantic fingerprint, tests,
-   limitations, and Git diff.
-2. Do not begin GIS matching, eligibility, additional evidence work, staging or
-   curated tables, or benchmark ingestion until the user explicitly authorizes the
-   next task.
-3. After explicit authorization, match all 37 official project identifiers to
-   available Austin GIS geometry,
-   retaining unmatched projects and documenting every match decision.
-4. Investigate historically valid project-level flood-hazard and problem-severity
-   evidence.
-5. Investigate building, structure, and population-exposure evidence.
-6. Investigate equity and vulnerability evidence and defensible joins.
-7. Build a project-by-project engineering and expected flood-reduction benefit
+1. Review the timestamped layer-8 snapshot, manifest, GCS receipt, exact-ID match
+   artifact, 15/22/0 coverage result, funding reconciliation, limitations, tests,
+   and Git diff.
+2. Do not treat a live GIS match as January 2026 geometry or analytical
+   eligibility, and do not investigate other GIS systems for the 22 zero-match
+   projects unless a later task explicitly authorizes it.
+3. After explicit authorization, investigate historically valid project-level
+   flood-hazard and problem-severity evidence.
+4. Investigate building, structure, and population-exposure evidence.
+5. Investigate equity and vulnerability evidence and defensible joins.
+6. Build a project-by-project engineering and expected flood-reduction benefit
    evidence inventory without inferring benefit from project/floodplain
    intersection.
-8. Determine which projects can defensibly participate in a common flood-priority
+7. Determine which projects can defensibly participate in a common flood-priority
    model; preserve exclusions and limitations explicitly without inventing values.
-9. Review the resulting 37-project evidence matrix and identify what remains
+8. Review the resulting 37-project evidence matrix and identify what remains
    incomparable, unavailable, or historically invalid.
-10. Use reviewed findings to resume Architecture Planning and decide build-time
-    versus runtime work, geospatial processing, data contracts, historical
-    snapshots, benefit comparability, and parameters deferred to methodology.
-11. Do not resume Architecture Lock, create approved architecture files, or begin
+9. Use reviewed findings to resume Architecture Planning and decide build-time
+   versus runtime work, geospatial processing, data contracts, historical
+   snapshots, benefit comparability, and parameters deferred to methodology.
+10. Do not resume Architecture Lock, create approved architecture files, or begin
     production analytical implementation until the evidence findings are reviewed.
-12. Separately verify organizer submission artifacts, judging criteria, finale
+11. Separately verify organizer submission artifacts, judging criteria, finale
     date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-09-01 — Live RNA layer-8 geometry reconnaissance completed:** Preserved a
+  stable 577-feature native ArcGIS JSON snapshot with exact-byte and semantic
+  fingerprints, exact numeric-token ID handling, native CRS/geometry audit, and
+  create-only generation-verified GCS storage; tested all 37 governed IDs and
+  retained 15 single matches, 22 zero matches, and no multiple matches without
+  inferring historical validity, eligibility, exposure, or benefit.
 - **2026-08-31 — Raw BigQuery ingestion and quality checkpoint completed:**
   Reviewed and hardened the manual loader without replacing its core approach;
   verified the existing `us-central1` table's exact schema and 37 rows; passed 21
@@ -235,6 +243,19 @@ authorize implementation.
 
 - Source-license/reuse terms remain unverified and are recorded as such in the
   source registry.
+- RNA Projects layer 8 is a live/current City service with no established January
+  2026 effective date. Its timestamped geometry is research-only feasibility
+  evidence and must not be represented as historical decision-context geometry.
+- Twenty-two of the 37 governed projects have no exact ID match in the captured
+  live layer-8 snapshot. Missing live geometry is not an eligibility failure, and
+  other GIS systems were intentionally not investigated in this work unit.
+- Three of the 15 exact-ID GIS matches have non-identical project names. Names were
+  retained as evidence but did not affect matching; project identity still needs
+  source-specific review wherever later analytical use is contemplated.
+- Layer-8 features are source polygons in ESRI:102739/EPSG:2277. The acquisition
+  preserves them without transformation, simplification, curve densification, or
+  repair, and polygon semantics have not been validated as project footprints or
+  benefit areas.
 - BigQuery does not enforce project-ID uniqueness, source sequence, totals, or the
   semantic fingerprint as table constraints. The loader refuses an existing table,
   but any separately authorized mutation by another tool or user requires rerunning
@@ -278,10 +299,12 @@ authorize implementation.
 ### Evidence and methodology
 
 - What reuse and redistribution terms govern the two registered City documents?
+- What reuse and redistribution terms govern the live City RNA GIS snapshot?
 - How stable are the 37 official subproject identifiers across GIS and later
   engineering/evidence sources?
-- Which projects have authoritative geometry, and what evidence supports each
-  identifier/geometry match?
+- Can January 2026 geometry or an effective-date history be established for the 15
+  live layer-8 matches, and what authoritative geometry exists for the 22 explicit
+  zero matches?
 - Which historically valid hazard, severity, exposure, engineering, benefit,
   equity, and vulnerability fields exist project by project?
 - Is expected flood-reduction benefit comparable across enough projects for a
@@ -329,9 +352,10 @@ constitute an Architecture Lock.
 
 The minimal foundation is established:
 
-- data/metadata/source_registry.csv — canonical Git-tracked source metadata with
-  the two authoritative sources, roles, vintages, caveats, retrieval timestamps,
-  and exact-byte SHA-256 checksums.
+- data/metadata/source_registry.csv — canonical Git-tracked source metadata for
+  two authoritative PDFs and one live/current research-only GIS source, with
+  roles, historical-fit caveats, retrieval timestamps, and exact-byte SHA-256
+  checksums. The GIS source's January 2026 fit remains uncertain.
 - scripts/data/fetch_sources.py — standard-library HTTPS fetcher with deterministic
   paths, PDF-byte validation, exact-byte persistence, and overwrite refusal.
 - tests/test_source_ingestion.py — registry, checksum, HTTPS, metadata-update, and
@@ -359,6 +383,25 @@ The minimal foundation is established:
 - sql/quality/watershed_projects_raw_checks.sql — 21 read-only warehouse checks
   covering schema, identity, completeness, totals, strings, source-specific row
   associations, and the full ordered semantic fingerprint.
+- scripts/data/fetch_rna_projects_gis.py — layer-8-only native ArcGIS JSON
+  acquisition and create-only GCS preservation CLI with exact numeric-token
+  parsing, frozen pre/post OBJECTID checks, schema/CRS/geometry audits, raw and
+  semantic fingerprints, and generation-specific cloud-byte verification.
+- scripts/data/match_watershed_projects_rna.py — deterministic exact-ID matcher
+  covering the complete governed source universe, preserving explicit zero- and
+  multi-match states and reconciling governed project counts and request dollars.
+- tests/test_rna_projects_gis_reconnaissance.py — focused source-fidelity,
+  Decimal-ID, OBJECTID consistency, geometry/CRS, manifest, matching,
+  reconciliation, create-only GCS, cloud-byte, and tracked-artifact validation.
+- data/metadata/source_snapshots/austin_rna_projects_layer_8_live/20260901T183323Z/manifest.json —
+  Git-tracked acquisition manifest for the immutable native snapshot; the ID is a
+  UTC retrieval timestamp, not a source vintage.
+- data/metadata/source_snapshots/austin_rna_projects_layer_8_live/20260901T183323Z/gcs_receipt.json —
+  Git-tracked GCS object generations, byte sizes, local checksums, and independently
+  streamed generation-specific cloud checksums; the receipt itself is not uploaded.
+- data/reconnaissance/city_austin/rna_projects/layer_8/20260901T183323Z/project_id_geometry_matches.csv —
+  Git-tracked 37-project exact-ID match artifact with 15 single matches, 22 zero
+  matches, and no multiple matches in the captured live snapshot.
 - data/staging/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf —
   ignored local raw source-universe snapshot.
 - data/staging/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf —
@@ -368,6 +411,10 @@ The minimal foundation is established:
 - climatecapital-ai.raw.watershed_projects_2025_11_21 — source-faithful BigQuery
   raw table in `us-central1`, with 37 REQUIRED-schema rows and 21 passing SQL
   quality checks.
+- gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/ —
+  six create-only raw/provenance objects (`service.json`, `layer.json`, pre/post
+  OBJECTID responses, `features.arcgis.json`, and `manifest.json`) whose exact
+  local bytes were verified against generation-specific cloud streams.
 
 The ordered raw-table schema is `source_id STRING REQUIRED`,
 `source_pdf_page INTEGER REQUIRED`, `source_table_row_order INTEGER REQUIRED`,
@@ -377,11 +424,12 @@ The ordered raw-table schema is `source_id STRING REQUIRED`,
 `current_funding_request_estimate_dollars INTEGER REQUIRED`, and
 `council_districts_source STRING REQUIRED`.
 
-The 37 official source rows above have been extracted and loaded only to the raw
-table. No eligibility result, GIS match, analytical classification, evidence
-matrix, score, optimization result, staging/curated table, or benchmark table has
-been created. No Cloud Storage objects beyond the two raw source objects above have
-been created. Benchmark isolation remains explicit.
+The 37 official source rows above have been extracted, loaded only to the raw
+table, and tested against one immutable live/current GIS snapshot. No GIS match is
+an eligibility result, and the snapshot does not establish January 2026 geometry.
+No analytical classification, flood/exposure/benefit inference, evidence matrix,
+score, optimization result, staging/curated table, or benchmark table has been
+created. Benchmark isolation remains explicit.
 
 ### Repository Structure
 
@@ -404,10 +452,18 @@ been created. Benchmark isolation remains explicit.
 - data/metadata/source_registry.csv — canonical source and provenance registry.
 - data/reconnaissance/city_austin/watershed_bond_projects/2025-11-21/projects.csv —
   tracked official source-universe extraction.
+- data/metadata/source_snapshots/austin_rna_projects_layer_8_live/ — tracked
+  timestamped GIS acquisition manifests and post-upload GCS receipts.
+- data/reconnaissance/city_austin/rna_projects/layer_8/ — tracked timestamped
+  complete-universe project-ID/geometry match artifacts.
 - scripts/data/fetch_sources.py — minimal reproducible source downloader.
 - scripts/data/extract_watershed_projects.py — deterministic source-universe
   extractor and reconciliation CLI.
 - scripts/data/load_watershed_projects_bigquery.py — guarded raw BigQuery loader.
+- scripts/data/fetch_rna_projects_gis.py — immutable layer-8 acquisition and
+  create-only verified GCS upload CLI.
+- scripts/data/match_watershed_projects_rna.py — complete-universe exact-ID GIS
+  matcher and governed funding reconciliation CLI.
 - sql/quality/watershed_projects_raw_checks.sql — read-only warehouse data-quality
   suite.
 - tests/test_source_ingestion.py — lightweight source-ingestion validation suite.
@@ -415,6 +471,8 @@ been created. Benchmark isolation remains explicit.
   validation suite.
 - tests/test_watershed_bigquery_loader.py — non-destructive raw-loader contract and
   safety tests.
+- tests/test_rna_projects_gis_reconnaissance.py — native source, provenance,
+  matching, reconciliation, and cloud-preservation tests.
 - docs/architecture/ — intentionally absent until explicit Architecture Lock.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md —
   intentionally absent until post-Architecture delivery planning.
@@ -428,9 +486,11 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   gcloud authentication and ADC, and existing raw-data bucket
   `gs://climatecapital-ai-raw-swetha/`. The existing `raw` BigQuery dataset and
   `watershed_projects_2025_11_21` table were inspected in `us-central1`; the table
-  has the exact governed schema and 37 rows. No existing cloud data, infrastructure,
-  IAM, dataset/bucket settings, or credentials were changed; staging, curated, and
-  benchmark datasets/tables were not inspected.
+  has the exact governed schema and 37 rows. Six create-only objects for the
+  20260901T183323Z RNA layer-8 snapshot were added under the authorized raw-data
+  prefix and independently verified from generation-specific streams. No existing
+  cloud object, infrastructure, IAM, dataset/bucket setting, or credential was
+  changed; staging, curated, and benchmark datasets/tables were not inspected.
 - Current local data runtime verified with Python 3.14.7, pypdf 6.16.2, and
   google-cloud-bigquery 3.44.0 in the ignored `.venv`. BigQuery access used local
   ADC; no credential material is stored in the repository. The earlier Python 3.12
@@ -456,6 +516,18 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   source-universe CSV.
 - .venv/bin/python scripts/data/load_watershed_projects_bigquery.py — create the raw
   table only when absent; current reruns refuse the existing historical target.
+- SSL_CERT_FILE=/etc/ssl/cert.pem .venv/bin/python
+  scripts/data/fetch_rna_projects_gis.py acquire --max-attempts 3 — acquire a new
+  UTC-timestamped layer-8 native snapshot after frozen-OBJECTID consistency,
+  source-contract, numeric-ID, geometry, and manifest validation.
+- .venv/bin/python scripts/data/match_watershed_projects_rna.py --snapshot-id
+  20260901T183323Z — create or confirm the deterministic complete-universe exact-ID
+  match artifact and funding reconciliation for the preserved snapshot.
+- .venv/bin/python scripts/data/fetch_rna_projects_gis.py upload --snapshot-id
+  20260901T183323Z --bucket gs://climatecapital-ai-raw-swetha/ — preserve the
+  validated raw snapshot create-only and write/confirm the Git-tracked
+  generation-specific verification receipt; requires existing authenticated
+  gcloud access.
 - bq --project_id=climatecapital-ai query --use_legacy_sql=false
   --location=us-central1 < sql/quality/watershed_projects_raw_checks.sql — rerun the
   read-only warehouse quality suite using local authenticated tooling.
@@ -489,7 +561,10 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-072 establishes the exact-schema, create-only, independently checked BigQuery
   raw warehouse contract without selecting a production pipeline or analytical
   architecture.
-- Next available decision ID: **D-073**.
+- D-073 establishes live RNA layer 8 as the sole canonical GIS source for this
+  bounded work unit, with native immutable acquisition, exact numeric-ID matching,
+  explicit missingness, and uncertain historical fit.
+- Next available decision ID: **D-074**.
 
 ## Verification Record
 
@@ -497,6 +572,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-01 | RNA layer-8 GIS reconnaissance | Acquired the live service/layer metadata, frozen pre-ID set, exact feature response, and post-ID set; ran the matcher twice for created/identical behavior; uploaded six create-only objects and streamed each generation-specific cloud object for independent SHA-256; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, manifest/match/receipt reconciliation, `git diff --check`, credential scan, and tracked/ignored status review | Passed: 577/577 stable OBJECTIDs and polygon geometries, exact 11-field schema, native 102739/2277 CRS, no transfer-limit flag, no missing/unexpected IDs, 577 safe numeric ID tokens, no true curves, 15 single/22 zero/0 multiple governed matches, $163,975,000 matched plus $163,995,000 unmatched equals 37 projects and $327,970,000; local/cloud bytes and SHA-256 match for all six objects; no benchmark, BigQuery, infrastructure, IAM, architecture, methodology, commit, or push change |
 | 2026-08-31 | Raw BigQuery ingestion and warehouse quality | Inspected dataset/table metadata; ran the final `sql/quality/watershed_projects_raw_checks.sql` in `us-central1`; exercised the loader's existing-target refusal; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, `git diff --check`, credential scan, and tracked/ignored status review | Passed: exact nine-column ordered REQUIRED STRING/INT64 schema; 21/21 warehouse checks; 37 rows and unique IDs; $327,970,000; page/source/order/district/spot checks and semantic SHA-256 match; 29 tests; loader refused the existing table before load submission; no cloud data/configuration or credentials changed |
 | 2026-08-31 | Official Watershed source-universe extraction | Verified the raw checksum against the registry; inspected rendered source table pages; ran the extractor twice for created/identical behavior; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, an independent standard-library CSV count/sum/spot-check read, and `git diff --check` | Passed: 19 tests; 37 unique source records; row sum, independently parsed table total, and memorandum program request all equal $327,970,000; first/last, page boundary, multi-district, and 5789.150/5789.145/5789.146 order checks passed; ambiguous structure, checksum mismatch, unparseable row, missing total, and differing-output paths fail closed |
 | 2026-08-31 | Two-object Cloud Storage raw preservation | Confirmed local existence, byte sizes, independent SHA-256, and registry agreement; verified configured project, active gcloud auth, ADC, bucket access, initial object 404s, and create-only generation support; uploaded with `--if-generation-match=0`; described both objects; streamed each generation-specific object through independent SHA-256; ran `git diff --check`, credential scan, tracked/ignored status review, and repository-file review | Passed: exactly two objects created at the authorized paths; local, registry, expected, and cloud-streamed SHA-256 values and byte sizes match; generations 1788210198102506 and 1788210202820922 verified; raw PDFs remain ignored/untracked; no credentials, infrastructure, IAM, bucket settings, BigQuery, extraction, commit, or push changed |
@@ -515,6 +591,54 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-01 — Acquire and match Austin RNA Projects layer 8
+
+- **Objective:** Preserve one reproducible native snapshot of the canonical live
+  RNA Projects layer 8, test all governed memo IDs without fuzzy/name matching,
+  and quantify current GIS evidence coverage without inferring analytical use.
+- **Acquisition:** Captured service/layer metadata, 577 pre-acquisition OBJECTIDs,
+  the exact frozen-ID feature response with geometry, and 577 post-acquisition
+  OBJECTIDs under snapshot `20260901T183323Z`. Pre/post sets matched, all requested
+  features returned exactly once, no unexpected features or transfer-limit flag
+  occurred, and the semantic feature fingerprint is
+  `sha256:3d81feb35841e816c0ce5bab5e2abbca05b46a903f98c1ea3b16c8cf604b940f`.
+- **Source fidelity:** Parsed native JSON numeric tokens without binary-float
+  conversion. All 577 `SUB_PROJECT_ID` values mapped exactly to the governed
+  three-decimal domain by representational zero-padding only; 548 canonical IDs
+  are unique in the full layer and source duplicates remain visible. The exact
+  11-field schema and native ESRI:102739/EPSG:2277 polygon CRS passed validation.
+- **Geometry:** All 577 features contain native polygon geometry; no true curves
+  were observed. No reprojection, simplification, densification, repair,
+  precision/offset setting, or quantization was applied.
+- **Match result:** The complete-universe artifact retains all 37 official projects
+  and derives 15 single matches, 22 zero matches, and no multiple matches by exact
+  canonical ID only. Three matching GIS names differ from the memo names, which is
+  retained as evidence and does not affect matching. Matched governed requests are
+  $163,975,000 and unmatched requests are $163,995,000, reconciling to 37 and
+  $327,970,000.
+- **Cloud preservation:** Created exactly six objects below
+  `gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/`.
+  Every generation-specific cloud byte stream matched its local size and exact-byte
+  SHA-256. The finalized manifest was uploaded; the non-circular GCS receipt is
+  Git-tracked only.
+- **Files:** Added the two focused CLIs, one focused test module, the timestamped
+  manifest/receipt/match artifacts, and D-073; updated the source registry,
+  registry validation, README, and this progress handoff. Raw HTTP/GIS responses
+  remain ignored and untracked.
+- **Verification:** The full repository suite, Python compilation, dependency
+  check, independent manifest/match/receipt reconciliation, diff check, credential
+  scan, and Git tracked/ignored review passed. The matcher also confirmed
+  identical-output behavior on rerun.
+- **Boundaries:** Layer 8 is live/current and remains `historical_fit=uncertain`,
+  `analytical_role=research-only`; the snapshot does not establish January 2026
+  geometry. A match does not establish eligibility, project footprint semantics,
+  hazard, exposure, benefit, or analytical comparability. No additional GIS,
+  benchmark, BigQuery, methodology, Architecture, application, commit, or push
+  work occurred.
+- **Handoff:** Review this bounded GIS checkpoint, then explicitly authorize the
+  next analytical-feasibility evidence work unit. Architecture Planning remains
+  paused before lock.
 
 ### 2026-08-31 — Validate and harden raw BigQuery ingestion
 

@@ -9,8 +9,12 @@ in force. Architecture Planning began and is intentionally paused before
 Architecture Lock for controlled evidence reconnaissance across the 37 official
 Austin Watershed projects. A minimal source registry, immutable local-fetch
 foundation, checksum-gated 37-record source-universe extraction, and independently
-validated source-faithful BigQuery raw copy now exist. Analytical eligibility
-remains unresolved, and no architecture or analytical methodology is approved.
+validated source-faithful BigQuery raw copy now exist. A timestamped native
+ArcGIS JSON snapshot of live Austin RNA Projects layer 8 and an exact-ID audit
+covering all 37 governed projects are also preserved: 15 projects have one live
+GIS match and 22 have no match in that snapshot. The live service does not
+establish January 2026 geometry, a GIS match does not establish analytical
+eligibility, and no architecture or analytical methodology is approved.
 
 ## Repository Documentation
 

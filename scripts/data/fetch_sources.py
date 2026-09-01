@@ -105,6 +105,10 @@ def utc_retrieval_timestamp() -> str:
 
 
 def _validate_published_date(value: str, row_number: int) -> None:
+    # Live services may not publish an effective/publication date. An empty value
+    # preserves that unknown rather than substituting the retrieval date.
+    if not value:
+        return
     try:
         parsed = date.fromisoformat(value)
     except ValueError as error:

@@ -1,0 +1,77 @@
+{
+  "bucket": "gs://climatecapital-ai-raw-swetha",
+  "objects": [
+    {
+      "cloud_byte_size": 3874,
+      "cloud_stream_sha256": "sha256:5dd5c2dd73471c960b1fbadd282e15e1e77ffc369699b9bcdae96d930931c698",
+      "filename": "service.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/service.json",
+      "generation": 1788287753427308,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/service.json#1788287753427308",
+      "local_byte_size": 3874,
+      "local_sha256": "sha256:5dd5c2dd73471c960b1fbadd282e15e1e77ffc369699b9bcdae96d930931c698",
+      "upload_status": "created"
+    },
+    {
+      "cloud_byte_size": 5201,
+      "cloud_stream_sha256": "sha256:00acaad4e7131c83548142a68b55fc61817fd04b9ff0c0b5995c79c23fc8d302",
+      "filename": "layer.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/layer.json",
+      "generation": 1788287757612130,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/layer.json#1788287757612130",
+      "local_byte_size": 5201,
+      "local_sha256": "sha256:00acaad4e7131c83548142a68b55fc61817fd04b9ff0c0b5995c79c23fc8d302",
+      "upload_status": "created"
+    },
+    {
+      "cloud_byte_size": 2246,
+      "cloud_stream_sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7",
+      "filename": "object_ids_pre.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/object_ids_pre.json",
+      "generation": 1788287762119557,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/object_ids_pre.json#1788287762119557",
+      "local_byte_size": 2246,
+      "local_sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7",
+      "upload_status": "created"
+    },
+    {
+      "cloud_byte_size": 32774832,
+      "cloud_stream_sha256": "sha256:471dd527d9811ccd85cbfb9db71e6323b9ac28fa3746ad51bdcc97fbcb48bfd9",
+      "filename": "features.arcgis.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/features.arcgis.json",
+      "generation": 1788287767379062,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/features.arcgis.json#1788287767379062",
+      "local_byte_size": 32774832,
+      "local_sha256": "sha256:471dd527d9811ccd85cbfb9db71e6323b9ac28fa3746ad51bdcc97fbcb48bfd9",
+      "upload_status": "created"
+    },
+    {
+      "cloud_byte_size": 2246,
+      "cloud_stream_sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7",
+      "filename": "object_ids_post.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/object_ids_post.json",
+      "generation": 1788287772551393,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/object_ids_post.json#1788287772551393",
+      "local_byte_size": 2246,
+      "local_sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7",
+      "upload_status": "created"
+    },
+    {
+      "cloud_byte_size": 10709,
+      "cloud_stream_sha256": "sha256:2deb44766bab3a365f4c472df94c79e269bc67a73f44d76878b16bd8b78199f9",
+      "filename": "manifest.json",
+      "gcs_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/manifest.json",
+      "generation": 1788287776901806,
+      "generation_uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/rna_projects/layer_8/20260901T183323Z/manifest.json#1788287776901806",
+      "local_byte_size": 10709,
+      "local_sha256": "sha256:2deb44766bab3a365f4c472df94c79e269bc67a73f44d76878b16bd8b78199f9",
+      "upload_status": "created"
+    }
+  ],
+  "receipt_upload": "not uploaded; Git-tracked receipt avoids provenance circularity",
+  "receipt_version": 1,
+  "snapshot_id": "20260901T183323Z",
+  "source_id": "austin_rna_projects_layer_8_live",
+  "verification_method": "generation-specific gcloud storage cat byte stream independently SHA-256 hashed",
+  "verified_at": "2026-09-01T18:36:18Z"
+}

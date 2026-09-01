@@ -15,7 +15,7 @@ REGISTRY_PATH = REPOSITORY_ROOT / "data" / "metadata" / "source_registry.csv"
 
 
 class SourceRegistryTests(unittest.TestCase):
-    def test_canonical_registry_is_valid_and_contains_both_sources(self) -> None:
+    def test_canonical_registry_is_valid_and_contains_registered_sources(self) -> None:
         rows = fetch_sources.load_registry(REGISTRY_PATH)
 
         self.assertEqual(
@@ -23,11 +23,15 @@ class SourceRegistryTests(unittest.TestCase):
             [
                 "austin_wpd_2026_bond_projects_2025_11_21",
                 "austin_2026_bond_initial_draft_2026_01_21",
+                "austin_rna_projects_layer_8_live",
             ],
         )
         self.assertEqual(rows[0]["analytical_role"], "analytical")
         self.assertEqual(rows[1]["analytical_role"], "benchmark")
-        self.assertTrue(all(row["crs"] == "N/A" for row in rows))
+        self.assertEqual(rows[2]["historical_fit"], "uncertain")
+        self.assertEqual(rows[2]["analytical_role"], "research-only")
+        self.assertEqual(rows[2]["published_date"], "")
+        self.assertEqual(rows[2]["crs"], "ESRI:102739 (EPSG:2277)")
         self.assertTrue(
             all(
                 row["retrieved_at"] == ""
@@ -42,6 +46,17 @@ class SourceRegistryTests(unittest.TestCase):
                 for row in rows
             )
         )
+
+    def test_registry_allows_unknown_published_date_but_rejects_bad_nonempty_date(self) -> None:
+        rows = fetch_sources.load_registry(REGISTRY_PATH)
+        self.assertEqual(rows[2]["published_date"], "")
+
+        candidate = deepcopy(rows)
+        candidate[2]["published_date"] = "2026/09/01"
+        with self.assertRaises(fetch_sources.RegistryValidationError):
+            fetch_sources.validate_registry_rows(
+                list(fetch_sources.EXPECTED_COLUMNS), candidate
+            )
 
     def test_registry_rejects_invalid_contract_values(self) -> None:
         rows = fetch_sources.load_registry(REGISTRY_PATH)

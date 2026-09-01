@@ -1,0 +1,285 @@
+{
+  "canonical_source": {
+    "analytical_role": "research-only",
+    "historical_fit": "uncertain",
+    "historical_limitation": "This live/current City GIS snapshot does not establish January 2026 geometry.",
+    "layer_id": 8,
+    "layer_name": "RNA Projects",
+    "layer_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8",
+    "selection_basis": "Layer 8 is the live RNA master superset and avoids duplicate category-layer representations; category layers were not acquired.",
+    "service_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer"
+  },
+  "geometry": {
+    "geometry_type": "esriGeometryPolygon",
+    "latest_wkid": 2277,
+    "missing_count": 0,
+    "present_count": 577,
+    "request": {
+      "geometryPrecision": "not specified",
+      "maxAllowableOffset": "not specified",
+      "outSR": 102739,
+      "quantization": "not requested",
+      "returnGeometry": true,
+      "returnM": true,
+      "returnTrueCurves": true,
+      "returnZ": true
+    },
+    "rings_count": 577,
+    "source_wkid": 102739,
+    "true_curve_count": 0
+  },
+  "manifest_version": 1,
+  "numeric_id_audit": {
+    "canonicalization": "exact three-decimal representation by zero-padding only",
+    "duplicate_canonical_ids": {
+      "0.000": 7,
+      "6735.029": 6,
+      "7327.035": 3,
+      "7327.039": 3,
+      "7327.040": 2,
+      "7327.042": 3,
+      "7327.048": 3,
+      "7327.049": 4,
+      "7327.050": 4,
+      "7327.051": 4
+    },
+    "feature_count": 577,
+    "fractional_digit_widths": {
+      "1": 8,
+      "2": 39,
+      "3": 530
+    },
+    "parser": "exact JSON numeric tokens; no binary-float conversion",
+    "safe_count": 577,
+    "unique_canonical_id_count": 548,
+    "unsafe_values": []
+  },
+  "object_id_reconciliation": {
+    "attempt": 1,
+    "every_requested_object_id_returned_exactly_once": true,
+    "exceeded_transfer_limit": false,
+    "max_attempts": 3,
+    "post_count": 577,
+    "post_sha256": "sha256:66012335b40f698d2314abc58561ca6be1868d8b1b5bc5500c701bb1b5b81a6e",
+    "pre_count": 577,
+    "pre_sha256": "sha256:66012335b40f698d2314abc58561ca6be1868d8b1b5bc5500c701bb1b5b81a6e",
+    "returned_feature_count": 577,
+    "second_complete_feature_retrieval_performed": false,
+    "sets_equal": true,
+    "unexpected_object_ids": []
+  },
+  "response_inventory": [
+    {
+      "byte_size": 3874,
+      "filename": "service.json",
+      "final_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer?f=json",
+      "http_status": 200,
+      "media_type": "application/json",
+      "request": {
+        "method": "GET",
+        "parameters": [
+          {
+            "name": "f",
+            "value": "json"
+          }
+        ],
+        "url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer"
+      },
+      "retrieved_at": "2026-09-01T18:33:23Z",
+      "sha256": "sha256:5dd5c2dd73471c960b1fbadd282e15e1e77ffc369699b9bcdae96d930931c698"
+    },
+    {
+      "byte_size": 5201,
+      "filename": "layer.json",
+      "final_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8?f=json",
+      "http_status": 200,
+      "media_type": "application/json",
+      "request": {
+        "method": "GET",
+        "parameters": [
+          {
+            "name": "f",
+            "value": "json"
+          }
+        ],
+        "url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8"
+      },
+      "retrieved_at": "2026-09-01T18:33:24Z",
+      "sha256": "sha256:00acaad4e7131c83548142a68b55fc61817fd04b9ff0c0b5995c79c23fc8d302"
+    },
+    {
+      "byte_size": 2246,
+      "filename": "object_ids_pre.json",
+      "final_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query",
+      "http_status": 200,
+      "media_type": "application/json",
+      "request": {
+        "method": "POST",
+        "parameters": [
+          {
+            "name": "where",
+            "value": "1=1"
+          },
+          {
+            "name": "returnIdsOnly",
+            "value": "true"
+          },
+          {
+            "name": "f",
+            "value": "json"
+          }
+        ],
+        "url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query"
+      },
+      "retrieved_at": "2026-09-01T18:33:34Z",
+      "sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7"
+    },
+    {
+      "byte_size": 32774832,
+      "filename": "features.arcgis.json",
+      "final_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query",
+      "http_status": 200,
+      "media_type": "application/json",
+      "request": {
+        "method": "POST",
+        "parameters": [
+          {
+            "name": "where",
+            "value": "1=1"
+          },
+          {
+            "name": "objectIds",
+            "value": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577"
+          },
+          {
+            "name": "outFields",
+            "value": "*"
+          },
+          {
+            "name": "returnGeometry",
+            "value": "true"
+          },
+          {
+            "name": "orderByFields",
+            "value": "OBJECTID ASC"
+          },
+          {
+            "name": "outSR",
+            "value": "102739"
+          },
+          {
+            "name": "returnZ",
+            "value": "true"
+          },
+          {
+            "name": "returnM",
+            "value": "true"
+          },
+          {
+            "name": "returnTrueCurves",
+            "value": "true"
+          },
+          {
+            "name": "f",
+            "value": "json"
+          }
+        ],
+        "url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query"
+      },
+      "retrieved_at": "2026-09-01T18:33:41Z",
+      "sha256": "sha256:471dd527d9811ccd85cbfb9db71e6323b9ac28fa3746ad51bdcc97fbcb48bfd9"
+    },
+    {
+      "byte_size": 2246,
+      "filename": "object_ids_post.json",
+      "final_url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query",
+      "http_status": 200,
+      "media_type": "application/json",
+      "request": {
+        "method": "POST",
+        "parameters": [
+          {
+            "name": "where",
+            "value": "1=1"
+          },
+          {
+            "name": "returnIdsOnly",
+            "value": "true"
+          },
+          {
+            "name": "f",
+            "value": "json"
+          }
+        ],
+        "url": "https://maps.austintexas.gov/arcgis/rest/services/LongRangeCIP/RNAProjects/MapServer/8/query"
+      },
+      "retrieved_at": "2026-09-01T18:33:44Z",
+      "sha256": "sha256:f4a45aff4cfc56e19bc83c1516f21c907e4bf84ba52aaf318fe1062b8bd8bab7"
+    }
+  ],
+  "retrieval_completed_at": "2026-09-01T18:33:44Z",
+  "retrieval_started_at": "2026-09-01T18:33:23Z",
+  "review_reasons": [],
+  "review_required": false,
+  "schema": [
+    {
+      "arcgis_type": "esriFieldTypeOID",
+      "name": "OBJECTID"
+    },
+    {
+      "arcgis_type": "esriFieldTypeInteger",
+      "name": "LRCSP_ROLLING_NEEDS_ID"
+    },
+    {
+      "arcgis_type": "esriFieldTypeDouble",
+      "name": "SUB_PROJECT_ID"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "SUB_PROJECT_NAME"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "SUB_PROJECT_STATUS"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "SUB_PROJECT_PHASE"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "SUB_PROJECT_TYPE_CATEGORY"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "DESCRIPTION"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "CONTACT"
+    },
+    {
+      "arcgis_type": "esriFieldTypeString",
+      "name": "DEPARTMENT"
+    },
+    {
+      "arcgis_type": "esriFieldTypeGeometry",
+      "name": "SHAPE"
+    }
+  ],
+  "semantic_fingerprint": {
+    "algorithm": "sha256",
+    "scope": "all feature attributes and native geometry, sorted by OBJECTID",
+    "value": "sha256:3d81feb35841e816c0ce5bab5e2abbca05b46a903f98c1ea3b16c8cf604b940f"
+  },
+  "snapshot_id": "20260901T183323Z",
+  "snapshot_identity": "UTC retrieval timestamp only; not a source vintage",
+  "snapshot_inventory": [
+    "features.arcgis.json",
+    "layer.json",
+    "object_ids_post.json",
+    "object_ids_pre.json",
+    "service.json"
+  ],
+  "source_id": "austin_rna_projects_layer_8_live"
+}

@@ -1,7 +1,7 @@
 # ClimateCapital AI Decision History
 
 > **Status:** Authoritative durable decision log
-> **Last updated:** 2026-08-31
+> **Last updated:** 2026-09-01
 > **Rule:** Existing IDs are immutable and may not be renumbered. New decisions use
 > the next sequential ID. A decision remains active unless this file explicitly
 > marks it superseded and links the replacement.
@@ -94,6 +94,7 @@ and delivery specifications.
 | D-070 | 2026-08-31 / Raw-source cloud preservation | Preserve only the two registered raw PDF snapshots at their exact paths in the existing `climatecapital-ai-raw-swetha` bucket, using create-only generation preconditions and generation-specific byte-stream SHA-256 verification against the local files and canonical registry. | Create-only uploads prevent silent overwrite, while independent SHA-256 verification proves cloud bytes match the governed local source without misrepresenting GCS CRC32C or MD5 metadata as SHA-256. This records raw preservation, not a production pipeline or architecture decision. | Active |
 | D-071 | 2026-08-31 / Watershed source-universe extraction | Derive the complete November 21, 2025 named-project table through checksum-gated deterministic PDF extraction; preserve official subproject IDs and source currency text as strings, record lossless integer-dollar values, 1-based physical PDF pages, and derived source-table order, and fail on structural ambiguity or differing-artifact overwrite. | The resulting 37-record artifact is reproducible and traceable to the governed source while preserving source order and wording. It establishes the reconnaissance universe only; source presence does not establish analytical eligibility, project type, geometry, or flood comparability. | Active |
 | D-072 | 2026-08-31 / Raw warehouse ingestion | Preserve the validated 37-record source-universe CSV as `climatecapital-ai.raw.watershed_projects_2025_11_21` in `us-central1` under the exact nine-column REQUIRED STRING/INTEGER schema; use local ADC, an exact-artifact preflight, `WRITE_EMPTY`, existing-table refusal, and durable read-only SQL checks including source-specific rows and a full ordered semantic fingerprint. | A source-faithful raw warehouse copy is useful for reproducible reconnaissance only if types, strings, row associations, totals, and provenance boundaries are independently checked and the historical table cannot be silently overwritten. This does not establish eligibility, evidence comparability, a production pipeline, or Architecture Lock. | Active |
+| D-073 | 2026-09-01 / GIS evidence reconnaissance | Use live Austin RNA Projects layer 8 as the sole canonical GIS feature source for this work unit; preserve a timestamped native ArcGIS JSON snapshot in its source CRS through a frozen-OBJECTID consistency contract, match only losslessly canonicalized numeric `SUB_PROJECT_ID` values to authoritative memo ID strings, retain explicit zero- and multi-match rows, and preserve raw bytes through create-only GCS objects with generation-specific streamed SHA-256 verification. Keep the source `historical_fit=uncertain` and `analytical_role=research-only`. | Layer 8 is the RNA master superset and avoids duplicate category-layer representations. Exact numeric-token handling prevents binary-float or fuzzy-match corruption, while explicit missingness preserves the complete governed source universe. The live snapshot provides current geometry feasibility evidence only; it does not establish January 2026 geometry, analytical eligibility, project benefit, or an Architecture Lock. | Active |
 
 ## Explicitly Recoverable Alternatives and Consequences
 
@@ -134,13 +135,15 @@ alternatives or consequences are recoverable from the approved planning record:
 - **D-064–D-066:** A monolithic progress file and a second progress tracker were
   rejected in favor of purpose-specific durable documents plus one canonical
   current-status file.
-- **D-067–D-072:** Locking architecture or methodology against assumed project
+- **D-067–D-073:** Locking architecture or methodology against assumed project
   evidence was rejected. The project will first test all 37 official source
   projects against authoritative evidence while keeping the later City
   recommendation on a separate benchmark-only path; the first source snapshots are
   governed by a minimal registry, checksum, immutable-fetch, create-only cloud
   preservation, fail-closed deterministic source-universe extraction, and a
-  source-faithful raw warehouse ingestion/quality contract.
+  source-faithful raw warehouse ingestion/quality contract. Live RNA geometry is
+  retained only as timestamped research evidence with exact-ID matching and
+  explicit historical-vintage uncertainty.
 
 ## Source-of-Truth Links
 
