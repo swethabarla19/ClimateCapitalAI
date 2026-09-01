@@ -93,6 +93,7 @@ and delivery specifications.
 | D-069 | 2026-08-31 / Source-ingestion foundation | Use a Git-tracked canonical source registry for source/vintage/provenance metadata and ignored deterministic local staging paths for immutable raw response bytes; record exact-byte SHA-256 and UTC retrieval time, refuse differing historical-snapshot overwrites, and keep bucket names and credentials outside source metadata and code. | This is the smallest reproducible provenance foundation that preserves authoritative source bytes without committing raw files or prematurely choosing production pipeline, cloud, architecture, or analytical methodology. | Active |
 | D-070 | 2026-08-31 / Raw-source cloud preservation | Preserve only the two registered raw PDF snapshots at their exact paths in the existing `climatecapital-ai-raw-swetha` bucket, using create-only generation preconditions and generation-specific byte-stream SHA-256 verification against the local files and canonical registry. | Create-only uploads prevent silent overwrite, while independent SHA-256 verification proves cloud bytes match the governed local source without misrepresenting GCS CRC32C or MD5 metadata as SHA-256. This records raw preservation, not a production pipeline or architecture decision. | Active |
 | D-071 | 2026-08-31 / Watershed source-universe extraction | Derive the complete November 21, 2025 named-project table through checksum-gated deterministic PDF extraction; preserve official subproject IDs and source currency text as strings, record lossless integer-dollar values, 1-based physical PDF pages, and derived source-table order, and fail on structural ambiguity or differing-artifact overwrite. | The resulting 37-record artifact is reproducible and traceable to the governed source while preserving source order and wording. It establishes the reconnaissance universe only; source presence does not establish analytical eligibility, project type, geometry, or flood comparability. | Active |
+| D-072 | 2026-08-31 / Raw warehouse ingestion | Preserve the validated 37-record source-universe CSV as `climatecapital-ai.raw.watershed_projects_2025_11_21` in `us-central1` under the exact nine-column REQUIRED STRING/INTEGER schema; use local ADC, an exact-artifact preflight, `WRITE_EMPTY`, existing-table refusal, and durable read-only SQL checks including source-specific rows and a full ordered semantic fingerprint. | A source-faithful raw warehouse copy is useful for reproducible reconnaissance only if types, strings, row associations, totals, and provenance boundaries are independently checked and the historical table cannot be silently overwritten. This does not establish eligibility, evidence comparability, a production pipeline, or Architecture Lock. | Active |
 
 ## Explicitly Recoverable Alternatives and Consequences
 
@@ -133,12 +134,13 @@ alternatives or consequences are recoverable from the approved planning record:
 - **D-064–D-066:** A monolithic progress file and a second progress tracker were
   rejected in favor of purpose-specific durable documents plus one canonical
   current-status file.
-- **D-067–D-071:** Locking architecture or methodology against assumed project
+- **D-067–D-072:** Locking architecture or methodology against assumed project
   evidence was rejected. The project will first test all 37 official source
   projects against authoritative evidence while keeping the later City
   recommendation on a separate benchmark-only path; the first source snapshots are
   governed by a minimal registry, checksum, immutable-fetch, create-only cloud
-  preservation, and fail-closed deterministic source-universe extraction contract.
+  preservation, fail-closed deterministic source-universe extraction, and a
+  source-faithful raw warehouse ingestion/quality contract.
 
 ## Source-of-Truth Links
 

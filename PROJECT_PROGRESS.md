@@ -53,24 +53,27 @@ access to prior chat conversations.
   Stage 4. Architecture Planning began and is intentionally paused before
   Architecture Lock for controlled evidence reconnaissance; this is not a new
   project phase or product reset.
-- **Current milestone:** Complete official 37-project Watershed source universe
-  extracted and independently reconciled from the November 21, 2025 memo; awaiting
-  user review before GIS matching or further evidence reconnaissance.
+- **Current milestone:** Source-faithful 37-project Watershed raw table loaded to
+  BigQuery and independently validated through warehouse SQL; awaiting user review
+  before GIS matching or further evidence reconnaissance.
 - **Next milestone:** After explicit approval, match all 37 official subproject IDs
   to available Austin GIS geometry while retaining unmatched records and documenting
   every match decision.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
-  Watershed table extractor, a Git-tracked 37-record source-universe CSV, and
-  focused validation tests. Two raw PDF snapshots remain ignored locally and
-  preserved at their exact Cloud Storage paths. No GIS matching, eligibility,
+  Watershed table extractor, a Git-tracked 37-record source-universe CSV, one
+  pinned BigQuery client dependency, a create-only raw loader, durable SQL quality
+  checks, and focused validation tests. Two raw PDF snapshots remain ignored
+  locally and preserved at their exact Cloud Storage paths; the source-universe CSV
+  is preserved in one validated `raw` BigQuery table. No GIS matching, eligibility,
   production pipeline, application, Architecture Lock, or analytical methodology
   exists.
-- **Most recent outcome:** Extracted 37 official named-project records from physical
-  PDF pages 4–5, preserved official IDs and source currency text, independently
-  reconciled the row sum, table total, and memorandum program request to
-  $327,970,000, and retained the source's published order anomaly without sorting.
+- **Most recent outcome:** Verified
+  `climatecapital-ai.raw.watershed_projects_2025_11_21` in `us-central1` with the
+  exact nine-column REQUIRED schema, 37 rows, 37 unique project IDs,
+  $327,970,000, source-specific row associations, and a full ordered semantic
+  fingerprint matching the committed CSV.
 
 ## Approved Locks
 
@@ -100,11 +103,11 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 - **Goal:** Establish what authoritative, historically valid, comparable evidence
   exists for each of the 37 official Watershed projects before resuming
   Architecture Lock decisions.
-- **Status:** The source-ingestion/provenance foundation, raw preservation, and
-  checksum-gated 37-record source-universe extraction are complete and awaiting
-  review. Architecture Planning remains paused; no record has been declared
-  eligible, matched to GIS, classified analytically, or used for scoring,
-  optimization, BigQuery, or application work.
+- **Status:** The source-ingestion/provenance foundation, raw preservation,
+  checksum-gated 37-record extraction, and independently validated source-faithful
+  BigQuery raw copy are complete and awaiting review. Architecture Planning remains
+  paused; no record has been declared eligible, matched to GIS, classified
+  analytically, or used for scoring, optimization, or application work.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file, the locked files under docs/product,
   docs/delivery/execution-plan.md, docs/decisions.md, and the non-authoritative
@@ -118,10 +121,12 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 
 ## Next Actions
 
-1. Review the 37-record source-universe CSV, exact schema, checksum gate, source-
-   verified spot checks, total reconciliation, parsing limitations, and Git diff.
-2. Do not begin GIS matching, eligibility, additional evidence work, cloud upload,
-   or BigQuery loading until the user explicitly authorizes the next task.
+1. Review the hardened create-only BigQuery loader, exact live schema, 21 passing
+   warehouse quality checks, source-specific rows, semantic fingerprint, tests,
+   limitations, and Git diff.
+2. Do not begin GIS matching, eligibility, additional evidence work, staging or
+   curated tables, or benchmark ingestion until the user explicitly authorizes the
+   next task.
 3. After explicit authorization, match all 37 official project identifiers to
    available Austin GIS geometry,
    retaining unmatched projects and documenting every match decision.
@@ -146,6 +151,12 @@ isolation, the Gemini boundary, or any other approved Product and Design Lock.
 
 ## Completed Milestones
 
+- **2026-08-31 — Raw BigQuery ingestion and quality checkpoint completed:**
+  Reviewed and hardened the manual loader without replacing its core approach;
+  verified the existing `us-central1` table's exact schema and 37 rows; passed 21
+  independent SQL checks including $327,970,000, full source sequence, row-level
+  spot checks, and an ordered semantic fingerprint; changed no existing cloud
+  data, dataset configuration, IAM, architecture, methodology, or benchmark state.
 - **2026-08-31 — Official 37-project source universe extracted:** Added a pinned
   data-only PDF parser, checksum-gated fail-closed extractor, deterministic tracked
   CSV, and source-verified tests; reconciled 37 unique records and $327,970,000
@@ -224,6 +235,10 @@ authorize implementation.
 
 - Source-license/reuse terms remain unverified and are recorded as such in the
   source registry.
+- BigQuery does not enforce project-ID uniqueness, source sequence, totals, or the
+  semantic fingerprint as table constraints. The loader refuses an existing table,
+  but any separately authorized mutation by another tool or user requires rerunning
+  the durable SQL quality suite before the raw snapshot is trusted.
 - The local Python 3.12 installation has no default CA bundle configured; verified
   HTTPS succeeded only when `SSL_CERT_FILE=/etc/ssl/cert.pem` selected the host CA
   bundle. Certificate verification was not disabled.
@@ -333,17 +348,40 @@ The minimal foundation is established:
 - tests/test_watershed_project_extraction.py — source-verified row-association,
   boundary, anomaly, schema, reconciliation, failure-path, and deterministic-output
   validation.
+- requirements-cloud.txt — pinned local BigQuery client declaration containing
+  only google-cloud-bigquery 3.44.0.
+- scripts/data/load_watershed_projects_bigquery.py — exact-artifact and CSV-contract
+  preflight plus explicit-schema, `us-central1`, `WRITE_EMPTY` raw loader; it
+  refuses an existing target and validates schema/location/count after creation.
+- tests/test_watershed_bigquery_loader.py — non-destructive local checks for target,
+  schema, encoding, header, artifact checksum, location, overwrite refusal, and
+  post-load metadata validation.
+- sql/quality/watershed_projects_raw_checks.sql — 21 read-only warehouse checks
+  covering schema, identity, completeness, totals, strings, source-specific row
+  associations, and the full ordered semantic fingerprint.
 - data/staging/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf —
   ignored local raw source-universe snapshot.
 - data/staging/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf —
   ignored local benchmark-only snapshot.
 - gs://climatecapital-ai-raw-swetha/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf#1788210198102506 — verified cloud source-universe snapshot, 1,151,348 bytes, SHA-256 `d1c2731cc12ecb3938569d29ec0c92d0966d7706af919e0a519b48329493d88e`.
 - gs://climatecapital-ai-raw-swetha/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf#1788210202820922 — verified cloud benchmark-only snapshot, 412,820 bytes, SHA-256 `da85a00273a32afb63f057e0e7f5065078f5e226d2e8c73a3efba69ee4bd0359`.
+- climatecapital-ai.raw.watershed_projects_2025_11_21 — source-faithful BigQuery
+  raw table in `us-central1`, with 37 REQUIRED-schema rows and 21 passing SQL
+  quality checks.
 
-The 37 official source rows above have been extracted, but no eligibility result,
-GIS match, analytical classification, evidence matrix, score, optimization result,
-or BigQuery table has been created. No Cloud Storage objects beyond the two raw
-source objects above have been created. Benchmark isolation remains explicit.
+The ordered raw-table schema is `source_id STRING REQUIRED`,
+`source_pdf_page INTEGER REQUIRED`, `source_table_row_order INTEGER REQUIRED`,
+`map_label STRING REQUIRED`, `subproject_id STRING REQUIRED`,
+`project_name STRING REQUIRED`,
+`current_funding_request_estimate_source STRING REQUIRED`,
+`current_funding_request_estimate_dollars INTEGER REQUIRED`, and
+`council_districts_source STRING REQUIRED`.
+
+The 37 official source rows above have been extracted and loaded only to the raw
+table. No eligibility result, GIS match, analytical classification, evidence
+matrix, score, optimization result, staging/curated table, or benchmark table has
+been created. No Cloud Storage objects beyond the two raw source objects above have
+been created. Benchmark isolation remains explicit.
 
 ### Repository Structure
 
@@ -361,15 +399,22 @@ source objects above have been created. Benchmark isolation remains explicit.
 - .gitignore — raw/staging, PDF, GeoJSON, temporary-response, Python, and common
   credential-file protections.
 - requirements-data.txt — pinned dependency for local source extraction only.
+- requirements-cloud.txt — pinned BigQuery client dependency for the manual raw
+  load/checkpoint workflow only.
 - data/metadata/source_registry.csv — canonical source and provenance registry.
 - data/reconnaissance/city_austin/watershed_bond_projects/2025-11-21/projects.csv —
   tracked official source-universe extraction.
 - scripts/data/fetch_sources.py — minimal reproducible source downloader.
 - scripts/data/extract_watershed_projects.py — deterministic source-universe
   extractor and reconciliation CLI.
+- scripts/data/load_watershed_projects_bigquery.py — guarded raw BigQuery loader.
+- sql/quality/watershed_projects_raw_checks.sql — read-only warehouse data-quality
+  suite.
 - tests/test_source_ingestion.py — lightweight source-ingestion validation suite.
 - tests/test_watershed_project_extraction.py — source extraction and failure-path
   validation suite.
+- tests/test_watershed_bigquery_loader.py — non-destructive raw-loader contract and
+  safety tests.
 - docs/architecture/ — intentionally absent until explicit Architecture Lock.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md —
   intentionally absent until post-Architecture delivery planning.
@@ -381,14 +426,16 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 
 - Verified Google Cloud context: configured project `climatecapital-ai`, active
   gcloud authentication and ADC, and existing raw-data bucket
-  `gs://climatecapital-ai-raw-swetha/`. User-reported BigQuery datasets raw,
-  staging, curated, and benchmark were not inspected or changed. This milestone
-  created only the two explicitly authorized raw objects and changed no cloud
-  infrastructure, IAM, bucket settings, credentials, or BigQuery resources.
-- Current local extraction runtime verified with Python 3.14.7 and pypdf 6.16.2 in
-  the ignored `.venv`. The earlier Python 3.12 source-fetch runtime lacked a default
-  CA bundle; `/etc/ssl/cert.pem` was used for verified HTTPS without disabling
-  certificate verification.
+  `gs://climatecapital-ai-raw-swetha/`. The existing `raw` BigQuery dataset and
+  `watershed_projects_2025_11_21` table were inspected in `us-central1`; the table
+  has the exact governed schema and 37 rows. No existing cloud data, infrastructure,
+  IAM, dataset/bucket settings, or credentials were changed; staging, curated, and
+  benchmark datasets/tables were not inspected.
+- Current local data runtime verified with Python 3.14.7, pypdf 6.16.2, and
+  google-cloud-bigquery 3.44.0 in the ignored `.venv`. BigQuery access used local
+  ADC; no credential material is stored in the repository. The earlier Python 3.12
+  source-fetch runtime lacked a default CA bundle; `/etc/ssl/cert.pem` was used for
+  verified HTTPS without disabling certificate verification.
 - No application environment is established.
 - The local process-job Stop hook lacks the node runtime it expects.
 
@@ -400,11 +447,18 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 - python3 -m venv .venv — create the ignored local data-tool environment.
 - .venv/bin/python -m pip install -r requirements-data.txt — install the pinned
   local data-extraction dependency.
-- .venv/bin/python -m unittest discover -s tests -v — run ingestion and extraction
-  validation with the pinned PDF parser.
+- .venv/bin/python -m pip install -r requirements-cloud.txt — install the pinned
+  BigQuery client dependency in the same ignored environment.
+- .venv/bin/python -m unittest discover -s tests -v — run ingestion, extraction,
+  and non-destructive raw-loader validation.
 - .venv/bin/python scripts/data/extract_watershed_projects.py — verify the source
   checksum, extract/reconcile the 37 rows, and create or confirm the deterministic
   source-universe CSV.
+- .venv/bin/python scripts/data/load_watershed_projects_bigquery.py — create the raw
+  table only when absent; current reruns refuse the existing historical target.
+- bq --project_id=climatecapital-ai query --use_legacy_sql=false
+  --location=us-central1 < sql/quality/watershed_projects_raw_checks.sql — rerun the
+  read-only warehouse quality suite using local authenticated tooling.
 - python3 scripts/data/fetch_sources.py — fetch both registered sources when the
   Python environment has a working default CA bundle.
 - SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/data/fetch_sources.py — verified
@@ -432,7 +486,10 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-071 establishes checksum-gated, fail-closed, source-faithful extraction of the
   complete 37-record Watershed reconnaissance universe without deciding analytical
   eligibility.
-- Next available decision ID: **D-072**.
+- D-072 establishes the exact-schema, create-only, independently checked BigQuery
+  raw warehouse contract without selecting a production pipeline or analytical
+  architecture.
+- Next available decision ID: **D-073**.
 
 ## Verification Record
 
@@ -440,6 +497,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-08-31 | Raw BigQuery ingestion and warehouse quality | Inspected dataset/table metadata; ran the final `sql/quality/watershed_projects_raw_checks.sql` in `us-central1`; exercised the loader's existing-target refusal; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, `git diff --check`, credential scan, and tracked/ignored status review | Passed: exact nine-column ordered REQUIRED STRING/INT64 schema; 21/21 warehouse checks; 37 rows and unique IDs; $327,970,000; page/source/order/district/spot checks and semantic SHA-256 match; 29 tests; loader refused the existing table before load submission; no cloud data/configuration or credentials changed |
 | 2026-08-31 | Official Watershed source-universe extraction | Verified the raw checksum against the registry; inspected rendered source table pages; ran the extractor twice for created/identical behavior; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, an independent standard-library CSV count/sum/spot-check read, and `git diff --check` | Passed: 19 tests; 37 unique source records; row sum, independently parsed table total, and memorandum program request all equal $327,970,000; first/last, page boundary, multi-district, and 5789.150/5789.145/5789.146 order checks passed; ambiguous structure, checksum mismatch, unparseable row, missing total, and differing-output paths fail closed |
 | 2026-08-31 | Two-object Cloud Storage raw preservation | Confirmed local existence, byte sizes, independent SHA-256, and registry agreement; verified configured project, active gcloud auth, ADC, bucket access, initial object 404s, and create-only generation support; uploaded with `--if-generation-match=0`; described both objects; streamed each generation-specific object through independent SHA-256; ran `git diff --check`, credential scan, tracked/ignored status review, and repository-file review | Passed: exactly two objects created at the authorized paths; local, registry, expected, and cloud-streamed SHA-256 values and byte sizes match; generations 1788210198102506 and 1788210202820922 verified; raw PDFs remain ignored/untracked; no credentials, infrastructure, IAM, bucket settings, BigQuery, extraction, commit, or push changed |
 | 2026-08-31 | Minimal source-ingestion and provenance foundation | Ran `python3 -m unittest discover -s tests -v`, `python3 -m py_compile`, canonical-registry validation, `wc -c`, independent `shasum -a 256`, PDF file-type inspection, `git diff --check`, trailing-whitespace scan, `git check-ignore`, and tracked/ignored status review; fetched both sources over verified HTTPS using the host CA bundle | Passed: 9 tests; 2 valid registry rows; both HTTP 200 downloads reconciled byte-for-byte to registry checksums; raw PDFs and Python cache files are ignored; no cloud upload, BigQuery load, extraction, architecture, methodology, application, commit, or push occurred |
@@ -457,6 +515,52 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-08-31 — Validate and harden raw BigQuery ingestion
+
+- **Objective:** Complete the raw warehouse checkpoint by reviewing the manual
+  loader, validating the existing table without overwriting it, adding durable SQL
+  quality checks, and preserving the result without beginning GIS or architecture.
+- **Manual implementation review:** Retained the correct project/dataset/table,
+  explicit nine-column schema, STRING project IDs and district source text,
+  INTEGER page/order/dollar fields, UTF-8/header handling, `us-central1` job
+  location, local ADC, and `WRITE_EMPTY` behavior. Hardened only material gaps:
+  repository-anchored CSV resolution, exact CSV checksum and contract preflight,
+  dataset-location and existing-target checks, explicit load options, post-load
+  schema/location/count validation, and human-readable failures.
+- **Warehouse result:** Verified the existing
+  `climatecapital-ai.raw.watershed_projects_2025_11_21` table and its `raw` dataset
+  are in `us-central1`. All nine ordered columns and REQUIRED modes match the
+  governed schema; `subproject_id` and source fields are STRING, while page, row
+  order, and normalized dollars are INTEGER. The table has 37 rows.
+- **Data-quality result:** All 21 final read-only SQL checks passed: 37 unique IDs,
+  no duplicates or governed NULLs, one expected source ID, contiguous order 1–37,
+  exact A–AK sequence, page 4/5 domain and 19/18 counts, positive/reconciled
+  funding values totaling $327,970,000, valid source-form district strings, exact
+  first/boundary/multi-district/final rows, preserved 5789.150/5789.145/5789.146
+  order, and full ordered semantic SHA-256
+  `c9091117734b2f793ed5f396dba3b8897169ad168659df0fe4f97cd92aeb072a`.
+- **Tests and safety:** The full 29-test suite, `py_compile`, `pip check`, and
+  `git diff --check` passed; the credential-pattern scan found no matches. A live
+  loader preflight refused the already-existing table before load submission.
+  Authentication used local ADC; no credentials or credential paths were added.
+- **Files changed:** Retained the manually added requirements-cloud.txt; hardened
+  scripts/data/load_watershed_projects_bigquery.py; added
+  tests/test_watershed_bigquery_loader.py and
+  sql/quality/watershed_projects_raw_checks.sql; updated PROJECT_PROGRESS.md,
+  README.md, and docs/decisions.md; recorded D-072.
+- **Limitations:** The live schema/data prove the current warehouse copy is
+  source-faithful, but the hardened code cannot retroactively prove the exact
+  configuration of the already-completed manual load job. BigQuery does not enforce
+  the SQL semantic contracts as constraints, so the suite must be rerun after any
+  separately authorized mutation. Source reuse terms remain unresolved.
+- **Boundaries preserved:** No existing table or other cloud state was recreated,
+  overwritten, or changed. No staging/curated/benchmark table, January benchmark
+  inspection, GIS work, eligibility, evidence inference, scoring, optimization,
+  Product/Design change, Architecture Planning, commit, or push occurred.
+- **Handoff:** Await review. The recommended next separately authorized work unit
+  is complete 37-ID Austin GIS geometry matching with retained unmatched records
+  and explicit match evidence; do not begin it in this task.
 
 ### 2026-08-31 — Extract the official Watershed source universe
 
