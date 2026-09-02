@@ -33,10 +33,14 @@ explanation. Application implementation has not begun.
 - [Approved user stories](docs/product/user-stories.md)
 - [Approved screen specification](docs/product/screen-spec.md)
 - [Initial delivery execution plan](docs/delivery/execution-plan.md)
+- [Approved implementation plan](docs/delivery/implementation-plan.md)
+- [Approved test plan](docs/delivery/test-plan.md)
+- [Approved delivery milestones](docs/delivery/milestones.md)
 - [Decision history](docs/decisions.md)
 - [Technical architecture reference](docs/reference/technical-architecture-reference.md)
   — superseded pre-lock reference, not authoritative
 
-Architecture-informed implementation, test, and milestone plans are the next
-separately authorized planning gate. PROJECT_PROGRESS.md remains the sole
-progress/status document.
+The architecture-informed implementation, test, milestone, and reconciled
+execution plans were explicitly approved as the M0 delivery baseline on
+2026-09-02. M1 is the next authorized milestone but has not started.
+PROJECT_PROGRESS.md remains the sole progress/status document.

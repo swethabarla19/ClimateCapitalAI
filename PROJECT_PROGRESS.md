@@ -43,7 +43,7 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | Approved P0 topology, services, deployment, security, observability, cost, and implementation order | [docs/architecture/p0-architecture.md](docs/architecture/p0-architecture.md) |
 | Approved release artifacts, runtime APIs, session state, Funding Plan, benchmark, and Gemini contracts | [docs/architecture/data-contracts.md](docs/architecture/data-contracts.md) |
 | Superseded pre-lock technical planning reference | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
-| Architecture-informed implementation and test plans | docs/delivery/implementation-plan.md, test-plan.md, and milestones.md — intentionally absent |
+| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 explicitly approved 2026-09-02 |
 
 Git is the version history for all repository memory. Fresh tasks must not depend on
 access to prior chat conversations.
@@ -52,14 +52,12 @@ access to prior chat conversations.
 
 - **Last updated:** 2026-09-02
 - **Project stage:** Methodology, Product/Design, and Architecture Locks are
-  complete and reconciled. Application implementation has not begun.
-- **Current milestone:** P0 Architecture Lock: one scale-to-zero Cloud Run
-  container, a reviewed pinned release-data bundle, stateless server-authoritative
-  plan evaluation, browser-session-only workflow state, isolated benchmark, and
-  bounded required Gemini explanation.
-- **Next milestone:** In a separately authorized delivery-planning task, create and
-  approve `implementation-plan.md`, `test-plan.md`, and `milestones.md` before
-  application implementation.
+  complete and reconciled. The architecture-informed delivery baseline is approved.
+  Application implementation has not begun.
+- **Current milestone:** M0 delivery-plan gate complete by explicit user approval
+  on 2026-09-02. This approval-recording task stops before M1.
+- **Next milestone:** In a subsequent implementation task, implement M1 only: the
+  versioned contract and fail-closed release-validator foundation.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
@@ -71,16 +69,14 @@ access to prior chat conversations.
   Cloud Storage paths; the source-universe CSV remains in one validated `raw`
   BigQuery table. The repository now also contains one authoritative P0 methodology
   methodology document, reconciled Product/Design handoff documents, and the
-  authoritative P0 architecture/data contracts. No production pipeline,
-  application, implementation/test/milestone plan, score, rank, weight model, or
+  authoritative P0 architecture/data contracts, and three approved
+  architecture-informed delivery plans. No production pipeline, application,
+  implemented application schema, release bundle, score, rank, weight model, or
   optimizer exists.
-- **Most recent outcome:** Locked the smallest implementation-ready architecture
-  without reopening evidence: pinned source preparation separated from
-  source-independent release builds; precomputed application artifacts; one
-  FastAPI/React Cloud Run service; exact current/reference plan re-evaluation;
-  current-session browser state; explicit benchmark isolation; direct bounded OSM;
-  and required grounded Gemini explanation with proposal moved to post-core
-  stretch. D-080–D-096 record the detailed choices.
+- **Most recent outcome:** Recorded explicit user approval of the corrected M0
+  implementation, test, milestone, and reconciled execution plans as the delivery
+  baseline subordinate to the locked domain authorities. M1 remains not started;
+  no dependency, application code, cloud mutation, or analytical decision changed.
 
 ## Approved Locks
 
@@ -126,10 +122,9 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Hand the approved Methodology, Product/Design, and Architecture Locks
-  into architecture-informed delivery planning without beginning implementation.
-- **Status:** Architecture Lock is complete and reviewed. It establishes contracts
-  and implementation order only; no application, release-data bundle, deployment,
+- **Goal:** Record explicit M0 approval and stop without beginning M1.
+- **Status:** M0 is complete and the corrected delivery baseline is approved. M1 is
+  authorized next but not started. No application, release-data bundle, deployment,
   IAM, billing, or other cloud state changed.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file,
@@ -137,24 +132,27 @@ comparison; the $125 million figure is historical/default context, not eligibili
   docs/product, docs/delivery/execution-plan.md, docs/decisions.md, and the
   docs/architecture/p0-architecture.md and data-contracts.md, and the reconciled
   delivery/decision files. The technical reference is now superseded.
-- **Exit condition:** Achieved. The next separately authorized task is delivery
-  planning, not application implementation.
+- **Exit condition:** Achieved by explicit user approval on 2026-09-02; stop before
+  M1.
 
 ## Next Actions
 
-1. Do not perform another broad source hunt, inspect SVI, manufacture project
+1. In a subsequent implementation task, implement only M1: initial versioned
+   contract models/schemas and fail-closed release validators, with no fixture
+   bundle, runtime API, UI, Gemini, or cloud change.
+2. Do not perform another broad source hunt, inspect SVI, manufacture project
    geography, or reintroduce expected benefit, scores, ranks, weights, or an
    optimization objective without a later explicit methodology revision.
-2. In a separately authorized delivery-planning task, create and approve the
-   architecture-informed implementation, test, and milestone plans.
-3. Lock the initial artifact/API/session/plan/benchmark/Gemini schemas in that plan,
-   then run the approved data and application tracks only after the first
-   implementation milestone is authorized.
-4. Separately verify organizer submission artifacts, judging criteria, finale
+3. Separately verify organizer submission artifacts, judging criteria, finale
    date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-09-02 — M0 delivery-plan gate explicitly approved:** Approved
+  `implementation-plan.md`, `test-plan.md`, `milestones.md`, and the reconciled
+  `execution-plan.md` as the delivery baseline subordinate to Product, Methodology,
+  Evidence, and Architecture. Recorded approval status only; no contract,
+  application, dependency, cloud resource, commit, push, or M1 work changed.
 - **2026-09-02 — P0 Architecture Lock persisted after 2026-09-01 approval:** Locked the
   source-to-release flow, four-file reviewed data bundle, non-circular deployment
   identity, single-worker Cloud Run topology, browser session model, exact plan
@@ -238,17 +236,16 @@ A missed gate cuts or freezes scope; it does not consume testing/submission
 contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
-The approved September 2 feature-freeze gate is at critical schedule risk because
-architecture-informed delivery plans and all application implementation remain
-unstarted. Architecture Lock does not silently authorize either.
+The approved September 2 feature-freeze gate remains at critical schedule risk
+because all application implementation remains unstarted. M0 approval authorizes
+only M1 as the next milestone and does not broaden its scope.
 
 ## Blockers
 
-- Architecture-informed implementation, test, and milestone plans do not yet
-  exist, so application/data implementation remains unauthorized after Architecture
-  Lock alone.
 - Official judging criteria, submission artifacts, and conditional live-demo
-  details remain unconfirmed and block final submission-package planning.
+  details remain unconfirmed. They urgently block submission-dependent work and
+  final submission-package planning, but not independent M1 contract/validator
+  work unless a discovered official requirement materially affects its contracts.
 
 ## Active Risks
 
@@ -488,6 +485,12 @@ remains explicit.
   intent.
 - docs/product/screen-spec.md — authoritative UI, state, and wireframe specification.
 - docs/delivery/execution-plan.md — initial approved delivery sequencing and gates.
+- docs/delivery/implementation-plan.md — approved lock-preserving implementation
+  sequence and milestone write surfaces.
+- docs/delivery/test-plan.md — approved architecture-required verification layers,
+  story traceability, and release rules.
+- docs/delivery/milestones.md — approved M0–M10 dependency, acceptance, cost, and
+  stop gates.
 - docs/decisions.md — authoritative durable decision history.
 - docs/architecture/p0-architecture.md — authoritative P0 topology, source/release
   flow, services, runtime, deployment, security, observability, cost, verification,
@@ -526,8 +529,8 @@ remains explicit.
   safety tests.
 - tests/test_rna_projects_gis_reconnaissance.py — native source, provenance,
   matching, reconciliation, and cloud-preservation tests.
-- docs/delivery/implementation-plan.md, test-plan.md, and milestones.md —
-  intentionally absent until post-Architecture delivery planning.
+- docs/delivery/implementation-plan.md, test-plan.md, and milestones.md — approved
+  together as the M0 delivery baseline on 2026-09-02.
 
 Local branch: main. Public GitHub remote:
 https://github.com/swethabarla19/ClimateCapitalAI.git.
@@ -548,7 +551,10 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   ADC; no credential material is stored in the repository. The earlier Python 3.12
   source-fetch runtime lacked a default CA bundle; `/etc/ssl/cert.pem` was used for
   verified HTTPS without disabling certificate verification.
-- No application environment is established.
+- No application environment is established. The approved M1 must pin only the
+  Python runtime/dependencies required for contract and release-validator work.
+  Frontend package-manager/runtime setup remains deferred to M4, the first frontend
+  application work unit.
 - No Cloud Run, Artifact Registry, Cloud Build, runtime IAM, Gemini configuration,
   billing-control, or deployment change has been made; the Architecture Lock is
   documentation only.
@@ -655,6 +661,9 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-02 | Explicit M0 delivery-baseline approval record | Updated approval/status metadata in the four delivery-baseline documents, README routing, and canonical progress handoff; ran `.venv/bin/python -m unittest discover -s tests -v`, Python compilation, `pip check`, relative Markdown link/fence validation, intended-file trailing-whitespace scan, approval-boundary review, full-diff inspection, `git diff --check`, and Git state inspection | Passed: 46 tests; Python compilation passed; no broken requirements; 133 relative links resolve and all fences balance; no trailing whitespace or diff-check error; only approval/gate/status/handoff text changed; M0 is approved and complete, M1 is authorized next but not started; no contract, application, dependency, governed data, cloud, decision, commit, or push change; pip emitted only its existing unwritable-cache warning |
+| 2026-09-02 | Corrected M0 delivery package and pre-approval re-audit | Reconciled the delivery sequence to Architecture units 3–5; independently parsed the exact Methodology family table and reconciled it to the governed CSV and RNA match artifact; classified repository-wide Importance/weight/score/rank/optimizer terms; ran `.venv/bin/python -m unittest discover -s tests -v`, Python compilation, `pip check`, semantic assertions for all six original audit findings, relative Markdown link/fence validation, intended-file trailing-whitespace scan, full-diff review, `git diff --check`, and Git state inspection | Passed: 46 tests; exact 12 / $143,005,000 reconciles to governed requests; all-37 is 37 / $327,970,000; GIS remains separate at 15/22 all-37 and 5/7 within the family; all original findings resolved; no stale active analytical mechanic or new contradiction found; 133 relative links resolve and all fences balance; pip emitted only its existing unwritable-cache warning; package remains proposed and M1 remains blocked pending explicit approval |
+| 2026-09-02 | Initial draft of M0 architecture-informed delivery plans | Recovered the complete repository and locked documents; inspected Git, manifests, code, tests, scripts, configuration, and governed evidence assets; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, `git diff --check`, intended-file trailing-whitespace checks, relative Markdown link/fence validation, stale delivery-handoff searches, lock-boundary term review, and final Git status/stat inspection | Mechanical checks passed: 46 tests, Python compilation, dependency integrity, 133 resolving relative Markdown links, and balanced fences; a later pre-approval semantic audit found work-order, gate, stale-language, M1-tooling, geometry-test, and authority-wording inconsistencies, so this initial draft was not approval-ready; pip emitted only its existing unwritable-cache warning |
 | 2026-09-02 | Final P0 scenario-budget bound correction | Replaced the prior representation-limit maximum with the approved `$0`–`$1,000,000,000` application input bound; searched repository documentation for the obsolete bound; ran the full repository test suite, `git diff --check`, and focused Architecture/Methodology budget-contract assertions | Passed: 46 tests; no obsolete safe-integer bound remains; the application-only limit preserves exact whole-dollar arithmetic, City-policy and eligibility separation, the `$125,000,000` Historical Envelope, and ample headroom above the 37-project / `$327,970,000` governed universe; no application, commit, or push change |
 | 2026-09-02 | P0 Architecture Lock | Read the complete governing repository state; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, relative Markdown link/fence checks, D-001–D-096 continuity, stable-story/core-scope checks, exact governed/family CSV-methodology reconciliation, required Architecture contract assertions, stale optimizer/ranking/weights/runtime-GIS/runtime-BigQuery searches, changed-file boundary review, and Git status/stat review | Passed: 46 tests; 12 Markdown files have resolving relative links and balanced fences; 96 decisions are continuous and unique; all 12 stable P0 IDs remain, with 11 required core and P0-9 post-core stretch; 37 / $327,970,000 and exact 12 / $143,005,000 reconcile; stale-term hits are explicit exclusions or preserved superseded history; only the ten authorized documentation files changed or were created; no application, data, cloud, commit, or push change |
 | 2026-09-01 | Reviewed Methodology Lock commit gate | Confirmed the exact documentation-only working-tree boundary; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, and staged-scope validation | Passed: 46 tests; only the ten intended methodology, Product/Design, delivery, reference, repository-routing, and current-state Markdown files are included; no application, data, cloud, architecture, or push change |
@@ -679,6 +688,107 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-02 — Record explicit M0 delivery-baseline approval
+
+- **Objective:** Record the user's explicit approval of the corrected delivery-plan
+  package and stop before M1.
+- **Approval:** Marked `docs/delivery/implementation-plan.md`, `test-plan.md`,
+  `milestones.md`, and the reconciled `execution-plan.md` as the approved M0
+  delivery baseline subordinate to Product, Methodology, Evidence, and
+  Architecture. M0 is complete; M1 is authorized next but not started.
+- **Files changed:** Updated only approval/status, stage/gate, routing, verification,
+  and handoff text in the four delivery documents, README, and PROJECT_PROGRESS.
+- **Verification:** The full 46-test suite, Python compilation, dependency check,
+  133-link/fence validation, intended-file whitespace scan, approval-boundary
+  review, full-diff inspection, and `git diff --check` passed. Pip reported only
+  its existing unwritable-cache warning.
+- **Boundaries:** No implementation, test, milestone, Product, Methodology,
+  Evidence, Architecture, or decision contract changed substantively. The exact
+  37/$327,970,000 governed universe, 12/$143,005,000 active family, manual full-
+  request membership, deterministic authority, geometry independence, benchmark
+  isolation, non-authoritative Problem Score treatment, and bounded Gemini
+  authority remain unchanged. No application, dependency, governed data, cloud,
+  stage, commit, or push operation occurred.
+- **Handoff:** Stop after M0 approval recording. Begin only M1 in a subsequent
+  implementation task; do not skip to either post-schema track.
+
+### 2026-09-02 — Correct and re-audit the proposed delivery-plan package
+
+- **Objective:** Resolve only the six pre-approval delivery-plan findings without
+  reopening or implementing Product, Methodology, Evidence, or Architecture.
+- **Corrections:** Restored the Architecture application track before reviewed-data
+  integration; limited M6 to reviewed-byte integration and fixture removal;
+  clarified official Patchamomma requirements as urgent submission-dependent work,
+  not a blanket M1 gate; replaced the stale scoring-readiness entry; deferred
+  frontend tooling to M4; added M1 geometry/membership-authority contract tests;
+  and replaced the invented authority ranking with domain authority plus explicit
+  supersession and conflict-stop language.
+- **Analytical trace:** Re-read the exact 12-row Methodology table and D-075/D-077,
+  then independently reconciled its IDs and requests to the governed 37-row CSV.
+  The family is exactly 12 / $143,005,000 and is purpose-derived independently of
+  geometry. RNA exact-ID geometry is 15 matched / 22 unmatched over all 37 and 5/7
+  within the 12-family subset; neither result changes family membership.
+- **Semantic sweep:** Classified repository-wide Importance, weight, score, rank,
+  and optimizer terms. Current uses are the proper-name Problem Score, explicit
+  prohibitions/non-goals, or later-scope possibilities contingent on a future
+  methodology revision; older affirmative mechanics occur only in decision/status
+  history marked superseded/resolved. The sole stale active delivery entry was
+  corrected. No out-of-scope higher-authority rewrite was needed.
+- **Verification:** The full 46-test suite, Python compilation, dependency check,
+  all-six-finding semantic assertions, exact cohort/source/GIS reconciliation,
+  link/fence validation, whitespace check, full-diff review, and `git diff --check`
+  passed. Pip reported only its existing unwritable-cache warning.
+- **Files changed:** Corrected the proposed implementation, test, and milestone
+  plans plus the related execution-plan and canonical progress text. README routing
+  remained accurate and required no correction in this pass.
+- **Deviations, risks, and decisions:** No deviation from the locked work order, no
+  new contradiction, and no new decision ID. Official submission requirements
+  remain urgent and unresolved for submission-dependent work. No application,
+  dependency, governed data, cloud, stage, commit, or push change occurred.
+- **Handoff:** The corrected package passed the pre-approval re-audit and remains
+  proposed for explicit user approval. Do not begin M1 automatically.
+
+### 2026-09-02 — Draft the architecture-informed delivery-plan gate
+
+- **Objective:** Recover project state from the repository, identify the first
+  outstanding Architecture work unit, and perform only that unit without skipping
+  into application implementation.
+- **Recovery result:** Confirmed clean `main` at the Architecture Lock checkpoint,
+  no application code or application dependency manifest, the existing governed
+  data/reconnaissance foundation, and the authoritative Architecture Lock in
+  `docs/architecture/p0-architecture.md` and `data-contracts.md`. The lock makes
+  delivery-plan creation/approval the first outstanding unit and prohibits
+  application code before it.
+- **Semantic reconciliation:** Preserved the active evidence-first method. D-076
+  and D-077 supersede the earlier weight/optimizer premise: P0 has no Importance
+  weights or optimizer, and analyst-controlled full-request membership within the
+  exact 12-record family flows through deterministic validation/arithmetic.
+- **Initial draft:** Drafted `docs/delivery/implementation-plan.md`,
+  `docs/delivery/test-plan.md`, and `docs/delivery/milestones.md`; refined the
+  approved execution plan, README map, and canonical current handoff. The draft
+  defined M1 contract/validator work as the first application milestone and kept
+  reviewed-data, Gemini, identity, cost, and cloud gates explicit.
+- **Verification:** The full 46-test repository suite, Python compilation,
+  dependency check, diff/whitespace checks, relative-link/fence validation, stale
+  handoff searches, and locked-term review passed mechanically. A later semantic
+  pre-approval audit found that the draft did not yet preserve the Architecture
+  application-track/integration split and contained five additional consistency
+  issues; this entry therefore does not record delivery-plan approval readiness.
+  Pip reported only its existing unwritable-cache warning; no broken requirement
+  existed.
+- **Files changed:** Added the three proposed delivery plans; updated
+  `docs/delivery/execution-plan.md`, `PROJECT_PROGRESS.md`, and `README.md`.
+- **Deviations and issues:** No application code was created because M0 approval is
+  a locked prerequisite. The initial draft ambiguously assigned frontend runtime/
+  package-manager pinning to M1 and treated official submission requirements
+  inconsistently; both were sent to the narrow correction pass. No new durable
+  decision was needed.
+- **Boundaries:** No Product, Methodology, Evidence, Architecture, scoring,
+  optimization, Gemini-authority, governed data, dependency, cloud resource,
+  commit, or push change occurred.
+- **Handoff:** Superseded by the pre-approval audit and narrow correction pass. Do
+  not begin M1 automatically.
 
 ### 2026-09-02 — Correct the P0 scenario-budget validation bound
 

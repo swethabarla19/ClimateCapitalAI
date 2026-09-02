@@ -1,7 +1,7 @@
 # ClimateCapital AI Execution Plan
 
-> **Status:** Approved initial delivery baseline, reconciled through Methodology
-> and Architecture Locks; expected to be refined by the next delivery-planning task
+> **Status:** Approved delivery baseline, reconciled through Methodology and
+> Architecture Locks; M0 explicitly approved on 2026-09-02; M1 not started
 > **Authority:** This is the current high-level delivery sequencing, deadline, and
 > release-gate plan. It is not an implementation plan, test plan, or architectural
 > design.
@@ -40,19 +40,19 @@ analytical credibility, testing time, and a low Google Cloud cost profile.
 | 5 | Documentation normalization | Purpose-specific durable memory and fresh-task handoff | Complete |
 | 6 | Evidence feasibility and Methodology Lock | Reviewed sources, purpose family, evidence roles, missingness, supported arithmetic, and unsupported metrics | Complete; locked 2026-09-01 |
 | 7 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Complete; locked 2026-09-01 |
-| 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Next; not started |
+| 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Complete; M0 approved 2026-09-02 |
 | 9 | Required-P0 implementation | Integrated deterministic and UI/Gemini functionality inside the locked boundary | Not started |
 | 10 | Release, QA, demo, and submission | Deployed release candidate, validation, rehearsal, freeze, and verified submission | Not started |
 
 The approved architecture is authoritative in
 [p0-architecture.md](../architecture/p0-architecture.md) and
-[data-contracts.md](../architecture/data-contracts.md). A fresh delivery-planning
-task should now produce or refine:
+[data-contracts.md](../architecture/data-contracts.md). The approved M0 delivery
+baseline consists of:
 
-- implementation-plan.md
-- test-plan.md
-- execution-plan.md
-- milestones.md
+- [implementation-plan.md](implementation-plan.md)
+- [test-plan.md](test-plan.md)
+- this refined execution plan; and
+- [milestones.md](milestones.md).
 
 PROJECT_PROGRESS.md remains the sole actual progress tracker; no delivery progress
 file is permitted.
@@ -67,10 +67,15 @@ file is permitted.
    versions identified by the architecture.
 4. Confirm the first implementation milestone and the authoritative files it must
    read.
-5. Verify official submission requirements and ensure required artifacts fit the
-   delivery schedule.
+5. Track official submission requirements as an urgent external dependency. Verify
+   them before final submission-package implementation/finalization, submission-
+   specific deployment or package decisions, or any implementation choice whose
+   correctness depends on an official Patchamomma requirement. They are not a
+   blanket prerequisite for independent M1 contract/validator work.
 
-Application implementation is not authorized by completion of this document.
+Items 1–4 were satisfied by explicit M0 approval on 2026-09-02. That approval
+authorizes only M1 unless the user separately expands that authority. M1 has not
+started.
 
 ## Initial Deadline Plan
 
@@ -80,7 +85,7 @@ Application implementation is not authorized by completion of this document.
 | Aug 26 | 8 | Lock Stage 3 backlog; check submission requirements by noon |
 | Aug 27 | 8 | Complete Product and Design Lock and documentation normalization |
 | Aug 28 | 6 | Architecture/technical execution-readiness in a fresh planning task |
-| Aug 29 | 7 | Evidence readiness: sources, cohort, scoring, confidence, and vintages |
+| Aug 29 | 7 | Evidence readiness: sources, purpose family, evidence roles, missingness, and vintages |
 | Aug 30 | — | Recovery day; use only if an earlier gate slips |
 | Aug 31 | 7 | Analytics core, only after required locks and plans |
 | Sep 1–2 | 14 | Integrate required P0 and freeze features by Sep 2 evening |
@@ -150,8 +155,10 @@ criteria.
      display artifacts; final provenance, reconciliation, and reviewed release
      bundle.
    - **Application track:** exact-schema fixture bundle with no invented analytical
-     claims; deterministic Funding Plan engine; API contracts; frontend shell and
-     session reducer; core manual Funding Plan behavior.
+     claims; deterministic Funding Plan engine; API contracts; frontend shell,
+     session reducer, restoration revalidation, and non-map/manual Funding Plan;
+     then Project Detail, methodology/help, map shell/default behavior, and the
+     isolated Historical Benchmark against the locked contracts.
 
 4. Replace fixtures with the reviewed pinned release-data bundle, prove the build
    requires no live source, and block fixture state from the release candidate.
@@ -200,7 +207,7 @@ proposal unless post-core P0-9 is completed without threatening the core candida
 
 ## Post-Architecture Delivery-Planning Handoff
 
-A fresh delivery-planning task should begin by reading:
+The delivery-planning task began by reading:
 
 1. [Repository instructions](../../AGENTS.md)
 2. [Current project status](../../PROJECT_PROGRESS.md)
@@ -213,18 +220,22 @@ A fresh delivery-planning task should begin by reading:
 9. [P0 Architecture Lock](../architecture/p0-architecture.md)
 10. [P0 data and runtime contracts](../architecture/data-contracts.md)
 
-The task should create the architecture-informed implementation, test, and
-milestone plans without reopening the locked methodology, product, architecture,
-or source reconnaissance.
+The architecture-informed implementation, test, and milestone plans were approved
+on 2026-09-02 without reopening the locked methodology, product, architecture, or
+source reconnaissance.
 
-## Planned Later Delivery Documents
+## Architecture-Informed Delivery Documents
 
-The following are now the next required planning artifacts and remain intentionally
-absent until a separately authorized delivery-planning task:
+The approved artifacts are maintained together:
 
-- implementation-plan.md
-- test-plan.md
-- milestones.md
+- [implementation-plan.md](implementation-plan.md)
+- [test-plan.md](test-plan.md)
+- [milestones.md](milestones.md)
 
-The approved architecture documents now exist under `docs/architecture/`. No
+M0 approval satisfied the repository authorization gate before independent M1
+contract/validator implementation. M1 is authorized next but has not started.
+Official Patchamomma requirements remain an urgent unresolved external dependency
+for submission-dependent work, but do not block M1 unless a discovered official
+requirement materially affects its locked contracts. The approved architecture
+documents remain authoritative under `docs/architecture/`. No
 `docs/delivery/progress.md` will be created.
