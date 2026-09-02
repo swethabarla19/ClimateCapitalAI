@@ -34,6 +34,7 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | --- | --- |
 | Repository working rules and task startup | [AGENTS.md](AGENTS.md) |
 | Current state, progress, blockers, risks, and handoff | This file |
+| Locked P0 evidence roles, analytical family, missingness, and deterministic Funding Plan method | [docs/methodology/p0-evidence-methodology.md](docs/methodology/p0-evidence-methodology.md) |
 | Product vision, scope, principles, workflow, and non-goals | [docs/product/product-plan.md](docs/product/product-plan.md) |
 | Prioritized stories and acceptance intent | [docs/product/user-stories.md](docs/product/user-stories.md) |
 | Screens, navigation, UI behavior, states, recovery, and wireframes | [docs/product/screen-spec.md](docs/product/screen-spec.md) |
@@ -49,17 +50,16 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-01
-- **Project stage:** Product and Design planning remains complete and locked through
-  Stage 4. Architecture Planning began and is intentionally paused before
-  Architecture Lock for controlled evidence reconnaissance; this is not a new
-  project phase or product reset.
-- **Current milestone:** Live Austin RNA Projects layer 8 preserved as an immutable,
-  generation-verified native ArcGIS JSON snapshot and matched by exact governed ID
-  against all 37 official projects; awaiting review before analytical-feasibility
-  reconnaissance continues.
-- **Next milestone:** After review, investigate historically valid project-level
-  flood-hazard and problem-severity evidence while preserving unsupported and
-  incomparable cases explicitly.
+- **Project stage:** Methodology Lock is complete and reviewed. Product and Design
+  have been reconciled with the evidence result. Architecture Planning remains
+  paused before Architecture Lock until separately authorized; this is not
+  application implementation.
+- **Current milestone:** Final P0 evidence and methodology lock: evidence-first
+  funding decision support, one derived 12-record local
+  flood/local drainage family, no synthetic priority model, and analyst-controlled
+  full-request scenarios with deterministic budget arithmetic.
+- **Next milestone:** After separate authorization, resume Architecture
+  Planning against the locked methodology and reconciled Product/Design documents.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
@@ -69,15 +69,19 @@ access to prior chat conversations.
   and Git-tracked snapshot provenance and match artifacts. The raw PDFs and GIS
   responses remain ignored locally and are preserved at exact generation-verified
   Cloud Storage paths; the source-universe CSV remains in one validated `raw`
-  BigQuery table. No eligibility, production pipeline, application, Architecture
-  Lock, or analytical methodology exists.
-- **Most recent outcome:** Acquired the 20260901T183323Z live layer-8 snapshot with
-  577 polygon features, stable pre/post OBJECTID sets, lossless numeric-ID audit,
-  native 102739/2277 CRS, and no true curves. Exact governed-ID matching produced
-  15 single matches, 22 explicit zero matches, and no multiple matches; matched and
-  unmatched governed requests total $163,975,000 and $163,995,000 respectively,
-  reconciling to all 37 projects and $327,970,000. This current/live result does
-  not establish January 2026 geometry or eligibility.
+  BigQuery table. The repository now also contains one authoritative P0 methodology
+  document and reconciled Product/Design handoff documents. No production
+  pipeline, application, approved architecture, score, rank, weight model, or
+  optimizer exists.
+- **Most recent outcome:** Closed evidence feasibility without manufacturing a
+  common severity/benefit model. The governed universe remains 37 projects /
+  $327,970,000; the 24-project / $233,380,000 broad flood-related family is not
+  coherent under one method; the provisional P0 analytical family is 12 local
+  flood/local drainage records / $143,005,000. Problem Score and FEMA are
+  contextual, RNA and Fully Developed FloodPro are research-only for governed
+  analysis, expected flood-reduction benefit is unsupported, and EAZ 2021 is
+  contextual for only 5/12 projects. Product decisions that assumed scores,
+  weights, ranking, or optimizer-authoritative membership were explicitly reopened.
 
 ## Approved Locks
 
@@ -86,73 +90,74 @@ access to prior chat conversations.
   finalist-worthy deployed/tested P0; three-minute core demo expandable to five.
 - **Stage 2 — Product definition:** Capital planning analyst persona, Austin
   Watershed historical simulation, January 2026 context, $125 million Projects
-  sub-envelope, deterministic authority, rule-derived cohort, full-project
-  selection, and strict City benchmark isolation.
+  sub-envelope, full-request treatment, and strict City benchmark isolation remain.
+  The former rule-derived cohort, score/rank, weight, and optimizer implications
+  are superseded by Methodology Lock.
 - **Stage 3 — Backlog:** Twelve required P0 stories, conditional SP0-1 Compare as
   the first cut, ordered P1, Later scope, acceptance intent, and release gates.
 - **Stage 4 — Product and Design Lock:** Required screens and contextual surfaces,
   navigation, UI states/recovery, low-fidelity wireframes, evidence gates, and
-  three-minute demo sequence.
+  three-minute demo sequence remain, reconciled to analyst-controlled Funding Plan
+  membership and evidence-first terminology.
+- **Methodology Lock — Evidence-first P0:** All 37 source records remain governed;
+  the all-37 purpose classification and provisional 12-record / $143,005,000
+  analytical family
+  are explicit ClimateCapital derivations; evidence roles and missingness are
+  governed; P0 has no Funding Priority score, rank, Importance weights, quantitative
+  risk/equity score, expected flood-reduction benefit, or optimizer.
 
-Stages 1–4 remain authoritative unless new source evidence creates a material
-contradiction. Full details are in docs/product and docs/decisions.md.
+Unchanged portions of Stages 1–4 remain authoritative. The empirical evidence gate
+materially contradicted and reopened the optimizer-authoritative assumptions; the
+historical record and exact replacements are preserved in docs/decisions.md. Full
+current detail is in docs/methodology and docs/product.
 
-The Architecture pause does not reopen ClimateCapital AI, the Austin Watershed P0
-pilot, the January 21, 2026 context, the $125 million Projects sub-envelope, the
-Map → Projects → Funding Plan journey, deterministic authority, benchmark
-isolation, the Gemini boundary, or any other approved Product and Design Lock.
+The evidence-driven reopening does not change ClimateCapital AI, the Austin
+Watershed P0 pilot, January 21, 2026 context, Map → Projects → Funding Plan journey,
+full-request treatment, benchmark isolation, current-session plan limit,
+Reviewed Draft, accessibility, or recovery behavior. It narrows deterministic
+authority to facts, evidence states, validation, arithmetic, and supported
+comparison; the $125 million figure is historical/default context, not eligibility.
 
 ## Current Workstream
 
-- **Goal:** Establish what authoritative, historically valid, comparable evidence
-  exists for each of the 37 official Watershed projects before resuming
-  Architecture Lock decisions.
-- **Status:** The source-ingestion/provenance foundation, raw preservation,
-  checksum-gated 37-record extraction, independently validated source-faithful
-  BigQuery raw copy, and bounded live RNA layer-8 geometry reconnaissance are
-  complete and awaiting review. Architecture Planning remains paused; a live GIS
-  match is evidence only, and no record has been declared eligible, classified
-  analytically, or used for scoring, optimization, or application work.
+- **Goal:** Preserve the locked P0 evidence-first methodology and its explicit
+  reconciliation of earlier Product/Design assumptions for the Architecture handoff.
+- **Status:** The final evidence-feasibility gate and documentation reconciliation
+  are complete and reviewed. The work establishes a
+  derived purpose family, not City eligibility, and makes no score, rank, weight,
+  optimization, application, architecture, or cloud change.
 - **Owner:** User and Codex.
-- **Required reading:** AGENTS.md, this file, the locked files under docs/product,
-  docs/delivery/execution-plan.md, docs/decisions.md, and the non-authoritative
-  docs/reference/technical-architecture-reference.md; reconnaissance must also use
-  preserved authoritative sources with explicit provenance.
-- **Exit condition:** A reviewed 37-project evidence matrix provides enough real
-  evidence to decide processing boundaries, geospatial needs, data contracts,
-  historical snapshot handling, benefit comparability, and methodology parameters;
-  Architecture Planning may then resume. Approved architecture files still require
-  explicit Architecture Lock.
+- **Required reading:** AGENTS.md, this file,
+  docs/methodology/p0-evidence-methodology.md, the reconciled files under
+  docs/product, docs/delivery/execution-plan.md, docs/decisions.md, and the
+  non-authoritative docs/reference/technical-architecture-reference.md.
+- **Exit condition:** Achieved. Architecture Planning may resume only in a later
+  authorized task; approved architecture files still require explicit Architecture
+  Lock.
 
 ## Next Actions
 
-1. Review the timestamped layer-8 snapshot, manifest, GCS receipt, exact-ID match
-   artifact, 15/22/0 coverage result, funding reconciliation, limitations, tests,
-   and Git diff.
-2. Do not treat a live GIS match as January 2026 geometry or analytical
-   eligibility, and do not investigate other GIS systems for the 22 zero-match
-   projects unless a later task explicitly authorizes it.
-3. After explicit authorization, investigate historically valid project-level
-   flood-hazard and problem-severity evidence.
-4. Investigate building, structure, and population-exposure evidence.
-5. Investigate equity and vulnerability evidence and defensible joins.
-6. Build a project-by-project engineering and expected flood-reduction benefit
-   evidence inventory without inferring benefit from project/floodplain
-   intersection.
-7. Determine which projects can defensibly participate in a common flood-priority
-   model; preserve exclusions and limitations explicitly without inventing values.
-8. Review the resulting 37-project evidence matrix and identify what remains
-   incomparable, unavailable, or historically invalid.
-9. Use reviewed findings to resume Architecture Planning and decide build-time
-   versus runtime work, geospatial processing, data contracts, historical
-   snapshots, benefit comparability, and parameters deferred to methodology.
-10. Do not resume Architecture Lock, create approved architecture files, or begin
-    production analytical implementation until the evidence findings are reviewed.
-11. Separately verify organizer submission artifacts, judging criteria, finale
-    date, and conditional live-demo format.
+1. Do not perform another broad source hunt, inspect SVI, manufacture project
+   geography, or reintroduce expected benefit, scores, ranks, weights, or an
+   optimization objective without a later explicit methodology revision.
+2. After separate authorization, resume Architecture Planning using
+   the reconciled handoff; design only the smallest contracts needed for governed
+   facts/evidence states, analyst membership, validation, integer-dollar arithmetic,
+   supported comparison, and bounded Gemini interaction.
+3. After explicit Architecture Lock, create the architecture-informed
+   implementation, test, and milestone plans before application implementation.
+4. Separately verify organizer submission artifacts, judging criteria, finale
+   date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-09-01 — P0 Methodology Lock completed and reviewed:** Closed the final
+  evidence-feasibility gate; preserved the 37-project governed universe and derived
+  all-37 purpose audit; locked the 12-record local flood/local drainage family;
+  classified Problem Score, RNA/FloodPro, expected benefit, and EAZ evidence by
+  role and historical fit; removed unsupported scores/weights/ranking/optimization;
+  and reconciled Product/Design to analyst-controlled scenarios and deterministic
+  budget arithmetic without application, architecture, cloud, or push changes.
 - **2026-09-01 — Live RNA layer-8 geometry reconnaissance completed:** Preserved a
   stable 577-feature native ArcGIS JSON snapshot with exact-byte and semantic
   fingerprints, exact numeric-token ID handling, native CRS/geometry audit, and
@@ -229,13 +234,13 @@ authorize implementation.
 
 ## Blockers
 
-- Architecture Lock is intentionally blocked pending review of the 37-project
-  evidence matrix and, in particular, whether expected flood-reduction evidence is
-  sufficiently available and comparable.
+- Architecture Planning remains paused until separately authorized. The reviewed
+  Methodology Lock and Product/Design reconciliation are complete, and evidence
+  feasibility is no longer an open Architecture dependency.
 - No architecture is approved; this blocks architecture implementation, production
-  data pipelines, analytical implementation, and final architecture documents.
-- Evidence decisions block implementation of analytical claims, governed metrics,
-  weights, confidence warnings, optimization, and default evidence visualizations.
+  data pipelines, application implementation, and final architecture documents.
+- Architecture-informed implementation, test, and milestone plans do not yet
+  exist, so implementation remains unauthorized after review alone.
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed and block final submission-package planning.
 
@@ -243,12 +248,12 @@ authorize implementation.
 
 - Source-license/reuse terms remain unverified and are recorded as such in the
   source registry.
-- RNA Projects layer 8 is a live/current City service with no established January
-  2026 effective date. Its timestamped geometry is research-only feasibility
-  evidence and must not be represented as historical decision-context geometry.
-- Twenty-two of the 37 governed projects have no exact ID match in the captured
-  live layer-8 snapshot. Missing live geometry is not an eligibility failure, and
-  other GIS systems were intentionally not investigated in this work unit.
+- RNA Projects layer 8 and the current FloodPro services do not establish their
+  January 2026 geometry/data state. RNA geometry is research-only for governed
+  analysis; FEMA is current contextual hazard evidence only.
+- Twenty-two of the 37 governed projects, including 7/12 local-drainage family
+  records, have no exact ID geometry match in the captured live RNA snapshot.
+  Missing geometry is not evidence of low need and does not remove a family record.
 - Three of the 15 exact-ID GIS matches have non-identical project names. Names were
   retained as evidence but did not affect matching; project identity still needs
   source-specific review wherever later analytical use is contemplated.
@@ -256,6 +261,16 @@ authorize implementation.
   preserves them without transformation, simplification, curve densification, or
   repair, and polygon semantics have not been validated as project footprints or
   benefit areas.
+- Fully Developed FloodPro contains relevant invalid source geometries and remains
+  research/context only; repaired geometry must not become governed source truth.
+- Problem Score project/problem association strength is provenance, not severity,
+  and no reproducible January 2026 Local Flood numeric score covers the family.
+- EAZ 2021 is a 2019-ACS-based Austin Transportation vulnerability snapshot with
+  defensible project-level location context for only 5/12 family records. It is not
+  current-2026 vulnerability or a project-beneficiary measure.
+- Project 5789.150 is a citywide renewal program. Treating it like one discrete
+  footprint would create false location, hazard, vulnerability, or beneficiary
+  precision.
 - BigQuery does not enforce project-ID uniqueness, source sequence, totals, or the
   semantic fingerprint as table constraints. The loader refuses an existing table,
   but any separately authorized mutation by another tool or user requires rerunning
@@ -263,9 +278,8 @@ authorize implementation.
 - The local Python 3.12 installation has no default CA bundle configured; verified
   HTTPS succeeded only when `SSL_CERT_FILE=/etc/ssl/cert.pem` selected the host CA
   bundle. Certificate verification was not disabled.
-- Comparable project-level expected flood-reduction evidence may not exist across
-  the 37-project universe; project/floodplain intersection cannot substitute for
-  benefit evidence.
+- Comparable project-level expected flood-reduction evidence is unsupported for
+  P0; project/floodplain intersection cannot substitute for benefit evidence.
 - Project identifiers, geometry, engineering evidence, hazard evidence, exposure,
   and equity joins may be inconsistent across sources or valid only for different
   historical vintages.
@@ -273,18 +287,20 @@ authorize implementation.
   5789.150 before 5789.145 and 5789.146. Extraction preserves rather than repairs
   this source-level inconsistency.
 - The current delivery baseline is at critical schedule risk because no
-  Architecture Lock, evidence matrix, application, pipeline, or analytical
-  implementation exists as of August 31.
+  Architecture Lock, application, production pipeline, or implementation plan
+  exists as of September 1.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
-- Architecture and evidence work are now on the critical path and must stay bounded.
-- The final rule-derived cohort, evidence coverage, and geometry may be less
-  demo-friendly than expected and must not be manually tuned.
-- Unresolved scoring, confidence, missingness, and optimization choices may become
-  trust risks if rushed or presented as arbitrary.
-- The Historical Decision Snapshot, Historical City Recommendation, current
-  confirmed scenario, and immutable Historical Baseline may be confused if the
-  locked terminology is not implemented consistently.
+- Architecture work is now on the critical path and must implement the locked
+  narrow method without reopening evidence reconnaissance.
+- Product language or contracts could silently reintroduce a Funding Priority,
+  ranking, Importance weights, optimizer, recommendation, or missing-evidence
+  penalty even though no defensible objective supports them.
+- Analyst-controlled membership could be misrepresented as a ClimateCapital or
+  City recommendation; provenance and confirmation labels must remain explicit.
+- The Historical Decision Snapshot, Historical Envelope, Historical City
+  Recommendation, Current Confirmed Plan, and Session Reference Plan may be
+  confused if the locked terminology is not implemented consistently.
 - Gemini or map work could consume disproportionate effort; deterministic/manual
   paths and non-map access remain release priorities.
 - Failed recalculation must not overwrite the last successful deterministic result.
@@ -298,36 +314,22 @@ authorize implementation.
 
 ### Evidence and methodology
 
-- What reuse and redistribution terms govern the two registered City documents?
-- What reuse and redistribution terms govern the live City RNA GIS snapshot?
-- How stable are the 37 official subproject identifiers across GIS and later
-  engineering/evidence sources?
-- Can January 2026 geometry or an effective-date history be established for the 15
-  live layer-8 matches, and what authoritative geometry exists for the 22 explicit
-  zero matches?
-- Which historically valid hazard, severity, exposure, engineering, benefit,
-  equity, and vulnerability fields exist project by project?
-- Is expected flood-reduction benefit comparable across enough projects for a
-  common priority model, or must projects/metrics remain differentiated?
-- Which governed scoring dimensions, transformations, score breakdown,
-  optimization objective, and default/editable weights should P0 use?
-- How should missing evidence, uncertainty, and confidence affect eligibility,
-  scoring, ranking, optimization, and presentation?
-- What is the final eligible cohort after documented rules are applied?
-- Which evidence vintages and defensible project geometries are available?
-- Which portfolio comparison measures are supported?
-- What evidence is sufficient for a project-specific heat co-benefit?
-- Are People Potentially Benefiting and Implementation Readiness supported metrics?
-- Which supported analytical layers should be active in the default Explore map?
+- No evidence or methodology decision remains open for P0. Source licensing/reuse
+  remains unverified operational metadata, not a reason to broaden reconnaissance.
+- Any later metric proposal requires an explicit methodology revision documenting
+  source, vintage, historical fit, coverage, comparability, missingness,
+  transformation, and effect; it is not part of the current handoff.
+- Architecture/Product presentation must still decide which contextual or
+  research-only map layers, if any, are visible by default without changing their
+  locked analytical roles.
 
 ### Architecture
 
-- Which architecture choices can be decided from current constraints, and which
-  must remain parameterized until the evidence matrix is reviewed?
 - What is the smallest low-cost deployable system that satisfies required P0?
 - Which work is precomputed versus performed at runtime?
-- What governed contract separates deterministic analysis, UI, Historical
-  Benchmark, and Gemini?
+- What governed contracts preserve all-37 source facts, the derived 12-record
+  family, evidence roles/missingness, analyst membership, integer-dollar arithmetic,
+  Historical Benchmark isolation, and Gemini boundaries?
 - Which Google Cloud, Gemini, frontend, map, storage, and deployment options meet
   deadline, cost, security, and reliability constraints?
 - What data-versioning, lineage, observability, and teardown approach is required?
@@ -337,16 +339,18 @@ authorize implementation.
 - What are the official submission artifacts, judging criteria, finale date, and
   live-demo format?
 
-There are no unresolved Stage 4 screen, navigation, state, wireframe, or demo
-sequence decisions.
+There are no unresolved P0 scoring, weighting, ranking, optimization, or evidence-
+imputation decisions. Existing Stage 4 screen/navigation structure remains locked;
+its evidence-driven terminology and Funding Plan behavior are reconciled in
+docs/product.
 
 ## Technical Map
 
 ### Architecture
 
-Not established. Architecture Planning is paused before lock for 37-project
-evidence reconnaissance. The technical reference remains exploratory and does not
-constitute an Architecture Lock.
+Not established. Architecture Planning is paused before lock until separately
+authorized. The technical reference has been reconciled as a handoff but remains
+exploratory and does not constitute an Architecture Lock.
 
 ### Evidence Repository
 
@@ -427,15 +431,19 @@ The ordered raw-table schema is `source_id STRING REQUIRED`,
 The 37 official source rows above have been extracted, loaded only to the raw
 table, and tested against one immutable live/current GIS snapshot. No GIS match is
 an eligibility result, and the snapshot does not establish January 2026 geometry.
-No analytical classification, flood/exposure/benefit inference, evidence matrix,
-score, optimization result, staging/curated table, or benchmark table has been
-created. Benchmark isolation remains explicit.
+The all-37 purpose classification and exact provisional 12-record P0 analytical
+family are documented derivations in the Methodology Lock; they are not persisted
+analytical tables or a City taxonomy. No flood/exposure/benefit score, optimization result,
+staging/curated table, or benchmark table has been created. Benchmark isolation
+remains explicit.
 
 ### Repository Structure
 
 - AGENTS.md — repository rules and task-start routing.
 - PROJECT_PROGRESS.md — sole current state/progress/handoff document.
 - README.md — repository landing page and documentation map.
+- docs/methodology/p0-evidence-methodology.md — authoritative locked P0 evidence
+  roles, family, missingness treatment, and deterministic Funding Plan method.
 - docs/product/product-plan.md — approved product-level Product and Design Lock.
 - docs/product/user-stories.md — authoritative prioritized backlog and acceptance
   intent.
@@ -547,8 +555,9 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-065 keeps the technical reference non-authoritative until Architecture Lock.
 - D-066 keeps PROJECT_PROGRESS.md as the only progress file and defers
   architecture-informed delivery plans.
-- D-067 pauses Architecture Lock for controlled evidence reconnaissance without
-  reopening the approved product.
+- D-067 pauses Architecture Lock for controlled evidence reconnaissance; the
+  evidence dependency and Methodology Lock review are now complete, while
+  Architecture requires separate authorization before it resumes.
 - D-068 establishes the 37-project source-universe path and structurally separate
   Historical City Recommendation benchmark path.
 - D-069 establishes the canonical registry and immutable raw-fetch/provenance
@@ -564,7 +573,22 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-073 establishes live RNA layer 8 as the sole canonical GIS source for this
   bounded work unit, with native immutable acquisition, exact numeric-ID matching,
   explicit missingness, and uncertain historical fit.
-- Next available decision ID: **D-074**.
+- D-074 closes evidence feasibility and governs the four evidence roles and final
+  P0 treatment of Problem Score, RNA/FloodPro, expected benefit, and EAZ 2021.
+- D-075 preserves the all-37 universe, all-37 derived purpose audit, incoherent
+  24-record broad flood family, exact provisional 12-record P0 analytical family,
+  and separate citywide treatment for 5789.150.
+- D-076 removes unsupported scores, ranks, weights, expected benefit, optimization,
+  imputation, missingness penalties, and confidence-as-need.
+- D-077 reopens Funding Plan membership to analyst control with deterministic
+  validation/arithmetic and non-recommendation terminology.
+- D-078 separates the $125 million Historical Envelope from the analyst-created
+  Session Reference Plan and Current Confirmed Plan, supports analyst-defined
+  Available Budget What-If scenarios, and structurally isolates the Historical
+  City Recommendation benchmark.
+- D-079 limits Gemini to grounded explanation and confirmed translation of explicit
+  analyst commands; it cannot originate facts, membership, or recommendations.
+- Next available decision ID: **D-080**.
 
 ## Verification Record
 
@@ -572,6 +596,9 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-01 | Reviewed Methodology Lock commit gate | Confirmed the exact documentation-only working-tree boundary; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, and staged-scope validation | Passed: 46 tests; only the ten intended methodology, Product/Design, delivery, reference, repository-routing, and current-state Markdown files are included; no application, data, cloud, architecture, or push change |
+| 2026-09-01 | Final Methodology Lock semantic audit | Audited Historical Envelope versus analyst plan terminology, Historical City Recommendation isolation, provisional analytical-family versus eligibility language, and active-family/full-request/deterministic-membership boundaries; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, exact source/family/broad reconciliation, obsolete-current-term guards, D-001–D-079 continuity/supersession checks, and Markdown link/fence validation | Passed: 46 tests; $125 million is only Historical Envelope context; Session Reference Plan and Current Confirmed Plan are distinct analyst-plan terms; City benchmark is structurally isolated; 12 projects / $143,005,000 remain a provisional analytical family inside the visible 37-project / $327,970,000 universe; membership is active-family-only and full-request; deterministic logic validates but does not select; no commit or push |
+| 2026-09-01 | P0 evidence and Methodology Lock | Reviewed the interrupted working-tree diff and all authoritative handoff files; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, exact CSV/methodology reconciliation, all-37 and family name/ID/request checks, broad-family total check, D-001–D-079 continuity, relative Markdown-link and fence validation, stale-current-language guards, and deferred-file boundary checks | Passed: 46 tests; 37 projects / $327,970,000; exact 12 records / $143,005,000; exact broad 24 / $233,380,000; official names and requests reconcile; 79 continuous unique decisions; 13 Markdown files have valid relative links and balanced fences; no stale optimizer/weight/recommendation contract in current handoff; no application, architecture, cloud, commit, or push change |
 | 2026-09-01 | RNA layer-8 GIS reconnaissance | Acquired the live service/layer metadata, frozen pre-ID set, exact feature response, and post-ID set; ran the matcher twice for created/identical behavior; uploaded six create-only objects and streamed each generation-specific cloud object for independent SHA-256; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, manifest/match/receipt reconciliation, `git diff --check`, credential scan, and tracked/ignored status review | Passed: 577/577 stable OBJECTIDs and polygon geometries, exact 11-field schema, native 102739/2277 CRS, no transfer-limit flag, no missing/unexpected IDs, 577 safe numeric ID tokens, no true curves, 15 single/22 zero/0 multiple governed matches, $163,975,000 matched plus $163,995,000 unmatched equals 37 projects and $327,970,000; local/cloud bytes and SHA-256 match for all six objects; no benchmark, BigQuery, infrastructure, IAM, architecture, methodology, commit, or push change |
 | 2026-08-31 | Raw BigQuery ingestion and warehouse quality | Inspected dataset/table metadata; ran the final `sql/quality/watershed_projects_raw_checks.sql` in `us-central1`; exercised the loader's existing-target refusal; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, `git diff --check`, credential scan, and tracked/ignored status review | Passed: exact nine-column ordered REQUIRED STRING/INT64 schema; 21/21 warehouse checks; 37 rows and unique IDs; $327,970,000; page/source/order/district/spot checks and semantic SHA-256 match; 29 tests; loader refused the existing table before load submission; no cloud data/configuration or credentials changed |
 | 2026-08-31 | Official Watershed source-universe extraction | Verified the raw checksum against the registry; inspected rendered source table pages; ran the extractor twice for created/identical behavior; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, an independent standard-library CSV count/sum/spot-check read, and `git diff --check` | Passed: 19 tests; 37 unique source records; row sum, independently parsed table total, and memorandum program request all equal $327,970,000; first/last, page boundary, multi-district, and 5789.150/5789.145/5789.146 order checks passed; ambiguous structure, checksum mismatch, unparseable row, missing total, and differing-output paths fail closed |
@@ -591,6 +618,59 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-01 — Lock the P0 evidence-first methodology
+
+- **Objective:** Persist the closed evidence-feasibility findings, reconcile their
+  consequences with the prior Product and Design Lock, and lock the smallest
+  defensible P0 method without application or architecture implementation.
+- **Methodology result:** Retained all 37 governed projects / $327,970,000 and the
+  all-37 derived purpose classification with official name, evidence, confidence,
+  and ambiguity. Recorded the 24-project / $233,380,000 broad flood-related family
+  as analytically incoherent and locked the exact 12-record local flood/local
+  drainage analytical family / $143,005,000, with 5789.150 retained as a citywide
+  program requiring separate geography/evidence treatment.
+- **Evidence treatment:** Locked FACT, CONTEXTUAL EVIDENCE, RESEARCH-ONLY EVIDENCE,
+  and UNAVAILABLE / UNSUPPORTED. Problem Score and FEMA remain contextual; current
+  RNA and Fully Developed FloodPro are research-only for governed analytical use;
+  EAZ 2021 is contextual for 5/12 and unavailable at project level for 7/12;
+  expected flood-reduction benefit and a cohort-wide numeric risk/equity model are
+  unsupported.
+- **Product reconciliation:** Explicitly removed Funding Priority, rank, Importance
+  weights, expected benefit, missingness penalties/imputation, and optimization.
+  Reopened Funding Plan inclusion/removal as an analyst-controlled input; limited
+  deterministic authority to governed facts/evidence states, validation,
+  integer-dollar arithmetic, and supported comparison; limited Gemini to grounded
+  explanation and confirmed translation of explicit analyst commands. Retained
+  $125 million as Historical Envelope context, not family or eligibility logic.
+- **Decision history:** Added D-074–D-079 and marked the original conflicting
+  decision text superseded, narrowed, or resolved rather than overwriting it.
+- **Final semantic audit:** Reserved Historical Envelope for the $125 million
+  historical context; renamed the first analyst-confirmed plan Session Reference
+  Plan and the active plan Current Confirmed Plan; made City benchmark isolation,
+  active-family-only membership, full-request treatment, and deterministic
+  non-selection authority explicit throughout the affected handoff.
+- **Files changed:** Added docs/methodology/p0-evidence-methodology.md; updated
+  AGENTS.md, PROJECT_PROGRESS.md, README.md, docs/decisions.md,
+  docs/product/product-plan.md, docs/product/user-stories.md,
+  docs/product/screen-spec.md, docs/delivery/execution-plan.md, and
+  docs/reference/technical-architecture-reference.md.
+- **Verification:** The full 46-test suite and `git diff --check` passed. Independent
+  documentation checks reconciled the exact governed/family/broad counts and
+  dollars to the source CSV, matched all 37 names and family requests, confirmed
+  continuous D-001–D-079, validated 13 Markdown files' relative links/fences, and
+  found no stale current optimizer/weight/recommendation contract. The final
+  semantic audit also passed explicit guards for Historical Envelope/session-plan
+  separation, City benchmark isolation, provisional-family/non-eligibility
+  treatment, and active-family-only full-request membership with deterministic
+  validation rather than selection.
+- **Boundaries:** No new source reconnaissance, Buildings/SVI ingestion, geometry,
+  score, weights, optimization, application code, production pipeline, architecture,
+  cloud resource, or push occurred. The reviewed documentation checkpoint was
+  authorized for commit.
+- **Handoff:** Review is complete. In a separately authorized task, resume
+  Architecture Planning against the locked methodology and reconciled
+  Product/Design handoff.
 
 ### 2026-09-01 — Acquire and match Austin RNA Projects layer 8
 
@@ -927,10 +1007,11 @@ Add new entries immediately below this guidance so the newest session is first.
 
 - **Objective:** Incorporate the historical decision context and analytical
   boundaries, then lock Stage 2 before backlog prioritization.
-- **Completed:** Defined the January 2026 Historical Baseline, $125 million Projects
-  constraint, scenario terminology, rule-derived cohort, binary funding assumption,
+- **Completed:** Defined the then-named January 2026 Historical Baseline, $125
+  million Projects constraint, scenario terminology, rule-derived cohort, binary funding assumption,
   ranking-versus-portfolio distinction, source-vintage policy, City benchmark
   isolation, Gemini boundary, editable inputs, and deferred later-stage decisions.
+  D-078 later superseded the plan terminology with Session Reference Plan.
 - **Files changed:** `PROJECT_PROGRESS.md`
 - **Verification:** Reconciled the canonical snapshot, next actions, open questions,
   risks, decisions, and handoff against the 12 approved clarifications.

@@ -23,13 +23,14 @@ planning frame derived from the locked product requirements.
 
 ## Current Repository Reality
 
-- The repository is documentation-only.
-- No application source, tests, manifests, dependencies, datasets, pipelines,
-  schemas, cloud configuration, deployment configuration, or generated artifacts
-  exist.
+- The repository has no application implementation, but it now contains governed
+  documentation, a source registry, reproducible source/GIS reconnaissance tools,
+  tests, a 37-record source-universe artifact, RNA snapshot provenance/matches,
+  and one validated raw BigQuery table.
 - Architecture is not established.
-- No Google Cloud service, Gemini model/API pattern, database, map library,
-  framework, language, or optimization library has been selected.
+- Existing raw preservation and raw BigQuery resources are reconnaissance state,
+  not an application architecture. No Gemini model/API pattern, map library,
+  application framework, deployment design, or runtime store has been selected.
 - The public Git remote is recorded in PROJECT_PROGRESS.md.
 - A local process-job Stop hook is known to fail because the node executable is
   unavailable; this is an environment issue, not an application architecture
@@ -43,20 +44,20 @@ by Architecture, but the implementation mechanisms are not selected here.
 | Approved constraint | Consequence Architecture must satisfy |
 | --- | --- |
 | Austin Watershed historical simulation is the P0 pilot | Data and UI must preserve dated historical context and disclaimers. |
-| $125 million Projects sub-envelope is the Historical Baseline constraint | Scenario inputs/results need explicit budget provenance and validation. |
-| Candidate cohort is rule-derived | Eligibility must be reproducible and auditable; manual demo curation is prohibited. |
-| Historical City Recommendation is descriptive only | City treatment must be isolated from ClimateCapital feature, score, rank, weight, objective, and selection inputs. |
+| $125 million Projects sub-envelope is the default Historical Envelope context | Plan inputs/results need explicit budget provenance without treating an analyst plan as historical. |
+| All 37 records are governed and the provisional 12-record P0 analytical family is a derived ClimateCapital purpose classification | Family derivation, confidence, ambiguity, and the 25 records outside the family must remain reproducible, visible, and auditable. |
+| Historical City Recommendation is descriptive only | City treatment must be structurally isolated from project evidence, analytical-family definition, analyst membership, validation, and scenario arithmetic. |
 | External evidence may use defensible vintages | Provenance must be field/dataset-aware rather than forcing one global date. |
-| Deterministic logic is authoritative | Eligibility, transformations, scores, ranks, constraints, and portfolio results require a testable deterministic path. |
-| Ranking and constrained portfolio selection are separate | Outputs and interfaces must preserve distinct artifacts and explanations. |
-| Full-project inclusion/exclusion only | Optimization must not silently introduce partial funding. |
-| One immutable baseline and at most one active What-If | State management can remain bounded; saved scenario storage is out of P0. |
-| Scenario inputs are budget and approved weights only | Validation and interfaces must reject or omit other editable analytical inputs. |
-| Manual and Gemini-originated changes share one path | One validated scenario command/recalculation contract must serve both interfaces. |
-| Gemini is explanation/interaction only | The AI layer consumes governed facts and proposes allowed inputs; it never authors analytical facts or outcomes. |
+| Deterministic logic is authoritative | Facts, evidence roles, family derivation, scenario validation, budget arithmetic, and supported comparison require a testable deterministic path. |
+| P0 has no score, rank, weight, or optimizer | Contracts must not contain placeholder priority fields, hidden objectives, imputation, or automatic membership. |
+| Full-request inclusion/exclusion only | Analyst membership controls must not silently introduce partial funding or editable request amounts. |
+| One immutable Session Reference Plan and at most one active What-If | State management can remain bounded; saved scenario storage is out of P0. |
+| Scenario inputs are Available Budget and analyst project membership only | Validation must reject unknown IDs and governed IDs outside the active analytical family, duplicates, edited request amounts, partial funding, and over-budget confirmation. |
+| Manual changes and Gemini-translated explicit commands share one path | One validated scenario command/recalculation contract must serve both interfaces. |
+| Gemini is explanation/interaction only | The AI layer consumes governed facts and translates explicit analyst commands into pending allowed inputs; it never authors analytical facts or outcomes. |
 | Reviewed Draft is current-session only | No account, workflow, or durable draft persistence is required in P0. |
 | Presentation filters do not change analysis | UI query/filter state must remain separate from scenario/analytical state. |
-| Missing geometry does not imply ineligibility | Map representation and analytical eligibility must be decoupled. |
+| Missing geometry does not remove family membership | Map representation and P0 family/Funding Plan access must be decoupled. |
 | Missing is not zero | Data representation must distinguish absent, unsupported, not applicable, and numeric zero where the methodology requires it. |
 | Failed recalculation preserves the last successful result | Confirmed and attempted scenario state require separate representation. |
 | Gemini failure is local | Deterministic evidence/results and manual controls cannot depend on AI availability. |
@@ -75,28 +76,31 @@ Authoritative product detail:
 A future Architecture task may evaluate a flow such as:
 
 ~~~text
-Source records and evidence
+Governed source records and evidence
         │
         ▼
 Versioned raw/staged inputs
         │
         ▼
-Eligibility + evidence transformation
+Purpose classification + P0 analytical-family derivation
         │
         ├── provenance / quality / missingness
         ▼
-Deterministic scoring and ranking
+Evidence-role and missingness contract
         │
         ▼
-Constrained full-project portfolio calculation
+Analyst-controlled full-request membership
         │
-        ├── immutable Historical Baseline result
-        └── confirmed active What-If result
+        ▼
+Deterministic validation and budget arithmetic
+        │
+        ├── immutable confirmed Session Reference Plan
+        └── confirmed active What-If scenario
         │
         ▼
 Governed result contract
         ├── Explore / Project Detail / Funding Plan
-        ├── Historical Benchmark adapter
+        ├── separately sourced Historical Benchmark adapter (comparison only)
         └── bounded Gemini grounding and proposal validation
 ~~~
 
@@ -174,15 +178,16 @@ or map provider is selected.
 The data design is expected to distinguish at least:
 
 - Capital-project source records.
-- Eligibility inputs and exclusion reasons.
+- Derived purpose classification, confidence, ambiguity, broad-family treatment,
+  and provisional 12-record P0 analytical-family membership.
 - Project geometry/display geometry.
-- Flood exposure and flood-reduction evidence.
-- Social vulnerability and any separately supported Community Equity evidence.
+- Problem Score association context and current FEMA hazard context.
+- EAZ 2021 contextual vulnerability evidence where defensible geography exists.
 - Project costs/Department Request.
 - Historical City Recommendation treatment and amounts.
 - Dataset- and field-level source/vintage metadata.
-- Derived evidence, confidence/quality signals, scores, ranks, and portfolio
-  results.
+- Evidence roles, association/classification confidence, explicit missingness,
+  analyst scenario membership, budget validation, and arithmetic results.
 
 The exact datasets, fields, identifiers, vintages, and joins are unresolved
 evidence-stage decisions.
@@ -193,12 +198,14 @@ The Architecture task may consider:
 
 1. Preserve immutable raw source snapshots with provenance.
 2. Normalize stable project identifiers and source-field names.
-3. Apply documented eligibility rules and retain both eligible records and
-   excluded source records with reasons.
+3. Apply the documented purpose classification and retain all 37 source records,
+   including confidence, ambiguity, broad-family, and P0-family treatment.
 4. Join defensible evidence using documented spatial or identifier logic.
-5. Preserve geometry availability separately from analytical eligibility.
-6. Materialize governed analytical inputs with explicit missingness.
-7. Produce reproducible baseline and benchmark artifacts.
+5. Preserve geometry availability separately from purpose and P0-family treatment.
+6. Materialize governed facts and contextual/research/unsupported evidence states
+   with explicit missingness.
+7. Produce reproducible scenario-input, arithmetic, and isolated benchmark
+   artifacts.
 8. Validate schemas, counts, money units, geometry, provenance, and deterministic
    reruns.
 
@@ -209,8 +216,9 @@ Whether these are scripts, jobs, queries, build steps, or services is not decide
 Architecture must make it possible to trace a displayed or Gemini-cited value
 through:
 
-source record → source vintage → eligibility decision → evidence join →
-transformation → score/rank → constraint/objective → portfolio result.
+source record → source vintage → derived purpose/family decision → evidence join
+→ evidence role/missingness → analyst membership → budget validation/arithmetic →
+scenario result.
 
 The later approved data-lineage document should define:
 
@@ -222,32 +230,28 @@ The later approved data-lineage document should define:
 - Rebuild/reproducibility procedure.
 - Treatment of corrections without rewriting prior snapshots.
 
-## Scoring and Optimization Considerations
+## Locked Methodology and Funding-Plan Considerations
 
 Approved:
 
-- Deterministic code is authoritative.
-- Ranking is separate from constrained portfolio selection.
-- P0 uses full-project inclusion/exclusion.
-- Available Budget and approved weights are the only scenario inputs.
-- The same confirmed inputs must reproduce the same result.
+- Deterministic code is authoritative for facts, family derivation, evidence
+  states, validation, integer-dollar arithmetic, and supported comparison.
+- P0 has no Funding Priority score, project rank, Importance weights, quantitative
+  risk/equity score, expected flood-reduction benefit, or optimization objective.
+- P0 uses analyst-controlled full-request inclusion/removal within the active
+  12-record analytical family; only a later governed methodology decision may
+  change that family contract.
+- Available Budget and project membership are the only scenario inputs.
+- The same confirmed inputs must reproduce included/not-included IDs, total,
+  remainder, count, and supported deltas.
+- Invalid or over-budget attempts preserve the last confirmed result.
 
-Unresolved:
-
-- Scoring dimensions and source evidence.
-- Transformations and normalization.
-- Default and editable weight values and valid-sum/range rules.
-- Score breakdown/contribution representation.
-- Confidence methodology and whether/how it affects analysis.
-- Missing-evidence treatment.
-- Optimization objective, tie-breaking, and supported constraints.
-- Feasibility rules and valid zero-project behavior.
-- Supported baseline/What-If and City benchmark comparison metrics.
-
-Architecture should require a pure or otherwise reproducible analytical contract,
-input/output versioning, deterministic tie handling, money-unit precision, and
-tests that prove budget and full-project constraints. It must not choose the
-methodology on behalf of the evidence stage.
+Architecture must require a small reproducible scenario contract, input/output
+versioning, exact money-unit handling, and tests for active-family membership,
+unknown/out-of-family and duplicate IDs, governed request integrity, full-request
+membership, over-budget rejection, valid zero-project plans, and
+last-successful-state preservation. It must not add placeholder scoring fields or
+choose a synthetic objective.
 
 ## Gemini and AI Integration Considerations
 
@@ -255,20 +259,19 @@ methodology on behalf of the evidence stage.
 
 Gemini may:
 
-- Explain governed project evidence, scores/ranks, Funding Plan membership,
-  constraints, and supported scenario changes.
-- Produce one structured proposal containing only Available Budget and approved
-  weight changes.
-- Coordinate multiple approved-weight changes within one atomic proposal when
-  required for a valid configuration.
+- Explain governed project evidence roles, missingness, analyst-confirmed Funding
+  Plan membership, budget constraints/arithmetic, and supported scenario changes.
+- Translate one explicit analyst command for Available Budget or named project
+  inclusion/removal into a pending structured proposal.
 - Communicate governed uncertainty and limitations.
 - Decline unsupported City reasoning or out-of-scope analysis.
 
 Gemini may not:
 
 - Invent or calculate analytical facts.
-- Change source data, eligibility, evidence, score, rank, constraints, objective,
-  or portfolio membership.
+- Originate a funding recommendation or change source data, purpose/family
+  classification, evidence roles, request amounts, constraints, or confirmed
+  membership.
 - Apply a proposal without explicit confirmation.
 - Become a dependency for deterministic content or manual scenario control.
 
@@ -299,16 +302,16 @@ process:
 
 - Decision context.
 - Historical Benchmark data.
-- Immutable Historical Baseline inputs/results.
-- Current confirmed scenario and result.
+- Immutable Session Reference Plan inputs/results.
+- Current Confirmed Plan identity and result.
 - Dirty/unapplied scenario controls.
 - Gemini proposal awaiting confirmation.
 - Presentation-only Explore filters and map state.
 - Last successful deterministic Funding Plan.
 - Current-session Reviewed Draft binding.
-- Eligible cohort versus current presentation matches.
+- P0 analytical family versus current presentation matches.
 - Project-level missingness versus unsupported metrics.
-- Analytical infeasibility versus genuine system failure.
+- Over-budget/invalid attempted state versus genuine system failure.
 
 No external API schema or persistence model has been approved.
 
@@ -367,15 +370,16 @@ evidence to diagnose a failed demo. No monitoring product is selected.
 
 Future test planning must cover:
 
-- Eligibility inclusion/exclusion and audit reasons.
-- Missing geometry without analytical exclusion.
+- All-37 purpose classification, confidence/ambiguity, and exact provisional
+  12-record analytical family.
+- Missing geometry without family exclusion.
 - Missing, unsupported, zero, and not-applicable values.
-- Score/rank reproducibility and approved contribution display.
-- Budget constraint, full-project inclusion, tie behavior, feasibility, and valid
-  zero-project outcomes.
-- Separation of rank, plan membership, and Historical City treatment.
+- Exact budget arithmetic, governed request integrity, duplicate/unknown-ID
+  rejection, full-request inclusion, over-budget rejection, and valid zero-project
+  outcomes.
+- Separation of analyst plan membership and Historical City treatment.
 - Manual/Gemini proposal parity and confirmation boundaries.
-- Last-successful-result preservation after invalid, infeasible, or failed runs.
+- Last-successful-result preservation after invalid, over-budget, or failed runs.
 - Gemini grounding, numerical consistency, refusal, outage, and deterministic
   fallback.
 - Presentation filters not affecting analytical state.
@@ -389,7 +393,7 @@ The approved test plan will be created after Architecture Lock.
 
 | Choice | Tradeoff to evaluate |
 | --- | --- |
-| Precomputed baseline vs runtime computation | Simplicity/reliability versus interactive transparency and scenario flexibility |
+| Precomputed reference inputs vs runtime computation | Simplicity/reliability versus interactive transparency and scenario flexibility |
 | Browser-local vs server-side What-If calculation | Cost/latency versus governed-code control, consistency, and exposure |
 | Static artifacts vs database | Low cost/reproducibility versus query flexibility and update workflow |
 | One deployable unit vs split frontend/API | Simplicity versus isolation and independent scaling |
@@ -406,7 +410,8 @@ These are investigation axes, not recommendations.
 2. Which language/framework choices best fit the deadline and existing environment?
 3. Which data stays static and versioned, and which calculations must occur at
    runtime?
-4. Where do deterministic eligibility, scoring, ranking, and optimization run?
+4. Where do deterministic family derivation, evidence-state materialization,
+   scenario validation, and budget arithmetic run?
 5. What governed input/output contract separates analysis from UI and Gemini?
 6. How are historical benchmark data and ClimateCapital analytical data isolated?
 7. What is the source-of-truth and rebuild strategy for raw, normalized, and
@@ -436,8 +441,8 @@ Before an Architecture Lock can be approved, the fresh Architecture task should:
 - Define system boundaries, data flow, authoritative contracts, data design,
   deployment, security, observability, testing implications, and a cloud cost plan.
 - Show how every approved product constraint is satisfied.
-- Keep unresolved evidence-methodology choices parameterized rather than silently
-  resolving them.
+- Preserve the locked methodology and keep only genuinely unresolved architecture
+  or presentation choices explicit rather than silently reopening evidence work.
 - Obtain explicit user approval before creating/finalizing approved documents under
   docs/architecture.
 
@@ -447,9 +452,10 @@ If this reference conflicts with an approved source, the approved source wins:
 
 1. [Repository working rules](../../AGENTS.md)
 2. [Current status and handoff](../../PROJECT_PROGRESS.md)
-3. [Approved product plan](../product/product-plan.md)
-4. [Approved user stories](../product/user-stories.md)
-5. [Approved screen specification](../product/screen-spec.md)
-6. [Approved decision history](../decisions.md)
-7. [Execution plan](../delivery/execution-plan.md)
-8. This non-authoritative reference
+3. [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
+4. [Approved product plan](../product/product-plan.md)
+5. [Approved user stories](../product/user-stories.md)
+6. [Approved screen specification](../product/screen-spec.md)
+7. [Approved decision history](../decisions.md)
+8. [Execution plan](../delivery/execution-plan.md)
+9. This non-authoritative reference

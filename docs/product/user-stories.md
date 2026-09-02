@@ -1,7 +1,6 @@
 # ClimateCapital AI User Stories
 
-> **Status:** Approved and locked through Stage 3; constrained by the Stage 4
-> Product and Design Lock
+> **Status:** Approved backlog, reconciled with the 2026-09-01 Methodology Lock
 > **Authority:** This is the authoritative prioritized backlog and acceptance
 > intent. It preserves the 12 required P0 stories, conditional SP0-1, P1 order, and
 > Later scope approved on 2026-08-26.
@@ -29,31 +28,34 @@ ClimateCapital result is being viewed.
 **Acceptance criteria:**
 
 - Distinguish the January 21, 2026 Historical Decision Snapshot, Historical City
-  Recommendation, ClimateCapital Historical Baseline Scenario, and analyst-created
-  What-If Scenario by name and status.
-- State that the historical Watershed allocation was $160 million and that the
-  ClimateCapital baseline constrains eligible, individually named projects to the
-  $125 million Projects sub-envelope.
+  Recommendation, Historical Envelope, Session Reference Plan, Current Confirmed
+  Plan, and analyst-created What-If Scenario by name and status.
+- State that the historical Watershed allocation was $160 million, that the
+  $125 million Projects sub-envelope is the default Historical Envelope context,
+  and that it neither defines the P0 family nor forces project inclusion.
 - Label the experience as a historical simulation, not an official funding
   decision, prediction, or current ballot package.
 
-### P0-2 — Derive and disclose the eligible candidate cohort
+### P0-2 — Derive and disclose the P0 analytical family
 
-The analyst can understand which source records became ClimateCapital candidates
-and why other records did not.
+The analyst can understand how the complete governed universe was classified and
+why the 12 local flood/local drainage records form the provisional P0 analytical
+family.
 
 **Acceptance criteria:**
 
-- Show eligible-candidate and excluded-source-record counts and an inspectable list
-  of excluded records with documented reasons; do not imply every excluded record
-  is a project.
-- Apply documented eligibility rules reproducibly; do not force the cohort into
-  the expected 15–30 range or manually select candidates for the demo.
-- Score and optimize only eligible candidates, and never use the Historical City
-  Recommendation as an eligibility or analytical input.
-- Do not exclude an otherwise eligible candidate solely because display geometry
-  is unavailable. Label it and keep it available through non-map paths.
-- Defer the treatment of missing analytical evidence to the approved methodology.
+- Show all 37 governed source records, their derived purpose classification,
+  classification confidence, ambiguity, 12-record family membership, and the
+  24-record broader flood-family limitation.
+- State that the purpose classification and P0 family are ClimateCapital
+  derivations, not a City taxonomy or eligibility decision.
+- Preserve project `5789.150` as a citywide program inside the 12-record family
+  with separate treatment rather than implying one project-level geography.
+- Never use the Historical City Recommendation as a family, evidence, or scenario
+  input; keep it structurally isolated from project evidence, family definition,
+  analyst membership, validation, and scenario arithmetic.
+- Do not remove a family record because geometry or contextual evidence is
+  missing. Keep every record available through non-map and Funding Plan paths.
 
 ### P0-3 — Explore candidates and defensible evidence on a map
 
@@ -62,45 +64,47 @@ to candidates that cannot be mapped.
 
 **Acceptance criteria:**
 
-- Display defensible candidate geography plus supported flood and equity layers,
+- Display defensible project geography plus supported flood and equity context,
   with a legend and pan, zoom, and layer controls.
 - Selecting mapped geography opens concise project and evidence detail.
-- Never invent geometry. Keep candidates without display geometry available in
-  Projects and Portfolio and label the limitation visibly.
+- Never invent geometry. Keep family records without display geometry available
+  in Projects and Funding Plan and label the limitation visibly.
 - Provide a non-map path to every candidate and exclude drawing tools, custom GIS
   analysis, and unrelated map layers from P0.
 
-### P0-4 — Inspect transparent project priorities
+### P0-4 — Inspect transparent project evidence
 
-The analyst can examine the individual ranking and its evidence independently from
-portfolio membership.
+The analyst can examine governed facts, evidence roles, coverage, and missingness
+independently from scenario membership.
 
 **Acceptance criteria:**
 
-- Show Department Request, governed score and rank, portfolio status, evidence
-  confidence, and supported flood and equity signals for each eligible candidate.
-- Project detail distinguishes source fields from derived values; shows sources,
-  vintages, limitations, relevant evidence inputs, and the approved score breakdown
-  or contributions once the methodology is defined.
+- Show Department Request, derived purpose and confidence, current scenario status,
+  and supported problem, geometry, FEMA, and EAZ context with its analytical role.
+- Project detail distinguishes source facts, derived facts, contextual evidence,
+  research-only evidence, and unavailable/unsupported fields; it shows sources,
+  vintages, coverage, and limitations.
 - Make missing information explicit. Sorting and filtering change presentation
-  only, never scores, ranks, eligibility, or portfolio outcomes.
-- Keep the Historical City Recommendation separate from the ClimateCapital ranking
-  and do not pre-lock component scores or normalization in this story.
+  only, never family membership, confirmed Funding Plan membership, or arithmetic.
+- Show no Funding Priority score, rank, expected flood-reduction benefit, or
+  cohort-wide vulnerability score.
 
-### P0-5 — Review the ClimateCapital Historical Baseline Scenario portfolio
+### P0-5 — Build and review the Session Reference Plan
 
-The analyst can see the reproducible full-project portfolio produced under the
-historical $125 million constraint.
+The analyst can assemble and confirm a reproducible full-request plan under the
+historical $125 million default envelope.
 
 **Acceptance criteria:**
 
-- Show selected and unselected eligible candidates, Department Request amounts,
-  total allocation, remaining envelope, and applied constraints.
-- Identify the approved optimization objective or selection criterion once it has
-  been defined; never exceed the active envelope.
-- Explain why individual rank and constrained portfolio membership can differ and
-  ensure the same inputs reproduce the same result.
-- Use full-project inclusion/exclusion only for ClimateCapital scenarios. Preserve
+- Show Included in Plan and Available Projects, governed request amounts, included
+  total, remaining envelope, and applied full-request/budget constraints.
+- Let the analyst add or remove records from the documented 12-record family; do
+  not imply that the system recommended, ranked, or optimized the combination.
+- Reject unknown IDs and governed IDs outside the active analytical family unless
+  a later governed methodology decision changes that family contract.
+- Reject confirmation when the included total exceeds Available Budget and ensure
+  the same budget/membership inputs reproduce the same arithmetic.
+- Use full-request inclusion/exclusion only for ClimateCapital scenarios. Preserve
   published City treatment and amounts separately, even if they were partial or
   otherwise different, and never feed them into ClimateCapital analysis.
 
@@ -116,8 +120,8 @@ benchmark without treating it as ground truth.
 - Show City portfolio allocation, number historically recommended or
   City-included, overlap with ClimateCapital, and meaningful divergences supported
   by the available data.
-- Explain ClimateCapital's analytical reasons only; do not speculate about City
-  reasoning or characterize either result as right or wrong.
+- Explain documented scenario and evidence differences only; do not speculate
+  about City reasoning or characterize either result as right or wrong.
 - Use City-specific terms such as “historically recommended,” “not historically
   recommended,” “City-included,” and “not City-included,” rather than borrowing
   ClimateCapital's selected/unselected labels.
@@ -125,19 +129,19 @@ benchmark without treating it as ground truth.
 ### P0-7 — Run one governed What-If Scenario
 
 The analyst can change permitted inputs and compare one active scenario with the
-immutable baseline.
+immutable Session Reference Plan.
 
 **Acceptance criteria:**
 
-- Retain one immutable ClimateCapital Historical Baseline Scenario and at most one
-  active What-If Scenario; do not provide saved or multiple What-If scenarios.
-- Provide directly editable structured controls for budget and approved weights.
-  These are the only P0 scenario inputs.
-- Route manual and Gemini-originated changes through identical validation,
-  deterministic recalculation, and rerun behavior.
+- Retain one immutable Session Reference Plan and at most one active What-If
+  Scenario; do not provide saved or multiple What-If scenarios.
+- Provide directly editable structured controls for Available Budget and project
+  inclusion/removal. These are the only P0 scenario inputs.
+- Route manual changes and Gemini-translated explicit analyst commands through
+  identical validation, deterministic recalculation, and rerun behavior.
 - Require a clear confirmation before replacing an active What-If Scenario.
-- Show before/after inputs and methodology-supported changes, including candidates
-  entering, leaving, or remaining in the portfolio; do not invent unsupported
+- Show before/after inputs and methodology-supported changes, including projects
+  entering, leaving, or remaining in the plan; do not invent unsupported
   comparison metrics.
 
 ### P0-8 — Receive grounded explanations
@@ -147,31 +151,31 @@ becoming an analytical authority.
 
 **Acceptance criteria:**
 
-- Support explanations of project evidence and score, rank differences,
-  selection/exclusion, ranking versus constrained selection, and approved scenario
-  changes.
+- Support explanations of project evidence roles, missingness, the analyst's
+  confirmed membership, budget arithmetic, and approved scenario changes.
 - Ground every answer in governed structured results and provenance, keep cited
   numbers consistent with deterministic output, and communicate uncertainty and
   limitations.
 - Decline or bound unsupported requests, undocumented City reasoning, and broad
   analytical requests outside the governed product surface.
 
-### P0-9 — Propose a scenario change through the Gemini copilot
+### P0-9 — Translate an explicit scenario command through the Gemini copilot
 
-The analyst can express a permitted change in natural language while retaining
-explicit control over execution.
+The analyst can express a specific permitted action in natural language while
+retaining explicit control over execution.
 
 **Acceptance criteria:**
 
-- Interpret requests only for budget and approved weights and present one atomic
-  proposal at a time. A proposal may coordinate multiple approved-weight changes
-  when required to produce a valid weight configuration.
+- Interpret only explicit Available Budget changes or named project
+  inclusion/removal commands and present one atomic proposal at a time. Gemini may
+  not originate which projects should be funded.
 - Show before/after values with confirm and cancel actions; change no state before
   confirmation.
 - Gemini only interprets intent and structures the proposal. Confirmed changes use
   the same validation and deterministic scenario engine as manual controls.
-- Gemini never calculates or changes facts, scores, ranks, constraints, or
-  portfolio membership. It may explain the governed result after recalculation.
+- Gemini never authors facts, evidence roles, purpose classifications, request
+  amounts, or recommendations. It may structure the analyst's explicit command;
+  confirmed membership and arithmetic come from the deterministic scenario path.
 
 ### P0-10 — Accept a reviewed portfolio as the current-session draft
 
@@ -180,12 +184,12 @@ creating a false persistence or approval workflow.
 
 **Acceptance criteria:**
 
-- Allow acceptance of either the reviewed ClimateCapital Historical Baseline
-  Scenario portfolio or a confirmed active What-If portfolio.
+- Allow acceptance of either the reviewed Session Reference Plan or a confirmed
+  active What-If portfolio.
 - Treat acceptance as a current-session designation, not a new persisted scenario,
   snapshot, official recommendation, or approval.
-- Preserve and identify the chosen scenario, budget, weights, outcomes, and
-  explanation and show a draft/non-official disclaimer.
+- Preserve and identify the chosen scenario, budget, project membership, arithmetic
+  outcomes, and explanation and show a draft/non-official disclaimer.
 - If an accepted What-If is replaced, warn that its draft designation will be
   cleared; require the replacement to be reviewed and accepted separately.
 - Exclude accounts, persistence, multiple snapshots, workflow, sharing, and export
@@ -198,11 +202,13 @@ results and understand the limits of those results.
 
 **Acceptance criteria:**
 
-- Document the complete chain: eligibility → evidence → transformations → scoring
-  → ranking → constrained optimization.
+- Document the complete chain: governed universe → derived purpose classification
+  → P0 analytical family → evidence roles/missingness → analyst membership →
+  budget validation/arithmetic → supported scenario comparison.
 - Disclose sources and vintages, confidence meaning, limitations, and
   ClimateCapital's full-project inclusion/exclusion assumption.
-- Define confidence as evidence quality/completeness, not decision correctness.
+- Define confidence as the strength of a documented classification, association,
+  or source linkage, not need, severity, benefit, priority, or decision correctness.
 - Use consistent provenance across screens and isolate the Historical City
   Recommendation from ClimateCapital's analytical pipeline.
 
@@ -233,9 +239,9 @@ deadline contingency are intact.
 **Acceptance criteria:**
 
 - Select exactly two candidates from existing list or detail paths.
-- Reuse existing Department Request, methodology-defined score and rank, evidence,
-  confidence, portfolio status, provenance, and grounded explanations.
-- Explain supported ranking or portfolio-status differences and expose missing
+- Reuse existing Department Request, purpose, evidence roles, confidence,
+  scenario status, provenance, and grounded explanations.
+- Explain supported evidence or scenario-status differences and expose missing
   information.
 - Exclude three-or-more comparison, custom metrics, saved sets, exports, and any
   separate analytical logic.
@@ -278,26 +284,27 @@ This is the first scope-cut candidate and is not release-blocking.
 ## Cross-Story Acceptance Boundaries
 
 - Explore search, sort, and filters are presentation-only and never alter scenario
-  inputs, optimization, or Funding Plan membership.
-- The eligible-cohort count and presentation-filter match count are always
+  inputs, confirmed membership, or budget arithmetic.
+- The P0 analytical-family count and presentation-filter match count are always
   separate.
-- Missing geometry is not, by itself, an eligibility failure.
+- Missing geometry does not remove a record from the P0 family or Funding Plan.
 - Unsupported metrics are omitted. If an approved metric is missing for one
   project, the missingness is explicit and never interpreted as zero.
-- Low-confidence warnings come only from the later-approved confidence methodology
-  and threshold.
-- An eligible project may be Not Included in the Funding Plan; this status is
-  distinct from ineligibility and from individual rank.
-- A valid zero-project result, an infeasible optimization, and a genuine system
-  error are different outcomes.
-- Failed or infeasible What-If attempts leave the prior confirmed scenario and last
-  successful deterministic Funding Plan intact.
+- Confidence labels follow the locked classification/association/source-linkage
+  meaning and never become a need, severity, benefit, or priority signal.
+- A family record may be Not Included in the Funding Plan; this status reflects
+  analyst scenario membership and is not an eligibility, need, or City judgment.
+- A valid zero-project plan, an over-budget/invalid attempted plan, and a genuine
+  system error are different outcomes.
+- Failed, invalid, or over-budget What-If attempts leave the prior confirmed
+  scenario and last successful deterministic Funding Plan intact.
 - Gemini failure never blocks deterministic evidence or results.
 - Every project has a non-map path, and every required P0 flow has a non-Gemini
   path.
 
 ## Related Sources of Truth
 
+- [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
 - [Product plan](product-plan.md)
 - [Screen and interaction specification](screen-spec.md)
 - [Delivery and release gates](../delivery/execution-plan.md)

@@ -1,7 +1,7 @@
 # ClimateCapital AI Execution Plan
 
-> **Status:** Approved initial delivery baseline through Product and Design Lock;
-> expected to be refined after Architecture Lock
+> **Status:** Approved initial delivery baseline, reconciled through Methodology
+> Lock; expected to be refined after Architecture Lock
 > **Authority:** This is the current high-level delivery sequencing, deadline, and
 > release-gate plan. It is not an implementation plan, test plan, or architectural
 > design.
@@ -37,8 +37,8 @@ analytical credibility, testing time, and a low Google Cloud cost profile.
 | 3 | Backlog definition | Required P0, conditional SP0-1, P1/Later, and acceptance intent | Complete and locked |
 | 4 | Product and Design Lock | Screens, navigation, behavior, states, recovery, wireframes, and demo sequence | Complete and locked |
 | 5 | Documentation normalization | Purpose-specific durable memory and fresh-task handoff | Complete |
-| 6 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Not started |
-| 7 | Evidence readiness | Sources, cohort, vintages, geometry, scoring, confidence, optimization, and supported metrics | Not started |
+| 6 | Evidence feasibility and Methodology Lock | Reviewed sources, purpose family, evidence roles, missingness, supported arithmetic, and unsupported metrics | Complete; locked 2026-09-01 |
+| 7 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Began, paused for evidence, ready to resume only in a separately authorized task |
 | 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Not started |
 | 9 | Required-P0 implementation | Integrated deterministic and UI/Gemini functionality inside the locked boundary | Not started |
 | 10 | Release, QA, demo, and submission | Deployed release candidate, validation, rehearsal, freeze, and verified submission | Not started |
@@ -59,15 +59,17 @@ file is permitted.
 
 ## What Must Happen Before Implementation
 
-1. Approve the Architecture Lock, including system boundaries, data design, cloud
-   cost controls, and data lineage.
-2. Resolve evidence decisions that affect eligibility, displayed metrics, scoring,
-   ranking, confidence, optimization, comparison, and map defaults.
-3. Create architecture-informed implementation milestones and a test plan tied to
+1. Review the Methodology Lock and its evidence-driven Product/Design
+   reconciliation.
+2. Resume and approve the Architecture Lock, including system boundaries, data
+   design, cloud cost controls, and data lineage.
+3. Preserve the locked absence of scoring, ranking, weights, and optimization;
+   resolve only remaining display, artifact, and map-default questions.
+4. Create architecture-informed implementation milestones and a test plan tied to
    required-P0 acceptance criteria and release gates.
-4. Confirm the first implementation milestone and the authoritative files it must
+5. Confirm the first implementation milestone and the authoritative files it must
    read.
-5. Verify official submission requirements and ensure required artifacts fit the
+6. Verify official submission requirements and ensure required artifacts fit the
    delivery schedule.
 
 Application implementation is not authorized by completion of this document.
@@ -103,7 +105,7 @@ technical solution.
 - **September 4 — Quality gate:** Zero known critical defects; accessibility and
   resilience checks pass; every displayed or Gemini-cited number agrees with the
   deterministic outputs.
-- **September 4 — Demo gate:** Map → Projects → Portfolio → governed change →
+- **September 4 — Demo gate:** Map → Projects → Funding Plan → governed change →
   explanation fits three minutes and expands coherently to five.
 - **September 5 — Final freeze:** Submission content and artifacts are complete;
   only submission-blocking fixes remain permissible.
@@ -117,12 +119,14 @@ criteria.
 
 - Resolve evidence and analytics risk before presenting analytical claims.
 - Do not let implementation choices reopen locked product or UX decisions silently.
-- Keep individual ranking and constrained optimization separate in implementation,
-  tests, and demo.
+- Do not implement Funding Priority, ranking, Importance weights, or optimization.
+  Keep analyst membership inputs separate from deterministic validation/arithmetic.
 - Build required deterministic/manual paths before relying on Gemini.
-- Treat Historical City Recommendation comparison as isolated descriptive data.
-- Preserve the last successful deterministic result during failed or infeasible
-  scenario attempts.
+- Keep Historical City Recommendation data structurally isolated from project
+  evidence, analytical-family definition, analyst membership, validation, and
+  scenario arithmetic; expose it only through the descriptive benchmark path.
+- Preserve the last successful deterministic result during failed, invalid, or
+  over-budget scenario attempts.
 - Do not begin P1 or Later functionality while required P0 or contingency is at
   risk.
 - Use the recovery day only for a slipped prerequisite gate, not elective scope.
@@ -132,14 +136,17 @@ criteria.
 
 ## P0 Delivery Boundary
 
-Required P0 includes the complete governed Map → Projects → Portfolio journey,
-transparent eligibility/evidence/ranking, full-project constrained portfolio,
-Historical Benchmark, one active What-If, manual and approved Gemini scenario
-proposal paths, grounded explanations, current-session Reviewed Draft, provenance,
-accessibility, and recovery behavior.
+Required P0 includes the complete governed Map → Projects → Funding Plan journey,
+the all-37 purpose audit, transparent evidence roles and missingness, the
+provisional derived 12-record P0 analytical family, analyst-controlled full-request
+membership only within that active family, deterministic budget
+validation/arithmetic, Historical Benchmark, one Session Reference Plan, one active
+What-If, manual and bounded Gemini interaction paths, grounded explanations,
+current-session Reviewed Draft, provenance, accessibility, and recovery behavior.
 
 It excludes saved scenarios, accounts, collaboration, export, formal approvals,
-manual plan membership, partial funding, full mobile support, broader Gemini
+partial funding, numeric priority/risk/equity/benefit scores, weights, ranking,
+optimization, AI-originated recommendations, full mobile support, broader Gemini
 analysis, advanced GIS, and P1/Later categories.
 
 ## Major Execution Risks and Responses
@@ -147,8 +154,8 @@ analysis, advanced GIS, and P1/Later categories.
 | Risk | Delivery response |
 | --- | --- |
 | Required P0 exceeds remaining capacity | Cut SP0-1 first; freeze new scope; protect QA and submission buffers. |
-| Evidence or cohort is weaker than expected | Preserve rule-derived results and explicit limitations; never curate for demo appeal. |
-| Methodology decisions arrive late | Do not hard-code arbitrary criteria; resolve the evidence gate before analytical implementation. |
+| Evidence or family is weaker than expected | Preserve the derived 12-record family, all-37 audit, and explicit limitations; never add scores or curate for demo appeal. |
+| Methodology is implemented incorrectly | Treat `docs/methodology/p0-evidence-methodology.md` as authoritative; verify that no score, weight, rank, optimizer, imputation, or hidden district/geometry substitute appears. |
 | Architecture work expands | Prefer the smallest deployable design that satisfies locked P0 and cost constraints; defer optional infrastructure. |
 | Gemini work threatens core completion | Complete deterministic and manual paths first; Gemini failure must degrade locally. |
 | Map geometry is incomplete | Preserve synchronized non-map paths and label unavailable geometry. |
@@ -165,9 +172,10 @@ A fresh Architecture task should begin by reading:
 3. [Product plan](../product/product-plan.md)
 4. [User stories](../product/user-stories.md)
 5. [Screen specification](../product/screen-spec.md)
-6. This execution plan
-7. [Decision history](../decisions.md)
-8. [Technical architecture reference](../reference/technical-architecture-reference.md)
+6. [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
+7. This execution plan
+8. [Decision history](../decisions.md)
+9. [Technical architecture reference](../reference/technical-architecture-reference.md)
 
 The task should investigate and propose architecture. It must not treat the
 technical reference as an approved design or create/finalize approved architecture

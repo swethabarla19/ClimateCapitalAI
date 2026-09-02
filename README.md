@@ -1,24 +1,30 @@
 # ClimateCapitalAI
 
-ClimateCapital AI is a public-sector decision-support concept for comparing and
-prioritizing climate-relevant capital projects. Its first pilot is a historical
-simulation of Austin Watershed project planning.
+ClimateCapital AI is a public-sector decision-support concept for reviewing
+climate-relevant capital-project evidence and building transparent funding
+scenarios. Its first pilot is a historical simulation of Austin Watershed project
+planning.
 
-Current planning status: Stage 4 Product and Design Lock is approved and remains
-in force. Architecture Planning began and is intentionally paused before
-Architecture Lock for controlled evidence reconnaissance across the 37 official
-Austin Watershed projects. A minimal source registry, immutable local-fetch
-foundation, checksum-gated 37-record source-universe extraction, and independently
-validated source-faithful BigQuery raw copy now exist. A timestamped native
-ArcGIS JSON snapshot of live Austin RNA Projects layer 8 and an exact-ID audit
-covering all 37 governed projects are also preserved: 15 projects have one live
-GIS match and 22 have no match in that snapshot. The live service does not
-establish January 2026 geometry, a GIS match does not establish analytical
-eligibility, and no architecture or analytical methodology is approved.
+Current planning status: Methodology Lock is complete and reviewed. The governed
+universe remains 37 Watershed projects / $327.970
+million. P0 uses a provisional, derived 12-record local flood/local drainage
+analytical family / $143.005 million while retaining all 37 records for audit.
+The $125 million Historical Envelope is context; analyst-confirmed plans use
+Session Reference Plan and Current Confirmed Plan terminology and are not
+historical or City plans. Evidence did
+not support a comparable Funding Priority score, ranking, Importance weights, or
+optimization objective. P0 is therefore evidence-first: analysts control
+full-request scenario membership, and deterministic logic validates the Available
+Budget and performs exact arithmetic. The Historical City Recommendation remains
+an isolated descriptive benchmark. Problem Score, current FEMA hazard, and EAZ
+2021 vulnerability may be shown only with their documented contextual roles and
+missingness. Architecture remains unapproved and paused until separately
+authorized.
 
 ## Repository Documentation
 
 - [Current project status and handoff](PROJECT_PROGRESS.md)
+- [P0 evidence and methodology lock](docs/methodology/p0-evidence-methodology.md)
 - [Approved product plan](docs/product/product-plan.md)
 - [Approved user stories](docs/product/user-stories.md)
 - [Approved screen specification](docs/product/screen-spec.md)

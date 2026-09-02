@@ -10,6 +10,8 @@ Source hierarchy:
 - **AGENTS.md** — repository-wide working rules and task-start instructions.
 - **PROJECT_PROGRESS.md** — canonical current state, stage, progress, blockers,
   current risks, open questions, milestones, and handoff.
+- **docs/methodology/** — authoritative analytical methodology only after explicit
+  Methodology Lock.
 - **docs/product/** — authoritative approved product and design specifications.
 - **docs/architecture/** — authoritative architecture only after explicit
   Architecture Lock.
@@ -33,15 +35,15 @@ Before planning or changing the project:
 
 Task-specific minimum reading:
 
-- **Architecture planning:** AGENTS.md, PROJECT_PROGRESS.md, docs/product/,
-  docs/delivery/execution-plan.md, docs/decisions.md, and
+- **Architecture planning:** AGENTS.md, PROJECT_PROGRESS.md, docs/methodology/,
+  docs/product/, docs/delivery/execution-plan.md, docs/decisions.md, and
   docs/reference/technical-architecture-reference.md.
 - **Delivery planning after Architecture Lock:** all relevant approved files under
   docs/, plus AGENTS.md and PROJECT_PROGRESS.md.
 - **Implementation milestones:** AGENTS.md, PROJECT_PROGRESS.md,
   docs/delivery/implementation-plan.md, docs/delivery/test-plan.md,
-  docs/delivery/milestones.md, and the relevant approved product and architecture
-  specifications.
+  docs/delivery/milestones.md, and the relevant approved methodology, product, and
+  architecture specifications.
 
 Before ending a work session, update PROJECT_PROGRESS.md wherever the session
 changed the current snapshot, workstream, next actions, milestones, blockers,
