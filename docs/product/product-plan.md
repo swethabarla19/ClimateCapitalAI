@@ -1,7 +1,9 @@
 # ClimateCapital AI Product Plan
 
-> **Status:** Approved Product and Design Lock, reconciled with Methodology Lock
-> **Locked:** 2026-08-26; evidence-driven reconciliation 2026-09-01
+> **Status:** Approved Product and Design Lock, reconciled with Methodology and
+> Architecture Locks
+> **Locked:** 2026-08-26; evidence-driven and architecture-driven reconciliation
+> 2026-09-01
 > **Authority:** This document is the authoritative product-level definition of
 > what ClimateCapital AI is, who it serves, why it exists, and the boundaries of
 > the Austin MVP. Detailed backlog acceptance criteria are in
@@ -105,8 +107,9 @@ documented explicitly.
    membership-state validation, budget arithmetic, and supported comparisons come
    from documented logic and confirmed analyst inputs, not Gemini. Deterministic
    logic does not choose membership.
-2. **The analyst retains control.** Gemini can explain governed results or translate
-   an explicit analyst command into a pending permitted scenario action, but the
+2. **The analyst retains control.** Required P0 Gemini behavior explains governed
+   results after explicit analyst action. Post-core stretch may translate an
+   explicit analyst command into a pending permitted scenario action, but the
    analyst must review and confirm before the deterministic system recalculates.
 3. **Historical outcomes do not leak into analysis.** The Historical City
    Recommendation is a descriptive comparison, never training data, ground truth,
@@ -152,16 +155,18 @@ documented explicitly.
 - Deterministic validation that confirmed membership fits the active envelope;
   no automatic ranking or optimization.
 - Historical City Recommendation comparison as a descriptive benchmark.
-- Grounded Gemini explanations and translation of explicit analyst budget or
-  named-membership commands into reversible proposals. Gemini does not originate
-  which projects should be funded.
+- Grounded Gemini explanations after explicit analyst action. Gemini does not
+  originate which projects should be funded.
 - Current-session Reviewed Draft designation without persistence or approval
   semantics.
 - Desktop-first, tablet-usable, accessible and resilient interaction.
 
 Exactly-two-project Compare is conditional SP0-1, not release-blocking, and the
-first scope cut. See [user-stories.md](user-stories.md) for all required P0,
-conditional SP0-1, P1, and Later acceptance intent.
+first scope cut. Natural-language Funding Plan proposal remains P0-9 but is
+post-core stretch, not release-blocking, and the second scope cut. Manual
+deterministic Funding Plan interaction must be complete without it. See
+[user-stories.md](user-stories.md) for all required core P0, stretch, P1, and Later
+acceptance intent.
 
 ## P1 and Deferred Direction
 
@@ -257,11 +262,15 @@ provenance, recovery behavior, or exactly-two-project Compare if SP0-1 survives.
 - EAZ vulnerability context does not become a Watershed-specific equity method,
   beneficiary claim, Community Equity score, or cohort-wide Community
   Vulnerability score.
-- Architecture/Product presentation must choose any default map visualization from
-  the locked evidence roles without promoting context into a scoring input. Heat is
-  omitted from P0 unless a later explicit methodology revision supports it.
-- Architecture, data design, cloud cost design, data lineage, implementation plans,
-  and test plans are not yet approved.
+- The locked map defaults show current RNA display geometry where available with a
+  research-only caveat, keep FEMA and EAZ 2021 off until the analyst enables them
+  through Layers, and omit Fully Developed FloodPro. Project `5789.150` has no
+  fabricated point or footprint. Heat remains omitted unless a later explicit
+  methodology revision supports it.
+- Architecture, data contracts, deployment, cloud cost controls, and lineage are
+  approved in [p0-architecture.md](../architecture/p0-architecture.md) and
+  [data-contracts.md](../architecture/data-contracts.md). Architecture-informed
+  implementation, test, and milestone plans remain the next approval gate.
 
 ## Product Risks
 
@@ -276,12 +285,15 @@ provenance, recovery behavior, or exactly-two-project Compare if SP0-1 survives.
 - Unsupported metrics, UI-invented confidence warnings, missing-as-zero treatment,
   or language that implies analyst membership is an optimized recommendation would
   mislead users.
-- Gemini scope could consume disproportionate time; deterministic and manual paths
-  remain the release priority.
+- Gemini scope could consume disproportionate time; required grounded explanation
+  follows deterministic/manual completion, while proposal remains post-core
+  stretch and cannot block deployment.
 
 ## Related Sources of Truth
 
 - [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
+- [P0 architecture lock](../architecture/p0-architecture.md)
+- [P0 data and runtime contracts](../architecture/data-contracts.md)
 - [User stories and acceptance intent](user-stories.md)
 - [Screen and interaction specification](screen-spec.md)
 - [Delivery execution plan](../delivery/execution-plan.md)

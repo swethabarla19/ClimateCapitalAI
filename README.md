@@ -18,21 +18,25 @@ full-request scenario membership, and deterministic logic validates the Availabl
 Budget and performs exact arithmetic. The Historical City Recommendation remains
 an isolated descriptive benchmark. Problem Score, current FEMA hazard, and EAZ
 2021 vulnerability may be shown only with their documented contextual roles and
-missingness. Architecture remains unapproved and paused until separately
-authorized.
+missingness. Architecture is now locked to one scale-to-zero Cloud Run container,
+a reviewed pinned release-data bundle, stateless server-authoritative Funding Plan
+evaluation, browser-session-only workflow state, and bounded grounded Gemini
+explanation. Application implementation has not begun.
 
 ## Repository Documentation
 
 - [Current project status and handoff](PROJECT_PROGRESS.md)
 - [P0 evidence and methodology lock](docs/methodology/p0-evidence-methodology.md)
+- [P0 architecture lock](docs/architecture/p0-architecture.md)
+- [P0 data and runtime contracts](docs/architecture/data-contracts.md)
 - [Approved product plan](docs/product/product-plan.md)
 - [Approved user stories](docs/product/user-stories.md)
 - [Approved screen specification](docs/product/screen-spec.md)
 - [Initial delivery execution plan](docs/delivery/execution-plan.md)
 - [Decision history](docs/decisions.md)
 - [Technical architecture reference](docs/reference/technical-architecture-reference.md)
-  — exploratory reference, not an approved architecture
+  — superseded pre-lock reference, not authoritative
 
-Approved architecture documents will be created/finalized under
-**docs/architecture/** only after explicit Architecture Lock. PROJECT_PROGRESS.md
-remains the sole progress/status document.
+Architecture-informed implementation, test, and milestone plans are the next
+separately authorized planning gate. PROJECT_PROGRESS.md remains the sole
+progress/status document.

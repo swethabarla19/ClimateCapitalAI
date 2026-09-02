@@ -1,13 +1,19 @@
 # ClimateCapital AI User Stories
 
-> **Status:** Approved backlog, reconciled with the 2026-09-01 Methodology Lock
+> **Status:** Approved backlog, reconciled with the 2026-09-01 Methodology and
+> Architecture Locks
 > **Authority:** This is the authoritative prioritized backlog and acceptance
-> intent. It preserves the 12 required P0 stories, conditional SP0-1, P1 order, and
-> Later scope approved on 2026-08-26.
+> intent. It preserves the approved story IDs and acceptance intent while recording
+> the Architecture Lock's implementation-precision change: 11 stories remain
+> release-blocking core P0, P0-9 is post-core stretch, and SP0-1 remains conditional
+> stretch and the first cut.
 
 ## Priority Model
 
-- **Required P0:** Release-blocking for the Austin MVP.
+- **Required core P0:** Eleven release-blocking stories for the Austin MVP: P0-1
+  through P0-8 and P0-10 through P0-12.
+- **Post-core stretch P0:** P0-9 natural-language Funding Plan proposal. It begins
+  only after the core release candidate is intact and cannot block deployment.
 - **Conditional stretch P0 (SP0-1):** Optional, not release-blocking, and the first
   scope cut if schedule or contingency is threatened.
 - **P1:** May begin before submission only if required P0 is complete at least 24
@@ -18,7 +24,7 @@ The sole P0 persona is the capital planning analyst defined in
 [product-plan.md](product-plan.md). The authoritative screen behavior and recovery
 states are in [screen-spec.md](screen-spec.md).
 
-## Required P0
+## Required Core P0
 
 ### P0-1 — Establish the historical context and scenario terminology
 
@@ -137,8 +143,9 @@ immutable Session Reference Plan.
   Scenario; do not provide saved or multiple What-If scenarios.
 - Provide directly editable structured controls for Available Budget and project
   inclusion/removal. These are the only P0 scenario inputs.
-- Route manual changes and Gemini-translated explicit analyst commands through
-  identical validation, deterministic recalculation, and rerun behavior.
+- Route every manual change through the authoritative validation, deterministic
+  recalculation, and rerun behavior. If post-core P0-9 is implemented, its
+  analyst-confirmed proposal must enter this identical path.
 - Require a clear confirmation before replacing an active What-If Scenario.
 - Show before/after inputs and methodology-supported changes, including projects
   entering, leaving, or remaining in the plan; do not invent unsupported
@@ -158,24 +165,6 @@ becoming an analytical authority.
   limitations.
 - Decline or bound unsupported requests, undocumented City reasoning, and broad
   analytical requests outside the governed product surface.
-
-### P0-9 — Translate an explicit scenario command through the Gemini copilot
-
-The analyst can express a specific permitted action in natural language while
-retaining explicit control over execution.
-
-**Acceptance criteria:**
-
-- Interpret only explicit Available Budget changes or named project
-  inclusion/removal commands and present one atomic proposal at a time. Gemini may
-  not originate which projects should be funded.
-- Show before/after values with confirm and cancel actions; change no state before
-  confirmation.
-- Gemini only interprets intent and structures the proposal. Confirmed changes use
-  the same validation and deterministic scenario engine as manual controls.
-- Gemini never authors facts, evidence roles, purpose classifications, request
-  amounts, or recommendations. It may structure the analyst's explicit command;
-  confirmed membership and arithmetic come from the deterministic scenario path.
 
 ### P0-10 — Accept a reviewed portfolio as the current-session draft
 
@@ -229,6 +218,30 @@ recovery when data or Gemini is unavailable.
 - Keep calendar, demo-duration, and zero-critical-defect criteria in the release
   gates rather than this user story.
 
+## Post-Core Stretch P0
+
+### P0-9 — Translate an explicit scenario command through the Gemini copilot
+
+The analyst may express a specific permitted action in natural language while
+retaining explicit control over execution. This story is not release-blocking;
+manual deterministic Funding Plan behavior must be complete without it.
+
+**Acceptance criteria:**
+
+- Implement only after the core release candidate and contingency remain intact;
+  failure, disablement, or delay cannot block deployment.
+- Interpret only explicit Available Budget changes or named project
+  inclusion/removal commands and present one atomic proposal at a time. Gemini may
+  not originate which projects should be funded.
+- Show before/after values with confirm and cancel actions; change no state before
+  confirmation.
+- Gemini only interprets intent and structures the proposal. Confirmed changes use
+  the same validation and deterministic scenario engine as manual controls.
+- Gemini never authors facts, evidence roles, purpose classifications, request
+  amounts, totals, or recommendations. It may structure the analyst's explicit
+  command; confirmed membership and arithmetic come from the deterministic
+  scenario path.
+
 ## Conditional Stretch P0
 
 ### SP0-1 — Compare exactly two projects
@@ -277,8 +290,9 @@ This is the first scope-cut candidate and is not release-blocking.
 | Establish context and candidate set | P0-1, P0-2, P0-11 |
 | Explore and inspect projects | P0-3, P0-4, P0-12 |
 | Review the constrained portfolio | P0-5, P0-6 |
-| Change and compare one scenario | P0-7, P0-9 |
+| Change and compare one scenario | P0-7 |
 | Explain and accept the reviewed result | P0-8, P0-10 |
+| Optional natural-language scenario proposal | P0-9 |
 | Optional exactly-two-project comparison | SP0-1 |
 
 ## Cross-Story Acceptance Boundaries
@@ -305,6 +319,8 @@ This is the first scope-cut candidate and is not release-blocking.
 ## Related Sources of Truth
 
 - [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
+- [P0 architecture lock](../architecture/p0-architecture.md)
+- [P0 data and runtime contracts](../architecture/data-contracts.md)
 - [Product plan](product-plan.md)
 - [Screen and interaction specification](screen-spec.md)
 - [Delivery and release gates](../delivery/execution-plan.md)

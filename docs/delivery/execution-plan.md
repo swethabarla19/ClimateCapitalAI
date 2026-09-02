@@ -1,7 +1,7 @@
 # ClimateCapital AI Execution Plan
 
 > **Status:** Approved initial delivery baseline, reconciled through Methodology
-> Lock; expected to be refined after Architecture Lock
+> and Architecture Locks; expected to be refined by the next delivery-planning task
 > **Authority:** This is the current high-level delivery sequencing, deadline, and
 > release-gate plan. It is not an implementation plan, test plan, or architectural
 > design.
@@ -18,15 +18,16 @@ analytical credibility, testing time, and a low Google Cloud cost profile.
 - **Internal submission window:** September 6, 2026 from 9:30–11:30 a.m. CDT.
 - **Capacity basis:** Approximately 65–70 hours across six flexible workdays per
   week. Stretching beyond that is contingency, not the base plan.
-- **Required release boundary:** The 12 required P0 stories in
-  [user-stories.md](../product/user-stories.md).
+- **Required release boundary:** The 11 required core P0 stories in
+  [user-stories.md](../product/user-stories.md); P0-9 proposal is post-core stretch.
 - **First scope cut:** Conditional SP0-1 exactly-two-project Compare.
+- **Second scope cut:** P0-9 natural-language Funding Plan proposal.
 - **P1 rule:** Begin no P1 work unless required P0 is complete at least 24 hours
   early and at least 10 contingency hours remain.
 - **Buffer rule:** A missed gate freezes or cuts scope; it does not consume the
   testing and submission-recovery buffer.
-- **Cost rule:** Favor a small, bounded MVP and low ongoing Google Cloud spend.
-  Cloud choices remain an Architecture-stage decision.
+- **Cost rule:** Follow the scale-to-zero, bounded Gemini/image/logging, billing-
+  control, and post-demo procedures in the Architecture Lock.
 
 ## Stage and Dependency Order
 
@@ -38,16 +39,15 @@ analytical credibility, testing time, and a low Google Cloud cost profile.
 | 4 | Product and Design Lock | Screens, navigation, behavior, states, recovery, wireframes, and demo sequence | Complete and locked |
 | 5 | Documentation normalization | Purpose-specific durable memory and fresh-task handoff | Complete |
 | 6 | Evidence feasibility and Methodology Lock | Reviewed sources, purpose family, evidence roles, missingness, supported arithmetic, and unsupported metrics | Complete; locked 2026-09-01 |
-| 7 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Began, paused for evidence, ready to resume only in a separately authorized task |
-| 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Not started |
+| 7 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Complete; locked 2026-09-01 |
+| 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Next; not started |
 | 9 | Required-P0 implementation | Integrated deterministic and UI/Gemini functionality inside the locked boundary | Not started |
 | 10 | Release, QA, demo, and submission | Deployed release candidate, validation, rehearsal, freeze, and verified submission | Not started |
 
-Architecture planning must read the approved product/design specifications and
-technical reference, investigate alternatives, and obtain an explicit Architecture
-Lock. Only then should the approved architecture files be created/finalized.
-
-After Architecture Lock, a fresh delivery-planning task should produce or refine:
+The approved architecture is authoritative in
+[p0-architecture.md](../architecture/p0-architecture.md) and
+[data-contracts.md](../architecture/data-contracts.md). A fresh delivery-planning
+task should now produce or refine:
 
 - implementation-plan.md
 - test-plan.md
@@ -59,17 +59,15 @@ file is permitted.
 
 ## What Must Happen Before Implementation
 
-1. Review the Methodology Lock and its evidence-driven Product/Design
+1. Review the Methodology and Architecture Locks and their Product/Design
    reconciliation.
-2. Resume and approve the Architecture Lock, including system boundaries, data
-   design, cloud cost controls, and data lineage.
-3. Preserve the locked absence of scoring, ranking, weights, and optimization;
-   resolve only remaining display, artifact, and map-default questions.
-4. Create architecture-informed implementation milestones and a test plan tied to
+2. Create architecture-informed implementation milestones and a test plan tied to
    required-P0 acceptance criteria and release gates.
-5. Confirm the first implementation milestone and the authoritative files it must
+3. Lock the initial artifact, API, session, plan, benchmark, and Gemini schema
+   versions identified by the architecture.
+4. Confirm the first implementation milestone and the authoritative files it must
    read.
-6. Verify official submission requirements and ensure required artifacts fit the
+5. Verify official submission requirements and ensure required artifacts fit the
    delivery schedule.
 
 Application implementation is not authorized by completion of this document.
@@ -117,11 +115,16 @@ criteria.
 
 ## Sequencing Rules
 
-- Resolve evidence and analytics risk before presenting analytical claims.
+- Lock shared schemas first. Then allow data curation and application development
+  to proceed in parallel without presenting fixture state as analytical evidence.
 - Do not let implementation choices reopen locked product or UX decisions silently.
 - Do not implement Funding Priority, ranking, Importance weights, or optimization.
   Keep analyst membership inputs separate from deterministic validation/arithmetic.
-- Build required deterministic/manual paths before relying on Gemini.
+- Build required deterministic/manual paths before required grounded Gemini
+  explanation; implement natural-language proposal only post-core.
+- Never fetch live source services during a release/deployment build. Final
+  integration and release require the reviewed, pinned release-data bundle;
+  fixture evidence cannot ship.
 - Keep Historical City Recommendation data structurally isolated from project
   evidence, analytical-family definition, analyst membership, validation, and
   scenario arithmetic; expose it only through the descriptive benchmark path.
@@ -134,6 +137,36 @@ criteria.
   authoritative specification only when an approved change legitimately affects
   it.
 
+## Architecture-Locked Implementation Dependency Order
+
+1. Create and approve `implementation-plan.md`, `test-plan.md`, and
+   `milestones.md`.
+2. Lock versioned release-artifact, API, browser-session, Funding Plan, benchmark,
+   and Gemini contracts.
+3. After schema lock, run two coordinated tracks:
+
+   - **Data track:** focused license/reuse confirmation; controlled pinned
+     acquisition; benchmark extraction; Problem Score/FEMA/EAZ evidence and RNA
+     display artifacts; final provenance, reconciliation, and reviewed release
+     bundle.
+   - **Application track:** exact-schema fixture bundle with no invented analytical
+     claims; deterministic Funding Plan engine; API contracts; frontend shell and
+     session reducer; core manual Funding Plan behavior.
+
+4. Replace fixtures with the reviewed pinned release-data bundle, prove the build
+   requires no live source, and block fixture state from the release candidate.
+5. Complete the manual core, evidence/provenance, map defaults/non-map paths,
+   accessibility, recovery, benchmark isolation, and end-to-end tests.
+6. Implement required `POST /api/v1/gemini/explain` with grounding, post-validation,
+   kill switch, one-process rate/concurrency controls, and content-free token logs.
+7. Build, deploy a no-traffic Cloud Run revision, reconcile code/data/manifest/image
+   identity, smoke test, canary one explanation, and promote with rollback.
+8. Only if the core release candidate and contingency remain intact, implement
+   post-core `POST /api/v1/gemini/propose`.
+
+The detailed authoritative order and release gates are in
+[p0-architecture.md](../architecture/p0-architecture.md).
+
 ## P0 Delivery Boundary
 
 Required P0 includes the complete governed Map → Projects → Funding Plan journey,
@@ -143,29 +176,31 @@ membership only within that active family, deterministic budget
 validation/arithmetic, Historical Benchmark, one Session Reference Plan, one active
 What-If, manual and bounded Gemini interaction paths, grounded explanations,
 current-session Reviewed Draft, provenance, accessibility, and recovery behavior.
+The required AI path is grounded explanation after explicit analyst action.
 
 It excludes saved scenarios, accounts, collaboration, export, formal approvals,
 partial funding, numeric priority/risk/equity/benefit scores, weights, ranking,
 optimization, AI-originated recommendations, full mobile support, broader Gemini
-analysis, advanced GIS, and P1/Later categories.
+analysis, advanced GIS, P1/Later categories, and natural-language Funding Plan
+proposal unless post-core P0-9 is completed without threatening the core candidate.
 
 ## Major Execution Risks and Responses
 
 | Risk | Delivery response |
 | --- | --- |
-| Required P0 exceeds remaining capacity | Cut SP0-1 first; freeze new scope; protect QA and submission buffers. |
+| Required P0 exceeds remaining capacity | Cut SP0-1 first and P0-9 proposal second; freeze new scope; protect QA and submission buffers. |
 | Evidence or family is weaker than expected | Preserve the derived 12-record family, all-37 audit, and explicit limitations; never add scores or curate for demo appeal. |
 | Methodology is implemented incorrectly | Treat `docs/methodology/p0-evidence-methodology.md` as authoritative; verify that no score, weight, rank, optimizer, imputation, or hidden district/geometry substitute appears. |
-| Architecture work expands | Prefer the smallest deployable design that satisfies locked P0 and cost constraints; defer optional infrastructure. |
-| Gemini work threatens core completion | Complete deterministic and manual paths first; Gemini failure must degrade locally. |
+| Implementation departs from Architecture Lock | Treat `docs/architecture/` as authoritative; reject runtime GIS/BigQuery, fixture release, persistent session, or expanded infrastructure. |
+| Gemini work threatens core completion | Complete deterministic/manual paths and required explanation; cut proposal. Gemini failure must degrade locally. |
 | Map geometry is incomplete | Preserve synchronized non-map paths and label unavailable geometry. |
 | Scenario errors overwrite valid results | Keep attempted inputs unapplied and preserve the last successful confirmed result. |
 | Official submission details remain unknown | Verify organizer artifacts and judge/demo expectations before final package planning. |
-| Cloud cost is uncertain | Require explicit cost assumptions, budgets/alerts or equivalent safeguards, and low-idle-cost evaluation in Architecture planning. |
+| Cloud cost or public abuse is uncertain | Enforce scale-to-zero, model limits/kill switch, one worker/max instance, bounded logs/images, existing-control inspection, and post-demo disablement from the Architecture Lock. |
 
-## Architecture Handoff
+## Post-Architecture Delivery-Planning Handoff
 
-A fresh Architecture task should begin by reading:
+A fresh delivery-planning task should begin by reading:
 
 1. [Repository instructions](../../AGENTS.md)
 2. [Current project status](../../PROJECT_PROGRESS.md)
@@ -175,20 +210,21 @@ A fresh Architecture task should begin by reading:
 6. [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
 7. This execution plan
 8. [Decision history](../decisions.md)
-9. [Technical architecture reference](../reference/technical-architecture-reference.md)
+9. [P0 Architecture Lock](../architecture/p0-architecture.md)
+10. [P0 data and runtime contracts](../architecture/data-contracts.md)
 
-The task should investigate and propose architecture. It must not treat the
-technical reference as an approved design or create/finalize approved architecture
-files before explicit Architecture Lock.
+The task should create the architecture-informed implementation, test, and
+milestone plans without reopening the locked methodology, product, architecture,
+or source reconnaissance.
 
 ## Planned Later Delivery Documents
 
-The following are intentionally absent until the Architecture Lock makes them
-decision-complete:
+The following are now the next required planning artifacts and remain intentionally
+absent until a separately authorized delivery-planning task:
 
 - implementation-plan.md
 - test-plan.md
 - milestones.md
 
-The architecture directory and its approved documents are likewise intentionally
-absent until Architecture Lock. No docs/delivery/progress.md will be created.
+The approved architecture documents now exist under `docs/architecture/`. No
+`docs/delivery/progress.md` will be created.

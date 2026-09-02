@@ -1,25 +1,53 @@
 # ClimateCapital AI Technical Architecture Reference
 
-> **Status:** Reference material only — not an approved Architecture Lock
+> **Status:** Superseded pre-lock reference material — not authoritative
 > **Created:** 2026-08-27
-> **Authority boundary:** Approved product constraints are identified explicitly
-> and linked to their sources. Every architecture, service, storage, data,
-> deployment, security, observability, and testing approach below is a candidate
-> consideration or unresolved question until the user explicitly approves the
-> Architecture Lock.
+> **Superseded:** 2026-09-01 by
+> [p0-architecture.md](../architecture/p0-architecture.md) and
+> [data-contracts.md](../architecture/data-contracts.md)
+> **Authority boundary:** This file preserves the planning frame that existed
+> before Architecture Lock. Where it describes a candidate or unresolved question,
+> the approved architecture documents now control.
 
 ## Why This Document Exists
 
-This brief gives a fresh Architecture planning task enough durable context to
-investigate a small, low-cost design without depending on an earlier chat. It
-consolidates technical implications of the approved Product and Design Lock and
-organizes the choices the Architecture task must resolve.
+This brief gave the Architecture planning task durable pre-lock context for
+investigating a small, low-cost design without depending on chat history. It is
+retained to show the planning frame and alternatives, not as a current design.
 
 The repository did not contain a detailed candidate architecture, service
 selection, data model, ingestion design, or cloud cost model at the time of this
 closeout. Therefore, this document does not claim to recover an approved or
-previously complete technical proposal. Its candidate material is an exploratory
-planning frame derived from the locked product requirements.
+previously complete technical proposal. Its candidate material remains historical;
+the 2026-09-01 Architecture Lock resolved it.
+
+## Approved Resolution
+
+The Architecture Lock selected:
+
+- one React/TypeScript/Vite and FastAPI container on public Cloud Run in
+  `us-central1`, request-billed with minimum instances 0, maximum instances 1, and
+  one Uvicorn worker;
+- a reviewed, pinned four-file release-data bundle packaged in the image, with no
+  live source acquisition during release builds and no runtime BigQuery, Cloud
+  Storage, or GIS queries;
+- browser `sessionStorage` only, no application database or server session store;
+- independent server evaluation of both current and reference plan inputs;
+- a structurally separate Historical Benchmark path;
+- current RNA display geometry on where available, FEMA and EAZ 2021 off by
+  default, no Fully Developed FloodPro, direct compliant configurable OSM tiles,
+  and no fabricated geography;
+- required grounded `POST /api/v1/gemini/explain` using Gemini 3.6 Flash through
+  the global standard on-demand Google Cloud publisher endpoint with ADC, while
+  natural-language proposal is post-core stretch;
+- externally checksummed data manifest plus separate code/data/manifest/image
+  deployment identity; and
+- health, built-in Cloud Run metrics, bounded structured logs, smoke tests,
+  scale-to-zero cost controls, and bounded image retention.
+
+The exact topology, cost assumptions, dependency order, rejection list, release
+gates, artifact schemas, API contracts, browser state, and trust boundaries are in
+the two authoritative architecture documents linked above.
 
 ## Current Repository Reality
 
@@ -27,10 +55,11 @@ planning frame derived from the locked product requirements.
   documentation, a source registry, reproducible source/GIS reconnaissance tools,
   tests, a 37-record source-universe artifact, RNA snapshot provenance/matches,
   and one validated raw BigQuery table.
-- Architecture is not established.
-- Existing raw preservation and raw BigQuery resources are reconnaissance state,
-  not an application architecture. No Gemini model/API pattern, map library,
-  application framework, deployment design, or runtime store has been selected.
+- Architecture is approved and locked in `docs/architecture/`; application
+  implementation and architecture-informed delivery plans have not begun.
+- Existing raw preservation and raw BigQuery resources remain reconnaissance/release
+  validation state, not runtime dependencies. The selected application, Gemini,
+  map, deployment, and session choices are recorded in the Architecture Lock.
 - The public Git remote is recorded in PROJECT_PROGRESS.md.
 - A local process-job Stop hook is known to fail because the node executable is
   unavailable; this is an environment issue, not an application architecture
@@ -71,7 +100,7 @@ Authoritative product detail:
 - [Screen specification](../product/screen-spec.md)
 - [Decision history](../decisions.md)
 
-## Candidate Logical System Shape — Not Approved
+## Pre-Lock Candidate Logical System Shape — Historical
 
 A future Architecture task may evaluate a flow such as:
 
@@ -109,9 +138,9 @@ deployment units, storage systems, batch jobs, or APIs. The smallest MVP may
 combine several responsibilities if reproducibility, testability, and scope
 boundaries remain intact.
 
-## Architecture Choice Areas
+## Pre-Lock Architecture Choice Areas — Historical
 
-### Application shape
+### Application shape considered before lock
 
 Candidate patterns to compare:
 
@@ -132,9 +161,10 @@ Evaluation criteria:
 - Ease of reproducing every displayed result.
 - Accessibility and map-library compatibility.
 
-No pattern is selected in this document.
+This reference selected no pattern. The Architecture Lock now selects the single
+Cloud Run container described in its Approved Resolution.
 
-### Google Cloud and hosting options
+### Google Cloud and hosting options considered before lock
 
 The Architecture task may evaluate managed serverless compute, static hosting,
 object storage, a managed analytical store, a lightweight transactional store, and
@@ -153,9 +183,10 @@ Questions to resolve:
 - Which resources incur idle charges, minimum capacity, egress, or request costs?
 - What budget cap, alert, quota, or shutdown practice is appropriate?
 
-No Google Cloud resource or service is approved here.
+No Google Cloud resource or service was approved by this reference. The
+Architecture Lock now governs the selected services.
 
-### Frontend and map
+### Frontend and map considerations before lock
 
 The interface needs:
 
@@ -166,10 +197,9 @@ The interface needs:
 - Keyboard and non-map equivalents.
 - Local failure containment and last-successful-result behavior.
 
-Architecture must compare candidate UI and mapping approaches for bundle size,
-accessibility, supported geometry/layers, public basemap terms/costs, offline/static
-artifact compatibility, and implementation speed. No framework, component system,
-or map provider is selected.
+This reference required comparison of UI and mapping approaches. The Architecture
+Lock selects React/TypeScript/Vite, Leaflet, direct configurable OSM tiles, and a
+neutral fallback under the approved evidence defaults and usage constraints.
 
 ## Data and Ingestion Considerations
 
@@ -192,7 +222,7 @@ The data design is expected to distinguish at least:
 The exact datasets, fields, identifiers, vintages, and joins are unresolved
 evidence-stage decisions.
 
-### Candidate ingestion pattern — not approved
+### Candidate ingestion pattern considered before lock
 
 The Architecture task may consider:
 
@@ -209,7 +239,9 @@ The Architecture task may consider:
 8. Validate schemas, counts, money units, geometry, provenance, and deterministic
    reruns.
 
-Whether these are scripts, jobs, queries, build steps, or services is not decided.
+This reference did not decide their implementation. The Architecture Lock now
+separates controlled acquisition/curation from source-independent release builds
+and packages the reviewed artifacts in the runtime image.
 
 ### Data-version and lineage needs
 
@@ -275,7 +307,7 @@ Gemini may not:
 - Apply a proposal without explicit confirmation.
 - Become a dependency for deterministic content or manual scenario control.
 
-### Candidate integration pattern — not approved
+### Candidate integration pattern considered before lock
 
 The Architecture task may consider a bounded grounding package containing only
 the governed fields needed for the current screen/context, a structured proposal
@@ -293,7 +325,9 @@ Choices to resolve:
 - Which Gemini model and API surface meet current program, cost, latency, and
   deployment requirements.
 
-No model, SDK, prompt, API, or cloud integration is approved here.
+This reference approved no integration. The Architecture Lock now governs the
+model, endpoint, ADC, API, grounding, rate, token, logging, and kill-switch
+boundaries.
 
 ## State and Interface Boundaries to Preserve
 
@@ -313,7 +347,9 @@ process:
 - Project-level missingness versus unsupported metrics.
 - Over-budget/invalid attempted state versus genuine system failure.
 
-No external API schema or persistence model has been approved.
+No external API schema or persistence model was approved by this reference. The
+Architecture Lock now approves the `/api/v1` surface and browser-session-only
+model.
 
 ## Security and Privacy Considerations
 
@@ -348,8 +384,9 @@ Architecture must produce an explicit low-cost plan covering:
   demonstration of real analytics and data engineering.
 - Cost risks from retries, public traffic, logs, or unconstrained Gemini prompts.
 
-No cost estimate is approved until architecture choices and current pricing are
-verified.
+This reference approved no cost estimate. The Architecture Lock records the
+verified-at-lock assumptions, uncertainty, abuse exposure, controls, and shutdown
+procedure.
 
 ## Observability and Operational Considerations
 
@@ -364,7 +401,8 @@ The smallest useful operational surface may need:
 - A way to verify that displayed and cited numbers match governed output.
 
 Architecture should minimize operational complexity while preserving enough
-evidence to diagnose a failed demo. No monitoring product is selected.
+evidence to diagnose a failed demo. The Architecture Lock selects `/healthz`,
+built-in Cloud Run metrics, bounded structured logging, and smoke tests only.
 
 ## Testing Considerations
 
@@ -387,9 +425,10 @@ Future test planning must cover:
 - Source/vintage and lineage traceability.
 - Public deployment smoke test, cost safeguards, and three-minute demo path.
 
-The approved test plan will be created after Architecture Lock.
+The approved test plan remains the next delivery-planning artifact after the now
+completed Architecture Lock.
 
-## Alternatives and Tradeoffs for Architecture to Investigate
+## Pre-Lock Alternatives and Tradeoffs — Historical
 
 | Choice | Tradeoff to evaluate |
 | --- | --- |
@@ -402,9 +441,10 @@ The approved test plan will be created after Architecture Lock.
 | Direct model call vs mediated AI service | Simplicity versus security, validation, cost control, and observability |
 | Client session state vs durable scenario storage | P0 simplicity versus features explicitly deferred to P1 |
 
-These are investigation axes, not recommendations.
+These were investigation axes, not recommendations. Their approved resolutions are
+recorded in the Architecture Lock.
 
-## Unresolved Architecture Questions
+## Pre-Lock Architecture Questions — Resolved
 
 1. What is the smallest deployable application boundary that satisfies required P0?
 2. Which language/framework choices best fit the deadline and existing environment?
@@ -429,9 +469,13 @@ These are investigation axes, not recommendations.
 Evidence-methodology questions remain separate and are listed in
 [PROJECT_PROGRESS.md](../../PROJECT_PROGRESS.md).
 
-## Architecture Task Exit Criteria
+All 14 questions above were resolved by the approved topology, data/runtime
+contracts, security/observability/cost plan, and verification/dependency order in
+the Architecture Lock. They are preserved here as the pre-lock checklist.
 
-Before an Architecture Lock can be approved, the fresh Architecture task should:
+## Architecture Task Exit Criteria — Achieved
+
+The Architecture task was required to:
 
 - Reconcile this reference with the current repository and authoritative product
   specifications.
@@ -446,6 +490,9 @@ Before an Architecture Lock can be approved, the fresh Architecture task should:
 - Obtain explicit user approval before creating/finalizing approved documents under
   docs/architecture.
 
+The user approved the proposal and final implementation-precision corrections on
+2026-09-01. The resulting authoritative documents satisfy this exit checklist.
+
 ## Source Hierarchy
 
 If this reference conflicts with an approved source, the approved source wins:
@@ -458,4 +505,6 @@ If this reference conflicts with an approved source, the approved source wins:
 6. [Approved screen specification](../product/screen-spec.md)
 7. [Approved decision history](../decisions.md)
 8. [Execution plan](../delivery/execution-plan.md)
-9. This non-authoritative reference
+9. [P0 Architecture Lock](../architecture/p0-architecture.md)
+10. [P0 data and runtime contracts](../architecture/data-contracts.md)
+11. This superseded non-authoritative reference

@@ -1,7 +1,9 @@
 # ClimateCapital AI Screen Specification
 
-> **Status:** Approved Product and Design Lock, reconciled with Methodology Lock
-> **Locked:** 2026-08-26; evidence-driven reconciliation 2026-09-01
+> **Status:** Approved Product and Design Lock, reconciled with Methodology and
+> Architecture Locks
+> **Locked:** 2026-08-26; evidence-driven and architecture-driven reconciliation
+> 2026-09-01
 > **Authority:** This is the authoritative Product and Design Lock for navigation,
 > screens, contextual surfaces, interaction behavior, important UI states,
 > recovery, and low-fidelity layout. It does not approve visual styling, technical
@@ -30,9 +32,14 @@ evidence, implementation constants, or analytical decisions.
 - Progressive disclosure hides controls and secondary detail until invoked.
   Project Detail is not permanently open, Scenario Settings opens only from
   **Adjust Scenario**, and the Layers popover is closed by default.
-- A closed Layers popover does not mean every contextual layer is off. The default
-  map visualization must preserve the locked evidence roles.
+- The default map uses a configurable OSM basemap with visible attribution and
+  shows current RNA display geometry where available with a research-only caveat.
+  FEMA hazard context and EAZ 2021 are off until enabled through Layers. Fully
+  Developed FloodPro is not shipped. A neutral non-basemap fallback and every
+  non-map path remain usable if tiles fail.
 - All required information and actions remain available without Gemini.
+- Gemini is invoked only after explicit analyst action; no page-load or automatic
+  model request is permitted.
 - Project inspection, scenario changes, and recovery must be keyboard-operable,
   visibly focused, programmatically labeled, and available through non-map paths.
 
@@ -70,8 +77,8 @@ full portfolio workspace.
   **[matching count] matching · [family total] P0 family**.
 - Slim current Funding Plan status, such as projects included and budget use,
   with **View Funding Plan**.
-- A small proactive Gemini insight grounded in the current extent, active
-  filters/layers, and visible projects.
+- A small on-demand Gemini explanation action grounded in the current extent,
+  active filters/layers, and visible projects.
 
 **User actions:**
 
@@ -81,7 +88,7 @@ full portfolio workspace.
 - Select a map marker to open its lightweight preview.
 - Select a Projects row to open Project Detail directly.
 - Open the full Funding Plan.
-- Expand or collapse the grounded Explore insight.
+- Request, expand, or collapse a grounded Explore explanation.
 
 **Explicit exclusions:** The full Funding Plan, Reviewed Draft workflow, Scenario
 Settings, Historical Benchmark, and permanently open Project Detail do not appear
@@ -187,8 +194,9 @@ side without creating a new analytical path.
 - Lists only supported layers and mirrors the current map visualization state.
 - Provides a legend or direct legend access.
 - Closes without resetting layer or project selections.
-- Is closed by default, while the separately approved default visualization may
-  remain active.
+- Is closed by default while current RNA display geometry remains visible where
+  available. FEMA and EAZ 2021 controls start off. Fully Developed FloodPro is
+  absent.
 
 ### Map-marker preview
 
@@ -212,10 +220,10 @@ side without creating a new analytical path.
 - P0 shows no Funding Priority, rank, Importance, numeric Climate Risk, cohort-wide
   Community Vulnerability/Equity, or expected flood-reduction benefit.
 
-### Explore Gemini insight
+### Explore Gemini explanation
 
-- Is compact and proactively visible because spatial interpretation is central to
-  Explore.
+- Is represented by a compact visible action because spatial interpretation is
+  central to Explore; no explanation is generated before the analyst invokes it.
 - Is grounded only in the current extent, active filters/layers, and visible
   governed projects.
 - Expands in the same contextual region and never hides deterministic content.
@@ -229,14 +237,17 @@ side without creating a new analytical path.
   What-If.
 - Unapplied edits never change the header context or visible current result.
 
-### Gemini scenario proposal
+### Gemini scenario proposal — post-core stretch
 
-P0-9 is approved as an interaction aid. Gemini may translate one explicit analyst
-command affecting Available Budget or named project inclusion/removal into an
-atomic structured proposal. The proposal shows before/after values and
-confirm/cancel actions. Confirmation uses the same validation and deterministic
-scenario path as manual controls. Gemini may not originate membership, facts,
-evidence roles, request amounts, priorities, or recommendations.
+P0-9 is an approved post-core interaction aid, not a release-blocking P0 surface.
+If implemented after the core release candidate is intact, Gemini may translate
+one explicit analyst command affecting Available Budget or named project
+inclusion/removal into an atomic structured proposal. The proposal shows
+before/after values and confirm/cancel actions. Confirmation uses the same
+validation and deterministic scenario path as manual controls. Gemini may not
+originate membership, facts, evidence roles, request amounts, priorities, or
+recommendations. Its absence or failure cannot block manual Funding Plan use or
+deployment.
 
 ### Historical Benchmark
 
@@ -306,7 +317,7 @@ Never collapse the following into a generic “no results” state.
 | **Historical Benchmark** | Support closed, loading, available, partially supported/missing published fields, unavailable, and retry. Missing benchmark data never changes ClimateCapital results. |
 | **Reviewed Draft** | Support not reviewed, confirmation open, marked, and cleared. The designation binds to the exact confirmed result. Unapplied edits and failed recalculation do not clear it. Confirming a replacement of an accepted What-If warns and clears that designation. |
 | **Gemini explanation** | Support compact/idle, expanded, loading, grounded answer, bounded refusal, unavailable, and retry. No required action depends on Gemini. |
-| **Gemini proposal** | Support proposal-ready, validation error, confirmation pending, cancelled, deterministic validation, applied, over-budget/invalid, and failed. Nothing changes before confirmation. |
+| **Gemini proposal — post-core stretch only** | If implemented, support proposal-ready, validation error, confirmation pending, cancelled, deterministic validation, applied, over-budget/invalid, and failed. Nothing changes before confirmation, and this surface is absent or disabled in the core release candidate. |
 | **Data & Methodology** | Support complete page, anchored focus, local section loading, approved-field/source missingness, local section failure, and retry. The rest of the page and originating screen remain intact. |
 | **Help & Resources** | Remain readable without Gemini. If a deep link fails, keep the guide usable and offer retry or the Data & Methodology landing page. |
 
@@ -332,7 +343,7 @@ These diagrams establish hierarchy and behavior only.
 │              │                               │ [project row]                 │
 │              ├───────────────────────────────┴───────────────────────────────┤
 │              │ Funding Plan: [count] included · [budget use] [View Plan]     │
-│              │ Gemini insight: [grounded observation] [Expand]               │
+│              │ Gemini explanation: [Ask] [answer when requested]             │
 └──────────────┴───────────────────────────────────────────────────────────────┘
 ~~~
 
@@ -348,9 +359,9 @@ These diagrams establish hierarchy and behavior only.
 └──────────────────────────────┘
 ~~~
 
-The control is closed by default. Active states mirror the separately approved
-default visualization; the locked evidence roles do not force every contextual
-overlay off.
+The control is closed by default. Current RNA display geometry is active where
+available; FEMA and EAZ 2021 are off. The basemap retains visible attribution and
+has a neutral fallback.
 
 ### Marker preview and Project Detail
 
@@ -377,15 +388,15 @@ Marker preview → View Project Details ───┤
                          └─────────────────────────────────┘
 ~~~
 
-### Explore Gemini insight
+### Explore Gemini explanation
 
 ~~~text
-Compact:  ┌───────────────────────────────────────────────┐
-          │ What stands out here: [grounded insight]       │
-          │ [Expand]                                       │
+Idle:     ┌───────────────────────────────────────────────┐
+          │ Explain the visible evidence                   │
+          │ [Ask Gemini]                                   │
           └───────────────────────────────────────────────┘
 
-Expanded: ┌───────────────────────────────────────────────┐
+Requested:┌───────────────────────────────────────────────┐
           │ Based on [extent / filters / layers / projects]│
           │ [grounded explanation + limitations]           │
           │ [Collapse]                                     │
@@ -508,15 +519,16 @@ analytical family, evidence roles, missingness treatment, unsupported metrics,
 analyst-controlled membership, and budget arithmetic. This screen specification
 still does not decide:
 
-- the default combination of contextual map layers;
 - visual styling for evidence roles and classification confidence;
 - whether People Potentially Benefiting, Implementation Readiness, or a heat
   co-benefit can appear in a later methodology revision; or
-- architecture and implementation details.
+- implementation details inside the approved architecture contracts.
 
 ## Related Sources of Truth
 
 - [P0 evidence and methodology lock](../methodology/p0-evidence-methodology.md)
+- [P0 architecture lock](../architecture/p0-architecture.md)
+- [P0 data and runtime contracts](../architecture/data-contracts.md)
 - [Product plan](product-plan.md)
 - [User stories and acceptance intent](user-stories.md)
 - [Delivery and release gates](../delivery/execution-plan.md)

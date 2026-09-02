@@ -40,8 +40,9 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | Screens, navigation, UI behavior, states, recovery, and wireframes | [docs/product/screen-spec.md](docs/product/screen-spec.md) |
 | Initial delivery sequencing, deadline, and release gates | [docs/delivery/execution-plan.md](docs/delivery/execution-plan.md) |
 | Durable decision history | [docs/decisions.md](docs/decisions.md) |
-| Architecture-planning reference; not an approved design | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
-| Approved architecture after explicit Architecture Lock | docs/architecture/ — intentionally absent |
+| Approved P0 topology, services, deployment, security, observability, cost, and implementation order | [docs/architecture/p0-architecture.md](docs/architecture/p0-architecture.md) |
+| Approved release artifacts, runtime APIs, session state, Funding Plan, benchmark, and Gemini contracts | [docs/architecture/data-contracts.md](docs/architecture/data-contracts.md) |
+| Superseded pre-lock technical planning reference | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
 | Architecture-informed implementation and test plans | docs/delivery/implementation-plan.md, test-plan.md, and milestones.md — intentionally absent |
 
 Git is the version history for all repository memory. Fresh tasks must not depend on
@@ -49,17 +50,16 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-01
-- **Project stage:** Methodology Lock is complete and reviewed. Product and Design
-  have been reconciled with the evidence result. Architecture Planning remains
-  paused before Architecture Lock until separately authorized; this is not
+- **Last updated:** 2026-09-02
+- **Project stage:** Methodology, Product/Design, and Architecture Locks are
+  complete and reconciled. Application implementation has not begun.
+- **Current milestone:** P0 Architecture Lock: one scale-to-zero Cloud Run
+  container, a reviewed pinned release-data bundle, stateless server-authoritative
+  plan evaluation, browser-session-only workflow state, isolated benchmark, and
+  bounded required Gemini explanation.
+- **Next milestone:** In a separately authorized delivery-planning task, create and
+  approve `implementation-plan.md`, `test-plan.md`, and `milestones.md` before
   application implementation.
-- **Current milestone:** Final P0 evidence and methodology lock: evidence-first
-  funding decision support, one derived 12-record local
-  flood/local drainage family, no synthetic priority model, and analyst-controlled
-  full-request scenarios with deterministic budget arithmetic.
-- **Next milestone:** After separate authorization, resume Architecture
-  Planning against the locked methodology and reconciled Product/Design documents.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
@@ -70,18 +70,17 @@ access to prior chat conversations.
   responses remain ignored locally and are preserved at exact generation-verified
   Cloud Storage paths; the source-universe CSV remains in one validated `raw`
   BigQuery table. The repository now also contains one authoritative P0 methodology
-  document and reconciled Product/Design handoff documents. No production
-  pipeline, application, approved architecture, score, rank, weight model, or
+  methodology document, reconciled Product/Design handoff documents, and the
+  authoritative P0 architecture/data contracts. No production pipeline,
+  application, implementation/test/milestone plan, score, rank, weight model, or
   optimizer exists.
-- **Most recent outcome:** Closed evidence feasibility without manufacturing a
-  common severity/benefit model. The governed universe remains 37 projects /
-  $327,970,000; the 24-project / $233,380,000 broad flood-related family is not
-  coherent under one method; the provisional P0 analytical family is 12 local
-  flood/local drainage records / $143,005,000. Problem Score and FEMA are
-  contextual, RNA and Fully Developed FloodPro are research-only for governed
-  analysis, expected flood-reduction benefit is unsupported, and EAZ 2021 is
-  contextual for only 5/12 projects. Product decisions that assumed scores,
-  weights, ranking, or optimizer-authoritative membership were explicitly reopened.
+- **Most recent outcome:** Locked the smallest implementation-ready architecture
+  without reopening evidence: pinned source preparation separated from
+  source-independent release builds; precomputed application artifacts; one
+  FastAPI/React Cloud Run service; exact current/reference plan re-evaluation;
+  current-session browser state; explicit benchmark isolation; direct bounded OSM;
+  and required grounded Gemini explanation with proposal moved to post-core
+  stretch. D-080–D-096 record the detailed choices.
 
 ## Approved Locks
 
@@ -105,6 +104,13 @@ access to prior chat conversations.
   are explicit ClimateCapital derivations; evidence roles and missingness are
   governed; P0 has no Funding Priority score, rank, Importance weights, quantitative
   risk/equity score, expected flood-reduction benefit, or optimizer.
+- **Architecture Lock — Minimal reproducible P0:** Controlled source preparation
+  produces a reviewed four-file release-data bundle; one small public Cloud Run
+  container serves the SPA/API with one worker, no application database, no
+  runtime BigQuery/GCS/GIS access, browser-session-only state, independently
+  recomputed plan inputs, isolated benchmark, explicit map defaults, keyless
+  bounded Gemini, non-circular deployment identity, scale-to-zero cost controls,
+  and a reviewed-data release gate.
 
 Unchanged portions of Stages 1–4 remain authoritative. The empirical evidence gate
 materially contradicted and reopened the optimizer-authoritative assumptions; the
@@ -120,37 +126,42 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Preserve the locked P0 evidence-first methodology and its explicit
-  reconciliation of earlier Product/Design assumptions for the Architecture handoff.
-- **Status:** The final evidence-feasibility gate and documentation reconciliation
-  are complete and reviewed. The work establishes a
-  derived purpose family, not City eligibility, and makes no score, rank, weight,
-  optimization, application, architecture, or cloud change.
+- **Goal:** Hand the approved Methodology, Product/Design, and Architecture Locks
+  into architecture-informed delivery planning without beginning implementation.
+- **Status:** Architecture Lock is complete and reviewed. It establishes contracts
+  and implementation order only; no application, release-data bundle, deployment,
+  IAM, billing, or other cloud state changed.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file,
   docs/methodology/p0-evidence-methodology.md, the reconciled files under
   docs/product, docs/delivery/execution-plan.md, docs/decisions.md, and the
-  non-authoritative docs/reference/technical-architecture-reference.md.
-- **Exit condition:** Achieved. Architecture Planning may resume only in a later
-  authorized task; approved architecture files still require explicit Architecture
-  Lock.
+  docs/architecture/p0-architecture.md and data-contracts.md, and the reconciled
+  delivery/decision files. The technical reference is now superseded.
+- **Exit condition:** Achieved. The next separately authorized task is delivery
+  planning, not application implementation.
 
 ## Next Actions
 
 1. Do not perform another broad source hunt, inspect SVI, manufacture project
    geography, or reintroduce expected benefit, scores, ranks, weights, or an
    optimization objective without a later explicit methodology revision.
-2. After separate authorization, resume Architecture Planning using
-   the reconciled handoff; design only the smallest contracts needed for governed
-   facts/evidence states, analyst membership, validation, integer-dollar arithmetic,
-   supported comparison, and bounded Gemini interaction.
-3. After explicit Architecture Lock, create the architecture-informed
-   implementation, test, and milestone plans before application implementation.
+2. In a separately authorized delivery-planning task, create and approve the
+   architecture-informed implementation, test, and milestone plans.
+3. Lock the initial artifact/API/session/plan/benchmark/Gemini schemas in that plan,
+   then run the approved data and application tracks only after the first
+   implementation milestone is authorized.
 4. Separately verify organizer submission artifacts, judging criteria, finale
    date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-09-02 — P0 Architecture Lock persisted after 2026-09-01 approval:** Locked the
+  source-to-release flow, four-file reviewed data bundle, non-circular deployment
+  identity, single-worker Cloud Run topology, browser session model, exact plan
+  trust boundary, benchmark isolation, map/OSM defaults, required Gemini
+  explanation and post-core proposal scope, rate/cost/security/observability
+  controls, verification gates, parallel implementation tracks, and cut order;
+  reconciled the durable handoff without application, cloud, commit, or push work.
 - **2026-09-01 — P0 Methodology Lock completed and reviewed:** Closed the final
   evidence-feasibility gate; preserved the 37-project governed universe and derived
   all-37 purpose audit; locked the 12-record local flood/local drainage family;
@@ -227,27 +238,24 @@ A missed gate cuts or freezes scope; it does not consume testing/submission
 contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
-The August 31 analytics-core checkpoint is not authorized while Architecture Lock
-is paused. The September 2 required-P0 feature-freeze gate is therefore at critical
-schedule risk; this status update does not revise the approved deadline or silently
-authorize implementation.
+The approved September 2 feature-freeze gate is at critical schedule risk because
+architecture-informed delivery plans and all application implementation remain
+unstarted. Architecture Lock does not silently authorize either.
 
 ## Blockers
 
-- Architecture Planning remains paused until separately authorized. The reviewed
-  Methodology Lock and Product/Design reconciliation are complete, and evidence
-  feasibility is no longer an open Architecture dependency.
-- No architecture is approved; this blocks architecture implementation, production
-  data pipelines, application implementation, and final architecture documents.
 - Architecture-informed implementation, test, and milestone plans do not yet
-  exist, so implementation remains unauthorized after review alone.
+  exist, so application/data implementation remains unauthorized after Architecture
+  Lock alone.
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed and block final submission-package planning.
 
 ## Active Risks
 
 - Source-license/reuse terms remain unverified and are recorded as such in the
-  source registry.
+  source registry. Implementation requires only a focused metadata/reuse
+  confirmation for application-shipped City-derived layers, not broad source
+  reconnaissance.
 - RNA Projects layer 8 and the current FloodPro services do not establish their
   January 2026 geometry/data state. RNA geometry is research-only for governed
   analysis; FEMA is current contextual hazard evidence only.
@@ -261,8 +269,9 @@ authorize implementation.
   preserves them without transformation, simplification, curve densification, or
   repair, and polygon semantics have not been validated as project footprints or
   benefit areas.
-- Fully Developed FloodPro contains relevant invalid source geometries and remains
-  research/context only; repaired geometry must not become governed source truth.
+- Fully Developed FloodPro contains relevant invalid source geometries, remains
+  research-only, and is not shipped in P0; repaired geometry must not become
+  governed source truth.
 - Problem Score project/problem association strength is provenance, not severity,
   and no reproducible January 2026 Local Flood numeric score covers the family.
 - EAZ 2021 is a 2019-ACS-based Austin Transportation vulnerability snapshot with
@@ -286,13 +295,14 @@ authorize implementation.
 - The source says projects are sorted by project ID, but published row order places
   5789.150 before 5789.145 and 5789.146. Extraction preserves rather than repairs
   this source-level inconsistency.
-- The current delivery baseline is at critical schedule risk because no
-  Architecture Lock, application, production pipeline, or implementation plan
-  exists as of September 1.
+- The current delivery baseline is at critical schedule risk because delivery
+  plans, the reviewed release-data bundle, application, and deployment do not yet
+  exist as of September 1.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
-- Architecture work is now on the critical path and must implement the locked
-  narrow method without reopening evidence reconnaissance.
+- Architecture-informed delivery planning and implementation are now on the
+  critical path and must preserve the locked narrow method and topology without
+  reopening evidence reconnaissance.
 - Product language or contracts could silently reintroduce a Funding Priority,
   ranking, Importance weights, optimizer, recommendation, or missing-evidence
   penalty even though no defensible objective supports them.
@@ -302,13 +312,28 @@ authorize implementation.
   Recommendation, Current Confirmed Plan, and Session Reference Plan may be
   confused if the locked terminology is not implemented consistently.
 - Gemini or map work could consume disproportionate effort; deterministic/manual
-  paths and non-map access remain release priorities.
+  paths, non-map access, and required grounded explanation remain release
+  priorities; proposal is post-core stretch.
+- A fixture bundle could be mistaken for reviewed evidence. Release validation
+  must reject fixture tier and `NOT_EVALUATED_FIXTURE` states.
+- A release build could accidentally contact mutable sources. Build verification
+  must prove it consumes only pinned reviewed artifacts.
+- In-memory Gemini limits reset on process restart and per-client/IP protection is
+  best-effort; they reduce public-abuse cost but are not a hard spend guarantee.
+- Direct OSM tiles create an external demo dependency and policy obligation;
+  attribution, normal Referer/cache behavior, no prefetch/bulk use, configurable
+  provider, noindex/robots discouragement, and neutral fallback are mandatory.
+- Code/data/manifest/image identity could drift unless `/healthz`, the Cloud Run
+  revision, external manifest checksum, and deployed image digest reconcile before
+  traffic promotion.
 - Failed recalculation must not overwrite the last successful deterministic result.
 - The process-job Stop hook still exits with code 127 because node is unavailable;
   process-job completion checks remain unreliable until its runtime/configuration is
   fixed.
-- Current cloud pricing, quotas, program requirements, and source licensing have not
-  been verified.
+- Cloud pricing and service behavior were checked for Architecture Lock but remain
+  time-sensitive; quotas, organizer program requirements, existing billing
+  controls, Spend Cap availability, and source licensing require focused
+  implementation/deployment-time confirmation.
 
 ## Open Questions
 
@@ -319,20 +344,15 @@ authorize implementation.
 - Any later metric proposal requires an explicit methodology revision documenting
   source, vintage, historical fit, coverage, comparability, missingness,
   transformation, and effect; it is not part of the current handoff.
-- Architecture/Product presentation must still decide which contextual or
-  research-only map layers, if any, are visible by default without changing their
-  locked analytical roles.
 
 ### Architecture
 
-- What is the smallest low-cost deployable system that satisfies required P0?
-- Which work is precomputed versus performed at runtime?
-- What governed contracts preserve all-37 source facts, the derived 12-record
-  family, evidence roles/missingness, analyst membership, integer-dollar arithmetic,
-  Historical Benchmark isolation, and Gemini boundaries?
-- Which Google Cloud, Gemini, frontend, map, storage, and deployment options meet
-  deadline, cost, security, and reliability constraints?
-- What data-versioning, lineage, observability, and teardown approach is required?
+- No P0 Architecture decision remains open. The approved topology, data/runtime
+  contracts, map defaults, Gemini boundary, cost controls, verification, and
+  dependency order are in `docs/architecture/`.
+- Delivery planning must instantiate those contracts without introducing a new
+  architecture choice. Any material topology/trust/persistence change requires an
+  explicit sequential Architecture decision.
 
 ### Submission
 
@@ -348,9 +368,28 @@ docs/product.
 
 ### Architecture
 
-Not established. Architecture Planning is paused before lock until separately
-authorized. The technical reference has been reconciled as a handoff but remains
-exploratory and does not constitute an Architecture Lock.
+Established and locked:
+
+- one React/TypeScript/Vite SPA plus Leaflet and one FastAPI/Uvicorn application
+  worker in one public request-billed Cloud Run service, `us-central1`, minimum 0
+  and maximum 1 instances;
+- one reviewed four-file release-data bundle packaged in the image; controlled
+  acquisition is separate and release builds make no live source requests;
+- no runtime BigQuery, Cloud Storage, GIS, application database, or server session
+  store; browser `sessionStorage` holds bounded current-session workflow state;
+- independently recomputed current/reference Funding Plans with exact integer
+  arithmetic, isolated Historical Benchmark, and no client-authoritative results;
+- direct configurable OSM with required safeguards; RNA display geometry on where
+  available, FEMA/EAZ off by default, no Fully Developed FloodPro, and no fabricated
+  `5789.150` geography;
+- required bounded Gemini explanation through the global standard on-demand
+  publisher endpoint and ADC; proposal is post-core stretch; and
+- external manifest checksum plus separate code/data/image release identity,
+  bounded observability/images/costs, no-traffic verification, and rollback.
+
+See [p0-architecture.md](docs/architecture/p0-architecture.md) and
+[data-contracts.md](docs/architecture/data-contracts.md). The technical reference
+is preserved as superseded pre-lock material.
 
 ### Evidence Repository
 
@@ -450,8 +489,14 @@ remains explicit.
 - docs/product/screen-spec.md — authoritative UI, state, and wireframe specification.
 - docs/delivery/execution-plan.md — initial approved delivery sequencing and gates.
 - docs/decisions.md — authoritative durable decision history.
-- docs/reference/technical-architecture-reference.md — exploratory Architecture
-  planning reference.
+- docs/architecture/p0-architecture.md — authoritative P0 topology, source/release
+  flow, services, runtime, deployment, security, observability, cost, verification,
+  implementation order, and scope cuts.
+- docs/architecture/data-contracts.md — authoritative release artifact, manifest,
+  deployment identity, API, browser-session, Funding Plan, benchmark, and Gemini
+  contracts.
+- docs/reference/technical-architecture-reference.md — superseded pre-lock
+  planning reference retained for history.
 - .gitignore — raw/staging, PDF, GeoJSON, temporary-response, Python, and common
   credential-file protections.
 - requirements-data.txt — pinned dependency for local source extraction only.
@@ -481,7 +526,6 @@ remains explicit.
   safety tests.
 - tests/test_rna_projects_gis_reconnaissance.py — native source, provenance,
   matching, reconciliation, and cloud-preservation tests.
-- docs/architecture/ — intentionally absent until explicit Architecture Lock.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md —
   intentionally absent until post-Architecture delivery planning.
 
@@ -505,6 +549,9 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   source-fetch runtime lacked a default CA bundle; `/etc/ssl/cert.pem` was used for
   verified HTTPS without disabling certificate verification.
 - No application environment is established.
+- No Cloud Run, Artifact Registry, Cloud Build, runtime IAM, Gemini configuration,
+  billing-control, or deployment change has been made; the Architecture Lock is
+  documentation only.
 - The local process-job Stop hook lacks the node runtime it expects.
 
 ### Common Commands
@@ -552,12 +599,12 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 
 - D-001–D-063 preserve all Stage 1–4 and repository decisions.
 - D-064 establishes the purpose-specific repository-memory hierarchy.
-- D-065 keeps the technical reference non-authoritative until Architecture Lock.
+- D-065 keeps the technical reference non-authoritative; D-080–D-096 fulfill the
+  explicit Architecture Lock requirement.
 - D-066 keeps PROJECT_PROGRESS.md as the only progress file and defers
   architecture-informed delivery plans.
-- D-067 pauses Architecture Lock for controlled evidence reconnaissance; the
-  evidence dependency and Methodology Lock review are now complete, while
-  Architecture requires separate authorization before it resumes.
+- D-067's evidence pause is fulfilled; evidence and Methodology Lock completed
+  before Architecture resumed and locked.
 - D-068 establishes the 37-project source-universe path and structurally separate
   Historical City Recommendation benchmark path.
 - D-069 establishes the canonical registry and immutable raw-fetch/provenance
@@ -588,7 +635,19 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   City Recommendation benchmark.
 - D-079 limits Gemini to grounded explanation and confirmed translation of explicit
   analyst commands; it cannot originate facts, membership, or recommendations.
-- Next available decision ID: **D-080**.
+- D-080–D-083 lock the single-container Cloud Run topology, source-independent
+  release flow, non-circular four-file bundle identity, and minimal GCS/BigQuery
+  treatment.
+- D-084–D-087 lock map/OSM defaults, browser-session state, the independent
+  current/reference plan trust boundary, and benchmark isolation.
+- D-088–D-090 lock required Gemini explanation, post-core proposal, Google Cloud
+  publisher/ADC model access, one-process rate/cost controls, narrow APIs, public
+  access, and least-privilege configuration.
+- D-091–D-095 lock bounded observability, deployment identity, image retention,
+  testing/release gates, and normal/abuse/billing/shutdown cost controls.
+- D-096 locks post-schema parallel data/application tracks, exact-schema fixture
+  constraints, reviewed-data final integration, and the Compare/proposal cut order.
+- Next available decision ID: **D-097**.
 
 ## Verification Record
 
@@ -596,6 +655,8 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-02 | Final P0 scenario-budget bound correction | Replaced the prior representation-limit maximum with the approved `$0`–`$1,000,000,000` application input bound; searched repository documentation for the obsolete bound; ran the full repository test suite, `git diff --check`, and focused Architecture/Methodology budget-contract assertions | Passed: 46 tests; no obsolete safe-integer bound remains; the application-only limit preserves exact whole-dollar arithmetic, City-policy and eligibility separation, the `$125,000,000` Historical Envelope, and ample headroom above the 37-project / `$327,970,000` governed universe; no application, commit, or push change |
+| 2026-09-02 | P0 Architecture Lock | Read the complete governing repository state; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, relative Markdown link/fence checks, D-001–D-096 continuity, stable-story/core-scope checks, exact governed/family CSV-methodology reconciliation, required Architecture contract assertions, stale optimizer/ranking/weights/runtime-GIS/runtime-BigQuery searches, changed-file boundary review, and Git status/stat review | Passed: 46 tests; 12 Markdown files have resolving relative links and balanced fences; 96 decisions are continuous and unique; all 12 stable P0 IDs remain, with 11 required core and P0-9 post-core stretch; 37 / $327,970,000 and exact 12 / $143,005,000 reconcile; stale-term hits are explicit exclusions or preserved superseded history; only the ten authorized documentation files changed or were created; no application, data, cloud, commit, or push change |
 | 2026-09-01 | Reviewed Methodology Lock commit gate | Confirmed the exact documentation-only working-tree boundary; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, and staged-scope validation | Passed: 46 tests; only the ten intended methodology, Product/Design, delivery, reference, repository-routing, and current-state Markdown files are included; no application, data, cloud, architecture, or push change |
 | 2026-09-01 | Final Methodology Lock semantic audit | Audited Historical Envelope versus analyst plan terminology, Historical City Recommendation isolation, provisional analytical-family versus eligibility language, and active-family/full-request/deterministic-membership boundaries; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, exact source/family/broad reconciliation, obsolete-current-term guards, D-001–D-079 continuity/supersession checks, and Markdown link/fence validation | Passed: 46 tests; $125 million is only Historical Envelope context; Session Reference Plan and Current Confirmed Plan are distinct analyst-plan terms; City benchmark is structurally isolated; 12 projects / $143,005,000 remain a provisional analytical family inside the visible 37-project / $327,970,000 universe; membership is active-family-only and full-request; deterministic logic validates but does not select; no commit or push |
 | 2026-09-01 | P0 evidence and Methodology Lock | Reviewed the interrupted working-tree diff and all authoritative handoff files; ran `.venv/bin/python -m unittest discover -s tests -v`, `git diff --check`, exact CSV/methodology reconciliation, all-37 and family name/ID/request checks, broad-family total check, D-001–D-079 continuity, relative Markdown-link and fence validation, stale-current-language guards, and deferred-file boundary checks | Passed: 46 tests; 37 projects / $327,970,000; exact 12 records / $143,005,000; exact broad 24 / $233,380,000; official names and requests reconcile; 79 continuous unique decisions; 13 Markdown files have valid relative links and balanced fences; no stale optimizer/weight/recommendation contract in current handoff; no application, architecture, cloud, commit, or push change |
@@ -618,6 +679,69 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-02 — Correct the P0 scenario-budget validation bound
+
+- **Objective:** Apply only the approved final input-bound precision correction
+  before the Architecture Lock commit checkpoint.
+- **Result:** `docs/architecture/data-contracts.md` now accepts scenario budgets
+  from `$0` through `$1,000,000,000` as application validation and input-safety
+  bounds. The contract explicitly preserves City-policy and eligibility
+  separation, the `$125,000,000` Historical Envelope, ample headroom over the
+  `$327,970,000` governed universe, and exact whole-dollar arithmetic.
+- **Verification:** The full 46-test repository suite, `git diff --check`, the
+  obsolete-bound search, and focused Architecture/Methodology consistency checks
+  passed. No other documentation referenced the old maximum.
+- **Boundaries:** No other architecture contract, decision, application code,
+  cloud state, commit, or push changed.
+
+### 2026-09-02 — Persist the approved P0 Architecture Lock
+
+- **Objective:** Persist the user-approved implementation architecture and final
+  precision corrections without reopening methodology, product design, source
+  reconnaissance, or application implementation.
+- **Architecture result:** Created the authoritative single-container
+  React/TypeScript/Vite/Leaflet plus one-worker FastAPI Cloud Run topology; pinned
+  source-to-release flow; minimal GCS/BigQuery roles; precomputed GIS; browser-only
+  current-session state; exact plan trust boundary; isolated Historical Benchmark;
+  direct bounded OSM defaults; keyless required Gemini explanation; post-core
+  proposal; bounded security, observability, cost, image, and deployment controls;
+  and the post-schema parallel data/application work order.
+- **Contract result:** Created normative four-file release-bundle, non-circular
+  manifest/deployment identity, evidence/missingness, fixture/review tier, catalog,
+  map, benchmark, stateless current/reference plan, API, session reducer, Gemini,
+  configuration, and release-gate contracts. A release candidate cannot contain
+  fixture evidence or acquire live source data.
+- **Product/delivery reconciliation:** Made grounded explanation the only required
+  P0 AI capability, moved stable story P0-9 proposal to post-core stretch, replaced
+  proactive/page-load Gemini behavior with explicit invocation, locked RNA/FEMA/EAZ
+  defaults and FloodPro omission, marked the reference superseded, and made
+  delivery planning the next gate.
+- **Decision history:** Added D-080–D-096 and updated only statuses/links on earlier
+  rows to identify explicit fulfillment, resolution, or narrowing; no historical
+  decision text or ID was renumbered or silently rewritten.
+- **Files:** Created `docs/architecture/p0-architecture.md` and
+  `docs/architecture/data-contracts.md`; updated `PROJECT_PROGRESS.md`, `README.md`,
+  `docs/decisions.md`, the three `docs/product/` specifications,
+  `docs/delivery/execution-plan.md`, and the superseded
+  `docs/reference/technical-architecture-reference.md`.
+- **Verification:** The full 46-test repository suite and `git diff --check` passed.
+  Independent checks validated all relative Markdown links and fences, continuous
+  D-001–D-096, all 12 stable P0 IDs with 11 required core stories and P0-9 stretch,
+  exact 37/$327,970,000 and 12/$143,005,000 reconciliations, all approved manifest,
+  identity, one-process Gemini, plan, fixture, map, BigQuery/GIS, cost, and two-track
+  invariants, and no affirmative stale optimizer/ranking/weights/runtime-data
+  contract. Git review found documentation-only changes.
+- **Open items:** Focused City-derived layer reuse/license confirmation, organizer
+  submission requirements, current quotas and existing billing-control inspection,
+  reviewed evidence bundle construction, application implementation, and deployment
+  remain future authorized work.
+- **Boundaries:** No application code, dependency, source snapshot, analytical
+  result, BigQuery/GCS resource, IAM, billing control, Gemini call, deployment,
+  commit, or push changed.
+- **Handoff:** In a separately authorized task, create and approve the
+  architecture-informed implementation, test, and milestone plans before any
+  application or data-track implementation.
 
 ### 2026-09-01 — Lock the P0 evidence-first methodology
 
