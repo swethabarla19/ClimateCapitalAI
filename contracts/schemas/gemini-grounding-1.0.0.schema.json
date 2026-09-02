@@ -1,0 +1,115 @@
+{
+  "$defs": {
+    "GeminiGroundingReference": {
+      "additionalProperties": false,
+      "properties": {
+        "exact_numeric_strings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exact Numeric Strings",
+          "type": "array"
+        },
+        "public_text": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Public Text",
+          "type": "string"
+        },
+        "reference_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "reference_id",
+        "source_ids",
+        "exact_numeric_strings",
+        "public_text"
+      ],
+      "title": "GeminiGroundingReference",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/gemini-grounding-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "benchmark_data_included": {
+      "title": "Benchmark Data Included",
+      "type": "boolean"
+    },
+    "bounded_user_question": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Bounded User Question",
+      "type": "string"
+    },
+    "constructed_input_token_limit": {
+      "const": 2000,
+      "title": "Constructed Input Token Limit",
+      "type": "integer"
+    },
+    "context_type": {
+      "enum": [
+        "PROJECT",
+        "PLAN",
+        "SCENARIO_COMPARISON",
+        "BENCHMARK",
+        "METHODOLOGY",
+        "PROVENANCE"
+      ],
+      "title": "Context Type",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "p0-gemini-explain/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "methodology_constraints": {
+      "items": {
+        "maxLength": 4000,
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Methodology Constraints",
+      "type": "array"
+    },
+    "references": {
+      "items": {
+        "$ref": "#/$defs/GeminiGroundingReference"
+      },
+      "minItems": 1,
+      "title": "References",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "context_type",
+    "methodology_constraints",
+    "references",
+    "bounded_user_question",
+    "constructed_input_token_limit",
+    "benchmark_data_included"
+  ],
+  "title": "GeminiGroundingPackage",
+  "type": "object"
+}

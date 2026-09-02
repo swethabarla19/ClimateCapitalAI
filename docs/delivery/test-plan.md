@@ -1,7 +1,7 @@
 # ClimateCapital AI P0 Test Plan
 
-> **Status:** Approved by explicit user authorization on 2026-09-02; M0 complete;
-> M1 not started
+> **Status:** Approved by explicit user authorization on 2026-09-02; M0 and M1
+> complete and explicitly approved
 > **Scope:** Verification required by the locked Methodology, Product,
 > Architecture, and data/runtime contracts
 

@@ -1,7 +1,7 @@
 # ClimateCapital AI P0 Delivery Milestones
 
-> **Status:** Approved by explicit user authorization on 2026-09-02; M0 complete;
-> M1 not started
+> **Status:** Approved by explicit user authorization on 2026-09-02; M0 and M1
+> complete and explicitly approved
 > **Rule:** Milestones are dependency-ordered. Approval of one milestone does not
 > silently authorize cloud mutation, deployment, commit, push, P1, or Later work.
 
@@ -10,9 +10,9 @@
 | ID | Milestone | Status | Cloud cost impact |
 | --- | --- | --- | --- |
 | M0 | Architecture-informed implementation/test/milestone plans | Complete; explicitly approved 2026-09-02 | None |
-| M1 | Versioned contracts and fail-closed release validators | Authorized next; not started | None; local only |
-| M2A | Controlled data prerequisites and pinned approved inputs | Blocked by M1 | Bounded existing GCS/query use only if separately authorized |
-| M2B | Exact-schema fixture and deterministic plan engine | Blocked by M1 | None; local only |
+| M1 | Versioned contracts and fail-closed release validators | Complete; explicitly approved 2026-09-02 | None; local only |
+| M2A | Controlled data prerequisites and pinned approved inputs | Next; not started | Bounded existing GCS/query use only if separately authorized |
+| M2B | Exact-schema fixture and deterministic plan engine | M1 prerequisite satisfied; not started | None; local only |
 | M3 | Health/bootstrap/plan/benchmark APIs | Blocked by M2B | None; local only |
 | M4 | Application-track frontend and required product surfaces | Blocked by M3 | None; local only |
 | M5 | Reviewed pinned release-data bundle | Blocked by M2A | Bounded existing GCS/BigQuery release-gate use |
@@ -64,7 +64,8 @@ API, fixture bundle, or cloud work.
 - `PROJECT_PROGRESS.md` records files, tests, deviations, risks, and M2A/M2B
   recommendation.
 
-**Stop point:** Review M1 before starting either post-schema track.
+**Stop point:** M1 received independent closure-audit approval on 2026-09-02. No
+post-schema work began during the approval and publication session.
 
 ## M2A — Controlled Data Prerequisites
 

@@ -1,0 +1,172 @@
+{
+  "$defs": {
+    "GeminiExpectedFingerprints": {
+      "additionalProperties": false,
+      "properties": {
+        "current": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        }
+      },
+      "title": "GeminiExpectedFingerprints",
+      "type": "object"
+    },
+    "PlanInput": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "contract_version": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        },
+        "project_ids": {
+          "items": {
+            "pattern": "^[0-9]+\\.[0-9]{3}$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "available_budget_dollars",
+        "project_ids"
+      ],
+      "title": "PlanInput",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/gemini-explain-request-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "context_type": {
+      "enum": [
+        "PROJECT",
+        "PLAN",
+        "SCENARIO_COMPARISON",
+        "BENCHMARK",
+        "METHODOLOGY",
+        "PROVENANCE"
+      ],
+      "title": "Context Type",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "p0-gemini-explain/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "current_plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PlanInput"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "expected_fingerprints": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/GeminiExpectedFingerprints"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "project_ids": {
+      "items": {
+        "pattern": "^[0-9]+\\.[0-9]{3}$",
+        "type": "string"
+      },
+      "maxItems": 12,
+      "title": "Project Ids",
+      "type": "array"
+    },
+    "reference_plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PlanInput"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "user_question": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "User Question",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "context_type",
+    "user_question"
+  ],
+  "title": "GeminiExplainRequest",
+  "type": "object"
+}

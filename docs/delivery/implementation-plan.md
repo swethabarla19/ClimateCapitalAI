@@ -1,7 +1,7 @@
 # ClimateCapital AI P0 Implementation Plan
 
-> **Status:** Approved by explicit user authorization on 2026-09-02; M0 complete;
-> M1 not started
+> **Status:** Approved by explicit user authorization on 2026-09-02; M0 and M1
+> complete and explicitly approved
 > **Authority:** Delivery sequencing and milestone scope only. The
 > Product, Methodology, Evidence, and Architecture Locks remain controlling.
 
@@ -278,3 +278,6 @@ record does not begin M1 and does not authorize M2A acquisition, cloud mutation,
 M9 deployment, commit, or push. Each completed milestone must be reviewed before
 the next begins unless the user separately authorizes a broader sequence
 consistent with the locked dependency order.
+
+M1 received independent closure-audit approval on 2026-09-02. That approval
+satisfies the M1 review gate; no M2 or later work began in the approval session.

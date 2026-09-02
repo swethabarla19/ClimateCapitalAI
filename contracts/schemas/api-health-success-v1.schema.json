@@ -1,0 +1,191 @@
+{
+  "$defs": {
+    "ContractVersionSet": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Benchmark",
+          "type": "string"
+        },
+        "browser_session": {
+          "const": "p0-browser-session/1.0.0",
+          "title": "Browser Session",
+          "type": "string"
+        },
+        "catalog": {
+          "const": "p0-catalog/1.0.0",
+          "title": "Catalog",
+          "type": "string"
+        },
+        "funding_plan": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Funding Plan",
+          "type": "string"
+        },
+        "gemini_explain": {
+          "const": "p0-gemini-explain/1.0.0",
+          "title": "Gemini Explain",
+          "type": "string"
+        },
+        "map_context": {
+          "const": "p0-map-context/1.0.0",
+          "title": "Map Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "benchmark",
+        "funding_plan",
+        "browser_session",
+        "gemini_explain"
+      ],
+      "title": "ContractVersionSet",
+      "type": "object"
+    },
+    "DeploymentIdentityData": {
+      "additionalProperties": false,
+      "properties": {
+        "code_git_sha": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Code Git Sha",
+          "type": "string"
+        },
+        "container_image_digest": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Container Image Digest",
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Manifest Sha256",
+          "type": "string"
+        },
+        "release_tier": {
+          "$ref": "#/$defs/ReleaseTier"
+        }
+      },
+      "required": [
+        "code_git_sha",
+        "manifest_sha256",
+        "container_image_digest",
+        "release_tier"
+      ],
+      "title": "DeploymentIdentityData",
+      "type": "object"
+    },
+    "HealthResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_versions": {
+          "$ref": "#/$defs/ContractVersionSet"
+        },
+        "deployment_identity": {
+          "$ref": "#/$defs/DeploymentIdentityData"
+        },
+        "gemini_enabled": {
+          "title": "Gemini Enabled",
+          "type": "boolean"
+        },
+        "status": {
+          "const": "READY",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "deployment_identity",
+        "contract_versions",
+        "gemini_enabled"
+      ],
+      "title": "HealthResponseData",
+      "type": "object"
+    },
+    "ReleaseTier": {
+      "enum": [
+        "FIXTURE",
+        "REVIEWED_RELEASE"
+      ],
+      "title": "ReleaseTier",
+      "type": "string"
+    },
+    "ResponseIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "api_namespace": {
+          "const": "/api/v1",
+          "title": "Api Namespace",
+          "type": "string"
+        },
+        "contract_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contract Version"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "api_namespace",
+        "data_version",
+        "release_id"
+      ],
+      "title": "ResponseIdentity",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/api-health-success-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "$ref": "#/$defs/HealthResponseData"
+    },
+    "endpoint": {
+      "const": "/healthz",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "identity": {
+      "$ref": "#/$defs/ResponseIdentity"
+    },
+    "status": {
+      "const": "SUCCESS",
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "endpoint",
+    "status",
+    "identity",
+    "data"
+  ],
+  "title": "HealthSuccessEnvelope",
+  "type": "object"
+}

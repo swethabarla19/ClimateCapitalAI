@@ -1,0 +1,1092 @@
+{
+  "$defs": {
+    "ConfirmedPlanState": {
+      "additionalProperties": false,
+      "properties": {
+        "fingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "input": {
+          "$ref": "#/$defs/PlanInput"
+        },
+        "last_server_result": {
+          "$ref": "#/$defs/EvaluatedPlan"
+        },
+        "validated_identity": {
+          "$ref": "#/$defs/SessionDeploymentIdentity"
+        }
+      },
+      "required": [
+        "validated_identity",
+        "input",
+        "last_server_result",
+        "fingerprint"
+      ],
+      "title": "ConfirmedPlanState",
+      "type": "object"
+    },
+    "DirtyAttempt": {
+      "additionalProperties": false,
+      "properties": {
+        "input": {
+          "$ref": "#/$defs/PlanInput"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        },
+        "validation_state": {
+          "enum": [
+            "DIRTY_UNAPPLIED",
+            "INVALID",
+            "OVER_BUDGET",
+            "VALIDATING",
+            "FAILED"
+          ],
+          "title": "Validation State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input",
+        "validation_state"
+      ],
+      "title": "DirtyAttempt",
+      "type": "object"
+    },
+    "EvaluatedPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "confirmation_status": {
+          "enum": [
+            "VALID",
+            "OVER_BUDGET"
+          ],
+          "title": "Confirmation Status",
+          "type": "string"
+        },
+        "contract_version": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "fingerprint_verification": {
+          "$ref": "#/$defs/FingerprintVerification"
+        },
+        "included_count": {
+          "minimum": 0,
+          "title": "Included Count",
+          "type": "integer"
+        },
+        "included_governed_requests": {
+          "items": {
+            "$ref": "#/$defs/IncludedGovernedRequest"
+          },
+          "maxItems": 12,
+          "title": "Included Governed Requests",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "included_project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Included Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "included_total_dollars": {
+          "minimum": 0,
+          "title": "Included Total Dollars",
+          "type": "integer"
+        },
+        "not_included_active_family_project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Not Included Active Family Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "overage_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Overage Dollars"
+        },
+        "plan_fingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Plan Fingerprint",
+          "type": "string"
+        },
+        "remainder_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Remainder Dollars"
+        },
+        "warnings": {
+          "items": {
+            "$ref": "#/$defs/PlanWarning"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "included_project_ids",
+        "not_included_active_family_project_ids",
+        "included_count",
+        "included_governed_requests",
+        "included_total_dollars",
+        "available_budget_dollars",
+        "remainder_dollars",
+        "overage_dollars",
+        "confirmation_status",
+        "warnings",
+        "plan_fingerprint",
+        "fingerprint_verification"
+      ],
+      "title": "EvaluatedPlan",
+      "type": "object"
+    },
+    "FingerprintVerification": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        },
+        "matches": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matches"
+        }
+      },
+      "title": "FingerprintVerification",
+      "type": "object"
+    },
+    "IncludedGovernedRequest": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5282.043"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 8500000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.075"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 35000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.107"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 16750000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.121"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 6255000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.126"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 21250000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.136"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 7700000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.139"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 11250000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.141"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 7350000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.145"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 20000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.146"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 4450000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.150"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 3000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "8598.014"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 1500000
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "governed_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Governed Request Dollars",
+          "type": "integer"
+        },
+        "project_id": {
+          "enum": [
+            "5282.043",
+            "5789.075",
+            "5789.107",
+            "5789.121",
+            "5789.126",
+            "5789.136",
+            "5789.139",
+            "5789.141",
+            "5789.145",
+            "5789.146",
+            "5789.150",
+            "8598.014"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "governed_request_dollars"
+      ],
+      "title": "IncludedGovernedRequest",
+      "type": "object"
+    },
+    "LocalRequestState": {
+      "additionalProperties": false,
+      "properties": {
+        "error_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Code"
+        },
+        "status": {
+          "enum": [
+            "IDLE",
+            "LOADING",
+            "SUCCESS",
+            "ERROR"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "surface": {
+          "enum": [
+            "BOOTSTRAP",
+            "PLAN",
+            "BENCHMARK",
+            "GEMINI",
+            "PROJECT_DETAIL",
+            "MAP_TILES"
+          ],
+          "title": "Surface",
+          "type": "string"
+        }
+      },
+      "required": [
+        "surface",
+        "status"
+      ],
+      "title": "LocalRequestState",
+      "type": "object"
+    },
+    "MapExtent": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        },
+        "zoom": {
+          "maximum": 24,
+          "minimum": 0,
+          "title": "Zoom",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north",
+        "zoom"
+      ],
+      "title": "MapExtent",
+      "type": "object"
+    },
+    "PendingGeminiProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "enum": [
+            "SET_BUDGET",
+            "ADD_PROJECT",
+            "REMOVE_PROJECT"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "applied": {
+          "const": false,
+          "title": "Applied",
+          "type": "boolean"
+        },
+        "available_budget_dollars": {
+          "anyOf": [
+            {
+              "maximum": 1000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Available Budget Dollars"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Project Id"
+        }
+      },
+      "required": [
+        "action",
+        "applied"
+      ],
+      "title": "PendingGeminiProposal",
+      "type": "object"
+    },
+    "PlanInput": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "contract_version": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        },
+        "project_ids": {
+          "items": {
+            "pattern": "^[0-9]+\\.[0-9]{3}$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "available_budget_dollars",
+        "project_ids"
+      ],
+      "title": "PlanInput",
+      "type": "object"
+    },
+    "PlanWarning": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_context_only": {
+          "const": true,
+          "title": "Evidence Context Only",
+          "type": "boolean"
+        },
+        "message": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Project Id"
+        },
+        "warning_code": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Warning Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "warning_code",
+        "project_id",
+        "message",
+        "evidence_context_only"
+      ],
+      "title": "PlanWarning",
+      "type": "object"
+    },
+    "PresentationState": {
+      "additionalProperties": false,
+      "properties": {
+        "filter_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 50,
+          "title": "Filter Ids",
+          "type": "array"
+        },
+        "list_position": {
+          "minimum": 0,
+          "title": "List Position",
+          "type": "integer"
+        },
+        "map_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MapExtent"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "route": {
+          "enum": [
+            "EXPLORE",
+            "FUNDING_PLAN",
+            "DATA_METHODOLOGY",
+            "HELP_RESOURCES"
+          ],
+          "title": "Route",
+          "type": "string"
+        },
+        "search_text": {
+          "maxLength": 200,
+          "title": "Search Text",
+          "type": "string"
+        },
+        "selected_project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Project Id"
+        },
+        "sort": {
+          "enum": [
+            "SOURCE_ORDER",
+            "NAME",
+            "REQUEST_ASC",
+            "REQUEST_DESC"
+          ],
+          "title": "Sort",
+          "type": "string"
+        },
+        "visible_layers": {
+          "items": {
+            "enum": [
+              "rna_current_project_display",
+              "fema_current_hazard_context",
+              "eaz_2021_context"
+            ],
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Visible Layers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "route",
+        "search_text",
+        "filter_ids",
+        "sort",
+        "visible_layers",
+        "list_position"
+      ],
+      "title": "PresentationState",
+      "type": "object"
+    },
+    "ReviewedDraftBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "current_session_only": {
+          "const": true,
+          "title": "Current Session Only",
+          "type": "boolean"
+        },
+        "fingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "non_official": {
+          "const": true,
+          "title": "Non Official",
+          "type": "boolean"
+        },
+        "plan": {
+          "enum": [
+            "REFERENCE",
+            "WHAT_IF"
+          ],
+          "title": "Plan",
+          "type": "string"
+        },
+        "validated_identity": {
+          "$ref": "#/$defs/SessionDeploymentIdentity"
+        }
+      },
+      "required": [
+        "plan",
+        "fingerprint",
+        "validated_identity",
+        "current_session_only",
+        "non_official"
+      ],
+      "title": "ReviewedDraftBinding",
+      "type": "object"
+    },
+    "SessionDeploymentIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Manifest Sha256",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "release_manifest_contract_version": {
+          "const": "p0-release-manifest/1.0.0",
+          "title": "Release Manifest Contract Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "data_version",
+        "manifest_sha256",
+        "release_id",
+        "release_manifest_contract_version"
+      ],
+      "title": "SessionDeploymentIdentity",
+      "type": "object"
+    },
+    "VisibleExplanation": {
+      "additionalProperties": false,
+      "properties": {
+        "context_type": {
+          "enum": [
+            "PROJECT",
+            "PLAN",
+            "SCENARIO_COMPARISON",
+            "BENCHMARK",
+            "METHODOLOGY",
+            "PROVENANCE"
+          ],
+          "title": "Context Type",
+          "type": "string"
+        },
+        "sanitized_text": {
+          "maxLength": 8000,
+          "title": "Sanitized Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "context_type",
+        "sanitized_text"
+      ],
+      "title": "VisibleExplanation",
+      "type": "object"
+    },
+    "WhatIfState": {
+      "additionalProperties": false,
+      "properties": {
+        "confirmation_state": {
+          "const": "CONFIRMED",
+          "title": "Confirmation State",
+          "type": "string"
+        },
+        "fingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "input": {
+          "$ref": "#/$defs/PlanInput"
+        },
+        "last_server_result": {
+          "$ref": "#/$defs/EvaluatedPlan"
+        },
+        "validated_identity": {
+          "$ref": "#/$defs/SessionDeploymentIdentity"
+        }
+      },
+      "required": [
+        "validated_identity",
+        "input",
+        "last_server_result",
+        "fingerprint",
+        "confirmation_state"
+      ],
+      "title": "WhatIfState",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/browser-session-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "p0-browser-session/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "current_confirmed_plan": {
+      "anyOf": [
+        {
+          "enum": [
+            "REFERENCE",
+            "WHAT_IF"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Current Confirmed Plan"
+    },
+    "dirty_attempt": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DirtyAttempt"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "local_request_states": {
+      "items": {
+        "$ref": "#/$defs/LocalRequestState"
+      },
+      "title": "Local Request States",
+      "type": "array"
+    },
+    "pending_gemini_proposal": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PendingGeminiProposal"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "presentation": {
+      "$ref": "#/$defs/PresentationState"
+    },
+    "reviewed_draft": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ReviewedDraftBinding"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "session_reference_plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ConfirmedPlanState"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "validated_identity": {
+      "$ref": "#/$defs/SessionDeploymentIdentity"
+    },
+    "visible_explanation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/VisibleExplanation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "what_if": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/WhatIfState"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "working_plan": {
+      "$ref": "#/$defs/PlanInput"
+    }
+  },
+  "required": [
+    "contract_version",
+    "validated_identity",
+    "presentation",
+    "working_plan",
+    "local_request_states"
+  ],
+  "title": "BrowserSessionState",
+  "type": "object"
+}

@@ -1,0 +1,538 @@
+{
+  "$defs": {
+    "CrsContract": {
+      "additionalProperties": false,
+      "properties": {
+        "axis_order": {
+          "const": "longitude_latitude",
+          "title": "Axis Order",
+          "type": "string"
+        },
+        "coordinate_reference_system": {
+          "const": "EPSG:4326",
+          "title": "Coordinate Reference System",
+          "type": "string"
+        },
+        "standard": {
+          "const": "RFC_7946",
+          "title": "Standard",
+          "type": "string"
+        }
+      },
+      "required": [
+        "standard",
+        "coordinate_reference_system",
+        "axis_order"
+      ],
+      "title": "CrsContract",
+      "type": "object"
+    },
+    "EvidenceRole": {
+      "enum": [
+        "FACT",
+        "CONTEXTUAL_EVIDENCE",
+        "RESEARCH_ONLY_EVIDENCE",
+        "UNAVAILABLE_UNSUPPORTED"
+      ],
+      "title": "EvidenceRole",
+      "type": "string"
+    },
+    "HistoricalFit": {
+      "enum": [
+        "HISTORICALLY_VALID",
+        "CURRENT_CONTEXT_ONLY",
+        "HISTORICAL_FIT_UNCERTAIN",
+        "NOT_APPLICABLE"
+      ],
+      "title": "HistoricalFit",
+      "type": "string"
+    },
+    "LayerDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "caveat": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Caveat",
+          "type": "string"
+        },
+        "default_visible": {
+          "title": "Default Visible",
+          "type": "boolean"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "public_label": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Public Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_id",
+        "evidence_role",
+        "default_visible",
+        "public_label",
+        "caveat"
+      ],
+      "title": "LayerDefinition",
+      "type": "object"
+    },
+    "LineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 2,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "LineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "LineStringGeometry",
+      "type": "object"
+    },
+    "MapFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "geometry": {
+          "discriminator": {
+            "mapping": {
+              "LineString": "#/$defs/LineStringGeometry",
+              "MultiLineString": "#/$defs/MultiLineStringGeometry",
+              "MultiPoint": "#/$defs/MultiPointGeometry",
+              "MultiPolygon": "#/$defs/MultiPolygonGeometry",
+              "Point": "#/$defs/PointGeometry",
+              "Polygon": "#/$defs/PolygonGeometry"
+            },
+            "propertyName": "type"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/PointGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPointGeometry"
+            },
+            {
+              "$ref": "#/$defs/LineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiLineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/PolygonGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPolygonGeometry"
+            }
+          ],
+          "title": "Geometry"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/$defs/MapFeatureProperties"
+        },
+        "type": {
+          "const": "Feature",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "properties",
+        "geometry"
+      ],
+      "title": "MapFeature",
+      "type": "object"
+    },
+    "MapFeatureProperties": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "const": "AVAILABLE",
+          "title": "Availability",
+          "type": "string"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "feature_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "historical_fit": {
+          "$ref": "#/$defs/HistoricalFit"
+        },
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Project Id"
+        },
+        "source_feature_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Feature Id",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_vintage": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Vintage",
+          "type": "string"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "feature_id",
+        "source_feature_id",
+        "layer_id",
+        "evidence_role",
+        "availability",
+        "source_id",
+        "source_vintage",
+        "historical_fit",
+        "transformation_version",
+        "limitations"
+      ],
+      "title": "MapFeatureProperties",
+      "type": "object"
+    },
+    "MultiLineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiLineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiLineStringGeometry",
+      "type": "object"
+    },
+    "MultiPointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPoint",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPointGeometry",
+      "type": "object"
+    },
+    "MultiPolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPolygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPolygonGeometry",
+      "type": "object"
+    },
+    "PointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Point",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PointGeometry",
+      "type": "object"
+    },
+    "PolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Polygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PolygonGeometry",
+      "type": "object"
+    },
+    "ReleaseTier": {
+      "enum": [
+        "FIXTURE",
+        "REVIEWED_RELEASE"
+      ],
+      "title": "ReleaseTier",
+      "type": "string"
+    },
+    "SourceCrsTransformation": {
+      "additionalProperties": false,
+      "properties": {
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "source_crs": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Crs",
+          "type": "string"
+        },
+        "transformation_tool": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Transformation Tool",
+          "type": "string"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        },
+        "validation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Validation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_id",
+        "source_crs",
+        "transformation_tool",
+        "transformation_version",
+        "validation",
+        "limitations"
+      ],
+      "title": "SourceCrsTransformation",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/map-context-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "p0-map-context/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "crs_contract": {
+      "$ref": "#/$defs/CrsContract"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "features": {
+      "items": {
+        "$ref": "#/$defs/MapFeature"
+      },
+      "title": "Features",
+      "type": "array"
+    },
+    "layer_definitions": {
+      "items": {
+        "$ref": "#/$defs/LayerDefinition"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "title": "Layer Definitions",
+      "type": "array"
+    },
+    "release_tier": {
+      "$ref": "#/$defs/ReleaseTier"
+    },
+    "source_crs_and_transformations": {
+      "items": {
+        "$ref": "#/$defs/SourceCrsTransformation"
+      },
+      "minItems": 1,
+      "title": "Source Crs And Transformations",
+      "type": "array"
+    },
+    "type": {
+      "const": "FeatureCollection",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "contract_version",
+    "data_version",
+    "release_tier",
+    "crs_contract",
+    "source_crs_and_transformations",
+    "layer_definitions",
+    "features"
+  ],
+  "title": "MapContextArtifact",
+  "type": "object"
+}

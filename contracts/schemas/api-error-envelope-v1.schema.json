@@ -1,0 +1,126 @@
+{
+  "$defs": {
+    "ApiErrorDetail": {
+      "additionalProperties": false,
+      "properties": {
+        "error_code": {
+          "enum": [
+            "CONTRACT_VERSION_CONFLICT",
+            "DATA_VERSION_CONFLICT",
+            "MALFORMED_REQUEST",
+            "UNKNOWN_FIELD",
+            "INVALID_PRIMITIVE",
+            "BODY_TOO_LARGE",
+            "RATE_LIMITED",
+            "OPTIONAL_DEPENDENCY_DISABLED",
+            "OPTIONAL_DEPENDENCY_UNAVAILABLE",
+            "UNEXPECTED_FAILURE"
+          ],
+          "title": "Error Code",
+          "type": "string"
+        },
+        "field_path": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "title": "Field Path",
+          "type": "array"
+        },
+        "message": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "error_code",
+        "message",
+        "field_path",
+        "retryable"
+      ],
+      "title": "ApiErrorDetail",
+      "type": "object"
+    },
+    "ResponseIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "api_namespace": {
+          "const": "/api/v1",
+          "title": "Api Namespace",
+          "type": "string"
+        },
+        "contract_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contract Version"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "api_namespace",
+        "data_version",
+        "release_id"
+      ],
+      "title": "ResponseIdentity",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/api-error-envelope-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "error": {
+      "$ref": "#/$defs/ApiErrorDetail"
+    },
+    "identity": {
+      "$ref": "#/$defs/ResponseIdentity"
+    },
+    "status": {
+      "const": "ERROR",
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "identity",
+    "error"
+  ],
+  "title": "ApiErrorEnvelope",
+  "type": "object"
+}

@@ -43,7 +43,7 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | Approved P0 topology, services, deployment, security, observability, cost, and implementation order | [docs/architecture/p0-architecture.md](docs/architecture/p0-architecture.md) |
 | Approved release artifacts, runtime APIs, session state, Funding Plan, benchmark, and Gemini contracts | [docs/architecture/data-contracts.md](docs/architecture/data-contracts.md) |
 | Superseded pre-lock technical planning reference | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
-| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 explicitly approved 2026-09-02 |
+| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 and M1 explicitly approved 2026-09-02 |
 
 Git is the version history for all repository memory. Fresh tasks must not depend on
 access to prior chat conversations.
@@ -53,11 +53,16 @@ access to prior chat conversations.
 - **Last updated:** 2026-09-02
 - **Project stage:** Methodology, Product/Design, and Architecture Locks are
   complete and reconciled. The architecture-informed delivery baseline is approved.
-  Application implementation has not begun.
-- **Current milestone:** M0 delivery-plan gate complete by explicit user approval
-  on 2026-09-02. This approval-recording task stops before M1.
-- **Next milestone:** In a subsequent implementation task, implement M1 only: the
-  versioned contract and fail-closed release-validator foundation.
+  The independent closure audit returned A — APPROVE M1 with no changes required.
+  M1 is approved and complete as of 2026-09-02.
+- **Current milestone:** M1 contract and fail-closed release-validator milestone
+  approved and complete on 2026-09-02.
+- **Next milestone:** M2A governed data foundation. No M2 work began during M1
+  approval and publication.
+- **Delivery context:** The September 3 team touchpoint expects visible data-layer
+  and integration progress, and the completed/deployed application is expected
+  September 9. This execution context does not change Product, Methodology,
+  Evidence/source-governance, or Architecture authority.
 - **Working state:** Git repository on main, connected to the public
   swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
   registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
@@ -70,13 +75,18 @@ access to prior chat conversations.
   BigQuery table. The repository now also contains one authoritative P0 methodology
   methodology document, reconciled Product/Design handoff documents, and the
   authoritative P0 architecture/data contracts, and three approved
-  architecture-informed delivery plans. No production pipeline, application,
-  implemented application schema, release bundle, score, rank, weight model, or
-  optimizer exists.
-- **Most recent outcome:** Recorded explicit user approval of the corrected M0
-  implementation, test, milestone, and reconciled execution plans as the delivery
-  baseline subordinate to the locked domain authorities. M1 remains not started;
-  no dependency, application code, cloud mutation, or analytical decision changed.
+  architecture-informed delivery plans, initial strict Pydantic contract models,
+  22 generated JSON Schemas, and a fail-closed four-file release validator. No
+  production pipeline, release bundle, plan engine, runtime API, frontend, score,
+  rank, weight model, or optimizer exists.
+- **Most recent outcome:** The independent closure audit returned A — APPROVE M1
+  with no changes required and recommended approval and commit. Published schemas
+  express representable membership/evidence/governed-identity constraints,
+  fingerprint verification reports exact truth, plan comparison is derived from
+  both evaluated plans, and API deployment/artifact release tiers agree. Four
+  focused regressions, 31 application-contract tests, 33 release-validator tests,
+  and all 110 repository tests pass. No reviewed or fixture bundle was added, no
+  domain authority changed, and no M2 or cloud work began.
 
 ## Approved Locks
 
@@ -122,32 +132,52 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Record explicit M0 approval and stop without beginning M1.
-- **Status:** M0 is complete and the corrected delivery baseline is approved. M1 is
-  authorized next but not started. No application, release-data bundle, deployment,
-  IAM, billing, or other cloud state changed.
+- **Goal:** Record the independent M1 approval, publish the approved M1 working
+  set, and stop before M2.
+- **Status:** M1 is approved and complete following an independent closure-audit
+  verdict of A with no changes required. The implementation contains
+  no release-data bundle, runtime API, plan engine, frontend, Gemini call, source
+  acquisition, deployment, IAM, billing, or other cloud mutation.
 - **Owner:** User and Codex.
 - **Required reading:** AGENTS.md, this file,
   docs/methodology/p0-evidence-methodology.md, the reconciled files under
   docs/product, docs/delivery/execution-plan.md, docs/decisions.md, and the
   docs/architecture/p0-architecture.md and data-contracts.md, and the reconciled
   delivery/decision files. The technical reference is now superseded.
-- **Exit condition:** Achieved by explicit user approval on 2026-09-02; stop before
-  M1.
+- **Exit condition:** Record approval, commit and push only the approved M1 scope,
+  verify Git synchronization, and stop before M2A or M2B.
 
 ## Next Actions
 
-1. In a subsequent implementation task, implement only M1: initial versioned
-   contract models/schemas and fail-closed release validators, with no fixture
-   bundle, runtime API, UI, Gemini, or cloud change.
-2. Do not perform another broad source hunt, inspect SVI, manufacture project
+1. In a new implementation session, begin M2A governed data foundation without
+   reopening or refactoring the approved M1 contracts.
+2. Follow the user-directed execution order without refactoring
+   or scope expansion: M2A governed data foundation; BigQuery load/reconciliation;
+   one RNA/Stormwater GIS integration; one contract-valid release artifact through
+   the M1 validator; then a thin read-only backend/API only if time remains.
+3. Do not perform another broad source hunt, inspect SVI, manufacture project
    geography, or reintroduce expected benefit, scores, ranks, weights, or an
    optimization objective without a later explicit methodology revision.
-3. Separately verify organizer submission artifacts, judging criteria, finale
+4. Separately verify organizer submission artifacts, judging criteria, finale
    date, and conditional live-demo format.
 
 ## Completed Milestones
 
+- **2026-09-02 — M1 contract and validator milestone approved and complete:** Added the
+  pinned Python 3.14.7/Pydantic 2.13.5 contract environment, centralized initial
+  versions, strict artifact/API/session/plan/benchmark/Gemini Pydantic models, 22
+  deterministic JSON Schemas, a schema generator/checker, and the fail-closed
+  four-file release validator/CLI. After independent audit, corrected exact all-37
+  identity/fact enforcement, evidence-type semantics, authoritative source pins
+  and provenance, evaluated-plan uniqueness/exact arithmetic, independently
+  available benchmark fields and comparison contracts, closed endpoint response
+  payloads and cross-language dictionary schemas, optional/duplicated identity
+  semantics, and stale confirmed/reviewed browser state. A second audit then
+  corrected schema parity, exact fingerprint truth, derived comparison fields,
+  and API release-tier agreement. Added 64 focused tests; 110 total tests pass.
+  The independent closure audit returned A — APPROVE M1 with no changes required.
+  No release bundle, plan engine, runtime API, frontend, source acquisition,
+  cloud, authority, or decision change occurred, and no M2 work began.
 - **2026-09-02 — M0 delivery-plan gate explicitly approved:** Approved
   `implementation-plan.md`, `test-plan.md`, `milestones.md`, and the reconciled
   `execution-plan.md` as the delivery baseline subordinate to Product, Methodology,
@@ -236,16 +266,17 @@ A missed gate cuts or freezes scope; it does not consume testing/submission
 contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
-The approved September 2 feature-freeze gate remains at critical schedule risk
-because all application implementation remains unstarted. M0 approval authorizes
-only M1 as the next milestone and does not broaden its scope.
+The approved September 2 feature-freeze gate remains at critical schedule risk.
+M1 is approved and complete, and every post-schema data/
+application milestone and the reviewed release, manual core, Gemini explanation,
+and deployment remain unstarted.
 
 ## Blockers
 
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed. They urgently block submission-dependent work and
-  final submission-package planning, but not independent M1 contract/validator
-  work unless a discovered official requirement materially affects its contracts.
+  final submission-package planning. They did not block M1 and do not silently
+  authorize or redefine either post-schema track.
 
 ## Active Risks
 
@@ -292,14 +323,15 @@ only M1 as the next milestone and does not broaden its scope.
 - The source says projects are sorted by project ID, but published row order places
   5789.150 before 5789.145 and 5789.146. Extraction preserves rather than repairs
   this source-level inconsistency.
-- The current delivery baseline is at critical schedule risk because delivery
-  plans, the reviewed release-data bundle, application, and deployment do not yet
-  exist as of September 1.
+- The current delivery remains at critical schedule risk: M1 is approved and
+  complete, while the reviewed release-data bundle, plan/API/
+  frontend behavior, manual core, required Gemini explanation, and deployment do
+  not yet exist.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
-- Architecture-informed delivery planning and implementation are now on the
-  critical path and must preserve the locked narrow method and topology without
-  reopening evidence reconnaissance.
+- Post-schema data/application implementation is now on the critical path and must
+  preserve the locked narrow method, M1 contracts, and topology without reopening
+  evidence reconnaissance.
 - Product language or contracts could silently reintroduce a Funding Priority,
   ranking, Importance weights, optimizer, recommendation, or missing-evidence
   penalty even though no defensible objective supports them.
@@ -313,6 +345,17 @@ only M1 as the next milestone and does not broaden its scope.
   priorities; proposal is post-core stretch.
 - A fixture bundle could be mistaken for reviewed evidence. Release validation
   must reject fixture tier and `NOT_EVALUATED_FIXTURE` states.
+- M1 deliberately has no positive reviewed-bundle test because the approved test
+  plan reserves that evidence for the reviewed M5 bundle. The validator is proven
+  against narrow temporary technical objects and material negative paths; final
+  reviewed bytes and source-license completion remain later release gates.
+- The M1 machine source-authority map intentionally mirrors only the three sources
+  already present in the approved registry/preservation records. A later approved
+  registry change must update this enforcement map through contract change control;
+  bundle-internal source registration remains forbidden.
+- M2A/M2B producers must consume the exact M1 schemas. A field/meaning/enum change
+  requires the locked contract change-control path rather than producer-specific
+  relaxation or an unversioned compatibility shortcut.
 - A release build could accidentally contact mutable sources. Build verification
   must prove it consumes only pinned reviewed artifacts.
 - In-memory Gemini limits reset on process restart and per-client/IP protection is
@@ -387,6 +430,27 @@ Established and locked:
 See [p0-architecture.md](docs/architecture/p0-architecture.md) and
 [data-contracts.md](docs/architecture/data-contracts.md). The technical reference
 is preserved as superseded pre-lock material.
+
+### M1 Contract and Release-Validator Foundation
+
+Implemented, independently audited, and approved on 2026-09-02:
+
+- `.python-version` and `requirements-application.txt` pin Python 3.14.7 and the
+  only M1 application dependency, Pydantic 2.13.5;
+- `backend/climatecapital/contracts/` centralizes the initial version identifiers
+  and strict common, artifact, plan, session, API-envelope, benchmark, and Gemini
+  models;
+- `contracts/schemas/` contains 22 deterministic generated JSON Schemas whose
+  bytes are checked against the Python models;
+- `backend/climatecapital/release/validator.py` and
+  `scripts/release/validate_bundle.py` validate the exact four-file set,
+  deterministic JSON bytes, strict schemas, external manifest checksum, artifact
+  sizes/checksums, exact governed source-row semantics, repository-authoritative
+  source pins/provenance, governed/family/evidence/map/benchmark reconciliation,
+  forbidden fields, and release tier; and
+- `tests/application/` and `tests/release/` contain 64 M1 tests. Temporary narrow
+  test objects are built only under test temporary directories; no fixture or
+  reviewed bundle is present in the repository.
 
 ### Evidence Repository
 
@@ -531,6 +595,16 @@ remains explicit.
   matching, reconciliation, and cloud-preservation tests.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md — approved
   together as the M0 delivery baseline on 2026-09-02.
+- .python-version — exact M1 application Python runtime pin.
+- requirements-application.txt — exact direct M1 application dependency pin.
+- backend/climatecapital/contracts/ — initial strict contract constants/models and
+  deterministic schema export.
+- backend/climatecapital/release/ — fail-closed four-file bundle validator.
+- contracts/schemas/ — 22 generated versioned JSON Schemas.
+- scripts/release/generate_schemas.py — generate/check tracked schema bytes.
+- scripts/release/validate_bundle.py — reviewed-release-default validator CLI with
+  an explicit development-fixture mode.
+- tests/application/ and tests/release/ — M1 contract and release-validator tests.
 
 Local branch: main. Public GitHub remote:
 https://github.com/swethabarla19/ClimateCapitalAI.git.
@@ -551,10 +625,10 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   ADC; no credential material is stored in the repository. The earlier Python 3.12
   source-fetch runtime lacked a default CA bundle; `/etc/ssl/cert.pem` was used for
   verified HTTPS without disabling certificate verification.
-- No application environment is established. The approved M1 must pin only the
-  Python runtime/dependencies required for contract and release-validator work.
-  Frontend package-manager/runtime setup remains deferred to M4, the first frontend
-  application work unit.
+- The M1 application contract environment is pinned to Python 3.14.7 and Pydantic
+  2.13.5 in the ignored `.venv`; dependency integrity passes. No application server
+  or frontend environment exists. Frontend package-manager/runtime setup remains
+  deferred to M4, the first frontend application work unit.
 - No Cloud Run, Artifact Registry, Cloud Build, runtime IAM, Gemini configuration,
   billing-control, or deployment change has been made; the Architecture Lock is
   documentation only.
@@ -571,7 +645,16 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
 - .venv/bin/python -m pip install -r requirements-cloud.txt — install the pinned
   BigQuery client dependency in the same ignored environment.
 - .venv/bin/python -m unittest discover -s tests -v — run ingestion, extraction,
-  and non-destructive raw-loader validation.
+  reconnaissance, M1 contract, and release-validator validation.
+- .venv/bin/python -m unittest discover -s tests/application -v — run the focused
+  strict application-contract suite.
+- .venv/bin/python -m unittest discover -s tests/release -v — run the focused
+  release-validator suite.
+- .venv/bin/python scripts/release/generate_schemas.py --check — prove the 22
+  tracked schemas exactly match the Pydantic contracts.
+- .venv/bin/python scripts/release/validate_bundle.py BUNDLE_DIR
+  --manifest-sha256 SHA256 — fail-closed reviewed-release validation; the explicit
+  `--development-fixture` flag is test/development-only.
 - .venv/bin/python scripts/data/extract_watershed_projects.py — verify the source
   checksum, extract/reconcile the 37 rows, and create or confirm the deterministic
   source-universe CSV.
@@ -661,6 +744,10 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-02 | Independent M1 closure approval | Independent closure audit reported by the user after the corrected M1 verification | A — APPROVE M1; no changes required; recommendation to approve and commit M1. Approval recording changes status only and introduces no implementation, authority, reviewed-data, M2, or cloud change |
+| 2026-09-02 | Second independent M1-audit correction pass | Corrected only published-schema parity, fingerprint truth, current/reference comparison derivation, and API deployment/artifact release-tier agreement; ran the four focused adversarial tests, application and release suites, full repository tests, deterministic schema check, compilation, dependency integrity, `git diff --check`, scope/authority scans, and final Git inspection | Passed: 4/4 focused regressions, 31 application tests, 33 release tests, and 110 total tests; 22 schemas match generated output; compilation and `pip check` pass; M1 remains unapproved pending re-review; no authority, M2, reviewed data, cloud, stage, commit, or push change |
+| 2026-09-02 | Independent-audit M1 correction pass | Recovered unchanged Git state and locked authority; mapped and corrected all ten audit findings; ran 27 focused application-contract tests, 33 focused release-validator tests, the complete repository suite, deterministic schema regeneration/check, Python compilation, dependency integrity, explicit adversarial regressions, authority/scope scans, Markdown checks, `git diff --check`, and final Git state inspection | Passed: 27 application tests, 33 release tests, and 106 total tests; 22 generated schemas match exactly; all requested invalid probes fail and permitted optional/partial cases pass; exact governed identities/facts, source authority/provenance, evidence semantics, canonical plan partitions/arithmetic, benchmark isolation, endpoint-typed responses, and deployment/data session identity now fail closed; no new authority/fact, release bundle, later-milestone surface, cloud action, stage, commit, or push; `pip check` passes |
+| 2026-09-02 | Initial M1 contract and fail-closed release-validator checkpoint (superseded by correction row above) | Recovered the complete approved repository baseline; ran focused application and release suites, the full repository suite, deterministic schema generation/check, broad Python compilation, dependency integrity, contract/version/family/boundary assertions, credential and later-scope scans, `git diff --check`, and final Git state inspection | Mechanically passed 12 application-contract tests, 23 release-validator tests, and 81 total tests with 14 generated schemas, but a subsequent independent approval audit found blocking semantic enforcement gaps; this checkpoint was not approved and its enforcement claims are superseded by the corrected M1 verification above |
 | 2026-09-02 | Explicit M0 delivery-baseline approval record | Updated approval/status metadata in the four delivery-baseline documents, README routing, and canonical progress handoff; ran `.venv/bin/python -m unittest discover -s tests -v`, Python compilation, `pip check`, relative Markdown link/fence validation, intended-file trailing-whitespace scan, approval-boundary review, full-diff inspection, `git diff --check`, and Git state inspection | Passed: 46 tests; Python compilation passed; no broken requirements; 133 relative links resolve and all fences balance; no trailing whitespace or diff-check error; only approval/gate/status/handoff text changed; M0 is approved and complete, M1 is authorized next but not started; no contract, application, dependency, governed data, cloud, decision, commit, or push change; pip emitted only its existing unwritable-cache warning |
 | 2026-09-02 | Corrected M0 delivery package and pre-approval re-audit | Reconciled the delivery sequence to Architecture units 3–5; independently parsed the exact Methodology family table and reconciled it to the governed CSV and RNA match artifact; classified repository-wide Importance/weight/score/rank/optimizer terms; ran `.venv/bin/python -m unittest discover -s tests -v`, Python compilation, `pip check`, semantic assertions for all six original audit findings, relative Markdown link/fence validation, intended-file trailing-whitespace scan, full-diff review, `git diff --check`, and Git state inspection | Passed: 46 tests; exact 12 / $143,005,000 reconciles to governed requests; all-37 is 37 / $327,970,000; GIS remains separate at 15/22 all-37 and 5/7 within the family; all original findings resolved; no stale active analytical mechanic or new contradiction found; 133 relative links resolve and all fences balance; pip emitted only its existing unwritable-cache warning; package remains proposed and M1 remains blocked pending explicit approval |
 | 2026-09-02 | Initial draft of M0 architecture-informed delivery plans | Recovered the complete repository and locked documents; inspected Git, manifests, code, tests, scripts, configuration, and governed evidence assets; ran `.venv/bin/python -m unittest discover -s tests -v`, `py_compile`, `pip check`, `git diff --check`, intended-file trailing-whitespace checks, relative Markdown link/fence validation, stale delivery-handoff searches, lock-boundary term review, and final Git status/stat inspection | Mechanical checks passed: 46 tests, Python compilation, dependency integrity, 133 resolving relative Markdown links, and balanced fences; a later pre-approval semantic audit found work-order, gate, stale-language, M1-tooling, geometry-test, and authority-wording inconsistencies, so this initial draft was not approval-ready; pip emitted only its existing unwritable-cache warning |
@@ -688,6 +775,136 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-02 — Approve and publish M1
+
+- **Objective:** Record the independent closure-audit approval, commit and push
+  only the approved M1 scope, and stop before M2.
+- **Approval:** The independent closure audit returned A — APPROVE M1 with no
+  changes required and recommended approval and commit.
+- **Documentation:** Updated only M1 approval/current-status metadata and handoff
+  text in this tracker and the four approved delivery documents. No implementation
+  contract or validator changed during approval recording.
+- **Verification basis:** The approved checkpoint retains its passing four focused
+  adversarial regressions, 31 application tests, 33 release tests, 110-test full
+  suite, 22-schema deterministic check, compilation, dependency, scope, authority,
+  credential, whitespace, and Git-integrity results. Publication uses a final
+  lightweight diff, staged-scope, and Git-synchronization sanity check.
+- **Boundaries:** No Product, Methodology, Evidence/source-governance,
+  Architecture, active-family semantics, reviewed data, application UI, M2, or
+  cloud work changed. No decision ID was created.
+- **Handoff:** M1 is approved and complete. Begin M2A only in a subsequent
+  implementation session and preserve the approved M1 contracts and validator.
+
+### 2026-09-02 — Correct four blockers from the second independent M1 audit
+
+- **Objective:** Correct only schema parity, fingerprint truth, plan-comparison
+  derivation, and API release-tier agreement; verify M1; and stop for re-review
+  without starting M2 or staging, committing, or pushing.
+- **Implementation:** Added explicit Draft 2020-12 constraints for representable
+  model-validator invariants: unique plan-membership arrays, exact governed and
+  active-family identities, exact evidence-type coverage, locked evidence role/
+  fact-kind/availability combinations, and governed active-family request values.
+  `EvaluatedPlan` now makes `matches` equal the actual expected/server fingerprint
+  comparison. `PlanEvaluationResponseData` recomputes scalar and membership deltas
+  from its current/reference results. Bootstrap and benchmark response data now
+  require deployment and artifact release tiers to agree.
+- **Tests and results:** Added four focused public regressions in
+  `tests/application/test_m1_second_audit_regressions.py`; all four pass. The 31
+  application tests, 33 release tests, and full 110-test repository suite pass; 22
+  schemas regenerate/check deterministically.
+- **Schema limitation:** Standard JSON Schema cannot calculate SHA-256, arithmetic
+  sums/differences, sibling-field equality, or cross-array set derivation. Those
+  invariants remain fail-closed in the authoritative Pydantic/release validators;
+  no non-standard schema keyword was invented.
+- **Boundaries:** No Product, Methodology, Evidence/source-governance,
+  Architecture, active-family meaning, scoring/optimization semantics, Gemini
+  authority, reviewed data, runtime API, UI, frontend, source acquisition, or
+  GCP/cloud resource changed. No decision ID was created.
+- **Handoff:** M1 is corrected but not approved. Stop for re-review and begin no M2
+  work until M1 is closed.
+
+### 2026-09-02 — Correct M1 after independent approval audit
+
+- **Subsequent audit:** A second independent audit found four remaining contract
+  gaps; this entry is superseded for current M1 status by the correction above and
+  remains as session history.
+
+- **Objective:** Correct only the ten independently reported M1 contract and
+  release-validator findings, rerun every approved M1 verification, and stop for
+  re-review without staging, committing, pushing, or starting later work.
+- **Implementation:** Bound the catalog to the existing all-37 governed semantic
+  fingerprint and exact active-family requests; bound every evidence type to its
+  locked role/fact-kind/availability; encoded the three already registered source
+  identities and preserved GCS pins for external validation; reconciled evidence/
+  map vintage, historical fit, and transformation versions; rejected duplicate or
+  non-canonical evaluated-plan partitions; added independently available benchmark
+  values and benchmark-comparison request/response contracts; replaced generic API
+  success data with closed endpoint-specific payloads; made documented optional
+  fields omittable; enforced duplicate identity/fingerprint agreement; and bound
+  confirmed/reference/What-If/Reviewed Draft state to the complete current
+  deployment/data identity. The generic non-negative whole-dollar primitive is now
+  separate from the scenario-only $1 billion input maximum.
+- **Tests and results:** Added public regressions for every audit bypass plus
+  explicit BOM, CRLF, final-newline, non-finite-number, symlink, source-vintage,
+  transformation, positive current-session, closed-schema, and partial-benchmark
+  paths. The 27 application-contract tests, 33 release-validator tests, and all 106
+  repository tests pass; 22 generated schemas match exactly; compilation and
+  dependency integrity pass.
+- **Files/components:** Corrected only M1 contract, release-validator, schema, test,
+  and temporary-test-factory files plus this canonical progress handoff. No domain
+  authority or durable decision was changed, and no decision ID was created.
+- **Deviations and risks:** No scope or authority deviation. As approved, no
+  positive reviewed bundle exists before M5; source reuse/license status remains
+  explicitly unverified and a later controlled-data gate.
+- **Boundaries:** No Product, Methodology, Evidence/source-governance,
+  Architecture, active family, scoring/optimization semantics, Gemini authority,
+  reviewed data, application UI, frontend tooling, or GCP/cloud resource changed.
+- **Handoff:** Stop for corrected M1 re-review. Begin neither M2A nor M2B without
+  separate authorization.
+
+### 2026-09-02 — Implement M1 contracts and fail-closed release validation
+
+- **Subsequent audit:** This initial checkpoint was not approved. Its 14-schema/
+  35-test verification did not cover all locked semantic bypasses and is superseded
+  by the M1 correction entry above; it remains here as session history.
+
+- **Objective:** Recover M1 from the approved repository, implement only the
+  initial contract/release-validator foundation, run every applicable M1 check,
+  and stop without staging, committing, pushing, or starting later work.
+- **Implementation:** Pinned Python 3.14.7 and Pydantic 2.13.5; centralized all
+  initial contract versions; added strict Pydantic common/artifact/API/session/
+  plan/benchmark/Gemini models; generated 14 deterministic JSON Schemas; added
+  geometry-independent plan-membership contract validation; and added a canonical-
+  JSON, exact-four-file, external-manifest-checksum release validator and CLI that
+  defaults to `REVIEWED_RELEASE` and fails closed.
+- **Validation behavior:** Enforced strict primitives/unknown-field rejection,
+  exact artifact and cross-file identity, approved/pinned source closure, 37 and 12
+  count/dollar/family reconciliation, evidence roles and missingness denominators,
+  no geometry membership authority, `5789.150` no-feature treatment, locked map
+  layers/defaults, benchmark isolation, forbidden analytical/circular fields, and
+  fixture/reviewed-tier separation. No fixed 15/22 geometry count was made a schema
+  assumption.
+- **Tests and results:** Added 12 application-contract and 23 release-validator
+  tests. Focused suites and the full 81-test suite pass; deterministic schema check,
+  broad compilation, dependency integrity, semantic/boundary scans, credential
+  scan, and `git diff --check` pass. Pip reports only the known unwritable-cache
+  warning.
+- **Files/components:** Added `.python-version`,
+  `requirements-application.txt`, `backend/climatecapital/contracts/`,
+  `backend/climatecapital/release/`, `contracts/schemas/`,
+  `scripts/release/`, `tests/application/`, `tests/release/`, and test package
+  markers; updated only this canonical progress handoff among pre-existing files.
+- **Deviations and risks:** No scope or authority deviation and no new decision ID.
+  Per the approved test plan, M1 adds no positive reviewed bundle; reviewed-byte
+  validation remains an M5 gate. M2 producers must use the exact schemas rather
+  than relax them.
+- **Boundaries:** No Product, Methodology, Evidence/source-governance,
+  Architecture, active family, scoring/optimization, Gemini authority, reviewed
+  data, UI, frontend tooling, or GCP/cloud resource changed. Temporary technical
+  objects exist only during tests; no fixture/reviewed bundle was added.
+- **Handoff:** Stop for M1 review. Begin neither M2A nor M2B without separate
+  authorization.
 
 ### 2026-09-02 — Record explicit M0 delivery-baseline approval
 

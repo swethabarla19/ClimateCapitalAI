@@ -1,0 +1,4922 @@
+{
+  "$defs": {
+    "ActiveFamilySummary": {
+      "additionalProperties": false,
+      "properties": {
+        "governed_request_total_dollars": {
+          "const": 143005000,
+          "title": "Governed Request Total Dollars",
+          "type": "integer"
+        },
+        "not_city_taxonomy_or_eligibility": {
+          "const": true,
+          "title": "Not City Taxonomy Or Eligibility",
+          "type": "boolean"
+        },
+        "project_count": {
+          "const": 12,
+          "title": "Project Count",
+          "type": "integer"
+        },
+        "project_ids": {
+          "items": false,
+          "maxItems": 12,
+          "minItems": 12,
+          "prefixItems": [
+            {
+              "const": "5282.043"
+            },
+            {
+              "const": "5789.075"
+            },
+            {
+              "const": "5789.107"
+            },
+            {
+              "const": "5789.121"
+            },
+            {
+              "const": "5789.126"
+            },
+            {
+              "const": "5789.136"
+            },
+            {
+              "const": "5789.139"
+            },
+            {
+              "const": "5789.141"
+            },
+            {
+              "const": "5789.145"
+            },
+            {
+              "const": "5789.146"
+            },
+            {
+              "const": "5789.150"
+            },
+            {
+              "const": "8598.014"
+            }
+          ],
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "provisional_climatecapital_derivation": {
+          "const": true,
+          "title": "Provisional Climatecapital Derivation",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "project_ids",
+        "project_count",
+        "governed_request_total_dollars",
+        "provisional_climatecapital_derivation",
+        "not_city_taxonomy_or_eligibility"
+      ],
+      "title": "ActiveFamilySummary",
+      "type": "object"
+    },
+    "Availability": {
+      "enum": [
+        "AVAILABLE",
+        "MISSING",
+        "UNSUPPORTED",
+        "NOT_APPLICABLE",
+        "NOT_EVALUATED_FIXTURE"
+      ],
+      "title": "Availability",
+      "type": "string"
+    },
+    "BenchmarkArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark_identity": {
+          "$ref": "#/$defs/BenchmarkPublishedIdentity"
+        },
+        "contract_version": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "published_portfolio_summary": {
+          "$ref": "#/$defs/PublishedPortfolioSummary"
+        },
+        "published_project_treatments": {
+          "items": {
+            "$ref": "#/$defs/PublishedProjectTreatment"
+          },
+          "title": "Published Project Treatments",
+          "type": "array"
+        },
+        "reconciliation": {
+          "$ref": "#/$defs/BenchmarkReconciliation"
+        },
+        "release_tier": {
+          "$ref": "#/$defs/ReleaseTier"
+        },
+        "source_references": {
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$": {
+              "$ref": "#/$defs/SourceReference"
+            }
+          },
+          "title": "Source References",
+          "type": "object"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "release_tier",
+        "benchmark_identity",
+        "source_references",
+        "published_portfolio_summary",
+        "published_project_treatments",
+        "transformation_version",
+        "limitations",
+        "reconciliation"
+      ],
+      "title": "BenchmarkArtifact",
+      "type": "object"
+    },
+    "BenchmarkComparisonResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark_contract_version": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Benchmark Contract Version",
+          "type": "string"
+        },
+        "benchmark_data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Benchmark Data Version",
+          "type": "string"
+        },
+        "benchmark_source_id": {
+          "const": "austin_2026_bond_initial_draft_2026_01_21",
+          "title": "Benchmark Source Id",
+          "type": "string"
+        },
+        "city_included_count": {
+          "$ref": "#/$defs/PublishedCountValue"
+        },
+        "documented_divergences": {
+          "items": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Documented Divergences",
+          "type": "array"
+        },
+        "evaluated_plan": {
+          "$ref": "#/$defs/EvaluatedPlan"
+        },
+        "overlap": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BenchmarkOverlap"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "published_allocation": {
+          "$ref": "#/$defs/PublishedMoneyValue"
+        }
+      },
+      "required": [
+        "benchmark_contract_version",
+        "benchmark_data_version",
+        "benchmark_source_id",
+        "evaluated_plan",
+        "published_allocation",
+        "city_included_count",
+        "documented_divergences"
+      ],
+      "title": "BenchmarkComparisonResponseData",
+      "type": "object"
+    },
+    "BenchmarkComparisonSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/BenchmarkComparisonResponseData"
+        },
+        "endpoint": {
+          "const": "/api/v1/benchmark/compare",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "BenchmarkComparisonSuccessEnvelope",
+      "type": "object"
+    },
+    "BenchmarkOverlap": {
+      "additionalProperties": false,
+      "properties": {
+        "project_count": {
+          "minimum": 0,
+          "title": "Project Count",
+          "type": "integer"
+        },
+        "project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "published_amount": {
+          "$ref": "#/$defs/PublishedMoneyValue"
+        }
+      },
+      "required": [
+        "project_ids",
+        "project_count",
+        "published_amount"
+      ],
+      "title": "BenchmarkOverlap",
+      "type": "object"
+    },
+    "BenchmarkPublishedIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "extraction_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Extraction Version",
+          "type": "string"
+        },
+        "published_date": {
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Published Date",
+          "type": "string"
+        },
+        "published_title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Published Title",
+          "type": "string"
+        },
+        "source_id": {
+          "const": "austin_2026_bond_initial_draft_2026_01_21",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_snapshot_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Snapshot Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "published_title",
+        "published_date",
+        "source_snapshot_sha256",
+        "extraction_version"
+      ],
+      "title": "BenchmarkPublishedIdentity",
+      "type": "object"
+    },
+    "BenchmarkReconciliation": {
+      "additionalProperties": false,
+      "properties": {
+        "available_amount_total_dollars": {
+          "minimum": 0,
+          "title": "Available Amount Total Dollars",
+          "type": "integer"
+        },
+        "entry_count": {
+          "minimum": 0,
+          "title": "Entry Count",
+          "type": "integer"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "publication_reconciliation_passed": {
+          "const": true,
+          "title": "Publication Reconciliation Passed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "entry_count",
+        "available_amount_total_dollars",
+        "publication_reconciliation_passed",
+        "explanation"
+      ],
+      "title": "BenchmarkReconciliation",
+      "type": "object"
+    },
+    "BenchmarkResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "$ref": "#/$defs/BenchmarkArtifact"
+        },
+        "deployment_identity": {
+          "$ref": "#/$defs/DeploymentIdentityData"
+        }
+      },
+      "required": [
+        "benchmark",
+        "deployment_identity"
+      ],
+      "title": "BenchmarkResponseData",
+      "type": "object"
+    },
+    "BenchmarkSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/BenchmarkResponseData"
+        },
+        "endpoint": {
+          "const": "/api/v1/benchmark",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "BenchmarkSuccessEnvelope",
+      "type": "object"
+    },
+    "BootstrapMapDefaults": {
+      "additionalProperties": false,
+      "properties": {
+        "eaz_2021_context": {
+          "const": false,
+          "title": "Eaz 2021 Context",
+          "type": "boolean"
+        },
+        "fema_current_hazard_context": {
+          "const": false,
+          "title": "Fema Current Hazard Context",
+          "type": "boolean"
+        },
+        "rna_current_project_display": {
+          "const": true,
+          "title": "Rna Current Project Display",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rna_current_project_display",
+        "fema_current_hazard_context",
+        "eaz_2021_context"
+      ],
+      "title": "BootstrapMapDefaults",
+      "type": "object"
+    },
+    "BootstrapResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog": {
+          "$ref": "#/$defs/CatalogArtifact"
+        },
+        "deployment_identity": {
+          "$ref": "#/$defs/DeploymentIdentityData"
+        },
+        "map_context": {
+          "$ref": "#/$defs/MapContextArtifact"
+        },
+        "map_defaults": {
+          "$ref": "#/$defs/BootstrapMapDefaults"
+        },
+        "public_configuration": {
+          "$ref": "#/$defs/PublicConfiguration"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "map_defaults",
+        "public_configuration",
+        "deployment_identity"
+      ],
+      "title": "BootstrapResponseData",
+      "type": "object"
+    },
+    "BootstrapSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/BootstrapResponseData"
+        },
+        "endpoint": {
+          "const": "/api/v1/bootstrap",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "BootstrapSuccessEnvelope",
+      "type": "object"
+    },
+    "CatalogArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "active_family_summary": {
+          "$ref": "#/$defs/ActiveFamilySummary"
+        },
+        "contract_version": {
+          "const": "p0-catalog/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "decision_context": {
+          "$ref": "#/$defs/DecisionContext"
+        },
+        "governed_universe_summary": {
+          "$ref": "#/$defs/GovernedUniverseSummary"
+        },
+        "methodology_version": {
+          "const": "p0-evidence-methodology/2026-09-01",
+          "title": "Methodology Version",
+          "type": "string"
+        },
+        "projects": {
+          "allOf": [
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "4015.001"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 8500000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5282.043"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5282.133"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5282.134"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5282.150"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5282.162"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5754.089"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5754.139"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5754.145"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5754.147"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5754.149"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 35000000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.075"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 16750000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.107"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 6255000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.121"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 21250000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.126"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.127"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 7700000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.136"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 11250000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.139"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 7350000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.141"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 3000000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.150"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 20000000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.145"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 4450000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5789.146"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.053"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.070"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.071"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.087"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.091"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "5848.092"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "6039.109"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "7492.011"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "7492.032"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "7492.045"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "governed_request_dollars": {
+                    "const": 1500000
+                  },
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "8598.014"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family",
+                  "governed_request_dollars"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "9999.235"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "9999.236"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "10878.010"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "p0_family": {
+                    "properties": {
+                      "member": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "member"
+                    ],
+                    "type": "object"
+                  },
+                  "project_id": {
+                    "const": "11889.004"
+                  }
+                },
+                "required": [
+                  "project_id",
+                  "p0_family"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            }
+          ],
+          "items": {
+            "$ref": "#/$defs/ProjectRecord"
+          },
+          "maxItems": 37,
+          "minItems": 37,
+          "title": "Projects",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "release_tier": {
+          "$ref": "#/$defs/ReleaseTier"
+        },
+        "source_references": {
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$": {
+              "$ref": "#/$defs/SourceReference"
+            }
+          },
+          "title": "Source References",
+          "type": "object"
+        },
+        "unsupported_metric_definitions": {
+          "items": {
+            "$ref": "#/$defs/UnsupportedMetricDefinition"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Unsupported Metric Definitions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "release_tier",
+        "decision_context",
+        "governed_universe_summary",
+        "active_family_summary",
+        "source_references",
+        "unsupported_metric_definitions",
+        "projects",
+        "methodology_version"
+      ],
+      "title": "CatalogArtifact",
+      "type": "object"
+    },
+    "Confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "ContractVersionSet": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Benchmark",
+          "type": "string"
+        },
+        "browser_session": {
+          "const": "p0-browser-session/1.0.0",
+          "title": "Browser Session",
+          "type": "string"
+        },
+        "catalog": {
+          "const": "p0-catalog/1.0.0",
+          "title": "Catalog",
+          "type": "string"
+        },
+        "funding_plan": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Funding Plan",
+          "type": "string"
+        },
+        "gemini_explain": {
+          "const": "p0-gemini-explain/1.0.0",
+          "title": "Gemini Explain",
+          "type": "string"
+        },
+        "map_context": {
+          "const": "p0-map-context/1.0.0",
+          "title": "Map Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "benchmark",
+        "funding_plan",
+        "browser_session",
+        "gemini_explain"
+      ],
+      "title": "ContractVersionSet",
+      "type": "object"
+    },
+    "CrsContract": {
+      "additionalProperties": false,
+      "properties": {
+        "axis_order": {
+          "const": "longitude_latitude",
+          "title": "Axis Order",
+          "type": "string"
+        },
+        "coordinate_reference_system": {
+          "const": "EPSG:4326",
+          "title": "Coordinate Reference System",
+          "type": "string"
+        },
+        "standard": {
+          "const": "RFC_7946",
+          "title": "Standard",
+          "type": "string"
+        }
+      },
+      "required": [
+        "standard",
+        "coordinate_reference_system",
+        "axis_order"
+      ],
+      "title": "CrsContract",
+      "type": "object"
+    },
+    "DecisionContext": {
+      "additionalProperties": false,
+      "properties": {
+        "historical_decision_snapshot_date": {
+          "const": "2026-01-21",
+          "title": "Historical Decision Snapshot Date",
+          "type": "string"
+        },
+        "historical_decision_snapshot_label": {
+          "const": "Historical Decision Snapshot",
+          "title": "Historical Decision Snapshot Label",
+          "type": "string"
+        },
+        "historical_envelope_dollars": {
+          "const": 125000000,
+          "title": "Historical Envelope Dollars",
+          "type": "integer"
+        },
+        "historical_envelope_label": {
+          "const": "Historical Envelope",
+          "title": "Historical Envelope Label",
+          "type": "string"
+        },
+        "historical_simulation": {
+          "const": true,
+          "title": "Historical Simulation",
+          "type": "boolean"
+        },
+        "historical_watershed_allocation_dollars": {
+          "const": 160000000,
+          "title": "Historical Watershed Allocation Dollars",
+          "type": "integer"
+        },
+        "not_official_funding_decision": {
+          "const": true,
+          "title": "Not Official Funding Decision",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "historical_decision_snapshot_date",
+        "historical_decision_snapshot_label",
+        "historical_envelope_dollars",
+        "historical_envelope_label",
+        "historical_watershed_allocation_dollars",
+        "historical_simulation",
+        "not_official_funding_decision"
+      ],
+      "title": "DecisionContext",
+      "type": "object"
+    },
+    "DeploymentIdentityData": {
+      "additionalProperties": false,
+      "properties": {
+        "code_git_sha": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Code Git Sha",
+          "type": "string"
+        },
+        "container_image_digest": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Container Image Digest",
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Manifest Sha256",
+          "type": "string"
+        },
+        "release_tier": {
+          "$ref": "#/$defs/ReleaseTier"
+        }
+      },
+      "required": [
+        "code_git_sha",
+        "manifest_sha256",
+        "container_image_digest",
+        "release_tier"
+      ],
+      "title": "DeploymentIdentityData",
+      "type": "object"
+    },
+    "EvaluatedPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "confirmation_status": {
+          "enum": [
+            "VALID",
+            "OVER_BUDGET"
+          ],
+          "title": "Confirmation Status",
+          "type": "string"
+        },
+        "contract_version": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "fingerprint_verification": {
+          "$ref": "#/$defs/FingerprintVerification"
+        },
+        "included_count": {
+          "minimum": 0,
+          "title": "Included Count",
+          "type": "integer"
+        },
+        "included_governed_requests": {
+          "items": {
+            "$ref": "#/$defs/IncludedGovernedRequest"
+          },
+          "maxItems": 12,
+          "title": "Included Governed Requests",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "included_project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Included Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "included_total_dollars": {
+          "minimum": 0,
+          "title": "Included Total Dollars",
+          "type": "integer"
+        },
+        "not_included_active_family_project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Not Included Active Family Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "overage_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Overage Dollars"
+        },
+        "plan_fingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Plan Fingerprint",
+          "type": "string"
+        },
+        "remainder_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Remainder Dollars"
+        },
+        "warnings": {
+          "items": {
+            "$ref": "#/$defs/PlanWarning"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "included_project_ids",
+        "not_included_active_family_project_ids",
+        "included_count",
+        "included_governed_requests",
+        "included_total_dollars",
+        "available_budget_dollars",
+        "remainder_dollars",
+        "overage_dollars",
+        "confirmation_status",
+        "warnings",
+        "plan_fingerprint",
+        "fingerprint_verification"
+      ],
+      "title": "EvaluatedPlan",
+      "type": "object"
+    },
+    "EvidenceItem": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_PROJECT_IDENTITY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE"
+                ]
+              },
+              "evidence_role": {
+                "const": "FACT"
+              },
+              "fact_kind": {
+                "const": "SOURCE_GOVERNED"
+              }
+            },
+            "required": [
+              "fact_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_REQUEST"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE"
+                ]
+              },
+              "evidence_role": {
+                "const": "FACT"
+              },
+              "fact_kind": {
+                "const": "SOURCE_GOVERNED"
+              }
+            },
+            "required": [
+              "fact_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "DERIVED_PURPOSE"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE"
+                ]
+              },
+              "evidence_role": {
+                "const": "FACT"
+              },
+              "fact_kind": {
+                "const": "CLIMATE_CAPITAL_DERIVED"
+              }
+            },
+            "required": [
+              "fact_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "P0_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE"
+                ]
+              },
+              "evidence_role": {
+                "const": "FACT"
+              },
+              "fact_kind": {
+                "const": "CLIMATE_CAPITAL_DERIVED"
+              }
+            },
+            "required": [
+              "fact_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "PROBLEM_SCORE_ASSOCIATION"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE",
+                  "MISSING",
+                  "NOT_APPLICABLE",
+                  "NOT_EVALUATED_FIXTURE"
+                ]
+              },
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "RNA_DISPLAY_GEOMETRY_AVAILABILITY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE",
+                  "MISSING",
+                  "NOT_APPLICABLE",
+                  "NOT_EVALUATED_FIXTURE"
+                ]
+              },
+              "evidence_role": {
+                "const": "RESEARCH_ONLY_EVIDENCE"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "FEMA_CURRENT_HAZARD_CONTEXT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE",
+                  "MISSING",
+                  "NOT_APPLICABLE",
+                  "NOT_EVALUATED_FIXTURE"
+                ]
+              },
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "EAZ_2021_CONTEXT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "AVAILABLE",
+                  "MISSING",
+                  "NOT_APPLICABLE",
+                  "NOT_EVALUATED_FIXTURE"
+                ]
+              },
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "EXPECTED_FLOOD_REDUCTION_BENEFIT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "UNSUPPORTED"
+                ]
+              },
+              "evidence_role": {
+                "const": "UNAVAILABLE_UNSUPPORTED"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "BENEFICIARY_ESTIMATES"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "UNSUPPORTED"
+                ]
+              },
+              "evidence_role": {
+                "const": "UNAVAILABLE_UNSUPPORTED"
+              },
+              "fact_kind": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "availability": {
+                "const": "AVAILABLE"
+              }
+            },
+            "required": [
+              "availability"
+            ]
+          },
+          "then": {
+            "properties": {
+              "reason_code": {
+                "type": "null"
+              },
+              "value": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "availability": {
+                "enum": [
+                  "MISSING",
+                  "NOT_APPLICABLE",
+                  "NOT_EVALUATED_FIXTURE",
+                  "UNSUPPORTED"
+                ]
+              }
+            },
+            "required": [
+              "availability"
+            ]
+          },
+          "then": {
+            "properties": {
+              "category": {
+                "type": "null"
+              },
+              "reason_code": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+                "type": "string"
+              },
+              "unit": {
+                "type": "null"
+              },
+              "value": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "reason_code"
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "association_method": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Association Method"
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Confidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "confidence_meaning": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence Meaning"
+        },
+        "coverage_scope": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Coverage Scope",
+          "type": "string"
+        },
+        "evidence_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "fact_kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FactKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "historical_fit": {
+          "$ref": "#/$defs/HistoricalFit"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "public_disclaimer": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Public Disclaimer",
+          "type": "string"
+        },
+        "public_label": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Public Label",
+          "type": "string"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "source_vintage": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Vintage",
+          "type": "string"
+        },
+        "transformation_version": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transformation Version"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "evidence_type",
+        "evidence_role",
+        "availability",
+        "explanation",
+        "source_ids",
+        "source_vintage",
+        "historical_fit",
+        "coverage_scope",
+        "limitations",
+        "public_label",
+        "public_disclaimer"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "EvidenceRole": {
+      "enum": [
+        "FACT",
+        "CONTEXTUAL_EVIDENCE",
+        "RESEARCH_ONLY_EVIDENCE",
+        "UNAVAILABLE_UNSUPPORTED"
+      ],
+      "title": "EvidenceRole",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "GOVERNED_PROJECT_IDENTITY",
+        "GOVERNED_REQUEST",
+        "DERIVED_PURPOSE",
+        "P0_FAMILY",
+        "PROBLEM_SCORE_ASSOCIATION",
+        "RNA_DISPLAY_GEOMETRY_AVAILABILITY",
+        "FEMA_CURRENT_HAZARD_CONTEXT",
+        "EAZ_2021_CONTEXT",
+        "EXPECTED_FLOOD_REDUCTION_BENEFIT",
+        "BENEFICIARY_ESTIMATES"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "FactKind": {
+      "enum": [
+        "SOURCE_GOVERNED",
+        "CLIMATE_CAPITAL_DERIVED"
+      ],
+      "title": "FactKind",
+      "type": "string"
+    },
+    "FingerprintVerification": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        },
+        "matches": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matches"
+        }
+      },
+      "title": "FingerprintVerification",
+      "type": "object"
+    },
+    "GcsObject": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "generation": {
+          "pattern": "^[1-9][0-9]*$",
+          "title": "Generation",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "uri": {
+          "pattern": "^gs://[^/]+/.+$",
+          "title": "Uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "generation",
+        "sha256",
+        "byte_size"
+      ],
+      "title": "GcsObject",
+      "type": "object"
+    },
+    "GeminiCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "citation_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Citation Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Id"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "citation_id",
+        "source_id"
+      ],
+      "title": "GeminiCitation",
+      "type": "object"
+    },
+    "GeminiExplainResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/GeminiCitation"
+          },
+          "maxItems": 30,
+          "title": "Citations",
+          "type": "array"
+        },
+        "contract_version": {
+          "const": "p0-gemini-explain/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "model_identity": {
+          "$ref": "#/$defs/GeminiModelIdentity"
+        },
+        "mutates_state": {
+          "const": false,
+          "title": "Mutates State",
+          "type": "boolean"
+        },
+        "sanitized_visible_text": {
+          "maxLength": 8000,
+          "minLength": 1,
+          "title": "Sanitized Visible Text",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ANSWER",
+            "REFUSAL"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GeminiUsage"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "status",
+        "sanitized_visible_text",
+        "citations",
+        "limitations",
+        "model_identity",
+        "mutates_state"
+      ],
+      "title": "GeminiExplainResponse",
+      "type": "object"
+    },
+    "GeminiExplainSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/GeminiExplainResponse"
+        },
+        "endpoint": {
+          "const": "/api/v1/gemini/explain",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "GeminiExplainSuccessEnvelope",
+      "type": "object"
+    },
+    "GeminiModelIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "access_tier": {
+          "const": "STANDARD_ON_DEMAND",
+          "title": "Access Tier",
+          "type": "string"
+        },
+        "location": {
+          "const": "global",
+          "title": "Location",
+          "type": "string"
+        },
+        "model": {
+          "const": "gemini-3.6-flash",
+          "title": "Model",
+          "type": "string"
+        },
+        "thinking_level": {
+          "const": "MINIMAL",
+          "title": "Thinking Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "location",
+        "access_tier",
+        "thinking_level"
+      ],
+      "title": "GeminiModelIdentity",
+      "type": "object"
+    },
+    "GeminiUsage": {
+      "additionalProperties": false,
+      "properties": {
+        "input_tokens": {
+          "minimum": 0,
+          "title": "Input Tokens",
+          "type": "integer"
+        },
+        "reasoning_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning Tokens"
+        },
+        "total_tokens": {
+          "minimum": 0,
+          "title": "Total Tokens",
+          "type": "integer"
+        },
+        "visible_output_tokens": {
+          "maximum": 400,
+          "minimum": 0,
+          "title": "Visible Output Tokens",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "input_tokens",
+        "visible_output_tokens",
+        "total_tokens"
+      ],
+      "title": "GeminiUsage",
+      "type": "object"
+    },
+    "GovernedUniverseSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "governed_request_total_dollars": {
+          "const": 327970000,
+          "title": "Governed Request Total Dollars",
+          "type": "integer"
+        },
+        "project_count": {
+          "const": 37,
+          "title": "Project Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "project_count",
+        "governed_request_total_dollars"
+      ],
+      "title": "GovernedUniverseSummary",
+      "type": "object"
+    },
+    "HealthResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_versions": {
+          "$ref": "#/$defs/ContractVersionSet"
+        },
+        "deployment_identity": {
+          "$ref": "#/$defs/DeploymentIdentityData"
+        },
+        "gemini_enabled": {
+          "title": "Gemini Enabled",
+          "type": "boolean"
+        },
+        "status": {
+          "const": "READY",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "deployment_identity",
+        "contract_versions",
+        "gemini_enabled"
+      ],
+      "title": "HealthResponseData",
+      "type": "object"
+    },
+    "HealthSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/HealthResponseData"
+        },
+        "endpoint": {
+          "const": "/healthz",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "HealthSuccessEnvelope",
+      "type": "object"
+    },
+    "HistoricalFit": {
+      "enum": [
+        "HISTORICALLY_VALID",
+        "CURRENT_CONTEXT_ONLY",
+        "HISTORICAL_FIT_UNCERTAIN",
+        "NOT_APPLICABLE"
+      ],
+      "title": "HistoricalFit",
+      "type": "string"
+    },
+    "IncludedGovernedRequest": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5282.043"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 8500000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.075"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 35000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.107"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 16750000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.121"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 6255000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.126"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 21250000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.136"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 7700000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.139"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 11250000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.141"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 7350000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.145"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 20000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.146"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 4450000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "5789.150"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 3000000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "project_id": {
+                "const": "8598.014"
+              }
+            },
+            "required": [
+              "project_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "governed_request_dollars": {
+                "const": 1500000
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "governed_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Governed Request Dollars",
+          "type": "integer"
+        },
+        "project_id": {
+          "enum": [
+            "5282.043",
+            "5789.075",
+            "5789.107",
+            "5789.121",
+            "5789.126",
+            "5789.136",
+            "5789.139",
+            "5789.141",
+            "5789.145",
+            "5789.146",
+            "5789.150",
+            "8598.014"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "governed_request_dollars"
+      ],
+      "title": "IncludedGovernedRequest",
+      "type": "object"
+    },
+    "LayerDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "caveat": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Caveat",
+          "type": "string"
+        },
+        "default_visible": {
+          "title": "Default Visible",
+          "type": "boolean"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "public_label": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Public Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_id",
+        "evidence_role",
+        "default_visible",
+        "public_label",
+        "caveat"
+      ],
+      "title": "LayerDefinition",
+      "type": "object"
+    },
+    "LicenseReuseStatus": {
+      "enum": [
+        "VERIFIED",
+        "UNVERIFIED",
+        "RESTRICTED",
+        "NOT_APPLICABLE"
+      ],
+      "title": "LicenseReuseStatus",
+      "type": "string"
+    },
+    "LineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 2,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "LineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "LineStringGeometry",
+      "type": "object"
+    },
+    "MapContextArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "p0-map-context/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "crs_contract": {
+          "$ref": "#/$defs/CrsContract"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "features": {
+          "items": {
+            "$ref": "#/$defs/MapFeature"
+          },
+          "title": "Features",
+          "type": "array"
+        },
+        "layer_definitions": {
+          "items": {
+            "$ref": "#/$defs/LayerDefinition"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Layer Definitions",
+          "type": "array"
+        },
+        "release_tier": {
+          "$ref": "#/$defs/ReleaseTier"
+        },
+        "source_crs_and_transformations": {
+          "items": {
+            "$ref": "#/$defs/SourceCrsTransformation"
+          },
+          "minItems": 1,
+          "title": "Source Crs And Transformations",
+          "type": "array"
+        },
+        "type": {
+          "const": "FeatureCollection",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "contract_version",
+        "data_version",
+        "release_tier",
+        "crs_contract",
+        "source_crs_and_transformations",
+        "layer_definitions",
+        "features"
+      ],
+      "title": "MapContextArtifact",
+      "type": "object"
+    },
+    "MapFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "geometry": {
+          "discriminator": {
+            "mapping": {
+              "LineString": "#/$defs/LineStringGeometry",
+              "MultiLineString": "#/$defs/MultiLineStringGeometry",
+              "MultiPoint": "#/$defs/MultiPointGeometry",
+              "MultiPolygon": "#/$defs/MultiPolygonGeometry",
+              "Point": "#/$defs/PointGeometry",
+              "Polygon": "#/$defs/PolygonGeometry"
+            },
+            "propertyName": "type"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/PointGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPointGeometry"
+            },
+            {
+              "$ref": "#/$defs/LineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiLineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/PolygonGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPolygonGeometry"
+            }
+          ],
+          "title": "Geometry"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/$defs/MapFeatureProperties"
+        },
+        "type": {
+          "const": "Feature",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "properties",
+        "geometry"
+      ],
+      "title": "MapFeature",
+      "type": "object"
+    },
+    "MapFeatureProperties": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "const": "AVAILABLE",
+          "title": "Availability",
+          "type": "string"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "feature_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "historical_fit": {
+          "$ref": "#/$defs/HistoricalFit"
+        },
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Project Id"
+        },
+        "source_feature_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Feature Id",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_vintage": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Vintage",
+          "type": "string"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "feature_id",
+        "source_feature_id",
+        "layer_id",
+        "evidence_role",
+        "availability",
+        "source_id",
+        "source_vintage",
+        "historical_fit",
+        "transformation_version",
+        "limitations"
+      ],
+      "title": "MapFeatureProperties",
+      "type": "object"
+    },
+    "MembershipDollarDelta": {
+      "additionalProperties": false,
+      "properties": {
+        "governed_request_total_dollars": {
+          "minimum": 0,
+          "title": "Governed Request Total Dollars",
+          "type": "integer"
+        },
+        "project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "project_ids",
+        "governed_request_total_dollars"
+      ],
+      "title": "MembershipDollarDelta",
+      "type": "object"
+    },
+    "MultiLineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiLineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiLineStringGeometry",
+      "type": "object"
+    },
+    "MultiPointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPoint",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPointGeometry",
+      "type": "object"
+    },
+    "MultiPolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPolygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPolygonGeometry",
+      "type": "object"
+    },
+    "P0FamilyFact": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_role": {
+          "const": "FACT",
+          "title": "Evidence Role",
+          "type": "string"
+        },
+        "fact_kind": {
+          "const": "CLIMATE_CAPITAL_DERIVED",
+          "title": "Fact Kind",
+          "type": "string"
+        },
+        "geometry_is_not_membership_authority": {
+          "const": true,
+          "title": "Geometry Is Not Membership Authority",
+          "type": "boolean"
+        },
+        "member": {
+          "title": "Member",
+          "type": "boolean"
+        },
+        "not_city_taxonomy_or_eligibility": {
+          "const": true,
+          "title": "Not City Taxonomy Or Eligibility",
+          "type": "boolean"
+        },
+        "rationale": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "member",
+        "rationale",
+        "evidence_role",
+        "fact_kind",
+        "not_city_taxonomy_or_eligibility",
+        "geometry_is_not_membership_authority"
+      ],
+      "title": "P0FamilyFact",
+      "type": "object"
+    },
+    "PlanComparison": {
+      "additionalProperties": false,
+      "properties": {
+        "budget_difference_dollars": {
+          "title": "Budget Difference Dollars",
+          "type": "integer"
+        },
+        "entering": {
+          "$ref": "#/$defs/MembershipDollarDelta"
+        },
+        "included_count_difference": {
+          "title": "Included Count Difference",
+          "type": "integer"
+        },
+        "included_total_difference_dollars": {
+          "title": "Included Total Difference Dollars",
+          "type": "integer"
+        },
+        "leaving": {
+          "$ref": "#/$defs/MembershipDollarDelta"
+        },
+        "remainder_difference_dollars": {
+          "title": "Remainder Difference Dollars",
+          "type": "integer"
+        },
+        "unchanged_project_ids": {
+          "items": {
+            "enum": [
+              "5282.043",
+              "5789.075",
+              "5789.107",
+              "5789.121",
+              "5789.126",
+              "5789.136",
+              "5789.139",
+              "5789.141",
+              "5789.145",
+              "5789.146",
+              "5789.150",
+              "8598.014"
+            ],
+            "type": "string"
+          },
+          "title": "Unchanged Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "budget_difference_dollars",
+        "included_total_difference_dollars",
+        "remainder_difference_dollars",
+        "included_count_difference",
+        "entering",
+        "leaving",
+        "unchanged_project_ids"
+      ],
+      "title": "PlanComparison",
+      "type": "object"
+    },
+    "PlanEvaluationResponseData": {
+      "additionalProperties": false,
+      "properties": {
+        "comparison": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PlanComparison"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "current": {
+          "$ref": "#/$defs/PlanSideResult"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PlanSideResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "current"
+      ],
+      "title": "PlanEvaluationResponseData",
+      "type": "object"
+    },
+    "PlanEvaluationSuccessEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/$defs/PlanEvaluationResponseData"
+        },
+        "endpoint": {
+          "const": "/api/v1/plans/evaluate",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/ResponseIdentity"
+        },
+        "status": {
+          "const": "SUCCESS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpoint",
+        "status",
+        "identity",
+        "data"
+      ],
+      "title": "PlanEvaluationSuccessEnvelope",
+      "type": "object"
+    },
+    "PlanSemanticError": {
+      "additionalProperties": false,
+      "properties": {
+        "error_code": {
+          "enum": [
+            "UNKNOWN_PROJECT_ID",
+            "OUT_OF_FAMILY_PROJECT_ID",
+            "DUPLICATE_PROJECT_ID",
+            "CONTRACT_VERSION_CONFLICT",
+            "DATA_VERSION_CONFLICT"
+          ],
+          "title": "Error Code",
+          "type": "string"
+        },
+        "field_path": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "title": "Field Path",
+          "type": "array"
+        },
+        "message": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Project Id"
+        }
+      },
+      "required": [
+        "error_code",
+        "field_path",
+        "message"
+      ],
+      "title": "PlanSemanticError",
+      "type": "object"
+    },
+    "PlanSideResult": {
+      "additionalProperties": false,
+      "properties": {
+        "evaluated_plan": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvaluatedPlan"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "semantic_errors": {
+          "items": {
+            "$ref": "#/$defs/PlanSemanticError"
+          },
+          "title": "Semantic Errors",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "VALID",
+            "OVER_BUDGET",
+            "INVALID"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "evaluated_plan",
+        "semantic_errors"
+      ],
+      "title": "PlanSideResult",
+      "type": "object"
+    },
+    "PlanWarning": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_context_only": {
+          "const": true,
+          "title": "Evidence Context Only",
+          "type": "boolean"
+        },
+        "message": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Project Id"
+        },
+        "warning_code": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Warning Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "warning_code",
+        "project_id",
+        "message",
+        "evidence_context_only"
+      ],
+      "title": "PlanWarning",
+      "type": "object"
+    },
+    "PointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Point",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PointGeometry",
+      "type": "object"
+    },
+    "PolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Polygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PolygonGeometry",
+      "type": "object"
+    },
+    "ProjectRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "allOf": [
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "GOVERNED_PROJECT_IDENTITY"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "GOVERNED_REQUEST"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "DERIVED_PURPOSE"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "P0_FAMILY"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "PROBLEM_SCORE_ASSOCIATION"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "RNA_DISPLAY_GEOMETRY_AVAILABILITY"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "FEMA_CURRENT_HAZARD_CONTEXT"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "EAZ_2021_CONTEXT"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "EXPECTED_FLOOD_REDUCTION_BENEFIT"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "evidence_type": {
+                    "const": "BENEFICIARY_ESTIMATES"
+                  }
+                },
+                "required": [
+                  "evidence_type"
+                ],
+                "type": "object"
+              },
+              "maxContains": 1,
+              "minContains": 1
+            }
+          ],
+          "items": {
+            "$ref": "#/$defs/EvidenceItem"
+          },
+          "maxItems": 10,
+          "minItems": 10,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "geography_status": {
+          "enum": [
+            "DISPLAY_GEOMETRY_AVAILABLE",
+            "DISPLAY_GEOMETRY_MISSING",
+            "NON_PROJECT_GEOGRAPHY"
+          ],
+          "title": "Geography Status",
+          "type": "string"
+        },
+        "governed_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Governed Name",
+          "type": "string"
+        },
+        "governed_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Governed Request Dollars",
+          "type": "integer"
+        },
+        "governed_request_source_text": {
+          "pattern": "^\\$[0-9]{1,3}(?:,[0-9]{3})*$",
+          "title": "Governed Request Source Text",
+          "type": "string"
+        },
+        "p0_family": {
+          "$ref": "#/$defs/P0FamilyFact"
+        },
+        "program_scope": {
+          "enum": [
+            "DISCRETE_PROJECT",
+            "CITYWIDE_PROGRAM"
+          ],
+          "title": "Program Scope",
+          "type": "string"
+        },
+        "project_id": {
+          "enum": [
+            "4015.001",
+            "5282.043",
+            "5282.133",
+            "5282.134",
+            "5282.150",
+            "5282.162",
+            "5754.089",
+            "5754.139",
+            "5754.145",
+            "5754.147",
+            "5754.149",
+            "5789.075",
+            "5789.107",
+            "5789.121",
+            "5789.126",
+            "5789.127",
+            "5789.136",
+            "5789.139",
+            "5789.141",
+            "5789.150",
+            "5789.145",
+            "5789.146",
+            "5848.053",
+            "5848.070",
+            "5848.071",
+            "5848.087",
+            "5848.091",
+            "5848.092",
+            "6039.109",
+            "7492.011",
+            "7492.032",
+            "7492.045",
+            "8598.014",
+            "9999.235",
+            "9999.236",
+            "10878.010",
+            "11889.004"
+          ],
+          "type": "string"
+        },
+        "provenance_refs": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Refs",
+          "type": "array"
+        },
+        "purpose": {
+          "$ref": "#/$defs/PurposeFact"
+        },
+        "source_row": {
+          "$ref": "#/$defs/SourceRow"
+        }
+      },
+      "required": [
+        "project_id",
+        "governed_name",
+        "governed_request_dollars",
+        "governed_request_source_text",
+        "source_row",
+        "purpose",
+        "p0_family",
+        "geography_status",
+        "program_scope",
+        "evidence",
+        "provenance_refs"
+      ],
+      "title": "ProjectRecord",
+      "type": "object"
+    },
+    "PublicConfiguration": {
+      "additionalProperties": false,
+      "properties": {
+        "environment_label": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Environment Label",
+          "type": "string"
+        },
+        "fixture_mode": {
+          "title": "Fixture Mode",
+          "type": "boolean"
+        },
+        "osm_attribution": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Osm Attribution",
+          "type": "string"
+        },
+        "osm_tile_url": {
+          "pattern": "^https://[^\\s]+$",
+          "title": "Osm Tile Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "environment_label",
+        "osm_tile_url",
+        "osm_attribution",
+        "fixture_mode"
+      ],
+      "title": "PublicConfiguration",
+      "type": "object"
+    },
+    "PublishedCountValue": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "availability",
+        "explanation"
+      ],
+      "title": "PublishedCountValue",
+      "type": "object"
+    },
+    "PublishedMoneyValue": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "unit": {
+          "const": "USD",
+          "title": "Unit",
+          "type": "string"
+        },
+        "value_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value Dollars"
+        }
+      },
+      "required": [
+        "availability",
+        "unit",
+        "explanation"
+      ],
+      "title": "PublishedMoneyValue",
+      "type": "object"
+    },
+    "PublishedPortfolioSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "city_included_count": {
+          "$ref": "#/$defs/PublishedCountValue"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "published_allocation": {
+          "$ref": "#/$defs/PublishedMoneyValue"
+        }
+      },
+      "required": [
+        "published_allocation",
+        "city_included_count",
+        "explanation"
+      ],
+      "title": "PublishedPortfolioSummary",
+      "type": "object"
+    },
+    "PublishedProjectTreatment": {
+      "additionalProperties": false,
+      "properties": {
+        "city_treatment": {
+          "$ref": "#/$defs/PublishedTreatmentValue"
+        },
+        "entry_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Entry Id",
+          "type": "string"
+        },
+        "governed_project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Governed Project Id"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "published_amount": {
+          "$ref": "#/$defs/PublishedMoneyValue"
+        },
+        "published_project_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Published Project Name",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "entry_id",
+        "published_project_name",
+        "city_treatment",
+        "published_amount",
+        "source_ids",
+        "limitations"
+      ],
+      "title": "PublishedProjectTreatment",
+      "type": "object"
+    },
+    "PublishedTreatmentValue": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "HISTORICALLY_RECOMMENDED",
+                "NOT_HISTORICALLY_RECOMMENDED",
+                "CITY_INCLUDED",
+                "NOT_CITY_INCLUDED",
+                "OTHER_PUBLISHED_TREATMENT"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "availability",
+        "explanation"
+      ],
+      "title": "PublishedTreatmentValue",
+      "type": "object"
+    },
+    "PurposeFact": {
+      "additionalProperties": false,
+      "properties": {
+        "ambiguity_or_conflict": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Ambiguity Or Conflict",
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence"
+        },
+        "confidence_meaning": {
+          "const": "Purpose classification strength only",
+          "title": "Confidence Meaning",
+          "type": "string"
+        },
+        "evidence_role": {
+          "const": "FACT",
+          "title": "Evidence Role",
+          "type": "string"
+        },
+        "evidence_summary": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Evidence Summary",
+          "type": "string"
+        },
+        "fact_kind": {
+          "const": "CLIMATE_CAPITAL_DERIVED",
+          "title": "Fact Kind",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "evidence_role",
+        "fact_kind",
+        "confidence",
+        "confidence_meaning",
+        "evidence_summary",
+        "ambiguity_or_conflict",
+        "transformation_version"
+      ],
+      "title": "PurposeFact",
+      "type": "object"
+    },
+    "ReleaseTier": {
+      "enum": [
+        "FIXTURE",
+        "REVIEWED_RELEASE"
+      ],
+      "title": "ReleaseTier",
+      "type": "string"
+    },
+    "ResponseIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "api_namespace": {
+          "const": "/api/v1",
+          "title": "Api Namespace",
+          "type": "string"
+        },
+        "contract_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contract Version"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "api_namespace",
+        "data_version",
+        "release_id"
+      ],
+      "title": "ResponseIdentity",
+      "type": "object"
+    },
+    "SourceCrsTransformation": {
+      "additionalProperties": false,
+      "properties": {
+        "layer_id": {
+          "enum": [
+            "rna_current_project_display",
+            "fema_current_hazard_context",
+            "eaz_2021_context"
+          ],
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "source_crs": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Crs",
+          "type": "string"
+        },
+        "transformation_tool": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Transformation Tool",
+          "type": "string"
+        },
+        "transformation_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Transformation Version",
+          "type": "string"
+        },
+        "validation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Validation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_id",
+        "source_crs",
+        "transformation_tool",
+        "transformation_version",
+        "validation",
+        "limitations"
+      ],
+      "title": "SourceCrsTransformation",
+      "type": "object"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution_text": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Attribution Text",
+          "type": "string"
+        },
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "gcs_object": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GcsObject"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "historical_fit": {
+          "$ref": "#/$defs/HistoricalFit"
+        },
+        "known_limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Known Limitations",
+          "type": "array"
+        },
+        "license_reuse_status": {
+          "$ref": "#/$defs/LicenseReuseStatus"
+        },
+        "published_date": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published Date"
+        },
+        "publisher": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieval_timestamp": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieval Timestamp"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_url": {
+          "pattern": "^https://[^\\s]+$",
+          "title": "Source Url",
+          "type": "string"
+        },
+        "source_vintage": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Vintage",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "publisher",
+        "title",
+        "source_url",
+        "source_vintage",
+        "sha256",
+        "byte_size",
+        "gcs_object",
+        "historical_fit",
+        "license_reuse_status",
+        "attribution_text",
+        "known_limitations"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "SourceRow": {
+      "additionalProperties": false,
+      "properties": {
+        "council_districts_source": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Council Districts Source",
+          "type": "string"
+        },
+        "map_label": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Map Label",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_pdf_page": {
+          "exclusiveMinimum": 0,
+          "title": "Source Pdf Page",
+          "type": "integer"
+        },
+        "source_table_row_order": {
+          "exclusiveMinimum": 0,
+          "title": "Source Table Row Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_pdf_page",
+        "source_table_row_order",
+        "map_label",
+        "council_districts_source"
+      ],
+      "title": "SourceRow",
+      "type": "object"
+    },
+    "UnsupportedMetricDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "const": "UNSUPPORTED",
+          "title": "Availability",
+          "type": "string"
+        },
+        "evidence_role": {
+          "const": "UNAVAILABLE_UNSUPPORTED",
+          "title": "Evidence Role",
+          "type": "string"
+        },
+        "metric_id": {
+          "enum": [
+            "EXPECTED_FLOOD_REDUCTION_BENEFIT",
+            "PEOPLE_POTENTIALLY_BENEFITING",
+            "STRUCTURES_BENEFITED"
+          ],
+          "title": "Metric Id",
+          "type": "string"
+        },
+        "public_explanation": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Public Explanation",
+          "type": "string"
+        },
+        "reason_code": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Reason Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "metric_id",
+        "evidence_role",
+        "availability",
+        "reason_code",
+        "public_explanation"
+      ],
+      "title": "UnsupportedMetricDefinition",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/api-success-envelope-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Closed union of every permitted successful P0 endpoint payload.",
+  "discriminator": {
+    "mapping": {
+      "/api/v1/benchmark": "#/$defs/BenchmarkSuccessEnvelope",
+      "/api/v1/benchmark/compare": "#/$defs/BenchmarkComparisonSuccessEnvelope",
+      "/api/v1/bootstrap": "#/$defs/BootstrapSuccessEnvelope",
+      "/api/v1/gemini/explain": "#/$defs/GeminiExplainSuccessEnvelope",
+      "/api/v1/plans/evaluate": "#/$defs/PlanEvaluationSuccessEnvelope",
+      "/healthz": "#/$defs/HealthSuccessEnvelope"
+    },
+    "propertyName": "endpoint"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/HealthSuccessEnvelope"
+    },
+    {
+      "$ref": "#/$defs/BootstrapSuccessEnvelope"
+    },
+    {
+      "$ref": "#/$defs/BenchmarkSuccessEnvelope"
+    },
+    {
+      "$ref": "#/$defs/PlanEvaluationSuccessEnvelope"
+    },
+    {
+      "$ref": "#/$defs/BenchmarkComparisonSuccessEnvelope"
+    },
+    {
+      "$ref": "#/$defs/GeminiExplainSuccessEnvelope"
+    }
+  ],
+  "title": "ApiSuccessEnvelope",
+  "unevaluatedProperties": false
+}

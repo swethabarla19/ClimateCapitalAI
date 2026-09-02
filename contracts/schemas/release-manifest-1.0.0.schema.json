@@ -1,0 +1,1251 @@
+{
+  "$defs": {
+    "ArtifactIdentities": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark.json": {
+          "$ref": "#/$defs/ArtifactIdentity"
+        },
+        "catalog.json": {
+          "$ref": "#/$defs/ArtifactIdentity"
+        },
+        "map-context.geojson": {
+          "$ref": "#/$defs/ArtifactIdentity"
+        }
+      },
+      "required": [
+        "catalog.json",
+        "map-context.geojson",
+        "benchmark.json"
+      ],
+      "title": "ArtifactIdentities",
+      "type": "object"
+    },
+    "ArtifactIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sha256",
+        "byte_size"
+      ],
+      "title": "ArtifactIdentity",
+      "type": "object"
+    },
+    "ContractVersionSet": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Benchmark",
+          "type": "string"
+        },
+        "browser_session": {
+          "const": "p0-browser-session/1.0.0",
+          "title": "Browser Session",
+          "type": "string"
+        },
+        "catalog": {
+          "const": "p0-catalog/1.0.0",
+          "title": "Catalog",
+          "type": "string"
+        },
+        "funding_plan": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Funding Plan",
+          "type": "string"
+        },
+        "gemini_explain": {
+          "const": "p0-gemini-explain/1.0.0",
+          "title": "Gemini Explain",
+          "type": "string"
+        },
+        "map_context": {
+          "const": "p0-map-context/1.0.0",
+          "title": "Map Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "benchmark",
+        "funding_plan",
+        "browser_session",
+        "gemini_explain"
+      ],
+      "title": "ContractVersionSet",
+      "type": "object"
+    },
+    "EvidenceCoverageMissingness": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_PROJECT_IDENTITY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "FACT"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_REQUEST"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "FACT"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "DERIVED_PURPOSE"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "FACT"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "P0_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "FACT"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "PROBLEM_SCORE_ASSOCIATION"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "RNA_DISPLAY_GEOMETRY_AVAILABILITY"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "RESEARCH_ONLY_EVIDENCE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "FEMA_CURRENT_HAZARD_CONTEXT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "EAZ_2021_CONTEXT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "CONTEXTUAL_EVIDENCE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "EXPECTED_FLOOD_REDUCTION_BENEFIT"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "UNAVAILABLE_UNSUPPORTED"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "BENEFICIARY_ESTIMATES"
+              }
+            },
+            "required": [
+              "evidence_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_role": {
+                "const": "UNAVAILABLE_UNSUPPORTED"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "scope"
+            ]
+          },
+          "then": {
+            "properties": {
+              "denominator": {
+                "const": 37
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "scope"
+            ]
+          },
+          "then": {
+            "properties": {
+              "denominator": {
+                "const": 12
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "available_count": {
+          "minimum": 0,
+          "title": "Available Count",
+          "type": "integer"
+        },
+        "denominator": {
+          "minimum": 0,
+          "title": "Denominator",
+          "type": "integer"
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "fixture_state_count": {
+          "minimum": 0,
+          "title": "Fixture State Count",
+          "type": "integer"
+        },
+        "missing_count": {
+          "minimum": 0,
+          "title": "Missing Count",
+          "type": "integer"
+        },
+        "not_applicable_count": {
+          "minimum": 0,
+          "title": "Not Applicable Count",
+          "type": "integer"
+        },
+        "scope": {
+          "enum": [
+            "GOVERNED_UNIVERSE",
+            "ACTIVE_FAMILY"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "unsupported_count": {
+          "minimum": 0,
+          "title": "Unsupported Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "evidence_type",
+        "evidence_role",
+        "scope",
+        "denominator",
+        "available_count",
+        "missing_count",
+        "unsupported_count",
+        "not_applicable_count",
+        "fixture_state_count"
+      ],
+      "title": "EvidenceCoverageMissingness",
+      "type": "object"
+    },
+    "EvidenceRole": {
+      "enum": [
+        "FACT",
+        "CONTEXTUAL_EVIDENCE",
+        "RESEARCH_ONLY_EVIDENCE",
+        "UNAVAILABLE_UNSUPPORTED"
+      ],
+      "title": "EvidenceRole",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "GOVERNED_PROJECT_IDENTITY",
+        "GOVERNED_REQUEST",
+        "DERIVED_PURPOSE",
+        "P0_FAMILY",
+        "PROBLEM_SCORE_ASSOCIATION",
+        "RNA_DISPLAY_GEOMETRY_AVAILABILITY",
+        "FEMA_CURRENT_HAZARD_CONTEXT",
+        "EAZ_2021_CONTEXT",
+        "EXPECTED_FLOOD_REDUCTION_BENEFIT",
+        "BENEFICIARY_ESTIMATES"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "GcsObject": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "generation": {
+          "pattern": "^[1-9][0-9]*$",
+          "title": "Generation",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "uri": {
+          "pattern": "^gs://[^/]+/.+$",
+          "title": "Uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "generation",
+        "sha256",
+        "byte_size"
+      ],
+      "title": "GcsObject",
+      "type": "object"
+    },
+    "GovernedReconciliations": {
+      "additionalProperties": false,
+      "properties": {
+        "active_family_ids_in_governed_universe": {
+          "const": true,
+          "title": "Active Family Ids In Governed Universe",
+          "type": "boolean"
+        },
+        "active_family_project_count": {
+          "const": 12,
+          "title": "Active Family Project Count",
+          "type": "integer"
+        },
+        "active_family_project_ids": {
+          "items": false,
+          "maxItems": 12,
+          "minItems": 12,
+          "prefixItems": [
+            {
+              "const": "5282.043"
+            },
+            {
+              "const": "5789.075"
+            },
+            {
+              "const": "5789.107"
+            },
+            {
+              "const": "5789.121"
+            },
+            {
+              "const": "5789.126"
+            },
+            {
+              "const": "5789.136"
+            },
+            {
+              "const": "5789.139"
+            },
+            {
+              "const": "5789.141"
+            },
+            {
+              "const": "5789.145"
+            },
+            {
+              "const": "5789.146"
+            },
+            {
+              "const": "5789.150"
+            },
+            {
+              "const": "8598.014"
+            }
+          ],
+          "title": "Active Family Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "active_family_request_total_dollars": {
+          "const": 143005000,
+          "title": "Active Family Request Total Dollars",
+          "type": "integer"
+        },
+        "catalog_and_map_contain_no_benchmark_fields": {
+          "const": true,
+          "title": "Catalog And Map Contain No Benchmark Fields",
+          "type": "boolean"
+        },
+        "catalog_map_project_id_coverage_agrees": {
+          "const": true,
+          "title": "Catalog Map Project Id Coverage Agrees",
+          "type": "boolean"
+        },
+        "citywide_non_project_geography_without_feature": {
+          "const": true,
+          "title": "Citywide Non Project Geography Without Feature",
+          "type": "boolean"
+        },
+        "governed_project_count": {
+          "const": 37,
+          "title": "Governed Project Count",
+          "type": "integer"
+        },
+        "governed_request_total_dollars": {
+          "const": 327970000,
+          "title": "Governed Request Total Dollars",
+          "type": "integer"
+        },
+        "governed_source_semantic_sha256": {
+          "const": "c9091117734b2f793ed5f396dba3b8897169ad168659df0fe4f97cd92aeb072a",
+          "title": "Governed Source Semantic Sha256",
+          "type": "string"
+        },
+        "governed_unique_project_id_count": {
+          "const": 37,
+          "title": "Governed Unique Project Id Count",
+          "type": "integer"
+        },
+        "whole_dollar_requests": {
+          "const": true,
+          "title": "Whole Dollar Requests",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "governed_project_count",
+        "governed_unique_project_id_count",
+        "governed_request_total_dollars",
+        "governed_source_semantic_sha256",
+        "active_family_project_ids",
+        "active_family_project_count",
+        "active_family_request_total_dollars",
+        "whole_dollar_requests",
+        "active_family_ids_in_governed_universe",
+        "citywide_non_project_geography_without_feature",
+        "catalog_map_project_id_coverage_agrees",
+        "catalog_and_map_contain_no_benchmark_fields"
+      ],
+      "title": "GovernedReconciliations",
+      "type": "object"
+    },
+    "HistoricalFit": {
+      "enum": [
+        "HISTORICALLY_VALID",
+        "CURRENT_CONTEXT_ONLY",
+        "HISTORICAL_FIT_UNCERTAIN",
+        "NOT_APPLICABLE"
+      ],
+      "title": "HistoricalFit",
+      "type": "string"
+    },
+    "LicenseReuseStatus": {
+      "enum": [
+        "VERIFIED",
+        "UNVERIFIED",
+        "RESTRICTED",
+        "NOT_APPLICABLE"
+      ],
+      "title": "LicenseReuseStatus",
+      "type": "string"
+    },
+    "ManifestBenchmarkIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Artifact Sha256",
+          "type": "string"
+        },
+        "benchmark_contract_version": {
+          "const": "p0-benchmark/1.0.0",
+          "title": "Benchmark Contract Version",
+          "type": "string"
+        },
+        "extraction_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Extraction Version",
+          "type": "string"
+        },
+        "published_date": {
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Published Date",
+          "type": "string"
+        },
+        "published_title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Published Title",
+          "type": "string"
+        },
+        "source_id": {
+          "const": "austin_2026_bond_initial_draft_2026_01_21",
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "published_title",
+        "published_date",
+        "extraction_version",
+        "benchmark_contract_version",
+        "artifact_sha256"
+      ],
+      "title": "ManifestBenchmarkIdentity",
+      "type": "object"
+    },
+    "ReleaseTier": {
+      "enum": [
+        "FIXTURE",
+        "REVIEWED_RELEASE"
+      ],
+      "title": "ReleaseTier",
+      "type": "string"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution_text": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Attribution Text",
+          "type": "string"
+        },
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "gcs_object": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GcsObject"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "historical_fit": {
+          "$ref": "#/$defs/HistoricalFit"
+        },
+        "known_limitations": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Known Limitations",
+          "type": "array"
+        },
+        "license_reuse_status": {
+          "$ref": "#/$defs/LicenseReuseStatus"
+        },
+        "published_date": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published Date"
+        },
+        "publisher": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieval_timestamp": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieval Timestamp"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_url": {
+          "pattern": "^https://[^\\s]+$",
+          "title": "Source Url",
+          "type": "string"
+        },
+        "source_vintage": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Vintage",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "publisher",
+        "title",
+        "source_url",
+        "source_vintage",
+        "sha256",
+        "byte_size",
+        "gcs_object",
+        "historical_fit",
+        "license_reuse_status",
+        "attribution_text",
+        "known_limitations"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "TransformationVersions": {
+      "additionalProperties": false,
+      "properties": {
+        "classification": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Classification",
+          "type": "string"
+        },
+        "extractor": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Extractor",
+          "type": "string"
+        },
+        "geometry": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Geometry",
+          "type": "string"
+        },
+        "join": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Join",
+          "type": "string"
+        },
+        "serializer": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Serializer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "extractor",
+        "join",
+        "geometry",
+        "classification",
+        "serializer"
+      ],
+      "title": "TransformationVersions",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/release-manifest-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approved_source_ids": {
+      "items": {
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Approved Source Ids",
+      "type": "array",
+      "uniqueItems": true
+    },
+    "artifacts": {
+      "$ref": "#/$defs/ArtifactIdentities"
+    },
+    "benchmark_identity": {
+      "$ref": "#/$defs/ManifestBenchmarkIdentity"
+    },
+    "contract_version": {
+      "const": "p0-release-manifest/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "contract_versions": {
+      "$ref": "#/$defs/ContractVersionSet"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "evidence_coverage_missingness": {
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_PROJECT_IDENTITY"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_PROJECT_IDENTITY"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_REQUEST"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "GOVERNED_REQUEST"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "DERIVED_PURPOSE"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "DERIVED_PURPOSE"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "P0_FAMILY"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "P0_FAMILY"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "PROBLEM_SCORE_ASSOCIATION"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "PROBLEM_SCORE_ASSOCIATION"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "RNA_DISPLAY_GEOMETRY_AVAILABILITY"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "RNA_DISPLAY_GEOMETRY_AVAILABILITY"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "FEMA_CURRENT_HAZARD_CONTEXT"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "FEMA_CURRENT_HAZARD_CONTEXT"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "EAZ_2021_CONTEXT"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "EAZ_2021_CONTEXT"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "EXPECTED_FLOOD_REDUCTION_BENEFIT"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "EXPECTED_FLOOD_REDUCTION_BENEFIT"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "BENEFICIARY_ESTIMATES"
+              },
+              "scope": {
+                "const": "GOVERNED_UNIVERSE"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "evidence_type": {
+                "const": "BENEFICIARY_ESTIMATES"
+              },
+              "scope": {
+                "const": "ACTIVE_FAMILY"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "scope"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        }
+      ],
+      "items": {
+        "$ref": "#/$defs/EvidenceCoverageMissingness"
+      },
+      "maxItems": 20,
+      "minItems": 20,
+      "title": "Evidence Coverage Missingness",
+      "type": "array"
+    },
+    "governed_reconciliations": {
+      "$ref": "#/$defs/GovernedReconciliations"
+    },
+    "release_tier": {
+      "$ref": "#/$defs/ReleaseTier"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/SourceReference"
+      },
+      "minItems": 1,
+      "title": "Sources",
+      "type": "array"
+    },
+    "transformation_versions": {
+      "$ref": "#/$defs/TransformationVersions"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "release_tier",
+    "contract_versions",
+    "approved_source_ids",
+    "sources",
+    "transformation_versions",
+    "artifacts",
+    "governed_reconciliations",
+    "evidence_coverage_missingness",
+    "benchmark_identity"
+  ],
+  "title": "ReleaseManifest",
+  "type": "object"
+}

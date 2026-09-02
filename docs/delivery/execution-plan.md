@@ -1,7 +1,7 @@
 # ClimateCapital AI Execution Plan
 
 > **Status:** Approved delivery baseline, reconciled through Methodology and
-> Architecture Locks; M0 explicitly approved on 2026-09-02; M1 not started
+> Architecture Locks; M0 and M1 explicitly approved and complete on 2026-09-02
 > **Authority:** This is the current high-level delivery sequencing, deadline, and
 > release-gate plan. It is not an implementation plan, test plan, or architectural
 > design.
@@ -73,9 +73,9 @@ file is permitted.
    correctness depends on an official Patchamomma requirement. They are not a
    blanket prerequisite for independent M1 contract/validator work.
 
-Items 1–4 were satisfied by explicit M0 approval on 2026-09-02. That approval
-authorizes only M1 unless the user separately expands that authority. M1 has not
-started.
+Items 1–4 were satisfied by explicit M0 approval on 2026-09-02. M1 was subsequently
+implemented, independently audited, corrected, and explicitly approved on
+2026-09-02. No post-M1 work began during its approval and publication.
 
 ## Initial Deadline Plan
 
@@ -233,7 +233,7 @@ The approved artifacts are maintained together:
 - [milestones.md](milestones.md)
 
 M0 approval satisfied the repository authorization gate before independent M1
-contract/validator implementation. M1 is authorized next but has not started.
+contract/validator implementation. M1 is approved and complete as of 2026-09-02.
 Official Patchamomma requirements remain an urgent unresolved external dependency
 for submission-dependent work, but do not block M1 unless a discovered official
 requirement materially affects its locked contracts. The approved architecture

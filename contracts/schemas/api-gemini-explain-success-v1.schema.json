@@ -1,0 +1,266 @@
+{
+  "$defs": {
+    "GeminiCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "citation_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Citation Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Id"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "citation_id",
+        "source_id"
+      ],
+      "title": "GeminiCitation",
+      "type": "object"
+    },
+    "GeminiExplainResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/GeminiCitation"
+          },
+          "maxItems": 30,
+          "title": "Citations",
+          "type": "array"
+        },
+        "contract_version": {
+          "const": "p0-gemini-explain/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "model_identity": {
+          "$ref": "#/$defs/GeminiModelIdentity"
+        },
+        "mutates_state": {
+          "const": false,
+          "title": "Mutates State",
+          "type": "boolean"
+        },
+        "sanitized_visible_text": {
+          "maxLength": 8000,
+          "minLength": 1,
+          "title": "Sanitized Visible Text",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ANSWER",
+            "REFUSAL"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GeminiUsage"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "status",
+        "sanitized_visible_text",
+        "citations",
+        "limitations",
+        "model_identity",
+        "mutates_state"
+      ],
+      "title": "GeminiExplainResponse",
+      "type": "object"
+    },
+    "GeminiModelIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "access_tier": {
+          "const": "STANDARD_ON_DEMAND",
+          "title": "Access Tier",
+          "type": "string"
+        },
+        "location": {
+          "const": "global",
+          "title": "Location",
+          "type": "string"
+        },
+        "model": {
+          "const": "gemini-3.6-flash",
+          "title": "Model",
+          "type": "string"
+        },
+        "thinking_level": {
+          "const": "MINIMAL",
+          "title": "Thinking Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "location",
+        "access_tier",
+        "thinking_level"
+      ],
+      "title": "GeminiModelIdentity",
+      "type": "object"
+    },
+    "GeminiUsage": {
+      "additionalProperties": false,
+      "properties": {
+        "input_tokens": {
+          "minimum": 0,
+          "title": "Input Tokens",
+          "type": "integer"
+        },
+        "reasoning_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning Tokens"
+        },
+        "total_tokens": {
+          "minimum": 0,
+          "title": "Total Tokens",
+          "type": "integer"
+        },
+        "visible_output_tokens": {
+          "maximum": 400,
+          "minimum": 0,
+          "title": "Visible Output Tokens",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "input_tokens",
+        "visible_output_tokens",
+        "total_tokens"
+      ],
+      "title": "GeminiUsage",
+      "type": "object"
+    },
+    "ResponseIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "api_namespace": {
+          "const": "/api/v1",
+          "title": "Api Namespace",
+          "type": "string"
+        },
+        "contract_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contract Version"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "api_namespace",
+        "data_version",
+        "release_id"
+      ],
+      "title": "ResponseIdentity",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/api-gemini-explain-success-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "$ref": "#/$defs/GeminiExplainResponse"
+    },
+    "endpoint": {
+      "const": "/api/v1/gemini/explain",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "identity": {
+      "$ref": "#/$defs/ResponseIdentity"
+    },
+    "status": {
+      "const": "SUCCESS",
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "endpoint",
+    "status",
+    "identity",
+    "data"
+  ],
+  "title": "GeminiExplainSuccessEnvelope",
+  "type": "object"
+}

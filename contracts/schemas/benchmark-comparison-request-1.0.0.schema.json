@@ -1,0 +1,81 @@
+{
+  "$defs": {
+    "PlanInput": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "contract_version": {
+          "const": "p0-funding-plan/1.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        },
+        "project_ids": {
+          "items": {
+            "pattern": "^[0-9]+\\.[0-9]{3}$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Project Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "available_budget_dollars",
+        "project_ids"
+      ],
+      "title": "PlanInput",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/benchmark-comparison-request-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "expected_benchmark_contract_version": {
+      "const": "p0-benchmark/1.0.0",
+      "title": "Expected Benchmark Contract Version",
+      "type": "string"
+    },
+    "expected_benchmark_data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Expected Benchmark Data Version",
+      "type": "string"
+    },
+    "plan": {
+      "$ref": "#/$defs/PlanInput"
+    }
+  },
+  "required": [
+    "plan",
+    "expected_benchmark_contract_version",
+    "expected_benchmark_data_version"
+  ],
+  "title": "BenchmarkComparisonRequest",
+  "type": "object"
+}

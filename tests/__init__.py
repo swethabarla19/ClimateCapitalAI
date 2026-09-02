@@ -1,0 +1,1 @@
+"""ClimateCapital repository tests."""
