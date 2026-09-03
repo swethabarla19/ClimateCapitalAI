@@ -27,6 +27,75 @@ For the Austin Watershed P0 pilot:
 ClimateCapital AI does **not** currently produce a Funding Priority score, project rank, Importance weight, optimizer-selected portfolio, expected flood-reduction benefit, or beneficiary estimate because the governed evidence does not support those claims consistently enough for P0.
 
 ---
+# Google Cloud Integration
+
+Google Cloud is part of the project architecture from source governance through final deployment.
+
+The project deliberately separates:
+
+1. **controlled data preparation and validation**, and
+2. **the eventual application runtime**.
+
+That means Google Cloud services are used where they provide a clear architectural purpose rather than being added simply for breadth.
+
+## Google Cloud services used so far
+
+| Google Cloud service | Current use |
+| --- | --- |
+| **BigQuery** | Governed raw Watershed project data validation, reconciliation, and deterministic SQL quality gates |
+| **Cloud Storage** | Immutable, checksum-verified preservation of controlled source snapshots and approved source artifacts |
+
+### BigQuery
+
+BigQuery is used as a governed validation layer for the historical Watershed project source data.
+
+The project has already:
+
+- loaded the governed **37-project source universe** into the existing raw BigQuery environment;
+- validated the exact **37 rows**;
+- reconciled the exact **$327,970,000** historical request total;
+- run persistent SQL quality checks;
+- verified source sequence and project-level facts;
+- used deterministic semantic fingerprints to detect unexpected changes.
+
+BigQuery is intentionally **not** queried by the application at runtime.
+
+That separation prevents a live warehouse change from silently changing the behavior of a released decision-support application.
+
+### Cloud Storage
+
+Google Cloud Storage is used for immutable preservation of controlled source material.
+
+The project has already used Cloud Storage to preserve approved source snapshots with:
+
+- exact source identity;
+- SHA-256 checksums;
+- object generations;
+- create-only preservation behavior;
+- provenance metadata;
+- deterministic verification against local source bytes.
+
+Cloud Storage is also intentionally **not** a runtime application dependency.
+
+The final application will consume a reviewed, immutable release-data bundle rather than querying live source storage.
+
+---
+
+## Locked Google Cloud deployment path
+
+Additional Google Cloud services are already part of the approved architecture and will be introduced only in their dependency-ordered milestones.
+
+| Google Cloud service | Planned P0 role | Milestone |
+| --- | --- | --- |
+| **Cloud Run** | One public, scale-to-zero service hosting the React SPA and FastAPI API | M9 |
+| **Artifact Registry** | Immutable storage for the built application container image | M9 |
+| **Cloud Build** | Reproducible test, build, container, and deployment workflow | M9 |
+| **Gemini on Google Cloud** | Grounded, bounded explanation of governed project/plan evidence | M8 |
+| **IAM / Workload Identity** | Keyless authorization for the Cloud Run service to invoke Gemini | M8–M9 |
+| **Cloud Logging** | Bounded operational and Gemini token-usage telemetry | M9 |
+
+
+---
 
 ## Current Implementation
 
@@ -88,62 +157,5 @@ Gemini integration, reviewed-data release integration, containerization, and dep
 
 ---
 
-## Evidence and Analytical Boundaries
 
-The P0 methodology intentionally distinguishes facts from contextual or incomplete evidence.
-
-### Governed project universe
-
-- **37 projects**
-- **$327,970,000** total historical Department Requests
-
-### P0 analytical family
-
-- **12 projects**
-- **$143,005,000** total governed requests
-- Full-request treatment only
-- Analyst-controlled Funding Plan membership
-
-### Historical decision context
-
-- Historical decision snapshot: **January 21, 2026**
-- Historical Watershed Projects envelope: **$125,000,000**
-- Historical simulation only
-- Not an official City funding decision
-
-### Geospatial evidence
-
-Current RNA geometry is treated as **research-only current evidence**, not historical eligibility or project-worth evidence.
-
-Projects without defensible geometry remain usable through non-map application paths.
-
-Project `5789.150` is explicitly treated as a **citywide program** and receives no fabricated point, centroid, footprint, or project-level map feature.
-
-FEMA flood-hazard and EAZ 2021 information are contextual evidence only and do not determine Funding Plan membership.
-
----
-
-## System Architecture
-
-The locked P0 architecture uses one small same-origin application:
-
-```text
-Reviewed release-data bundle
-        |
-        v
-FastAPI / deterministic backend
-        |
-        +-- health / bootstrap
-        +-- Funding Plan evaluation
-        +-- isolated Historical Benchmark
-        +-- bounded Gemini mediation (later milestone)
-        |
-        v
-React + TypeScript + Vite + Leaflet SPA
-        |
-        +-- Explore
-        +-- Project Detail
-        +-- Funding Plan
-        +-- Data & Methodology
-        +-- Help & Resources
         +-- browser sessionStorage only
