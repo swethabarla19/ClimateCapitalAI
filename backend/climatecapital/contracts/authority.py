@@ -20,8 +20,8 @@ class RegisteredSourceIdentity:
     retrieval_timestamp: str | None
     sha256: str
     byte_size: int
-    gcs_uri: str
-    gcs_generation: str
+    gcs_uri: str | None
+    gcs_generation: str | None
     historical_fit: str
     analytical_role: str
     license_reuse_status: str
@@ -72,6 +72,51 @@ REGISTERED_SOURCE_IDENTITIES = MappingProxyType(
             gcs_generation="1788287767379062",
             historical_fit="HISTORICAL_FIT_UNCERTAIN",
             analytical_role="research-only",
+            license_reuse_status="UNVERIFIED",
+        ),
+        "austin_floodpro_fema_layer_8_live": RegisteredSourceIdentity(
+            publisher="City of Austin",
+            title="FloodPro - FEMA Floodplain Layer 8",
+            source_url="https://maps.austintexas.gov/gis/rest/FloodPro/FloodPro/MapServer/8",
+            source_vintage="Live/current service; content vintage unknown",
+            published_date=None,
+            retrieval_timestamp="2026-09-03T00:18:16Z",
+            sha256="e8d5760838454c74dd9752c3a6dd77663e3e61649a28bbf0e2c69471bcef090f",
+            byte_size=4_823,
+            gcs_uri=None,
+            gcs_generation=None,
+            historical_fit="HISTORICAL_FIT_UNCERTAIN",
+            analytical_role="contextual",
+            license_reuse_status="UNVERIFIED",
+        ),
+        "austin_equity_analysis_zones_2021": RegisteredSourceIdentity(
+            publisher="City of Austin",
+            title="Equity Analysis Zones 2021",
+            source_url="https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/Equity_Analysis_Zones_2021/FeatureServer/0",
+            source_vintage="2021 snapshot using 2019 ACS five-year inputs",
+            published_date=None,
+            retrieval_timestamp="2026-09-03T00:36:45Z",
+            sha256="58e4dada99490044bb3fd782868429db06d6821eeb8aa0f626059992c3ab06be",
+            byte_size=764_207,
+            gcs_uri=None,
+            gcs_generation=None,
+            historical_fit="HISTORICALLY_VALID",
+            analytical_role="contextual",
+            license_reuse_status="UNVERIFIED",
+        ),
+        "austin_wpd_problem_score_documentary_context": RegisteredSourceIdentity(
+            publisher="City of Austin - Watershed Protection Department",
+            title="Watershed Problem Score Documentary Context",
+            source_url="https://services.austintexas.gov/edims/document.cfm?id=261630",
+            source_vintage="City documentary context from preserved methodology budget-response and related documents",
+            published_date=None,
+            retrieval_timestamp="2026-09-03T00:40:43Z",
+            sha256="c2bd25d7a63f7fb4149b12e0aeb18706a1257f3346e96cc228f2d5ef0c821655",
+            byte_size=2_577,
+            gcs_uri=None,
+            gcs_generation=None,
+            historical_fit="HISTORICALLY_VALID",
+            analytical_role="contextual",
             license_reuse_status="UNVERIFIED",
         ),
     }

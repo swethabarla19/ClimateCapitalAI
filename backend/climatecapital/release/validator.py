@@ -292,22 +292,36 @@ def _validate_registered_sources(manifest: ReleaseManifest) -> list[ValidationVi
                 )
             )
         gcs = source.gcs_object
-        if gcs is None or (
-            gcs.uri,
-            gcs.generation,
-            gcs.sha256,
-            gcs.byte_size,
-        ) != (
-            expected.gcs_uri,
-            expected.gcs_generation,
-            expected.sha256,
-            expected.byte_size,
-        ):
+        expected_has_gcs_pin = (
+            expected.gcs_uri is not None
+            or expected.gcs_generation is not None
+        )
+
+        if expected_has_gcs_pin:
+            if gcs is None or (
+                gcs.uri,
+                gcs.generation,
+                gcs.sha256,
+                gcs.byte_size,
+            ) != (
+                expected.gcs_uri,
+                expected.gcs_generation,
+                expected.sha256,
+                expected.byte_size,
+            ):
+                violations.append(
+                    ValidationViolation(
+                        "REQUIRED_GCS_PIN_MISMATCH",
+                        f"{path}.gcs_object",
+                        "known preserved source requires its exact approved GCS object identity",
+                    )
+                )
+        elif gcs is not None:
             violations.append(
                 ValidationViolation(
                     "REQUIRED_GCS_PIN_MISMATCH",
                     f"{path}.gcs_object",
-                    "known preserved source requires its exact approved GCS object identity",
+                    "source has no approved repository GCS object identity",
                 )
             )
     return violations

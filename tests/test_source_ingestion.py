@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import csv
 import hashlib
+import json
 import os
 import tempfile
 import unittest
@@ -24,6 +26,9 @@ class SourceRegistryTests(unittest.TestCase):
                 "austin_wpd_2026_bond_projects_2025_11_21",
                 "austin_2026_bond_initial_draft_2026_01_21",
                 "austin_rna_projects_layer_8_live",
+                "austin_floodpro_fema_layer_8_live",
+                "austin_equity_analysis_zones_2021",
+                "austin_wpd_problem_score_documentary_context",
             ],
         )
         self.assertEqual(rows[0]["analytical_role"], "analytical")
@@ -32,6 +37,17 @@ class SourceRegistryTests(unittest.TestCase):
         self.assertEqual(rows[2]["analytical_role"], "research-only")
         self.assertEqual(rows[2]["published_date"], "")
         self.assertEqual(rows[2]["crs"], "ESRI:102739 (EPSG:2277)")
+        governed_m2a = {row["source_id"]: row for row in rows[2:]}
+        self.assertEqual(governed_m2a["austin_floodpro_fema_layer_8_live"]["historical_fit"], "uncertain")
+        self.assertEqual(
+            governed_m2a["austin_equity_analysis_zones_2021"]["historical_fit"],
+            "valid_as_dated_2021_snapshot",
+        )
+        self.assertEqual(
+            governed_m2a["austin_wpd_problem_score_documentary_context"]["historical_fit"],
+            "valid_as_documentary_context_only",
+        )
+        self.assertTrue(all(row["license_notes"].startswith("UNVERIFIED;") for row in governed_m2a.values()))
         self.assertTrue(
             all(
                 row["retrieved_at"] == ""
@@ -47,6 +63,39 @@ class SourceRegistryTests(unittest.TestCase):
             )
         )
 
+    def test_m2a_reuse_review_and_snapshot_metadata_are_explicit_and_consistent(self) -> None:
+        registry = {
+            row["source_id"]: row
+            for row in fetch_sources.load_registry(REGISTRY_PATH)
+        }
+        review_path = REPOSITORY_ROOT / "data/metadata/m2a/source_reuse_review.csv"
+        with review_path.open(newline="", encoding="utf-8") as handle:
+            reviews = {row["source_id"]: row for row in csv.DictReader(handle)}
+
+        governed_ids = {
+            "austin_floodpro_fema_layer_8_live": REPOSITORY_ROOT
+            / "data/metadata/source_snapshots/austin_floodpro_fema_layer_8_live/20260903T001816Z/manifest.json",
+            "austin_equity_analysis_zones_2021": REPOSITORY_ROOT
+            / "data/metadata/source_snapshots/austin_equity_analysis_zones_2021/20260903T003645Z/manifest.json",
+            "austin_wpd_problem_score_documentary_context": REPOSITORY_ROOT
+            / "data/metadata/source_snapshots/austin_wpd_problem_score_documentary_context/20260903T004043Z/manifest.json",
+        }
+        self.assertTrue(governed_ids.keys() <= registry.keys())
+        self.assertTrue(governed_ids.keys() <= reviews.keys())
+        rna_id = "austin_rna_projects_layer_8_live"
+        self.assertEqual(reviews[rna_id]["review_status"], "UNVERIFIED")
+        self.assertTrue(registry[rna_id]["license_notes"].startswith("UNVERIFIED;"))
+
+        for source_id, manifest_path in governed_ids.items():
+            with self.subTest(source_id=source_id):
+                self.assertEqual(reviews[source_id]["review_status"], "UNVERIFIED")
+                self.assertTrue(reviews[source_id]["evidence_url"].startswith("https://"))
+                self.assertTrue(registry[source_id]["license_notes"].startswith("UNVERIFIED;"))
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                metadata = manifest.get("canonical_source", manifest)
+                self.assertEqual(metadata["license_reuse_status"], "UNVERIFIED")
+                self.assertTrue(metadata["license_reuse_basis"])
+                self.assertTrue(metadata["historical_fit"])
     def test_registry_allows_unknown_published_date_but_rejects_bad_nonempty_date(self) -> None:
         rows = fetch_sources.load_registry(REGISTRY_PATH)
         self.assertEqual(rows[2]["published_date"], "")

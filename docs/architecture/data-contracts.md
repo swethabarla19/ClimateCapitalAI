@@ -262,6 +262,13 @@ Each project requires:
 `5789.150` must have `program_scope=CITYWIDE_PROGRAM` and
 `geography_status=NON_PROJECT_GEOGRAPHY`.
 
+For a `FIXTURE`, `geography_status=DISPLAY_GEOMETRY_MISSING` may pair with RNA
+evidence availability `NOT_EVALUATED_FIXTURE` when display-geometry curation has
+not been completed. This says only that the fixture has not materialized the
+display feature; it must not overwrite known source-match coverage with a
+project-level `MISSING` claim. A reviewed release must resolve the evidence state
+and still rejects every `NOT_EVALUATED_FIXTURE` value.
+
 ### Evidence item
 
 Every evidence item requires:

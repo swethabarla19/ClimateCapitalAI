@@ -14,6 +14,7 @@ data/tmp/
 *.api-response
 *.pdf
 *.geojson
+!release-data/fixture/map-context.geojson
 
 # Local credentials and secrets
 .env

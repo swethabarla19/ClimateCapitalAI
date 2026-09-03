@@ -39,7 +39,15 @@ EXPECTED_COLUMNS = (
     "known_caveats",
     "notes",
 )
-ALLOWED_HISTORICAL_FIT = frozenset({"valid", "uncertain", "invalid"})
+ALLOWED_HISTORICAL_FIT = frozenset(
+    {
+        "valid",
+        "uncertain",
+        "invalid",
+        "valid_as_dated_2021_snapshot",
+        "valid_as_documentary_context_only",
+    }
+)
 ALLOWED_ANALYTICAL_ROLES = frozenset(
     {"analytical", "contextual", "benchmark", "research-only"}
 )

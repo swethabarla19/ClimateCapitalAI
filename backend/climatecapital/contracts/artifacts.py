@@ -292,12 +292,15 @@ class ProjectRecord(StrictModel):
             for item in self.evidence
             if item.evidence_type == EvidenceType.RNA_DISPLAY_GEOMETRY_AVAILABILITY
         )
-        required_availability = {
-            "DISPLAY_GEOMETRY_AVAILABLE": Availability.AVAILABLE,
-            "DISPLAY_GEOMETRY_MISSING": Availability.MISSING,
-            "NON_PROJECT_GEOGRAPHY": Availability.NOT_APPLICABLE,
+        permitted_availability = {
+            "DISPLAY_GEOMETRY_AVAILABLE": {Availability.AVAILABLE},
+            "DISPLAY_GEOMETRY_MISSING": {
+                Availability.MISSING,
+                Availability.NOT_EVALUATED_FIXTURE,
+            },
+            "NON_PROJECT_GEOGRAPHY": {Availability.NOT_APPLICABLE},
         }[self.geography_status]
-        if rna.availability != required_availability:
+        if rna.availability not in permitted_availability:
             raise ValueError("RNA geometry evidence availability must match geography_status")
         evidence_by_type = {item.evidence_type: item for item in self.evidence}
         if evidence_by_type[EvidenceType.GOVERNED_PROJECT_IDENTITY].value != self.project_id:

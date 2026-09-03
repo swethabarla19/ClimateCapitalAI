@@ -482,6 +482,55 @@ class BundleValidatorTests(unittest.TestCase):
             expected_release_tier=ReleaseTier.FIXTURE,
         )
 
+    def test_registered_source_gcs_pin_semantics_are_fail_closed(self) -> None:
+        # A repository-authorized source with a known GCS pin must keep that exact pin.
+        manifest = load_json(self.bundle / "manifest.json")
+        memo = next(
+            source
+            for source in manifest["sources"]
+            if source["source_id"] == "austin_wpd_2026_bond_projects_2025_11_21"
+        )
+        self.assertIsNotNone(memo["gcs_object"])
+        memo["gcs_object"] = None
+
+        payload = canonical_bytes(manifest)
+        (self.bundle / "manifest.json").write_bytes(payload)
+        digest = hashlib.sha256(payload).hexdigest()
+
+        self.assert_rejected(
+            digest,
+            "REQUIRED_GCS_PIN_MISMATCH",
+            expected_release_tier=ReleaseTier.FIXTURE,
+        )
+
+        # Rebuild, then prove that a source explicitly registered without a GCS pin
+        # cannot fabricate one in the bundle.
+        _, self.manifest_sha256 = build_bundle(self.bundle)
+        manifest = load_json(self.bundle / "manifest.json")
+        fema = next(
+            source
+            for source in manifest["sources"]
+            if source["source_id"] == "austin_floodpro_fema_layer_8_live"
+        )
+        self.assertIsNone(fema["gcs_object"])
+
+        fema["gcs_object"] = {
+            "uri": "gs://climatecapital-ai-raw-swetha/raw/city_austin/fema/unapproved-object.json",
+            "generation": "1",
+            "sha256": fema["sha256"],
+            "byte_size": fema["byte_size"],
+        }
+
+        payload = canonical_bytes(manifest)
+        (self.bundle / "manifest.json").write_bytes(payload)
+        digest = hashlib.sha256(payload).hexdigest()
+
+        self.assert_rejected(
+            digest,
+            "REQUIRED_GCS_PIN_MISMATCH",
+            expected_release_tier=ReleaseTier.FIXTURE,
+        )
+
     def test_source_reference_identity_and_approval_are_cross_checked(self) -> None:
         catalog = load_json(self.bundle / "catalog.json")
         catalog["source_references"]["austin_wpd_2026_bond_projects_2025_11_21"][

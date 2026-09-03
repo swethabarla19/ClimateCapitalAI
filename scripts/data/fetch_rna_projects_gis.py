@@ -672,6 +672,11 @@ def acquire_snapshot(
                 ),
                 "historical_fit": "uncertain",
                 "analytical_role": "research-only",
+                "license_reuse_status": "UNVERIFIED",
+                "license_reuse_basis": (
+                    "Preserved service/layer metadata contains no explicit license "
+                    "or copyright terms for these exact bytes."
+                ),
                 "historical_limitation": (
                     "This live/current City GIS snapshot does not establish January 2026 geometry."
                 ),

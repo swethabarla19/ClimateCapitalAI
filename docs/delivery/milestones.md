@@ -1,7 +1,7 @@
 # ClimateCapital AI P0 Delivery Milestones
 
-> **Status:** Approved by explicit user authorization on 2026-09-02; M0 and M1
-> complete and explicitly approved
+> **Status:** Delivery baseline approved 2026-09-02; M0 and M1 explicitly approved
+> 2026-09-02; M2A and M2B explicitly approved 2026-09-03
 > **Rule:** Milestones are dependency-ordered. Approval of one milestone does not
 > silently authorize cloud mutation, deployment, commit, push, P1, or Later work.
 
@@ -11,9 +11,9 @@
 | --- | --- | --- | --- |
 | M0 | Architecture-informed implementation/test/milestone plans | Complete; explicitly approved 2026-09-02 | None |
 | M1 | Versioned contracts and fail-closed release validators | Complete; explicitly approved 2026-09-02 | None; local only |
-| M2A | Controlled data prerequisites and pinned approved inputs | Next; not started | Bounded existing GCS/query use only if separately authorized |
-| M2B | Exact-schema fixture and deterministic plan engine | M1 prerequisite satisfied; not started | None; local only |
-| M3 | Health/bootstrap/plan/benchmark APIs | Blocked by M2B | None; local only |
+| M2A | Controlled data prerequisites and pinned approved inputs  | Complete; explicitly approved 2026-09-03 | Bounded existing GCS/query use only if separately authorized |
+| M2B | Exact-schema fixture and deterministic plan engine | Complete; explicitly approved 2026-09-03 | None; local only |
+| M3  | Health/bootstrap/plan/benchmark APIs | Next; M2B prerequisite satisfied | None; local only |
 | M4 | Application-track frontend and required product surfaces | Blocked by M3 | None; local only |
 | M5 | Reviewed pinned release-data bundle | Blocked by M2A | Bounded existing GCS/BigQuery release-gate use |
 | M6 | Reviewed-data integration and fixture removal | Blocked by M4 and M5 | None; local build only |
@@ -69,6 +69,8 @@ post-schema work began during the approval and publication session.
 
 ## M2A — Controlled Data Prerequisites
 
+**Status:** Complete; explicitly approved by the user on 2026-09-03.
+
 **Outcome:** Only approved inputs required for the reviewed bundle are pinned with
 focused reuse/license metadata and exact provenance.
 
@@ -76,7 +78,11 @@ focused reuse/license metadata and exact provenance.
 role, license/reuse state, and limitations are explicit; acquisition is create-only
 where preserved; no broad source hunt or new methodology is introduced.
 
+**Stop point:** M2A received explicit user approval on 2026-09-03. M5 remains the owner of reviewed release-data construction.
+
 ## M2B — Fixture and Deterministic Engine
+
+**Status:** Complete; explicitly approved by the user on 2026-09-03.
 
 **Outcome:** A conspicuous schema-valid fixture unblocks application work and the
 server deterministically evaluates current/reference plan inputs.
@@ -85,6 +91,8 @@ server deterministically evaluates current/reference plan inputs.
 subsets and input boundaries pass; client analytical fields have no authority;
 fingerprints and only supported deltas are stable; invalid attempts cannot imply a
 confirmed result.
+
+**Stop point:** M2B received explicit user approval on 2026-09-03. M3 is now the next dependency-ordered milestone.
 
 ## M3 — Core APIs
 

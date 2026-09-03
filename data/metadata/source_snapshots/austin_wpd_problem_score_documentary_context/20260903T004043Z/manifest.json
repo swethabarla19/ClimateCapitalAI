@@ -1,0 +1,55 @@
+{
+  "analytical_role": "contextual",
+  "documents": [
+    {
+      "byte_size": 38876656,
+      "content_type": "application/pdf;charset=UTF-8",
+      "filename": "edims_261630.pdf",
+      "final_url": "https://services.austintexas.gov/edims/document.cfm?id=261630",
+      "http_status": 200,
+      "sha256": "sha256:30a01366b4ef6aaee2165e47beb60c89e73e93b80a85a02ebd9b2e12fb5fcbe0",
+      "source_url": "https://services.austintexas.gov/edims/document.cfm?id=261630"
+    },
+    {
+      "byte_size": 5786205,
+      "content_type": "application/pdf;charset=UTF-8",
+      "filename": "edims_404946.pdf",
+      "final_url": "https://services.austintexas.gov/edims/document.cfm?id=404946",
+      "http_status": 200,
+      "sha256": "sha256:a5ce56c983a913023f3a790109e2d04cd6175e6b77dda1c802f3980573a258a8",
+      "source_url": "https://services.austintexas.gov/edims/document.cfm?id=404946"
+    },
+    {
+      "byte_size": 177409,
+      "content_type": "application/pdf;charset=UTF-8",
+      "filename": "fy26_budget_response_2050cddcca.pdf",
+      "final_url": "https://services.austintexas.gov/budget/cbq/index.cfm?FILE_ID=2050CDDCCA&action=pushFile&popup=true",
+      "http_status": 200,
+      "sha256": "sha256:43e09cd9eb8e5f8493834dbbfc051be254eaa6f95e4c3fcee0ec4e6c93103904",
+      "source_url": "https://services.austintexas.gov/budget/cbq/index.cfm?FILE_ID=2050CDDCCA&action=pushFile&popup=true"
+    }
+  ],
+  "evidence_role": "CONTEXTUAL_EVIDENCE",
+  "historical_fit": "valid_as_documentary_context_only",
+  "historical_limitation": "The preserved documents do not support a reproducible January 2026 Local Flood numeric severity across the active family.",
+  "license_reuse_basis": "Public document availability and general City website terms do not establish redistribution permission for these exact PDFs.",
+  "license_reuse_status": "UNVERIFIED",
+  "manifest_version": 1,
+  "must_not_establish": [
+    "numeric Local Flood severity",
+    "Funding Priority",
+    "eligibility",
+    "expected flood-reduction benefit",
+    "beneficiaries"
+  ],
+  "problem_score_treatment": "Documented project/problem associations and provenance context only; association strength is not severity.",
+  "problem_score_viewer_reference": {
+    "arcgis_item_id": "d45481abb0804c95a8e6b033188982b9",
+    "numeric_reproduction_supported": false,
+    "role": "provenance reference only"
+  },
+  "retrieval_completed_at": "2026-09-03T00:40:54Z",
+  "retrieval_started_at": "2026-09-03T00:40:43Z",
+  "snapshot_id": "20260903T004043Z",
+  "source_id": "austin_wpd_problem_score_documentary_context"
+}

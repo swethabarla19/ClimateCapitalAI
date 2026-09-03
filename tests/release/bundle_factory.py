@@ -1,4 +1,4 @@
-"""Narrow in-memory/temporary technical objects for M1 contract tests only."""
+"""Narrow technical objects for contract tests and the development fixture."""
 
 from __future__ import annotations
 
@@ -36,8 +36,174 @@ GOVERNED_CSV = (
 
 MEMO_SOURCE_ID = "austin_wpd_2026_bond_projects_2025_11_21"
 RNA_SOURCE_ID = "austin_rna_projects_layer_8_live"
+FEMA_SOURCE_ID = "austin_floodpro_fema_layer_8_live"
+EAZ_SOURCE_ID = "austin_equity_analysis_zones_2021"
+PROBLEM_SCORE_SOURCE_ID = "austin_wpd_problem_score_documentary_context"
 BENCHMARK_SOURCE_ID = "austin_2026_bond_initial_draft_2026_01_21"
-DATA_VERSION = "m1-contract-test-1"
+DATA_VERSION = "m2b-development-fixture-1"
+
+
+# Exact derived-purpose facts from the locked all-37 methodology audit. These are
+# governed fixture facts, not City taxonomy or eligibility labels.
+PURPOSE_AUDIT = {
+    "4015.001": ("Water/wastewater infrastructure", "Name", "HIGH", "No current RNA match"),
+    "5282.043": (
+        "Local flood/local drainage, mixed stormwater treatment",
+        "Name + RNA description",
+        "MEDIUM",
+        "RNA describes hydrology, water quality, and flood benefit; not a pure drainage-only purpose",
+    ),
+    "5282.133": (
+        "Stormwater treatment/water quality",
+        "Name + RNA",
+        "HIGH",
+        "Green-infrastructure retrofit, not common local-flood severity",
+    ),
+    "5282.134": (
+        "Stormwater treatment/water quality",
+        "Name + RNA",
+        "HIGH",
+        "Treatment retrofit, not common local-flood severity",
+    ),
+    "5282.150": ("Stormwater treatment/water quality", "Name", "HIGH", "No current RNA match"),
+    "5282.162": (
+        "Stormwater treatment/water quality",
+        "Name",
+        "HIGH",
+        "CAPEX program/control wording, no current RNA match",
+    ),
+    "5754.089": (
+        "Low-water crossing/roadway flood safety",
+        "Name + RNA",
+        "HIGH",
+        "Different safety/benefit mechanism from local drainage",
+    ),
+    "5754.139": (
+        "Creek flood-risk reduction",
+        "Name",
+        "HIGH",
+        "No current RNA match; not a local storm-drain project",
+    ),
+    "5754.145": (
+        "Low-water crossing/roadway flood safety",
+        "Name",
+        "HIGH",
+        "No current RNA match",
+    ),
+    "5754.147": (
+        "Mixed flood-control channel/ecosystem restoration",
+        "Name",
+        "HIGH",
+        "Mixed flood-control and ecological purpose",
+    ),
+    "5754.149": (
+        "Low-water crossing/roadway flood safety",
+        "Name",
+        "HIGH",
+        "No current RNA match",
+    ),
+    "5789.075": (
+        "Local flood/local drainage",
+        "Name + RNA description",
+        "HIGH",
+        "None material for purpose",
+    ),
+    "5789.107": (
+        "Local flood/local drainage",
+        "Name + RNA description",
+        "HIGH",
+        "Includes homes, streets, and low-water-crossing work within one local project",
+    ),
+    "5789.121": (
+        "Local flood/local drainage",
+        "Name + RNA description",
+        "HIGH",
+        "None material for purpose",
+    ),
+    "5789.126": (
+        "Local flood/local drainage",
+        "Name + RNA description",
+        "HIGH",
+        "None material for purpose",
+    ),
+    "5789.127": (
+        "Water/wastewater infrastructure; identity/purpose unresolved",
+        "Name + conflicting RNA name/description",
+        "LOW",
+        "Governed name says water/wastewater renewal; exact-ID RNA record says storm-drain improvements",
+    ),
+    "5789.136": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "5789.139": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "5789.141": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "5789.150": (
+        "Local-drainage renewal program",
+        "Name",
+        "HIGH",
+        "Citywide program is not a discrete project-level geography",
+    ),
+    "5789.145": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "5789.146": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "5848.053": (
+        "Erosion/stream rehabilitation",
+        "Name + RNA",
+        "HIGH",
+        "Different benefit mechanism from local drainage",
+    ),
+    "5848.070": ("Erosion/channel stabilization", "Name", "HIGH", "No current RNA match"),
+    "5848.071": (
+        "Erosion/stream restoration",
+        "Name + RNA",
+        "HIGH",
+        "Different benefit mechanism from local drainage",
+    ),
+    "5848.087": ("Erosion protection", "Name", "HIGH", "No current RNA match"),
+    "5848.091": ("Erosion/stream stabilization", "Name", "HIGH", "No current RNA match"),
+    "5848.092": ("Erosion/stream stabilization", "Name", "HIGH", "No current RNA match"),
+    "6039.109": (
+        "Mixed/integrated drainage",
+        "Name + RNA",
+        "MEDIUM",
+        "Integrated project may combine local, creek, and other drainage purposes",
+    ),
+    "7492.011": (
+        "Dam/flood-control infrastructure",
+        "Name + RNA",
+        "HIGH",
+        "Dam modernization is not comparable to local drainage",
+    ),
+    "7492.032": (
+        "Dam/flood-control infrastructure",
+        "Name + RNA",
+        "HIGH",
+        "Minor source-name variation: rehabilitation versus maintenance",
+    ),
+    "7492.045": ("Dam/flood-control infrastructure", "Name", "HIGH", "No current RNA match"),
+    "8598.014": ("Local flood/local drainage", "Name", "HIGH", "No current RNA match"),
+    "9999.235": (
+        "Low-water crossing/roadway flood safety",
+        "Name",
+        "HIGH",
+        "No current RNA match",
+    ),
+    "9999.236": (
+        "Low-water crossing/roadway flood safety",
+        "Name",
+        "HIGH",
+        "No current RNA match",
+    ),
+    "10878.010": (
+        "Flood-control/tunnel infrastructure",
+        "Name",
+        "HIGH",
+        "No current RNA match; not a local drainage project",
+    ),
+    "11889.004": (
+        "Transportation/corridor infrastructure",
+        "Name + RNA type/department",
+        "MEDIUM",
+        "Exact-ID RNA name differs materially from the governed corridor extent",
+    ),
+}
 
 
 def canonical_bytes(value: Any) -> bytes:
@@ -97,7 +263,64 @@ def _source_references() -> dict[str, dict[str, Any]]:
             "attribution_text": "City of Austin current RNA Projects layer.",
             "known_limitations": ["Current display geometry does not establish January 2026 state."],
         },
-        BENCHMARK_SOURCE_ID: {
+        FEMA_SOURCE_ID: {
+"source_id": FEMA_SOURCE_ID,
+"publisher": "City of Austin",
+"title": "FloodPro - FEMA Floodplain Layer 8",
+"source_url": "https://maps.austintexas.gov/gis/rest/FloodPro/FloodPro/MapServer/8",
+"source_vintage": "Live/current service; content vintage unknown",
+"published_date": None,
+"retrieval_timestamp": "2026-09-03T00:18:16Z",
+"sha256": "e8d5760838454c74dd9752c3a6dd77663e3e61649a28bbf0e2c69471bcef090f",
+"byte_size": 4_823,
+"gcs_object": None,
+"historical_fit": "HISTORICAL_FIT_UNCERTAIN",
+"license_reuse_status": "UNVERIFIED",
+"attribution_text": "City of Austin FloodPro FEMA Floodplain Layer 8.",
+"known_limitations": [
+"Identity is the immutable local snapshot manifest for the multipart acquisition.",
+"Current FEMA context does not establish January 2026 state, project severity, benefit, eligibility, or priority.",
+],
+},
+EAZ_SOURCE_ID: {
+"source_id": EAZ_SOURCE_ID,
+"publisher": "City of Austin",
+"title": "Equity Analysis Zones 2021",
+"source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/Equity_Analysis_Zones_2021/FeatureServer/0",
+"source_vintage": "2021 snapshot using 2019 ACS five-year inputs",
+"published_date": None,
+"retrieval_timestamp": "2026-09-03T00:36:45Z",
+"sha256": "58e4dada99490044bb3fd782868429db06d6821eeb8aa0f626059992c3ab06be",
+"byte_size": 764_207,
+"gcs_object": None,
+"historical_fit": "HISTORICALLY_VALID",
+"license_reuse_status": "UNVERIFIED",
+"attribution_text": "City of Austin Equity Analysis Zones 2021.",
+"known_limitations": [
+"Historically valid only as the dated 2021 contextual snapshot.",
+"Project-level equity context requires defensible geography and is not a beneficiary or priority measure.",
+],
+},
+PROBLEM_SCORE_SOURCE_ID: {
+"source_id": PROBLEM_SCORE_SOURCE_ID,
+"publisher": "City of Austin - Watershed Protection Department",
+"title": "Watershed Problem Score Documentary Context",
+"source_url": "https://services.austintexas.gov/edims/document.cfm?id=261630",
+"source_vintage": "City documentary context from preserved methodology budget-response and related documents",
+"published_date": None,
+"retrieval_timestamp": "2026-09-03T00:40:43Z",
+"sha256": "c2bd25d7a63f7fb4149b12e0aeb18706a1257f3346e96cc228f2d5ef0c821655",
+"byte_size": 2_577,
+"gcs_object": None,
+"historical_fit": "HISTORICALLY_VALID",
+"license_reuse_status": "UNVERIFIED",
+"attribution_text": "City of Austin Watershed Problem Score documentary context.",
+"known_limitations": [
+"Identity is the immutable local snapshot manifest enumerating the three preserved documents.",
+"Historically valid as documentary provenance only; association strength is not numeric Local Flood severity.",
+],
+},
+BENCHMARK_SOURCE_ID: {
             "source_id": BENCHMARK_SOURCE_ID,
             "publisher": "City of Austin - Capital Delivery Services",
             "title": "2026 Bond Initial Draft Project Recommendation",
@@ -131,18 +354,31 @@ def _evidence_item(
     fact_kind: str | None = None,
     source_id: str = MEMO_SOURCE_ID,
     confidence: str | None = None,
-    transformation_version: str | None = "m1-contract-test/1",
+    transformation_version: str | None = "development-fixture/1",
 ) -> dict[str, Any]:
     available = availability == "AVAILABLE"
     source = _source_references()[source_id]
+    fixture_state = availability == "NOT_EVALUATED_FIXTURE"
     return {
         "evidence_id": f"{project_id}:{evidence_type.lower()}",
         "evidence_type": evidence_type,
         "evidence_role": role,
         "fact_kind": fact_kind,
         "availability": availability,
-        "reason_code": None if available else f"{evidence_type.lower()}:not_available",
-        "explanation": "Contract-test object using governed or locked methodology state.",
+        "reason_code": (
+            None
+            if available
+            else (
+                f"fixture:{evidence_type.lower()}:not_evaluated"
+                if fixture_state
+                else f"{evidence_type.lower()}:not_available"
+            )
+        ),
+        "explanation": (
+            "Development-fixture curation has not evaluated this evidence item."
+            if fixture_state
+            else "Development fixture using governed or locked methodology state."
+        ),
         "value": value if available else None,
         "unit": None,
         "category": None,
@@ -152,7 +388,7 @@ def _evidence_item(
         "association_method": None,
         "transformation_version": transformation_version,
         "coverage_scope": "Governed project record",
-        "limitations": ["Technical contract object; not a reviewed release artifact."],
+        "limitations": ["Development fixture; not a reviewed release artifact."],
         "confidence": confidence,
         "confidence_meaning": "Purpose classification strength only" if confidence else None,
         "public_label": evidence_type.replace("_", " ").title(),
@@ -161,12 +397,21 @@ def _evidence_item(
 
 
 def _project_evidence(
-    project_id: str, request_dollars: int, family: bool, geography_status: str
+    project_id: str,
+    request_dollars: int,
+    family: bool,
+    geography_status: str,
+    purpose_label: str,
+    purpose_confidence: str,
+    release_tier: str,
 ) -> list[dict[str, Any]]:
     if geography_status == "DISPLAY_GEOMETRY_AVAILABLE":
         rna_availability, rna_value = "AVAILABLE", True
     elif geography_status == "DISPLAY_GEOMETRY_MISSING":
-        rna_availability, rna_value = "MISSING", None
+        rna_availability = (
+            "NOT_EVALUATED_FIXTURE" if release_tier == "FIXTURE" else "MISSING"
+        )
+        rna_value = None
     else:
         rna_availability, rna_value = "NOT_APPLICABLE", None
     return [
@@ -191,9 +436,9 @@ def _project_evidence(
             "DERIVED_PURPOSE",
             "FACT",
             "AVAILABLE",
-            value="Locked purpose classification",
+            value=purpose_label,
             fact_kind="CLIMATE_CAPITAL_DERIVED",
-            confidence="HIGH",
+            confidence=purpose_confidence,
             transformation_version="p0-purpose-classification/2026-09-01",
         ),
         _evidence_item(
@@ -210,6 +455,7 @@ def _project_evidence(
             "PROBLEM_SCORE_ASSOCIATION",
             "CONTEXTUAL_EVIDENCE",
             "NOT_EVALUATED_FIXTURE",
+            source_id=PROBLEM_SCORE_SOURCE_ID,
         ),
         _evidence_item(
             project_id,
@@ -224,12 +470,14 @@ def _project_evidence(
             "FEMA_CURRENT_HAZARD_CONTEXT",
             "CONTEXTUAL_EVIDENCE",
             "NOT_EVALUATED_FIXTURE",
+            source_id=FEMA_SOURCE_ID,
         ),
         _evidence_item(
             project_id,
             "EAZ_2021_CONTEXT",
             "CONTEXTUAL_EVIDENCE",
             "NOT_EVALUATED_FIXTURE",
+            source_id=EAZ_SOURCE_ID,
         ),
         _evidence_item(
             project_id,
@@ -261,6 +509,9 @@ def build_catalog(
     family_ids = set(ACTIVE_FAMILY_PROJECT_IDS)
     for row in rows:
         project_id = row["subproject_id"]
+        purpose_label, purpose_evidence, purpose_confidence, purpose_ambiguity = (
+            PURPOSE_AUDIT[project_id]
+        )
         family = project_id in family_ids
         if project_id == "5789.150":
             geography_status = "NON_PROJECT_GEOGRAPHY"
@@ -286,13 +537,13 @@ def build_catalog(
                     "council_districts_source": row["council_districts_source"],
                 },
                 "purpose": {
-                    "label": "Locked purpose classification",
+                    "label": purpose_label,
                     "evidence_role": "FACT",
                     "fact_kind": "CLIMATE_CAPITAL_DERIVED",
-                    "confidence": "HIGH",
+                    "confidence": purpose_confidence,
                     "confidence_meaning": "Purpose classification strength only",
-                    "evidence_summary": "Purpose is a ClimateCapital derivation governed by the Methodology Lock.",
-                    "ambiguity_or_conflict": "See the authoritative all-37 purpose audit.",
+                    "evidence_summary": purpose_evidence,
+                    "ambiguity_or_conflict": purpose_ambiguity,
                     "transformation_version": "p0-purpose-classification/2026-09-01",
                 },
                 "p0_family": {
@@ -305,7 +556,15 @@ def build_catalog(
                 },
                 "geography_status": geography_status,
                 "program_scope": program_scope,
-                "evidence": _project_evidence(project_id, request, family, geography_status),
+                "evidence": _project_evidence(
+                    project_id,
+                    request,
+                    family,
+                    geography_status,
+                    purpose_label,
+                    purpose_confidence,
+                    release_tier,
+                ),
                 "provenance_refs": [MEMO_SOURCE_ID],
             }
         )
@@ -334,7 +593,16 @@ def build_catalog(
             "provisional_climatecapital_derivation": True,
             "not_city_taxonomy_or_eligibility": True,
         },
-        "source_references": {key: sources[key] for key in (MEMO_SOURCE_ID, RNA_SOURCE_ID)},
+        "source_references": {
+            key: sources[key]
+            for key in (
+                MEMO_SOURCE_ID,
+                RNA_SOURCE_ID,
+                FEMA_SOURCE_ID,
+                EAZ_SOURCE_ID,
+                PROBLEM_SCORE_SOURCE_ID,
+            )
+        },
         "unsupported_metric_definitions": [
             {
                 "metric_id": metric,
@@ -381,7 +649,7 @@ def build_map(
                     "source_id": RNA_SOURCE_ID,
                     "source_vintage": "Live/current service; content vintage unknown",
                     "historical_fit": "HISTORICAL_FIT_UNCERTAIN",
-                    "transformation_version": "m1-test-geometry/1",
+                    "transformation_version": "development-fixture-geometry/1",
                     "limitations": ["Technical geometry for contract validation only."],
                     "project_id": project_id,
                 },
@@ -402,10 +670,10 @@ def build_map(
             {
                 "layer_id": layer_id,
                 "source_crs": "Source-specific governed CRS",
-                "transformation_tool": "M1 contract-test serializer",
-                "transformation_version": "m1-test-geometry/1",
+                "transformation_tool": "Development-fixture serializer",
+                "transformation_version": "development-fixture-geometry/1",
                 "validation": "Finite RFC 7946 coordinates validated.",
-                "limitations": ["Technical contract object; not reviewed display geometry."],
+                "limitations": ["Development fixture; not reviewed display geometry."],
             }
             for layer_id in (
                 "rna_current_project_display",
@@ -451,7 +719,7 @@ def build_benchmark(*, release_tier: str = "FIXTURE") -> dict[str, Any]:
             "published_title": "2026 Bond Initial Draft Project Recommendation",
             "published_date": "2026-01-21",
             "source_snapshot_sha256": source["sha256"],
-            "extraction_version": "m1-benchmark-contract-test/1",
+            "extraction_version": "development-fixture-benchmark/1",
         },
         "source_references": {BENCHMARK_SOURCE_ID: source},
         "published_portfolio_summary": {
@@ -459,18 +727,18 @@ def build_benchmark(*, release_tier: str = "FIXTURE") -> dict[str, Any]:
                 "availability": "NOT_EVALUATED_FIXTURE",
                 "unit": "USD",
                 "reason_code": "benchmark:not_evaluated_fixture",
-                "explanation": "Published allocation is not evaluated in M1.",
+                "explanation": "Published allocation is not evaluated in this development fixture.",
             },
             "city_included_count": {
                 "availability": "NOT_EVALUATED_FIXTURE",
                 "reason_code": "benchmark:not_evaluated_fixture",
-                "explanation": "Published included count is not evaluated in M1.",
+                "explanation": "Published included count is not evaluated in this development fixture.",
             },
-            "explanation": "Benchmark extraction is not part of M1.",
+            "explanation": "Benchmark extraction is not part of this development fixture.",
         },
         "published_project_treatments": [],
-        "transformation_version": "m1-benchmark-contract-test/1",
-        "limitations": ["Technical fixture contract only; no benchmark treatment asserted."],
+        "transformation_version": "development-fixture-benchmark/1",
+        "limitations": ["Development fixture only; no benchmark treatment asserted."],
         "reconciliation": {
             "entry_count": 0,
             "available_amount_total_dollars": 0,
@@ -556,9 +824,9 @@ def build_bundle(
         "approved_source_ids": approved_source_ids,
         "sources": [sources[source_id] for source_id in approved_source_ids],
         "transformation_versions": {
-            "extractor": "m1-contract-test/1",
-            "join": "m1-contract-test/1",
-            "geometry": "m1-test-geometry/1",
+            "extractor": "development-fixture/1",
+            "join": "development-fixture/1",
+            "geometry": "development-fixture-geometry/1",
             "classification": "p0-purpose-classification/2026-09-01",
             "serializer": "canonical-json/1",
         },

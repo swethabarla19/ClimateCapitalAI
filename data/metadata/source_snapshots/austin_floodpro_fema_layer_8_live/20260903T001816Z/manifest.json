@@ -1,0 +1,132 @@
+{
+  "canonical_source": {
+    "analytical_role": "contextual",
+    "dataset_name": "FloodPro - FEMA Floodplain",
+    "historical_fit": "uncertain",
+    "historical_limitation": "Live/current service state does not establish the exact January 2026 layer state.",
+    "layer_id": 8,
+    "layer_name": "FEMA Floodplain",
+    "layer_url": "https://maps.austintexas.gov/gis/rest/FloodPro/FloodPro/MapServer/8",
+    "license_reuse_basis": "Preserved layer metadata has an empty copyright field and no explicit reuse or redistribution grant.",
+    "license_reuse_status": "UNVERIFIED",
+    "publisher": "City of Austin",
+    "service_url": "https://maps.austintexas.gov/gis/rest/FloodPro/FloodPro/MapServer"
+  },
+  "evidence_semantics": {
+    "may_support": [
+      "current FEMA hazard context where defensible project geometry exists"
+    ],
+    "must_not_establish": [
+      "eligibility",
+      "project priority",
+      "expected flood-reduction benefit",
+      "people benefiting",
+      "structures benefiting"
+    ],
+    "role": "CONTEXTUAL_EVIDENCE"
+  },
+  "geometry": {
+    "geometry_type": "esriGeometryPolygon",
+    "latest_wkid": 2277,
+    "source_wkid": 102739
+  },
+  "manifest_version": 1,
+  "object_id_reconciliation": {
+    "every_requested_object_id_returned_exactly_once": true,
+    "post_count": 9315,
+    "pre_count": 9315,
+    "returned_feature_count": 9315,
+    "sets_equal": true
+  },
+  "response_inventory": [
+    {
+      "byte_size": 4855,
+      "filename": "service.json",
+      "retrieved_at": "2026-09-03T00:18:16Z",
+      "sha256": "sha256:c1b5e690379cabd050cb1641c8926744b1be1e255c777d91046da44b8ed28d31"
+    },
+    {
+      "byte_size": 7335,
+      "filename": "layer.json",
+      "retrieved_at": "2026-09-03T00:18:17Z",
+      "sha256": "sha256:2f88b91c94c2047c208ece33e4bd3cbcbd112f6a9a159fb9fea1566a5135b149"
+    },
+    {
+      "byte_size": 45514,
+      "filename": "object_ids_pre.json",
+      "retrieved_at": "2026-09-03T00:18:17Z",
+      "sha256": "sha256:c8823435e759ca08b3b3016d4f01152013f4ab93fddccf55c152429fdba1c2e5"
+    },
+    {
+      "byte_size": 20297634,
+      "filename": "features_0001.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:17Z",
+      "sha256": "sha256:5efcb1b2f1679f51a80a6bb34c2454978af7c59a8017b4bbabfc089c9e33a0ad"
+    },
+    {
+      "byte_size": 21948416,
+      "filename": "features_0002.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:21Z",
+      "sha256": "sha256:8fc813caf2de05c2c7ace10670b67cd04d03a7e6ebb8a4bc0cc6e07dc49208e0"
+    },
+    {
+      "byte_size": 22172367,
+      "filename": "features_0003.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:25Z",
+      "sha256": "sha256:82cf4e921bbed5f0418f3134089fa19e4b7ba768d156c84ec6419f5b34b307d6"
+    },
+    {
+      "byte_size": 20396107,
+      "filename": "features_0004.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:30Z",
+      "sha256": "sha256:c7d1bf1a338e2617d1b202aad6b51f908f1744a468cb68d5049d1782ddc6a246"
+    },
+    {
+      "byte_size": 16679780,
+      "filename": "features_0005.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:39Z",
+      "sha256": "sha256:00cf6e0ecfe379bc34a972d4864bdb78960ed199dec2df69100041d2af4a3d62"
+    },
+    {
+      "byte_size": 21575398,
+      "filename": "features_0006.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:42Z",
+      "sha256": "sha256:25a9e2b1830206fd4a34025a2c5e8c2d470592b23db9aa2b831d05adb883d96d"
+    },
+    {
+      "byte_size": 32437315,
+      "filename": "features_0007.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:48Z",
+      "sha256": "sha256:42701c25bcba89b857e7446d04b5534dfaadb79783aa60bf3fd05cc5de2d2801"
+    },
+    {
+      "byte_size": 28948765,
+      "filename": "features_0008.arcgis.json",
+      "retrieved_at": "2026-09-03T00:18:56Z",
+      "sha256": "sha256:36077638d2e2677d429eb6897a66c31140be1cb40cb9e7ca390ad3946f1dbf73"
+    },
+    {
+      "byte_size": 20118934,
+      "filename": "features_0009.arcgis.json",
+      "retrieved_at": "2026-09-03T00:19:07Z",
+      "sha256": "sha256:31ecfdbc34658f65bfca6c2228f54edb5312ae1da3daa38198135d0ca53345b5"
+    },
+    {
+      "byte_size": 6810304,
+      "filename": "features_0010.arcgis.json",
+      "retrieved_at": "2026-09-03T00:19:14Z",
+      "sha256": "sha256:7824ea9ec264a0b7e24c575cb766cb733b2efcd99a820fcb9074da91931ad01f"
+    },
+    {
+      "byte_size": 45514,
+      "filename": "object_ids_post.json",
+      "retrieved_at": "2026-09-03T00:19:16Z",
+      "sha256": "sha256:c8823435e759ca08b3b3016d4f01152013f4ab93fddccf55c152429fdba1c2e5"
+    }
+  ],
+  "retrieval_completed_at": "2026-09-03T00:19:17Z",
+  "retrieval_started_at": "2026-09-03T00:18:16Z",
+  "snapshot_id": "20260903T001816Z",
+  "snapshot_identity": "UTC retrieval timestamp only; not a historical FEMA effective-date assertion",
+  "source_id": "austin_floodpro_fema_layer_8_live"
+}

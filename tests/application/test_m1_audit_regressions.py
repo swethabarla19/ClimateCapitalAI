@@ -415,10 +415,12 @@ class AuditContractRegressionTests(unittest.TestCase):
         registry_path = REPOSITORY_ROOT / "data/metadata/source_registry.csv"
         with registry_path.open(newline="", encoding="utf-8") as handle:
             registry = {row["source_id"]: row for row in csv.DictReader(handle)}
-        self.assertEqual(set(REGISTERED_SOURCE_IDENTITIES), set(registry))
+        self.assertLessEqual(set(REGISTERED_SOURCE_IDENTITIES), set(registry))
         historical_fit = {
             "valid": "HISTORICALLY_VALID",
             "uncertain": "HISTORICAL_FIT_UNCERTAIN",
+            "valid_as_dated_2021_snapshot": "HISTORICALLY_VALID",
+            "valid_as_documentary_context_only": "HISTORICALLY_VALID",
         }
         for source_id, expected in REGISTERED_SOURCE_IDENTITIES.items():
             row = registry[source_id]
@@ -431,10 +433,18 @@ class AuditContractRegressionTests(unittest.TestCase):
             self.assertEqual(expected.sha256, row["checksum"].removeprefix("sha256:"))
             self.assertEqual(expected.historical_fit, historical_fit[row["historical_fit"]])
             self.assertEqual(expected.analytical_role, row["analytical_role"])
+            self.assertTrue(row["license_notes"].startswith(expected.license_reuse_status))
         progress = (REPOSITORY_ROOT / "PROJECT_PROGRESS.md").read_text(encoding="utf-8")
         for source_id, expected in REGISTERED_SOURCE_IDENTITIES.items():
-            if source_id != "austin_rna_projects_layer_8_live":
-                self.assertIn(f"{expected.gcs_uri}#{expected.gcs_generation}", progress)
+            if (
+                source_id != "austin_rna_projects_layer_8_live"
+                and expected.gcs_uri is not None
+                and expected.gcs_generation is not None
+            ):
+                self.assertIn(
+                    f"{expected.gcs_uri}#{expected.gcs_generation}",
+                    progress,
+                )
         receipt = json.loads(
             (
                 REPOSITORY_ROOT

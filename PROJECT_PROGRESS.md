@@ -43,50 +43,45 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | Approved P0 topology, services, deployment, security, observability, cost, and implementation order | [docs/architecture/p0-architecture.md](docs/architecture/p0-architecture.md) |
 | Approved release artifacts, runtime APIs, session state, Funding Plan, benchmark, and Gemini contracts | [docs/architecture/data-contracts.md](docs/architecture/data-contracts.md) |
 | Superseded pre-lock technical planning reference | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
-| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 and M1 explicitly approved 2026-09-02 |
+| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 and M1 explicitly approved 2026-09-02; M2A and M2B explicitly approved 2026-09-03 |
 
 Git is the version history for all repository memory. Fresh tasks must not depend on
 access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-02
+- **Last updated:** 2026-09-03
 - **Project stage:** Methodology, Product/Design, and Architecture Locks are
   complete and reconciled. The architecture-informed delivery baseline is approved.
-  The independent closure audit returned A — APPROVE M1 with no changes required.
-  M1 is approved and complete as of 2026-09-02.
-- **Current milestone:** M1 contract and fail-closed release-validator milestone
-  approved and complete on 2026-09-02.
-- **Next milestone:** M2A governed data foundation. No M2 work began during M1
-  approval and publication.
-- **Delivery context:** The September 3 team touchpoint expects visible data-layer
-  and integration progress, and the completed/deployed application is expected
-  September 9. This execution context does not change Product, Methodology,
+  M1 is complete and explicitly approved. M2A controlled data prerequisites and
+  M2B fixture/deterministic Funding Plan engine are now complete and explicitly
+  approved on 2026-09-03.
+- **Current milestone:** M3 — Core APIs.
+- **Next gate:** Implement and verify the local same-origin health/bootstrap/plan/
+  benchmark API milestone without beginning frontend, Gemini, reviewed-data
+  integration, or deployment work prematurely.
+- **Delivery context:** The completed/deployed application is expected September 9.
+  This execution context does not change Product, Methodology,
   Evidence/source-governance, or Architecture authority.
-- **Working state:** Git repository on main, connected to the public
-  swethabarla19/ClimateCapitalAI GitHub repository, with documentation, the source
-  registry/fetch foundation, one pinned data-extraction dependency, a fail-closed
-  Watershed table extractor, a Git-tracked 37-record source-universe CSV, one
-  pinned BigQuery client dependency, a create-only raw loader, durable SQL quality
-  checks, focused validation tests, a native ArcGIS acquisition/matching workflow,
-  and Git-tracked snapshot provenance and match artifacts. The raw PDFs and GIS
-  responses remain ignored locally and are preserved at exact generation-verified
-  Cloud Storage paths; the source-universe CSV remains in one validated `raw`
-  BigQuery table. The repository now also contains one authoritative P0 methodology
-  methodology document, reconciled Product/Design handoff documents, and the
-  authoritative P0 architecture/data contracts, and three approved
-  architecture-informed delivery plans, initial strict Pydantic contract models,
-  22 generated JSON Schemas, and a fail-closed four-file release validator. No
-  production pipeline, release bundle, plan engine, runtime API, frontend, score,
-  rank, weight model, or optimizer exists.
-- **Most recent outcome:** The independent closure audit returned A — APPROVE M1
-  with no changes required and recommended approval and commit. Published schemas
-  express representable membership/evidence/governed-identity constraints,
-  fingerprint verification reports exact truth, plan comparison is derived from
-  both evaluated plans, and API deployment/artifact release tiers agree. Four
-  focused regressions, 31 application-contract tests, 33 release-validator tests,
-  and all 110 repository tests pass. No reviewed or fixture bundle was added, no
-  domain authority changed, and no M2 or cloud work began.
+- **Working state:** Git repository on `main`, connected to the public
+  `swethabarla19/ClimateCapitalAI` GitHub repository. The approved M2 working tree
+  is still uncommitted pending explicit commit/push authorization. The governed
+  37-project / $327,970,000 source universe remains exact; the locked analytical
+  family remains 12 projects / $143,005,000. Current RNA evidence remains 15/37
+  exact governed-project matches and 5/12 active-family matches. FEMA layer 8,
+  EAZ 2021, Problem Score documentary context, RNA, and the historical benchmark
+  have explicit governed provenance/reuse metadata. M2B contains a persistent
+  four-file development `FIXTURE` and deterministic server-authoritative plan
+  evaluator. No M3 runtime API, frontend, reviewed release bundle, Gemini provider
+  integration, application database, container, or deployment exists yet.
+- **Most recent outcome:** M2A/M2B received explicit user approval on 2026-09-03
+  after two independent closure audits and a final local correction/verification
+  pass. The final blocker—incorrect fixture provenance for Problem Score, FEMA,
+  and EAZ—was corrected. Registered source authority, canonical registry metadata,
+  fixture source references, historical fit, optional approved-GCS-pin semantics,
+  and direct regression coverage now reconcile. Final verification passed:
+  54 application tests, 41 release tests, 142 full-repository tests, 22 generated
+  schemas, `pip check`, and `git diff --check`. No unresolved M2 blocker remains.
 
 ## Approved Locks
 
@@ -132,36 +127,79 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Record the independent M1 approval, publish the approved M1 working
-  set, and stop before M2.
-- **Status:** M1 is approved and complete following an independent closure-audit
-  verdict of A with no changes required. The implementation contains
-  no release-data bundle, runtime API, plan engine, frontend, Gemini call, source
-  acquisition, deployment, IAM, billing, or other cloud mutation.
-- **Owner:** User and Codex.
+- **Goal:** Record the explicitly approved M2A/M2B closure, publish the approved
+  checkpoint after separate user commit/push authorization, and then begin M3.
+- **Status:** M2A and M2B are complete and explicitly approved as of 2026-09-03.
+  The approved working tree remains uncommitted. No M3 implementation has begun.
+- **Owner:** User and implementation tooling.
 - **Required reading:** AGENTS.md, this file,
-  docs/methodology/p0-evidence-methodology.md, the reconciled files under
-  docs/product, docs/delivery/execution-plan.md, docs/decisions.md, and the
-  docs/architecture/p0-architecture.md and data-contracts.md, and the reconciled
-  delivery/decision files. The technical reference is now superseded.
-- **Exit condition:** Record approval, commit and push only the approved M1 scope,
-  verify Git synchronization, and stop before M2A or M2B.
+  docs/methodology/p0-evidence-methodology.md, docs/product,
+  docs/delivery/execution-plan.md, docs/decisions.md,
+  docs/architecture/p0-architecture.md, docs/architecture/data-contracts.md,
+  docs/delivery/implementation-plan.md, docs/delivery/test-plan.md, and
+  docs/delivery/milestones.md.
+- **Exit condition:** Publish the approved M2 checkpoint only after explicit
+  commit/push authorization, then begin M3 within its approved API-only boundary.
 
 ## Next Actions
 
-1. In a new implementation session, begin M2A governed data foundation without
-   reopening or refactoring the approved M1 contracts.
-2. Follow the user-directed execution order without refactoring
-   or scope expansion: M2A governed data foundation; BigQuery load/reconciliation;
-   one RNA/Stormwater GIS integration; one contract-valid release artifact through
-   the M1 validator; then a thin read-only backend/API only if time remains.
-3. Do not perform another broad source hunt, inspect SVI, manufacture project
-   geography, or reintroduce expected benefit, scores, ranks, weights, or an
-   optimization objective without a later explicit methodology revision.
-4. Separately verify organizer submission artifacts, judging criteria, finale
-   date, and conditional live-demo format.
+1. Record M2A/M2B approval in the delivery milestone document and inspect the final
+   repository diff/status.
+2. After explicit user authorization, stage the complete approved M2 working set,
+   inspect the staged diff, commit, and push `main`.
+3. Begin M3 only after the approved M2 checkpoint is published: startup fixture
+   loading/validation, `/healthz`, bootstrap, deterministic plan-evaluation API,
+   and isolated benchmark API/comparator.
+4. Do not begin frontend work until M3 closes; do not begin reviewed-data
+   integration, Gemini, container/deployment, or broaden methodology/source
+   research prematurely.
+5. Separately verify organizer submission artifacts, judging criteria, finale date,
+   and conditional live-demo format before final submission closeout.
+
+## Active Implementation Checkpoint
+
+### 2026-09-03 — M2A/M2B approved closure checkpoint
+
+- **M2A:** Approved controlled prerequisites preserve the governed 37-project /
+  $327,970,000 universe, exact source provenance, historical fit, limitations,
+  conservative `UNVERIFIED` reuse states, and controlled acquisition boundaries.
+  RNA remains 15/37 exact matches overall and 5/12 within the analytical family;
+  geometry remains research-only and has no membership authority.
+- **M2B fixture:** Approved persistent four-file `FIXTURE` contains exact all-37
+  purpose/confidence semantics, uses `NOT_EVALUATED_FIXTURE` for deferred RNA
+  curation, preserves `5789.150` as citywide/non-project geography, invents no
+  geometry, and attributes Problem Score, FEMA, EAZ, and RNA evidence to their
+  correct governed sources.
+- **M2B evaluator:** Approved deterministic server-side evaluator resolves governed
+  requests only from the validated catalog, enforces the exact 12-project family,
+  evaluates all current/reference inputs independently, produces only supported
+  arithmetic/fingerprint/delta outputs, and contains no score, rank, optimizer,
+  recommendation, or geometry-derived membership authority.
+- **Source authority correction:** FEMA and Problem Score composite local snapshots
+  use immutable snapshot-manifest identities; EAZ uses the exact governed feature
+  payload. Sources with approved GCS pins remain exact-pin enforced; sources
+  explicitly governed without a GCS object cannot fabricate one.
+- **Final verification:** 54 application tests, 41 release tests, 142 total tests,
+  22 schema checks, `pip check`, and `git diff --check` all pass.
+- **Approval:** User explicitly approved M2A and M2B on 2026-09-03.
+- **Boundary:** Working tree remains uncommitted. No M3 API, frontend, reviewed
+  release bundle, Gemini integration, container, or deployment work has begun.
 
 ## Completed Milestones
+
+- **2026-09-03 — M2A controlled data prerequisites and M2B fixture/deterministic
+  engine explicitly approved and complete:** Preserved and reconciled the approved
+  benchmark, RNA, FEMA FloodPro layer 8, EAZ 2021, and Problem Score documentary
+  inputs with explicit provenance, historical-fit, limitations, and conservative
+  reuse status. Built the conspicuous four-file development fixture without
+  invented analytical claims or geometry and implemented the deterministic
+  server-authoritative Funding Plan evaluator. Closure corrections fixed exact
+  purpose/confidence semantics, deferred RNA state, fixture Git visibility,
+  contextual evidence provenance, composite-source authority, and persistent
+  regression coverage. Final verification passed 54 application tests, 41 release
+  tests, 142 full-repository tests, 22 schema checks, dependency integrity, and
+  `git diff --check`. No M3, frontend, Gemini, deployment, or reviewed-release
+  implementation began before approval.
 
 - **2026-09-02 — M1 contract and validator milestone approved and complete:** Added the
   pinned Python 3.14.7/Pydantic 2.13.5 contract environment, centralized initial
@@ -280,10 +318,11 @@ and deployment remain unstarted.
 
 ## Active Risks
 
-- Source-license/reuse terms remain unverified and are recorded as such in the
-  source registry. Implementation requires only a focused metadata/reuse
-  confirmation for application-shipped City-derived layers, not broad source
-  reconnaissance.
+- Source-license/reuse terms remain explicitly `UNVERIFIED` for the governed
+  sources, including RNA, FEMA layer 8, EAZ 2021, and Problem Score documentary
+  context. The focused review and canonical metadata agree; reviewed-release use
+  remains blocked until supported confirmation exists, without broad source
+  reconnaissance or invented verification.
 - RNA Projects layer 8 and the current FloodPro services do not establish their
   January 2026 geometry/data state. RNA geometry is research-only for governed
   analysis; FEMA is current contextual hazard evidence only.
@@ -349,10 +388,11 @@ and deployment remain unstarted.
   plan reserves that evidence for the reviewed M5 bundle. The validator is proven
   against narrow temporary technical objects and material negative paths; final
   reviewed bytes and source-license completion remain later release gates.
-- The M1 machine source-authority map intentionally mirrors only the three sources
-  already present in the approved registry/preservation records. A later approved
-  registry change must update this enforcement map through contract change control;
-  bundle-internal source registration remains forbidden.
+- The M1 machine source-authority map remains the release allowlist for the three
+  exactly pinned/GCS-preserved sources. The canonical registry now also carries
+  three M2A sources with composite or locally preserved snapshot metadata; their
+  presence does not make them release-approved, and bundle-internal source
+  registration remains forbidden.
 - M2A/M2B producers must consume the exact M1 schemas. A field/meaning/enum change
   requires the locked contract change-control path rather than producer-specific
   relaxation or an unversioned compatibility shortcut.
@@ -448,8 +488,8 @@ Implemented, independently audited, and approved on 2026-09-02:
   sizes/checksums, exact governed source-row semantics, repository-authoritative
   source pins/provenance, governed/family/evidence/map/benchmark reconciliation,
   forbidden fields, and release tier; and
-- `tests/application/` and `tests/release/` contain 64 M1 tests. Temporary narrow
-  test objects are built only under test temporary directories; no fixture or
+- The original M1 tests continue to use narrow temporary objects. The later M2B
+  work adds a conspicuous persistent fixture and direct fixture regressions; no
   reviewed bundle is present in the repository.
 
 ### Evidence Repository
@@ -457,9 +497,13 @@ Implemented, independently audited, and approved on 2026-09-02:
 The minimal foundation is established:
 
 - data/metadata/source_registry.csv — canonical Git-tracked source metadata for
-  two authoritative PDFs and one live/current research-only GIS source, with
-  roles, historical-fit caveats, retrieval timestamps, and exact-byte SHA-256
-  checksums. The GIS source's January 2026 fit remains uncertain.
+  the two authoritative PDFs, RNA, FEMA FloodPro layer 8, EAZ 2021, and Problem
+  Score documentary context, with explicit roles, historical fit, retrieval,
+  checksum/inventory boundaries, and conservative reuse state. Registry presence
+  does not by itself confer reviewed-release authority.
+- data/metadata/m2a/source_reuse_review.csv — focused six-source reuse review;
+  RNA, FEMA, EAZ, and Problem Score are explicitly `UNVERIFIED` because preserved
+  metadata does not establish reuse permission for the exact bytes.
 - scripts/data/fetch_sources.py — standard-library HTTPS fetcher with deterministic
   paths, PDF-byte validation, exact-byte persistence, and overwrite refusal.
 - tests/test_source_ingestion.py — registry, checksum, HTTPS, metadata-update, and
@@ -593,6 +637,15 @@ remains explicit.
   safety tests.
 - tests/test_rna_projects_gis_reconnaissance.py — native source, provenance,
   matching, reconciliation, and cloud-preservation tests.
+- data/metadata/source_snapshots/austin_floodpro_fema_layer_8_live/,
+  data/metadata/source_snapshots/austin_equity_analysis_zones_2021/, and
+  data/metadata/source_snapshots/austin_wpd_problem_score_documentary_context/ —
+  controlled local snapshot manifests with exact response inventories, evidence
+  roles, historical-fit limits, and reuse state.
+- scripts/data/fetch_fema_floodplain_gis.py,
+  scripts/data/fetch_eaz_2021_gis.py, and
+  scripts/data/fetch_problem_score_sources.py — controlled acquisition commands
+  for the bounded M2A inputs; release/runtime builds do not invoke them.
 - docs/delivery/implementation-plan.md, test-plan.md, and milestones.md — approved
   together as the M0 delivery baseline on 2026-09-02.
 - .python-version — exact M1 application Python runtime pin.
@@ -604,7 +657,11 @@ remains explicit.
 - scripts/release/generate_schemas.py — generate/check tracked schema bytes.
 - scripts/release/validate_bundle.py — reviewed-release-default validator CLI with
   an explicit development-fixture mode.
-- tests/application/ and tests/release/ — M1 contract and release-validator tests.
+- release-data/fixture/ — conspicuous four-file M2B development fixture; not a
+  reviewed release.
+- backend/climatecapital/plans/ — deterministic M2B Funding Plan evaluator.
+- tests/application/ and tests/release/ — contract, evaluator, validator, and
+  direct persistent-fixture tests.
 
 Local branch: main. Public GitHub remote:
 https://github.com/swethabarla19/ClimateCapitalAI.git.
@@ -744,6 +801,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-03 | M2A/M2B closure-audit correction checkpoint | Corrected only findings 1–5; ran the 17-test focused correction set, application and release suites, full repository suite, schema check, dependency check, diff/status review, fixture tracking/validator checks, and later-scope scan | Passed: 17 focused tests, 54 application tests, 39 release tests, and 140 total tests; 22 schemas match; `pip check` passes. The full suite initially caught an attempted edit to the immutable uploaded RNA manifest; that edit was removed and the generation-verified bytes again pass. Final diff/status/scope checks are clean within M2A/M2B. No evaluator, M3/later implementation, cloud, staging, commit, or push change; M2A/M2B remain unapproved pending re-audit |
 | 2026-09-02 | Independent M1 closure approval | Independent closure audit reported by the user after the corrected M1 verification | A — APPROVE M1; no changes required; recommendation to approve and commit M1. Approval recording changes status only and introduces no implementation, authority, reviewed-data, M2, or cloud change |
 | 2026-09-02 | Second independent M1-audit correction pass | Corrected only published-schema parity, fingerprint truth, current/reference comparison derivation, and API deployment/artifact release-tier agreement; ran the four focused adversarial tests, application and release suites, full repository tests, deterministic schema check, compilation, dependency integrity, `git diff --check`, scope/authority scans, and final Git inspection | Passed: 4/4 focused regressions, 31 application tests, 33 release tests, and 110 total tests; 22 schemas match generated output; compilation and `pip check` pass; M1 remains unapproved pending re-review; no authority, M2, reviewed data, cloud, stage, commit, or push change |
 | 2026-09-02 | Independent-audit M1 correction pass | Recovered unchanged Git state and locked authority; mapped and corrected all ten audit findings; ran 27 focused application-contract tests, 33 focused release-validator tests, the complete repository suite, deterministic schema regeneration/check, Python compilation, dependency integrity, explicit adversarial regressions, authority/scope scans, Markdown checks, `git diff --check`, and final Git state inspection | Passed: 27 application tests, 33 release tests, and 106 total tests; 22 generated schemas match exactly; all requested invalid probes fail and permitted optional/partial cases pass; exact governed identities/facts, source authority/provenance, evidence semantics, canonical plan partitions/arithmetic, benchmark isolation, endpoint-typed responses, and deployment/data session identity now fail closed; no new authority/fact, release bundle, later-milestone surface, cloud action, stage, commit, or push; `pip check` passes |
@@ -775,6 +833,32 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-03 — Correct M2A/M2B closure-audit findings
+
+- **Objective:** Correct only the five independent closure-audit findings for the
+  uncommitted M2A/M2B working set and stop for re-audit without beginning M3.
+- **Fixture/contract:** Replaced generic/high purpose assumptions with the exact
+  all-37 locked audit, regenerated the four-file fixture at data version
+  `m2b-development-fixture-1`, used fixture state for incomplete RNA display
+  curation, retained the separate 15/37 and 5/12 RNA evidence, kept `5789.150`
+  citywide and featureless, and narrowly reconciled the cross-field contract with
+  the already-approved fixture rule. The deterministic evaluator did not change.
+- **Tracking/tests:** Added only the precise fixture-map `.gitignore` exception and
+  six direct persistent-fixture tests covering governed semantics, coverage,
+  citywide treatment, Git visibility/usability, validator modes, and evaluator
+  loading.
+- **M2A governance:** Reconciled historical-fit and conservative `UNVERIFIED`
+  reuse metadata across the canonical registry, focused review, acquisition
+  output, and new snapshot manifests for RNA, FEMA layer 8, EAZ 2021, and Problem
+  Score context. Preserved the previously uploaded RNA manifest bytes after the
+  full suite detected that mutating them would break its verified receipt.
+- **Verification:** Passed 17 focused tests, 54 application tests, 39 release
+  tests, 140 total tests, 22-schema parity, dependency integrity, and final
+  diff/status/scope checks. No staging, commit, push, cloud mutation, M3, frontend,
+  Gemini, deployment, refactor, or source research occurred.
+- **Handoff:** M2A and M2B are corrected but not approved or complete. Re-audit
+  this uncommitted checkpoint before any milestone closure or M3 work.
 
 ### 2026-09-02 — Approve and publish M1
 
