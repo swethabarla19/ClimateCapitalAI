@@ -1,4 +1,4 @@
-cat > README.md <<'EOF'
+
 # ClimateCapital AI
 
 **ClimateCapital AI** is an evidence-first decision-support prototype for exploring climate-relevant capital investments and building transparent funding scenarios.
