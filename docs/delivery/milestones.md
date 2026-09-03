@@ -1,7 +1,7 @@
 # ClimateCapital AI P0 Delivery Milestones
 
 > **Status:** Delivery baseline approved 2026-09-02; M0 and M1 explicitly approved
-> 2026-09-02; M2A and M2B explicitly approved 2026-09-03
+> 2026-09-02; M2A, M2B, and M3 explicitly approved 2026-09-03
 > **Rule:** Milestones are dependency-ordered. Approval of one milestone does not
 > silently authorize cloud mutation, deployment, commit, push, P1, or Later work.
 
@@ -13,8 +13,8 @@
 | M1 | Versioned contracts and fail-closed release validators | Complete; explicitly approved 2026-09-02 | None; local only |
 | M2A | Controlled data prerequisites and pinned approved inputs  | Complete; explicitly approved 2026-09-03 | Bounded existing GCS/query use only if separately authorized |
 | M2B | Exact-schema fixture and deterministic plan engine | Complete; explicitly approved 2026-09-03 | None; local only |
-| M3  | Health/bootstrap/plan/benchmark APIs | Next; M2B prerequisite satisfied | None; local only |
-| M4 | Application-track frontend and required product surfaces | Blocked by M3 | None; local only |
+| M3  | Health/bootstrap/plan/benchmark APIs | Complete; explicitly approved 2026-09-03 | None; local only |
+| M4 | Application-track frontend and required product surfaces | Next; M3 prerequisite satisfied | None; local only |
 | M5 | Reviewed pinned release-data bundle | Blocked by M2A | Bounded existing GCS/BigQuery release-gate use |
 | M6 | Reviewed-data integration and fixture removal | Blocked by M4 and M5 | None; local build only |
 | M7 | Manual-core, recovery, accessibility, and E2E gate | Blocked by M6 | None; local only |
@@ -96,13 +96,26 @@ confirmed result.
 
 ## M3 — Core APIs
 
+**Status:** Complete; explicitly approved by the user on 2026-09-03.
+
 **Outcome:** Local FastAPI exposes only health, bootstrap, plan evaluation, and
 isolated benchmark core contracts required at this stage.
 
-**Acceptance:** Startup validates the bundle; typed errors/status behavior is
-stable; both plan sides are independently evaluated; benchmark dependency remains
-one-way; optional-surface failure is contained; no Gemini or cloud dependency is
+**Acceptance:** Startup validates the core bundle fail-closed; typed errors/status
+behavior is stable; both plan sides are independently evaluated through the M2B
+engine; benchmark dependency remains one-way; benchmark comparison fresh-evaluates
+the analyst plan; optional benchmark failure is contained; oversized bodies are
+bounded; no Gemini, frontend, source-service, database, or cloud dependency is
 required.
+
+**Verification checkpoint:** 17 focused M3 tests, 71 application tests plus 23
+subtests, 41 release tests plus 20 subtests, 159 full-repository tests, 22 schema
+checks, `pip check`, and `git diff --check` pass. One dependency-level Starlette /
+AnyIO deprecation warning is non-failing.
+
+**Stop point:** M3 received explicit user approval on 2026-09-03. Approval
+does not itself authorize commit/push. M4 begins only after the approved M3
+checkpoint is published.
 
 ## M4 — Application-Track Frontend and Required Surfaces
 

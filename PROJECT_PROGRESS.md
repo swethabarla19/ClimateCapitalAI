@@ -43,7 +43,7 @@ create docs/delivery/progress.md; this file is the only progress/status tracker.
 | Approved P0 topology, services, deployment, security, observability, cost, and implementation order | [docs/architecture/p0-architecture.md](docs/architecture/p0-architecture.md) |
 | Approved release artifacts, runtime APIs, session state, Funding Plan, benchmark, and Gemini contracts | [docs/architecture/data-contracts.md](docs/architecture/data-contracts.md) |
 | Superseded pre-lock technical planning reference | [docs/reference/technical-architecture-reference.md](docs/reference/technical-architecture-reference.md) |
-| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 and M1 explicitly approved 2026-09-02; M2A and M2B explicitly approved 2026-09-03 |
+| Approved architecture-informed implementation and test plans | [docs/delivery/implementation-plan.md](docs/delivery/implementation-plan.md), [docs/delivery/test-plan.md](docs/delivery/test-plan.md), and [docs/delivery/milestones.md](docs/delivery/milestones.md) — M0 and M1 explicitly approved 2026-09-02; M2A and M2B explicitly approved 2026-09-03; M3 explicitly approved 2026-09-03 |
 
 Git is the version history for all repository memory. Fresh tasks must not depend on
 access to prior chat conversations.
@@ -51,37 +51,40 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-03
-- **Project stage:** Methodology, Product/Design, and Architecture Locks are
-  complete and reconciled. The architecture-informed delivery baseline is approved.
-  M1 is complete and explicitly approved. M2A controlled data prerequisites and
-  M2B fixture/deterministic Funding Plan engine are now complete and explicitly
-  approved on 2026-09-03.
-- **Current milestone:** M3 — Core APIs.
-- **Next gate:** Implement and verify the local same-origin health/bootstrap/plan/
-  benchmark API milestone without beginning frontend, Gemini, reviewed-data
-  integration, or deployment work prematurely.
+- **Project stage:** Methodology, Product/Design, Architecture, and the
+  architecture-informed delivery baseline remain locked. M1, M2A, and M2B are
+  complete and explicitly approved. M3 Core APIs are complete and explicitly approved on 2026-09-03.
+- **Current milestone:** M4 — Application-track frontend and required product surfaces; not begun.
+- **Next gate:** Publish the explicitly approved M3 checkpoint after separate
+  commit/push authorization, then begin M4 within its approved frontend-only boundary.
 - **Delivery context:** The completed/deployed application is expected September 9.
   This execution context does not change Product, Methodology,
   Evidence/source-governance, or Architecture authority.
-- **Working state:** Git repository on `main`, connected to the public
-  `swethabarla19/ClimateCapitalAI` GitHub repository. The approved M2 working tree
-  is still uncommitted pending explicit commit/push authorization. The governed
-  37-project / $327,970,000 source universe remains exact; the locked analytical
-  family remains 12 projects / $143,005,000. Current RNA evidence remains 15/37
-  exact governed-project matches and 5/12 active-family matches. FEMA layer 8,
-  EAZ 2021, Problem Score documentary context, RNA, and the historical benchmark
-  have explicit governed provenance/reuse metadata. M2B contains a persistent
-  four-file development `FIXTURE` and deterministic server-authoritative plan
-  evaluator. No M3 runtime API, frontend, reviewed release bundle, Gemini provider
-  integration, application database, container, or deployment exists yet.
-- **Most recent outcome:** M2A/M2B received explicit user approval on 2026-09-03
-  after two independent closure audits and a final local correction/verification
-  pass. The final blocker—incorrect fixture provenance for Problem Score, FEMA,
-  and EAZ—was corrected. Registered source authority, canonical registry metadata,
-  fixture source references, historical fit, optional approved-GCS-pin semantics,
-  and direct regression coverage now reconcile. Final verification passed:
-  54 application tests, 41 release tests, 142 full-repository tests, 22 generated
-  schemas, `pip check`, and `git diff --check`. No unresolved M2 blocker remains.
+- **Working state:** Git repository is on `main` with the approved M2 checkpoint
+  already published. The M3 working set is local and uncommitted. It adds the
+  FastAPI runtime/API layer, isolated benchmark comparator, application entry
+  point, focused M3 integration tests, and the required FastAPI/Uvicorn application
+  dependencies. No M3 file is staged, committed, or pushed.
+- **Data/methodology state:** The governed 37-project / $327,970,000 universe and
+  exact 12-project / $143,005,000 analytical family remain unchanged. Current RNA
+  evidence remains 15/37 governed-project matches and 5/12 active-family matches.
+  `5789.150` remains citywide/non-project geography with no fabricated feature.
+  The M2 deterministic evaluator and four-file development fixture retain their
+  approved semantics.
+- **M3 runtime state:** Local FastAPI now exposes `/healthz`,
+  `/api/v1/bootstrap`, `/api/v1/plans/evaluate`, `/api/v1/benchmark`, and
+  `/api/v1/benchmark/compare`. Core startup validation is fail-closed; benchmark
+  loading/failure remains isolated; plan evaluation reuses the M2B deterministic
+  evaluator; benchmark comparison fresh-evaluates the submitted plan before the
+  one-way comparator; request/version/body-limit errors remain typed and bounded.
+  No runtime source-service, BigQuery, GCS, GIS, Gemini, database, or cloud
+  dependency was introduced.
+- **Most recent verification:** Focused M3 re-audit tests: 17 passed. Application:
+  71 passed plus 23 subtests. Release: 41 passed plus 20 subtests. Full repository:
+  159 passed. `pip check` reports no broken requirements, 22 tracked schemas verify
+  exactly, and `git diff --check` passes. One Starlette TestClient/AnyIO
+  deprecation warning remains non-blocking and does not affect application
+  behavior.
 
 ## Approved Locks
 
@@ -127,36 +130,85 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Record the explicitly approved M2A/M2B closure, publish the approved
-  checkpoint after separate user commit/push authorization, and then begin M3.
-- **Status:** M2A and M2B are complete and explicitly approved as of 2026-09-03.
-  The approved working tree remains uncommitted. No M3 implementation has begun.
+- **Goal:** Record and publish the explicitly approved M3 checkpoint, then begin
+  M4 only after the approved M3 state is committed/pushed under separate user
+  authorization.
+- **Status:** M3 Core APIs are complete and explicitly approved on 2026-09-03.
+  The approved M3 working tree remains local and uncommitted. No M4 implementation
+  has begun.
 - **Owner:** User and implementation tooling.
+- **Approved M3 surface:** Startup bundle/runtime loading, health/bootstrap API,
+  deterministic current/reference plan API, isolated benchmark repository/API and
+  comparator, stable typed HTTP errors/body bounds, and focused API regression
+  coverage.
+- **Dependency impact:** Added only `fastapi==0.128.2` and `uvicorn==0.48.0` to the
+  application requirements. No cloud service, data-source, frontend, Gemini,
+  database, or infrastructure dependency was added.
 - **Required reading:** AGENTS.md, this file,
   docs/methodology/p0-evidence-methodology.md, docs/product,
   docs/delivery/execution-plan.md, docs/decisions.md,
   docs/architecture/p0-architecture.md, docs/architecture/data-contracts.md,
   docs/delivery/implementation-plan.md, docs/delivery/test-plan.md, and
   docs/delivery/milestones.md.
-- **Exit condition:** Publish the approved M2 checkpoint only after explicit
-  commit/push authorization, then begin M3 within its approved API-only boundary.
+- **Exit condition:** After separate explicit commit/push authorization, publish
+  the complete approved M3 working set. M4 may begin only after that checkpoint is
+  published.
 
 ## Next Actions
 
-1. Record M2A/M2B approval in the delivery milestone document and inspect the final
-   repository diff/status.
-2. After explicit user authorization, stage the complete approved M2 working set,
-   inspect the staged diff, commit, and push `main`.
-3. Begin M3 only after the approved M2 checkpoint is published: startup fixture
-   loading/validation, `/healthz`, bootstrap, deterministic plan-evaluation API,
-   and isolated benchmark API/comparator.
-4. Do not begin frontend work until M3 closes; do not begin reviewed-data
-   integration, Gemini, container/deployment, or broaden methodology/source
-   research prematurely.
-5. Separately verify organizer submission artifacts, judging criteria, finale date,
-   and conditional live-demo format before final submission closeout.
+1. Inspect the final approved M3 diff/status and confirm that only the authorized
+   M3 implementation/documentation working set is present.
+2. Obtain separate explicit user authorization before staging, committing, or
+   pushing M3.
+3. After authorization, stage the complete M3 working set, run staged-diff/check
+   verification, commit, and push `main`.
+4. Begin M4 only after the approved M3 checkpoint is published.
+5. Do not begin reviewed-data integration, Gemini, container/deployment, new cloud
+   work, methodology/source research, or unrelated refactoring prematurely.
 
 ## Active Implementation Checkpoint
+
+### 2026-09-03 — M3 implementation checkpoint; awaiting explicit re-audit/approval
+
+- **Runtime/API implementation:** Added a local FastAPI application with startup
+  runtime loading, `/healthz`, bootstrap, deterministic plan evaluation, isolated
+  benchmark retrieval, and benchmark comparison. The plan endpoint delegates to
+  the approved M2B evaluator rather than introducing a second analytical engine.
+- **Startup boundary:** Core manifest/catalog/map identity, bytes, checksums,
+  release-tier/data-version relationships, and map/catalog geometry availability
+  agreement are validated before the core API becomes usable. A corrupt core
+  artifact fails startup.
+- **Benchmark isolation:** Benchmark loading is structurally separate so benchmark
+  corruption/unavailability returns a local `503` on benchmark surfaces while
+  health/bootstrap/Funding Plan remain usable. Benchmark comparison receives only
+  a freshly server-evaluated valid plan; benchmark data never enters the M2 plan
+  engine.
+- **HTTP contract:** API namespace uses the locked `/api/v1` value. Contract/data
+  conflicts, malformed/unknown input, oversized request bodies including
+  chunked/no-Content-Length bodies, optional dependency failure, and unexpected
+  errors are handled through bounded typed responses. Semantic plan
+  `VALID`/`OVER_BUDGET`/`INVALID` results remain normal parsed endpoint responses.
+- **Preserved semantics:** No score, rank, optimizer, recommendation, expected
+  benefit, beneficiary estimate, geometry-derived membership, or fabricated
+  evidence was introduced. Missing geometry does not remove a project, and
+  `5789.150` remains citywide and featureless.
+- **Files/components:** `requirements-application.txt`;
+  `backend/climatecapital/api/`; `backend/climatecapital/benchmark/`;
+  `backend/climatecapital/main.py`; and
+  `tests/application/test_m3_api.py`.
+- **Dependencies:** Added `fastapi==0.128.2` and `uvicorn==0.48.0`. No cloud,
+  frontend, Gemini, data-source, database, or infrastructure work occurred.
+- **Verification:** 17 focused M3 tests; 71 application tests plus 23 subtests;
+  41 release tests plus 20 subtests; 159 full-repository tests; 22 schema checks;
+  `pip check`; and `git diff --check` all pass.
+- **Known issue/risk:** Starlette TestClient currently emits one AnyIO
+  `BlockingPortal` deprecation warning under Python 3.14. It is dependency-level,
+  non-failing, and does not alter the M3 runtime contract.
+- **Git state:** M3 changes remain local and uncommitted. Nothing has been staged,
+  committed, or pushed for M3.
+- **Approval state:** M3 received explicit user approval on 2026-09-03.
+- **Boundary:** Approval recording does not authorize commit/push or silently begin M4.
+  Gemini, reviewed-data integration, container/deployment, and later work remain out of scope.
 
 ### 2026-09-03 — M2A/M2B approved closure checkpoint
 
@@ -186,6 +238,19 @@ comparison; the $125 million figure is historical/default context, not eligibili
   release bundle, Gemini integration, container, or deployment work has begun.
 
 ## Completed Milestones
+
+- **2026-09-03 — M3 Core APIs explicitly approved and complete:** Implemented
+  local FastAPI startup/runtime loading, `/healthz`, bootstrap, deterministic
+  current/reference plan evaluation, isolated benchmark retrieval/comparison,
+  typed HTTP errors, and bounded request-body enforcement. The API reuses the
+  approved M2B evaluator, keeps benchmark dependency one-way, preserves local
+  benchmark failure containment, and introduces no scoring/ranking/optimizer,
+  fabricated evidence, frontend, Gemini, database, source-service runtime access,
+  cloud mutation, container, or deployment work. Final verification passed 17
+  focused M3 tests, 71 application tests plus 23 subtests, 41 release tests plus
+  20 subtests, 159 full-repository tests, 22 schema checks, dependency integrity,
+  and `git diff --check`. User explicitly approved M3 on 2026-09-03. The approved
+  working tree remains uncommitted pending separate commit/push authorization.
 
 - **2026-09-03 — M2A controlled data prerequisites and M2B fixture/deterministic
   engine explicitly approved and complete:** Preserved and reconciled the approved
