@@ -54,17 +54,19 @@ access to prior chat conversations.
 - **Project stage:** Methodology, Product/Design, Architecture, and the
   architecture-informed delivery baseline remain locked. M1, M2A, and M2B are
   complete and explicitly approved. M3 Core APIs are complete and explicitly approved on 2026-09-03.
-- **Current milestone:** M4 — Application-track frontend and required product surfaces; not begun.
-- **Next gate:** Publish the explicitly approved M3 checkpoint after separate
-  commit/push authorization, then begin M4 within its approved frontend-only boundary.
+- **Current milestone:** M4 — Application-track frontend and required product surfaces; started 2026-09-03.
+- **Next gate:** Complete the M4 frontend runtime/package-manager preflight, pin the
+  approved frontend toolchain, and begin the local application scaffold within the
+  locked M4 boundary.
 - **Delivery context:** The completed/deployed application is expected September 9.
   This execution context does not change Product, Methodology,
   Evidence/source-governance, or Architecture authority.
-- **Working state:** Git repository is on `main` with the approved M2 checkpoint
-  already published. The M3 working set is local and uncommitted. It adds the
-  FastAPI runtime/API layer, isolated benchmark comparator, application entry
-  point, focused M3 integration tests, and the required FastAPI/Uvicorn application
-  dependencies. No M3 file is staged, committed, or pushed.
+- **Working state:** Git repository is on `main` and the approved M3 checkpoint is
+  published to `origin/main` at `c0c9c8f` (`Complete M3 core APIs`). M3 backend/API
+  implementation, tests, dependencies, and approval records are therefore part of
+  the remote repository. M4 has begun with repository-facing documentation cleanup
+  and frontend environment/toolchain preflight; no React/Vite frontend scaffold has
+  been created yet.
 - **Data/methodology state:** The governed 37-project / $327,970,000 universe and
   exact 12-project / $143,005,000 analytical family remain unchanged. Current RNA
   evidence remains 15/37 governed-project matches and 5/12 active-family matches.
@@ -130,41 +132,44 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Record and publish the explicitly approved M3 checkpoint, then begin
-  M4 only after the approved M3 state is committed/pushed under separate user
-  authorization.
-- **Status:** M3 Core APIs are complete and explicitly approved on 2026-09-03.
-  The approved M3 working tree remains local and uncommitted. No M4 implementation
-  has begun.
+- **Goal:** Implement M4 — the application-track frontend and required product
+  surfaces — against the conspicuous development fixture while preserving the
+  approved M1–M3 contracts and deterministic authority.
+- **Status:** M3 is approved, committed, and published on `main` at `c0c9c8f`.
+  M4 began on 2026-09-03. The first M4 activity is repository-facing documentation
+  cleanup plus frontend runtime/package-manager preflight. No frontend scaffold or
+  M4 application code has been created yet.
 - **Owner:** User and implementation tooling.
-- **Approved M3 surface:** Startup bundle/runtime loading, health/bootstrap API,
-  deterministic current/reference plan API, isolated benchmark repository/API and
-  comparator, stable typed HTTP errors/body bounds, and focused API regression
-  coverage.
-- **Dependency impact:** Added only `fastapi==0.128.2` and `uvicorn==0.48.0` to the
-  application requirements. No cloud service, data-source, frontend, Gemini,
-  database, or infrastructure dependency was added.
+- **M4 boundary:** React/TypeScript/Vite/Leaflet application shell, exact browser
+  session lifecycle, manual Funding Plan, shared Project Detail, Data &
+  Methodology, Help & Resources, map/default/fallback behavior, and isolated
+  Historical Benchmark against the fixture tier.
+- **Explicit exclusions:** No M5 reviewed-data integration, M8 Gemini provider
+  implementation, M9 container/deployment/cloud mutation, Compare stretch,
+  methodology reopening, new evidence-source research, or unrelated refactoring.
 - **Required reading:** AGENTS.md, this file,
   docs/methodology/p0-evidence-methodology.md, docs/product,
   docs/delivery/execution-plan.md, docs/decisions.md,
   docs/architecture/p0-architecture.md, docs/architecture/data-contracts.md,
   docs/delivery/implementation-plan.md, docs/delivery/test-plan.md, and
   docs/delivery/milestones.md.
-- **Exit condition:** After separate explicit commit/push authorization, publish
-  the complete approved M3 working set. M4 may begin only after that checkpoint is
-  published.
+- **Exit condition:** M4 frontend behavior and required surfaces pass their focused
+  and broad verification gates, are independently re-audited, and receive explicit
+  user approval before M5/M6-dependent integration proceeds.
 
 ## Next Actions
 
-1. Inspect the final approved M3 diff/status and confirm that only the authorized
-   M3 implementation/documentation working set is present.
-2. Obtain separate explicit user authorization before staging, committing, or
-   pushing M3.
-3. After authorization, stage the complete M3 working set, run staged-diff/check
-   verification, commit, and push `main`.
-4. Begin M4 only after the approved M3 checkpoint is published.
-5. Do not begin reviewed-data integration, Gemini, container/deployment, new cloud
-   work, methodology/source research, or unrelated refactoring prematurely.
+1. Finish the Touchpoint-2-facing README/current-status cleanup so the public
+   repository accurately reflects the published M3 checkpoint and active M4 work.
+2. Inspect local Node/npm versions and registry before creating frontend files.
+3. Pin and review the M4 frontend runtime, package manager, and exact dependency
+   set before installation.
+4. Create the React/TypeScript/Vite frontend, same-origin API proxy, test tooling,
+   accessible application shell/navigation, and conspicuous fixture-mode chrome.
+5. Implement the exact session reducer/storage/restoration foundation and manual
+   Funding Plan before deeper presentation/map work.
+6. Do not begin reviewed-data integration, Gemini, deployment/cloud mutation,
+   Compare stretch, or unrelated work during M4.
 
 ## Active Implementation Checkpoint
 
