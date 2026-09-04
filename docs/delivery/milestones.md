@@ -16,8 +16,11 @@
 | M3  | Health/bootstrap/plan/benchmark APIs | Complete; explicitly approved 2026-09-03 | None; local only |
 | M3.5 | Cross-category analytical feasibility and universe governance | Complete; explicitly approved 2026-09-03 | M3 complete; January 21, 2026 snapshot frozen; implementation must conform to `docs/delivery/m3-5-analytical-universe.md` |
 | M3.6 | Governed cross-category dataset and schema | Complete; published 2026-09-04 | None; local only |
-| M3.7A | Watershed 37/37 PRB score reconciliation | Verification complete; checkpoint approval pending | Existing preserved GCS source retrieved locally; no cloud mutation |
-| M3.7B–E | Evidence feasibility, model eligibility, Funding Priority, optimization methodology, and cross-category extension | Next | None unless separately authorized |
+| M3.7A | Watershed 37/37 PRB score reconciliation | Complete; published 2026-09-04 | Existing preserved GCS source retrieved locally; no cloud mutation |
+| M3.7B | Watershed PRB evidence feasibility and model eligibility | Verification complete; checkpoint approval pending | None; local only |
+| M3.7C | Deterministic PRB Funding Priority and tie methodology | Next | None; local only |
+| M3.7E | Cross-category evidence feasibility and model eligibility for the 106 analytical projects | Planned after M3.7C | None unless separately authorized |
+| M3.7D | Portfolio optimization methodology, including Watershed historical validation and later cross-category formulation | Deferred until M3.7C and M3.7E are resolved | None; local methodology work |
 | M4 | Application-track frontend and required product surfaces | Deferred until M3.7 analytical-methodology work is resolved | None; local only |
 | M5 | Reviewed pinned release-data bundle | Blocked by M2A | Bounded existing GCS/BigQuery release-gate use |
 | M6 | Reviewed-data integration and fixture removal | Blocked by M4 and M5 | None; local build only |

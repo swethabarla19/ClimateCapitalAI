@@ -50,43 +50,16 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-03
-- **Project stage:** Methodology, Product/Design, Architecture, and the
-  architecture-informed delivery baseline remain locked. M1, M2A, and M2B are
-  complete and explicitly approved. M3 Core APIs are complete and explicitly approved on 2026-09-03.
-- **Current milestone:** M4 — Application-track frontend and required product surfaces; started 2026-09-03.
-- **Next gate:** Complete the M4 frontend runtime/package-manager preflight, pin the
-  approved frontend toolchain, and begin the local application scaffold within the
-  locked M4 boundary.
-- **Delivery context:** The completed/deployed application is expected September 9.
-  This execution context does not change Product, Methodology,
-  Evidence/source-governance, or Architecture authority.
-- **Working state:** Git repository is on `main` and the approved M3 checkpoint is
-  published to `origin/main` at `c0c9c8f` (`Complete M3 core APIs`). M3 backend/API
-  implementation, tests, dependencies, and approval records are therefore part of
-  the remote repository. M4 has begun with repository-facing documentation cleanup
-  and frontend environment/toolchain preflight; no React/Vite frontend scaffold has
-  been created yet.
-- **Data/methodology state:** The governed 37-project / $327,970,000 universe and
-  exact 12-project / $143,005,000 analytical family remain unchanged. Current RNA
-  evidence remains 15/37 governed-project matches and 5/12 active-family matches.
-  `5789.150` remains citywide/non-project geography with no fabricated feature.
-  The M2 deterministic evaluator and four-file development fixture retain their
-  approved semantics.
-- **M3 runtime state:** Local FastAPI now exposes `/healthz`,
-  `/api/v1/bootstrap`, `/api/v1/plans/evaluate`, `/api/v1/benchmark`, and
-  `/api/v1/benchmark/compare`. Core startup validation is fail-closed; benchmark
-  loading/failure remains isolated; plan evaluation reuses the M2B deterministic
-  evaluator; benchmark comparison fresh-evaluates the submitted plan before the
-  one-way comparator; request/version/body-limit errors remain typed and bounded.
-  No runtime source-service, BigQuery, GCS, GIS, Gemini, database, or cloud
-  dependency was introduced.
-- **Most recent verification:** Focused M3 re-audit tests: 17 passed. Application:
-  71 passed plus 23 subtests. Release: 41 passed plus 20 subtests. Full repository:
-  159 passed. `pip check` reports no broken requirements, 22 tracked schemas verify
-  exactly, and `git diff --check` passes. One Starlette TestClient/AnyIO
-  deprecation warning remains non-blocking and does not affect application
-  behavior.
+- **Last updated:** 2026-09-04
+- **Project stage:** M3.5 cross-category analytical-universe governance and M3.6 governed cross-category dataset/schema are complete. M3.7A Watershed PRB reconciliation is complete and published. M3.7B Watershed PRB evidence feasibility and model eligibility has completed implementation and verification and is awaiting checkpoint approval.
+- **Current milestone:** M3.7B — Watershed PRB evidence feasibility and model eligibility; verification complete, checkpoint approval pending.
+- **Next gate:** Approve, commit, and publish M3.7B, then begin M3.7C deterministic PRB Funding Priority and tie methodology. Cross-category eligibility for all 106 analytical projects follows before final portfolio optimization methodology is locked.
+- **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
+- **Working state:** Git repository is on `main`. M3.7A is committed and published to `origin/main` at `51b576b` (`Complete M3.7A Watershed PRB reconciliation`). M3.7B builder, governed eligibility overlay, tests, and documentation are local pending approval. Unrelated `.node-version` and `frontend/` work remain outside the M3.7B checkpoint.
+- **Data/methodology state:** The governed cross-category universe contains 106 analytical projects: Transportation 9, Parks & Open Space 22, Watershed 37, and Community Facilities 38. M3.7A reconciles all 37 Watershed projects to complete official six-component PRB vectors and valid Grand Totals. M3.7B proves 37/37 Watershed projects `FEASIBLE` and model-eligible for `WATERSHED_PRB_PROJECT_MODEL`; 25/37 are eligible without a January recommendation and `5754.149` remains eligible with its request-version conflict preserved. RNA geometry, FEMA context, EAZ 2021 context, and Watershed Problem Score context do not gate base PRB-model eligibility.
+- **Runtime boundary:** M3.7B does not redefine the existing 12-project runtime family. The eligibility overlay records `runtime_integration_authorized=false`. No Funding Priority, tie-break, optimizer, or 37-project runtime activation is introduced.
+- **M3 runtime state:** The approved FastAPI runtime remains unchanged. Existing health/bootstrap/plan/benchmark APIs and the M2B deterministic evaluator retain their approved semantics while M3.7 analytical-methodology work is resolved.
+- **Most recent verification:** M3.7B focused tests: 17 passed. Combined Watershed M3.7A/M3.7B regression: 55 passed plus 84 subtests. Full repository: 233 passed plus 137 subtests. `pip check` reports no broken requirements; the governed eligibility artifact regenerates identically as `unchanged`; `git diff --check` passes. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
 
 ## Approved Locks
 
@@ -863,7 +836,7 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   testing/release gates, and normal/abuse/billing/shutdown cost controls.
 - D-096 locks post-schema parallel data/application tracks, exact-schema fixture
   constraints, reviewed-data final integration, and the Compare/proposal cut order.
-- Next available decision ID: **D-097**.
+- Next available decision ID: **D-105**.
 
 ## Verification Record
 
@@ -1802,3 +1775,18 @@ Next:
 M3.7B — determine Watershed evidence feasibility and model eligibility using
 the now-proven 37/37 PRB evidence layer before reopening deterministic Funding
 Priority or $125M optimization.
+
+## 2026-09-04 — M3.7B Watershed PRB Model Eligibility
+
+M3.7B implementation and verification are complete; checkpoint approval is pending.
+
+- **Scope:** Evaluated only the 37 governed Watershed `Analytical_Project` records for participation in `WATERSHED_PRB_PROJECT_MODEL`.
+- **Eligibility result:** 37/37 are `FEASIBLE` and model-eligible. Every project has reconciled canonical identity, a complete official six-component PRB vector, a valid PRB Grand Total, and a usable canonical November request.
+- **Outcome isolation:** 25/37 eligible projects have no January recommendation. The Initial Recommendation remains benchmark/outcome-only and has no eligibility authority.
+- **Conflict handling:** `5754.149` remains eligible using its canonical November `$2,500,000` request while the January `$2,625,000` request-version conflict remains explicit provenance.
+- **Contextual evidence:** RNA geometry, FEMA floodplain context, EAZ 2021 context, and Watershed Problem Score context remain non-gating for the base PRB model.
+- **Artifact:** `data/governed/cross_category/model_eligibility/watershed-prb-model-eligibility.json`.
+- **Boundary:** M3.7B is persisted as a separate governed overlay. M3.6 structural artifacts are not rewritten, `runtime_integration_authorized=false`, and the existing 12-project runtime family remains unchanged.
+- **Verification:** 17 focused M3.7B tests; 55 combined Watershed tests plus 84 subtests; 233 full-repository tests plus 137 subtests; `pip check`; deterministic artifact regeneration; and `git diff --check` all pass. The known Starlette/AnyIO deprecation warning remains non-blocking.
+- **Not decided:** No Funding Priority, ranking, tie-break, portfolio optimization, cross-category eligibility, or 37-project runtime activation is introduced.
+- **Next:** M3.7C evaluates deterministic PRB Funding Priority and tie methodology. Cross-category eligibility for all 106 analytical projects follows before final portfolio optimization methodology is locked.
