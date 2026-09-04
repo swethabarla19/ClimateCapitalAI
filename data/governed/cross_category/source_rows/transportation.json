@@ -1,0 +1,578 @@
+[
+  {
+    "decision_unit_id": "transportation/bikeways-program",
+    "canonical_project_id": null,
+    "source_name": "Local Mobility - Bikeways Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 81,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": 15000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Local Mobility - Bikeways Program",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": 15000000,
+        "prb_score": 81,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/new-sidewalks-program",
+    "canonical_project_id": null,
+    "source_name": "Local Mobility - New Sidewalks Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 80.5,
+    "department_request_dollars": 81000000,
+    "historical_recommendation_amount_dollars": 33000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Local Mobility - New Sidewalks Program",
+        "department_request_dollars": 81000000,
+        "historical_recommendation_amount_dollars": 33000000,
+        "prb_score": 80.5,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/barton-springs-bridge",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 80,
+    "department_request_dollars": 12000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+        "department_request_dollars": 12000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 80,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/vision-zero-program",
+    "canonical_project_id": null,
+    "source_name": "Vision Zero Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 79,
+    "department_request_dollars": 65000000,
+    "historical_recommendation_amount_dollars": 30000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Vision Zero Program",
+        "department_request_dollars": 65000000,
+        "historical_recommendation_amount_dollars": 30000000,
+        "prb_score": 79,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/urban-trails-program",
+    "canonical_project_id": null,
+    "source_name": "Local Mobility - Urban Trails Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 79,
+    "department_request_dollars": 80000000,
+    "historical_recommendation_amount_dollars": 30000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Local Mobility - Urban Trails Program",
+        "department_request_dollars": 80000000,
+        "historical_recommendation_amount_dollars": 30000000,
+        "prb_score": 79,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/safe-routes-to-school-program",
+    "canonical_project_id": null,
+    "source_name": "Local Mobility - Safe Routes to School Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 78,
+    "department_request_dollars": 20000000,
+    "historical_recommendation_amount_dollars": 10000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Local Mobility - Safe Routes to School Program",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": 10000000,
+        "prb_score": 78,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/transit-enhancements-program",
+    "canonical_project_id": null,
+    "source_name": "Local Mobility - Transit Enhancements Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 77,
+    "department_request_dollars": 19000000,
+    "historical_recommendation_amount_dollars": 7000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Local Mobility - Transit Enhancements Program",
+        "department_request_dollars": 19000000,
+        "historical_recommendation_amount_dollars": 7000000,
+        "prb_score": 77,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/act-plan-7th-street",
+    "canonical_project_id": null,
+    "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 7th Street",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 72,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 7th Street",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 72,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/act-plan-6th-street",
+    "canonical_project_id": null,
+    "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 6th Street",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": 20000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 6th Street",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": 20000000,
+        "prb_score": 69,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/street-rehabilitation-program",
+    "canonical_project_id": null,
+    "source_name": "Street Rehabilitation Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 194000000,
+    "historical_recommendation_amount_dollars": 96000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Street Rehabilitation Program",
+        "department_request_dollars": 194000000,
+        "historical_recommendation_amount_dollars": 96000000,
+        "prb_score": 69,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/complete-streets-program",
+    "canonical_project_id": null,
+    "source_name": "Complete Streets Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 285000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Complete Streets Program",
+        "department_request_dollars": 285000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 68,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/west-william-cannon-rehab",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 8000000,
+    "historical_recommendation_amount_dollars": 8000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab",
+        "department_request_dollars": 8000000,
+        "historical_recommendation_amount_dollars": 8000000,
+        "prb_score": 68,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/delwau-ln-replacement",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 13800000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement",
+        "department_request_dollars": 13800000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/river-plantation-dr",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 64,
+    "department_request_dollars": 2600000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.",
+        "department_request_dollars": 2600000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 64,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/w-slaughter-ln",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": 16000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln",
+        "department_request_dollars": 16000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/e-7th-st",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - E. 7th St",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 58,
+    "department_request_dollars": 5200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - E. 7th St",
+        "department_request_dollars": 5200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 58,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/hart-ln-retaining-walls",
+    "canonical_project_id": null,
+    "source_name": "Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 58,
+    "department_request_dollars": 6100000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls",
+        "department_request_dollars": 6100000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 58,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "transportation/neighborhood-partnering-program",
+    "canonical_project_id": null,
+    "source_name": "Neighborhood Partnering Program",
+    "source_department": "ATPW",
+    "source_domain": "Transportation",
+    "presentation_category": "Transportation",
+    "analytical_unit_type": "NOT_SCORED",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 1000000,
+    "historical_recommendation_amount_dollars": 2000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PRB_NOT_SCORED",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Neighborhood Partnering Program",
+        "department_request_dollars": 1000000,
+        "historical_recommendation_amount_dollars": 2000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  }
+]

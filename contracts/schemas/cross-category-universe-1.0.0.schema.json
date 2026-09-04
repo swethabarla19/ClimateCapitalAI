@@ -1,0 +1,473 @@
+{
+  "$defs": {
+    "AnalyticalProjectCounts": {
+      "additionalProperties": false,
+      "properties": {
+        "community_facilities": {
+          "const": 38,
+          "title": "Community Facilities",
+          "type": "integer"
+        },
+        "parks_open_space": {
+          "const": 22,
+          "title": "Parks Open Space",
+          "type": "integer"
+        },
+        "transportation": {
+          "const": 9,
+          "title": "Transportation",
+          "type": "integer"
+        },
+        "watershed": {
+          "const": 37,
+          "title": "Watershed",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "transportation",
+        "parks_open_space",
+        "watershed",
+        "community_facilities"
+      ],
+      "title": "AnalyticalProjectCounts",
+      "type": "object"
+    },
+    "AnalyticalUnitType": {
+      "enum": [
+        "ANALYTICAL_PROJECT",
+        "PROGRAM_BUCKET",
+        "PROGRAM_ALLOCATION",
+        "NOT_SCORED"
+      ],
+      "title": "AnalyticalUnitType",
+      "type": "string"
+    },
+    "CrossCategoryDecisionUnit": {
+      "additionalProperties": false,
+      "description": "One governed PRB source row from the January 21 historical universe.",
+      "properties": {
+        "analytical_unit": {
+          "title": "Analytical Unit",
+          "type": "boolean"
+        },
+        "analytical_unit_type": {
+          "$ref": "#/$defs/AnalyticalUnitType"
+        },
+        "canonical_project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Canonical Project Id"
+        },
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "department_request_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Department Request Dollars"
+        },
+        "evidence_feasibility_status": {
+          "$ref": "#/$defs/EvidenceFeasibilityStatus"
+        },
+        "exclusion_reason": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExclusionReason"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "historical_recommendation_amount_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Historical Recommendation Amount Dollars"
+        },
+        "model_eligible": {
+          "title": "Model Eligible",
+          "type": "boolean"
+        },
+        "prb_score": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "ge": 0,
+              "le": 100
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Prb Score"
+        },
+        "prb_scored": {
+          "title": "Prb Scored",
+          "type": "boolean"
+        },
+        "presentation_category": {
+          "$ref": "#/$defs/PresentationCategory"
+        },
+        "source_conflict_flag": {
+          "title": "Source Conflict Flag",
+          "type": "boolean"
+        },
+        "source_department": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Department",
+          "type": "string"
+        },
+        "source_domain": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Domain",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "source_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Name",
+          "type": "string"
+        },
+        "source_versions": {
+          "items": {
+            "$ref": "#/$defs/SourceVersionValue"
+          },
+          "minItems": 1,
+          "title": "Source Versions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "source_name",
+        "source_department",
+        "source_domain",
+        "presentation_category",
+        "analytical_unit_type",
+        "analytical_unit",
+        "prb_scored",
+        "prb_score",
+        "department_request_dollars",
+        "historical_recommendation_amount_dollars",
+        "evidence_feasibility_status",
+        "model_eligible",
+        "exclusion_reason",
+        "source_ids",
+        "source_versions",
+        "source_conflict_flag"
+      ],
+      "title": "CrossCategoryDecisionUnit",
+      "type": "object"
+    },
+    "CrossCategoryUniverseSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "analytical_project_count": {
+          "const": 106,
+          "title": "Analytical Project Count",
+          "type": "integer"
+        },
+        "analytical_projects_by_presentation_category": {
+          "$ref": "#/$defs/AnalyticalProjectCounts"
+        },
+        "not_scored_count": {
+          "const": 3,
+          "title": "Not Scored Count",
+          "type": "integer"
+        },
+        "program_allocation_count": {
+          "const": 4,
+          "title": "Program Allocation Count",
+          "type": "integer"
+        },
+        "program_bucket_count": {
+          "const": 23,
+          "title": "Program Bucket Count",
+          "type": "integer"
+        },
+        "source_row_count": {
+          "const": 136,
+          "title": "Source Row Count",
+          "type": "integer"
+        },
+        "source_rows_by_presentation_category": {
+          "$ref": "#/$defs/SourceRowCounts"
+        }
+      },
+      "required": [
+        "source_row_count",
+        "analytical_project_count",
+        "program_bucket_count",
+        "program_allocation_count",
+        "not_scored_count",
+        "source_rows_by_presentation_category",
+        "analytical_projects_by_presentation_category"
+      ],
+      "title": "CrossCategoryUniverseSummary",
+      "type": "object"
+    },
+    "EvidenceFeasibilityStatus": {
+      "enum": [
+        "NOT_EVALUATED",
+        "PARTIAL",
+        "FEASIBLE",
+        "INFEASIBLE"
+      ],
+      "title": "EvidenceFeasibilityStatus",
+      "type": "string"
+    },
+    "ExclusionReason": {
+      "enum": [
+        "PROGRAM_BUCKET",
+        "PROGRAM_ALLOCATION",
+        "PRB_NOT_SCORED"
+      ],
+      "title": "ExclusionReason",
+      "type": "string"
+    },
+    "PresentationCategory": {
+      "enum": [
+        "Transportation",
+        "Parks & Open Space",
+        "Watershed",
+        "Community Facilities",
+        "Affordable Housing"
+      ],
+      "title": "PresentationCategory",
+      "type": "string"
+    },
+    "SourceRowCounts": {
+      "additionalProperties": false,
+      "properties": {
+        "affordable_housing": {
+          "const": 1,
+          "title": "Affordable Housing",
+          "type": "integer"
+        },
+        "community_facilities": {
+          "const": 41,
+          "title": "Community Facilities",
+          "type": "integer"
+        },
+        "parks_open_space": {
+          "const": 34,
+          "title": "Parks Open Space",
+          "type": "integer"
+        },
+        "transportation": {
+          "const": 18,
+          "title": "Transportation",
+          "type": "integer"
+        },
+        "watershed": {
+          "const": 42,
+          "title": "Watershed",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "transportation",
+        "parks_open_space",
+        "watershed",
+        "community_facilities",
+        "affordable_housing"
+      ],
+      "title": "SourceRowCounts",
+      "type": "object"
+    },
+    "SourceVersionValue": {
+      "additionalProperties": false,
+      "description": "A source-specific value preserved without overwriting another vintage.",
+      "properties": {
+        "department_request_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Department Request Dollars"
+        },
+        "historical_recommendation_amount_dollars": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Historical Recommendation Amount Dollars"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "prb_score": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "ge": 0,
+              "le": 100
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prb Score"
+        },
+        "source_date": {
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Source Date",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_name": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Name"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_date"
+      ],
+      "title": "SourceVersionValue",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-universe-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Governed 136-row PRB source universe frozen to January 21, 2026.",
+  "properties": {
+    "contract_version": {
+      "const": "p0-cross-category-universe/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "decision_units": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryDecisionUnit"
+      },
+      "maxItems": 136,
+      "minItems": 136,
+      "title": "Decision Units",
+      "type": "array"
+    },
+    "governance_checkpoint": {
+      "const": "M3.5",
+      "title": "Governance Checkpoint",
+      "type": "string"
+    },
+    "governance_status": {
+      "const": "APPROVED",
+      "title": "Governance Status",
+      "type": "string"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "summary": {
+      "$ref": "#/$defs/CrossCategoryUniverseSummary"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "governance_checkpoint",
+    "governance_status",
+    "historical_decision_snapshot_date",
+    "summary",
+    "decision_units"
+  ],
+  "title": "CrossCategoryUniverseArtifact",
+  "type": "object"
+}

@@ -17,6 +17,7 @@ from .api import (
     PlanEvaluationSuccessEnvelope,
 )
 from .artifacts import BenchmarkArtifact, CatalogArtifact, MapContextArtifact, ReleaseManifest
+from .cross_category import CrossCategoryUniverseArtifact
 from .common import (
     EVIDENCE_TYPE_AVAILABILITY,
     EVIDENCE_TYPE_FACT_KINDS,
@@ -43,6 +44,7 @@ from .versions import (
 )
 
 SCHEMA_EXPORTS: tuple[tuple[str, type[BaseModel]], ...] = (
+    ("cross-category-universe-1.0.0.schema.json", CrossCategoryUniverseArtifact),
     ("release-manifest-1.0.0.schema.json", ReleaseManifest),
     ("catalog-1.0.0.schema.json", CatalogArtifact),
     ("map-context-1.0.0.schema.json", MapContextArtifact),

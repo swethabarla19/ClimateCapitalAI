@@ -1,0 +1,1090 @@
+[
+  {
+    "decision_unit_id": "parks/bolm-maintenance-center",
+    "canonical_project_id": null,
+    "source_name": "Building Renovation and Replacement Program - Bolm Maintenance Center",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 83,
+    "department_request_dollars": 85000000,
+    "historical_recommendation_amount_dollars": 55000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Building Renovation and Replacement Program - Bolm Maintenance Center",
+        "department_request_dollars": 85000000,
+        "historical_recommendation_amount_dollars": 55000000,
+        "prb_score": 83,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/doris-miller-auditorium",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 74,
+    "department_request_dollars": 22000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+        "department_request_dollars": 22000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 74,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/big-stacy-pool",
+    "canonical_project_id": null,
+    "source_name": "Aquatics Program - Big Stacy Pool",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatics Program - Big Stacy Pool",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 73,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/gus-garcia-center",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 30000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+        "department_request_dollars": 30000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 73,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/jamestown-nh-park",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Jamestown NH Park",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 3500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Jamestown NH Park",
+        "department_request_dollars": 3500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 73,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/givens-district-park-phase-ii",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Givens District Park Phase II",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 71,
+    "department_request_dollars": 3000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Givens District Park Phase II",
+        "department_request_dollars": 3000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 71,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/bolm-district-park",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Bolm District Park",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 70,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Bolm District Park",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 70,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/garrison-pool",
+    "canonical_project_id": null,
+    "source_name": "Aquatics Program - Garrison Pool",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 30000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatics Program - Garrison Pool",
+        "department_request_dollars": 30000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 69,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/grand-meadow-phase-ii",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Grand Meadow Phase II",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 2000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Grand Meadow Phase II",
+        "department_request_dollars": 2000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 68,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/walter-e-long-metro-park-phase-i",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 68,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/martin-pool",
+    "canonical_project_id": null,
+    "source_name": "Aquatics Program - Martin Pool",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 12000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatics Program - Martin Pool",
+        "department_request_dollars": 12000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 67,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/kennemer-pool",
+    "canonical_project_id": null,
+    "source_name": "Aquatics Program - Kennemer Pool",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatics Program - Kennemer Pool",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/alamo-rec-center",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 2500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+        "department_request_dollars": 2500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/buttermilk-nh-park",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Buttermilk NH Park",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 64,
+    "department_request_dollars": 750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Buttermilk NH Park",
+        "department_request_dollars": 750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 64,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/metz-community-center",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": 500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+        "department_request_dollars": 500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/lorraine-camancho-center",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": 1200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+        "department_request_dollars": 1200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/yates-pocket-park",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Yates Pocket Park",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 2500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Yates Pocket Park",
+        "department_request_dollars": 2500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/civitan-pool",
+    "canonical_project_id": null,
+    "source_name": "Aquatics Program - Civitan Pool",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 5000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatics Program - Civitan Pool",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/woolridge-square-plan",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Woolridge Square Plan",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 4000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Woolridge Square Plan",
+        "department_request_dollars": 4000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/north-grounds-maintenance-facility",
+    "canonical_project_id": null,
+    "source_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 61,
+    "department_request_dollars": 6000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+        "department_request_dollars": 6000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 61,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/harris-branch-nh-park-development",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 60,
+    "department_request_dollars": 1500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+        "department_request_dollars": 1500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 60,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/woodland-pocket-park",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Woodland Pocket Park",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 57,
+    "department_request_dollars": 2000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Woodland Pocket Park",
+        "department_request_dollars": 2000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 57,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/parkland-acquisition-program",
+    "canonical_project_id": null,
+    "source_name": "Parkland Acquisition Program",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 100000000,
+    "historical_recommendation_amount_dollars": 40000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Acquisition Program",
+        "department_request_dollars": 100000000,
+        "historical_recommendation_amount_dollars": 40000000,
+        "prb_score": 67,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/electrification-resiliency",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Electrification & Resiliency",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 83,
+    "department_request_dollars": null,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Electrification & Resiliency",
+        "department_request_dollars": null,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 83,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/playscapes",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Playscapes",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 79,
+    "department_request_dollars": null,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Playscapes",
+        "department_request_dollars": null,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 79,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/trails",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Trails",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Trails",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 67,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/athletic-fields-facilities",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Athletic Fields/Facilities",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": null,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Athletic Fields/Facilities",
+        "department_request_dollars": null,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/parking-lots-roadways",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Parking Lots/Roadways",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 60,
+    "department_request_dollars": null,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Parking Lots/Roadways",
+        "department_request_dollars": null,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 60,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/cemeteries",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program - Cemeteries",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 61,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program - Cemeteries",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 61,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/community-gardens",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements Program - Community Gardens",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 57,
+    "department_request_dollars": null,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements Program - Community Gardens",
+        "department_request_dollars": null,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 57,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/parkland-improvements-allocation",
+    "canonical_project_id": null,
+    "source_name": "Parkland Improvements",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_ALLOCATION",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 70000000,
+    "historical_recommendation_amount_dollars": 15000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_ALLOCATION",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Improvements",
+        "department_request_dollars": 70000000,
+        "historical_recommendation_amount_dollars": 15000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/aquatic-programs-allocation",
+    "canonical_project_id": null,
+    "source_name": "Aquatic Programs",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_ALLOCATION",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 60000000,
+    "historical_recommendation_amount_dollars": 15000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_ALLOCATION",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Aquatic Programs",
+        "department_request_dollars": 60000000,
+        "historical_recommendation_amount_dollars": 15000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/recreation-senior-center-improvement-allocation",
+    "canonical_project_id": null,
+    "source_name": "Recreation and Senior Center Improvement Program",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_ALLOCATION",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 55000000,
+    "historical_recommendation_amount_dollars": 10000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_ALLOCATION",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Recreation and Senior Center Improvement Program",
+        "department_request_dollars": 55000000,
+        "historical_recommendation_amount_dollars": 10000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "parks/parkland-infrastructure-allocation",
+    "canonical_project_id": null,
+    "source_name": "Parkland Infrastructure Program",
+    "source_department": "Parks and Recreation",
+    "source_domain": "Parks and Recreation",
+    "presentation_category": "Parks & Open Space",
+    "analytical_unit_type": "PROGRAM_ALLOCATION",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": 5000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_ALLOCATION",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Parkland Infrastructure Program",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": 5000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  }
+]
