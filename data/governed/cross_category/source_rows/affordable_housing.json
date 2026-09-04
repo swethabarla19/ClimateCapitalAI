@@ -1,0 +1,34 @@
+[
+  {
+    "decision_unit_id": "affordable-housing/affordable-housing",
+    "canonical_project_id": null,
+    "source_name": "Affordable Housing",
+    "source_department": "Housing",
+    "source_domain": "Housing",
+    "presentation_category": "Affordable Housing",
+    "analytical_unit_type": "NOT_SCORED",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 350000000,
+    "historical_recommendation_amount_dollars": 0,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PRB_NOT_SCORED",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Affordable Housing",
+        "department_request_dollars": 350000000,
+        "historical_recommendation_amount_dollars": 0,
+        "prb_score": null,
+        "notes": "Explicitly Not Scored in the January 21 PRB matrix."
+      }
+    ],
+    "source_conflict_flag": false
+  }
+]

@@ -1,0 +1,4781 @@
+{
+  "contract_version": "p0-cross-category-universe/1.0.0",
+  "data_version": "m3-6-cross-category-2026-09-04",
+  "governance_checkpoint": "M3.5",
+  "governance_status": "APPROVED",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "summary": {
+    "source_row_count": 136,
+    "analytical_project_count": 106,
+    "program_bucket_count": 23,
+    "program_allocation_count": 4,
+    "not_scored_count": 3,
+    "source_rows_by_presentation_category": {
+      "transportation": 18,
+      "parks_open_space": 34,
+      "watershed": 42,
+      "community_facilities": 41,
+      "affordable_housing": 1
+    },
+    "analytical_projects_by_presentation_category": {
+      "transportation": 9,
+      "parks_open_space": 22,
+      "watershed": 37,
+      "community_facilities": 38
+    }
+  },
+  "decision_units": [
+    {
+      "decision_unit_id": "transportation/bikeways-program",
+      "canonical_project_id": null,
+      "source_name": "Local Mobility - Bikeways Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 81,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": 15000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Local Mobility - Bikeways Program",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": 15000000,
+          "prb_score": 81,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/new-sidewalks-program",
+      "canonical_project_id": null,
+      "source_name": "Local Mobility - New Sidewalks Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 80.5,
+      "department_request_dollars": 81000000,
+      "historical_recommendation_amount_dollars": 33000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Local Mobility - New Sidewalks Program",
+          "department_request_dollars": 81000000,
+          "historical_recommendation_amount_dollars": 33000000,
+          "prb_score": 80.5,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/barton-springs-bridge",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 80,
+      "department_request_dollars": 12000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+          "department_request_dollars": 12000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 80,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/vision-zero-program",
+      "canonical_project_id": null,
+      "source_name": "Vision Zero Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 79,
+      "department_request_dollars": 65000000,
+      "historical_recommendation_amount_dollars": 30000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Vision Zero Program",
+          "department_request_dollars": 65000000,
+          "historical_recommendation_amount_dollars": 30000000,
+          "prb_score": 79,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/urban-trails-program",
+      "canonical_project_id": null,
+      "source_name": "Local Mobility - Urban Trails Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 79,
+      "department_request_dollars": 80000000,
+      "historical_recommendation_amount_dollars": 30000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Local Mobility - Urban Trails Program",
+          "department_request_dollars": 80000000,
+          "historical_recommendation_amount_dollars": 30000000,
+          "prb_score": 79,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/safe-routes-to-school-program",
+      "canonical_project_id": null,
+      "source_name": "Local Mobility - Safe Routes to School Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 78,
+      "department_request_dollars": 20000000,
+      "historical_recommendation_amount_dollars": 10000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Local Mobility - Safe Routes to School Program",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": 10000000,
+          "prb_score": 78,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/transit-enhancements-program",
+      "canonical_project_id": null,
+      "source_name": "Local Mobility - Transit Enhancements Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 77,
+      "department_request_dollars": 19000000,
+      "historical_recommendation_amount_dollars": 7000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Local Mobility - Transit Enhancements Program",
+          "department_request_dollars": 19000000,
+          "historical_recommendation_amount_dollars": 7000000,
+          "prb_score": 77,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/act-plan-7th-street",
+      "canonical_project_id": null,
+      "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 7th Street",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 72,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 7th Street",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 72,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/act-plan-6th-street",
+      "canonical_project_id": null,
+      "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 6th Street",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": 20000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ACT Plan (Austin Core Transportation Plan) Program - 6th Street",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": 20000000,
+          "prb_score": 69,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/street-rehabilitation-program",
+      "canonical_project_id": null,
+      "source_name": "Street Rehabilitation Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 194000000,
+      "historical_recommendation_amount_dollars": 96000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Street Rehabilitation Program",
+          "department_request_dollars": 194000000,
+          "historical_recommendation_amount_dollars": 96000000,
+          "prb_score": 69,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/complete-streets-program",
+      "canonical_project_id": null,
+      "source_name": "Complete Streets Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 285000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Complete Streets Program",
+          "department_request_dollars": 285000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 68,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/west-william-cannon-rehab",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 8000000,
+      "historical_recommendation_amount_dollars": 8000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab",
+          "department_request_dollars": 8000000,
+          "historical_recommendation_amount_dollars": 8000000,
+          "prb_score": 68,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/delwau-ln-replacement",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 13800000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement",
+          "department_request_dollars": 13800000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/river-plantation-dr",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 64,
+      "department_request_dollars": 2600000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.",
+          "department_request_dollars": 2600000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 64,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/w-slaughter-ln",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": 16000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln",
+          "department_request_dollars": 16000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/e-7th-st",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - E. 7th St",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 58,
+      "department_request_dollars": 5200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - E. 7th St",
+          "department_request_dollars": 5200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 58,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/hart-ln-retaining-walls",
+      "canonical_project_id": null,
+      "source_name": "Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 58,
+      "department_request_dollars": 6100000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls",
+          "department_request_dollars": 6100000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 58,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "transportation/neighborhood-partnering-program",
+      "canonical_project_id": null,
+      "source_name": "Neighborhood Partnering Program",
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "presentation_category": "Transportation",
+      "analytical_unit_type": "NOT_SCORED",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 1000000,
+      "historical_recommendation_amount_dollars": 2000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PRB_NOT_SCORED",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Neighborhood Partnering Program",
+          "department_request_dollars": 1000000,
+          "historical_recommendation_amount_dollars": 2000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/bolm-maintenance-center",
+      "canonical_project_id": null,
+      "source_name": "Building Renovation and Replacement Program - Bolm Maintenance Center",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 83,
+      "department_request_dollars": 85000000,
+      "historical_recommendation_amount_dollars": 55000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Building Renovation and Replacement Program - Bolm Maintenance Center",
+          "department_request_dollars": 85000000,
+          "historical_recommendation_amount_dollars": 55000000,
+          "prb_score": 83,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/doris-miller-auditorium",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 74,
+      "department_request_dollars": 22000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+          "department_request_dollars": 22000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 74,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/big-stacy-pool",
+      "canonical_project_id": null,
+      "source_name": "Aquatics Program - Big Stacy Pool",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatics Program - Big Stacy Pool",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 73,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/gus-garcia-center",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 30000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+          "department_request_dollars": 30000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 73,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/jamestown-nh-park",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Jamestown NH Park",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 3500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Jamestown NH Park",
+          "department_request_dollars": 3500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 73,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/givens-district-park-phase-ii",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Givens District Park Phase II",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 71,
+      "department_request_dollars": 3000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Givens District Park Phase II",
+          "department_request_dollars": 3000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 71,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/bolm-district-park",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Bolm District Park",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 70,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Bolm District Park",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 70,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/garrison-pool",
+      "canonical_project_id": null,
+      "source_name": "Aquatics Program - Garrison Pool",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 30000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatics Program - Garrison Pool",
+          "department_request_dollars": 30000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 69,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/grand-meadow-phase-ii",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Grand Meadow Phase II",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 2000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Grand Meadow Phase II",
+          "department_request_dollars": 2000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 68,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/walter-e-long-metro-park-phase-i",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 68,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/martin-pool",
+      "canonical_project_id": null,
+      "source_name": "Aquatics Program - Martin Pool",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 12000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatics Program - Martin Pool",
+          "department_request_dollars": 12000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 67,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/kennemer-pool",
+      "canonical_project_id": null,
+      "source_name": "Aquatics Program - Kennemer Pool",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatics Program - Kennemer Pool",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/alamo-rec-center",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 2500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+          "department_request_dollars": 2500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/buttermilk-nh-park",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Buttermilk NH Park",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 64,
+      "department_request_dollars": 750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Buttermilk NH Park",
+          "department_request_dollars": 750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 64,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/metz-community-center",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": 500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+          "department_request_dollars": 500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/lorraine-camancho-center",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": 1200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+          "department_request_dollars": 1200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/yates-pocket-park",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Yates Pocket Park",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 2500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Yates Pocket Park",
+          "department_request_dollars": 2500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/civitan-pool",
+      "canonical_project_id": null,
+      "source_name": "Aquatics Program - Civitan Pool",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 5000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatics Program - Civitan Pool",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/woolridge-square-plan",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Woolridge Square Plan",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 4000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Woolridge Square Plan",
+          "department_request_dollars": 4000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/north-grounds-maintenance-facility",
+      "canonical_project_id": null,
+      "source_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 61,
+      "department_request_dollars": 6000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+          "department_request_dollars": 6000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 61,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/harris-branch-nh-park-development",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 60,
+      "department_request_dollars": 1500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+          "department_request_dollars": 1500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 60,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/woodland-pocket-park",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Woodland Pocket Park",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 57,
+      "department_request_dollars": 2000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Woodland Pocket Park",
+          "department_request_dollars": 2000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 57,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/parkland-acquisition-program",
+      "canonical_project_id": null,
+      "source_name": "Parkland Acquisition Program",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 100000000,
+      "historical_recommendation_amount_dollars": 40000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Acquisition Program",
+          "department_request_dollars": 100000000,
+          "historical_recommendation_amount_dollars": 40000000,
+          "prb_score": 67,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/electrification-resiliency",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Electrification & Resiliency",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 83,
+      "department_request_dollars": null,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Electrification & Resiliency",
+          "department_request_dollars": null,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 83,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/playscapes",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Playscapes",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 79,
+      "department_request_dollars": null,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Playscapes",
+          "department_request_dollars": null,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 79,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/trails",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Trails",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Trails",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 67,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/athletic-fields-facilities",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Athletic Fields/Facilities",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": null,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Athletic Fields/Facilities",
+          "department_request_dollars": null,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/parking-lots-roadways",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Parking Lots/Roadways",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 60,
+      "department_request_dollars": null,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Parking Lots/Roadways",
+          "department_request_dollars": null,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 60,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/cemeteries",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program - Cemeteries",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 61,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program - Cemeteries",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 61,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/community-gardens",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements Program - Community Gardens",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 57,
+      "department_request_dollars": null,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements Program - Community Gardens",
+          "department_request_dollars": null,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 57,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/parkland-improvements-allocation",
+      "canonical_project_id": null,
+      "source_name": "Parkland Improvements",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_ALLOCATION",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 70000000,
+      "historical_recommendation_amount_dollars": 15000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_ALLOCATION",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Improvements",
+          "department_request_dollars": 70000000,
+          "historical_recommendation_amount_dollars": 15000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/aquatic-programs-allocation",
+      "canonical_project_id": null,
+      "source_name": "Aquatic Programs",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_ALLOCATION",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 60000000,
+      "historical_recommendation_amount_dollars": 15000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_ALLOCATION",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Aquatic Programs",
+          "department_request_dollars": 60000000,
+          "historical_recommendation_amount_dollars": 15000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/recreation-senior-center-improvement-allocation",
+      "canonical_project_id": null,
+      "source_name": "Recreation and Senior Center Improvement Program",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_ALLOCATION",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 55000000,
+      "historical_recommendation_amount_dollars": 10000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_ALLOCATION",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Recreation and Senior Center Improvement Program",
+          "department_request_dollars": 55000000,
+          "historical_recommendation_amount_dollars": 10000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "parks/parkland-infrastructure-allocation",
+      "canonical_project_id": null,
+      "source_name": "Parkland Infrastructure Program",
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "presentation_category": "Parks & Open Space",
+      "analytical_unit_type": "PROGRAM_ALLOCATION",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": 5000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_ALLOCATION",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Parkland Infrastructure Program",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": 5000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/4015.001",
+      "canonical_project_id": "4015.001",
+      "source_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 66,
+      "department_request_dollars": 5470000,
+      "historical_recommendation_amount_dollars": 5470000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+          "department_request_dollars": 5470000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Country Club Creek Metcalf & Oltorf Wastewater Improvements",
+          "department_request_dollars": 5470000,
+          "historical_recommendation_amount_dollars": 5470000,
+          "prb_score": 66,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.043",
+      "canonical_project_id": "5282.043",
+      "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 8500000,
+      "historical_recommendation_amount_dollars": 8500000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+          "department_request_dollars": 8500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+          "department_request_dollars": 8500000,
+          "historical_recommendation_amount_dollars": 8500000,
+          "prb_score": 73,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.133",
+      "canonical_project_id": "5282.133",
+      "source_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 1300000,
+      "historical_recommendation_amount_dollars": 1300000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+          "department_request_dollars": 1300000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Boggy Creek Kealing Park Green Infrastructure Retrofits",
+          "department_request_dollars": 1300000,
+          "historical_recommendation_amount_dollars": 1300000,
+          "prb_score": 73,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.134",
+      "canonical_project_id": "5282.134",
+      "source_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 74,
+      "department_request_dollars": 1400000,
+      "historical_recommendation_amount_dollars": 1400000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+          "department_request_dollars": 1400000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - Tannehill Creek Bartholomew Park Stormwater Retrofit",
+          "department_request_dollars": 1400000,
+          "historical_recommendation_amount_dollars": 1400000,
+          "prb_score": 74,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.150",
+      "canonical_project_id": "5282.150",
+      "source_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 2625000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+          "department_request_dollars": 2625000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Lady Bird Lake - W. Austin Park Water Quality Retrofits",
+          "department_request_dollars": 2625000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 69,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.162",
+      "canonical_project_id": "5282.162",
+      "source_name": "Colorado River - CAPEX Water Quality Control",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 21650000,
+      "historical_recommendation_amount_dollars": 21650000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Colorado River - CAPEX Water Quality Control",
+          "department_request_dollars": 21650000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "CapEx",
+          "department_request_dollars": 21650000,
+          "historical_recommendation_amount_dollars": 21650000,
+          "prb_score": 68,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.089",
+      "canonical_project_id": "5754.089",
+      "source_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 71,
+      "department_request_dollars": 1500000,
+      "historical_recommendation_amount_dollars": 1500000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+          "department_request_dollars": 1500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - McNeal Dr Low Water Crossing Improvement",
+          "department_request_dollars": 1500000,
+          "historical_recommendation_amount_dollars": 1500000,
+          "prb_score": 71,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.139",
+      "canonical_project_id": "5754.139",
+      "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 8100000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+          "department_request_dollars": 8100000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+          "department_request_dollars": 8100000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.145",
+      "canonical_project_id": "5754.145",
+      "source_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 66,
+      "department_request_dollars": 1075000,
+      "historical_recommendation_amount_dollars": 1075000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+          "department_request_dollars": 1075000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Dry Creek North - Highland Hills Low Water Crossing",
+          "department_request_dollars": 1075000,
+          "historical_recommendation_amount_dollars": 1075000,
+          "prb_score": 66,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.147",
+      "canonical_project_id": "5754.147",
+      "source_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 3750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+          "department_request_dollars": 3750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Boggy Creek - Corps Flood Control Ecosystem Restoration",
+          "department_request_dollars": 3750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.149",
+      "canonical_project_id": "5754.149",
+      "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": 2500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+          "department_request_dollars": 2500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements",
+          "department_request_dollars": 2625000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": true
+    },
+    {
+      "decision_unit_id": "watershed/5789.075",
+      "canonical_project_id": "5789.075",
+      "source_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 35000000,
+      "historical_recommendation_amount_dollars": 35000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+          "department_request_dollars": 35000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Waller Creek - Guadalupe St. Flood Risk Reduction Phase I - III",
+          "department_request_dollars": 35000000,
+          "historical_recommendation_amount_dollars": 35000000,
+          "prb_score": 67,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.107",
+      "canonical_project_id": "5789.107",
+      "source_name": "Barton Creek \u2013 Oak Park Local Flood Risk Reduction Project",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 64,
+      "department_request_dollars": 16750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Barton Creek \u2013 Oak Park Local Flood Risk Reduction Project",
+          "department_request_dollars": 16750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Barton Creek - Oak Park Local Flood Risk Reduction",
+          "department_request_dollars": 16750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 64,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.121",
+      "canonical_project_id": "5789.121",
+      "source_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 58,
+      "department_request_dollars": 6255000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+          "department_request_dollars": 6255000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Taylor Slough S. - Warren St. Flood Risk Reduction",
+          "department_request_dollars": 6255000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 58,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.126",
+      "canonical_project_id": "5789.126",
+      "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 73,
+      "department_request_dollars": 21250000,
+      "historical_recommendation_amount_dollars": 21250000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+          "department_request_dollars": 21250000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+          "department_request_dollars": 21250000,
+          "historical_recommendation_amount_dollars": 21250000,
+          "prb_score": 73,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.127",
+      "canonical_project_id": "5789.127",
+      "source_name": "Zilker, Bluebonnet Hether, Water and Wastewater Pipeline Renewal",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 60,
+      "department_request_dollars": 11000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Zilker, Bluebonnet Hether, Water and Wastewater Pipeline Renewal",
+          "department_request_dollars": 11000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "West Boldin Creek - Hether St. Storm drain Improvements",
+          "department_request_dollars": 11000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 60,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.136",
+      "canonical_project_id": "5789.136",
+      "source_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 7700000,
+      "historical_recommendation_amount_dollars": 6355000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+          "department_request_dollars": 7700000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Slaughter Creek - Vassal Dr. Flood Risk Reduction Phase I",
+          "department_request_dollars": 7700000,
+          "historical_recommendation_amount_dollars": 6355000,
+          "prb_score": 65,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.139",
+      "canonical_project_id": "5789.139",
+      "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 56,
+      "department_request_dollars": 11250000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+          "department_request_dollars": 11250000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+          "department_request_dollars": 11250000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 56,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.141",
+      "canonical_project_id": "5789.141",
+      "source_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 61,
+      "department_request_dollars": 7350000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+          "department_request_dollars": 7350000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Boggy Creek - Oakwood Cemetery Storm drain Reroute",
+          "department_request_dollars": 7350000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 61,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.150",
+      "canonical_project_id": "5789.150",
+      "source_name": "Lady Bird Lake \u2013 Citywide Storm Drain Renewal Program \u2013 Phase 1",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 60,
+      "department_request_dollars": 3000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Lady Bird Lake \u2013 Citywide Storm Drain Renewal Program \u2013 Phase 1",
+          "department_request_dollars": 3000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "City Storm Drain Renewal Downtown",
+          "department_request_dollars": 3000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 60,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.145",
+      "canonical_project_id": "5789.145",
+      "source_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 20000000,
+      "historical_recommendation_amount_dollars": 20000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Williamson Creek - Brassiewood Dr. Phase III Stormwater Improvements",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": 20000000,
+          "prb_score": 68,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.146",
+      "canonical_project_id": "5789.146",
+      "source_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 66,
+      "department_request_dollars": 4450000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+          "department_request_dollars": 4450000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "E. Bouldin - Annie St. Flood Risk Reduction Phase II",
+          "department_request_dollars": 4450000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 66,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.053",
+      "canonical_project_id": "5848.053",
+      "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 5195000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+          "department_request_dollars": 5195000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+          "department_request_dollars": 5195000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.070",
+      "canonical_project_id": "5848.070",
+      "source_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 52,
+      "department_request_dollars": 22000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+          "department_request_dollars": 22000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Shoal Creek - Grover Channel Stabilization",
+          "department_request_dollars": 22000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 52,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.071",
+      "canonical_project_id": "5848.071",
+      "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 5000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.087",
+      "canonical_project_id": "5848.087",
+      "source_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 56,
+      "department_request_dollars": 7125000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+          "department_request_dollars": 7125000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Sunken Garden Erosion Protection",
+          "department_request_dollars": 7125000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 56,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.091",
+      "canonical_project_id": "5848.091",
+      "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 64,
+      "department_request_dollars": 5200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+          "department_request_dollars": 5200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+          "department_request_dollars": 5200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 64,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.092",
+      "canonical_project_id": "5848.092",
+      "source_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 4000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+          "department_request_dollars": 4000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Little Walnut Creek Loyola Ln. and Dottie Jordan Park Stream Stabilization",
+          "department_request_dollars": 4000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 67,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/6039.109",
+      "canonical_project_id": "6039.109",
+      "source_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 61,
+      "department_request_dollars": 33500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+          "department_request_dollars": 33500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Shoal Creek - Brentwood Drainage Improvement",
+          "department_request_dollars": 33500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 61,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.011",
+      "canonical_project_id": "7492.011",
+      "source_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 59,
+      "department_request_dollars": 4200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+          "department_request_dollars": 4200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek Duval Dam Modernization",
+          "department_request_dollars": 4200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 59,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.032",
+      "canonical_project_id": "7492.032",
+      "source_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 59,
+      "department_request_dollars": 10500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+          "department_request_dollars": 10500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Shoal Creek - NW Park Dam Modernization",
+          "department_request_dollars": 10500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 59,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.045",
+      "canonical_project_id": "7492.045",
+      "source_name": "Bull Creek - Bintliff Dr Dam Modernization",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 56,
+      "department_request_dollars": 2750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Bull Creek - Bintliff Dr Dam Modernization",
+          "department_request_dollars": 2750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Bull Creek - Bintliff Dam Modernization",
+          "department_request_dollars": 2750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 56,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/8598.014",
+      "canonical_project_id": "8598.014",
+      "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 1500000,
+      "historical_recommendation_amount_dollars": 1500000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+          "department_request_dollars": 1500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase III",
+          "department_request_dollars": 1500000,
+          "historical_recommendation_amount_dollars": 1500000,
+          "prb_score": 67,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/9999.235",
+      "canonical_project_id": "9999.235",
+      "source_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 59,
+      "department_request_dollars": 5000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Walnut Creek - Oak Creek Low Water Crossing",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 59,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/9999.236",
+      "canonical_project_id": "9999.236",
+      "source_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 62,
+      "department_request_dollars": 8750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+          "department_request_dollars": 8750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Johnson Creek Low Water Crossing",
+          "department_request_dollars": 8750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 62,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/10878.010",
+      "canonical_project_id": "10878.010",
+      "source_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 8750000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+          "department_request_dollars": 8750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Waller Creek Tunnel Outlet Improvement",
+          "department_request_dollars": 8750000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/11889.004",
+      "canonical_project_id": "11889.004",
+      "source_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 63,
+      "department_request_dollars": 2625000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_wpd_2026_bond_projects_2025_11_21",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+          "source_date": "2025-11-21",
+          "source_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+          "department_request_dollars": 2625000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "Canonical Watershed source-universe record."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "William Cannon Dr. Corridor",
+          "department_request_dollars": 2625000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 63,
+          "notes": "January PRB scoring and historical recommendation overlay."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/small-scale-asset-management",
+      "canonical_project_id": null,
+      "source_name": "Small Scale Stormwater & Drainage Asset Management Opportunities",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 36000000,
+      "historical_recommendation_amount_dollars": 7000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Small Scale Stormwater & Drainage Asset Management Opportunities",
+          "department_request_dollars": 36000000,
+          "historical_recommendation_amount_dollars": 7000000,
+          "prb_score": 69,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/partnership-opportunities",
+      "canonical_project_id": null,
+      "source_name": "Stormwater & Drainage Partnership Opportunities",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 140000000,
+      "historical_recommendation_amount_dollars": 15000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Stormwater & Drainage Partnership Opportunities",
+          "department_request_dollars": 140000000,
+          "historical_recommendation_amount_dollars": 15000000,
+          "prb_score": 68,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/stormwater-resilience-program",
+      "canonical_project_id": null,
+      "source_name": "Stormwater Resilience Program",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 66,
+      "department_request_dollars": 50000000,
+      "historical_recommendation_amount_dollars": 3000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Stormwater Resilience Program",
+          "department_request_dollars": 50000000,
+          "historical_recommendation_amount_dollars": 3000000,
+          "prb_score": 66,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/facility-for-operations",
+      "canonical_project_id": null,
+      "source_name": "Watershed Protection - Facility for Operations",
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 51,
+      "department_request_dollars": 16000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Watershed Protection - Facility for Operations",
+          "department_request_dollars": 16000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 51,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "watershed/open-space-acquisition",
+      "canonical_project_id": null,
+      "source_name": "Open Space Acquisition",
+      "source_department": "Office of Climate Action and Resilience, Austin Water, Watershed Protection Department",
+      "source_domain": "Watershed Protection",
+      "presentation_category": "Watershed",
+      "analytical_unit_type": "NOT_SCORED",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 300000000,
+      "historical_recommendation_amount_dollars": 10000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PRB_NOT_SCORED",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Open Space Acquisition",
+          "department_request_dollars": 300000000,
+          "historical_recommendation_amount_dollars": 10000000,
+          "prb_score": null,
+          "notes": null
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/dougherty-arts-center",
+      "canonical_project_id": null,
+      "source_name": "Dougherty Arts Center",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 77,
+      "department_request_dollars": 45000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Dougherty Arts Center",
+          "department_request_dollars": 45000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 77,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/george-washington-carver-museum",
+      "canonical_project_id": null,
+      "source_name": "George Washington Carver Museum Phase 1a and 1b",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 70,
+      "department_request_dollars": 12000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+          "source_date": "2025-07-31",
+          "source_name": "George Washington Carver Museum Phase 1a and 1b",
+          "department_request_dollars": 6000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "July request was $6M; January PRB request is $12M."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "George Washington Carver Museum Phase 1a and 1b",
+          "department_request_dollars": 12000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 70,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": true
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/elizabet-ney-museum",
+      "canonical_project_id": null,
+      "source_name": "Elizabet Ney Museum ADA Restroom and Storage Facility",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 66,
+      "department_request_dollars": 1000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Elizabet Ney Museum ADA Restroom and Storage Facility",
+          "department_request_dollars": 1000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 66,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/mexican-american-cultural-center",
+      "canonical_project_id": null,
+      "source_name": "Mexican American Cultural Center",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 64,
+      "department_request_dollars": 12000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Mexican American Cultural Center",
+          "department_request_dollars": 12000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 64,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/zilker-hillside-theatre",
+      "canonical_project_id": null,
+      "source_name": "Zilker Hillside Theatre",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 59,
+      "department_request_dollars": 5000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Zilker Hillside Theatre",
+          "department_request_dollars": 5000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 59,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/asian-american-resource-center",
+      "canonical_project_id": null,
+      "source_name": "Asian American Resource Center",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 60,
+      "department_request_dollars": 58000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Asian American Resource Center",
+          "department_request_dollars": 58000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 60,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/old-bakery-and-emporium",
+      "canonical_project_id": null,
+      "source_name": "Old Bakery and Emporium",
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 45,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Old Bakery and Emporium",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 45,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/colony-park-branch-library",
+      "canonical_project_id": null,
+      "source_name": "Colony Park Branch Library",
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 69,
+      "department_request_dollars": 58000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+          "source_date": "2025-07-31",
+          "source_name": "Colony Park Branch Library",
+          "department_request_dollars": 58800000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "July request was $58.8M; January PRB request is $58M."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Colony Park Branch Library",
+          "department_request_dollars": 58000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 69,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": true
+    },
+    {
+      "decision_unit_id": "community-facilities/library/regional-library-land-acquisition",
+      "canonical_project_id": null,
+      "source_name": "Regional Library Land Acquisition",
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 68,
+      "department_request_dollars": 20000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Regional Library Land Acquisition",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 68,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/hampton-oak-hill",
+      "canonical_project_id": null,
+      "source_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 19000000,
+      "historical_recommendation_amount_dollars": 20000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+          "department_request_dollars": 19000000,
+          "historical_recommendation_amount_dollars": 20000000,
+          "prb_score": 65,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/milwood-branch",
+      "canonical_project_id": null,
+      "source_name": "Milwood Branch Library Renovation and Expansion",
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 65,
+      "department_request_dollars": 24000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Milwood Branch Library Renovation and Expansion",
+          "department_request_dollars": 24000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 65,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/safe-secure-libraries",
+      "canonical_project_id": null,
+      "source_name": "Safe & Secure Libraries Project",
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 54,
+      "department_request_dollars": 10800000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+          "source_date": "2025-07-31",
+          "source_name": "Safe & Ready Libraries Project",
+          "department_request_dollars": 10800000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": null,
+          "notes": "July source used Safe & Ready Libraries Project; January PRB uses Safe & Secure Libraries Project."
+        },
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Safe & Secure Libraries Project",
+          "department_request_dollars": 10800000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 54,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": true
+    },
+    {
+      "decision_unit_id": "community-facilities/public-health/colony-park",
+      "canonical_project_id": null,
+      "source_name": "Colony Park Public Health Center",
+      "source_department": "Austin Public Health",
+      "source_domain": "Public Health",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 74,
+      "department_request_dollars": 42000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Colony Park Public Health Center",
+          "department_request_dollars": 42000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 74,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/public-health/northeast",
+      "canonical_project_id": null,
+      "source_name": "Northeast Public Health Center",
+      "source_department": "Austin Public Health",
+      "source_domain": "Public Health",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 72,
+      "department_request_dollars": 51000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Northeast Public Health Center",
+          "department_request_dollars": 51000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 72,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-1",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Demand Station #1 (401 E 5th St)",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 56,
+      "department_request_dollars": 21000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Demand Station #1 (401 E 5th St)",
+          "department_request_dollars": 21000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 56,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/station-03",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Station #03 (1305 Red River St)",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 54.5,
+      "department_request_dollars": 18000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Station #03 (1305 Red River St)",
+          "department_request_dollars": 18000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 54.5,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/station-14",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 53.5,
+      "department_request_dollars": 20000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 53.5,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-9",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Demand Station #9",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 51,
+      "department_request_dollars": 28000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Demand Station #9",
+          "department_request_dollars": 28000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 51,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-2",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Demand Station #2",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 46,
+      "department_request_dollars": 18000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Demand Station #2",
+          "department_request_dollars": 18000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 46,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-4",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Demand Station #4",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 46,
+      "department_request_dollars": 18000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Demand Station #4",
+          "department_request_dollars": 18000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 46,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-3",
+      "canonical_project_id": null,
+      "source_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 46,
+      "department_request_dollars": 20000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+          "department_request_dollars": 20000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 46,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-26",
+      "canonical_project_id": null,
+      "source_name": "Fire Station 26 Expansion",
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 50,
+      "department_request_dollars": 29000000,
+      "historical_recommendation_amount_dollars": 29000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fire Station 26 Expansion",
+          "department_request_dollars": 29000000,
+          "historical_recommendation_amount_dollars": 29000000,
+          "prb_score": 50,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-15",
+      "canonical_project_id": null,
+      "source_name": "Fire Station 15 Renovation",
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 49,
+      "department_request_dollars": 35000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fire Station 15 Renovation",
+          "department_request_dollars": 35000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 49,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-14",
+      "canonical_project_id": null,
+      "source_name": "Fire Station 14 Renovation",
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 47,
+      "department_request_dollars": 26000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fire Station 14 Renovation",
+          "department_request_dollars": 26000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 47,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-20",
+      "canonical_project_id": null,
+      "source_name": "Fire Station 20 Renovation",
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 46,
+      "department_request_dollars": 26000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fire Station 20 Renovation",
+          "department_request_dollars": 26000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 46,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/education-building-b",
+      "canonical_project_id": null,
+      "source_name": "Education Building B",
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 40,
+      "department_request_dollars": 71000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Education Building B",
+          "department_request_dollars": 71000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 40,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/consolidated-service-center",
+      "canonical_project_id": null,
+      "source_name": "Consolidated Fleet Service Center (South/Southeast)",
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 50.5,
+      "department_request_dollars": 245000000,
+      "historical_recommendation_amount_dollars": 10000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Consolidated Fleet Service Center (South/Southeast)",
+          "department_request_dollars": 245000000,
+          "historical_recommendation_amount_dollars": 10000000,
+          "prb_score": 50.5,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-southeast",
+      "canonical_project_id": null,
+      "source_name": "Fuel Station Southeast",
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 50,
+      "department_request_dollars": 10200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fuel Station Southeast",
+          "department_request_dollars": 10200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 50,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-central",
+      "canonical_project_id": null,
+      "source_name": "Fuel Station Central",
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 50,
+      "department_request_dollars": 10500000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fuel Station Central",
+          "department_request_dollars": 10500000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 50,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-northwest",
+      "canonical_project_id": null,
+      "source_name": "Fuel Station Northwest",
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 50,
+      "department_request_dollars": 10200000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Fuel Station Northwest",
+          "department_request_dollars": 10200000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 50,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/hso/austin-shelters",
+      "canonical_project_id": null,
+      "source_name": "Austin Shelters",
+      "source_department": "HSO",
+      "source_domain": "Homeless Strategy",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "PROGRAM_BUCKET",
+      "analytical_unit": false,
+      "prb_scored": true,
+      "prb_score": 52,
+      "department_request_dollars": 50000000,
+      "historical_recommendation_amount_dollars": 25000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PROGRAM_BUCKET",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Austin Shelters",
+          "department_request_dollars": 50000000,
+          "historical_recommendation_amount_dollars": 25000000,
+          "prb_score": 52,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/hso/north-austin-homeless-resource-center",
+      "canonical_project_id": null,
+      "source_name": "North Austin Homeless Resource Center",
+      "source_department": "HSO",
+      "source_domain": "Homeless Strategy",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 51,
+      "department_request_dollars": 15000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "North Austin Homeless Resource Center",
+          "department_request_dollars": 15000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 51,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/canyon-creek-northwest",
+      "canonical_project_id": null,
+      "source_name": "Canyon Creek Northwest Substation",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 67,
+      "department_request_dollars": 60500000,
+      "historical_recommendation_amount_dollars": 62000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Canyon Creek Northwest Substation",
+          "department_request_dollars": 60500000,
+          "historical_recommendation_amount_dollars": 62000000,
+          "prb_score": 67,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/scenario-based-training",
+      "canonical_project_id": null,
+      "source_name": "Scenario Based Training Facility",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 51,
+      "department_request_dollars": 100000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Scenario Based Training Facility",
+          "department_request_dollars": 100000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 51,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/air-operations",
+      "canonical_project_id": null,
+      "source_name": "Police Air Operations Facility",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 49,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Police Air Operations Facility",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 49,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/downtown-substation",
+      "canonical_project_id": null,
+      "source_name": "Downtown Police Substation",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 47,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Downtown Police Substation",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 47,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/northeast-substation",
+      "canonical_project_id": null,
+      "source_name": "Northeast Police Substation",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 44,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Northeast Police Substation",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 44,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/southwest-substation",
+      "canonical_project_id": null,
+      "source_name": "Southwest Police Substation",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 44,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Southwest Police Substation",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 44,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/central-west-substation",
+      "canonical_project_id": null,
+      "source_name": "Central West Police Substation",
+      "source_department": "Police",
+      "source_domain": "Police",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 43,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Central West Police Substation",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 43,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/animal-services/campus-improvements",
+      "canonical_project_id": null,
+      "source_name": "Animal Service Center Campus Improvements",
+      "source_department": "Animal Services",
+      "source_domain": "Animal Services",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 61,
+      "department_request_dollars": 40000000,
+      "historical_recommendation_amount_dollars": 3000000,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Animal Service Center Campus Improvements",
+          "department_request_dollars": 40000000,
+          "historical_recommendation_amount_dollars": 3000000,
+          "prb_score": 61,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "community-facilities/municipal-court/customer-service-center",
+      "canonical_project_id": null,
+      "source_name": "Municipal Court Customer Service Center",
+      "source_department": "Municipal Court",
+      "source_domain": "Municipal Court",
+      "presentation_category": "Community Facilities",
+      "analytical_unit_type": "ANALYTICAL_PROJECT",
+      "analytical_unit": true,
+      "prb_scored": true,
+      "prb_score": 44,
+      "department_request_dollars": 10000000,
+      "historical_recommendation_amount_dollars": null,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": null,
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Municipal Court Customer Service Center",
+          "department_request_dollars": 10000000,
+          "historical_recommendation_amount_dollars": null,
+          "prb_score": 44,
+          "notes": "January 21 PRB scoring snapshot."
+        }
+      ],
+      "source_conflict_flag": false
+    },
+    {
+      "decision_unit_id": "affordable-housing/affordable-housing",
+      "canonical_project_id": null,
+      "source_name": "Affordable Housing",
+      "source_department": "Housing",
+      "source_domain": "Housing",
+      "presentation_category": "Affordable Housing",
+      "analytical_unit_type": "NOT_SCORED",
+      "analytical_unit": false,
+      "prb_scored": false,
+      "prb_score": null,
+      "department_request_dollars": 350000000,
+      "historical_recommendation_amount_dollars": 0,
+      "evidence_feasibility_status": "NOT_EVALUATED",
+      "model_eligible": false,
+      "exclusion_reason": "PRB_NOT_SCORED",
+      "source_ids": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "source_versions": [
+        {
+          "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+          "source_date": "2026-01-21",
+          "source_name": "Affordable Housing",
+          "department_request_dollars": 350000000,
+          "historical_recommendation_amount_dollars": 0,
+          "prb_score": null,
+          "notes": "Explicitly Not Scored in the January 21 PRB matrix."
+        }
+      ],
+      "source_conflict_flag": false
+    }
+  ]
+}
