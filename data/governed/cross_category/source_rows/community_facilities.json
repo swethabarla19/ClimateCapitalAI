@@ -1,0 +1,1344 @@
+[
+  {
+    "decision_unit_id": "community-facilities/acme/dougherty-arts-center",
+    "canonical_project_id": null,
+    "source_name": "Dougherty Arts Center",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 77,
+    "department_request_dollars": 45000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Dougherty Arts Center",
+        "department_request_dollars": 45000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 77,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/george-washington-carver-museum",
+    "canonical_project_id": null,
+    "source_name": "George Washington Carver Museum Phase 1a and 1b",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 70,
+    "department_request_dollars": 12000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_project_request_list_2025_07_31",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "source_date": "2025-07-31",
+        "source_name": "George Washington Carver Museum Phase 1a and 1b",
+        "department_request_dollars": 6000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "July request was $6M; January PRB request is $12M."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "George Washington Carver Museum Phase 1a and 1b",
+        "department_request_dollars": 12000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 70,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": true
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/elizabet-ney-museum",
+    "canonical_project_id": null,
+    "source_name": "Elizabet Ney Museum ADA Restroom and Storage Facility",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 66,
+    "department_request_dollars": 1000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Elizabet Ney Museum ADA Restroom and Storage Facility",
+        "department_request_dollars": 1000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 66,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/mexican-american-cultural-center",
+    "canonical_project_id": null,
+    "source_name": "Mexican American Cultural Center",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 64,
+    "department_request_dollars": 12000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Mexican American Cultural Center",
+        "department_request_dollars": 12000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 64,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/zilker-hillside-theatre",
+    "canonical_project_id": null,
+    "source_name": "Zilker Hillside Theatre",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 59,
+    "department_request_dollars": 5000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Zilker Hillside Theatre",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 59,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/asian-american-resource-center",
+    "canonical_project_id": null,
+    "source_name": "Asian American Resource Center",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 60,
+    "department_request_dollars": 58000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Asian American Resource Center",
+        "department_request_dollars": 58000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 60,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/acme/old-bakery-and-emporium",
+    "canonical_project_id": null,
+    "source_name": "Old Bakery and Emporium",
+    "source_department": "ACME",
+    "source_domain": "Cultural / ACME",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 45,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Old Bakery and Emporium",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 45,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/library/colony-park-branch-library",
+    "canonical_project_id": null,
+    "source_name": "Colony Park Branch Library",
+    "source_department": "Austin Public Library",
+    "source_domain": "Libraries",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 58000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_project_request_list_2025_07_31",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "source_date": "2025-07-31",
+        "source_name": "Colony Park Branch Library",
+        "department_request_dollars": 58800000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "July request was $58.8M; January PRB request is $58M."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Colony Park Branch Library",
+        "department_request_dollars": 58000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 69,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": true
+  },
+  {
+    "decision_unit_id": "community-facilities/library/regional-library-land-acquisition",
+    "canonical_project_id": null,
+    "source_name": "Regional Library Land Acquisition",
+    "source_department": "Austin Public Library",
+    "source_domain": "Libraries",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 20000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Regional Library Land Acquisition",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 68,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/library/hampton-oak-hill",
+    "canonical_project_id": null,
+    "source_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+    "source_department": "Austin Public Library",
+    "source_domain": "Libraries",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 19000000,
+    "historical_recommendation_amount_dollars": 20000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+        "department_request_dollars": 19000000,
+        "historical_recommendation_amount_dollars": 20000000,
+        "prb_score": 65,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/library/milwood-branch",
+    "canonical_project_id": null,
+    "source_name": "Milwood Branch Library Renovation and Expansion",
+    "source_department": "Austin Public Library",
+    "source_domain": "Libraries",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 24000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Milwood Branch Library Renovation and Expansion",
+        "department_request_dollars": 24000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/library/safe-secure-libraries",
+    "canonical_project_id": null,
+    "source_name": "Safe & Secure Libraries Project",
+    "source_department": "Austin Public Library",
+    "source_domain": "Libraries",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 54,
+    "department_request_dollars": 10800000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_project_request_list_2025_07_31",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_project_request_list_2025_07_31",
+        "source_date": "2025-07-31",
+        "source_name": "Safe & Ready Libraries Project",
+        "department_request_dollars": 10800000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "July source used Safe & Ready Libraries Project; January PRB uses Safe & Secure Libraries Project."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Safe & Secure Libraries Project",
+        "department_request_dollars": 10800000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 54,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": true
+  },
+  {
+    "decision_unit_id": "community-facilities/public-health/colony-park",
+    "canonical_project_id": null,
+    "source_name": "Colony Park Public Health Center",
+    "source_department": "Austin Public Health",
+    "source_domain": "Public Health",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 74,
+    "department_request_dollars": 42000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Colony Park Public Health Center",
+        "department_request_dollars": 42000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 74,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/public-health/northeast",
+    "canonical_project_id": null,
+    "source_name": "Northeast Public Health Center",
+    "source_department": "Austin Public Health",
+    "source_domain": "Public Health",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 72,
+    "department_request_dollars": 51000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Northeast Public Health Center",
+        "department_request_dollars": 51000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 72,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/demand-station-1",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Demand Station #1 (401 E 5th St)",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 56,
+    "department_request_dollars": 21000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Demand Station #1 (401 E 5th St)",
+        "department_request_dollars": 21000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 56,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/station-03",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Station #03 (1305 Red River St)",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 54.5,
+    "department_request_dollars": 18000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Station #03 (1305 Red River St)",
+        "department_request_dollars": 18000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 54.5,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/station-14",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 53.5,
+    "department_request_dollars": 20000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 53.5,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/demand-station-9",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Demand Station #9",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 51,
+    "department_request_dollars": 28000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Demand Station #9",
+        "department_request_dollars": 28000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 51,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/demand-station-2",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Demand Station #2",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 46,
+    "department_request_dollars": 18000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Demand Station #2",
+        "department_request_dollars": 18000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 46,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/demand-station-4",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Demand Station #4",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 46,
+    "department_request_dollars": 18000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Demand Station #4",
+        "department_request_dollars": 18000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 46,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/ems/demand-station-3",
+    "canonical_project_id": null,
+    "source_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+    "source_department": "EMS",
+    "source_domain": "Emergency Medical Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 46,
+    "department_request_dollars": 20000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 46,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fire/station-26",
+    "canonical_project_id": null,
+    "source_name": "Fire Station 26 Expansion",
+    "source_department": "Fire",
+    "source_domain": "Fire",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 50,
+    "department_request_dollars": 29000000,
+    "historical_recommendation_amount_dollars": 29000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fire Station 26 Expansion",
+        "department_request_dollars": 29000000,
+        "historical_recommendation_amount_dollars": 29000000,
+        "prb_score": 50,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fire/station-15",
+    "canonical_project_id": null,
+    "source_name": "Fire Station 15 Renovation",
+    "source_department": "Fire",
+    "source_domain": "Fire",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 49,
+    "department_request_dollars": 35000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fire Station 15 Renovation",
+        "department_request_dollars": 35000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 49,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fire/station-14",
+    "canonical_project_id": null,
+    "source_name": "Fire Station 14 Renovation",
+    "source_department": "Fire",
+    "source_domain": "Fire",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 47,
+    "department_request_dollars": 26000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fire Station 14 Renovation",
+        "department_request_dollars": 26000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 47,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fire/station-20",
+    "canonical_project_id": null,
+    "source_name": "Fire Station 20 Renovation",
+    "source_department": "Fire",
+    "source_domain": "Fire",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 46,
+    "department_request_dollars": 26000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fire Station 20 Renovation",
+        "department_request_dollars": 26000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 46,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fire/education-building-b",
+    "canonical_project_id": null,
+    "source_name": "Education Building B",
+    "source_department": "Fire",
+    "source_domain": "Fire",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 40,
+    "department_request_dollars": 71000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Education Building B",
+        "department_request_dollars": 71000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 40,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fleet/consolidated-service-center",
+    "canonical_project_id": null,
+    "source_name": "Consolidated Fleet Service Center (South/Southeast)",
+    "source_department": "Fleet Services",
+    "source_domain": "Fleet Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 50.5,
+    "department_request_dollars": 245000000,
+    "historical_recommendation_amount_dollars": 10000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Consolidated Fleet Service Center (South/Southeast)",
+        "department_request_dollars": 245000000,
+        "historical_recommendation_amount_dollars": 10000000,
+        "prb_score": 50.5,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fleet/fuel-station-southeast",
+    "canonical_project_id": null,
+    "source_name": "Fuel Station Southeast",
+    "source_department": "Fleet Services",
+    "source_domain": "Fleet Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 50,
+    "department_request_dollars": 10200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fuel Station Southeast",
+        "department_request_dollars": 10200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 50,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fleet/fuel-station-central",
+    "canonical_project_id": null,
+    "source_name": "Fuel Station Central",
+    "source_department": "Fleet Services",
+    "source_domain": "Fleet Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 50,
+    "department_request_dollars": 10500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fuel Station Central",
+        "department_request_dollars": 10500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 50,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/fleet/fuel-station-northwest",
+    "canonical_project_id": null,
+    "source_name": "Fuel Station Northwest",
+    "source_department": "Fleet Services",
+    "source_domain": "Fleet Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 50,
+    "department_request_dollars": 10200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Fuel Station Northwest",
+        "department_request_dollars": 10200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 50,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/hso/austin-shelters",
+    "canonical_project_id": null,
+    "source_name": "Austin Shelters",
+    "source_department": "HSO",
+    "source_domain": "Homeless Strategy",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 52,
+    "department_request_dollars": 50000000,
+    "historical_recommendation_amount_dollars": 25000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Austin Shelters",
+        "department_request_dollars": 50000000,
+        "historical_recommendation_amount_dollars": 25000000,
+        "prb_score": 52,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/hso/north-austin-homeless-resource-center",
+    "canonical_project_id": null,
+    "source_name": "North Austin Homeless Resource Center",
+    "source_department": "HSO",
+    "source_domain": "Homeless Strategy",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 51,
+    "department_request_dollars": 15000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "North Austin Homeless Resource Center",
+        "department_request_dollars": 15000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 51,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/canyon-creek-northwest",
+    "canonical_project_id": null,
+    "source_name": "Canyon Creek Northwest Substation",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 60500000,
+    "historical_recommendation_amount_dollars": 62000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Canyon Creek Northwest Substation",
+        "department_request_dollars": 60500000,
+        "historical_recommendation_amount_dollars": 62000000,
+        "prb_score": 67,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/scenario-based-training",
+    "canonical_project_id": null,
+    "source_name": "Scenario Based Training Facility",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 51,
+    "department_request_dollars": 100000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Scenario Based Training Facility",
+        "department_request_dollars": 100000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 51,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/air-operations",
+    "canonical_project_id": null,
+    "source_name": "Police Air Operations Facility",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 49,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Police Air Operations Facility",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 49,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/downtown-substation",
+    "canonical_project_id": null,
+    "source_name": "Downtown Police Substation",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 47,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Downtown Police Substation",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 47,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/northeast-substation",
+    "canonical_project_id": null,
+    "source_name": "Northeast Police Substation",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 44,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Northeast Police Substation",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 44,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/southwest-substation",
+    "canonical_project_id": null,
+    "source_name": "Southwest Police Substation",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 44,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Southwest Police Substation",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 44,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/police/central-west-substation",
+    "canonical_project_id": null,
+    "source_name": "Central West Police Substation",
+    "source_department": "Police",
+    "source_domain": "Police",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 43,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Central West Police Substation",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 43,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/animal-services/campus-improvements",
+    "canonical_project_id": null,
+    "source_name": "Animal Service Center Campus Improvements",
+    "source_department": "Animal Services",
+    "source_domain": "Animal Services",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 61,
+    "department_request_dollars": 40000000,
+    "historical_recommendation_amount_dollars": 3000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Animal Service Center Campus Improvements",
+        "department_request_dollars": 40000000,
+        "historical_recommendation_amount_dollars": 3000000,
+        "prb_score": 61,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "community-facilities/municipal-court/customer-service-center",
+    "canonical_project_id": null,
+    "source_name": "Municipal Court Customer Service Center",
+    "source_department": "Municipal Court",
+    "source_domain": "Municipal Court",
+    "presentation_category": "Community Facilities",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 44,
+    "department_request_dollars": 10000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Municipal Court Customer Service Center",
+        "department_request_dollars": 10000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 44,
+        "notes": "January 21 PRB scoring snapshot."
+      }
+    ],
+    "source_conflict_flag": false
+  }
+]
