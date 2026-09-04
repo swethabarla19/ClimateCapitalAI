@@ -1748,3 +1748,57 @@ Detailed checkpoint:
 Next analytical work must derive evidence-feasibility and model-eligibility
 from this governed universe rather than treating all 106 structural
 analytical projects as automatically model-ready.
+
+## 2026-09-04 — M3.7A Watershed PRB Score Reconciliation
+
+M3.7A implementation and verification are complete; checkpoint approval and
+commit remain pending.
+
+The governed November 21, 2025 Watershed universe was reconciled against the
+checksum-verified January 21, 2026 PRB scoring source.
+
+Result:
+
+- 37/37 governed Watershed analytical projects reconciled
+- 37/37 complete six-component PRB score vectors
+- 37/37 valid PRB Grand Totals
+- 7 exact November/January source-name matches
+- 30 governed source-version name matches
+- 0 ambiguous matches
+- 0 unmatched projects
+- 1 request-version conflict: `5754.149`
+- canonical November request total: $327,970,000
+- January PRB project request total: $328,095,000
+- January named-project recommendation total: $125,000,000
+
+The January PRB extraction is checksum-gated, fail-closed, deterministic, and
+idempotent. Every six-component vector sums exactly to its governed Grand
+Total.
+
+Canonical November identity remains authoritative. January names, scores,
+requests, and recommendation values remain overlays.
+
+The January source authority remains structurally separated: PRB scoring
+evidence may be considered for analytical use in M3.7B/C, while Initial
+Recommendation remains benchmark/outcome-only and cannot become a model input.
+
+No Funding Priority formula, ranking, tie-breaking rule, optimization
+objective, or portfolio optimizer was introduced in M3.7A.
+
+Verification:
+
+- M3.7A focused extraction tests: 10 passed, 79 subtests passed
+- combined Watershed regression checkpoint: 38 passed, 84 subtests passed
+- full repository: 216 passed, 137 subtests passed
+- `python -m pip check`: no broken requirements
+- one existing Starlette/AnyIO deprecation warning remains non-failing
+
+Detailed checkpoint:
+
+`docs/delivery/m3-7a-watershed-prb-reconciliation.md`
+
+Next:
+
+M3.7B — determine Watershed evidence feasibility and model eligibility using
+the now-proven 37/37 PRB evidence layer before reopening deterministic Funding
+Priority or $125M optimization.
