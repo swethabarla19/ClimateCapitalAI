@@ -1,0 +1,1716 @@
+[
+  {
+    "decision_unit_id": "watershed/4015.001",
+    "canonical_project_id": "4015.001",
+    "source_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 66,
+    "department_request_dollars": 5470000,
+    "historical_recommendation_amount_dollars": 5470000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+        "department_request_dollars": 5470000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Country Club Creek Metcalf & Oltorf Wastewater Improvements",
+        "department_request_dollars": 5470000,
+        "historical_recommendation_amount_dollars": 5470000,
+        "prb_score": 66,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5282.043",
+    "canonical_project_id": "5282.043",
+    "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 8500000,
+    "historical_recommendation_amount_dollars": 8500000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+        "department_request_dollars": 8500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+        "department_request_dollars": 8500000,
+        "historical_recommendation_amount_dollars": 8500000,
+        "prb_score": 73,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5282.133",
+    "canonical_project_id": "5282.133",
+    "source_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 1300000,
+    "historical_recommendation_amount_dollars": 1300000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+        "department_request_dollars": 1300000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Boggy Creek Kealing Park Green Infrastructure Retrofits",
+        "department_request_dollars": 1300000,
+        "historical_recommendation_amount_dollars": 1300000,
+        "prb_score": 73,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5282.134",
+    "canonical_project_id": "5282.134",
+    "source_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 74,
+    "department_request_dollars": 1400000,
+    "historical_recommendation_amount_dollars": 1400000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+        "department_request_dollars": 1400000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - Tannehill Creek Bartholomew Park Stormwater Retrofit",
+        "department_request_dollars": 1400000,
+        "historical_recommendation_amount_dollars": 1400000,
+        "prb_score": 74,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5282.150",
+    "canonical_project_id": "5282.150",
+    "source_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 2625000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+        "department_request_dollars": 2625000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Lady Bird Lake - W. Austin Park Water Quality Retrofits",
+        "department_request_dollars": 2625000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 69,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5282.162",
+    "canonical_project_id": "5282.162",
+    "source_name": "Colorado River - CAPEX Water Quality Control",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 21650000,
+    "historical_recommendation_amount_dollars": 21650000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Colorado River - CAPEX Water Quality Control",
+        "department_request_dollars": 21650000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "CapEx",
+        "department_request_dollars": 21650000,
+        "historical_recommendation_amount_dollars": 21650000,
+        "prb_score": 68,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5754.089",
+    "canonical_project_id": "5754.089",
+    "source_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 71,
+    "department_request_dollars": 1500000,
+    "historical_recommendation_amount_dollars": 1500000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+        "department_request_dollars": 1500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - McNeal Dr Low Water Crossing Improvement",
+        "department_request_dollars": 1500000,
+        "historical_recommendation_amount_dollars": 1500000,
+        "prb_score": 71,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5754.139",
+    "canonical_project_id": "5754.139",
+    "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 8100000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+        "department_request_dollars": 8100000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+        "department_request_dollars": 8100000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5754.145",
+    "canonical_project_id": "5754.145",
+    "source_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 66,
+    "department_request_dollars": 1075000,
+    "historical_recommendation_amount_dollars": 1075000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+        "department_request_dollars": 1075000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Dry Creek North - Highland Hills Low Water Crossing",
+        "department_request_dollars": 1075000,
+        "historical_recommendation_amount_dollars": 1075000,
+        "prb_score": 66,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5754.147",
+    "canonical_project_id": "5754.147",
+    "source_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 3750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+        "department_request_dollars": 3750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Boggy Creek - Corps Flood Control Ecosystem Restoration",
+        "department_request_dollars": 3750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5754.149",
+    "canonical_project_id": "5754.149",
+    "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": 2500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+        "department_request_dollars": 2500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Country Club West - Riverside Farms Low Water Crossing Improvements",
+        "department_request_dollars": 2625000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": true
+  },
+  {
+    "decision_unit_id": "watershed/5789.075",
+    "canonical_project_id": "5789.075",
+    "source_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 35000000,
+    "historical_recommendation_amount_dollars": 35000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+        "department_request_dollars": 35000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Waller Creek - Guadalupe St. Flood Risk Reduction Phase I - III",
+        "department_request_dollars": 35000000,
+        "historical_recommendation_amount_dollars": 35000000,
+        "prb_score": 67,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.107",
+    "canonical_project_id": "5789.107",
+    "source_name": "Barton Creek \u2013 Oak Park Local Flood Risk Reduction Project",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 64,
+    "department_request_dollars": 16750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Barton Creek \u2013 Oak Park Local Flood Risk Reduction Project",
+        "department_request_dollars": 16750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Barton Creek - Oak Park Local Flood Risk Reduction",
+        "department_request_dollars": 16750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 64,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.121",
+    "canonical_project_id": "5789.121",
+    "source_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 58,
+    "department_request_dollars": 6255000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+        "department_request_dollars": 6255000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Taylor Slough S. - Warren St. Flood Risk Reduction",
+        "department_request_dollars": 6255000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 58,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.126",
+    "canonical_project_id": "5789.126",
+    "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 73,
+    "department_request_dollars": 21250000,
+    "historical_recommendation_amount_dollars": 21250000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+        "department_request_dollars": 21250000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - North Acres Storm Drain Improvements",
+        "department_request_dollars": 21250000,
+        "historical_recommendation_amount_dollars": 21250000,
+        "prb_score": 73,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.127",
+    "canonical_project_id": "5789.127",
+    "source_name": "Zilker, Bluebonnet Hether, Water and Wastewater Pipeline Renewal",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 60,
+    "department_request_dollars": 11000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Zilker, Bluebonnet Hether, Water and Wastewater Pipeline Renewal",
+        "department_request_dollars": 11000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "West Boldin Creek - Hether St. Storm drain Improvements",
+        "department_request_dollars": 11000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 60,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.136",
+    "canonical_project_id": "5789.136",
+    "source_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 7700000,
+    "historical_recommendation_amount_dollars": 6355000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+        "department_request_dollars": 7700000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Slaughter Creek - Vassal Dr. Flood Risk Reduction Phase I",
+        "department_request_dollars": 7700000,
+        "historical_recommendation_amount_dollars": 6355000,
+        "prb_score": 65,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.139",
+    "canonical_project_id": "5789.139",
+    "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 56,
+    "department_request_dollars": 11250000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+        "department_request_dollars": 11250000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+        "department_request_dollars": 11250000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 56,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.141",
+    "canonical_project_id": "5789.141",
+    "source_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 61,
+    "department_request_dollars": 7350000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+        "department_request_dollars": 7350000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Boggy Creek - Oakwood Cemetery Storm drain Reroute",
+        "department_request_dollars": 7350000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 61,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.150",
+    "canonical_project_id": "5789.150",
+    "source_name": "Lady Bird Lake \u2013 Citywide Storm Drain Renewal Program \u2013 Phase 1",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 60,
+    "department_request_dollars": 3000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Lady Bird Lake \u2013 Citywide Storm Drain Renewal Program \u2013 Phase 1",
+        "department_request_dollars": 3000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "City Storm Drain Renewal Downtown",
+        "department_request_dollars": 3000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 60,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.145",
+    "canonical_project_id": "5789.145",
+    "source_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 20000000,
+    "historical_recommendation_amount_dollars": 20000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Williamson Creek - Brassiewood Dr. Phase III Stormwater Improvements",
+        "department_request_dollars": 20000000,
+        "historical_recommendation_amount_dollars": 20000000,
+        "prb_score": 68,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5789.146",
+    "canonical_project_id": "5789.146",
+    "source_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 66,
+    "department_request_dollars": 4450000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+        "department_request_dollars": 4450000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "E. Bouldin - Annie St. Flood Risk Reduction Phase II",
+        "department_request_dollars": 4450000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 66,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.053",
+    "canonical_project_id": "5848.053",
+    "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 5195000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+        "department_request_dollars": 5195000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+        "department_request_dollars": 5195000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.070",
+    "canonical_project_id": "5848.070",
+    "source_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 52,
+    "department_request_dollars": 22000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+        "department_request_dollars": 22000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Shoal Creek - Grover Channel Stabilization",
+        "department_request_dollars": 22000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 52,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.071",
+    "canonical_project_id": "5848.071",
+    "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 5000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.087",
+    "canonical_project_id": "5848.087",
+    "source_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 56,
+    "department_request_dollars": 7125000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+        "department_request_dollars": 7125000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Sunken Garden Erosion Protection",
+        "department_request_dollars": 7125000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 56,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.091",
+    "canonical_project_id": "5848.091",
+    "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 64,
+    "department_request_dollars": 5200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+        "department_request_dollars": 5200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+        "department_request_dollars": 5200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 64,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/5848.092",
+    "canonical_project_id": "5848.092",
+    "source_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 4000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+        "department_request_dollars": 4000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Little Walnut Creek Loyola Ln. and Dottie Jordan Park Stream Stabilization",
+        "department_request_dollars": 4000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 67,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/6039.109",
+    "canonical_project_id": "6039.109",
+    "source_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 61,
+    "department_request_dollars": 33500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+        "department_request_dollars": 33500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Shoal Creek - Brentwood Drainage Improvement",
+        "department_request_dollars": 33500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 61,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/7492.011",
+    "canonical_project_id": "7492.011",
+    "source_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 59,
+    "department_request_dollars": 4200000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+        "department_request_dollars": 4200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek Duval Dam Modernization",
+        "department_request_dollars": 4200000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 59,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/7492.032",
+    "canonical_project_id": "7492.032",
+    "source_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 59,
+    "department_request_dollars": 10500000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+        "department_request_dollars": 10500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Shoal Creek - NW Park Dam Modernization",
+        "department_request_dollars": 10500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 59,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/7492.045",
+    "canonical_project_id": "7492.045",
+    "source_name": "Bull Creek - Bintliff Dr Dam Modernization",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 56,
+    "department_request_dollars": 2750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Bull Creek - Bintliff Dr Dam Modernization",
+        "department_request_dollars": 2750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Bull Creek - Bintliff Dam Modernization",
+        "department_request_dollars": 2750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 56,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/8598.014",
+    "canonical_project_id": "8598.014",
+    "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 67,
+    "department_request_dollars": 1500000,
+    "historical_recommendation_amount_dollars": 1500000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+        "department_request_dollars": 1500000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase III",
+        "department_request_dollars": 1500000,
+        "historical_recommendation_amount_dollars": 1500000,
+        "prb_score": 67,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/9999.235",
+    "canonical_project_id": "9999.235",
+    "source_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 59,
+    "department_request_dollars": 5000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Walnut Creek - Oak Creek Low Water Crossing",
+        "department_request_dollars": 5000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 59,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/9999.236",
+    "canonical_project_id": "9999.236",
+    "source_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 62,
+    "department_request_dollars": 8750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+        "department_request_dollars": 8750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Johnson Creek Low Water Crossing",
+        "department_request_dollars": 8750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 62,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/10878.010",
+    "canonical_project_id": "10878.010",
+    "source_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 65,
+    "department_request_dollars": 8750000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+        "department_request_dollars": 8750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Waller Creek Tunnel Outlet Improvement",
+        "department_request_dollars": 8750000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 65,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/11889.004",
+    "canonical_project_id": "11889.004",
+    "source_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "ANALYTICAL_PROJECT",
+    "analytical_unit": true,
+    "prb_scored": true,
+    "prb_score": 63,
+    "department_request_dollars": 2625000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": null,
+    "source_ids": [
+      "austin_wpd_2026_bond_projects_2025_11_21",
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+        "source_date": "2025-11-21",
+        "source_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+        "department_request_dollars": 2625000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": null,
+        "notes": "Canonical Watershed source-universe record."
+      },
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "William Cannon Dr. Corridor",
+        "department_request_dollars": 2625000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 63,
+        "notes": "January PRB scoring and historical recommendation overlay."
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/small-scale-asset-management",
+    "canonical_project_id": null,
+    "source_name": "Small Scale Stormwater & Drainage Asset Management Opportunities",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 69,
+    "department_request_dollars": 36000000,
+    "historical_recommendation_amount_dollars": 7000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Small Scale Stormwater & Drainage Asset Management Opportunities",
+        "department_request_dollars": 36000000,
+        "historical_recommendation_amount_dollars": 7000000,
+        "prb_score": 69,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/partnership-opportunities",
+    "canonical_project_id": null,
+    "source_name": "Stormwater & Drainage Partnership Opportunities",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 68,
+    "department_request_dollars": 140000000,
+    "historical_recommendation_amount_dollars": 15000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Stormwater & Drainage Partnership Opportunities",
+        "department_request_dollars": 140000000,
+        "historical_recommendation_amount_dollars": 15000000,
+        "prb_score": 68,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/stormwater-resilience-program",
+    "canonical_project_id": null,
+    "source_name": "Stormwater Resilience Program",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 66,
+    "department_request_dollars": 50000000,
+    "historical_recommendation_amount_dollars": 3000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Stormwater Resilience Program",
+        "department_request_dollars": 50000000,
+        "historical_recommendation_amount_dollars": 3000000,
+        "prb_score": 66,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/facility-for-operations",
+    "canonical_project_id": null,
+    "source_name": "Watershed Protection - Facility for Operations",
+    "source_department": "Watershed Protection",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "PROGRAM_BUCKET",
+    "analytical_unit": false,
+    "prb_scored": true,
+    "prb_score": 51,
+    "department_request_dollars": 16000000,
+    "historical_recommendation_amount_dollars": null,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PROGRAM_BUCKET",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Watershed Protection - Facility for Operations",
+        "department_request_dollars": 16000000,
+        "historical_recommendation_amount_dollars": null,
+        "prb_score": 51,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  },
+  {
+    "decision_unit_id": "watershed/open-space-acquisition",
+    "canonical_project_id": null,
+    "source_name": "Open Space Acquisition",
+    "source_department": "Office of Climate Action and Resilience, Austin Water, Watershed Protection Department",
+    "source_domain": "Watershed Protection",
+    "presentation_category": "Watershed",
+    "analytical_unit_type": "NOT_SCORED",
+    "analytical_unit": false,
+    "prb_scored": false,
+    "prb_score": null,
+    "department_request_dollars": 300000000,
+    "historical_recommendation_amount_dollars": 10000000,
+    "evidence_feasibility_status": "NOT_EVALUATED",
+    "model_eligible": false,
+    "exclusion_reason": "PRB_NOT_SCORED",
+    "source_ids": [
+      "austin_2026_bond_initial_draft_2026_01_21"
+    ],
+    "source_versions": [
+      {
+        "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+        "source_date": "2026-01-21",
+        "source_name": "Open Space Acquisition",
+        "department_request_dollars": 300000000,
+        "historical_recommendation_amount_dollars": 10000000,
+        "prb_score": null,
+        "notes": null
+      }
+    ],
+    "source_conflict_flag": false
+  }
+]
