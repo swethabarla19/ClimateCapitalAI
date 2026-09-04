@@ -25,19 +25,38 @@ class SourceRegistryTests(unittest.TestCase):
             [
                 "austin_wpd_2026_bond_projects_2025_11_21",
                 "austin_2026_bond_initial_draft_2026_01_21",
+                "austin_2026_bond_initial_project_request_list_2025_07_31",
                 "austin_rna_projects_layer_8_live",
                 "austin_floodpro_fema_layer_8_live",
                 "austin_equity_analysis_zones_2021",
                 "austin_wpd_problem_score_documentary_context",
             ],
         )
-        self.assertEqual(rows[0]["analytical_role"], "analytical")
-        self.assertEqual(rows[1]["analytical_role"], "benchmark")
-        self.assertEqual(rows[2]["historical_fit"], "uncertain")
-        self.assertEqual(rows[2]["analytical_role"], "research-only")
-        self.assertEqual(rows[2]["published_date"], "")
-        self.assertEqual(rows[2]["crs"], "ESRI:102739 (EPSG:2277)")
-        governed_m2a = {row["source_id"]: row for row in rows[2:]}
+        by_id = {row["source_id"]: row for row in rows}
+
+        self.assertEqual(
+            by_id["austin_wpd_2026_bond_projects_2025_11_21"]["analytical_role"],
+            "analytical",
+        )
+        self.assertEqual(
+            by_id["austin_2026_bond_initial_draft_2026_01_21"]["analytical_role"],
+            "benchmark",
+        )
+
+        july_source = by_id[
+            "austin_2026_bond_initial_project_request_list_2025_07_31"
+        ]
+        self.assertEqual(july_source["historical_fit"], "valid")
+        self.assertEqual(july_source["analytical_role"], "analytical")
+        self.assertEqual(july_source["published_date"], "2025-07-31")
+
+        rna_source = by_id["austin_rna_projects_layer_8_live"]
+        self.assertEqual(rna_source["historical_fit"], "uncertain")
+        self.assertEqual(rna_source["analytical_role"], "research-only")
+        self.assertEqual(rna_source["published_date"], "")
+        self.assertEqual(rna_source["crs"], "ESRI:102739 (EPSG:2277)")
+
+        governed_m2a = by_id
         self.assertEqual(governed_m2a["austin_floodpro_fema_layer_8_live"]["historical_fit"], "uncertain")
         self.assertEqual(
             governed_m2a["austin_equity_analysis_zones_2021"]["historical_fit"],
@@ -98,10 +117,15 @@ class SourceRegistryTests(unittest.TestCase):
                 self.assertTrue(metadata["historical_fit"])
     def test_registry_allows_unknown_published_date_but_rejects_bad_nonempty_date(self) -> None:
         rows = fetch_sources.load_registry(REGISTRY_PATH)
-        self.assertEqual(rows[2]["published_date"], "")
+        rna_index = next(
+            index
+            for index, row in enumerate(rows)
+            if row["source_id"] == "austin_rna_projects_layer_8_live"
+        )
+        self.assertEqual(rows[rna_index]["published_date"], "")
 
         candidate = deepcopy(rows)
-        candidate[2]["published_date"] = "2026/09/01"
+        candidate[rna_index]["published_date"] = "2026/09/01"
         with self.assertRaises(fetch_sources.RegistryValidationError):
             fetch_sources.validate_registry_rows(
                 list(fetch_sources.EXPECTED_COLUMNS), candidate
