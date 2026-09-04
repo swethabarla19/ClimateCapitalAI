@@ -1657,3 +1657,33 @@ Add new entries immediately below this guidance so the newest session is first.
   actions, decisions, blockers, risks, technical context, and session history.
 - **Handoff:** Start with **Project Definition**, then revise **Current Snapshot** and
   **Next Actions** to reflect the agreed direction.
+
+### 2026-09-03 — M3.5 Cross-Category Analytical Feasibility Audit
+
+**Status:** Complete and explicitly approved 2026-09-03.
+
+M3.5 freezes the January 21, 2026 historical analytical universe before
+cross-category implementation:
+
+- 136 PRB source rows
+- 106 `ANALYTICAL_PROJECT` units
+- 23 `PROGRAM_BUCKET` units
+- 4 `PROGRAM_ALLOCATION` units
+- 3 quarantined `NOT_SCORED` units
+- analytical projects by presentation group:
+  - Transportation: 9
+  - Parks & Open Space: 22
+  - Watershed: 37
+  - Community Facilities: 38
+
+`ANALYTICAL_PROJECT` establishes a structurally valid project-level decision
+unit only; evidence feasibility and model eligibility remain separate.
+
+Community Facilities is a presentation grouping and does not overwrite
+`source_department` or `source_domain`.
+
+Authoritative governance:
+`docs/delivery/m3-5-analytical-universe.md`
+
+M4 and subsequent cross-category implementation must conform to this locked
+universe.
