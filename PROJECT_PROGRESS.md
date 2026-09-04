@@ -1687,3 +1687,64 @@ Authoritative governance:
 
 M4 and subsequent cross-category implementation must conform to this locked
 universe.
+
+## 2026-09-04 — M3.6 Governed Cross-Category Dataset and Schema
+
+M3.6 implementation is complete.
+
+The approved M3.5 January 21, 2026 historical analytical-universe semantics
+are now implemented as a strict governed artifact:
+
+- `data/governed/cross_category/cross-category-universe.json`
+- 136 PRB source rows
+- 106 `ANALYTICAL_PROJECT`
+- 23 `PROGRAM_BUCKET`
+- 4 `PROGRAM_ALLOCATION`
+- 3 `NOT_SCORED`
+
+Analytical projects reconcile exactly to:
+
+- Transportation: 9
+- Parks & Open Space: 22
+- Watershed: 37
+- Community Facilities: 38
+
+The exact NOT_SCORED quarantine remains:
+
+- Neighborhood Partnering Program
+- Open Space Acquisition
+- Affordable Housing
+
+The implementation preserves source department/domain separately from
+presentation category, preserves department request separately from historical
+recommendation amount, retains source-version conflicts rather than
+overwriting them, and keeps analytical-unit status, evidence feasibility, and
+model eligibility separate.
+
+The existing 37-project Watershed runtime catalog remains unchanged. The
+136-row cross-category universe is a separate governed source artifact and
+does not automatically expand M2/M3 runtime/model eligibility.
+
+Watershed retains the canonical November 21, 2025 37-project universe and
+$327,970,000 request total, with the January PRB overlay preserved separately.
+The 5754.149 $2.500M versus $2.625M request conflict remains explicit.
+
+The July 31, 2025 Initial Project Request List is now registered as governed
+historical source-version evidence.
+
+Verification completed:
+
+- 38 focused M3.6 tests passed
+- 109 application tests plus 23 subtests passed
+- 197 full-suite tests plus 58 subtests passed
+- 23 schemas generated
+- `git diff --check` passed
+- no new dependency was introduced solely for external JSON-Schema validation
+
+Detailed checkpoint:
+
+`docs/delivery/m3-6-governed-cross-category-dataset.md`
+
+Next analytical work must derive evidence-feasibility and model-eligibility
+from this governed universe rather than treating all 106 structural
+analytical projects as automatically model-ready.
