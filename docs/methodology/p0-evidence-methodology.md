@@ -1,21 +1,33 @@
 # ClimateCapital AI P0 Evidence and Methodology Lock
 
-> **Status:** Locked and reviewed on 2026-09-01
+> **Status:** Updated through M3.7F on 2026-09-04; portfolio-selection and runtime-integration methodology remain open
 > **Authority:** This document is the authoritative P0 analytical methodology.
 > It records reviewed evidence findings separately from the evidence-driven
 > Product and Design changes in `docs/product/`.
 
 ## Locked Outcome
 
-P0 is an evidence-first funding decision-support experience. It does not produce
-a synthetic Funding Priority score, project rank, or optimized recommendation.
-The authoritative deterministic behavior is limited to governed project facts,
-evidence-state classification, analyst-controlled full-request membership,
-Available Budget validation, exact budget arithmetic, and supported scenario
-comparison.
+ClimateCapital remains an evidence-first funding decision-support experience.
 
-The absence of a comparable numeric risk, benefit, or vulnerability measure is a
-methodological result, not a gap to hide with imputation, confidence points, or AI.
+M3.7F supersedes the earlier prohibition on project ranking for the governed
+cross-category analytical cohort. The official January 21, 2026 PRB Grand Total
+is now authorized as the common **ordinal Funding Priority Score** for all 106
+governed analytical projects.
+
+This is a source-governed PRB score, not a synthetic ClimateCapital score.
+No category normalization, score-per-dollar transformation, or invented weighting
+is authorized.
+
+The score may establish ordinal project priority only. It is not a cardinal public
+benefit measure, cost-effectiveness measure, benefit/cost ratio, historical
+recommendation probability, or additive portfolio utility.
+
+Portfolio selection and runtime integration remain unauthorized pending later
+governed decisions.
+
+The absence of a comparable numeric flood-reduction benefit, vulnerability,
+beneficiary, or cost-effectiveness measure remains a methodological result and
+must not be hidden with imputation, confidence points, or AI.
 
 ## Evidence-State Contract
 
@@ -34,6 +46,13 @@ decision correctness. Problem Score A/B/C/D association strength is provenance
 strength only.
 
 ## Governed Universe and P0 Analytical Family
+
+> **M3.7F scope note:** The Watershed family analysis below records the earlier
+> evidence-driven P0/runtime methodology and remains useful for Watershed
+> contextual evidence. It is no longer the cohort boundary for the governed
+> cross-category Funding Priority ranking. M3.7F ranks the 106 model-eligible
+> analytical projects. Existing runtime behavior remains unchanged until separate
+> runtime-integration authorization.
 
 - The governed source universe remains all **37 Watershed source projects** and
   **$327,970,000** in governed funding requests.
@@ -146,6 +165,12 @@ for EAZ 2021. This lock records conclusions, not new raw snapshots or production
 ingestion.
 
 ## Deterministic P0 Funding-Plan Method
+
+> **M3.7F runtime boundary:** The Funding-Plan method below documents the currently
+> implemented pre-M3.7F runtime behavior. M3.7F authorizes cross-category ranking
+> only. It does not authorize portfolio membership logic, optimization, or runtime
+> activation of the 106-project ranking cohort. Those questions are resolved in
+> the next methodology gate.
 
 ### Scenario inputs
 
