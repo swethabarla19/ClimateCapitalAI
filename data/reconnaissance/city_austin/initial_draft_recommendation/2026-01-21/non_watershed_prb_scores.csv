@@ -1,0 +1,70 @@
+source_id,source_pdf_page,source_table_row_order,decision_unit_id,presentation_category,january_source_name,strategic_alignment,critical_asset,community_consideration,efficiency,timeliness_readiness,climate_resilience,grand_total
+austin_2026_bond_initial_draft_2026_01_21,5,1,community-facilities/acme/dougherty-arts-center,Community Facilities,Dougherty Arts Center,8,7,16,17,16,13,77
+austin_2026_bond_initial_draft_2026_01_21,5,2,community-facilities/acme/george-washington-carver-museum,Community Facilities,George Washington Carver Museum Phase 1a and 1b,8,5,19,15,14,9,70
+austin_2026_bond_initial_draft_2026_01_21,5,3,community-facilities/acme/elizabet-ney-museum,Community Facilities,Elizabet Ney Museum ADA Restroom and Storage Facility,8,5,18,14,16,5,66
+austin_2026_bond_initial_draft_2026_01_21,5,4,community-facilities/acme/mexican-american-cultural-center,Community Facilities,Mexican American Cultural Center,8,3,19,15,11,8,64
+austin_2026_bond_initial_draft_2026_01_21,5,5,community-facilities/acme/zilker-hillside-theatre,Community Facilities,Zilker Hillside Theatre,8,5,15,15,9,7,59
+austin_2026_bond_initial_draft_2026_01_21,5,6,community-facilities/acme/asian-american-resource-center,Community Facilities,Asian American Resource Center,8,5,20,13,9,5,60
+austin_2026_bond_initial_draft_2026_01_21,5,7,community-facilities/acme/old-bakery-and-emporium,Community Facilities,Old Bakery and Emporium,8,3,14,12,3,5,45
+austin_2026_bond_initial_draft_2026_01_21,5,8,community-facilities/library/colony-park-branch-library,Community Facilities,Colony Park Branch Library,8,6,18,14,6,17,69
+austin_2026_bond_initial_draft_2026_01_21,5,9,community-facilities/library/hampton-oak-hill,Community Facilities,Hampton at Oak Hill Branch Renovation and Expansion,8,6,17,11,10,13,65
+austin_2026_bond_initial_draft_2026_01_21,5,10,community-facilities/library/milwood-branch,Community Facilities,Milwood Branch Library Renovation and Expansion,8,6,17,11,10,13,65
+austin_2026_bond_initial_draft_2026_01_21,5,11,transportation/barton-springs-bridge,Transportation,Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge,8,6,17,17,17,15,80
+austin_2026_bond_initial_draft_2026_01_21,5,12,transportation/act-plan-7th-street,Transportation,ACT Plan (Austin Core Transportation Plan) Program - 7th Street,8,8,15,17,11,13,72
+austin_2026_bond_initial_draft_2026_01_21,5,13,transportation/act-plan-6th-street,Transportation,ACT Plan (Austin Core Transportation Plan) Program - 6th Street,8,6,15,16,11,13,69
+austin_2026_bond_initial_draft_2026_01_21,5,14,transportation/west-william-cannon-rehab,Transportation,Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab,8,6,18,10,18,8,68
+austin_2026_bond_initial_draft_2026_01_21,5,15,transportation/delwau-ln-replacement,Transportation,Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement,8,6,18,12,6,15,65
+austin_2026_bond_initial_draft_2026_01_21,5,16,transportation/river-plantation-dr,Transportation,Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.,8,6,17,12,6,15,64
+austin_2026_bond_initial_draft_2026_01_21,5,17,transportation/w-slaughter-ln,Transportation,Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln,8,6,18,10,13,8,63
+austin_2026_bond_initial_draft_2026_01_21,5,18,transportation/e-7th-st,Transportation,Bridge Rehabilitation & Reconstruction Program - E. 7th St,8,6,19,8,8,9,58
+austin_2026_bond_initial_draft_2026_01_21,5,19,transportation/hart-ln-retaining-walls,Transportation,Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls,8,5,17,11,4,13,58
+austin_2026_bond_initial_draft_2026_01_21,6,20,community-facilities/public-health/colony-park,Community Facilities,Colony Park Public Health Center,8,8,20,16,10,12,74
+austin_2026_bond_initial_draft_2026_01_21,6,21,community-facilities/public-health/northeast,Community Facilities,Northeast Public Health Center,8,6,20,16,10,12,72
+austin_2026_bond_initial_draft_2026_01_21,6,22,community-facilities/ems/demand-station-1,Community Facilities,ATCEMS Demand Station #1 (401 E 5th St),4,5,18,16,3,10,56
+austin_2026_bond_initial_draft_2026_01_21,6,23,community-facilities/ems/station-03,Community Facilities,ATCEMS Station #03 (1305 Red River St),4,5,18,15.5,3,9,54.5
+austin_2026_bond_initial_draft_2026_01_21,6,24,community-facilities/ems/station-14,Community Facilities,ATCEMS Station #14 (7200 Berkman Dr),4,6,18,12.5,4,9,53.5
+austin_2026_bond_initial_draft_2026_01_21,6,25,community-facilities/ems/demand-station-9,Community Facilities,ATCEMS Demand Station #9,4,5,13,16,3,10,51
+austin_2026_bond_initial_draft_2026_01_21,6,26,community-facilities/ems/demand-station-2,Community Facilities,ATCEMS Demand Station #2,4,5,13,11,3,10,46
+austin_2026_bond_initial_draft_2026_01_21,6,27,community-facilities/ems/demand-station-4,Community Facilities,ATCEMS Demand Station #4,4,5,13,11,3,10,46
+austin_2026_bond_initial_draft_2026_01_21,6,28,community-facilities/ems/demand-station-3,Community Facilities,ATCEMS Demand Station #3 (1705 S Congress Ave),4,5,13,11,3,10,46
+austin_2026_bond_initial_draft_2026_01_21,6,29,community-facilities/fire/station-26,Community Facilities,Fire Station 26 Expansion,6,6,15,13,6,4,50
+austin_2026_bond_initial_draft_2026_01_21,6,30,community-facilities/fire/station-15,Community Facilities,Fire Station 15 Renovation,6,6,14,13,6,4,49
+austin_2026_bond_initial_draft_2026_01_21,6,31,community-facilities/fire/station-14,Community Facilities,Fire Station 14 Renovation,6,5,13,13,6,4,47
+austin_2026_bond_initial_draft_2026_01_21,6,32,community-facilities/fire/station-20,Community Facilities,Fire Station 20 Renovation,6,4,13,13,6,4,46
+austin_2026_bond_initial_draft_2026_01_21,6,33,community-facilities/fire/education-building-b,Community Facilities,Education Building B,8,4,9,11,4,4,40
+austin_2026_bond_initial_draft_2026_01_21,6,34,community-facilities/fleet/consolidated-service-center,Community Facilities,Consolidated Fleet Service Center (South/Southeast),8,5.5,15,14,5,3,50.5
+austin_2026_bond_initial_draft_2026_01_21,6,35,community-facilities/fleet/fuel-station-southeast,Community Facilities,Fuel Station Southeast,4,5,15,11,4,11,50
+austin_2026_bond_initial_draft_2026_01_21,6,36,community-facilities/fleet/fuel-station-central,Community Facilities,Fuel Station Central,4,5,15,11,4,11,50
+austin_2026_bond_initial_draft_2026_01_21,6,37,community-facilities/fleet/fuel-station-northwest,Community Facilities,Fuel Station Northwest,4,5,15,11,4,11,50
+austin_2026_bond_initial_draft_2026_01_21,6,38,community-facilities/hso/north-austin-homeless-resource-center,Community Facilities,North Austin Homeless Resource Center,6,6,16,11,5,7,51
+austin_2026_bond_initial_draft_2026_01_21,6,39,community-facilities/police/canyon-creek-northwest,Community Facilities,Canyon Creek Northwest Substation,8,6,14,13,18,8,67
+austin_2026_bond_initial_draft_2026_01_21,6,40,community-facilities/police/scenario-based-training,Community Facilities,Scenario Based Training Facility,8,5,11,14,7,6,51
+austin_2026_bond_initial_draft_2026_01_21,6,41,community-facilities/police/air-operations,Community Facilities,Police Air Operations Facility,8,8,7,13,8,5,49
+austin_2026_bond_initial_draft_2026_01_21,6,42,community-facilities/police/downtown-substation,Community Facilities,Downtown Police Substation,8,6,9,14,5,5,47
+austin_2026_bond_initial_draft_2026_01_21,6,43,community-facilities/police/northeast-substation,Community Facilities,Northeast Police Substation,4,6,7,13,9,5,44
+austin_2026_bond_initial_draft_2026_01_21,6,44,community-facilities/police/southwest-substation,Community Facilities,Southwest Police Substation,4,6,7,13,9,5,44
+austin_2026_bond_initial_draft_2026_01_21,6,45,community-facilities/police/central-west-substation,Community Facilities,Central West Police Substation,4,6,6,13,9,5,43
+austin_2026_bond_initial_draft_2026_01_21,6,46,community-facilities/animal-services/campus-improvements,Community Facilities,Animal Service Center Campus Improvements,8,4,17,13,9,10,61
+austin_2026_bond_initial_draft_2026_01_21,6,47,community-facilities/municipal-court/customer-service-center,Community Facilities,Municipal Court Customer Service Center,4,5,14,9,4,8,44
+austin_2026_bond_initial_draft_2026_01_21,6,48,parks/bolm-maintenance-center,Parks & Open Space,Building Renovation and Replacement Program - Bolm Maintenance Center,8,8,18,19,14,16,83
+austin_2026_bond_initial_draft_2026_01_21,7,49,parks/doris-miller-auditorium,Parks & Open Space,Recreation and Senior Center Improvements Program - Doris Miller Auditorium,8,6,18,15,13,14,74
+austin_2026_bond_initial_draft_2026_01_21,7,50,parks/big-stacy-pool,Parks & Open Space,Aquatics Program - Big Stacy Pool,8,6,17,17,13,12,73
+austin_2026_bond_initial_draft_2026_01_21,7,51,parks/gus-garcia-center,Parks & Open Space,Recreation and Senior Center Improvements Program - Gus Garcia Center,8,6,18,12,13,16,73
+austin_2026_bond_initial_draft_2026_01_21,7,52,parks/jamestown-nh-park,Parks & Open Space,Parkland Improvements Program - Jamestown NH Park,8,6,18,16,12,13,73
+austin_2026_bond_initial_draft_2026_01_21,7,53,parks/givens-district-park-phase-ii,Parks & Open Space,Parkland Improvements Program - Givens District Park Phase II,8,6,17,14,12,14,71
+austin_2026_bond_initial_draft_2026_01_21,7,54,parks/bolm-district-park,Parks & Open Space,Parkland Improvements Program - Bolm District Park,8,6,17,13,14,12,70
+austin_2026_bond_initial_draft_2026_01_21,7,55,parks/grand-meadow-phase-ii,Parks & Open Space,Parkland Improvements Program - Grand Meadow Phase II,8,3,15,13,15,14,68
+austin_2026_bond_initial_draft_2026_01_21,7,56,parks/garrison-pool,Parks & Open Space,Aquatics Program - Garrison Pool,8,6,16,16,12,11,69
+austin_2026_bond_initial_draft_2026_01_21,7,57,parks/walter-e-long-metro-park-phase-i,Parks & Open Space,Parkland Improvements Program - Walter E. Long Metro Park Phase I,8,6,15,13,14,12,68
+austin_2026_bond_initial_draft_2026_01_21,7,58,parks/martin-pool,Parks & Open Space,Aquatics Program - Martin Pool,8,5,16,16,12,10,67
+austin_2026_bond_initial_draft_2026_01_21,7,59,parks/kennemer-pool,Parks & Open Space,Aquatics Program - Kennemer Pool,8,4,17,14,12,10,65
+austin_2026_bond_initial_draft_2026_01_21,7,60,parks/alamo-rec-center,Parks & Open Space,Recreation and Senior Center Improvements Program - Alamo Rec Center,8,6,18,11,13,9,65
+austin_2026_bond_initial_draft_2026_01_21,7,61,parks/buttermilk-nh-park,Parks & Open Space,Parkland Improvements Program - Buttermilk NH Park,8,5,17,11,13,10,64
+austin_2026_bond_initial_draft_2026_01_21,7,62,parks/metz-community-center,Parks & Open Space,Recreation and Senior Center Improvements Program - Metz Community Center,8,6,17,11,14,7,63
+austin_2026_bond_initial_draft_2026_01_21,7,63,parks/lorraine-camancho-center,Parks & Open Space,Recreation and Senior Center Improvements Program - Lorraine Camancho Center,8,6,17,11,14,7,63
+austin_2026_bond_initial_draft_2026_01_21,7,64,parks/yates-pocket-park,Parks & Open Space,Parkland Improvements Program - Yates Pocket Park,8,5,18,16,5,10,62
+austin_2026_bond_initial_draft_2026_01_21,7,65,parks/civitan-pool,Parks & Open Space,Aquatics Program - Civitan Pool,8,5,14,13,12,10,62
+austin_2026_bond_initial_draft_2026_01_21,7,66,parks/woolridge-square-plan,Parks & Open Space,Parkland Improvements Program - Woolridge Square Plan,8,6,11,13,13,11,62
+austin_2026_bond_initial_draft_2026_01_21,7,67,parks/harris-branch-nh-park-development,Parks & Open Space,Parkland Improvements Program - Harris Branch NH Park Development,8,4,18,16,5,9,60
+austin_2026_bond_initial_draft_2026_01_21,7,68,parks/north-grounds-maintenance-facility,Parks & Open Space,Building Renovation and Replacement Program - North Grounds Maintenance Facility,6,6,17,15,6,11,61
+austin_2026_bond_initial_draft_2026_01_21,7,69,parks/woodland-pocket-park,Parks & Open Space,Parkland Improvements Program - Woodland Pocket Park,8,6,18,11,5,9,57

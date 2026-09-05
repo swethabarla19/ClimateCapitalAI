@@ -1,0 +1,2701 @@
+{
+  "artifact_version": "m3.7e-b-cross-category-prb-model-eligibility/1.0.0",
+  "governance_checkpoint": "M3.7E-B",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+  "cross_category_ranking_authorized": false,
+  "portfolio_selection_authorized": false,
+  "runtime_integration_authorized": false,
+  "source_artifacts": {
+    "structural_universe": "data/governed/cross_category/source_rows/",
+    "prb_reconciliation": "data/governed/cross_category/reconciliation/cross-category-prb-reconciliation.json"
+  },
+  "eligibility_policy": {
+    "evidence_requirements": [
+      "RECONCILED_GOVERNED_IDENTITY",
+      "COMPLETE_PRB_COMPONENT_VECTOR",
+      "VALID_PRB_GRAND_TOTAL"
+    ],
+    "model_requirements": [
+      "ANALYTICAL_PROJECT",
+      "EVIDENCE_FEASIBLE",
+      "USABLE_GOVERNED_MODEL_REQUEST"
+    ],
+    "non_blocking_provenance_conditions": [
+      "SOURCE_VERSION_CONFLICT",
+      "REQUEST_VERSION_CONFLICT",
+      "NO_JANUARY_RECOMMENDATION"
+    ],
+    "benchmark_outcome_not_used": [
+      "JANUARY_INITIAL_RECOMMENDATION"
+    ]
+  },
+  "summary": {
+    "analytical_project_count": 106,
+    "category_counts": {
+      "Transportation": 9,
+      "Parks & Open Space": 22,
+      "Watershed": 37,
+      "Community Facilities": 38
+    },
+    "evidence_feasible_count": 106,
+    "model_eligible_count": 106,
+    "model_ineligible_count": 0,
+    "eligible_with_source_version_conflict_count": 3,
+    "eligible_without_january_recommendation_count": 86,
+    "half_point_project_count": 3,
+    "model_request_total_dollars": 1973520000
+  },
+  "records": [
+    {
+      "decision_unit_id": "community-facilities/acme/asian-american-resource-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 58000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 60,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/dougherty-arts-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 45000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 77,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/elizabet-ney-museum",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 66,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/george-washington-carver-museum",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 12000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 70,
+      "source_conflict_flag": true,
+      "request_version_conflict": true,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/mexican-american-cultural-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 12000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 64,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/old-bakery-and-emporium",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 45,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/acme/zilker-hillside-theatre",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 59,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/animal-services/campus-improvements",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 40000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 61,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-1",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 21000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 56,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-2",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 18000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 46,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-3",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 20000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 46,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-4",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 18000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 46,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/demand-station-9",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 28000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 51,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/station-03",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 18000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 54.5,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/ems/station-14",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 20000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 53.5,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/education-building-b",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 71000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 40,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-14",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 26000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 47,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-15",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 35000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 49,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-20",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 26000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 46,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fire/station-26",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 29000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 50,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/consolidated-service-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 245000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 50.5,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-central",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 50,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-northwest",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10200000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 50,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/fleet/fuel-station-southeast",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10200000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 50,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/hso/north-austin-homeless-resource-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 15000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 51,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/colony-park-branch-library",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 58000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 69,
+      "source_conflict_flag": true,
+      "request_version_conflict": true,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/library/hampton-oak-hill",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 19000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "community-facilities/library/milwood-branch",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 24000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/municipal-court/customer-service-center",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 44,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/air-operations",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 49,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/canyon-creek-northwest",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 60500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 67,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "community-facilities/police/central-west-substation",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 43,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/downtown-substation",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 40000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 47,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/northeast-substation",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 44,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/scenario-based-training",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 100000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 51,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/police/southwest-substation",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 44,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/public-health/colony-park",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 42000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 74,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "community-facilities/public-health/northeast",
+      "canonical_project_id": null,
+      "presentation_category": "Community Facilities",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 51000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 72,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/alamo-rec-center",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/big-stacy-pool",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/bolm-district-park",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 70,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/bolm-maintenance-center",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 85000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 83,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "parks/buttermilk-nh-park",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 750000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 64,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/civitan-pool",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/doris-miller-auditorium",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 22000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 74,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/garrison-pool",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 30000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 69,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/givens-district-park-phase-ii",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 3000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 71,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/grand-meadow-phase-ii",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 68,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/gus-garcia-center",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 30000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/harris-branch-nh-park-development",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 60,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/jamestown-nh-park",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 3500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/kennemer-pool",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/lorraine-camancho-center",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1200000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 63,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/martin-pool",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 12000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 67,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/metz-community-center",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 63,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/north-grounds-maintenance-facility",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 6000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 61,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/walter-e-long-metro-park-phase-i",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 68,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/woodland-pocket-park",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 57,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/woolridge-square-plan",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 4000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "parks/yates-pocket-park",
+      "canonical_project_id": null,
+      "presentation_category": "Parks & Open Space",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2500000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/act-plan-6th-street",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 40000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 69,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "transportation/act-plan-7th-street",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 40000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 72,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/barton-springs-bridge",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 12000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 80,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/delwau-ln-replacement",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 13800000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/e-7th-st",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5200000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 58,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/hart-ln-retaining-walls",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 6100000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 58,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/river-plantation-dr",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2600000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 64,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/w-slaughter-ln",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 16000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 63,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "transportation/west-william-cannon-rehab",
+      "canonical_project_id": null,
+      "presentation_category": "Transportation",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 8000000,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "prb_grand_total": 68,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/10878.010",
+      "canonical_project_id": "10878.010",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 8750000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/11889.004",
+      "canonical_project_id": "11889.004",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2625000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 63,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/4015.001",
+      "canonical_project_id": "4015.001",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5470000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 66,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5282.043",
+      "canonical_project_id": "5282.043",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 8500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5282.133",
+      "canonical_project_id": "5282.133",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1300000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5282.134",
+      "canonical_project_id": "5282.134",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1400000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 74,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5282.150",
+      "canonical_project_id": "5282.150",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2625000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 69,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5282.162",
+      "canonical_project_id": "5282.162",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 21650000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 68,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5754.089",
+      "canonical_project_id": "5754.089",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 71,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5754.139",
+      "canonical_project_id": "5754.139",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 8100000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.145",
+      "canonical_project_id": "5754.145",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1075000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 66,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5754.147",
+      "canonical_project_id": "5754.147",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 3750000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5754.149",
+      "canonical_project_id": "5754.149",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 63,
+      "source_conflict_flag": true,
+      "request_version_conflict": true,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.075",
+      "canonical_project_id": "5789.075",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 35000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 67,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5789.107",
+      "canonical_project_id": "5789.107",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 16750000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 64,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.121",
+      "canonical_project_id": "5789.121",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 6255000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 58,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.126",
+      "canonical_project_id": "5789.126",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 21250000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 73,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5789.127",
+      "canonical_project_id": "5789.127",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 11000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 60,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.136",
+      "canonical_project_id": "5789.136",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 7700000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 65,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5789.139",
+      "canonical_project_id": "5789.139",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 11250000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 56,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.141",
+      "canonical_project_id": "5789.141",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 7350000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 61,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.145",
+      "canonical_project_id": "5789.145",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 20000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 68,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/5789.146",
+      "canonical_project_id": "5789.146",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 4450000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 66,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5789.150",
+      "canonical_project_id": "5789.150",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 3000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 60,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.053",
+      "canonical_project_id": "5848.053",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5195000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.070",
+      "canonical_project_id": "5848.070",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 22000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 52,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.071",
+      "canonical_project_id": "5848.071",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.087",
+      "canonical_project_id": "5848.087",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 7125000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 56,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.091",
+      "canonical_project_id": "5848.091",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5200000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 64,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/5848.092",
+      "canonical_project_id": "5848.092",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 4000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 67,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/6039.109",
+      "canonical_project_id": "6039.109",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 33500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 61,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.011",
+      "canonical_project_id": "7492.011",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 4200000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 59,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.032",
+      "canonical_project_id": "7492.032",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 10500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 59,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/7492.045",
+      "canonical_project_id": "7492.045",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 2750000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 56,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/8598.014",
+      "canonical_project_id": "8598.014",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 1500000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 67,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": true
+    },
+    {
+      "decision_unit_id": "watershed/9999.235",
+      "canonical_project_id": "9999.235",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 5000000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 59,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    },
+    {
+      "decision_unit_id": "watershed/9999.236",
+      "canonical_project_id": "9999.236",
+      "presentation_category": "Watershed",
+      "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "evidence_feasibility_status": "FEASIBLE",
+      "model_eligible": true,
+      "evidence_reason_codes": [
+        "RECONCILED_GOVERNED_IDENTITY",
+        "COMPLETE_PRB_COMPONENT_VECTOR",
+        "VALID_PRB_GRAND_TOTAL"
+      ],
+      "model_eligibility_reason_codes": [
+        "ANALYTICAL_PROJECT",
+        "EVIDENCE_FEASIBLE",
+        "USABLE_GOVERNED_MODEL_REQUEST"
+      ],
+      "blocking_reason_codes": [],
+      "model_request_dollars": 8750000,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "prb_grand_total": 62,
+      "source_conflict_flag": false,
+      "request_version_conflict": false,
+      "january_recommendation_present": false
+    }
+  ]
+}

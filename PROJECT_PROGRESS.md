@@ -51,15 +51,15 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-04
-- **Project stage:** M3.5 cross-category analytical-universe governance and M3.6 governed cross-category dataset/schema are complete. M3.7A Watershed PRB reconciliation and M3.7B Watershed PRB model eligibility are complete and published. M3.7C deterministic Watershed PRB Funding Priority and tie methodology has completed implementation and verification and is awaiting checkpoint approval.
-- **Current milestone:** M3.7C — deterministic Watershed PRB Funding Priority and tie methodology; verification complete, checkpoint approval pending.
-- **Next gate:** Approve, commit, and publish M3.7C, then begin M3.7E cross-category evidence feasibility and model eligibility for all 106 analytical projects. Final portfolio optimization methodology remains deferred until the cross-category eligible cohort and comparable ranking evidence are understood.
+- **Project stage:** M3.5 governed analytical universe, M3.6 structural cross-category dataset, M3.7A Watershed PRB reconciliation, M3.7B Watershed PRB model eligibility, M3.7C Watershed Funding Priority methodology, and M3.7E cross-category PRB evidence/model eligibility have completed implementation and verification. M3.7E checkpoint approval is pending.
+- **Current milestone:** M3.7E — cross-category PRB reconciliation and model eligibility for all 106 analytical projects; implementation and verification complete, checkpoint approval pending.
+- **Next gate:** Approve, commit, and publish M3.7E, then audit whether official PRB Grand Total is analytically comparable enough across all four presentation categories to authorize one cross-category Funding Priority. Portfolio optimization remains deferred until that comparability gate is resolved.
 - **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
-- **Working state:** Git repository is on `main`. M3.7B is committed and published to `origin/main` at `ae41444` (`Complete M3.7B Watershed PRB model eligibility`). M3.7C builder, governed Funding Priority overlay, tests, and documentation are local pending approval. Unrelated `.node-version` and `frontend/` work remain outside the M3.7C checkpoint.
-- **Data/methodology state:** The governed cross-category universe contains 106 analytical projects: Transportation 9, Parks & Open Space 22, Watershed 37, and Community Facilities 38. M3.7B proves all 37 Watershed projects evidence-feasible and model-eligible for `WATERSHED_PRB_PROJECT_MODEL`. M3.7C uses official PRB Grand Total as `Funding Priority Score`, with higher Grand Total representing higher Funding Priority. The 37-project cohort contains 17 unique scores, 12 tied score groups, and 32 projects participating in ties. Equal scores retain the same substantive competition rank; canonical project ID ascending provides deterministic display order only and has no analytical meaning.
-- **Runtime boundary:** M3.7C establishes project ranking only. `portfolio_selection_authorized=false` and `runtime_integration_authorized=false`; no optimizer, portfolio-selection rule, or 37-project runtime activation is introduced.
+- **Working state:** Git repository is on `main`. M3.7C is committed and published to `origin/main` at `fe29765`. M3.7E scripts, governed artifacts, tests, and documentation are local pending approval. Unrelated `.node-version` and `frontend/` work remain outside the M3.7E checkpoint.
+- **Data/methodology state:** The governed universe contains 106 analytical projects: Transportation 9, Parks & Open Space 22, Watershed 37, and Community Facilities 38. M3.7E-A reconciles 106/106 to complete official six-component PRB vectors with valid Grand Totals, preserving three source/request-version conflicts and three legitimate half-point projects. M3.7E-B proves 106/106 evidence-feasible and model-eligible for `CROSS_CATEGORY_PRB_PROJECT_MODEL`; 86 eligible projects have no January recommendation. Governed model-request authority totals $1,973,520,000.
+- **Runtime boundary:** M3.7E establishes evidence feasibility and scoped model eligibility only. `cross_category_ranking_authorized=false`, `portfolio_selection_authorized=false`, and `runtime_integration_authorized=false`. Cross-category PRB-score comparability must be resolved before ranking or optimization.
 - **M3 runtime state:** The approved FastAPI runtime remains unchanged. Existing health/bootstrap/plan/benchmark APIs and the M2B deterministic evaluator retain their approved semantics while M3.7 analytical-methodology work is resolved.
-- **Most recent verification:** M3.7C focused tests: 18 passed. Combined Watershed M3.7A/B/C regression: 73 passed plus 84 subtests. Full repository: 251 passed plus 137 subtests. `pip check` reports no broken requirements; the governed Funding Priority artifact regenerates identically as `unchanged`; `git diff --check` passes. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
+- **Most recent verification:** M3.7E focused tests: 25 passed. Combined M3.7A/B/C/E regression: 69 passed. Full repository: 276 passed plus 137 subtests. `pip check` reports no broken requirements. All three M3.7E generated artifacts regenerate identically as `unchanged`. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
 
 ## Approved Locks
 
@@ -105,44 +105,34 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Implement M4 — the application-track frontend and required product
-  surfaces — against the conspicuous development fixture while preserving the
-  approved M1–M3 contracts and deterministic authority.
-- **Status:** M3 is approved, committed, and published on `main` at `c0c9c8f`.
-  M4 began on 2026-09-03. The first M4 activity is repository-facing documentation
-  cleanup plus frontend runtime/package-manager preflight. No frontend scaffold or
-  M4 application code has been created yet.
+- **Goal:** Close M3.7E cross-category evidence feasibility and model eligibility
+  without conflating eligibility with cross-category score comparability.
+- **Status:** M3.7E-A and M3.7E-B implementation and verification are complete;
+  explicit checkpoint approval, commit, and publication remain.
 - **Owner:** User and implementation tooling.
-- **M4 boundary:** React/TypeScript/Vite/Leaflet application shell, exact browser
-  session lifecycle, manual Funding Plan, shared Project Detail, Data &
-  Methodology, Help & Resources, map/default/fallback behavior, and isolated
-  Historical Benchmark against the fixture tier.
-- **Explicit exclusions:** No M5 reviewed-data integration, M8 Gemini provider
-  implementation, M9 container/deployment/cloud mutation, Compare stretch,
-  methodology reopening, new evidence-source research, or unrelated refactoring.
-- **Required reading:** AGENTS.md, this file,
-  docs/methodology/p0-evidence-methodology.md, docs/product,
-  docs/delivery/execution-plan.md, docs/decisions.md,
-  docs/architecture/p0-architecture.md, docs/architecture/data-contracts.md,
-  docs/delivery/implementation-plan.md, docs/delivery/test-plan.md, and
-  docs/delivery/milestones.md.
-- **Exit condition:** M4 frontend behavior and required surfaces pass their focused
-  and broad verification gates, are independently re-audited, and receive explicit
-  user approval before M5/M6-dependent integration proceeds.
+- **Analytical boundary:** All 106 analytical projects now have reconciled official
+  PRB component evidence and a usable governed request. This authorizes scoped
+  model eligibility only.
+- **Explicit exclusions:** No cross-category Funding Priority, analytical tie-break,
+  portfolio objective, optimizer, runtime activation, or use of January
+  recommendation as an analytical input.
+- **Parallel repository note:** Existing untracked `.node-version` and `frontend/`
+  work belongs to a separate application track and must not enter the M3.7E
+  checkpoint.
+- **Exit condition:** M3.7E documentation and staged-file audit are clean, the
+  checkpoint receives explicit user approval, and only M3.7E files are committed
+  and pushed.
 
 ## Next Actions
 
-1. Finish the Touchpoint-2-facing README/current-status cleanup so the public
-   repository accurately reflects the published M3 checkpoint and active M4 work.
-2. Inspect local Node/npm versions and registry before creating frontend files.
-3. Pin and review the M4 frontend runtime, package manager, and exact dependency
-   set before installation.
-4. Create the React/TypeScript/Vite frontend, same-origin API proxy, test tooling,
-   accessible application shell/navigation, and conspicuous fixture-mode chrome.
-5. Implement the exact session reducer/storage/restoration foundation and manual
-   Funding Plan before deeper presentation/map work.
-6. Do not begin reviewed-data integration, Gemini, deployment/cloud mutation,
-   Compare stretch, or unrelated work during M4.
+1. Complete the M3.7E governance documentation and staged-file audit.
+2. Obtain explicit M3.7E checkpoint approval before commit/push.
+3. Commit and publish only the M3.7E files; keep `.node-version` and `frontend/`
+   outside the checkpoint.
+4. Audit cross-category PRB Grand Total comparability before authorizing a single
+   Funding Priority across all 106 projects.
+5. Define portfolio optimization methodology only after the comparable ranking
+   evidence and governing budget/policy constraints are established.
 
 ## Active Implementation Checkpoint
 
