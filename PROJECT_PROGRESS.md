@@ -51,15 +51,15 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-04
-- **Project stage:** M3.5 cross-category analytical-universe governance and M3.6 governed cross-category dataset/schema are complete. M3.7A Watershed PRB reconciliation is complete and published. M3.7B Watershed PRB evidence feasibility and model eligibility has completed implementation and verification and is awaiting checkpoint approval.
-- **Current milestone:** M3.7B — Watershed PRB evidence feasibility and model eligibility; verification complete, checkpoint approval pending.
-- **Next gate:** Approve, commit, and publish M3.7B, then begin M3.7C deterministic PRB Funding Priority and tie methodology. Cross-category eligibility for all 106 analytical projects follows before final portfolio optimization methodology is locked.
+- **Project stage:** M3.5 cross-category analytical-universe governance and M3.6 governed cross-category dataset/schema are complete. M3.7A Watershed PRB reconciliation and M3.7B Watershed PRB model eligibility are complete and published. M3.7C deterministic Watershed PRB Funding Priority and tie methodology has completed implementation and verification and is awaiting checkpoint approval.
+- **Current milestone:** M3.7C — deterministic Watershed PRB Funding Priority and tie methodology; verification complete, checkpoint approval pending.
+- **Next gate:** Approve, commit, and publish M3.7C, then begin M3.7E cross-category evidence feasibility and model eligibility for all 106 analytical projects. Final portfolio optimization methodology remains deferred until the cross-category eligible cohort and comparable ranking evidence are understood.
 - **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
-- **Working state:** Git repository is on `main`. M3.7A is committed and published to `origin/main` at `51b576b` (`Complete M3.7A Watershed PRB reconciliation`). M3.7B builder, governed eligibility overlay, tests, and documentation are local pending approval. Unrelated `.node-version` and `frontend/` work remain outside the M3.7B checkpoint.
-- **Data/methodology state:** The governed cross-category universe contains 106 analytical projects: Transportation 9, Parks & Open Space 22, Watershed 37, and Community Facilities 38. M3.7A reconciles all 37 Watershed projects to complete official six-component PRB vectors and valid Grand Totals. M3.7B proves 37/37 Watershed projects `FEASIBLE` and model-eligible for `WATERSHED_PRB_PROJECT_MODEL`; 25/37 are eligible without a January recommendation and `5754.149` remains eligible with its request-version conflict preserved. RNA geometry, FEMA context, EAZ 2021 context, and Watershed Problem Score context do not gate base PRB-model eligibility.
-- **Runtime boundary:** M3.7B does not redefine the existing 12-project runtime family. The eligibility overlay records `runtime_integration_authorized=false`. No Funding Priority, tie-break, optimizer, or 37-project runtime activation is introduced.
+- **Working state:** Git repository is on `main`. M3.7B is committed and published to `origin/main` at `ae41444` (`Complete M3.7B Watershed PRB model eligibility`). M3.7C builder, governed Funding Priority overlay, tests, and documentation are local pending approval. Unrelated `.node-version` and `frontend/` work remain outside the M3.7C checkpoint.
+- **Data/methodology state:** The governed cross-category universe contains 106 analytical projects: Transportation 9, Parks & Open Space 22, Watershed 37, and Community Facilities 38. M3.7B proves all 37 Watershed projects evidence-feasible and model-eligible for `WATERSHED_PRB_PROJECT_MODEL`. M3.7C uses official PRB Grand Total as `Funding Priority Score`, with higher Grand Total representing higher Funding Priority. The 37-project cohort contains 17 unique scores, 12 tied score groups, and 32 projects participating in ties. Equal scores retain the same substantive competition rank; canonical project ID ascending provides deterministic display order only and has no analytical meaning.
+- **Runtime boundary:** M3.7C establishes project ranking only. `portfolio_selection_authorized=false` and `runtime_integration_authorized=false`; no optimizer, portfolio-selection rule, or 37-project runtime activation is introduced.
 - **M3 runtime state:** The approved FastAPI runtime remains unchanged. Existing health/bootstrap/plan/benchmark APIs and the M2B deterministic evaluator retain their approved semantics while M3.7 analytical-methodology work is resolved.
-- **Most recent verification:** M3.7B focused tests: 17 passed. Combined Watershed M3.7A/M3.7B regression: 55 passed plus 84 subtests. Full repository: 233 passed plus 137 subtests. `pip check` reports no broken requirements; the governed eligibility artifact regenerates identically as `unchanged`; `git diff --check` passes. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
+- **Most recent verification:** M3.7C focused tests: 18 passed. Combined Watershed M3.7A/B/C regression: 73 passed plus 84 subtests. Full repository: 251 passed plus 137 subtests. `pip check` reports no broken requirements; the governed Funding Priority artifact regenerates identically as `unchanged`; `git diff --check` passes. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
 
 ## Approved Locks
 
@@ -836,7 +836,7 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   testing/release gates, and normal/abuse/billing/shutdown cost controls.
 - D-096 locks post-schema parallel data/application tracks, exact-schema fixture
   constraints, reviewed-data final integration, and the Compare/proposal cut order.
-- Next available decision ID: **D-105**.
+- Next available decision ID: **D-107**.
 
 ## Verification Record
 
@@ -1778,7 +1778,7 @@ Priority or $125M optimization.
 
 ## 2026-09-04 — M3.7B Watershed PRB Model Eligibility
 
-M3.7B implementation and verification are complete; checkpoint approval is pending.
+M3.7B implementation, verification, approval, commit, and publication are complete. The checkpoint is published to `origin/main` at `ae41444`.
 
 - **Scope:** Evaluated only the 37 governed Watershed `Analytical_Project` records for participation in `WATERSHED_PRB_PROJECT_MODEL`.
 - **Eligibility result:** 37/37 are `FEASIBLE` and model-eligible. Every project has reconciled canonical identity, a complete official six-component PRB vector, a valid PRB Grand Total, and a usable canonical November request.
@@ -1789,4 +1789,22 @@ M3.7B implementation and verification are complete; checkpoint approval is pendi
 - **Boundary:** M3.7B is persisted as a separate governed overlay. M3.6 structural artifacts are not rewritten, `runtime_integration_authorized=false`, and the existing 12-project runtime family remains unchanged.
 - **Verification:** 17 focused M3.7B tests; 55 combined Watershed tests plus 84 subtests; 233 full-repository tests plus 137 subtests; `pip check`; deterministic artifact regeneration; and `git diff --check` all pass. The known Starlette/AnyIO deprecation warning remains non-blocking.
 - **Not decided:** No Funding Priority, ranking, tie-break, portfolio optimization, cross-category eligibility, or 37-project runtime activation is introduced.
-- **Next:** M3.7C evaluates deterministic PRB Funding Priority and tie methodology. Cross-category eligibility for all 106 analytical projects follows before final portfolio optimization methodology is locked.
+- **Next:** M3.7C became the next analytical checkpoint and evaluates deterministic PRB Funding Priority and tie methodology before cross-category eligibility and final portfolio optimization work.
+
+## 2026-09-04 — M3.7C Watershed PRB Funding Priority
+
+M3.7C implementation and verification are complete; checkpoint approval is pending.
+
+- **Scope:** Ranked only the 37 Watershed projects already approved as model-eligible in M3.7B under `WATERSHED_PRB_PROJECT_MODEL`.
+- **Score authority:** `Funding Priority Score` is the official PRB Grand Total. Higher Grand Total means higher Funding Priority. No ClimateCapital-created weighting, normalization, cost adjustment, spatial adjustment, missing-evidence penalty, or January-recommendation adjustment is applied.
+- **Ranking method:** Funding Priority uses descending competition ranking. Equal PRB Grand Totals retain the same substantive rank, so rank gaps are intentional.
+- **Tie evidence:** The cohort has 17 unique scores, 12 tied score groups, and 32 of 37 projects participating in tied groups. Ties are therefore a material methodology rule rather than a presentation edge case.
+- **Display ordering:** Canonical project ID ascending is used only to provide deterministic row order inside an equal-score group. `display_tiebreak_has_analytical_meaning=false`.
+- **Forbidden analytical tie-breakers:** Project cost, January Initial Recommendation, individual PRB components, RNA geometry, FEMA floodplain context, EAZ 2021 context, Watershed Problem Score context, source table row order, and project name do not break substantive PRB-score ties.
+- **Top result:** `5282.134` has Funding Priority Score 74 and rank 1. Projects `5282.043`, `5282.133`, and `5789.126` each have score 73 and shared rank 2.
+- **Conflict handling:** `5754.149` has score 63 and shared rank 20. Its request-version conflict has no ranking special case because M3.7C ranks only the already-governed eligible cohort using PRB Grand Total.
+- **Artifact:** `data/governed/cross_category/funding_priority/watershed-prb-funding-priority.json`.
+- **Boundary:** `portfolio_selection_authorized=false` and `runtime_integration_authorized=false`. M3.7C creates no optimizer, portfolio-selection rule, score-per-dollar metric, or runtime activation.
+- **Verification:** 18 focused M3.7C tests; 73 combined Watershed tests plus 84 subtests; 251 full-repository tests plus 137 subtests; `pip check`; deterministic artifact regeneration; and `git diff --check` all pass. The known Starlette/AnyIO deprecation warning remains non-blocking.
+- **Not decided:** No portfolio optimization objective, `$125M` selection algorithm, category allocation constraint, cross-category eligibility/ranking comparability, or 37-project runtime activation is introduced.
+- **Next:** M3.7E evaluates evidence feasibility and model eligibility across all 106 analytical projects before final portfolio optimization methodology is locked.

@@ -1,0 +1,410 @@
+{
+  "artifact_version": "m3.7c-watershed-prb-funding-priority/1.0.0",
+  "governance_checkpoint": "M3.7C",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+  "portfolio_selection_authorized": false,
+  "runtime_integration_authorized": false,
+  "source_artifacts": {
+    "model_eligibility": "data/governed/cross_category/model_eligibility/watershed-prb-model-eligibility.json"
+  },
+  "ranking_policy": {
+    "funding_priority_score_authority": "OFFICIAL_PRB_GRAND_TOTAL",
+    "direction": "HIGHER_IS_HIGHER_PRIORITY",
+    "rank_method": "COMPETITION_RANK_DESCENDING",
+    "tie_policy": "SHARED_SUBSTANTIVE_RANK",
+    "display_tiebreak": "CANONICAL_PROJECT_ID_ASCENDING",
+    "display_tiebreak_has_analytical_meaning": false,
+    "forbidden_analytical_tiebreakers": [
+      "PROJECT_COST",
+      "JANUARY_INITIAL_RECOMMENDATION",
+      "INDIVIDUAL_PRB_COMPONENT",
+      "RNA_GEOMETRY",
+      "FEMA_FLOODPLAIN_CONTEXT",
+      "EAZ_2021_CONTEXT",
+      "WATERSHED_PROBLEM_SCORE_CONTEXT",
+      "SOURCE_TABLE_ROW_ORDER",
+      "PROJECT_NAME"
+    ]
+  },
+  "summary": {
+    "analytical_project_count": 37,
+    "unique_funding_priority_score_count": 17,
+    "tied_score_group_count": 12,
+    "projects_in_tied_score_groups": 32,
+    "maximum_funding_priority_score": 74,
+    "minimum_funding_priority_score": 52
+  },
+  "records": [
+    {
+      "canonical_project_id": "5282.134",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 74,
+      "funding_priority_rank": 1,
+      "is_tied": false,
+      "tie_group_size": 1,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5282.043",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 73,
+      "funding_priority_rank": 2,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5282.133",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 73,
+      "funding_priority_rank": 2,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.126",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 73,
+      "funding_priority_rank": 2,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5754.089",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 71,
+      "funding_priority_rank": 5,
+      "is_tied": false,
+      "tie_group_size": 1,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5282.150",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 69,
+      "funding_priority_rank": 6,
+      "is_tied": false,
+      "tie_group_size": 1,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5282.162",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 68,
+      "funding_priority_rank": 7,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.145",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 68,
+      "funding_priority_rank": 7,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.075",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 67,
+      "funding_priority_rank": 9,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.092",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 67,
+      "funding_priority_rank": 9,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "8598.014",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 67,
+      "funding_priority_rank": 9,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "4015.001",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 66,
+      "funding_priority_rank": 12,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5754.145",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 66,
+      "funding_priority_rank": 12,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.146",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 66,
+      "funding_priority_rank": 12,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "10878.010",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 65,
+      "funding_priority_rank": 15,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5754.139",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 65,
+      "funding_priority_rank": 15,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.136",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 65,
+      "funding_priority_rank": 15,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.107",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 64,
+      "funding_priority_rank": 18,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.091",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 64,
+      "funding_priority_rank": 18,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "11889.004",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 63,
+      "funding_priority_rank": 20,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5754.149",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 63,
+      "funding_priority_rank": 20,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5754.147",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 62,
+      "funding_priority_rank": 22,
+      "is_tied": true,
+      "tie_group_size": 4,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.053",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 62,
+      "funding_priority_rank": 22,
+      "is_tied": true,
+      "tie_group_size": 4,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.071",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 62,
+      "funding_priority_rank": 22,
+      "is_tied": true,
+      "tie_group_size": 4,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "9999.236",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 62,
+      "funding_priority_rank": 22,
+      "is_tied": true,
+      "tie_group_size": 4,
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.141",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 61,
+      "funding_priority_rank": 26,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "6039.109",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 61,
+      "funding_priority_rank": 26,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.127",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 60,
+      "funding_priority_rank": 28,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.150",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 60,
+      "funding_priority_rank": 28,
+      "is_tied": true,
+      "tie_group_size": 2,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "7492.011",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 59,
+      "funding_priority_rank": 30,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "7492.032",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 59,
+      "funding_priority_rank": 30,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "9999.235",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 59,
+      "funding_priority_rank": 30,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.121",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 58,
+      "funding_priority_rank": 33,
+      "is_tied": false,
+      "tie_group_size": 1,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5789.139",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 56,
+      "funding_priority_rank": 34,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.087",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 56,
+      "funding_priority_rank": 34,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "7492.045",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 56,
+      "funding_priority_rank": 34,
+      "is_tied": true,
+      "tie_group_size": 3,
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false
+    },
+    {
+      "canonical_project_id": "5848.070",
+      "model_scope": "WATERSHED_PRB_PROJECT_MODEL",
+      "funding_priority_score": 52,
+      "funding_priority_rank": 37,
+      "is_tied": false,
+      "tie_group_size": 1,
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false
+    }
+  ]
+}
