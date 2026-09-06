@@ -1,0 +1,471 @@
+{
+  "$defs": {
+    "CouncilDistrictAssignmentType": {
+      "enum": [
+        "SINGLE_DISTRICT",
+        "MULTI_DISTRICT",
+        "CITYWIDE",
+        "UNSPECIFIED"
+      ],
+      "title": "CouncilDistrictAssignmentType",
+      "type": "string"
+    },
+    "CouncilDistrictContext": {
+      "additionalProperties": false,
+      "properties": {
+        "analyst_review_only": {
+          "const": true,
+          "title": "Analyst Review Only",
+          "type": "boolean"
+        },
+        "assignment_type": {
+          "$ref": "#/$defs/CouncilDistrictAssignmentType"
+        },
+        "districts": {
+          "items": {
+            "maximum": 10,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "maxItems": 10,
+          "title": "Districts",
+          "type": "array"
+        },
+        "hard_portfolio_constraint": {
+          "const": false,
+          "title": "Hard Portfolio Constraint",
+          "type": "boolean"
+        },
+        "source_value": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Value"
+        }
+      },
+      "required": [
+        "assignment_type",
+        "districts",
+        "analyst_review_only",
+        "hard_portfolio_constraint"
+      ],
+      "title": "CouncilDistrictContext",
+      "type": "object"
+    },
+    "CrossCategoryRuntimeProject": {
+      "additionalProperties": false,
+      "properties": {
+        "canonical_project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Canonical Project Id"
+        },
+        "council_district": {
+          "$ref": "#/$defs/CouncilDistrictContext"
+        },
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "display_order_within_tie": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Display Order Within Tie",
+          "type": "integer"
+        },
+        "display_tiebreak_has_analytical_meaning": {
+          "const": false,
+          "title": "Display Tiebreak Has Analytical Meaning",
+          "type": "boolean"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        },
+        "governed_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Governed Name",
+          "type": "string"
+        },
+        "is_tied": {
+          "title": "Is Tied",
+          "type": "boolean"
+        },
+        "model_request_authority": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Model Request Authority",
+          "type": "string"
+        },
+        "model_request_authority_source_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Model Request Authority Source Id",
+          "type": "string"
+        },
+        "model_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Model Request Dollars",
+          "type": "integer"
+        },
+        "om_impact": {
+          "$ref": "#/$defs/OmImpactContext"
+        },
+        "prb_components": {
+          "$ref": "#/$defs/OfficialPrbComponents"
+        },
+        "presentation_category": {
+          "$ref": "#/$defs/RuntimePresentationCategory"
+        },
+        "provenance_refs": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Refs",
+          "type": "array"
+        },
+        "request_version_conflict": {
+          "title": "Request Version Conflict",
+          "type": "boolean"
+        },
+        "source_department": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Department",
+          "type": "string"
+        },
+        "source_domain": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Domain",
+          "type": "string"
+        },
+        "tie_group_size": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Tie Group Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "governed_name",
+        "presentation_category",
+        "source_department",
+        "source_domain",
+        "model_request_dollars",
+        "model_request_authority",
+        "model_request_authority_source_id",
+        "request_version_conflict",
+        "funding_priority_score",
+        "funding_priority_rank",
+        "is_tied",
+        "tie_group_size",
+        "display_order_within_tie",
+        "display_tiebreak_has_analytical_meaning",
+        "prb_components",
+        "council_district",
+        "om_impact",
+        "provenance_refs"
+      ],
+      "title": "CrossCategoryRuntimeProject",
+      "type": "object"
+    },
+    "OfficialPrbComponents": {
+      "additionalProperties": false,
+      "properties": {
+        "climate_resilience": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Climate Resilience"
+        },
+        "community_consideration": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Community Consideration"
+        },
+        "critical_asset": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Critical Asset"
+        },
+        "efficiency": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Efficiency"
+        },
+        "strategic_alignment": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Strategic Alignment"
+        },
+        "timeliness_readiness": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Timeliness Readiness"
+        }
+      },
+      "required": [
+        "strategic_alignment",
+        "critical_asset",
+        "community_consideration",
+        "efficiency",
+        "timeliness_readiness",
+        "climate_resilience"
+      ],
+      "title": "OfficialPrbComponents",
+      "type": "object"
+    },
+    "OmImpact": {
+      "enum": [
+        "YES",
+        "NO"
+      ],
+      "title": "OmImpact",
+      "type": "string"
+    },
+    "OmImpactContext": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_score_preference_authorized": {
+          "const": false,
+          "title": "Additional Score Preference Authorized",
+          "type": "boolean"
+        },
+        "analyst_review_only": {
+          "const": true,
+          "title": "Analyst Review Only",
+          "type": "boolean"
+        },
+        "hard_portfolio_constraint": {
+          "const": false,
+          "title": "Hard Portfolio Constraint",
+          "type": "boolean"
+        },
+        "value": {
+          "$ref": "#/$defs/OmImpact"
+        }
+      },
+      "required": [
+        "value",
+        "analyst_review_only",
+        "hard_portfolio_constraint",
+        "additional_score_preference_authorized"
+      ],
+      "title": "OmImpactContext",
+      "type": "object"
+    },
+    "RuntimeCategoryCounts": {
+      "additionalProperties": false,
+      "properties": {
+        "community_facilities": {
+          "const": 38,
+          "title": "Community Facilities",
+          "type": "integer"
+        },
+        "parks_open_space": {
+          "const": 22,
+          "title": "Parks Open Space",
+          "type": "integer"
+        },
+        "transportation": {
+          "const": 9,
+          "title": "Transportation",
+          "type": "integer"
+        },
+        "watershed": {
+          "const": 37,
+          "title": "Watershed",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "transportation",
+        "parks_open_space",
+        "watershed",
+        "community_facilities"
+      ],
+      "title": "RuntimeCategoryCounts",
+      "type": "object"
+    },
+    "RuntimePresentationCategory": {
+      "enum": [
+        "Transportation",
+        "Parks & Open Space",
+        "Watershed",
+        "Community Facilities"
+      ],
+      "title": "RuntimePresentationCategory",
+      "type": "string"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-runtime-catalog-2.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "category_counts": {
+      "$ref": "#/$defs/RuntimeCategoryCounts"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-catalog/2.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "cross_category_ranking_authorized": {
+      "const": true,
+      "title": "Cross Category Ranking Authorized",
+      "type": "boolean"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "governed_request_total_dollars": {
+      "const": 1973520000,
+      "title": "Governed Request Total Dollars",
+      "type": "integer"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "methodology_name": {
+      "const": "PRIORITY_CONSTRAINED_ANALYST_GOVERNED_PORTFOLIO_CONSTRUCTION",
+      "title": "Methodology Name",
+      "type": "string"
+    },
+    "model_scope": {
+      "const": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+      "title": "Model Scope",
+      "type": "string"
+    },
+    "portfolio_selection_authorized": {
+      "const": true,
+      "title": "Portfolio Selection Authorized",
+      "type": "boolean"
+    },
+    "project_count": {
+      "const": 106,
+      "title": "Project Count",
+      "type": "integer"
+    },
+    "projects": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryRuntimeProject"
+      },
+      "maxItems": 106,
+      "minItems": 106,
+      "title": "Projects",
+      "type": "array"
+    },
+    "projects_in_tied_score_groups": {
+      "const": 95,
+      "title": "Projects In Tied Score Groups",
+      "type": "integer"
+    },
+    "runtime_integration_authorized": {
+      "title": "Runtime Integration Authorized",
+      "type": "boolean"
+    },
+    "tied_score_group_count": {
+      "const": 24,
+      "title": "Tied Score Group Count",
+      "type": "integer"
+    },
+    "unique_funding_priority_score_count": {
+      "const": 35,
+      "title": "Unique Funding Priority Score Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "model_scope",
+    "methodology_name",
+    "cross_category_ranking_authorized",
+    "portfolio_selection_authorized",
+    "runtime_integration_authorized",
+    "project_count",
+    "governed_request_total_dollars",
+    "category_counts",
+    "unique_funding_priority_score_count",
+    "tied_score_group_count",
+    "projects_in_tied_score_groups",
+    "projects"
+  ],
+  "title": "CrossCategoryRuntimeCatalog",
+  "type": "object"
+}

@@ -1,0 +1,339 @@
+{
+  "$defs": {
+    "AppliedAnalystOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "acknowledged": {
+          "const": true,
+          "title": "Acknowledged",
+          "type": "boolean"
+        },
+        "decision_unit_ids_left_feasible": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "maxItems": 106,
+          "minItems": 1,
+          "title": "Decision Unit Ids Left Feasible",
+          "type": "array"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        }
+      },
+      "required": [
+        "funding_priority_score",
+        "funding_priority_rank",
+        "acknowledged",
+        "decision_unit_ids_left_feasible"
+      ],
+      "title": "AppliedAnalystOverride",
+      "type": "object"
+    },
+    "BoundaryCandidateResult": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        },
+        "individually_budget_feasible": {
+          "title": "Individually Budget Feasible",
+          "type": "boolean"
+        },
+        "model_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Model Request Dollars",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "model_request_dollars",
+        "funding_priority_score",
+        "funding_priority_rank",
+        "individually_budget_feasible"
+      ],
+      "title": "BoundaryCandidateResult",
+      "type": "object"
+    },
+    "BoundaryTierResult": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/BoundaryCandidateResult"
+          },
+          "maxItems": 106,
+          "minItems": 1,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "full_tier_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Full Tier Request Dollars",
+          "type": "integer"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        },
+        "remaining_budget_before_tier_dollars": {
+          "minimum": 0,
+          "title": "Remaining Budget Before Tier Dollars",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "funding_priority_score",
+        "funding_priority_rank",
+        "remaining_budget_before_tier_dollars",
+        "full_tier_request_dollars",
+        "candidates"
+      ],
+      "title": "BoundaryTierResult",
+      "type": "object"
+    },
+    "PortfolioEvaluationStatus": {
+      "enum": [
+        "COMPLETE",
+        "ANALYST_RESOLUTION_REQUIRED"
+      ],
+      "title": "PortfolioEvaluationStatus",
+      "type": "string"
+    },
+    "PortfolioWarning": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_unit_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "maxItems": 106,
+          "minItems": 1,
+          "title": "Decision Unit Ids",
+          "type": "array"
+        },
+        "message": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "warning_code": {
+          "$ref": "#/$defs/PortfolioWarningCode"
+        }
+      },
+      "required": [
+        "warning_code",
+        "message",
+        "decision_unit_ids"
+      ],
+      "title": "PortfolioWarning",
+      "type": "object"
+    },
+    "PortfolioWarningCode": {
+      "enum": [
+        "HIGHER_PRIORITY_FEASIBLE_PROJECT_REMAINS"
+      ],
+      "title": "PortfolioWarningCode",
+      "type": "string"
+    },
+    "SelectedProjectResult": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        },
+        "model_request_dollars": {
+          "exclusiveMinimum": 0,
+          "title": "Model Request Dollars",
+          "type": "integer"
+        },
+        "selection_source": {
+          "$ref": "#/$defs/SelectionSource"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "model_request_dollars",
+        "funding_priority_score",
+        "funding_priority_rank",
+        "selection_source"
+      ],
+      "title": "SelectedProjectResult",
+      "type": "object"
+    },
+    "SelectionSource": {
+      "enum": [
+        "AUTO_COMPLETE_TIER",
+        "AUTO_UNIQUE_BUDGET_FEASIBLE",
+        "ANALYST_BOUNDARY_RESOLUTION"
+      ],
+      "title": "SelectionSource",
+      "type": "string"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-funding-plan-result-2.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "applied_analyst_overrides": {
+      "items": {
+        "$ref": "#/$defs/AppliedAnalystOverride"
+      },
+      "maxItems": 35,
+      "title": "Applied Analyst Overrides",
+      "type": "array"
+    },
+    "available_budget_dollars": {
+      "maximum": 1973520000,
+      "minimum": 0,
+      "title": "Available Budget Dollars",
+      "type": "integer"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-funding-plan/2.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "included_total_dollars": {
+      "minimum": 0,
+      "title": "Included Total Dollars",
+      "type": "integer"
+    },
+    "plan_fingerprint": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Plan Fingerprint",
+      "type": "string"
+    },
+    "remainder_dollars": {
+      "minimum": 0,
+      "title": "Remainder Dollars",
+      "type": "integer"
+    },
+    "selected_projects": {
+      "items": {
+        "$ref": "#/$defs/SelectedProjectResult"
+      },
+      "maxItems": 106,
+      "title": "Selected Projects",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/$defs/PortfolioEvaluationStatus"
+    },
+    "unresolved_boundary": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BoundaryTierResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "warnings": {
+      "items": {
+        "$ref": "#/$defs/PortfolioWarning"
+      },
+      "maxItems": 35,
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "status",
+    "available_budget_dollars",
+    "selected_projects",
+    "included_total_dollars",
+    "remainder_dollars",
+    "warnings",
+    "applied_analyst_overrides",
+    "plan_fingerprint"
+  ],
+  "title": "CrossCategoryPlanResult",
+  "type": "object"
+}
