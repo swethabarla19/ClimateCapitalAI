@@ -1,6 +1,6 @@
 # ClimateCapital AI P0 Evidence and Methodology Lock
 
-> **Status:** Updated through M3.7F on 2026-09-04; portfolio-selection and runtime-integration methodology remain open
+> **Status:** Updated through M3.7D on 2026-09-06; portfolio-selection methodology is authorized and runtime integration remains open
 > **Authority:** This document is the authoritative P0 analytical methodology.
 > It records reviewed evidence findings separately from the evidence-driven
 > Product and Design changes in `docs/product/`.
@@ -22,12 +22,57 @@ The score may establish ordinal project priority only. It is not a cardinal publ
 benefit measure, cost-effectiveness measure, benefit/cost ratio, historical
 recommendation probability, or additive portfolio utility.
 
-Portfolio selection and runtime integration remain unauthorized pending later
-governed decisions.
+M3.7D now authorizes **Priority-Constrained Analyst-Governed Portfolio Construction** for the 106-project cross-category analytical model. Projects remain indivisible full-request units; official PRB priority is ordinal; Available Project Budget is analyst supplied; unsupported automatic tiebreakers and cardinal utility optimization remain prohibited. Runtime integration remains unauthorized pending implementation.
 
 The absence of a comparable numeric flood-reduction benefit, vulnerability,
 beneficiary, or cost-effectiveness measure remains a methodological result and
 must not be hidden with imputation, confidence points, or AI.
+
+## M3.7D Cross-Category Portfolio-Selection Lock
+
+M3.7D authorizes portfolio-selection methodology without changing the interpretation
+of PRB points from ordinal priority into additive public value.
+
+The machine-operational inputs are:
+
+- model eligibility;
+- official PRB Funding Priority;
+- governed full-project request; and
+- analyst-supplied Available Project Budget.
+
+Historical budget references remain distinct:
+
+- `$332,000,000` is the matched-cohort historical benchmark scenario;
+- `$700,000,000` is the full January Initial Draft Recommendation reference;
+- `$750,000,000` is a pre-snapshot citywide financial-capacity reference.
+
+Neither `$700M` nor `$750M` is the authoritative budget of the 106-project model.
+Historical category recommendation amounts are not hard project-selection constraints.
+
+Projects are indivisible and use governed `model_request_dollars`. Complete priority
+tiers are included when they fit. A non-fitting tier becomes the boundary priority
+tier. Budget feasibility may automatically resolve that tier only where the
+implication is unique. When multiple substantively tied projects remain feasible,
+analyst resolution is required.
+
+Council District, O&M, six-year deliverability, and preventative-maintenance evidence
+may support analyst review and explanation but do not become invented numeric
+constraints. Historical project membership and category allocations remain
+benchmark/outcome-only.
+
+The methodology explicitly prohibits summed-PRB utility maximization,
+score-per-dollar, cheapest-first selection, project-count maximization, budget-use
+maximization, individual-component tiebreaks, category normalization, and hidden
+tiebreaking using contextual evidence.
+
+Authority after M3.7D:
+
+- `cross_category_ranking_authorized=true`
+- `portfolio_selection_authorized=true`
+- `runtime_integration_authorized=false`
+
+The existing runtime remains unchanged until a separate implementation/integration
+checkpoint proves the state machine end to end.
 
 ## Evidence-State Contract
 

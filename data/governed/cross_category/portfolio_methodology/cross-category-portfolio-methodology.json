@@ -1,0 +1,122 @@
+{
+  "artifact_version": "m3.7d-cross-category-portfolio-methodology/1.0.0",
+  "governance_checkpoint": "M3.7D",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+  "cross_category_ranking_authorized": true,
+  "portfolio_selection_authorized": true,
+  "runtime_integration_authorized": false,
+  "methodology_name": "PRIORITY_CONSTRAINED_ANALYST_GOVERNED_PORTFOLIO_CONSTRUCTION",
+  "methodology_interpretation": "DECISION_SUPPORT_NOT_CARDINAL_UTILITY_OPTIMIZATION",
+  "source_artifacts": {
+    "funding_priority": "data/governed/cross_category/funding_priority/cross-category-prb-funding-priority.json",
+    "prb_reconciliation": "data/governed/cross_category/reconciliation/cross-category-prb-reconciliation.json",
+    "budget_scope_audit": "scripts/data/audit_cross_category_portfolio_budget_structure.py",
+    "rank_cost_frontier_audit": "scripts/data/audit_cross_category_rank_cost_frontier.py",
+    "official_constraint_audit": "scripts/data/audit_cross_category_official_portfolio_constraints.py"
+  },
+  "machine_operational_inputs": [
+    "MODEL_ELIGIBILITY",
+    "OFFICIAL_PRB_ORDINAL_FUNDING_PRIORITY",
+    "GOVERNED_MODEL_REQUEST_DOLLARS",
+    "ANALYST_SUPPLIED_AVAILABLE_PROJECT_BUDGET"
+  ],
+  "project_funding_semantics": {
+    "funding_unit": "FULL_PROJECT_REQUEST",
+    "project_indivisible": true,
+    "partial_funding_authorized": false,
+    "cost_authority": "GOVERNED_MODEL_REQUEST_DOLLARS"
+  },
+  "budget_policy": {
+    "available_project_budget": "ANALYST_SUPPLIED_SCENARIO_INPUT",
+    "hard_budget_rule": "SUM_SELECTED_MODEL_REQUEST_DOLLARS_LE_AVAILABLE_PROJECT_BUDGET",
+    "historical_matched_cohort_budget_dollars": 332000000,
+    "historical_matched_cohort_role": "BENCHMARK_COMPARISON_SCENARIO",
+    "historical_full_package_dollars": 700000000,
+    "historical_full_package_role": "BENCHMARK_OUTCOME_REFERENCE",
+    "historical_citywide_capacity_reference_dollars": 750000000,
+    "historical_citywide_capacity_role": "CITYWIDE_REFERENCE_NOT_106_PROJECT_BUDGET",
+    "historical_category_allocations_as_constraints": false
+  },
+  "priority_policy": {
+    "authority": "OFFICIAL_PRB_GRAND_TOTAL",
+    "interpretation": "ORDINAL",
+    "processing_order": "DESCENDING_PRIORITY_TIERS",
+    "equal_score_policy": "SHARED_SUBSTANTIVE_PRIORITY",
+    "display_order_has_analytical_meaning": false
+  },
+  "selection_state_machine": {
+    "complete_tier_fits": "AUTO_INCLUDE_COMPLETE_TIER",
+    "complete_tier_does_not_fit": "BOUNDARY_PRIORITY_TIER",
+    "boundary_no_project_fits": "NO_SELECTION_FROM_TIER_BUDGET_INFEASIBLE",
+    "boundary_exactly_one_project_fits": "AUTO_INCLUDE_UNIQUE_BUDGET_FEASIBLE_PROJECT",
+    "boundary_multiple_projects_fit": "ANALYST_RESOLUTION_REQUIRED",
+    "same_tier_project_still_fits_after_analyst_choice": "WARN_HIGHER_PRIORITY_FEASIBLE_PROJECT_REMAINS",
+    "lower_tier_advancement_with_feasible_higher_priority_project": "EXPLICIT_ANALYST_OVERRIDE_REQUIRED"
+  },
+  "forbidden_machine_objectives": [
+    "MAXIMIZE_SUM_PRB_GRAND_TOTAL",
+    "MAXIMIZE_SCORE_PER_DOLLAR",
+    "MINIMIZE_PROJECT_COST",
+    "MAXIMIZE_PROJECT_COUNT",
+    "MAXIMIZE_BUDGET_UTILIZATION",
+    "MAXIMIZE_INDIVIDUAL_PRB_COMPONENT",
+    "CATEGORY_NORMALIZATION",
+    "HISTORICAL_RECOMMENDATION_MATCHING"
+  ],
+  "forbidden_automatic_tiebreakers": [
+    "PROJECT_COST",
+    "DECISION_UNIT_ID",
+    "PROJECT_NAME",
+    "SOURCE_TABLE_ROW_ORDER",
+    "JANUARY_INITIAL_RECOMMENDATION",
+    "INDIVIDUAL_PRB_COMPONENT",
+    "COUNCIL_DISTRICT",
+    "OM_IMPACT",
+    "RNA_GEOMETRY",
+    "FEMA_FLOODPLAIN_CONTEXT",
+    "EAZ_2021_CONTEXT",
+    "WATERSHED_PROBLEM_SCORE_CONTEXT"
+  ],
+  "analyst_review_context": {
+    "council_district": {
+      "role": "REPORTING_AND_ANALYST_REVIEW",
+      "hard_constraint": false,
+      "reason": "NO_ADOPTED_REPRODUCIBLE_PROJECT_SELECTION_QUOTA"
+    },
+    "om_impact": {
+      "role": "CONTEXT_AND_WARNING",
+      "hard_constraint": false,
+      "reason": "BOOLEAN_FIELD_NOT_QUANTIFIED_PORTFOLIO_COST"
+    },
+    "six_year_deliverability": {
+      "role": "ANALYST_REVIEW_ONLY",
+      "hard_constraint": false,
+      "reason": "NO_GOVERNED_PROJECT_LEVEL_DELIVERY_CAPACITY_MODEL"
+    },
+    "preventative_maintenance": {
+      "role": "ANALYST_REVIEW_ONLY",
+      "hard_constraint": false,
+      "reason": "NO_COMPLETE_GOVERNED_PROJECT_LEVEL_AVOIDED_COST_MEASURE"
+    }
+  },
+  "double_counting_policy": {
+    "matching_funds_additional_rule": false,
+    "strategic_alignment_additional_rule": false,
+    "om_additional_score_preference": false
+  },
+  "historical_outcome_isolation": {
+    "historical_category_allocations_used_for_selection": false,
+    "historical_project_membership_used_for_selection": false,
+    "historical_recommendation_role": "BENCHMARK_OUTCOME_ONLY"
+  },
+  "summary": {
+    "analytical_project_count": 106,
+    "governed_request_total_dollars": 1973520000,
+    "maximum_project_request_dollars": 245000000,
+    "minimum_project_request_dollars": 500000,
+    "funding_priority_unique_score_count": 35,
+    "tied_score_group_count": 24,
+    "projects_in_tied_score_groups": 95
+  }
+}

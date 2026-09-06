@@ -50,16 +50,16 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-04
-- **Project stage:** M3.5, M3.6, M3.7A, M3.7B, M3.7C, M3.7E, and M3.7F analytical-methodology work have completed implementation and verification. Cross-category Funding Priority ranking is now authorized for all 106 model-eligible analytical projects.
-- **Current milestone:** M3.7F — cross-category PRB Funding Priority is complete and authorized for checkpoint publication.
-- **Next gate:** Portfolio-selection methodology: determine the defensible cross-category Funding Plan objective, budget authority, category/policy constraints, and deterministic selection behavior without treating PRB points as additive public-value utility.
+- **Last updated:** 2026-09-06
+- **Project stage:** M3.7D portfolio methodology is complete and verified. Cross-category ranking and portfolio-selection methodology are authorized for the 106-project analytical model; runtime integration remains pending.
+- **Current milestone:** M3.7D — cross-category portfolio-selection methodology complete and ready for checkpoint publication.
+- **Next gate:** Implement the authorized 106-project cross-category portfolio state machine in runtime contracts/APIs and integrate it with the frontend Funding Plan workflow.
 - **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
 - **Working state:** Git repository is on `main`. M3.7E is published to `origin/main` at `83a7ed8`. M3.7F is verified and explicitly authorized for commit/push in this session. Unrelated `.node-version` and `frontend/` work remain outside this checkpoint.
-- **Data/methodology state:** All 106 governed analytical projects are reconciled, evidence-feasible, model-eligible, and now eligible for one common ordinal PRB Funding Priority ranking. The official PRB Grand Total is the Funding Priority Score. Scores span 40–83 across 35 unique values; 95 projects participate in 24 tied score groups. All 106 satisfy the official PRB baseline prerequisite.
-- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=false`; `runtime_integration_authorized=false`. Existing runtime semantics remain unchanged until portfolio methodology and runtime integration receive separate authorization.
+- **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
+- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=false`. The existing FastAPI runtime still uses its previously approved behavior until the new cross-category portfolio state machine is implemented and verified.
 - **M3 runtime state:** The approved FastAPI runtime remains unchanged. Existing health/bootstrap/plan/benchmark APIs and the M2B deterministic evaluator retain their approved semantics while M3.7 analytical-methodology work is resolved.
-- **Most recent verification:** M3.7F focused tests: 26 passed. Combined M3.7A/B/C/E/F regression: 95 passed. Full repository: 302 passed plus 137 subtests. `pip check` reports no broken requirements. The governed M3.7F Funding Priority artifact regenerates identically as `unchanged`. One known Starlette TestClient/AnyIO deprecation warning remains non-blocking.
+- **Most recent verification:** M3.7D focused tests: 29 passed. Combined M3.7A/B/C/E/F/D regression: 124 passed. Full repository: 331 passed plus 137 subtests, with one known non-blocking Starlette/AnyIO deprecation warning. `pip check` reports no broken requirements. The M3.7D governed methodology artifact regenerates as `unchanged`, and `git diff --check` passes.
 
 ## Approved Locks
 
@@ -77,12 +77,16 @@ access to prior chat conversations.
   navigation, UI states/recovery, low-fidelity wireframes, evidence gates, and
   three-minute demo sequence remain, reconciled to analyst-controlled Funding Plan
   membership and evidence-first terminology.
-- **Methodology Lock — M3.7F cross-category Funding Priority:** All 106 governed
-  analytical projects are model-eligible and rankable using official PRB Grand
-  Total as a common ordinal Funding Priority Score. Competition ranking preserves
-  substantive ties; deterministic ID ordering inside ties has no analytical
-  meaning. No category normalization or invented score transformation is allowed.
-  Portfolio selection and runtime integration remain unauthorized.
+- **Methodology Lock — M3.7D cross-category portfolio construction:** All 106 governed
+  analytical projects remain ranked by official ordinal PRB Funding Priority.
+  Portfolio construction now uses indivisible full-request projects, analyst-supplied
+  Available Project Budget, complete-tier inclusion when feasible, boundary-tier
+  budget feasibility, and explicit analyst resolution where multiple equal-priority
+  alternatives remain feasible. Cardinal PRB optimization, score-per-dollar,
+  cheapest-first, project-count maximization, budget-utilization maximization,
+  unsupported category quotas, and hidden analytical tiebreakers are prohibited.
+  Cross-category ranking and portfolio-selection methodology are authorized;
+  runtime integration remains unauthorized.
 - **Architecture Lock — Minimal reproducible P0:** Controlled source preparation
   produces a reviewed four-file release-data bundle; one small public Cloud Run
   container serves the SPA/API with one worker, no application database, no
@@ -105,31 +109,36 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Preserve the completed M3.7F cross-category Funding Priority decision
-  as a governed checkpoint before beginning portfolio-selection methodology.
-- **Status:** M3.7F implementation, determinism, focused regression, combined
-  M3.7 regression, full repository verification, and dependency verification pass.
-- **Analytical result:** 106/106 model-eligible projects are rankable using
-  official PRB Grand Total as an ordinal Funding Priority Score.
-- **Tie result:** 35 unique scores, 24 tied score groups, and 95 projects in ties;
-  equal scores retain a shared substantive rank.
-- **Authority:** Cross-category ranking is authorized. Portfolio selection and
-  runtime integration are not.
-- **Parallel repository note:** `.node-version` and `frontend/` remain unrelated
-  untracked work and must not enter the M3.7F checkpoint.
-- **Exit condition:** Commit and publish the M3.7F checkpoint with only its
-  governed scripts, artifact, tests, and documentation.
+- **Goal:** Publish the completed M3.7D methodology checkpoint and immediately
+  begin runtime/frontend integration of the governed 106-project analytical model.
+- **Status:** Budget-scope, rank-cost-frontier, official portfolio-consideration,
+  deterministic methodology, focused regression, combined regression, full-suite,
+  dependency, and determinism verification all pass.
+- **Analytical result:** Portfolio-selection methodology is authorized as
+  Priority-Constrained Analyst-Governed Portfolio Construction.
+- **Budget result:** Available Project Budget is analyst supplied. `$332M` is the
+  historical matched-cohort benchmark scenario; `$700M` and `$750M` are broader
+  historical references and are not the 106-project model budget.
+- **Tie result:** Complete higher-priority tiers are automatic when feasible.
+  Unique budget feasibility can resolve a boundary project; genuinely ambiguous
+  equal-priority choices require analyst resolution.
+- **Authority:** Cross-category ranking and portfolio-selection methodology are
+  authorized. Runtime integration is not yet authorized.
+- **Parallel repository note:** `.node-version` and `frontend/` remain separate
+  work and must not accidentally enter the M3.7D methodology checkpoint.
+- **Exit condition:** Commit and publish M3.7D, then start cross-category
+  runtime/frontend integration.
 
 ## Next Actions
 
-1. Commit and publish the verified M3.7F checkpoint.
-2. Begin portfolio-selection methodology in the next work session.
-3. Determine the governing cross-category budget and any historically defensible
-   category/policy constraints.
-4. Evaluate deterministic portfolio objectives without assuming PRB Grand Total
-   is additive utility.
-5. Authorize portfolio selection only after the objective and constraints are
-   governed; authorize runtime integration separately afterward.
+1. Commit and publish the verified M3.7D methodology checkpoint.
+2. Reconcile runtime contracts with the 106-project cross-category model.
+3. Implement the governed portfolio-selection state machine in backend logic/APIs.
+4. Integrate Funding Priority, project costs, Available Project Budget, boundary
+   states, analyst resolution, and benchmark comparison into the frontend.
+5. Verify runtime behavior end to end before setting
+   `runtime_integration_authorized=true`.
+
 
 ## Active Implementation Checkpoint
 
