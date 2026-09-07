@@ -289,8 +289,10 @@ def validate_authority_chain(
         is not False
     ):
         raise RuntimeCatalogBuildError(
-            "Runtime integration must remain "
-            "unauthorized while building v2 catalog."
+            "M3.7D predecessor methodology must retain "
+            "runtime_integration_authorized=false; "
+            "M3.8 runtime authorization is applied only "
+            "to the runtime-v2 release."
         )
 
     if (
@@ -855,7 +857,7 @@ def build_catalog_payload() -> dict[str, object]:
         "portfolio_selection_authorized":
             True,
         "runtime_integration_authorized":
-            False,
+            True,
         "project_count":
             CROSS_CATEGORY_RUNTIME_PROJECT_COUNT,
         "governed_request_total_dollars":

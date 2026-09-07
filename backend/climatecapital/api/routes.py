@@ -1,198 +1,342 @@
-"""M3 health/bootstrap/plan/benchmark route surface."""
+"""M3 cross-category runtime-v2 FastAPI route surface."""
 
 from __future__ import annotations
 
-from fastapi import APIRouter, Request
+from fastapi import (
+    APIRouter,
+    Request,
+)
 
-from climatecapital.api.http import error_response, response_identity
-from climatecapital.benchmark.comparator import compare_plan_to_benchmark
+from climatecapital.api.http import (
+    error_response,
+    response_identity,
+)
 from climatecapital.contracts.api import (
-    BenchmarkResponseData,
-    BenchmarkSuccessEnvelope,
-    BootstrapResponseData,
-    BootstrapSuccessEnvelope,
     HealthResponseData,
     HealthSuccessEnvelope,
-    PlanEvaluationSuccessEnvelope,
 )
-from climatecapital.contracts.plans import (
-    BenchmarkComparisonRequest,
-    PlanEvaluationRequest,
+from climatecapital.contracts.cross_category_api import (
+    CrossCategoryBenchmarkResponseData,
+    CrossCategoryBenchmarkSuccessEnvelope,
+    CrossCategoryPlanSuccessEnvelope,
+    CrossCategoryRuntimeBootstrapData,
+    CrossCategoryRuntimeBootstrapEnvelope,
 )
-from climatecapital.contracts.api import BenchmarkComparisonSuccessEnvelope
-from climatecapital.contracts.versions import (
-    BENCHMARK_CONTRACT_VERSION,
-    FUNDING_PLAN_CONTRACT_VERSION,
+from climatecapital.contracts.cross_category_release import (
+    CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION,
 )
-from climatecapital.plans.evaluator import evaluate_plan, evaluate_plan_request
+from climatecapital.contracts.cross_category_runtime import (
+    CROSS_CATEGORY_CATALOG_CONTRACT_VERSION,
+    CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION,
+    CrossCategoryPlanInput,
+)
+from climatecapital.plans.cross_category_evaluator import (
+    CrossCategoryPortfolioEvaluationError,
+    evaluate_cross_category_plan,
+)
+
 
 router = APIRouter()
 
 
-@router.get("/healthz", response_model=HealthSuccessEnvelope)
-def health(request: Request) -> HealthSuccessEnvelope:
+# ---------------------------------------------------------------------------
+# Health
+# ---------------------------------------------------------------------------
+
+
+@router.get(
+    "/healthz",
+    response_model=HealthSuccessEnvelope,
+)
+def health(
+    request: Request,
+) -> HealthSuccessEnvelope:
     runtime = request.app.state.runtime
+
     return HealthSuccessEnvelope(
         endpoint="/healthz",
         status="SUCCESS",
-        identity=response_identity(request),
+        identity=response_identity(
+            request
+        ),
         data=HealthResponseData(
             status="READY",
-            deployment_identity=runtime.deployment_identity,
-            contract_versions=runtime.manifest.contract_versions,
-            gemini_enabled=runtime.gemini_enabled,
+            deployment_identity=(
+                runtime.deployment_identity
+            ),
+            contract_versions=(
+                runtime.manifest
+                .contract_versions
+            ),
+            gemini_enabled=(
+                runtime.gemini_enabled
+            ),
         ),
     )
 
 
-@router.get("/api/v1/bootstrap", response_model=BootstrapSuccessEnvelope)
-def bootstrap(request: Request) -> BootstrapSuccessEnvelope:
-    runtime = request.app.state.runtime
-    return BootstrapSuccessEnvelope(
-        endpoint="/api/v1/bootstrap",
-        status="SUCCESS",
-        identity=response_identity(request),
-        data=BootstrapResponseData(
-            catalog=runtime.catalog,
-            map_context=runtime.map_context,
-            map_defaults=runtime.map_defaults,
-            public_configuration=runtime.public_configuration,
-            deployment_identity=runtime.deployment_identity,
-        ),
-    )
+# ---------------------------------------------------------------------------
+# Bootstrap
+# ---------------------------------------------------------------------------
 
 
-@router.post(
-    "/api/v1/plans/evaluate",
-    response_model=PlanEvaluationSuccessEnvelope,
-)
-def evaluate(
+def _bootstrap_response(
     request: Request,
-    payload: PlanEvaluationRequest,
-):
-    runtime = request.app.state.runtime
-    expected = runtime.manifest.data_version
-    if payload.current.data_version != expected:
-        return error_response(
-            request,
-            status_code=409,
-            error_code="DATA_VERSION_CONFLICT",
-            message="Plan data version does not match the loaded release.",
-            field_path=["current", "data_version"],
+    *,
+    endpoint: str,
+) -> CrossCategoryRuntimeBootstrapEnvelope:
+    runtime = (
+        request.app.state
+        .cross_category_runtime
+    )
+
+    return (
+        CrossCategoryRuntimeBootstrapEnvelope(
+            endpoint=endpoint,
+            status="SUCCESS",
+            identity=response_identity(
+                request,
+                contract_version=(
+                    CROSS_CATEGORY_CATALOG_CONTRACT_VERSION
+                ),
+                data_version=(
+                    runtime.catalog.data_version
+                ),
+                release_id=(
+                    runtime.release_id
+                ),
+            ),
+            data=(
+                CrossCategoryRuntimeBootstrapData(
+                    catalog=runtime.catalog,
+                    map_context=(
+                        runtime.map_context
+                    ),
+                    public_configuration=(
+                        runtime
+                        .public_configuration
+                    ),
+                )
+            ),
         )
-    if payload.reference is not None and payload.reference.data_version != expected:
+    )
+
+
+@router.get(
+    "/api/v1/bootstrap",
+    response_model=CrossCategoryRuntimeBootstrapEnvelope,
+)
+def bootstrap(
+    request: Request,
+) -> CrossCategoryRuntimeBootstrapEnvelope:
+    return _bootstrap_response(
+        request,
+        endpoint="/api/v1/bootstrap",
+    )
+
+
+@router.get(
+    "/api/v1/cross-category/bootstrap",
+    response_model=CrossCategoryRuntimeBootstrapEnvelope,
+)
+def cross_category_bootstrap(
+    request: Request,
+) -> CrossCategoryRuntimeBootstrapEnvelope:
+    return _bootstrap_response(
+        request,
+        endpoint=(
+            "/api/v1/cross-category/bootstrap"
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Funding Plan
+# ---------------------------------------------------------------------------
+
+
+def _evaluate_response(
+    request: Request,
+    payload: CrossCategoryPlanInput,
+    *,
+    endpoint: str,
+):
+    runtime = (
+        request.app.state
+        .cross_category_runtime
+    )
+
+    if (
+        payload.data_version
+        != runtime.catalog.data_version
+    ):
         return error_response(
             request,
             status_code=409,
-            error_code="DATA_VERSION_CONFLICT",
-            message="Reference data version does not match the loaded release.",
-            field_path=["reference", "data_version"],
+            error_code=(
+                "DATA_VERSION_CONFLICT"
+            ),
+            message=(
+                "Plan data version does not "
+                "match the active "
+                "cross-category release."
+            ),
+            field_path=[
+                "data_version"
+            ],
         )
 
-    result = evaluate_plan_request(runtime.catalog, payload)
-    return PlanEvaluationSuccessEnvelope(
-        endpoint="/api/v1/plans/evaluate",
+    try:
+        result = (
+            evaluate_cross_category_plan(
+                runtime.catalog,
+                payload,
+            )
+        )
+
+    except (
+        CrossCategoryPortfolioEvaluationError
+    ) as error:
+        status_code = (
+            409
+            if error.code
+            in {
+                "DATA_VERSION_CONFLICT",
+                "PLAN_FINGERPRINT_CONFLICT",
+                "STALE_BOUNDARY_RESOLUTION",
+            }
+            else 422
+        )
+
+        return error_response(
+            request,
+            status_code=status_code,
+            error_code=(
+                "DATA_VERSION_CONFLICT"
+                if error.code
+                == "DATA_VERSION_CONFLICT"
+                else "MALFORMED_REQUEST"
+            ),
+            message=error.message,
+            field_path=[],
+        )
+
+    return CrossCategoryPlanSuccessEnvelope(
+        endpoint=endpoint,
         status="SUCCESS",
         identity=response_identity(
             request,
-            contract_version=FUNDING_PLAN_CONTRACT_VERSION,
+            contract_version=(
+                CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION
+            ),
+            data_version=(
+                runtime.catalog.data_version
+            ),
+            release_id=(
+                runtime.release_id
+            ),
         ),
         data=result,
     )
 
 
-@router.get(
-    "/api/v1/benchmark",
-    response_model=BenchmarkSuccessEnvelope,
+@router.post(
+    "/api/v1/plans/evaluate",
+    response_model=CrossCategoryPlanSuccessEnvelope,
 )
-def benchmark(request: Request):
-    runtime = request.app.state.runtime
-    if runtime.benchmark is None:
-        return error_response(
-            request,
-            status_code=503,
-            error_code="OPTIONAL_DEPENDENCY_UNAVAILABLE",
-            message="Historical benchmark data is unavailable.",
-            retryable=False,
-        )
-    return BenchmarkSuccessEnvelope(
-        endpoint="/api/v1/benchmark",
-        status="SUCCESS",
-        identity=response_identity(
-            request,
-            contract_version=BENCHMARK_CONTRACT_VERSION,
-        ),
-        data=BenchmarkResponseData(
-            benchmark=runtime.benchmark,
-            deployment_identity=runtime.deployment_identity,
+def evaluate(
+    request: Request,
+    payload: CrossCategoryPlanInput,
+):
+    return _evaluate_response(
+        request,
+        payload,
+        endpoint=(
+            "/api/v1/plans/evaluate"
         ),
     )
 
 
 @router.post(
+    "/api/v1/cross-category/plans/evaluate",
+    response_model=CrossCategoryPlanSuccessEnvelope,
+)
+def cross_category_evaluate(
+    request: Request,
+    payload: CrossCategoryPlanInput,
+):
+    return _evaluate_response(
+        request,
+        payload,
+        endpoint=(
+            "/api/v1/cross-category/"
+            "plans/evaluate"
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Historical benchmark
+# ---------------------------------------------------------------------------
+
+
+@router.get(
+    "/api/v1/benchmark",
+    response_model=CrossCategoryBenchmarkSuccessEnvelope,
+)
+def benchmark(
+    request: Request,
+) -> CrossCategoryBenchmarkSuccessEnvelope:
+    runtime = (
+        request.app.state
+        .cross_category_runtime
+    )
+
+    return (
+        CrossCategoryBenchmarkSuccessEnvelope(
+            endpoint="/api/v1/benchmark",
+            status="SUCCESS",
+            identity=response_identity(
+                request,
+                contract_version=(
+                    CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION
+                ),
+                data_version=(
+                    runtime.benchmark
+                    .data_version
+                ),
+                release_id=(
+                    runtime.release_id
+                ),
+            ),
+            data=(
+                CrossCategoryBenchmarkResponseData(
+                    benchmark=(
+                        runtime.benchmark
+                    ),
+                )
+            ),
+        )
+    )
+
+
+@router.post(
     "/api/v1/benchmark/compare",
-    response_model=BenchmarkComparisonSuccessEnvelope,
 )
 def benchmark_compare(
     request: Request,
-    payload: BenchmarkComparisonRequest,
 ):
-    runtime = request.app.state.runtime
-    benchmark = runtime.benchmark
-    if benchmark is None:
-        return error_response(
-            request,
-            status_code=503,
-            error_code="OPTIONAL_DEPENDENCY_UNAVAILABLE",
-            message="Historical benchmark data is unavailable.",
-            retryable=False,
-        )
-
-    if payload.plan.data_version != runtime.manifest.data_version:
-        return error_response(
-            request,
-            status_code=409,
-            error_code="DATA_VERSION_CONFLICT",
-            message="Plan data version does not match the loaded release.",
-            field_path=["plan", "data_version"],
-        )
-    if (
-        payload.expected_benchmark_data_version
-        != benchmark.data_version
-    ):
-        return error_response(
-            request,
-            status_code=409,
-            error_code="DATA_VERSION_CONFLICT",
-            message="Benchmark data version does not match the loaded release.",
-            field_path=["expected_benchmark_data_version"],
-        )
-
-    evaluated = evaluate_plan(runtime.catalog, payload.plan)
-    if evaluated.status != "VALID" or evaluated.evaluated_plan is None:
-        first = evaluated.semantic_errors[0] if evaluated.semantic_errors else None
-        return error_response(
-            request,
-            status_code=422,
-            error_code="MALFORMED_REQUEST",
-            message=(
-                first.message
-                if first is not None
-                else "Benchmark comparison requires a valid within-budget plan."
-            ),
-            field_path=(first.field_path if first is not None else ["plan"]),
-        )
-
-    comparison = compare_plan_to_benchmark(
-        benchmark,
-        evaluated.evaluated_plan,
-    )
-    return BenchmarkComparisonSuccessEnvelope(
-        endpoint="/api/v1/benchmark/compare",
-        status="SUCCESS",
-        identity=response_identity(
-            request,
-            contract_version=BENCHMARK_CONTRACT_VERSION,
+    return error_response(
+        request,
+        status_code=503,
+        error_code=(
+            "OPTIONAL_DEPENDENCY_UNAVAILABLE"
         ),
-        data=comparison,
+        message=(
+            "Cross-category historical "
+            "benchmark comparison is not "
+            "activated in this runtime "
+            "checkpoint."
+        ),
+        retryable=False,
     )

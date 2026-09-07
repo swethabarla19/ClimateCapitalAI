@@ -1,0 +1,22 @@
+{
+  "analytical_project_count": 106,
+  "contract_version": "p0-cross-category-map-context/2.0.0",
+  "crs_contract": "RFC_7946_EPSG_4326_IF_GEOMETRY_PRESENT",
+  "data_version": "climatecapital-austin-2026-01-21-cross-category-v2",
+  "fabricated_geometry": false,
+  "features": [],
+  "geometry_authority": "GOVERNED_RUNTIME_GEOMETRY_ONLY",
+  "geometry_required_for_model_eligibility": false,
+  "geometry_required_for_portfolio_selection": false,
+  "historical_decision_snapshot_date": "2026-01-21",
+  "limitations": [
+    "No governed cross-category runtime geometry is available at this checkpoint.",
+    "Missing geometry does not remove an analytical project from Explore or Funding Plan.",
+    "Council District assignments are contextual attributes and are not converted into project geometry."
+  ],
+  "mapped_project_count": 0,
+  "mapping_status": "NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE",
+  "project_identity_key": "decision_unit_id",
+  "type": "FeatureCollection",
+  "unmapped_project_count": 106
+}

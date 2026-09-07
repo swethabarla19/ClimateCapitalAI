@@ -79,3 +79,37 @@ release-data/<data_version>/
 ├── map-context.geojson
 ├── benchmark.json
 └── manifest.json
+
+## Activation outcome — 2026-09-06
+
+The migration gate defined above has now been satisfied.
+
+M3.8 implementation completed the parallel v2 path and then activated it only
+after the governed runtime catalog, portfolio evaluator, release bundle, and
+FastAPI integration passed their verification gates.
+
+Final activated runtime state:
+
+- analytical projects: 106;
+- governed request total: $1,973,520,000;
+- runtime catalog contract: cross-category v2;
+- governed project geometry coverage: 0/106;
+- fabricated geometry: false;
+- historical benchmark analytical projects: 20;
+- historical matched-cohort recommendation: $332,000,000;
+- `cross_category_ranking_authorized=true`;
+- `portfolio_selection_authorized=true`;
+- `runtime_integration_authorized=true`;
+- activated release ID:
+  `efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207`.
+
+The earlier statements in this document that runtime integration was
+unauthorized describe the M3.8A entry condition and migration gate. They are not
+rewritten. Earlier M3.7 governed artifacts likewise retain
+`runtime_integration_authorized=false` as historical checkpoint provenance.
+
+The standard FastAPI runtime now serves the cross-category v2 model through
+`/api/v1/bootstrap`, `/api/v1/plans/evaluate`, and `/api/v1/benchmark`.
+Historical benchmark data remains outcome-only and absent from the analytical
+runtime catalog. `/api/v1/benchmark/compare` remains explicitly unavailable
+rather than reusing the retired Watershed comparison semantics.

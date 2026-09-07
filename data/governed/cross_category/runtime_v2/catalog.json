@@ -4713,7 +4713,7 @@
     }
   ],
   "projects_in_tied_score_groups": 95,
-  "runtime_integration_authorized": false,
+  "runtime_integration_authorized": true,
   "tied_score_group_count": 24,
   "unique_funding_priority_score_count": 35
 }

@@ -51,15 +51,15 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-06
-- **Project stage:** M3.7D portfolio methodology is complete and verified. Cross-category ranking and portfolio-selection methodology are authorized for the 106-project analytical model; runtime integration remains pending.
-- **Current milestone:** M3.7D — cross-category portfolio-selection methodology complete and ready for checkpoint publication.
-- **Next gate:** Implement the authorized 106-project cross-category portfolio state machine in runtime contracts/APIs and integrate it with the frontend Funding Plan workflow.
+- **Project stage:** M3.8 cross-category runtime integration is complete and verified. The governed 106-project runtime-v2 release now serves the standard FastAPI bootstrap, Funding Plan, and historical benchmark endpoints; frontend integration is next.
+- **Current milestone:** M3.8 — cross-category runtime-v2 contracts, 106-project catalog, portfolio evaluator, governed release bundle, and standard FastAPI activation complete and ready for checkpoint publication.
+- **Next gate:** Integrate the activated 106-project runtime-v2 APIs with frontend Explore and Funding Plan, preserving analyst-governed boundary resolution, zero fabricated geometry, and historical benchmark isolation.
 - **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
-- **Working state:** Git repository is on `main`. M3.7E is published to `origin/main` at `83a7ed8`. M3.7F is verified and explicitly authorized for commit/push in this session. Unrelated `.node-version` and `frontend/` work remain outside this checkpoint.
+- **Working state:** Git repository is on `main`. M3.8A-C is published to `origin/main` at `16b0809`. M3.8D runtime/API activation is verified locally and ready for checkpoint commit/push. Unrelated `.node-version` and `frontend/` work remain outside this backend checkpoint.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
-- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=false`. The existing FastAPI runtime still uses its previously approved behavior until the new cross-category portfolio state machine is implemented and verified.
-- **M3 runtime state:** The approved FastAPI runtime remains unchanged. Existing health/bootstrap/plan/benchmark APIs and the M2B deterministic evaluator retain their approved semantics while M3.7 analytical-methodology work is resolved.
-- **Most recent verification:** M3.7D focused tests: 29 passed. Combined M3.7A/B/C/E/F/D regression: 124 passed. Full repository: 331 passed plus 137 subtests, with one known non-blocking Starlette/AnyIO deprecation warning. `pip check` reports no broken requirements. The M3.7D governed methodology artifact regenerates as `unchanged`, and `git diff --check` passes.
+- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for the M3.8 runtime-v2 release. Earlier M3.7 governed artifacts retain `runtime_integration_authorized=false` as correct historical checkpoint provenance.
+- **M3 runtime state:** Standard `/api/v1/bootstrap` now serves the 106-project runtime-v2 catalog and governed map context; `/api/v1/plans/evaluate` executes the M3.7D priority-constrained analyst-governed portfolio state machine; `/api/v1/benchmark` serves the isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable rather than mixing retired Watershed semantics with the cross-category runtime.
+- **Most recent verification:** Full repository: 440 passed plus 137 subtests, with one known non-blocking Starlette/AnyIO deprecation warning. `pip check` reports no broken requirements. Twenty-nine JSON schemas verify deterministically. The activated runtime-v2 catalog and release bundle both regenerate as `unchanged`; `git diff --check` passes. Final activated release ID: `efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207`.
 
 ## Approved Locks
 
@@ -131,13 +131,18 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Next Actions
 
-1. Commit and publish the verified M3.7D methodology checkpoint.
-2. Reconcile runtime contracts with the 106-project cross-category model.
-3. Implement the governed portfolio-selection state machine in backend logic/APIs.
-4. Integrate Funding Priority, project costs, Available Project Budget, boundary
-   states, analyst resolution, and benchmark comparison into the frontend.
-5. Verify runtime behavior end to end before setting
-   `runtime_integration_authorized=true`.
+1. Commit and publish the verified M3.8 backend runtime/API activation checkpoint.
+2. Integrate frontend Explore with the 106-project runtime-v2 bootstrap catalog;
+   preserve truthful zero governed project geometry rather than fabricating map
+   locations.
+3. Integrate frontend Funding Plan with the activated priority-constrained portfolio
+   evaluator, including Available Project Budget, boundary states, and explicit
+   analyst resolution.
+4. Integrate the isolated January historical benchmark into the appropriate UI;
+   keep `/api/v1/benchmark/compare` unavailable unless a separate cross-category
+   comparison contract is explicitly governed.
+5. Run frontend/backend end-to-end QA, then freeze features and proceed to UI polish,
+   deployment, Gemini integration where approved, and submission preparation.
 
 
 ## Active Implementation Checkpoint

@@ -1,0 +1,116 @@
+{
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-map-context-2.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analytical_project_count": {
+      "const": 106,
+      "title": "Analytical Project Count",
+      "type": "integer"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-map-context/2.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "crs_contract": {
+      "const": "RFC_7946_EPSG_4326_IF_GEOMETRY_PRESENT",
+      "title": "Crs Contract",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "fabricated_geometry": {
+      "const": false,
+      "title": "Fabricated Geometry",
+      "type": "boolean"
+    },
+    "features": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "maxItems": 0,
+      "title": "Features",
+      "type": "array"
+    },
+    "geometry_authority": {
+      "const": "GOVERNED_RUNTIME_GEOMETRY_ONLY",
+      "title": "Geometry Authority",
+      "type": "string"
+    },
+    "geometry_required_for_model_eligibility": {
+      "const": false,
+      "title": "Geometry Required For Model Eligibility",
+      "type": "boolean"
+    },
+    "geometry_required_for_portfolio_selection": {
+      "const": false,
+      "title": "Geometry Required For Portfolio Selection",
+      "type": "boolean"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "maxLength": 500,
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "mapped_project_count": {
+      "const": 0,
+      "title": "Mapped Project Count",
+      "type": "integer"
+    },
+    "mapping_status": {
+      "const": "NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE",
+      "title": "Mapping Status",
+      "type": "string"
+    },
+    "project_identity_key": {
+      "const": "decision_unit_id",
+      "title": "Project Identity Key",
+      "type": "string"
+    },
+    "type": {
+      "const": "FeatureCollection",
+      "title": "Type",
+      "type": "string"
+    },
+    "unmapped_project_count": {
+      "const": 106,
+      "title": "Unmapped Project Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "type",
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "project_identity_key",
+    "geometry_authority",
+    "mapping_status",
+    "analytical_project_count",
+    "mapped_project_count",
+    "unmapped_project_count",
+    "geometry_required_for_model_eligibility",
+    "geometry_required_for_portfolio_selection",
+    "fabricated_geometry",
+    "crs_contract",
+    "limitations",
+    "features"
+  ],
+  "title": "CrossCategoryMapContextArtifact",
+  "type": "object"
+}

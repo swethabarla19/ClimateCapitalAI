@@ -14,6 +14,13 @@ from climatecapital.contracts.api import (
     ApiErrorEnvelope,
     ResponseIdentity,
 )
+from climatecapital.contracts.cross_category_release import (
+    CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION,
+)
+from climatecapital.contracts.cross_category_runtime import (
+    CROSS_CATEGORY_CATALOG_CONTRACT_VERSION,
+    CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION,
+)
 from climatecapital.contracts.versions import (
     API_NAMESPACE,
     BENCHMARK_CONTRACT_VERSION,
@@ -32,11 +39,80 @@ def request_id(request: Request) -> str:
     return value
 
 
-def contract_version_for_path(path: str) -> str | None:
-    if path == "/api/v1/plans/evaluate":
-        return FUNDING_PLAN_CONTRACT_VERSION
-    if path.startswith("/api/v1/benchmark"):
-        return BENCHMARK_CONTRACT_VERSION
+def contract_version_for_path(
+    path: str,
+) -> str | None:
+    if path in {
+        "/api/v1/bootstrap",
+        "/api/v1/cross-category/bootstrap",
+    }:
+        return (
+            CROSS_CATEGORY_CATALOG_CONTRACT_VERSION
+        )
+
+    if path in {
+        "/api/v1/plans/evaluate",
+        "/api/v1/cross-category/plans/evaluate",
+    }:
+        return (
+            CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION
+        )
+
+    if path.startswith(
+        "/api/v1/benchmark"
+    ):
+        return (
+            CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION
+        )
+
+    return None
+
+
+def data_version_for_path(
+    request: Request,
+) -> str | None:
+    if request.url.path in {
+        "/api/v1/bootstrap",
+        "/api/v1/plans/evaluate",
+        "/api/v1/benchmark",
+        "/api/v1/benchmark/compare",
+        "/api/v1/cross-category/bootstrap",
+        "/api/v1/cross-category/plans/evaluate",
+    }:
+        runtime = getattr(
+            request.app.state,
+            "cross_category_runtime",
+            None,
+        )
+
+        if runtime is not None:
+            return (
+                runtime.catalog.data_version
+            )
+
+    return None
+
+
+def release_id_for_path(
+    request: Request,
+) -> str | None:
+    if request.url.path in {
+        "/api/v1/bootstrap",
+        "/api/v1/plans/evaluate",
+        "/api/v1/benchmark",
+        "/api/v1/benchmark/compare",
+        "/api/v1/cross-category/bootstrap",
+        "/api/v1/cross-category/plans/evaluate",
+    }:
+        runtime = getattr(
+            request.app.state,
+            "cross_category_runtime",
+            None,
+        )
+
+        if runtime is not None:
+            return runtime.release_id
+
     return None
 
 
@@ -44,14 +120,29 @@ def response_identity(
     request: Request,
     *,
     contract_version: str | None = None,
+    data_version: str | None = None,
+    release_id: str | None = None,
 ) -> ResponseIdentity:
-    runtime = request.app.state.runtime
+    legacy_runtime = (
+        request.app.state.runtime
+    )
+
     return ResponseIdentity(
-        request_id=request_id(request),
+        request_id=request_id(
+            request
+        ),
         api_namespace=API_NAMESPACE,
         contract_version=contract_version,
-        data_version=runtime.manifest.data_version,
-        release_id=runtime.release_id,
+        data_version=(
+            data_version
+            or legacy_runtime
+            .manifest
+            .data_version
+        ),
+        release_id=(
+            release_id
+            or legacy_runtime.release_id
+        ),
     )
 
 
@@ -68,18 +159,37 @@ def error_response(
         status="ERROR",
         identity=response_identity(
             request,
-            contract_version=contract_version_for_path(request.url.path),
+            contract_version=(
+                contract_version_for_path(
+                    request.url.path
+                )
+            ),
+            data_version=(
+                data_version_for_path(
+                    request
+                )
+            ),
+            release_id=(
+                release_id_for_path(
+                    request
+                )
+            ),
         ),
         error=ApiErrorDetail(
             error_code=error_code,
             message=message,
-            field_path=field_path or [],
+            field_path=(
+                field_path or []
+            ),
             retryable=retryable,
         ),
     )
+
     return JSONResponse(
         status_code=status_code,
-        content=envelope.model_dump(mode="json"),
+        content=envelope.model_dump(
+            mode="json"
+        ),
     )
 
 

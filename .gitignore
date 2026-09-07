@@ -15,6 +15,7 @@ data/tmp/
 *.pdf
 *.geojson
 !release-data/fixture/map-context.geojson
+!data/governed/cross_category/runtime_v2/map-context.geojson
 
 # Local credentials and secrets
 .env

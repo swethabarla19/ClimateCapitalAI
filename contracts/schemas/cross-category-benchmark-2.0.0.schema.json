@@ -1,0 +1,240 @@
+{
+  "$defs": {
+    "CrossCategoryBenchmarkCategorySummary": {
+      "additionalProperties": false,
+      "properties": {
+        "analytical_project_count": {
+          "exclusiveMinimum": 0,
+          "title": "Analytical Project Count",
+          "type": "integer"
+        },
+        "historically_recommended_project_count": {
+          "minimum": 0,
+          "title": "Historically Recommended Project Count",
+          "type": "integer"
+        },
+        "presentation_category": {
+          "enum": [
+            "Transportation",
+            "Parks & Open Space",
+            "Watershed",
+            "Community Facilities"
+          ],
+          "title": "Presentation Category",
+          "type": "string"
+        },
+        "recommendation_total_dollars": {
+          "minimum": 0,
+          "title": "Recommendation Total Dollars",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "presentation_category",
+        "analytical_project_count",
+        "historically_recommended_project_count",
+        "recommendation_total_dollars"
+      ],
+      "title": "CrossCategoryBenchmarkCategorySummary",
+      "type": "object"
+    },
+    "CrossCategoryBenchmarkProjectOutcome": {
+      "additionalProperties": false,
+      "properties": {
+        "canonical_project_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]+\\.[0-9]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Canonical Project Id"
+        },
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "governed_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Governed Name",
+          "type": "string"
+        },
+        "historically_recommended": {
+          "title": "Historically Recommended",
+          "type": "boolean"
+        },
+        "january_recommendation_dollars": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "January Recommendation Dollars"
+        },
+        "outcome_role": {
+          "const": "BENCHMARK_OUTCOME_ONLY",
+          "title": "Outcome Role",
+          "type": "string"
+        },
+        "presentation_category": {
+          "enum": [
+            "Transportation",
+            "Parks & Open Space",
+            "Watershed",
+            "Community Facilities"
+          ],
+          "title": "Presentation Category",
+          "type": "string"
+        },
+        "request_version_conflict": {
+          "title": "Request Version Conflict",
+          "type": "boolean"
+        },
+        "source_conflict_flag": {
+          "title": "Source Conflict Flag",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "governed_name",
+        "presentation_category",
+        "historically_recommended",
+        "source_conflict_flag",
+        "request_version_conflict",
+        "outcome_role"
+      ],
+      "title": "CrossCategoryBenchmarkProjectOutcome",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-benchmark-2.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analytical_project_count": {
+      "const": 106,
+      "title": "Analytical Project Count",
+      "type": "integer"
+    },
+    "category_summaries": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryBenchmarkCategorySummary"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Category Summaries",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-benchmark/2.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "full_initial_recommendation_dollars": {
+      "const": 700000000,
+      "title": "Full Initial Recommendation Dollars",
+      "type": "integer"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "historically_recommended_project_count": {
+      "const": 20,
+      "title": "Historically Recommended Project Count",
+      "type": "integer"
+    },
+    "limitations": {
+      "items": {
+        "maxLength": 500,
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "matched_analytical_cohort_dollars": {
+      "const": 332000000,
+      "title": "Matched Analytical Cohort Dollars",
+      "type": "integer"
+    },
+    "outcome_role": {
+      "const": "BENCHMARK_OUTCOME_ONLY",
+      "title": "Outcome Role",
+      "type": "string"
+    },
+    "outside_analytical_cohort_dollars": {
+      "const": 368000000,
+      "title": "Outside Analytical Cohort Dollars",
+      "type": "integer"
+    },
+    "portfolio_selection_input": {
+      "const": false,
+      "title": "Portfolio Selection Input",
+      "type": "boolean"
+    },
+    "project_outcomes": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryBenchmarkProjectOutcome"
+      },
+      "maxItems": 106,
+      "minItems": 106,
+      "title": "Project Outcomes",
+      "type": "array"
+    },
+    "ranking_input": {
+      "const": false,
+      "title": "Ranking Input",
+      "type": "boolean"
+    },
+    "source_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_snapshot_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Snapshot Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "source_id",
+    "source_snapshot_sha256",
+    "outcome_role",
+    "analytical_project_count",
+    "full_initial_recommendation_dollars",
+    "matched_analytical_cohort_dollars",
+    "outside_analytical_cohort_dollars",
+    "historically_recommended_project_count",
+    "ranking_input",
+    "portfolio_selection_input",
+    "category_summaries",
+    "project_outcomes",
+    "limitations"
+  ],
+  "title": "CrossCategoryBenchmarkArtifact",
+  "type": "object"
+}

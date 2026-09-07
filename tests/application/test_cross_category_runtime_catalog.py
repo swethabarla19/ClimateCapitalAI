@@ -124,7 +124,7 @@ def test_runtime_catalog_identity_and_authority_are_locked():
         catalog[
             "runtime_integration_authorized"
         ]
-        is False
+        is True
     )
 
 
@@ -830,6 +830,9 @@ def test_runtime_catalog_builder_fails_if_runtime_integration_was_prematurely_au
 
     with pytest.raises(
         catalog_builder.RuntimeCatalogBuildError,
-        match="Runtime integration",
+        match=(
+            "M3.7D predecessor methodology "
+            "must retain"
+        ),
     ):
         catalog_builder.build_catalog_payload()
