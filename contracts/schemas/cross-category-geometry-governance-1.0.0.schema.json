@@ -1,0 +1,452 @@
+{
+  "$defs": {
+    "CrossCategoryGeometryGovernanceDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "arcgis_item_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arcgis Item Id"
+        },
+        "arcgis_service_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arcgis Service Id"
+        },
+        "candidate_ambiguity": {
+          "title": "Candidate Ambiguity",
+          "type": "boolean"
+        },
+        "candidate_confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "NO_MATCH"
+          ],
+          "title": "Candidate Confidence",
+          "type": "string"
+        },
+        "candidate_geometry_origin": {
+          "enum": [
+            "source-native",
+            "none"
+          ],
+          "title": "Candidate Geometry Origin",
+          "type": "string"
+        },
+        "candidate_geometry_type": {
+          "enum": [
+            "point",
+            "line",
+            "polygon",
+            "address-only",
+            "no geometry"
+          ],
+          "title": "Candidate Geometry Type",
+          "type": "string"
+        },
+        "candidate_governance_eligibility": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Candidate Governance Eligibility",
+          "type": "string"
+        },
+        "candidate_multiple_possible_features": {
+          "title": "Candidate Multiple Possible Features",
+          "type": "boolean"
+        },
+        "candidate_source_title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Candidate Source Title",
+          "type": "string"
+        },
+        "caveats": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Caveats",
+          "type": "array"
+        },
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "display_role": {
+          "anyOf": [
+            {
+              "enum": [
+                "PROJECT_DISPLAY_POINT",
+                "PROJECT_SITE",
+                "PROJECT_PARCEL",
+                "PARK_SITE_CONTEXT",
+                "FACILITY_SITE_CONTEXT",
+                "PROJECT_CORRIDOR"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display Role"
+        },
+        "governance_rationale": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Governance Rationale",
+          "type": "string"
+        },
+        "governance_status": {
+          "enum": [
+            "PROMOTED",
+            "HELD_FOR_MORE_EVIDENCE",
+            "REJECTED_LOW_CONFIDENCE",
+            "REJECTED_NO_MATCH"
+          ],
+          "title": "Governance Status",
+          "type": "string"
+        },
+        "governed_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Governed Name",
+          "type": "string"
+        },
+        "historical_fit_class": {
+          "enum": [
+            "EXACT_SNAPSHOT_DATE",
+            "PRE_SNAPSHOT_SOURCE",
+            "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+            "UNRESOLVED_OR_NOT_APPLICABLE"
+          ],
+          "title": "Historical Fit Class",
+          "type": "string"
+        },
+        "historical_fit_judgment": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Historical Fit Judgment",
+          "type": "string"
+        },
+        "match_identifiers": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Match Identifiers",
+          "type": "string"
+        },
+        "match_method": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Match Method",
+          "type": "string"
+        },
+        "presentation_category": {
+          "enum": [
+            "Transportation",
+            "Parks & Open Space",
+            "Watershed",
+            "Community Facilities"
+          ],
+          "title": "Presentation Category",
+          "type": "string"
+        },
+        "reviewed_individually": {
+          "const": true,
+          "title": "Reviewed Individually",
+          "type": "boolean"
+        },
+        "source_agency": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Agency",
+          "type": "string"
+        },
+        "source_date": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Date"
+        },
+        "source_feature_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Feature Id"
+        },
+        "source_last_updated_date": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Last Updated Date"
+        },
+        "source_layer_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Layer Id"
+        },
+        "source_url": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "unmapped_reason_code": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unmapped Reason Code"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "governed_name",
+        "presentation_category",
+        "governance_status",
+        "reviewed_individually",
+        "governance_rationale",
+        "candidate_source_title",
+        "source_url",
+        "source_agency",
+        "candidate_geometry_type",
+        "candidate_geometry_origin",
+        "candidate_confidence",
+        "candidate_governance_eligibility",
+        "candidate_ambiguity",
+        "candidate_multiple_possible_features",
+        "historical_fit_class",
+        "historical_fit_judgment",
+        "match_identifiers",
+        "match_method",
+        "caveats"
+      ],
+      "title": "CrossCategoryGeometryGovernanceDecision",
+      "type": "object"
+    },
+    "GeometryResearchArtifactReference": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "GeometryResearchArtifactReference",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-geometry-governance-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analytical_project_count": {
+      "const": 106,
+      "title": "Analytical Project Count",
+      "type": "integer"
+    },
+    "candidate_geometry_snapshot": {
+      "$ref": "#/$defs/GeometryResearchArtifactReference"
+    },
+    "candidate_investigation_report": {
+      "$ref": "#/$defs/GeometryResearchArtifactReference"
+    },
+    "candidate_reconciliation": {
+      "$ref": "#/$defs/GeometryResearchArtifactReference"
+    },
+    "candidates_reviewed_count": {
+      "const": 106,
+      "title": "Candidates Reviewed Count",
+      "type": "integer"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-geometry-governance/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "decisions": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryGeometryGovernanceDecision"
+      },
+      "maxItems": 106,
+      "minItems": 106,
+      "title": "Decisions",
+      "type": "array"
+    },
+    "fabricated_geometry": {
+      "const": false,
+      "title": "Fabricated Geometry",
+      "type": "boolean"
+    },
+    "geocoded_geometry": {
+      "const": false,
+      "title": "Geocoded Geometry",
+      "type": "boolean"
+    },
+    "geometry_changes_analytical_eligibility": {
+      "const": false,
+      "title": "Geometry Changes Analytical Eligibility",
+      "type": "boolean"
+    },
+    "geometry_changes_funding_plan": {
+      "const": false,
+      "title": "Geometry Changes Funding Plan",
+      "type": "boolean"
+    },
+    "geometry_changes_funding_priority": {
+      "const": false,
+      "title": "Geometry Changes Funding Priority",
+      "type": "boolean"
+    },
+    "geometry_changes_historical_benchmark": {
+      "const": false,
+      "title": "Geometry Changes Historical Benchmark",
+      "type": "boolean"
+    },
+    "governance_decision_id": {
+      "const": "D-116",
+      "title": "Governance Decision Id",
+      "type": "string"
+    },
+    "governance_review_date": {
+      "const": "2026-09-08",
+      "title": "Governance Review Date",
+      "type": "string"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "inferred_or_centroid_geometry": {
+      "const": false,
+      "title": "Inferred Or Centroid Geometry",
+      "type": "boolean"
+    },
+    "project_identity_key": {
+      "const": "decision_unit_id",
+      "title": "Project Identity Key",
+      "type": "string"
+    },
+    "promoted_project_count": {
+      "const": 74,
+      "title": "Promoted Project Count",
+      "type": "integer"
+    },
+    "promotion_candidates_reviewed_individually": {
+      "const": 74,
+      "title": "Promotion Candidates Reviewed Individually",
+      "type": "integer"
+    },
+    "unmapped_project_count": {
+      "const": 32,
+      "title": "Unmapped Project Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "governance_decision_id",
+    "governance_review_date",
+    "project_identity_key",
+    "analytical_project_count",
+    "candidates_reviewed_count",
+    "promotion_candidates_reviewed_individually",
+    "promoted_project_count",
+    "unmapped_project_count",
+    "fabricated_geometry",
+    "geocoded_geometry",
+    "inferred_or_centroid_geometry",
+    "geometry_changes_analytical_eligibility",
+    "geometry_changes_funding_priority",
+    "geometry_changes_funding_plan",
+    "geometry_changes_historical_benchmark",
+    "candidate_reconciliation",
+    "candidate_geometry_snapshot",
+    "candidate_investigation_report",
+    "decisions"
+  ],
+  "title": "CrossCategoryGeometryGovernanceArtifact",
+  "type": "object"
+}

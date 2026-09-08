@@ -1,0 +1,4719 @@
+{
+  "category_counts": {
+    "community_facilities": 38,
+    "parks_open_space": 22,
+    "transportation": 9,
+    "watershed": 37
+  },
+  "contract_version": "p0-cross-category-catalog/2.0.0",
+  "cross_category_ranking_authorized": true,
+  "data_version": "climatecapital-austin-2026-01-21-cross-category-v2",
+  "governed_request_total_dollars": 1973520000,
+  "historical_decision_snapshot_date": "2026-01-21",
+  "methodology_name": "PRIORITY_CONSTRAINED_ANALYST_GOVERNED_PORTFOLIO_CONSTRUCTION",
+  "model_scope": "CROSS_CATEGORY_PRB_PROJECT_MODEL",
+  "portfolio_selection_authorized": true,
+  "project_count": 106,
+  "projects": [
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "community-facilities/acme/asian-american-resource-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 66,
+      "funding_priority_score": 60,
+      "governed_name": "Asian American Resource Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 58000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 20,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/acme/dougherty-arts-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 3,
+      "funding_priority_score": 77,
+      "governed_name": "Dougherty Arts Center",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 45000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 16,
+        "critical_asset": 7,
+        "efficiency": 17,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/acme/elizabet-ney-museum",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 33,
+      "funding_priority_score": 66,
+      "governed_name": "Elizabet Ney Museum ADA Restroom and Storage Facility",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 1000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 18,
+        "critical_asset": 5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "community-facilities/acme/george-washington-carver-museum",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 17,
+      "funding_priority_score": 70,
+      "governed_name": "George Washington Carver Museum Phase 1a and 1b",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 12000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 19,
+        "critical_asset": 5,
+        "efficiency": 15,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": true,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/acme/mexican-american-cultural-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 45,
+      "funding_priority_score": 64,
+      "governed_name": "Mexican American Cultural Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 12000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 8,
+        "community_consideration": 19,
+        "critical_asset": 3,
+        "efficiency": 15,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 11
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/acme/old-bakery-and-emporium",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 101,
+      "funding_priority_score": 45,
+      "governed_name": "Old Bakery and Emporium",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 14,
+        "critical_asset": 3,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          8
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "8"
+      },
+      "decision_unit_id": "community-facilities/acme/zilker-hillside-theatre",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 70,
+      "funding_priority_score": 59,
+      "governed_name": "Zilker Hillside Theatre",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 5000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 15,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ACME",
+      "source_domain": "Cultural / ACME",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "community-facilities/animal-services/campus-improvements",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 62,
+      "funding_priority_score": 61,
+      "governed_name": "Animal Service Center Campus Improvements",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 40000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 17,
+        "critical_asset": 4,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Animal Services",
+      "source_domain": "Animal Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "community-facilities/ems/demand-station-1",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 78,
+      "funding_priority_score": 56,
+      "governed_name": "ATCEMS Demand Station #1 (401 E 5th St)",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 21000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 18,
+        "critical_asset": 5,
+        "efficiency": 16,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "10"
+      },
+      "decision_unit_id": "community-facilities/ems/demand-station-2",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 97,
+      "funding_priority_score": 46,
+      "governed_name": "ATCEMS Demand Station #2",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 18000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "community-facilities/ems/demand-station-3",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 97,
+      "funding_priority_score": 46,
+      "governed_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 20000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/ems/demand-station-4",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 97,
+      "funding_priority_score": 46,
+      "governed_name": "ATCEMS Demand Station #4",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 18000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          9,
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9,10"
+      },
+      "decision_unit_id": "community-facilities/ems/demand-station-9",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 85,
+      "funding_priority_score": 51,
+      "governed_name": "ATCEMS Demand Station #9",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 28000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 16,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/ems/station-03",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 82,
+      "funding_priority_score": 54.5,
+      "governed_name": "ATCEMS Station #03 (1305 Red River St)",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 18000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 18,
+        "critical_asset": 5,
+        "efficiency": 15.5,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 3
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          1,
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1,4"
+      },
+      "decision_unit_id": "community-facilities/ems/station-14",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 83,
+      "funding_priority_score": 53.5,
+      "governed_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 20000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 12.5,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "EMS",
+      "source_domain": "Emergency Medical Services",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/fire/education-building-b",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 106,
+      "funding_priority_score": 40,
+      "governed_name": "Education Building B",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 71000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 4,
+        "community_consideration": 9,
+        "critical_asset": 4,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "community-facilities/fire/station-14",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 95,
+      "funding_priority_score": 47,
+      "governed_name": "Fire Station 14 Renovation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 26000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 4,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "community-facilities/fire/station-15",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 93,
+      "funding_priority_score": 49,
+      "governed_name": "Fire Station 15 Renovation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 35000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 4,
+        "community_consideration": 14,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          5
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5"
+      },
+      "decision_unit_id": "community-facilities/fire/station-20",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 97,
+      "funding_priority_score": 46,
+      "governed_name": "Fire Station 20 Renovation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 26000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 4,
+        "community_consideration": 13,
+        "critical_asset": 4,
+        "efficiency": 13,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "community-facilities/fire/station-26",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 89,
+      "funding_priority_score": 50,
+      "governed_name": "Fire Station 26 Expansion",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 29000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 4,
+        "community_consideration": 15,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fire",
+      "source_domain": "Fire",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "community-facilities/fleet/consolidated-service-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 88,
+      "funding_priority_score": 50.5,
+      "governed_name": "Consolidated Fleet Service Center (South/Southeast)",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 245000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 3,
+        "community_consideration": 15,
+        "critical_asset": 5.5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "community-facilities/fleet/fuel-station-central",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 89,
+      "funding_priority_score": 50,
+      "governed_name": "Fuel Station Central",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "community-facilities/fleet/fuel-station-northwest",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 89,
+      "funding_priority_score": 50,
+      "governed_name": "Fuel Station Northwest",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "community-facilities/fleet/fuel-station-southeast",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 89,
+      "funding_priority_score": 50,
+      "governed_name": "Fuel Station Southeast",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Fleet Services",
+      "source_domain": "Fleet Services",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          4,
+          6,
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4,6,7"
+      },
+      "decision_unit_id": "community-facilities/hso/north-austin-homeless-resource-center",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 85,
+      "funding_priority_score": 51,
+      "governed_name": "North Austin Homeless Resource Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 15000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "HSO",
+      "source_domain": "Homeless Strategy",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "community-facilities/library/colony-park-branch-library",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 19,
+      "funding_priority_score": 69,
+      "governed_name": "Colony Park Branch Library",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 58000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 17,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": true,
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          8
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "8"
+      },
+      "decision_unit_id": "community-facilities/library/hampton-oak-hill",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 19000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 10
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "community-facilities/library/milwood-branch",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Milwood Branch Library Renovation and Expansion",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 24000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 10
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Austin Public Library",
+      "source_domain": "Libraries",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/municipal-court/customer-service-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 102,
+      "funding_priority_score": 44,
+      "governed_name": "Municipal Court Customer Service Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 8,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 9,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Municipal Court",
+      "source_domain": "Municipal Court",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/air-operations",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 93,
+      "funding_priority_score": 49,
+      "governed_name": "Police Air Operations Facility",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 7,
+        "critical_asset": 8,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 8
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "10"
+      },
+      "decision_unit_id": "community-facilities/police/canyon-creek-northwest",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 28,
+      "funding_priority_score": 67,
+      "governed_name": "Canyon Creek Northwest Substation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 60500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 8,
+        "community_consideration": 14,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/central-west-substation",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 105,
+      "funding_priority_score": 43,
+      "governed_name": "Central West Police Substation",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 6,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/downtown-substation",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 95,
+      "funding_priority_score": 47,
+      "governed_name": "Downtown Police Substation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 40000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 9,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/northeast-substation",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 102,
+      "funding_priority_score": 44,
+      "governed_name": "Northeast Police Substation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 7,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/scenario-based-training",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 85,
+      "funding_priority_score": 51,
+      "governed_name": "Scenario Based Training Facility",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 100000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 6,
+        "community_consideration": 11,
+        "critical_asset": 5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 7
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "UNSPECIFIED",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": null
+      },
+      "decision_unit_id": "community-facilities/police/southwest-substation",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 102,
+      "funding_priority_score": 44,
+      "governed_name": "Southwest Police Substation",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 7,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 4,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Police",
+      "source_domain": "Police",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "community-facilities/public-health/colony-park",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 4,
+      "funding_priority_score": 74,
+      "governed_name": "Colony Park Public Health Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 42000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 20,
+        "critical_asset": 8,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 10
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Austin Public Health",
+      "source_domain": "Public Health",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "community-facilities/public-health/northeast",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 13,
+      "funding_priority_score": 72,
+      "governed_name": "Northeast Public Health Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 51000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 20,
+        "critical_asset": 6,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 10
+      },
+      "presentation_category": "Community Facilities",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Austin Public Health",
+      "source_domain": "Public Health",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/alamo-rec-center",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 2500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "parks/big-stacy-pool",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Aquatics Program - Big Stacy Pool",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 17,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/bolm-district-park",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 17,
+      "funding_priority_score": 70,
+      "governed_name": "Parkland Improvements Program - Bolm District Park",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "CITYWIDE",
+        "districts": [],
+        "hard_portfolio_constraint": false,
+        "source_value": "CITYWIDE"
+      },
+      "decision_unit_id": "parks/bolm-maintenance-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 1,
+      "funding_priority_score": 83,
+      "governed_name": "Building Renovation and Replacement Program - Bolm Maintenance Center",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 85000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 16,
+        "community_consideration": 18,
+        "critical_asset": 8,
+        "efficiency": 19,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "parks/buttermilk-nh-park",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 45,
+      "funding_priority_score": 64,
+      "governed_name": "Parkland Improvements Program - Buttermilk NH Park",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 17,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/civitan-pool",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Aquatics Program - Civitan Pool",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 5000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/doris-miller-auditorium",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 4,
+      "funding_priority_score": 74,
+      "governed_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 22000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 14,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 15,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          5
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5"
+      },
+      "decision_unit_id": "parks/garrison-pool",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 19,
+      "funding_priority_score": 69,
+      "governed_name": "Aquatics Program - Garrison Pool",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 30000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/givens-district-park-phase-ii",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 15,
+      "funding_priority_score": 71,
+      "governed_name": "Parkland Improvements Program - Givens District Park Phase II",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 3000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 14,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "parks/grand-meadow-phase-ii",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 23,
+      "funding_priority_score": 68,
+      "governed_name": "Parkland Improvements Program - Grand Meadow Phase II",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 2000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 14,
+        "community_consideration": 15,
+        "critical_asset": 3,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 15
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "parks/gus-garcia-center",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 30000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "YES"
+      },
+      "prb_components": {
+        "climate_resilience": 16,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/harris-branch-nh-park-development",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 66,
+      "funding_priority_score": 60,
+      "governed_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 1500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 18,
+        "critical_asset": 4,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "parks/jamestown-nh-park",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Parkland Improvements Program - Jamestown NH Park",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 3500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "parks/kennemer-pool",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Aquatics Program - Kennemer Pool",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 17,
+        "critical_asset": 4,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/lorraine-camancho-center",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 50,
+      "funding_priority_score": 63,
+      "governed_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 1200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/martin-pool",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 28,
+      "funding_priority_score": 67,
+      "governed_name": "Aquatics Program - Martin Pool",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 12000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 16,
+        "critical_asset": 5,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/metz-community-center",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 50,
+      "funding_priority_score": 63,
+      "governed_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/north-grounds-maintenance-facility",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 62,
+      "funding_priority_score": 61,
+      "governed_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 6000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 15,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "parks/walter-e-long-metro-park-phase-i",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 23,
+      "funding_priority_score": 68,
+      "governed_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 10000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 15,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/woodland-pocket-park",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 77,
+      "funding_priority_score": 57,
+      "governed_name": "Parkland Improvements Program - Woodland Pocket Park",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 2000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "parks/woolridge-square-plan",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Parkland Improvements Program - Woolridge Square Plan",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 4000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 11,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "parks/yates-pocket-park",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Parkland Improvements Program - Yates Pocket Park",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 2500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 18,
+        "critical_asset": 5,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 5
+      },
+      "presentation_category": "Parks & Open Space",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Parks and Recreation",
+      "source_domain": "Parks and Recreation",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "transportation/act-plan-6th-street",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 19,
+      "funding_priority_score": 69,
+      "governed_name": "ACT Plan (Austin Core Transportation Plan) Program - 6th Street",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 40000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 15,
+        "critical_asset": 6,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 11
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "transportation/act-plan-7th-street",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 13,
+      "funding_priority_score": 72,
+      "governed_name": "ACT Plan (Austin Core Transportation Plan) Program - 7th Street",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 40000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 15,
+        "critical_asset": 8,
+        "efficiency": 17,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 11
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          8,
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "8,9"
+      },
+      "decision_unit_id": "transportation/barton-springs-bridge",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 2,
+      "funding_priority_score": 80,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+      "is_tied": false,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 12000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 15,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 17,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 17
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          1,
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1,3"
+      },
+      "decision_unit_id": "transportation/delwau-ln-replacement",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - Delwau Ln Replacement",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 13800000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 15,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "transportation/e-7th-st",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 74,
+      "funding_priority_score": 58,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - E. 7th St",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 5200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 19,
+        "critical_asset": 6,
+        "efficiency": 8,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 8
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "10"
+      },
+      "decision_unit_id": "transportation/hart-ln-retaining-walls",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 74,
+      "funding_priority_score": 58,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - Hart Ln Retaining Walls",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 6100000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 13,
+        "community_consideration": 17,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 4
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "transportation/river-plantation-dr",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 45,
+      "funding_priority_score": 64,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - River Plantation Dr.",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 2600000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 15,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 6
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          8,
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "8,10"
+      },
+      "decision_unit_id": "transportation/w-slaughter-ln",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 50,
+      "funding_priority_score": 63,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - W. Slaughter Ln",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 16000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 8,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": null,
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          2,
+          5
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2,5"
+      },
+      "decision_unit_id": "transportation/west-william-cannon-rehab",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 23,
+      "funding_priority_score": 68,
+      "governed_name": "Bridge Rehabilitation & Reconstruction Program - West William Cannon Dr. Rehab",
+      "is_tied": true,
+      "model_request_authority": "M3.6_GOVERNED_JANUARY_REQUEST",
+      "model_request_authority_source_id": "austin_2026_bond_initial_draft_2026_01_21",
+      "model_request_dollars": 8000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 8,
+        "community_consideration": 18,
+        "critical_asset": 6,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Transportation",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "ATPW",
+      "source_domain": "Transportation",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "10878.010",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "watershed/10878.010",
+      "display_order_within_tie": 6,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 8750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": "11889.004",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          5,
+          8
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5,8"
+      },
+      "decision_unit_id": "watershed/11889.004",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 50,
+      "funding_priority_score": 63,
+      "governed_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 2625000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 13,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "4015.001",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "watershed/4015.001",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 33,
+      "funding_priority_score": 66,
+      "governed_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 5470000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5282.043",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "watershed/5282.043",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 8500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": "5282.133",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "watershed/5282.133",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 1300000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 17,
+        "critical_asset": 6,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": "5282.134",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "4"
+      },
+      "decision_unit_id": "watershed/5282.134",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 4,
+      "funding_priority_score": 74,
+      "governed_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 1400000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": "5282.150",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "watershed/5282.150",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 19,
+      "funding_priority_score": 69,
+      "governed_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 2625000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 11,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5282.162",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "watershed/5282.162",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 23,
+      "funding_priority_score": 68,
+      "governed_name": "Colorado River - CAPEX Water Quality Control",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 21650000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 12,
+        "critical_asset": 7,
+        "efficiency": 16,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5754.089",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/5754.089",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 15,
+      "funding_priority_score": 71,
+      "governed_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 1500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 2
+    },
+    {
+      "canonical_project_id": "5754.139",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "watershed/5754.139",
+      "display_order_within_tie": 7,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 8100000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 19,
+        "critical_asset": 5,
+        "efficiency": 9,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": "5754.145",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "10"
+      },
+      "decision_unit_id": "watershed/5754.145",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 33,
+      "funding_priority_score": 66,
+      "governed_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 1075000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5754.147",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "watershed/5754.147",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 3750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 16,
+        "critical_asset": 5,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": "5754.149",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          3
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3"
+      },
+      "decision_unit_id": "watershed/5754.149",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 50,
+      "funding_priority_score": 63,
+      "governed_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 2500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 19,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": true,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5789.075",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "watershed/5789.075",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 28,
+      "funding_priority_score": 67,
+      "governed_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 35000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 15,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5789.107",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          8
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "8"
+      },
+      "decision_unit_id": "watershed/5789.107",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 45,
+      "funding_priority_score": 64,
+      "governed_name": "Barton Creek – Oak Park Local Flood Risk Reduction Project",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 16750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5789.121",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          10
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "10"
+      },
+      "decision_unit_id": "watershed/5789.121",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 74,
+      "funding_priority_score": 58,
+      "governed_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 6255000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 3
+    },
+    {
+      "canonical_project_id": "5789.126",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          1,
+          4
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1,4"
+      },
+      "decision_unit_id": "watershed/5789.126",
+      "display_order_within_tie": 6,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 7,
+      "funding_priority_score": 73,
+      "governed_name": "Walnut Creek - North Acres Storm Drain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 21250000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 19,
+        "critical_asset": 5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 6
+    },
+    {
+      "canonical_project_id": "5789.127",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          5,
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5,9"
+      },
+      "decision_unit_id": "watershed/5789.127",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 66,
+      "funding_priority_score": 60,
+      "governed_name": "Zilker, Bluebonnet Hether, Water and Wastewater Pipeline Renewal",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 11000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 7,
+        "community_consideration": 16,
+        "critical_asset": 4,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5789.136",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          5
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5"
+      },
+      "decision_unit_id": "watershed/5789.136",
+      "display_order_within_tie": 8,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 37,
+      "funding_priority_score": 65,
+      "governed_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 7700000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 8
+    },
+    {
+      "canonical_project_id": "5789.139",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          6
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "6"
+      },
+      "decision_unit_id": "watershed/5789.139",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 78,
+      "funding_priority_score": 56,
+      "governed_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 11250000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 12,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 6,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5789.141",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "watershed/5789.141",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 62,
+      "funding_priority_score": 61,
+      "governed_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 7350000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 11,
+        "critical_asset": 4,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5789.145",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          2
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "2"
+      },
+      "decision_unit_id": "watershed/5789.145",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 23,
+      "funding_priority_score": 68,
+      "governed_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 20000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 19,
+        "critical_asset": 5,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5789.146",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          3,
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "3,9"
+      },
+      "decision_unit_id": "watershed/5789.146",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 33,
+      "funding_priority_score": 66,
+      "governed_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 4450000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 9,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5789.150",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "watershed/5789.150",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 66,
+      "funding_priority_score": 60,
+      "governed_name": "Lady Bird Lake – Citywide Storm Drain Renewal Program – Phase 1",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 3000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 5,
+        "community_consideration": 16,
+        "critical_asset": 5,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5848.053",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "9"
+      },
+      "decision_unit_id": "watershed/5848.053",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 5195000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 14,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": "5848.070",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/5848.070",
+      "display_order_within_tie": 1,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 84,
+      "funding_priority_score": 52,
+      "governed_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+      "is_tied": false,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 22000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 10,
+        "critical_asset": 5,
+        "efficiency": 8,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 11
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 1
+    },
+    {
+      "canonical_project_id": "5848.071",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/5848.071",
+      "display_order_within_tie": 6,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 5000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 12,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 16
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 7
+    },
+    {
+      "canonical_project_id": "5848.087",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          5
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "5"
+      },
+      "decision_unit_id": "watershed/5848.087",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 78,
+      "funding_priority_score": 56,
+      "governed_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 7125000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 6,
+        "critical_asset": 6,
+        "efficiency": 14,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "5848.091",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/5848.091",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 45,
+      "funding_priority_score": 64,
+      "governed_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 5200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 17
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "5848.092",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "watershed/5848.092",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 28,
+      "funding_priority_score": 67,
+      "governed_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 4000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 16,
+        "critical_asset": 6,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 12
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "6039.109",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/6039.109",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 62,
+      "funding_priority_score": 61,
+      "governed_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 33500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 14,
+        "critical_asset": 5,
+        "efficiency": 11,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 11
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "7492.011",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/7492.011",
+      "display_order_within_tie": 2,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 70,
+      "funding_priority_score": 59,
+      "governed_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 4200000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 12,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "7492.032",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/7492.032",
+      "display_order_within_tie": 3,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 70,
+      "funding_priority_score": 59,
+      "governed_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 10500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 12,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 14
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "7492.045",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          6
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "6"
+      },
+      "decision_unit_id": "watershed/7492.045",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 78,
+      "funding_priority_score": 56,
+      "governed_name": "Bull Creek - Bintliff Dr Dam Modernization",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 2750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 10,
+        "community_consideration": 10,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 13
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "8598.014",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "MULTI_DISTRICT",
+        "districts": [
+          1,
+          9
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1,9"
+      },
+      "decision_unit_id": "watershed/8598.014",
+      "display_order_within_tie": 5,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 28,
+      "funding_priority_score": 67,
+      "governed_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 1500000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 11,
+        "community_consideration": 13,
+        "critical_asset": 5,
+        "efficiency": 12,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 18
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 5
+    },
+    {
+      "canonical_project_id": "9999.235",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          7
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "7"
+      },
+      "decision_unit_id": "watershed/9999.235",
+      "display_order_within_tie": 4,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 70,
+      "funding_priority_score": 59,
+      "governed_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 5000000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 10,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 4
+    },
+    {
+      "canonical_project_id": "9999.236",
+      "council_district": {
+        "analyst_review_only": true,
+        "assignment_type": "SINGLE_DISTRICT",
+        "districts": [
+          1
+        ],
+        "hard_portfolio_constraint": false,
+        "source_value": "1"
+      },
+      "decision_unit_id": "watershed/9999.236",
+      "display_order_within_tie": 7,
+      "display_tiebreak_has_analytical_meaning": false,
+      "funding_priority_rank": 55,
+      "funding_priority_score": 62,
+      "governed_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+      "is_tied": true,
+      "model_request_authority": "CANONICAL_NOVEMBER_2025_WATERSHED_REQUEST",
+      "model_request_authority_source_id": "austin_wpd_2026_bond_projects_2025_11_21",
+      "model_request_dollars": 8750000,
+      "om_impact": {
+        "additional_score_preference_authorized": false,
+        "analyst_review_only": true,
+        "hard_portfolio_constraint": false,
+        "value": "NO"
+      },
+      "prb_components": {
+        "climate_resilience": 12,
+        "community_consideration": 15,
+        "critical_asset": 5,
+        "efficiency": 13,
+        "strategic_alignment": 8,
+        "timeliness_readiness": 9
+      },
+      "presentation_category": "Watershed",
+      "provenance_refs": [
+        "austin_2026_bond_initial_draft_2026_01_21",
+        "austin_wpd_2026_bond_projects_2025_11_21"
+      ],
+      "request_version_conflict": false,
+      "source_department": "Watershed Protection",
+      "source_domain": "Watershed Protection",
+      "tie_group_size": 7
+    }
+  ],
+  "projects_in_tied_score_groups": 95,
+  "runtime_integration_authorized": true,
+  "tied_score_group_count": 24,
+  "unique_funding_priority_score_count": 35
+}

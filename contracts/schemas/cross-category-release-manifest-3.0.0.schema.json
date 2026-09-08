@@ -1,0 +1,253 @@
+{
+  "$defs": {
+    "CrossCategoryArtifactIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sha256",
+        "byte_size"
+      ],
+      "title": "CrossCategoryArtifactIdentity",
+      "type": "object"
+    },
+    "CrossCategoryReleaseArtifactIdentities": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark_json": {
+          "$ref": "#/$defs/CrossCategoryArtifactIdentity"
+        },
+        "catalog_json": {
+          "$ref": "#/$defs/CrossCategoryArtifactIdentity"
+        },
+        "map_context_geojson": {
+          "$ref": "#/$defs/CrossCategoryArtifactIdentity"
+        }
+      },
+      "required": [
+        "catalog_json",
+        "map_context_geojson",
+        "benchmark_json"
+      ],
+      "title": "CrossCategoryReleaseArtifactIdentities",
+      "type": "object"
+    },
+    "CrossCategoryReleaseContractVersionsV3": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "const": "p0-cross-category-benchmark/2.0.0",
+          "title": "Benchmark",
+          "type": "string"
+        },
+        "catalog": {
+          "const": "p0-cross-category-catalog/2.0.0",
+          "title": "Catalog",
+          "type": "string"
+        },
+        "funding_plan": {
+          "const": "p0-cross-category-funding-plan/2.0.0",
+          "title": "Funding Plan",
+          "type": "string"
+        },
+        "geometry_governance": {
+          "const": "p0-cross-category-geometry-governance/1.0.0",
+          "title": "Geometry Governance",
+          "type": "string"
+        },
+        "manifest": {
+          "const": "p0-cross-category-release-manifest/3.0.0",
+          "title": "Manifest",
+          "type": "string"
+        },
+        "map_context": {
+          "const": "p0-cross-category-map-context/3.0.0",
+          "title": "Map Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "benchmark",
+        "funding_plan",
+        "manifest",
+        "geometry_governance"
+      ],
+      "title": "CrossCategoryReleaseContractVersionsV3",
+      "type": "object"
+    },
+    "CrossCategoryReleaseReconciliationsV3": {
+      "additionalProperties": false,
+      "properties": {
+        "analytical_project_count": {
+          "const": 106,
+          "title": "Analytical Project Count",
+          "type": "integer"
+        },
+        "benchmark_isolated_from_catalog": {
+          "const": true,
+          "title": "Benchmark Isolated From Catalog",
+          "type": "boolean"
+        },
+        "benchmark_isolated_from_portfolio_selection": {
+          "const": true,
+          "title": "Benchmark Isolated From Portfolio Selection",
+          "type": "boolean"
+        },
+        "benchmark_matched_cohort_dollars": {
+          "const": 332000000,
+          "title": "Benchmark Matched Cohort Dollars",
+          "type": "integer"
+        },
+        "benchmark_project_count": {
+          "const": 20,
+          "title": "Benchmark Project Count",
+          "type": "integer"
+        },
+        "candidate_geometry_snapshot_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Candidate Geometry Snapshot Sha256",
+          "type": "string"
+        },
+        "derived_geocoded_geometry": {
+          "const": false,
+          "title": "Derived Geocoded Geometry",
+          "type": "boolean"
+        },
+        "fabricated_geometry": {
+          "const": false,
+          "title": "Fabricated Geometry",
+          "type": "boolean"
+        },
+        "geometry_governance_decision_id": {
+          "const": "D-116",
+          "title": "Geometry Governance Decision Id",
+          "type": "string"
+        },
+        "geometry_governance_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Geometry Governance Sha256",
+          "type": "string"
+        },
+        "governed_request_total_dollars": {
+          "const": 1973520000,
+          "title": "Governed Request Total Dollars",
+          "type": "integer"
+        },
+        "inferred_or_centroid_geometry": {
+          "const": false,
+          "title": "Inferred Or Centroid Geometry",
+          "type": "boolean"
+        },
+        "mapped_project_count": {
+          "const": 74,
+          "title": "Mapped Project Count",
+          "type": "integer"
+        },
+        "unmapped_project_count": {
+          "const": 32,
+          "title": "Unmapped Project Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "analytical_project_count",
+        "governed_request_total_dollars",
+        "mapped_project_count",
+        "unmapped_project_count",
+        "fabricated_geometry",
+        "derived_geocoded_geometry",
+        "inferred_or_centroid_geometry",
+        "geometry_governance_decision_id",
+        "geometry_governance_sha256",
+        "candidate_geometry_snapshot_sha256",
+        "benchmark_matched_cohort_dollars",
+        "benchmark_project_count",
+        "benchmark_isolated_from_catalog",
+        "benchmark_isolated_from_portfolio_selection"
+      ],
+      "title": "CrossCategoryReleaseReconciliationsV3",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-release-manifest-3.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifacts": {
+      "$ref": "#/$defs/CrossCategoryReleaseArtifactIdentities"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-release-manifest/3.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "contract_versions": {
+      "$ref": "#/$defs/CrossCategoryReleaseContractVersionsV3"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "reconciliations": {
+      "$ref": "#/$defs/CrossCategoryReleaseReconciliationsV3"
+    },
+    "release_bundle_scope": {
+      "const": "CROSS_CATEGORY_106_PROJECT_RUNTIME_V3",
+      "title": "Release Bundle Scope",
+      "type": "string"
+    },
+    "release_id": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Release Id",
+      "type": "string"
+    },
+    "runtime_integration_authorized": {
+      "const": true,
+      "title": "Runtime Integration Authorized",
+      "type": "boolean"
+    },
+    "source_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_snapshot_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Snapshot Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "release_bundle_scope",
+    "release_id",
+    "source_id",
+    "source_snapshot_sha256",
+    "contract_versions",
+    "artifacts",
+    "reconciliations",
+    "runtime_integration_authorized"
+  ],
+  "title": "CrossCategoryReleaseManifestV3",
+  "type": "object"
+}

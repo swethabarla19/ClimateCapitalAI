@@ -1,4 +1,4 @@
-"""HTTP envelopes for the governed cross-category runtime-v2 API."""
+"""HTTP envelopes for the governed cross-category runtime API."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from .common import StrictModel
 from .cross_category_release import (
     CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION,
     CrossCategoryBenchmarkArtifact,
-    CrossCategoryMapContextArtifact,
+    CrossCategoryMapContextArtifactV3,
 )
 from .cross_category_runtime import (
     CROSS_CATEGORY_CATALOG_CONTRACT_VERSION,
@@ -28,7 +28,7 @@ class CrossCategoryRuntimeBootstrapData(
     StrictModel
 ):
     catalog: CrossCategoryRuntimeCatalog
-    map_context: CrossCategoryMapContextArtifact
+    map_context: CrossCategoryMapContextArtifactV3
     public_configuration: PublicConfiguration
 
 

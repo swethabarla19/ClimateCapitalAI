@@ -1,4 +1,4 @@
-"""Persistent M3 API integration coverage for the activated cross-category v2 runtime."""
+"""Persistent API integration coverage for the activated cross-category runtime."""
 
 from __future__ import annotations
 
@@ -31,14 +31,14 @@ DATA_VERSION = (
 )
 
 RELEASE_ID = (
-    "efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207"
+    "3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1"
 )
 
 
 def _client(
     monkeypatch,
 ) -> TestClient:
-    """Keep the legacy fixture available while standard API serves v2."""
+    """Keep the legacy fixture available while the standard API serves governed data."""
 
     monkeypatch.setenv(
         "CLIMATECAPITAL_BUNDLE_DIR",
@@ -105,7 +105,7 @@ def test_health_ready_and_schema(
     )
 
 
-def test_standard_bootstrap_serves_106_project_v2_contract(
+def test_standard_bootstrap_serves_106_project_contract(
     monkeypatch,
 ):
     with _client(monkeypatch) as client:
@@ -163,7 +163,7 @@ def test_standard_bootstrap_serves_106_project_v2_contract(
     )
 
 
-def test_bootstrap_preserves_missing_geometry_without_fabrication(
+def test_bootstrap_preserves_partial_geometry_without_fabrication(
     monkeypatch,
 ):
     with _client(monkeypatch) as client:
@@ -191,18 +191,18 @@ def test_bootstrap_preserves_missing_geometry_without_fabrication(
 
     assert (
         map_context.mapped_project_count
-        == 0
+        == 74
     )
 
     assert (
         map_context
         .unmapped_project_count
-        == 106
+        == 32
     )
 
     assert (
-        map_context.features
-        == []
+        len(map_context.features)
+        == 74
     )
 
     assert (

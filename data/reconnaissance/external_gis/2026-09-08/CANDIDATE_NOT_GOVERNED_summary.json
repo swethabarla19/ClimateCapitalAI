@@ -1,0 +1,101 @@
+{
+  "status": "CANDIDATE / RESEARCH / NOT YET GOVERNED",
+  "research_date": "2026-09-08",
+  "historical_decision_snapshot": "2026-01-21",
+  "governed_universe_count": 106,
+  "governed_runtime_geometry_state_unchanged": {
+    "mapped": 0,
+    "unmapped": 106,
+    "fabricated_geometry": false
+  },
+  "confidence_counts": {
+    "HIGH source-native geometry": 76,
+    "HIGH official-address-derived geometry": 0,
+    "MEDIUM": 13,
+    "LOW": 2,
+    "NO_MATCH": 15
+  },
+  "geometry_type_counts": {
+    "address-only": 1,
+    "no geometry": 25,
+    "point": 68,
+    "polygon": 12
+  },
+  "category_counts": {
+    "Community Facilities": {
+      "total": 38,
+      "confidence": {
+        "HIGH source-native geometry": 17,
+        "HIGH official-address-derived geometry": 0,
+        "MEDIUM": 4,
+        "LOW": 2,
+        "NO_MATCH": 15
+      },
+      "geometry_type": {
+        "address-only": 1,
+        "no geometry": 17,
+        "point": 18,
+        "polygon": 2
+      },
+      "ambiguous": 5,
+      "multiple_features_or_representations": 8,
+      "eligible_for_governance_review": 17
+    },
+    "Parks & Open Space": {
+      "total": 22,
+      "confidence": {
+        "HIGH source-native geometry": 21,
+        "HIGH official-address-derived geometry": 0,
+        "MEDIUM": 1,
+        "LOW": 0,
+        "NO_MATCH": 0
+      },
+      "geometry_type": {
+        "point": 13,
+        "polygon": 9
+      },
+      "ambiguous": 1,
+      "multiple_features_or_representations": 2,
+      "eligible_for_governance_review": 21
+    },
+    "Transportation": {
+      "total": 9,
+      "confidence": {
+        "HIGH source-native geometry": 1,
+        "HIGH official-address-derived geometry": 0,
+        "MEDIUM": 8,
+        "LOW": 0,
+        "NO_MATCH": 0
+      },
+      "geometry_type": {
+        "no geometry": 8,
+        "polygon": 1
+      },
+      "ambiguous": 0,
+      "multiple_features_or_representations": 0,
+      "eligible_for_governance_review": 1
+    },
+    "Watershed": {
+      "total": 37,
+      "confidence": {
+        "HIGH source-native geometry": 37,
+        "HIGH official-address-derived geometry": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "NO_MATCH": 0
+      },
+      "geometry_type": {
+        "point": 37
+      },
+      "ambiguous": 2,
+      "multiple_features_or_representations": 29,
+      "eligible_for_governance_review": 35
+    }
+  },
+  "identity_location_scope_extent_or_display_ambiguity_count": 8,
+  "multiple_possible_feature_or_representation_count": 39,
+  "ambiguity_or_multiple_union_count": 42,
+  "eligible_for_governance_review_count": 74,
+  "hold_governance_review_count": 2,
+  "needs_more_evidence_count": 32
+}

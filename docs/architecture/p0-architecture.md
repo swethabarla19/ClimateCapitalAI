@@ -154,6 +154,14 @@ GIS services.
 - Project `5789.150` is a citywide program. It receives no fabricated marker,
   point, centroid, or footprint and uses an explicit non-project-geography state.
 
+D-116 extends the activated cross-category runtime with 74 individually governed
+source-native project features and 32 explicit unmapped states. Mixed point and
+polygon geometries retain project-display, project-site, parcel, park-context, or
+facility-context roles; contextual geometry is never a claimed construction
+footprint. Runtime still performs no GIS acquisition, geocoding, centroiding, or
+spatial join. The immutable runtime-v2 0/106 map remains preserved as prior release
+provenance, while runtime-v3 serves the governed 74/32 map context.
+
 For direct OSM use, the application must show visible attribution, preserve normal
 browser `Referer` behavior, honor HTTP/browser cache controls, avoid cache-bypass
 parameters, and perform no bulk download, prefetch, scraping, offline tile

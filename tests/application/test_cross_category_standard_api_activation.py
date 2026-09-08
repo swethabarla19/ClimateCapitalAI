@@ -1,4 +1,4 @@
-"""M3.8D3 standard FastAPI activation tests for runtime-v2."""
+"""Standard FastAPI activation tests for governed runtime-v3 geometry."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ DATA_VERSION = (
 )
 
 RELEASE_ID = (
-    "efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207"
+    "3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1"
 )
 
 
@@ -83,7 +83,7 @@ def test_standard_bootstrap_serves_cross_category_v2():
     )
 
 
-def test_standard_bootstrap_exposes_truthful_zero_geometry():
+def test_standard_bootstrap_exposes_truthful_governed_geometry():
     with TestClient(app) as client:
         response = client.get(
             "/api/v1/bootstrap"
@@ -97,14 +97,16 @@ def test_standard_bootstrap_exposes_truthful_zero_geometry():
         ]
     )
 
-    assert map_context["mapped_project_count"] == 0
-    assert map_context["unmapped_project_count"] == 106
-    assert map_context["features"] == []
+    assert map_context["mapped_project_count"] == 74
+    assert map_context["unmapped_project_count"] == 32
+    assert len(map_context["features"]) == 74
 
     assert (
         map_context["fabricated_geometry"]
         is False
     )
+    assert map_context["derived_geocoded_geometry"] is False
+    assert map_context["inferred_or_centroid_geometry"] is False
 
 
 def test_standard_bootstrap_runtime_configuration_is_not_fixture_mode():

@@ -1,4 +1,4 @@
-"""Immutable loading for the governed cross-category runtime-v2 bundle."""
+"""Immutable loading for the governed cross-category runtime-v3 bundle."""
 
 from __future__ import annotations
 
@@ -14,15 +14,15 @@ from climatecapital.contracts.api import PublicConfiguration
 
 from climatecapital.contracts.cross_category_release import (
     CrossCategoryBenchmarkArtifact,
-    CrossCategoryMapContextArtifact,
-    CrossCategoryReleaseManifest,
+    CrossCategoryMapContextArtifactV3,
+    CrossCategoryReleaseManifestV3,
 )
 from climatecapital.contracts.cross_category_runtime import (
     CrossCategoryRuntimeCatalog,
 )
 
 
-MAX_RUNTIME_V2_ARTIFACT_BYTES = (
+MAX_RUNTIME_ARTIFACT_BYTES = (
     50 * 1024 * 1024
 )
 
@@ -30,7 +30,7 @@ MAX_RUNTIME_V2_ARTIFACT_BYTES = (
 class CrossCategoryRuntimeLoadError(
     RuntimeError
 ):
-    """Reject an invalid cross-category runtime-v2 bundle."""
+    """Reject an invalid cross-category runtime-v3 bundle."""
 
 
 @dataclass(
@@ -39,9 +39,9 @@ class CrossCategoryRuntimeLoadError(
 )
 class CrossCategoryRuntimeState:
     catalog: CrossCategoryRuntimeCatalog
-    map_context: CrossCategoryMapContextArtifact
+    map_context: CrossCategoryMapContextArtifactV3
     benchmark: CrossCategoryBenchmarkArtifact
-    manifest: CrossCategoryReleaseManifest
+    manifest: CrossCategoryReleaseManifestV3
 
     bundle_directory: Path
 
@@ -69,7 +69,7 @@ def default_bundle_directory() -> Path:
         / "data"
         / "governed"
         / "cross_category"
-        / "runtime_v2"
+        / "runtime_v3"
     )
 
 
@@ -98,7 +98,7 @@ def _read_artifact(
     if (
         size <= 0
         or size
-        > MAX_RUNTIME_V2_ARTIFACT_BYTES
+        > MAX_RUNTIME_ARTIFACT_BYTES
     ):
         raise CrossCategoryRuntimeLoadError(
             f"{path.name} has an invalid byte size"
@@ -186,7 +186,7 @@ def load_cross_category_runtime_state(
         manifest,
     ) = _read_artifact(
         manifest_path,
-        CrossCategoryReleaseManifest,
+        CrossCategoryReleaseManifestV3,
     )
 
     (
@@ -202,7 +202,7 @@ def load_cross_category_runtime_state(
         map_context,
     ) = _read_artifact(
         map_context_path,
-        CrossCategoryMapContextArtifact,
+        CrossCategoryMapContextArtifactV3,
     )
 
     (
@@ -287,7 +287,7 @@ def load_cross_category_runtime_state(
 
     if len(data_versions) != 1:
         raise CrossCategoryRuntimeLoadError(
-            "runtime-v2 artifact data versions "
+            "runtime artifact data versions "
             "are inconsistent"
         )
 
@@ -383,17 +383,48 @@ def load_cross_category_runtime_state(
         )
 
     # ---------------------------------------------------------------
-    # No geometry may appear while governed coverage is zero.
+    # Governed map identities and metadata must equal the analytical cohort.
     # ---------------------------------------------------------------
 
+    if len(map_context.features) != map_context.mapped_project_count:
+        raise CrossCategoryRuntimeLoadError(
+            "map feature count does not match governed coverage"
+        )
+
+    map_by_id = {
+        feature.properties.decision_unit_id: feature
+        for feature in map_context.features
+    }
+    if not set(map_by_id) <= catalog_ids:
+        raise CrossCategoryRuntimeLoadError(
+            "map contains identities outside the runtime catalog"
+        )
+
+    catalog_by_id = {
+        project.decision_unit_id: project
+        for project in catalog.projects
+    }
+    for decision_unit_id, feature in map_by_id.items():
+        project = catalog_by_id[decision_unit_id]
+        if (
+            feature.properties.governed_name != project.governed_name
+            or feature.properties.presentation_category
+            != str(project.presentation_category)
+        ):
+            raise CrossCategoryRuntimeLoadError(
+                f"map metadata does not match catalog for {decision_unit_id}"
+            )
+
     if (
-        map_context.mapped_project_count
-        == 0
-        and map_context.features
+        map_context.governance_reconciliation_sha256
+        != manifest.reconciliations.geometry_governance_sha256
+        or map_context.candidate_geometry_snapshot_sha256
+        != manifest.reconciliations.candidate_geometry_snapshot_sha256
+        or map_context.governance_decision_id
+        != manifest.reconciliations.geometry_governance_decision_id
     ):
         raise CrossCategoryRuntimeLoadError(
-            "map contains features despite "
-            "zero governed geometry coverage"
+            "map governance identity does not match manifest"
         )
 
     manifest_sha256 = (
@@ -405,7 +436,7 @@ def load_cross_category_runtime_state(
     public_configuration = PublicConfiguration(
         environment_label=os.getenv(
             "ENVIRONMENT_LABEL",
-            "local-cross-category-v2",
+            "local-cross-category-v3",
         ),
         osm_tile_url=os.getenv(
             "OSM_TILE_URL",

@@ -1,0 +1,593 @@
+{
+  "$defs": {
+    "CrossCategoryGovernedMapFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "geometry": {
+          "discriminator": {
+            "mapping": {
+              "LineString": "#/$defs/LineStringGeometry",
+              "MultiLineString": "#/$defs/MultiLineStringGeometry",
+              "MultiPoint": "#/$defs/MultiPointGeometry",
+              "MultiPolygon": "#/$defs/MultiPolygonGeometry",
+              "Point": "#/$defs/PointGeometry",
+              "Polygon": "#/$defs/PolygonGeometry"
+            },
+            "propertyName": "type"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/PointGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPointGeometry"
+            },
+            {
+              "$ref": "#/$defs/LineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiLineStringGeometry"
+            },
+            {
+              "$ref": "#/$defs/PolygonGeometry"
+            },
+            {
+              "$ref": "#/$defs/MultiPolygonGeometry"
+            }
+          ],
+          "title": "Geometry"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/$defs/CrossCategoryGovernedMapFeatureProperties"
+        },
+        "type": {
+          "const": "Feature",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "properties",
+        "geometry"
+      ],
+      "title": "CrossCategoryGovernedMapFeature",
+      "type": "object"
+    },
+    "CrossCategoryGovernedMapFeatureProperties": {
+      "additionalProperties": false,
+      "properties": {
+        "arcgis_item_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arcgis Item Id"
+        },
+        "arcgis_service_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arcgis Service Id"
+        },
+        "caveats": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Caveats",
+          "type": "array"
+        },
+        "confidence": {
+          "const": "HIGH",
+          "title": "Confidence",
+          "type": "string"
+        },
+        "decision_unit_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+          "title": "Decision Unit Id",
+          "type": "string"
+        },
+        "display_role": {
+          "enum": [
+            "PROJECT_DISPLAY_POINT",
+            "PROJECT_SITE",
+            "PROJECT_PARCEL",
+            "PARK_SITE_CONTEXT",
+            "FACILITY_SITE_CONTEXT",
+            "PROJECT_CORRIDOR"
+          ],
+          "title": "Display Role",
+          "type": "string"
+        },
+        "geometry_origin": {
+          "const": "SOURCE_NATIVE_FEATURE",
+          "title": "Geometry Origin",
+          "type": "string"
+        },
+        "geometry_type": {
+          "enum": [
+            "point",
+            "line",
+            "polygon"
+          ],
+          "title": "Geometry Type",
+          "type": "string"
+        },
+        "governance_decision_id": {
+          "const": "D-116",
+          "title": "Governance Decision Id",
+          "type": "string"
+        },
+        "governed_name": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Governed Name",
+          "type": "string"
+        },
+        "historical_fit_class": {
+          "enum": [
+            "EXACT_SNAPSHOT_DATE",
+            "PRE_SNAPSHOT_SOURCE",
+            "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+            "UNRESOLVED_OR_NOT_APPLICABLE"
+          ],
+          "title": "Historical Fit Class",
+          "type": "string"
+        },
+        "historical_fit_judgment": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Historical Fit Judgment",
+          "type": "string"
+        },
+        "match_identifiers": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Match Identifiers",
+          "type": "string"
+        },
+        "match_method": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Match Method",
+          "type": "string"
+        },
+        "presentation_category": {
+          "enum": [
+            "Transportation",
+            "Parks & Open Space",
+            "Watershed",
+            "Community Facilities"
+          ],
+          "title": "Presentation Category",
+          "type": "string"
+        },
+        "source_agency": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Agency",
+          "type": "string"
+        },
+        "source_date": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Date"
+        },
+        "source_feature_id": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Feature Id",
+          "type": "string"
+        },
+        "source_last_updated_date": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Last Updated Date"
+        },
+        "source_layer_id": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Layer Id"
+        },
+        "source_title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source Title",
+          "type": "string"
+        },
+        "source_url": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "decision_unit_id",
+        "governed_name",
+        "presentation_category",
+        "display_role",
+        "confidence",
+        "geometry_type",
+        "geometry_origin",
+        "source_title",
+        "source_url",
+        "source_agency",
+        "source_feature_id",
+        "historical_fit_class",
+        "historical_fit_judgment",
+        "match_identifiers",
+        "match_method",
+        "governance_decision_id",
+        "caveats"
+      ],
+      "title": "CrossCategoryGovernedMapFeatureProperties",
+      "type": "object"
+    },
+    "LineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 2,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "LineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "LineStringGeometry",
+      "type": "object"
+    },
+    "MultiLineStringGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiLineString",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiLineStringGeometry",
+      "type": "object"
+    },
+    "MultiPointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPoint",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPointGeometry",
+      "type": "object"
+    },
+    "MultiPolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "MultiPolygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "MultiPolygonGeometry",
+      "type": "object"
+    },
+    "PointGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Point",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PointGeometry",
+      "type": "object"
+    },
+    "PolygonGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "minItems": 1,
+          "title": "Coordinates",
+          "type": "array"
+        },
+        "type": {
+          "const": "Polygon",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "title": "PolygonGeometry",
+      "type": "object"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/cross-category-map-context-3.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analytical_project_count": {
+      "const": 106,
+      "title": "Analytical Project Count",
+      "type": "integer"
+    },
+    "candidate_geometry_snapshot_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Candidate Geometry Snapshot Sha256",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "p0-cross-category-map-context/3.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "crs_contract": {
+      "const": "RFC_7946_EPSG_4326",
+      "title": "Crs Contract",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "derived_geocoded_geometry": {
+      "const": false,
+      "title": "Derived Geocoded Geometry",
+      "type": "boolean"
+    },
+    "fabricated_geometry": {
+      "const": false,
+      "title": "Fabricated Geometry",
+      "type": "boolean"
+    },
+    "features": {
+      "items": {
+        "$ref": "#/$defs/CrossCategoryGovernedMapFeature"
+      },
+      "maxItems": 74,
+      "minItems": 74,
+      "title": "Features",
+      "type": "array"
+    },
+    "geometry_authority": {
+      "const": "GOVERNED_RUNTIME_GEOMETRY_ONLY",
+      "title": "Geometry Authority",
+      "type": "string"
+    },
+    "geometry_required_for_model_eligibility": {
+      "const": false,
+      "title": "Geometry Required For Model Eligibility",
+      "type": "boolean"
+    },
+    "geometry_required_for_portfolio_selection": {
+      "const": false,
+      "title": "Geometry Required For Portfolio Selection",
+      "type": "boolean"
+    },
+    "governance_decision_id": {
+      "const": "D-116",
+      "title": "Governance Decision Id",
+      "type": "string"
+    },
+    "governance_reconciliation_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Governance Reconciliation Sha256",
+      "type": "string"
+    },
+    "historical_decision_snapshot_date": {
+      "const": "2026-01-21",
+      "title": "Historical Decision Snapshot Date",
+      "type": "string"
+    },
+    "inferred_or_centroid_geometry": {
+      "const": false,
+      "title": "Inferred Or Centroid Geometry",
+      "type": "boolean"
+    },
+    "limitations": {
+      "items": {
+        "maxLength": 500,
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "mapped_project_count": {
+      "const": 74,
+      "title": "Mapped Project Count",
+      "type": "integer"
+    },
+    "mapping_status": {
+      "const": "PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE",
+      "title": "Mapping Status",
+      "type": "string"
+    },
+    "project_identity_key": {
+      "const": "decision_unit_id",
+      "title": "Project Identity Key",
+      "type": "string"
+    },
+    "type": {
+      "const": "FeatureCollection",
+      "title": "Type",
+      "type": "string"
+    },
+    "unmapped_project_count": {
+      "const": 32,
+      "title": "Unmapped Project Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "type",
+    "contract_version",
+    "data_version",
+    "historical_decision_snapshot_date",
+    "project_identity_key",
+    "geometry_authority",
+    "mapping_status",
+    "analytical_project_count",
+    "mapped_project_count",
+    "unmapped_project_count",
+    "governance_decision_id",
+    "governance_reconciliation_sha256",
+    "candidate_geometry_snapshot_sha256",
+    "geometry_required_for_model_eligibility",
+    "geometry_required_for_portfolio_selection",
+    "fabricated_geometry",
+    "derived_geocoded_geometry",
+    "inferred_or_centroid_geometry",
+    "crs_contract",
+    "limitations",
+    "features"
+  ],
+  "title": "CrossCategoryMapContextArtifactV3",
+  "type": "object"
+}

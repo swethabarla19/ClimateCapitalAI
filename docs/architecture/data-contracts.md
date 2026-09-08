@@ -338,6 +338,39 @@ Do not create null-geometry placeholder features. Project geometry missingness a
 citywide-program treatment live in `catalog.json`. No feature may use
 `project_id=5789.150`.
 
+### D-116 cross-category project-map extension
+
+The activated 106-project cross-category runtime advances project map context to
+`p0-cross-category-map-context/3.0.0` and the release manifest to
+`p0-cross-category-release-manifest/3.0.0`. This extension does not rewrite the
+older 37-project map contract or the immutable runtime-v2 bundle.
+
+The v3 project map contains exactly 74 individually governed, source-native
+features keyed by `decision_unit_id`; 32 analytical projects remain explicitly
+unmapped. Every governed feature requires:
+
+- governed name and presentation category agreeing with `catalog.json`;
+- source title/URL/agency and exact feature/object ID;
+- source-native geometry type and a HIGH-confidence match;
+- source date/last-update metadata where available;
+- historical-fit class and judgment;
+- governance decision ID and pinned reconciliation/source-geometry hashes;
+- one explicit display role: `PROJECT_DISPLAY_POINT`, `PROJECT_SITE`,
+  `PROJECT_PARCEL`, `PARK_SITE_CONTEXT`, `FACILITY_SITE_CONTEXT`, or
+  `PROJECT_CORRIDOR`; and
+- at least one display caveat.
+
+The contract rejects ambiguous promotion, derived/geocoded/inferred/centroid
+geometry, display-role/geometry-type mismatch, duplicate or out-of-catalog
+identity, count/category mismatch, and any feature for citywide `5789.150`.
+Park, facility, and parcel context is not a construction footprint. Later-refreshed
+sources may describe only a reviewed stable location; later project facts remain
+outside the historical snapshot.
+
+The v3 catalog and benchmark are byte-identical to runtime-v2. Geometry never
+changes analytical eligibility, Funding Priority, Funding Plan behavior, project
+requests, PRB values/ranks, or Historical Benchmark outcomes.
+
 ## `benchmark.json`
 
 This artifact has a separate schema and source path. Required root fields:

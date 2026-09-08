@@ -262,11 +262,14 @@ provenance, recovery behavior, or exactly-two-project Compare if SP0-1 survives.
 - EAZ vulnerability context does not become a Watershed-specific equity method,
   beneficiary claim, Community Equity score, or cohort-wide Community
   Vulnerability score.
-- The locked map defaults show current RNA display geometry where available with a
-  research-only caveat, keep FEMA and EAZ 2021 off until the analyst enables them
-  through Layers, and omit Fully Developed FloodPro. Project `5789.150` has no
-  fabricated point or footprint. Heat remains omitted unless a later explicit
-  methodology revision supports it.
+- D-116 governs 74 source-native cross-category project features with explicit
+  project-display, project-site, park-context, facility-context, or parcel roles;
+  32 projects remain unmapped. Context geometry is not a claimed construction
+  footprint. FEMA and EAZ 2021 remain off until the analyst enables them through
+  Layers, and Fully Developed FloodPro remains omitted. Project `5789.150` has no
+  feature. No map geometry changes eligibility, Funding Priority, or Funding Plan
+  behavior. Heat remains omitted unless a later explicit methodology revision
+  supports it.
 - Architecture, data contracts, deployment, cloud cost controls, and lineage are
   approved in [p0-architecture.md](../architecture/p0-architecture.md) and
   [data-contracts.md](../architecture/data-contracts.md). Architecture-informed

@@ -1,4 +1,4 @@
-"""M3 cross-category runtime-v2 FastAPI route surface."""
+"""Cross-category governed-runtime FastAPI route surface."""
 
 from __future__ import annotations
 

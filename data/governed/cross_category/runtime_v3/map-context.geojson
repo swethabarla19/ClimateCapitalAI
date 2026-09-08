@@ -1,0 +1,5059 @@
+{
+  "analytical_project_count": 106,
+  "candidate_geometry_snapshot_sha256": "bb438e25edb3ef3fb49f3926ed21b81fe3809483e64109e7210f7e4bae854f8c",
+  "contract_version": "p0-cross-category-map-context/3.0.0",
+  "crs_contract": "RFC_7946_EPSG_4326",
+  "data_version": "climatecapital-austin-2026-01-21-cross-category-v2",
+  "derived_geocoded_geometry": false,
+  "fabricated_geometry": false,
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6797511829632,
+          30.3395596159571
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/acme/asian-american-resource-center",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/acme/asian-american-resource-center",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Asian American Resource Center",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 7523.006; Asian American Resource Center Phase 2; 8401 Cameron Rd",
+        "match_method": "Direct official capital-project/facility linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.75993936151,
+          30.2656467327153
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/acme/dougherty-arts-center",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/acme/dougherty-arts-center",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Dougherty Arts Center",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 896.003; Dougherty Arts Center Facility Replacement",
+        "match_method": "Direct official capital-project/facility linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "46",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7238498907522,
+          30.2700641902824
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/acme/george-washington-carver-museum",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/acme/george-washington-carver-museum",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "George Washington Carver Museum Phase 1a and 1b",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 5144.012; Carver Facility Expansion Phase 1A & 1B",
+        "match_method": "Direct official capital-project/name linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "64",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7400645113117,
+          30.2583872239327
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/acme/mexican-american-cultural-center",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/acme/mexican-american-cultural-center",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Mexican American Cultural Center",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 5201.008; Mexican American Cultural Center Phase 2",
+        "match_method": "Direct official capital-project/facility linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "79",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.741775487449,
+          30.2721327883394
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/acme/old-bakery-and-emporium",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/acme/old-bakery-and-emporium",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Old Bakery and Emporium",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 7562.005; Old Bakery and Emporium Historic Structures Report",
+        "match_method": "Direct official capital-project/facility linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "52",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6904370003311,
+          30.2514029998675
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/animal-services/campus-improvements",
+      "properties": {
+        "arcgis_item_id": "534c086c90eb403cbc952ebe9578c9e9",
+        "arcgis_service_id": "AFM_Managed_Facilities_JUN26",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/animal-services/campus-improvements",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Animal Service Center Campus Improvements",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: AFM layer published after snapshot; existing campus location is stable",
+        "match_identifiers": "Austin Animal Center; 7201 Levander Loop",
+        "match_method": "Exact official facility name/address linkage",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "136",
+        "source_last_updated_date": "2026-06-12T13:29:49Z",
+        "source_layer_id": "0",
+        "source_title": "AFM Managed Facilities JUN26",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/AFM_Managed_Facilities_JUN26/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7504026970025,
+          30.2466303910024
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/ems/demand-station-3",
+      "properties": {
+        "arcgis_item_id": "0dec1c67e73c4e82983eea76702cc703",
+        "arcgis_service_id": "atcems_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/ems/demand-station-3",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "ATCEMS Demand Station #3 (1705 S Congress Ave)",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: EMS layer modified 2025-10-01",
+        "match_identifiers": "Demand 03; 1705 S Congress Ave",
+        "match_method": "Exact demand-station number and governed address",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "2",
+        "source_last_updated_date": "2025-10-01T17:40:49Z",
+        "source_layer_id": "0",
+        "source_title": "atcems_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/atcems_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7335206230025,
+          30.2522372130024
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/ems/demand-station-4",
+      "properties": {
+        "arcgis_item_id": "0dec1c67e73c4e82983eea76702cc703",
+        "arcgis_service_id": "atcems_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/ems/demand-station-4",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "ATCEMS Demand Station #4",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: EMS layer modified 2025-10-01",
+        "match_identifiers": "Demand 04; 15 Waller St",
+        "match_method": "Exact official demand-station identifier",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "3",
+        "source_last_updated_date": "2025-10-01T17:40:49Z",
+        "source_layer_id": "0",
+        "source_title": "atcems_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/atcems_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7343226250025,
+          30.2746422170024
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/ems/station-03",
+      "properties": {
+        "arcgis_item_id": "0dec1c67e73c4e82983eea76702cc703",
+        "arcgis_service_id": "atcems_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/ems/station-03",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "ATCEMS Station #03 (1305 Red River St)",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: EMS layer modified 2025-10-01",
+        "match_identifiers": "Station 03; 1305 Red River St",
+        "match_method": "Exact station number and governed address",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "17",
+        "source_last_updated_date": "2025-10-01T17:40:49Z",
+        "source_layer_id": "0",
+        "source_title": "atcems_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/atcems_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6895321450025,
+          30.3252648390024
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/ems/station-14",
+      "properties": {
+        "arcgis_item_id": "0dec1c67e73c4e82983eea76702cc703",
+        "arcgis_service_id": "atcems_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/ems/station-14",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "ATCEMS Station #14 (7200 Berkman Dr)",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: EMS layer modified 2025-10-01",
+        "match_identifiers": "Station 14; 7200 Berkman Dr",
+        "match_method": "Exact station number and governed address",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "27",
+        "source_last_updated_date": "2025-10-01T17:40:49Z",
+        "source_layer_id": "0",
+        "source_title": "atcems_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/atcems_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7094085615066,
+          30.2989879408785
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/fire/station-14",
+      "properties": {
+        "arcgis_item_id": "1315ce99a0c84d4ab83f136a6e90a3e5",
+        "arcgis_service_id": "LOCATION_fire_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/fire/station-14",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Fire Station 14 Renovation",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: fire station layer modified 2025-09-30",
+        "match_identifiers": "Fire Station 14; 4305 Airport Blvd",
+        "match_method": "Exact official station number",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "126",
+        "source_last_updated_date": "2025-09-30T16:15:22Z",
+        "source_layer_id": "0",
+        "source_title": "LOCATION_fire_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/LOCATION_fire_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6926606422804,
+          30.2569028650734
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/fire/station-15",
+      "properties": {
+        "arcgis_item_id": "1315ce99a0c84d4ab83f136a6e90a3e5",
+        "arcgis_service_id": "LOCATION_fire_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/fire/station-15",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Fire Station 15 Renovation",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: fire station layer modified 2025-09-30",
+        "match_identifiers": "Fire Station 15; 829 Airport Blvd",
+        "match_method": "Exact official station number",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "75",
+        "source_last_updated_date": "2025-09-30T16:15:22Z",
+        "source_layer_id": "0",
+        "source_title": "LOCATION_fire_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/LOCATION_fire_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.8055648512972,
+          30.2066707420925
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/fire/station-20",
+      "properties": {
+        "arcgis_item_id": "1315ce99a0c84d4ab83f136a6e90a3e5",
+        "arcgis_service_id": "LOCATION_fire_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/fire/station-20",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Fire Station 20 Renovation",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: fire station layer modified 2025-09-30",
+        "match_identifiers": "Fire Station 20; 6601 Menchaca Rd",
+        "match_method": "Exact official station number",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "48",
+        "source_last_updated_date": "2025-09-30T16:15:22Z",
+        "source_layer_id": "0",
+        "source_title": "LOCATION_fire_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/LOCATION_fire_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6315735140685,
+          30.2935503172827
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/fire/station-26",
+      "properties": {
+        "arcgis_item_id": "1315ce99a0c84d4ab83f136a6e90a3e5",
+        "arcgis_service_id": "LOCATION_fire_stations",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/fire/station-26",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Fire Station 26 Expansion",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: fire station layer modified 2025-09-30",
+        "match_identifiers": "Fire Station 26; 6702 Wentworth Dr",
+        "match_method": "Exact official station number",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "105",
+        "source_last_updated_date": "2025-09-30T16:15:22Z",
+        "source_layer_id": "0",
+        "source_title": "LOCATION_fire_stations",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/LOCATION_fire_stations/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.8549673482536,
+          30.2175937980075
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/library/hampton-oak-hill",
+      "properties": {
+        "arcgis_item_id": "1573972e979b4c409fd80969321cff0d",
+        "arcgis_service_id": "APL_Library_Branches",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/library/hampton-oak-hill",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Hampton at Oak Hill Branch Renovation and Expansion",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: library layer modified 2025-03-11",
+        "match_identifiers": "Hampton Branch at Oak Hill; 5125 Convict Hill Road",
+        "match_method": "Exact official branch name and address",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "32",
+        "source_last_updated_date": "2025-03-11T19:15:50Z",
+        "source_layer_id": "0",
+        "source_title": "APL Library Branches — Table",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APL_Library_Branches/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7158543736105,
+          30.4223167533274
+        ],
+        "type": "Point"
+      },
+      "id": "community-facilities/library/milwood-branch",
+      "properties": {
+        "arcgis_item_id": "1573972e979b4c409fd80969321cff0d",
+        "arcgis_service_id": "APL_Library_Branches",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Existing-facility/project-site evidence; do not imply a capital construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/library/milwood-branch",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Milwood Branch Library Renovation and Expansion",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: library layer modified 2025-03-11",
+        "match_identifiers": "Milwood Branch; 12500 Amherst Drive",
+        "match_method": "Exact official branch name and address",
+        "presentation_category": "Community Facilities",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "33",
+        "source_last_updated_date": "2025-03-11T19:15:50Z",
+        "source_layer_id": "0",
+        "source_title": "APL Library Branches — Table",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APL_Library_Branches/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.8385460176113,
+              30.4374793656022
+            ],
+            [
+              -97.8389783331865,
+              30.4370383379196
+            ],
+            [
+              -97.8417296728383,
+              30.4382434931299
+            ],
+            [
+              -97.8414202461684,
+              30.438735341734
+            ],
+            [
+              -97.8388843826879,
+              30.437627328126
+            ],
+            [
+              -97.8385460176113,
+              30.4374793656022
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "community-facilities/police/canyon-creek-northwest",
+      "properties": {
+        "arcgis_item_id": "6f5f919cf5c948cfaa3b3c326af3fba3",
+        "arcgis_service_id": "EXTERNAL_tcad_parcel",
+        "caveats": [
+          "Official parcel linked to the project; it is not necessarily the construction footprint.",
+          "The official APD design record uniquely identifies this parcel; parcel geometry is source-native and project-specific."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "community-facilities/police/canyon-creek-northwest",
+        "display_role": "PROJECT_PARCEL",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Canyon Creek Northwest Substation",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: 2022 APD design record plus parcel layer modified 2025-09-30",
+        "match_identifiers": "APD design record: 9804 N FM 620 Rd; Parcel ID 0167370280; TCAD PID_10 0167370280",
+        "match_method": "Exact official project address and parcel ID joined to unique official parcel feature",
+        "presentation_category": "Community Facilities",
+        "source_agency": "Travis County Appraisal District parcel data via City of Austin ArcGIS; project linkage by Austin Police Department",
+        "source_date": null,
+        "source_feature_id": "284001",
+        "source_last_updated_date": "2025-09-30T20:29:03Z",
+        "source_layer_id": "0",
+        "source_title": "EXTERNAL_tcad_parcel",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/EXTERNAL_tcad_parcel/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7200365134077,
+          30.2824304974815
+        ],
+        "type": "Point"
+      },
+      "id": "parks/alamo-rec-center",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/alamo-rec-center",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Recreation and Senior Center Improvements Program - Alamo Rec Center",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing facility location is stable",
+        "match_identifiers": "Alamo Recreation Center; 2100 Alamo St",
+        "match_method": "Exact official facility name and address",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "541",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7469215193446,
+          30.2402055932147
+        ],
+        "type": "Point"
+      },
+      "id": "parks/big-stacy-pool",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/big-stacy-pool",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Aquatics Program - Big Stacy Pool",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing pool location is stable",
+        "match_identifiers": "Neighborhood Pool; Big Stacy Neighborhood Park; 700 E Live Oak St",
+        "match_method": "Exact official pool/park linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1138",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.674753878967,
+              30.2590381524668
+            ],
+            [
+              -97.672701445221,
+              30.2581539799582
+            ],
+            [
+              -97.6725429905101,
+              30.2581710228679
+            ],
+            [
+              -97.6716922429568,
+              30.257811411455
+            ],
+            [
+              -97.6720353749988,
+              30.2560055456067
+            ],
+            [
+              -97.6722321495124,
+              30.2549699116804
+            ],
+            [
+              -97.6716975878455,
+              30.2547335414428
+            ],
+            [
+              -97.671947214599,
+              30.2543877413763
+            ],
+            [
+              -97.6720109274505,
+              30.2539069280976
+            ],
+            [
+              -97.6720218155642,
+              30.2533023388362
+            ],
+            [
+              -97.6720645101987,
+              30.2531115088991
+            ],
+            [
+              -97.6721878186443,
+              30.2528015580864
+            ],
+            [
+              -97.6721906573832,
+              30.2525725590098
+            ],
+            [
+              -97.6723306336942,
+              30.2524500781636
+            ],
+            [
+              -97.6730998872038,
+              30.2528331235735
+            ],
+            [
+              -97.6729568867632,
+              30.2530495722372
+            ],
+            [
+              -97.6742756258922,
+              30.2537062132311
+            ],
+            [
+              -97.674418624399,
+              30.2534897612817
+            ],
+            [
+              -97.6746274537362,
+              30.2535937412972
+            ],
+            [
+              -97.6747343509179,
+              30.2535811710202
+            ],
+            [
+              -97.6751387222675,
+              30.2529479173936
+            ],
+            [
+              -97.6770607350334,
+              30.2536784225116
+            ],
+            [
+              -97.6772199238746,
+              30.253425442135
+            ],
+            [
+              -97.6777092736247,
+              30.2536260798231
+            ],
+            [
+              -97.6781020688299,
+              30.252895936193
+            ],
+            [
+              -97.6786864351388,
+              30.2530454161263
+            ],
+            [
+              -97.6785250193606,
+              30.253301945246
+            ],
+            [
+              -97.6780485093006,
+              30.2539138875037
+            ],
+            [
+              -97.674753878967,
+              30.2590381524668
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/bolm-district-park",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the improvement footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/bolm-district-park",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Bolm District Park",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Bolm District Park; 6700 Bolm Rd",
+        "match_method": "Exact named park boundary",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "207",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.6941712917622,
+              30.3323354675576
+            ],
+            [
+              -97.6945028103888,
+              30.3318430699565
+            ],
+            [
+              -97.6939682523471,
+              30.3315782618321
+            ],
+            [
+              -97.6941194279655,
+              30.3313360669992
+            ],
+            [
+              -97.6936722126358,
+              30.3311204172973
+            ],
+            [
+              -97.693749372609,
+              30.3310003558622
+            ],
+            [
+              -97.6946607586531,
+              30.3314412990401
+            ],
+            [
+              -97.6948046840373,
+              30.3315116460425
+            ],
+            [
+              -97.6957027999368,
+              30.3319454317039
+            ],
+            [
+              -97.6954760297991,
+              30.3323004338408
+            ],
+            [
+              -97.6953222388784,
+              30.3325409540041
+            ],
+            [
+              -97.6954531731784,
+              30.3326145530332
+            ],
+            [
+              -97.6955181305988,
+              30.3326457817049
+            ],
+            [
+              -97.6959140320378,
+              30.3328279458616
+            ],
+            [
+              -97.6957079046009,
+              30.3331515515592
+            ],
+            [
+              -97.6956298356221,
+              30.3332758572879
+            ],
+            [
+              -97.6954026534766,
+              30.3336376997786
+            ],
+            [
+              -97.694936795777,
+              30.3334203781204
+            ],
+            [
+              -97.6947990873624,
+              30.333360254794
+            ],
+            [
+              -97.6943485249156,
+              30.3331448401606
+            ],
+            [
+              -97.694652311162,
+              30.3326636695958
+            ],
+            [
+              -97.6946866703197,
+              30.3325956723655
+            ],
+            [
+              -97.6943065370792,
+              30.332403730662
+            ],
+            [
+              -97.6941712917622,
+              30.3323354675576
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/buttermilk-nh-park",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the improvement footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/buttermilk-nh-park",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Buttermilk NH Park",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Buttermilk Neighborhood Park; 7500 Blessing Ave",
+        "match_method": "Exact named park boundary",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "291",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6913772730746,
+          30.2366932448558
+        ],
+        "type": "Point"
+      },
+      "id": "parks/civitan-pool",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/civitan-pool",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Aquatics Program - Civitan Pool",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing pool location is stable",
+        "match_identifiers": "Neighborhood Pool; Civitan Neighborhood Park; 513 Vargas Rd",
+        "match_method": "Exact official pool/park linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1146",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7142059998728,
+          30.270690000316
+        ],
+        "type": "Point"
+      },
+      "id": "parks/doris-miller-auditorium",
+      "properties": {
+        "arcgis_item_id": "534c086c90eb403cbc952ebe9578c9e9",
+        "arcgis_service_id": "AFM_Managed_Facilities_JUN26",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot facility inventory is location context only.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/doris-miller-auditorium",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Recreation and Senior Center Improvements Program - Doris Miller Auditorium",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: AFM layer published after snapshot; long-established facility location is stable",
+        "match_identifiers": "PARD Doris Miller Auditorium; 2300 Rosewood Ave",
+        "match_method": "Exact official facility name and address",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "264",
+        "source_last_updated_date": "2026-06-12T13:29:49Z",
+        "source_layer_id": "0",
+        "source_title": "AFM Managed Facilities JUN26",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/AFM_Managed_Facilities_JUN26/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7997419915775,
+          30.2124010904637
+        ],
+        "type": "Point"
+      },
+      "id": "parks/garrison-pool",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/garrison-pool",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Aquatics Program - Garrison Pool",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing pool location is stable",
+        "match_identifiers": "Municipal Pool; James A. Garrison District Park; 6001 Menchaca Rd",
+        "match_method": "Exact official pool/park linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1636",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.6896602908022,
+              30.2779053242665
+            ],
+            [
+              -97.6896013647579,
+              30.2774009777665
+            ],
+            [
+              -97.6901466319501,
+              30.2772811485745
+            ],
+            [
+              -97.6898383361437,
+              30.2770819609129
+            ],
+            [
+              -97.6895246714196,
+              30.276744535968
+            ],
+            [
+              -97.6894922940746,
+              30.2762186268407
+            ],
+            [
+              -97.6894596209174,
+              30.2756879300493
+            ],
+            [
+              -97.6894772803045,
+              30.2756645038932
+            ],
+            [
+              -97.6894944383563,
+              30.2756408201467
+            ],
+            [
+              -97.6895110979414,
+              30.2756168499941
+            ],
+            [
+              -97.6895272572061,
+              30.2755926231748
+            ],
+            [
+              -97.6895429161999,
+              30.2755681378853
+            ],
+            [
+              -97.689558041947,
+              30.2755434214183
+            ],
+            [
+              -97.6895726365011,
+              30.2755184747188
+            ],
+            [
+              -97.6895867300442,
+              30.275493296605
+            ],
+            [
+              -97.6896002913559,
+              30.2754678882375
+            ],
+            [
+              -97.6896133179401,
+              30.2754423028039
+            ],
+            [
+              -97.6896257821613,
+              30.2754164864953
+            ],
+            [
+              -97.6896377105921,
+              30.2753904940013
+            ],
+            [
+              -97.6896491081547,
+              30.2753642974506
+            ],
+            [
+              -97.6896599699028,
+              30.2753379256166
+            ],
+            [
+              -97.6896702348315,
+              30.2753114043114
+            ],
+            [
+              -97.6896799650104,
+              30.2752847068428
+            ],
+            [
+              -97.6896891277867,
+              30.2752578866783
+            ],
+            [
+              -97.6896977248913,
+              30.2752309185879
+            ],
+            [
+              -97.6897057553599,
+              30.2752037998448
+            ],
+            [
+              -97.6897132204559,
+              30.2751765602527
+            ],
+            [
+              -97.6897201163217,
+              30.2751492268028
+            ],
+            [
+              -97.6897306153476,
+              30.2751222420028
+            ],
+            [
+              -97.6897412386099,
+              30.2750953139061
+            ],
+            [
+              -97.6897520525578,
+              30.2750684456886
+            ],
+            [
+              -97.6897630218391,
+              30.2750416375231
+            ],
+            [
+              -97.6897741805672,
+              30.2750148585309
+            ],
+            [
+              -97.6897854624676,
+              30.2749881371225
+            ],
+            [
+              -97.6897969360921,
+              30.2749614756144
+            ],
+            [
+              -97.6898085658892,
+              30.2749348434954
+            ],
+            [
+              -97.6898203513171,
+              30.2749082985051
+            ],
+            [
+              -97.6898323271811,
+              30.2748817845129
+            ],
+            [
+              -97.6898444283195,
+              30.2748553272453
+            ],
+            [
+              -97.6898567159862,
+              30.2748289297707
+            ],
+            [
+              -97.6898691624499,
+              30.2748026176849
+            ],
+            [
+              -97.6898817650361,
+              30.2747763367917
+            ],
+            [
+              -97.6898945230037,
+              30.2747501141464
+            ],
+            [
+              -97.6899074716801,
+              30.2747239504776
+            ],
+            [
+              -97.6899205435523,
+              30.2746978434903
+            ],
+            [
+              -97.6899338064065,
+              30.2746718234579
+            ],
+            [
+              -97.6899472233044,
+              30.274645834575
+            ],
+            [
+              -97.6899607979596,
+              30.2746199310594
+            ],
+            [
+              -97.6901328537401,
+              30.2743169720754
+            ],
+            [
+              -97.6903373631403,
+              30.2739568676994
+            ],
+            [
+              -97.6904905531258,
+              30.2736871227479
+            ],
+            [
+              -97.6909330119832,
+              30.2737167734425
+            ],
+            [
+              -97.6912837083859,
+              30.2737402742231
+            ],
+            [
+              -97.6916461217936,
+              30.2737645579106
+            ],
+            [
+              -97.6921745454505,
+              30.2737999640037
+            ],
+            [
+              -97.6930717873028,
+              30.273860078217
+            ],
+            [
+              -97.6933915162933,
+              30.2738814967831
+            ],
+            [
+              -97.6933885119712,
+              30.274137603375
+            ],
+            [
+              -97.6933876597439,
+              30.2742102801346
+            ],
+            [
+              -97.6933778915087,
+              30.2750413781054
+            ],
+            [
+              -97.6933607347835,
+              30.2757567814284
+            ],
+            [
+              -97.6933559211919,
+              30.2759038277883
+            ],
+            [
+              -97.6933337151667,
+              30.2766150286498
+            ],
+            [
+              -97.6933182144027,
+              30.2770080135965
+            ],
+            [
+              -97.6933135510613,
+              30.2771495614284
+            ],
+            [
+              -97.6933055106578,
+              30.2773288292627
+            ],
+            [
+              -97.6932936227668,
+              30.2778921082424
+            ],
+            [
+              -97.6926202261405,
+              30.2779955378818
+            ],
+            [
+              -97.6904763968275,
+              30.2783270418715
+            ],
+            [
+              -97.6897571006271,
+              30.2784051960753
+            ],
+            [
+              -97.6896602908022,
+              30.2779053242665
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/givens-district-park-phase-ii",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the Phase II construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/givens-district-park-phase-ii",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Givens District Park Phase II",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Givens District Park; 3811 E 12th St",
+        "match_method": "Exact named park boundary; phase footprint unavailable",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "14",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.743573445956,
+              30.1573711369108
+            ],
+            [
+              -97.7435723141121,
+              30.1573704796684
+            ],
+            [
+              -97.7435702814449,
+              30.1573863908789
+            ],
+            [
+              -97.7435664516908,
+              30.1574058173078
+            ],
+            [
+              -97.743534776668,
+              30.1574021400203
+            ],
+            [
+              -97.7432967418638,
+              30.1575652680741
+            ],
+            [
+              -97.7432215379542,
+              30.1575608171969
+            ],
+            [
+              -97.7432178234179,
+              30.1575605976513
+            ],
+            [
+              -97.7432159168167,
+              30.157587572205
+            ],
+            [
+              -97.7431577097828,
+              30.1575840481686
+            ],
+            [
+              -97.7431071729613,
+              30.1575814580508
+            ],
+            [
+              -97.7430534008057,
+              30.157579132688
+            ],
+            [
+              -97.7429614319245,
+              30.1575754847098
+            ],
+            [
+              -97.7428262465448,
+              30.1575701408296
+            ],
+            [
+              -97.7426563681427,
+              30.1575634250322
+            ],
+            [
+              -97.7423978636444,
+              30.157553205894
+            ],
+            [
+              -97.7422511928007,
+              30.1575474078238
+            ],
+            [
+              -97.7421865926251,
+              30.1575448538599
+            ],
+            [
+              -97.7420802409462,
+              30.1575406478724
+            ],
+            [
+              -97.7419374906433,
+              30.1575364104492
+            ],
+            [
+              -97.7418881061051,
+              30.1575345298551
+            ],
+            [
+              -97.7418556714678,
+              30.1575331593765
+            ],
+            [
+              -97.7418233136096,
+              30.1575312102442
+            ],
+            [
+              -97.7417909732559,
+              30.1575286857696
+            ],
+            [
+              -97.7417587420936,
+              30.1575256130746
+            ],
+            [
+              -97.7417265586055,
+              30.1575219629412
+            ],
+            [
+              -97.7416944510764,
+              30.157517764817
+            ],
+            [
+              -97.741662486675,
+              30.1575129920898
+            ],
+            [
+              -97.7416306020969,
+              30.1575076434776
+            ],
+            [
+              -97.741598888956,
+              30.1575017488082
+            ],
+            [
+              -97.7415672860716,
+              30.157495305038
+            ],
+            [
+              -97.7415358574267,
+              30.1574882881975
+            ],
+            [
+              -97.741504600557,
+              30.1574807514746
+            ],
+            [
+              -97.7414735158521,
+              30.1574726416395
+            ],
+            [
+              -97.7414426057246,
+              30.157463984909
+            ],
+            [
+              -97.7414119306788,
+              30.1574548095784
+            ],
+            [
+              -97.7413512588806,
+              30.1574348240689
+            ],
+            [
+              -97.7413212590398,
+              30.1574240129255
+            ],
+            [
+              -97.7412915588892,
+              30.1574127133657
+            ],
+            [
+              -97.7412620956101,
+              30.1574008672706
+            ],
+            [
+              -97.7412329289085,
+              30.1573885326966
+            ],
+            [
+              -97.7412040312023,
+              30.1573756540429
+            ],
+            [
+              -97.741175463332,
+              30.1573622857795
+            ],
+            [
+              -97.7411475531979,
+              30.1573491329539
+            ],
+            [
+              -97.7410921267946,
+              30.1573230094115
+            ],
+            [
+              -97.7410375381585,
+              30.1572972808907
+            ],
+            [
+              -97.7411930645968,
+              30.1570446501212
+            ],
+            [
+              -97.7417303965849,
+              30.156176783884
+            ],
+            [
+              -97.7421859251962,
+              30.155448478205
+            ],
+            [
+              -97.7424697640846,
+              30.1555837904213
+            ],
+            [
+              -97.7427983131685,
+              30.1557404168467
+            ],
+            [
+              -97.7428201202,
+              30.1557510338479
+            ],
+            [
+              -97.7428528723925,
+              30.1557677303265
+            ],
+            [
+              -97.742885162713,
+              30.1557850788579
+            ],
+            [
+              -97.7429029656194,
+              30.1557797463763
+            ],
+            [
+              -97.7429384438005,
+              30.155791548712
+            ],
+            [
+              -97.7429741951466,
+              30.155802612142
+            ],
+            [
+              -97.7430102513945,
+              30.1558129147501
+            ],
+            [
+              -97.7430344462756,
+              30.155819399535
+            ],
+            [
+              -97.7430709799108,
+              30.1558284719826
+            ],
+            [
+              -97.743119996417,
+              30.1558393653087
+            ],
+            [
+              -97.7431694271031,
+              30.1558489459832
+            ],
+            [
+              -97.7434283895732,
+              30.1558920864052
+            ],
+            [
+              -97.7434405248744,
+              30.1558951373276
+            ],
+            [
+              -97.7434519826236,
+              30.1558997978345
+            ],
+            [
+              -97.7434624531595,
+              30.155905921798
+            ],
+            [
+              -97.7434717154638,
+              30.1559134262431
+            ],
+            [
+              -97.743479522024,
+              30.1559220544108
+            ],
+            [
+              -97.743485689666,
+              30.1559316672447
+            ],
+            [
+              -97.7434900344966,
+              30.1559419587424
+            ],
+            [
+              -97.7434924983583,
+              30.1559527355304
+            ],
+            [
+              -97.7434928634333,
+              30.1559662752006
+            ],
+            [
+              -97.7434899245135,
+              30.1559991905741
+            ],
+            [
+              -97.743487840645,
+              30.156032125957
+            ],
+            [
+              -97.7434869338423,
+              30.1560541100867
+            ],
+            [
+              -97.7434862720841,
+              30.1560870995124
+            ],
+            [
+              -97.7434863148446,
+              30.1561091028572
+            ],
+            [
+              -97.7434867080603,
+              30.1561310862236
+            ],
+            [
+              -97.7434886627632,
+              30.1561750477227
+            ],
+            [
+              -97.7434901948319,
+              30.1561969999947
+            ],
+            [
+              -97.7434921075248,
+              30.1562189301918
+            ],
+            [
+              -97.7434943997078,
+              30.1562408419004
+            ],
+            [
+              -97.7434970420588,
+              30.1562627056525
+            ],
+            [
+              -97.7435000971575,
+              30.1562845497844
+            ],
+            [
+              -97.7435053292914,
+              30.1563172190402
+            ],
+            [
+              -97.7435093044001,
+              30.1563389455364
+            ],
+            [
+              -97.7435136608595,
+              30.1563606229024
+            ],
+            [
+              -97.7435183664264,
+              30.1563822531925
+            ],
+            [
+              -97.7435208613365,
+              30.1563931118184
+            ],
+            [
+              -97.7435300459141,
+              30.1564296761144
+            ],
+            [
+              -97.7435396507911,
+              30.1564679155229
+            ],
+            [
+              -97.7435781708083,
+              30.1566213101081
+            ],
+            [
+              -97.7435770238173,
+              30.1566416408175
+            ],
+            [
+              -97.7435879981904,
+              30.1567069337003
+            ],
+            [
+              -97.7435926594253,
+              30.1567396753179
+            ],
+            [
+              -97.7435954595791,
+              30.156761541359
+            ],
+            [
+              -97.7435982633772,
+              30.1567856353334
+            ],
+            [
+              -97.743601367169,
+              30.1568162818017
+            ],
+            [
+              -97.7436064077284,
+              30.1568821448999
+            ],
+            [
+              -97.7436080884062,
+              30.156915099614
+            ],
+            [
+              -97.743609229702,
+              30.1569480722888
+            ],
+            [
+              -97.7436097694208,
+              30.1569810589586
+            ],
+            [
+              -97.743609771832,
+              30.1570140636311
+            ],
+            [
+              -97.7436089088986,
+              30.1570580502299
+            ],
+            [
+              -97.7436063928674,
+              30.1571130055222
+            ],
+            [
+              -97.7436041502817,
+              30.1571459358944
+            ],
+            [
+              -97.7435991675259,
+              30.1572007600645
+            ],
+            [
+              -97.743592606173,
+              30.1572554404035
+            ],
+            [
+              -97.7435789095621,
+              30.1573426227627
+            ],
+            [
+              -97.743573445956,
+              30.1573711369108
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/grand-meadow-phase-ii",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the Phase II construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/grand-meadow-phase-ii",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Grand Meadow Phase II",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Grand Meadow Neighborhood Park; 8022 Thaxton Dr",
+        "match_method": "Exact named park boundary; phase footprint unavailable",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "302",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6816575002698,
+          30.3538229999823
+        ],
+        "type": "Point"
+      },
+      "id": "parks/gus-garcia-center",
+      "properties": {
+        "arcgis_item_id": "534c086c90eb403cbc952ebe9578c9e9",
+        "arcgis_service_id": "AFM_Managed_Facilities_JUN26",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot facility inventory is location context only.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/gus-garcia-center",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Recreation and Senior Center Improvements Program - Gus Garcia Center",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: AFM layer published after snapshot; long-established facility location is stable",
+        "match_identifiers": "PARD Gus Garcia Recreation Center; 1201 E Rundberg Ln",
+        "match_method": "Exact official facility name and address",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "272",
+        "source_last_updated_date": "2026-06-12T13:29:49Z",
+        "source_layer_id": "0",
+        "source_title": "AFM Managed Facilities JUN26",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/AFM_Managed_Facilities_JUN26/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.6213859693477,
+              30.3502378383998
+            ],
+            [
+              -97.6212856910313,
+              30.3503803602504
+            ],
+            [
+              -97.6212359343685,
+              30.3504510760861
+            ],
+            [
+              -97.6211675820673,
+              30.35055611276
+            ],
+            [
+              -97.6211321225675,
+              30.3506103847679
+            ],
+            [
+              -97.6209941840918,
+              30.3508220606625
+            ],
+            [
+              -97.6207635049051,
+              30.3511760509755
+            ],
+            [
+              -97.6207600574849,
+              30.3511743619111
+            ],
+            [
+              -97.6206644003229,
+              30.3511274862348
+            ],
+            [
+              -97.6206460579361,
+              30.3511184977531
+            ],
+            [
+              -97.6202449309103,
+              30.3509219302296
+            ],
+            [
+              -97.6201901687735,
+              30.3508950947256
+            ],
+            [
+              -97.6199435507281,
+              30.3507742408883
+            ],
+            [
+              -97.6199158515875,
+              30.3507606670012
+            ],
+            [
+              -97.6195633632578,
+              30.3505879311088
+            ],
+            [
+              -97.619543343064,
+              30.3505781200936
+            ],
+            [
+              -97.6191458351554,
+              30.3503833211825
+            ],
+            [
+              -97.6191261775359,
+              30.3503740131753
+            ],
+            [
+              -97.6191066656737,
+              30.3503647759277
+            ],
+            [
+              -97.6190668656427,
+              30.3503472676726
+            ],
+            [
+              -97.6190264721151,
+              30.3503308107366
+            ],
+            [
+              -97.6189855230816,
+              30.3503154230683
+            ],
+            [
+              -97.6189440567105,
+              30.3503011163034
+            ],
+            [
+              -97.6189021089635,
+              30.350287906543
+            ],
+            [
+              -97.6188597201391,
+              30.3502758036634
+            ],
+            [
+              -97.6188169274163,
+              30.3502648174747
+            ],
+            [
+              -97.6187737710429,
+              30.3502549596571
+            ],
+            [
+              -97.6187613473865,
+              30.3502524678187
+            ],
+            [
+              -97.6187302923569,
+              30.350246240109
+            ],
+            [
+              -97.6186865275736,
+              30.3502386659133
+            ],
+            [
+              -97.6186425181072,
+              30.350232244263
+            ],
+            [
+              -97.6184575396414,
+              30.3502077416388
+            ],
+            [
+              -97.6184444734396,
+              30.3502060103994
+            ],
+            [
+              -97.6181781497623,
+              30.3501707326392
+            ],
+            [
+              -97.618166356878,
+              30.3501703024771
+            ],
+            [
+              -97.6181545873967,
+              30.3501710738633
+            ],
+            [
+              -97.6181492639505,
+              30.3501719781209
+            ],
+            [
+              -97.6181430017064,
+              30.3501730411703
+            ],
+            [
+              -97.6181317650906,
+              30.3501761727052
+            ],
+            [
+              -97.6181296752567,
+              30.3501768963735
+            ],
+            [
+              -97.6181220245508,
+              30.3501799729889
+            ],
+            [
+              -97.6181146986642,
+              30.3501835970007
+            ],
+            [
+              -97.6181128055276,
+              30.3501846514913
+            ],
+            [
+              -97.6181046478572,
+              30.3501898442569
+            ],
+            [
+              -97.6181020675194,
+              30.3501917297175
+            ],
+            [
+              -97.6180979333252,
+              30.3501950359952
+            ],
+            [
+              -97.6180963401087,
+              30.3501964135677
+            ],
+            [
+              -97.6180889326583,
+              30.3502037482002
+            ],
+            [
+              -97.6180825175975,
+              30.3502117553555
+            ],
+            [
+              -97.6180771757827,
+              30.350220334778
+            ],
+            [
+              -97.6180729737411,
+              30.3502293777876
+            ],
+            [
+              -97.6180697696496,
+              30.3502398198457
+            ],
+            [
+              -97.6180756722508,
+              30.3502073638636
+            ],
+            [
+              -97.618110744606,
+              30.3500144696554
+            ],
+            [
+              -97.6181717154066,
+              30.3496791306795
+            ],
+            [
+              -97.6182303936621,
+              30.3493563970793
+            ],
+            [
+              -97.618213719379,
+              30.3493538133839
+            ],
+            [
+              -97.6179997607908,
+              30.3493206726018
+            ],
+            [
+              -97.6180001526125,
+              30.3493184700925
+            ],
+            [
+              -97.6180203675537,
+              30.3492053276835
+            ],
+            [
+              -97.6180397849336,
+              30.3490966396269
+            ],
+            [
+              -97.6180631423219,
+              30.3489658890377
+            ],
+            [
+              -97.6180870177071,
+              30.3488322582218
+            ],
+            [
+              -97.6181117219614,
+              30.3486939806052
+            ],
+            [
+              -97.6181232263706,
+              30.3486295820419
+            ],
+            [
+              -97.6182179281384,
+              30.3486762634963
+            ],
+            [
+              -97.6182318947101,
+              30.3486831483095
+            ],
+            [
+              -97.6186212736129,
+              30.3488750863702
+            ],
+            [
+              -97.6186609600034,
+              30.3488946488714
+            ],
+            [
+              -97.6188683047874,
+              30.3489968548944
+            ],
+            [
+              -97.6189140233106,
+              30.3490193910745
+            ],
+            [
+              -97.6192352748232,
+              30.3491777436339
+            ],
+            [
+              -97.6193259723657,
+              30.3492224499387
+            ],
+            [
+              -97.6196764169423,
+              30.3493951902625
+            ],
+            [
+              -97.6197026007884,
+              30.3494080977788
+            ],
+            [
+              -97.6201310229429,
+              30.3496192728784
+            ],
+            [
+              -97.6202232493541,
+              30.3496647318722
+            ],
+            [
+              -97.6205562338706,
+              30.3498288625978
+            ],
+            [
+              -97.6205761128738,
+              30.3498386605429
+            ],
+            [
+              -97.620907324253,
+              30.3500019154251
+            ],
+            [
+              -97.6209508701695,
+              30.3500233798147
+            ],
+            [
+              -97.6213140653347,
+              30.3502023977209
+            ],
+            [
+              -97.6213258474945,
+              30.3502082054862
+            ],
+            [
+              -97.6213859693477,
+              30.3502378383998
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/harris-branch-nh-park-development",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the development footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/harris-branch-nh-park-development",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Harris Branch NH Park Development",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Harris Branch Neighborhood Park; 11200 Farmhaven Rd",
+        "match_method": "Exact named park boundary",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "321",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.7132273965388,
+              30.3549584813612
+            ],
+            [
+              -97.7134287626661,
+              30.3546516394777
+            ],
+            [
+              -97.7134286216667,
+              30.354651659156
+            ],
+            [
+              -97.7128908260676,
+              30.3547268979783
+            ],
+            [
+              -97.7128978256258,
+              30.3546755142419
+            ],
+            [
+              -97.7129004316298,
+              30.3546238331663
+            ],
+            [
+              -97.7128986223143,
+              30.3545721265011
+            ],
+            [
+              -97.7128924076002,
+              30.3545206775683
+            ],
+            [
+              -97.7128927394544,
+              30.3545206031375
+            ],
+            [
+              -97.7134272573148,
+              30.3544004157693
+            ],
+            [
+              -97.7135504318515,
+              30.3544591963322
+            ],
+            [
+              -97.7135541172639,
+              30.3544609572095
+            ],
+            [
+              -97.7136029153941,
+              30.3543848490234
+            ],
+            [
+              -97.7137964644773,
+              30.3540829740957
+            ],
+            [
+              -97.7138533326095,
+              30.3540734364935
+            ],
+            [
+              -97.7139873428446,
+              30.3544931303065
+            ],
+            [
+              -97.7141213754585,
+              30.3549097437931
+            ],
+            [
+              -97.7141620915102,
+              30.3551061265818
+            ],
+            [
+              -97.7140532964319,
+              30.3552737126863
+            ],
+            [
+              -97.7142498377097,
+              30.3553691483597
+            ],
+            [
+              -97.7139797822462,
+              30.35578523763
+            ],
+            [
+              -97.7139249073872,
+              30.35576772792
+            ],
+            [
+              -97.7138714646689,
+              30.3557471546697
+            ],
+            [
+              -97.713819681216,
+              30.3557236053131
+            ],
+            [
+              -97.7129912863381,
+              30.3553145338604
+            ],
+            [
+              -97.7130918611185,
+              30.35516308345
+            ],
+            [
+              -97.7132273965388,
+              30.3549584813612
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/jamestown-nh-park",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the improvement footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/jamestown-nh-park",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Jamestown NH Park",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Jamestown Neighborhood Park; 8323 Jamestown Dr",
+        "match_method": "Exact named park boundary",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "41",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7058733435129,
+          30.3600692603737
+        ],
+        "type": "Point"
+      },
+      "id": "parks/kennemer-pool",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/kennemer-pool",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Aquatics Program - Kennemer Pool",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing pool location is stable",
+        "match_identifiers": "Neighborhood Pool; Kennemer Pool; 1031 Payton Gin Rd",
+        "match_method": "Exact official pool/facility linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1145",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7233577155419,
+          30.2495435558581
+        ],
+        "type": "Point"
+      },
+      "id": "parks/lorraine-camancho-center",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Governed spelling differs from the official facility spelling Camacho; identity remains unique.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/lorraine-camancho-center",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Recreation and Senior Center Improvements Program - Lorraine Camancho Center",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing facility location is stable",
+        "match_identifiers": "Lorraine 'Grandma' Camacho Activity Center; 35 Robert T Martinez Jr St",
+        "match_method": "Exact official facility name and address; governed spelling 'Camancho' differs",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "537",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.729145648456,
+          30.2503642724107
+        ],
+        "type": "Point"
+      },
+      "id": "parks/martin-pool",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/martin-pool",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Aquatics Program - Martin Pool",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing pool location is stable",
+        "match_identifiers": "Martin Neighborhood Pool; 1626 Nash Hernandez Sr Rd",
+        "match_method": "Exact official pool name and address",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "1640",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7182131273711,
+          30.2521926058623
+        ],
+        "type": "Point"
+      },
+      "id": "parks/metz-community-center",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Official asset uses current facility name rather than the governed legacy/site name.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/metz-community-center",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Recreation and Senior Center Improvements Program - Metz Community Center",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: item refreshed after snapshot; existing facility location is stable",
+        "match_identifiers": "Rodolfo 'Rudy' Mendez Recreation Center; Metz Neighborhood Park; 2401 Canterbury St",
+        "match_method": "Official current facility name linked to Metz site",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "562",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6181457058832,
+          30.2868456119216
+        ],
+        "type": "Point"
+      },
+      "id": "parks/north-grounds-maintenance-facility",
+      "properties": {
+        "arcgis_item_id": "27aa5e7c4be74a439078b3fef086296c",
+        "arcgis_service_id": "pard_facility_points",
+        "caveats": [
+          "Existing facility-site context only; it is not necessarily the capital-project construction footprint.",
+          "Pre-snapshot corroboration: https://www.austintexas.gov/sites/default/files/files/Capital_Delivery/2026%20Bond%20Development/Bond%20Content/25-1008-2026-Bond---APR-Buildings-Rec-Centers--Aquatics-Programs.pdf",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/north-grounds-maintenance-facility",
+        "display_role": "FACILITY_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Building Renovation and Replacement Program - North Grounds Maintenance Facility",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: asset layer refreshed after snapshot, corroborated by pre-snapshot official bond document",
+        "match_identifiers": "Maintenance Area: Building; Walter E. Long Metro Park; 9608 Decker Lake Rd",
+        "match_method": "Official pre-snapshot bond document ties North Grounds to the existing maintenance area; unique PARD asset",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "2670",
+        "source_last_updated_date": "2026-04-10T22:51:27Z",
+        "source_layer_id": "0",
+        "source_title": "pard_facility_points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.5999873879298,
+          30.2996184663168
+        ],
+        "type": "Point"
+      },
+      "id": "parks/walter-e-long-metro-park-phase-i",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Point represents the official capital-project display location, not the construction footprint."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/walter-e-long-metro-park-phase-i",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Walter E. Long Metro Park Phase I",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 7999.004; Walter E. Long Metro Park - Phase IA Vision Plan Implementation",
+        "match_method": "Direct official capital-project identifier/name linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "70",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7313151418375,
+          30.2379070452638
+        ],
+        "type": "Point"
+      },
+      "id": "parks/woodland-pocket-park",
+      "properties": {
+        "arcgis_item_id": "01518974d257431885f54906cfa545b9",
+        "arcgis_service_id": "APR_CIP_Points",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "Point represents the official capital-project display location; official park polygon is corroborating context."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/woodland-pocket-park",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Woodland Pocket Park",
+        "historical_fit_class": "PRE_SNAPSHOT_SOURCE",
+        "historical_fit_judgment": "YES_PRE_SNAPSHOT: APR CIP item modified 2026-01-13",
+        "match_identifiers": "SUB_PROJECT_ID 13267.001; Woodland Pocket Park - Development",
+        "match_method": "Direct official capital-project identifier/name linkage",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "65",
+        "source_last_updated_date": "2026-01-13T03:10:22Z",
+        "source_layer_id": "0",
+        "source_title": "APR_CIP_Points",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/APR_CIP_Points/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.7461545755743,
+              30.2722120488476
+            ],
+            [
+              -97.7458952845332,
+              30.2729332060594
+            ],
+            [
+              -97.7450654244066,
+              30.2726984813603
+            ],
+            [
+              -97.7453315042105,
+              30.2719784536105
+            ],
+            [
+              -97.7453578455882,
+              30.2719851468132
+            ],
+            [
+              -97.745503810455,
+              30.2720267167745
+            ],
+            [
+              -97.7461545755743,
+              30.2722120488476
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/woolridge-square-plan",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Official park name is Wooldridge Square; whole-square context, not the plan footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/woolridge-square-plan",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Woolridge Square Plan",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established square is stable",
+        "match_identifiers": "Wooldridge Square; 900 Guadalupe St",
+        "match_method": "Exact named park boundary; spelling differs from governed Woolridge",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "344",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -97.7000446211337,
+              30.2367738926311
+            ],
+            [
+              -97.7000130311492,
+              30.2367695841779
+            ],
+            [
+              -97.6999818772887,
+              30.2367633067371
+            ],
+            [
+              -97.6999513116182,
+              30.2367550859941
+            ],
+            [
+              -97.6999215292793,
+              30.236744930473
+            ],
+            [
+              -97.6998926838548,
+              30.2367329245429
+            ],
+            [
+              -97.6997887986629,
+              30.2366846480543
+            ],
+            [
+              -97.6997394164769,
+              30.2366617002813
+            ],
+            [
+              -97.6999136814098,
+              30.2363833717288
+            ],
+            [
+              -97.7001542811216,
+              30.2359967218106
+            ],
+            [
+              -97.7003996791738,
+              30.2361113401722
+            ],
+            [
+              -97.7002294969927,
+              30.2363898642579
+            ],
+            [
+              -97.7003893583292,
+              30.2364643573278
+            ],
+            [
+              -97.7005637650376,
+              30.2365455856054
+            ],
+            [
+              -97.7007353576364,
+              30.236642870824
+            ],
+            [
+              -97.7002034288286,
+              30.2367650821039
+            ],
+            [
+              -97.7001721339381,
+              30.2367708752197
+            ],
+            [
+              -97.7001404191019,
+              30.2367746519719
+            ],
+            [
+              -97.7001085055999,
+              30.2367764151043
+            ],
+            [
+              -97.7000765200732,
+              30.2367761699273
+            ],
+            [
+              -97.7000446211337,
+              30.2367738926311
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "parks/yates-pocket-park",
+      "properties": {
+        "arcgis_item_id": "8a140d1a6bfc46a8b34d2ba3e1db1c9d",
+        "arcgis_service_id": "BOUNDARIES_city_of_austin_parks",
+        "caveats": [
+          "Whole-park context only; it is not necessarily the capital-project construction footprint.",
+          "Whole-park context, not the improvement footprint.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "parks/yates-pocket-park",
+        "display_role": "PARK_SITE_CONTEXT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Parkland Improvements Program - Yates Pocket Park",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: park boundary layer refreshed after snapshot; established park site is stable",
+        "match_identifiers": "Yates Pocket Park; 6015 Felix Ave",
+        "match_method": "Exact named park boundary",
+        "presentation_category": "Parks & Open Space",
+        "source_agency": "City of Austin",
+        "source_date": null,
+        "source_feature_id": "337",
+        "source_last_updated_date": "2026-04-23T16:03:46Z",
+        "source_layer_id": "0",
+        "source_title": "BOUNDARIES_city_of_austin_parks",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_city_of_austin_parks/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              [
+                -97.76453299085406,
+                30.264371885949714
+              ],
+              [
+                -97.76453516034016,
+                30.264368797433708
+              ],
+              [
+                -97.76454245669414,
+                30.26436160410754
+              ],
+              [
+                -97.76454661967324,
+                30.264358447277804
+              ],
+              [
+                -97.76455581492412,
+                30.264353139104898
+              ],
+              [
+                -97.76456593065333,
+                30.264349295831657
+              ],
+              [
+                -97.76457666324751,
+                30.264347037698112
+              ],
+              [
+                -97.76458768354465,
+                30.264346429389477
+              ],
+              [
+                -97.76459865725285,
+                30.264347493980875
+              ],
+              [
+                -97.76460925275092,
+                30.264350193242095
+              ],
+              [
+                -97.76461914771292,
+                30.264354452133617
+              ],
+              [
+                -97.76462803801944,
+                30.26436013642674
+              ],
+              [
+                -97.76496076257072,
+                30.264614658544357
+              ],
+              [
+                -97.76496658139355,
+                30.264620569991973
+              ],
+              [
+                -97.76497138391652,
+                30.264627133308313
+              ],
+              [
+                -97.76497925715346,
+                30.264639791201905
+              ],
+              [
+                -97.76504796826255,
+                30.26465443827793
+              ],
+              [
+                -97.76528722460773,
+                30.264481788433855
+              ],
+              [
+                -97.76529301102546,
+                30.26447840605016
+              ],
+              [
+                -97.76529907866961,
+                30.264476096767254
+              ],
+              [
+                -97.76530551713117,
+                30.264474736053483
+              ],
+              [
+                -97.76531212877842,
+                30.264474367771598
+              ],
+              [
+                -97.76531316046473,
+                30.264474466050302
+              ],
+              [
+                -97.7655496212669,
+                30.264311643001022
+              ],
+              [
+                -97.7655543604244,
+                30.2643091771459
+              ],
+              [
+                -97.76556449196481,
+                30.264305362986434
+              ],
+              [
+                -97.76557523202673,
+                30.26430313559889
+              ],
+              [
+                -97.76558625562882,
+                30.26430255885263
+              ],
+              [
+                -97.7655972254107,
+                30.264303653959185
+              ],
+              [
+                -97.76560780967901,
+                30.264306385396427
+              ],
+              [
+                -97.76561285741552,
+                30.264308341759175
+              ],
+              [
+                -97.7656222666076,
+                30.264313356921306
+              ],
+              [
+                -97.76563053091117,
+                30.26431971617912
+              ],
+              [
+                -97.76563739669047,
+                30.26432722405685
+              ],
+              [
+                -97.76564023841024,
+                30.264331337911145
+              ],
+              [
+                -97.76564265587173,
+                30.264335652605393
+              ],
+              [
+                -97.76564614893964,
+                30.264344745973982
+              ],
+              [
+                -97.76564776994054,
+                30.264354227729104
+              ],
+              [
+                -97.7656474714373,
+                30.264363809977148
+              ],
+              [
+                -97.76564526016156,
+                30.264373200495886
+              ],
+              [
+                -97.7656434534863,
+                30.2643777355278
+              ],
+              [
+                -97.76563851652672,
+                30.2643863098513
+              ],
+              [
+                -97.76563193961147,
+                30.26439401033179
+              ],
+              [
+                -97.76562809739293,
+                30.264397458762687
+              ],
+              [
+                -97.76511089273824,
+                30.264754108419506
+              ],
+              [
+                -97.76515091037855,
+                30.264773140444483
+              ],
+              [
+                -97.7651524070585,
+                30.264773890508486
+              ],
+              [
+                -97.76515630683072,
+                30.264776251586994
+              ],
+              [
+                -97.76517539291534,
+                30.264789428377313
+              ],
+              [
+                -97.76530494650181,
+                30.26488003536234
+              ],
+              [
+                -97.76572819549439,
+                30.265180688004943
+              ],
+              [
+                -97.76581828963275,
+                30.265188927955663
+              ],
+              [
+                -97.76590234372367,
+                30.26515110163156
+              ],
+              [
+                -97.76590766624868,
+                30.26514913742088
+              ],
+              [
+                -97.7659141016536,
+                30.26514777571219
+              ],
+              [
+                -97.7659207143596,
+                30.265147408321603
+              ],
+              [
+                -97.76592730153148,
+                30.265148040208096
+              ],
+              [
+                -97.76593365873583,
+                30.265149658251996
+              ],
+              [
+                -97.76593959928965,
+                30.265152207279424
+              ],
+              [
+                -97.76594493597453,
+                30.265155613156754
+              ],
+              [
+                -97.76594951246909,
+                30.265159773494716
+              ],
+              [
+                -97.76595318563868,
+                30.265164559098285
+              ],
+              [
+                -97.76595584803275,
+                30.2651698279522
+              ],
+              [
+                -97.76595741360319,
+                30.265175415009466
+              ],
+              [
+                -97.76595783786001,
+                30.265181156055636
+              ],
+              [
+                -97.76595710892823,
+                30.26518687219018
+              ],
+              [
+                -97.76595524803567,
+                30.265192390589807
+              ],
+              [
+                -97.76595230844958,
+                30.265197545389448
+              ],
+              [
+                -97.76594838477962,
+                30.265202179673558
+              ],
+              [
+                -97.76594359198285,
+                30.265206153176283
+              ],
+              [
+                -97.76593807995711,
+                30.265209340769335
+              ],
+              [
+                -97.76593733379491,
+                30.26520968494803
+              ],
+              [
+                -97.76584315002238,
+                30.265252071750055
+              ],
+              [
+                -97.765840281256,
+                30.26525323422402
+              ],
+              [
+                -97.7658373100027,
+                30.265254185302055
+              ],
+              [
+                -97.76583425827243,
+                30.265254918206626
+              ],
+              [
+                -97.76583114800304,
+                30.26525542886555
+              ],
+              [
+                -97.76582799702467,
+                30.265255711319842
+              ],
+              [
+                -97.76582483131116,
+                30.265255766089926
+              ],
+              [
+                -97.7658216716656,
+                30.265255592690274
+              ],
+              [
+                -97.76578233264847,
+                30.265251994512404
+              ],
+              [
+                -97.76602433855297,
+                30.265425734158374
+              ],
+              [
+                -97.76603220124389,
+                30.265432463420332
+              ],
+              [
+                -97.76603859954594,
+                30.26544027682365
+              ],
+              [
+                -97.76604333813708,
+                30.265448935847473
+              ],
+              [
+                -97.76604627226034,
+                30.265458176816118
+              ],
+              [
+                -97.76604731166385,
+                30.26546771909944
+              ],
+              [
+                -97.76604711137766,
+                30.265472514615393
+              ],
+              [
+                -97.76604527166137,
+                30.265481966726465
+              ],
+              [
+                -97.76604156793388,
+                30.265490995288786
+              ],
+              [
+                -97.76603611440169,
+                30.265499331889362
+              ],
+              [
+                -97.76602907594047,
+                30.265506718154022
+              ],
+              [
+                -97.76602066739957,
+                30.265512931900858
+              ],
+              [
+                -97.76601114333246,
+                30.265517782423043
+              ],
+              [
+                -97.76600079340926,
+                30.26552112663886
+              ],
+              [
+                -97.76599540624895,
+                30.26552219805004
+              ],
+              [
+                -97.76598441335675,
+                30.265523100290874
+              ],
+              [
+                -97.76597340561152,
+                30.26552233291012
+              ],
+              [
+                -97.7659627192038,
+                30.265519918886298
+              ],
+              [
+                -97.76595759770973,
+                30.265518114457954
+              ],
+              [
+                -97.76594799483128,
+                30.26551338058012
+              ],
+              [
+                -97.76555427786714,
+                30.265230991004078
+              ],
+              [
+                -97.7649554606609,
+                30.26481700598145
+              ],
+              [
+                -97.76481641415594,
+                30.264768971886717
+              ],
+              [
+                -97.76480727430074,
+                30.264764147945996
+              ],
+              [
+                -97.76479919828138,
+                30.264758057696092
+              ],
+              [
+                -97.76479563355286,
+                30.264754590741603
+              ],
+              [
+                -97.76479241955407,
+                30.264750873651913
+              ],
+              [
+                -97.76478712905721,
+                30.26474280356952
+              ],
+              [
+                -97.76478509057539,
+                30.264738506381473
+              ],
+              [
+                -97.76478230101085,
+                30.264729541687537
+              ],
+              [
+                -97.76478157216832,
+                30.26472493688876
+              ],
+              [
+                -97.76478146263042,
+                30.264715652353093
+              ],
+              [
+                -97.76478208648912,
+                30.26471103587107
+              ],
+              [
+                -97.76478466513272,
+                30.264702023590193
+              ],
+              [
+                -97.76478895486322,
+                30.264693516630786
+              ],
+              [
+                -97.76479483071411,
+                30.264685757923115
+              ],
+              [
+                -97.76479831546594,
+                30.26468222835872
+              ],
+              [
+                -97.76480624525094,
+                30.26467599787619
+              ],
+              [
+                -97.76481063718515,
+                30.26467333920571
+              ],
+              [
+                -97.76482011653601,
+                30.264669035595613
+              ],
+              [
+                -97.76483029340692,
+                30.264666177073885
+              ],
+              [
+                -97.7648355543523,
+                30.264665316133826
+              ],
+              [
+                -97.7646793020107,
+                30.264545872523584
+              ],
+              [
+                -97.76401171778978,
+                30.26412422675562
+              ],
+              [
+                -97.76400918308245,
+                30.264122641052158
+              ],
+              [
+                -97.76400728583562,
+                30.264121397484637
+              ],
+              [
+                -97.7640064103855,
+                30.264120779875164
+              ],
+              [
+                -97.76364765812274,
+                30.263862933248937
+              ],
+              [
+                -97.76364679975634,
+                30.263862298835182
+              ],
+              [
+                -97.76364222547637,
+                30.263858139358888
+              ],
+              [
+                -97.76363855041713,
+                30.263853352746032
+              ],
+              [
+                -97.76363589021564,
+                30.263848085689837
+              ],
+              [
+                -97.76363432484904,
+                30.263842496801015
+              ],
+              [
+                -97.76363389861038,
+                30.263836757509697
+              ],
+              [
+                -97.76363462974733,
+                30.26383104143055
+              ],
+              [
+                -97.7636364907943,
+                30.263825521261474
+              ],
+              [
+                -97.7636394283844,
+                30.263820366473773
+              ],
+              [
+                -97.7636433541629,
+                30.263815733204318
+              ],
+              [
+                -97.7636481448834,
+                30.26381176064818
+              ],
+              [
+                -97.76365365905488,
+                30.26380857049007
+              ],
+              [
+                -97.76365972667213,
+                30.263806262186723
+              ],
+              [
+                -97.76366616508808,
+                30.26380490245724
+              ],
+              [
+                -97.76367277671974,
+                30.26380453335814
+              ],
+              [
+                -97.76367936269837,
+                30.26380516714303
+              ],
+              [
+                -97.7636857219025,
+                30.26380678353621
+              ],
+              [
+                -97.76369165919756,
+                30.2638093326051
+              ],
+              [
+                -97.76369614043148,
+                30.263812106028503
+              ],
+              [
+                -97.76403088608252,
+                30.264052705701733
+              ],
+              [
+                -97.76413713220872,
+                30.26397233461014
+              ],
+              [
+                -97.7641383500922,
+                30.263971451280057
+              ],
+              [
+                -97.7641438642326,
+                30.263968262002628
+              ],
+              [
+                -97.76414993187221,
+                30.26396595277421
+              ],
+              [
+                -97.76415637033989,
+                30.26396459121635
+              ],
+              [
+                -97.76416298193261,
+                30.263964223895677
+              ],
+              [
+                -97.76416956797331,
+                30.26396485585165
+              ],
+              [
+                -97.76417592610925,
+                30.263966474003453
+              ],
+              [
+                -97.76418186444204,
+                30.2639690239723
+              ],
+              [
+                -97.76418720201445,
+                30.26397243084528
+              ],
+              [
+                -97.7641917783772,
+                30.26397659124564
+              ],
+              [
+                -97.76419545349256,
+                30.26398137694086
+              ],
+              [
+                -97.76419811268927,
+                30.263986643964653
+              ],
+              [
+                -97.7641996791298,
+                30.26399223286747
+              ],
+              [
+                -97.76420010436381,
+                30.263997972136153
+              ],
+              [
+                -97.76419937429804,
+                30.26400368823941
+              ],
+              [
+                -97.76419751224086,
+                30.264009208395883
+              ],
+              [
+                -97.76419457571377,
+                30.264014363217303
+              ],
+              [
+                -97.76419064995365,
+                30.264018996503687
+              ],
+              [
+                -97.76418707712884,
+                30.264022085749605
+              ],
+              [
+                -97.76409244520369,
+                30.264093670013814
+              ],
+              [
+                -97.76453299085406,
+                30.264371885949714
+              ]
+            ]
+          ]
+        ],
+        "type": "MultiPolygon"
+      },
+      "id": "transportation/barton-springs-bridge",
+      "properties": {
+        "arcgis_item_id": null,
+        "arcgis_service_id": null,
+        "caveats": [
+          "Source-native project-site geometry; later non-geographic project attributes are excluded.",
+          "Use the polygon, not an invented midpoint pin; isolate all post-snapshot non-geographic attributes.",
+          "Post-snapshot source refresh is accepted for stable location only; later project facts are not governed."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "transportation/barton-springs-bridge",
+        "display_role": "PROJECT_SITE",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "polygon",
+        "governance_decision_id": "D-116",
+        "governed_name": "Bridge Rehabilitation & Reconstruction Program - Barton Springs Bridge",
+        "historical_fit_class": "POST_SNAPSHOT_STABLE_LOCATION_ONLY",
+        "historical_fit_judgment": "CONDITIONAL_STABLE_LOCATION: exact bridge asset is stable, but public project shape was refreshed after the snapshot and must not supply later analytical attributes",
+        "match_identifiers": "CPE project_id 5873.031; Barton Springs Rd. Bridge over Barton Creek; governed Barton Springs Bridge program row",
+        "match_method": "Exact official bridge/CIP project identity and unique source geometry",
+        "presentation_category": "Transportation",
+        "source_agency": "City of Austin",
+        "source_date": "2026-08-19 API extract",
+        "source_feature_id": "row-xwgg_69s2~kqsp",
+        "source_last_updated_date": "2026-08-19T13:46:06.522Z",
+        "source_layer_id": null,
+        "source_title": "City of Austin Capital Projects Explorer — Barton Springs Rd. Bridge over Barton Creek",
+        "source_url": "https://capitalprojects.austintexas.gov/api/projects.json"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7415305550351,
+          30.2601549237796
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/10878.010",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/10878.010",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 10878.010; GIS CIP_ID 10878.01; GIS name Waller Creek - Waller Creek Tunnel Outlet Improvement Project",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "306",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.8471484177803,
+          30.2217295621939
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/11889.004",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/11889.004",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 11889.004; GIS CIP_ID 11889.004; GIS name William Cannon Drive Corridor - US 290 to East of Brodie Ln",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "283",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7325552540886,
+          30.2255400687647
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/4015.001",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/4015.001",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 4015.001; GIS CIP_ID 4015.001; GIS name Country Club Creek (Between Metcalfe & Oltorf) Wastewater Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "327",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6890757132242,
+          30.287936756931
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5282.043",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5282.043",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Tannehill Creek - Morris Williams Stormwater Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5282.043; GIS CIP_ID 5282.043; GIS name Tannehill Creek - Morris Williams Stormwater Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "200",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.721978784584,
+          30.2699562160494
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5282.133",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5282.133",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5282.133; GIS CIP_ID 5282.133; GIS name Boggy Creek - Kealing Park Green Infrastructure Retrofit",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "248",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6945358763348,
+          30.3034560490893
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5282.134",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5282.134",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5282.134; GIS CIP_ID 5282.134; GIS name Tannehill Creek - Bartholomew Park Stormwater Treatment Retrofit",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "222",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7575454066693,
+          30.2763567107226
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5282.150",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5282.150",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Lady Bird Lake - West Austin Park Water Quality Retrofits",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.514000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5282.150; GIS CIP_ID 5282.15; GIS name Lady Bird Lake - West Austin Park Water Quality Retrofits",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "197",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6793411669835,
+          30.2488066508503
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5282.162",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5282.162",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Colorado River - CAPEX Water Quality Control",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5282.162; GIS CIP_ID 5282.162; GIS name Colorado River - CAPEX Water Quality Control",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "325",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7018994629566,
+          30.4331913841372
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5754.089",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5754.089",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5754.089; GIS CIP_ID 5754.089; GIS name Walnut Creek - McNeil Drive Low Water Crossing Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "214",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.745663477974,
+          30.1623336978267
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5754.139",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5754.139",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Onion Creek - Paces Mill Creek Flood Risk Reduction",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5754.139; GIS CIP_ID 5754.139; GIS name Onion Creek - Paces Mill Creek Flood Risk Reduction",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "293",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7576157912979,
+          30.3455431608009
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5754.145",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5754.145",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Dry Creek North - Highland Hills Low Water Crossing Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5754.145; GIS CIP_ID 5754.145; GIS name Dry Creek North - Highland Hills Low Water Crossing Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "319",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6804129611878,
+          30.2623502540533
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5754.147",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5754.147",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5754.147; GIS CIP_ID 5754.147; GIS name Boggy Creek - Corps Flood Control Channel Ecosystem Restoration",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "328",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7177088068326,
+          30.2251824047815
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5754.149",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5754.149",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5754.149; GIS CIP_ID 5754.149; GIS name Country Club West - Riverside Farms Low Water Crossing Improvements Project",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "326",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7343172648552,
+          30.3012091098859
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.075",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.075",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.075; GIS CIP_ID 5789.075; GIS name Waller Creek - Guadalupe St, W. 35-37th Storm Drain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "291",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.8536510853021,
+          30.2401717840063
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.107",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.107",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Barton Creek – Oak Park Local Flood Risk Reduction Project",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.107; GIS CIP_ID 5789.107; GIS name Barton Creek – Oak Park Local Flood Risk Reduction Project",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "240",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7644802007972,
+          30.308405771141
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.121",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.121",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Taylor Slough South - Warren St Storm Drain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.121; GIS CIP_ID 5789.121; GIS name Taylor Slough South - Warren St Storm Drain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "220",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6769199974036,
+          30.3661332946161
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.126",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.126",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - North Acres Storm Drain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.126; GIS CIP_ID 5789.126; GIS name Walnut Creek - North Acres Storm Drain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "208",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.8258729921236,
+          30.1857033624674
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.136",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.136",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Slaughter Creek - Vassal Dr Storm Drain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.514000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.136; GIS CIP_ID 5789.136; GIS name Slaughter Creek - Vassal Dr Storm Drain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "198",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7405092002623,
+          30.4227874449121
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.139",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.139",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - West Cow Path Flood Risk Reduction",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.139; GIS CIP_ID 5789.139; GIS name Walnut Creek - West Cow Path Flood Risk Reduction",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "276",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.726646744599,
+          30.2767833015293
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.141",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.141",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.141; GIS CIP_ID 5789.141; GIS name Boggy Creek - Oakwood Cemetery Storm Drain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "277",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7474171106309,
+          30.1854330926197
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.145",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.145",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.145; GIS CIP_ID 5789.145; GIS name Williamson Creek - Brassiewood Dr Ph 3 Neighborhood Stormdrain Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "320",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7541478032344,
+          30.2449870193458
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5789.146",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5789.146",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5789.146; GIS CIP_ID 5789.146; GIS name East Bouldin - Annie Street Flood Risk Reduction Project - Phase 2",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "332",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.714958850786,
+          30.2910435897346
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.053",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.053",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Boggy Creek - Clarkson Tributary Rehabilitation",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.053; GIS CIP_ID 5848.053; GIS name Boggy Creek - Clarkson Tributary Rehabilitation",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "249",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7268416380314,
+          30.3331404521689
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.070",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.070",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.070; GIS CIP_ID 5848.07; GIS name Shoal Creek - Grover Channel Stabilization (from Brentwood PER)",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "329",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6814981826629,
+          30.4063916091879
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.071",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.071",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.071; GIS CIP_ID 5848.071; GIS name Walnut Creek - Wells Branch Willow Bend Stream Restoration",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "216",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7679064766998,
+          30.2637819278067
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.087",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.087",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Barton Creek Tributary - Sunken Gardens Erosion Protection",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.087; GIS CIP_ID 5848.087; GIS name Barton Creek Tributary - Sunken Gardens Erosion Protection",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "292",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.686345197501,
+          30.387839268587
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.091",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.091",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - Eubank Tributary Stream Stabilization",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.091; GIS CIP_ID 5848.091; GIS name Walnut Creek - Eubank Tributary Stream Stabilization",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "316",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.6726964936238,
+          30.3131939012339
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/5848.092",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/5848.092",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 5848.092; GIS CIP_ID 5848.092; GIS name Little Walnut Creek - Loyola Lane & Dottie Jordan Park Stream Stabilization",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "324",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7331091322767,
+          30.3332577511209
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/6039.109",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/6039.109",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Shoal Creek - Brentwood Integrated Drainage Improvements",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 6039.109; GIS CIP_ID 6039.109; GIS name Shoal Creek - Brentwood Integrated Drainage Improvements",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "219",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7239870379599,
+          30.411932150886
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/7492.011",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/7492.011",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - Duval East and Duval West Dam Modernization",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 7492.011; GIS CIP_ID 7492.011; GIS name Walnut Creek - Duval East and Duval West Dam Modernization",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "230",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7433418634268,
+          30.3485402660389
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/7492.032",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/7492.032",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.569000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 7492.032; GIS CIP_ID 7492.032; GIS name Shoal Creek - Northwest Park Dam Rehabilitation and Modernization",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "211",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7905550195159,
+          30.4209825805936
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/7492.045",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/7492.045",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Bull Creek - Bintliff Dr Dam Modernization",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.635000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 7492.045; GIS CIP_ID 7492.045; GIS name Bull Creek - Bintliff Dr Dam Modernization",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "333",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7119769414263,
+          30.285522180844
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/8598.014",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/8598.014",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.597000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 8598.014; GIS CIP_ID 8598.014; GIS name Boggy Creek - MLK TOD Stormwater Conveyance Improvements Phase 3",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "267",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7040011404651,
+          30.4266408515541
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/9999.235",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/9999.235",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Walnut Creek - Oak Creek Drive Low Water Crossing",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 9999.235; GIS CIP_ID 9999.235; GIS name Walnut Creek - Oak Creek Drive Low Water Crossing\n",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "323",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.7699513357351,
+          30.283844326859
+        ],
+        "type": "Point"
+      },
+      "id": "watershed/9999.236",
+      "properties": {
+        "arcgis_item_id": "1ccd6a4f4f424a73b3b99c82052b8fcb",
+        "arcgis_service_id": "WPD CIP Projects (Points for display only)",
+        "caveats": [
+          "Official project display point; it is not an engineering or construction footprint.",
+          "The source title explicitly says 'Points for display only'; suitable only as a project display location after governance review."
+        ],
+        "confidence": "HIGH",
+        "decision_unit_id": "watershed/9999.236",
+        "display_role": "PROJECT_DISPLAY_POINT",
+        "geometry_origin": "SOURCE_NATIVE_FEATURE",
+        "geometry_type": "point",
+        "governance_decision_id": "D-116",
+        "governed_name": "Johnson Creek - 11th, 12th & Meridian St Low Water Crossings",
+        "historical_fit_class": "EXACT_SNAPSHOT_DATE",
+        "historical_fit_judgment": "YES_EXACT_SNAPSHOT_DATE: feature FME_DATE 2026-01-21T19:05:24.634000Z; geometry is a City display point, not an engineering footprint",
+        "match_identifiers": "governed CIP ID 9999.236; GIS CIP_ID 9999.236; GIS name Johnson Creek - 11th, 12th & Meridian St Low Water Crossings\n",
+        "match_method": "Exact three-decimal CIP/subproject identifier; official project display feature",
+        "presentation_category": "Watershed",
+        "source_agency": "City of Austin",
+        "source_date": "2026-01-21",
+        "source_feature_id": "322",
+        "source_last_updated_date": "2024-08-05T17:17:21Z",
+        "source_layer_id": "0",
+        "source_title": "WPD CIP Projects (Points for display only)",
+        "source_url": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/WPD%20CIP%20Projects%20(Points%20for%20display%20only)/FeatureServer/0"
+      },
+      "type": "Feature"
+    }
+  ],
+  "geometry_authority": "GOVERNED_RUNTIME_GEOMETRY_ONLY",
+  "geometry_required_for_model_eligibility": false,
+  "geometry_required_for_portfolio_selection": false,
+  "governance_decision_id": "D-116",
+  "governance_reconciliation_sha256": "0b5c17a2f01091070b871fab79462b22fc0627dc919dba66c5c65e71cc11d0bc",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "inferred_or_centroid_geometry": false,
+  "limitations": [
+    "Only 74 individually approved source-native geometries are governed for display; 32 projects remain explicitly unmapped.",
+    "Park, facility, and parcel context must not be described as a capital-project construction footprint.",
+    "Post-snapshot source refreshes are used only where the stable location remains historically compatible; later project facts are excluded.",
+    "Missing geometry does not remove a project from Explore or Funding Plan and does not affect Funding Priority.",
+    "Council District, ZIP, neighborhood, address geocodes, and inferred centroids are not substituted for missing project geometry."
+  ],
+  "mapped_project_count": 74,
+  "mapping_status": "PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE",
+  "project_identity_key": "decision_unit_id",
+  "type": "FeatureCollection",
+  "unmapped_project_count": 32
+}

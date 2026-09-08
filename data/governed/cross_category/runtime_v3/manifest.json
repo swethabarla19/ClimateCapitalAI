@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "benchmark_json": {
+      "byte_size": 49669,
+      "sha256": "0b67e88a363b4185d4eef45eb1e62854aec4dba92d3a61833c1b8e641dd1f562"
+    },
+    "catalog_json": {
+      "byte_size": 164696,
+      "sha256": "ef32a9f88d9bbf794d151314a2c7fb9ce30f13dd8b750c5515e34c7b3b35c0bd"
+    },
+    "map_context_geojson": {
+      "byte_size": 192991,
+      "sha256": "32be8af18240a3b5c2858aa420a233168be9988b2d5b093fe7065405ae0533a9"
+    }
+  },
+  "contract_version": "p0-cross-category-release-manifest/3.0.0",
+  "contract_versions": {
+    "benchmark": "p0-cross-category-benchmark/2.0.0",
+    "catalog": "p0-cross-category-catalog/2.0.0",
+    "funding_plan": "p0-cross-category-funding-plan/2.0.0",
+    "geometry_governance": "p0-cross-category-geometry-governance/1.0.0",
+    "manifest": "p0-cross-category-release-manifest/3.0.0",
+    "map_context": "p0-cross-category-map-context/3.0.0"
+  },
+  "data_version": "climatecapital-austin-2026-01-21-cross-category-v2",
+  "historical_decision_snapshot_date": "2026-01-21",
+  "reconciliations": {
+    "analytical_project_count": 106,
+    "benchmark_isolated_from_catalog": true,
+    "benchmark_isolated_from_portfolio_selection": true,
+    "benchmark_matched_cohort_dollars": 332000000,
+    "benchmark_project_count": 20,
+    "candidate_geometry_snapshot_sha256": "bb438e25edb3ef3fb49f3926ed21b81fe3809483e64109e7210f7e4bae854f8c",
+    "derived_geocoded_geometry": false,
+    "fabricated_geometry": false,
+    "geometry_governance_decision_id": "D-116",
+    "geometry_governance_sha256": "0b5c17a2f01091070b871fab79462b22fc0627dc919dba66c5c65e71cc11d0bc",
+    "governed_request_total_dollars": 1973520000,
+    "inferred_or_centroid_geometry": false,
+    "mapped_project_count": 74,
+    "unmapped_project_count": 32
+  },
+  "release_bundle_scope": "CROSS_CATEGORY_106_PROJECT_RUNTIME_V3",
+  "release_id": "3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1",
+  "runtime_integration_authorized": true,
+  "source_id": "austin_2026_bond_initial_draft_2026_01_21",
+  "source_snapshot_sha256": "da85a00273a32afb63f057e0e7f5065078f5e226d2e8c73a3efba69ee4bd0359"
+}

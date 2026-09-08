@@ -21,7 +21,12 @@ from .cross_category import CrossCategoryUniverseArtifact
 from .cross_category_release import (
     CrossCategoryBenchmarkArtifact,
     CrossCategoryMapContextArtifact,
+    CrossCategoryMapContextArtifactV3,
     CrossCategoryReleaseManifest,
+    CrossCategoryReleaseManifestV3,
+)
+from .cross_category_geometry import (
+    CrossCategoryGeometryGovernanceArtifact,
 )
 from .cross_category_runtime import (
     CrossCategoryPlanInput,
@@ -64,12 +69,24 @@ SCHEMA_EXPORTS: tuple[tuple[str, type[BaseModel]], ...] = (
         CrossCategoryMapContextArtifact,
     ),
     (
+        "cross-category-map-context-3.0.0.schema.json",
+        CrossCategoryMapContextArtifactV3,
+    ),
+    (
         "cross-category-benchmark-2.0.0.schema.json",
         CrossCategoryBenchmarkArtifact,
     ),
     (
         "cross-category-release-manifest-2.0.0.schema.json",
         CrossCategoryReleaseManifest,
+    ),
+    (
+        "cross-category-release-manifest-3.0.0.schema.json",
+        CrossCategoryReleaseManifestV3,
+    ),
+    (
+        "cross-category-geometry-governance-1.0.0.schema.json",
+        CrossCategoryGeometryGovernanceArtifact,
     ),
     (
         "cross-category-funding-plan-input-2.0.0.schema.json",

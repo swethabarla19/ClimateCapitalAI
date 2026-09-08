@@ -16,6 +16,8 @@ data/tmp/
 *.geojson
 !release-data/fixture/map-context.geojson
 !data/governed/cross_category/runtime_v2/map-context.geojson
+!data/governed/cross_category/runtime_v3/map-context.geojson
+!data/reconnaissance/external_gis/2026-09-08/CANDIDATE_NOT_GOVERNED_source_geometries.geojson
 
 # Local credentials and secrets
 .env
