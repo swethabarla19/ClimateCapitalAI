@@ -126,7 +126,7 @@ export function BoundaryResolution({
       </p>
 
       <ul className="boundary-candidates">
-        {boundary.candidates.map((candidate) => {
+        {boundary.candidates.map((candidate, index) => {
           const project = catalogById.get(candidate.decision_unit_id)
           const selected = selectedIds.has(candidate.decision_unit_id)
 
@@ -140,6 +140,8 @@ export function BoundaryResolution({
                 }
               >
                 <input
+                  id={`boundary-candidate-${index}`}
+                  name="boundary-project-selection"
                   type="checkbox"
                   checked={selected}
                   disabled={!candidate.individually_budget_feasible || loading}
@@ -191,6 +193,8 @@ export function BoundaryResolution({
       {acknowledgementRequired && !selectionOverBudget && (
         <label className="acknowledgement-control">
           <input
+            id="boundary-skip-tier-acknowledgement"
+            name="boundary-skip-tier-acknowledgement"
             type="checkbox"
             checked={acknowledged}
             disabled={loading}

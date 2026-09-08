@@ -211,6 +211,15 @@ function PlanResult({
     [result.selected_projects],
   )
   const boundary = result.unresolved_boundary
+  const budgetUtilization =
+    result.available_budget_dollars === 0
+      ? '0%'
+      : result.included_total_dollars === result.available_budget_dollars
+        ? '100%'
+        : `${(
+            (result.included_total_dollars / result.available_budget_dollars) *
+            100
+          ).toFixed(1)}%`
   const initialResolution =
     boundary === null
       ? null
@@ -261,6 +270,18 @@ function PlanResult({
             <dd>{result.selected_projects.length}</dd>
           </div>
         </dl>
+
+        <div className="plan-budget-utilization">
+          <div>
+            <span>Budget utilization</span>
+            <strong>{budgetUtilization}</strong>
+          </div>
+          <progress
+            aria-label="Budget utilization"
+            max={result.available_budget_dollars || 1}
+            value={result.included_total_dollars}
+          />
+        </div>
 
         <p className="plan-method-note">
           Remaining budget is a normal result of indivisible full-request projects.
@@ -562,6 +583,8 @@ export function FundingPlan({
           <label>
             <span>Custom Available Project Budget</span>
             <input
+              id="custom-available-project-budget"
+              name="available-project-budget"
               type="text"
               inputMode="numeric"
               value={customBudget}

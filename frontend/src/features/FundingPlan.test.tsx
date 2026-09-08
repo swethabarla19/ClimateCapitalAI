@@ -78,6 +78,11 @@ describe('Funding Plan', () => {
     expect(summary).toHaveTextContent('$331,825,000')
     expect(summary).toHaveTextContent('$175,000')
     expect(summary).toHaveTextContent('18')
+    expect(summary).toHaveTextContent('99.9%')
+    expect(screen.getByRole('progressbar', { name: /budget utilization/i })).toHaveAttribute(
+      'value',
+      '331825000',
+    )
     expect(document.body).not.toHaveTextContent(/optimization failure|wasted budget/i)
     expect(screen.queryByRole('button', { name: /add .* to plan/i })).toBeNull()
 

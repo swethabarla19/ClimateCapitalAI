@@ -3,7 +3,9 @@ import type {
   RuntimeCatalog,
   RuntimeMapContext,
   RuntimeProject,
+  PublicConfiguration,
 } from '../api/contracts'
+import { AustinContextMap } from '../components/AustinContextMap'
 import { ProjectDetail } from '../components/ProjectDetail'
 import {
   formatDollars,
@@ -30,8 +32,10 @@ import {
 interface ExploreProps {
   catalog: RuntimeCatalog
   mapContext: RuntimeMapContext
+  publicConfiguration: PublicConfiguration
   session: BrowserSessionState
   onSessionChange: (session: BrowserSessionState) => void
+  onOpenFundingPlan?: () => void
 }
 
 function matchesRequestAmount(
@@ -98,8 +102,10 @@ function sortProjects(
 export function Explore({
   catalog,
   mapContext,
+  publicConfiguration,
   session,
   onSessionChange,
+  onOpenFundingPlan = () => undefined,
 }: ExploreProps) {
   const filters = readExploreFilters(session.presentation)
   const normalizedSearch = session.presentation.search_text.trim().toLocaleLowerCase()
@@ -166,25 +172,26 @@ export function Explore({
         </div>
       </section>
 
+      <section className="explore-stat-grid" aria-label="Project portfolio summary">
+        <article>
+          <span className="metric-icon metric-icon-purple" aria-hidden="true">#</span>
+          <div><strong>{catalog.project_count}</strong><span>Governed projects</span></div>
+        </article>
+        <article>
+          <span className="metric-icon metric-icon-amber" aria-hidden="true">$</span>
+          <div><strong>{formatDollars(catalog.governed_request_total_dollars)}</strong><span>Total project requests</span></div>
+        </article>
+        <article>
+          <span className="metric-icon metric-icon-green" aria-hidden="true">◎</span>
+          <div><strong>{mapContext.mapped_project_count} of {mapContext.analytical_project_count}</strong><span>Supported map locations</span></div>
+        </article>
+      </section>
+
       <section className="category-summary" aria-label="Project category counts">
         <span>Transportation <strong>{catalog.category_counts.transportation}</strong></span>
         <span>Parks &amp; Open Space <strong>{catalog.category_counts.parks_open_space}</strong></span>
         <span>Watershed <strong>{catalog.category_counts.watershed}</strong></span>
         <span>Community Facilities <strong>{catalog.category_counts.community_facilities}</strong></span>
-      </section>
-
-      <section className="geometry-notice" aria-labelledby="geometry-heading">
-        <div className="geometry-icon" aria-hidden="true">◎</div>
-        <div>
-          <h2 id="geometry-heading">Project-level map locations are unavailable</h2>
-          <p>
-            The governed January 21, 2026 snapshot contains{' '}
-            {mapContext.mapped_project_count} mapped and{' '}
-            {mapContext.unmapped_project_count} unmapped projects. Projects remain
-            fully available for evidence review and Funding Plan analysis. No
-            coordinates or project pins are inferred.
-          </p>
-        </div>
       </section>
 
       <section className="explore-controls" aria-labelledby="discovery-heading">
@@ -207,6 +214,8 @@ export function Explore({
           <label className="search-field">
             <span>Search project name</span>
             <input
+              id="explore-project-search"
+              name="project-search"
               type="search"
               value={session.presentation.search_text}
               placeholder="Search projects"
@@ -219,6 +228,8 @@ export function Explore({
           <label>
             <span>Category</span>
             <select
+              id="explore-category-filter"
+              name="category-filter"
               value={filters.category}
               onChange={(event) =>
                 onSessionChange(
@@ -240,6 +251,8 @@ export function Explore({
           <label>
             <span>Funding Priority</span>
             <select
+              id="explore-priority-filter"
+              name="priority-filter"
               value={filters.priority}
               onChange={(event) =>
                 onSessionChange(
@@ -260,6 +273,8 @@ export function Explore({
           <label>
             <span>Governed request</span>
             <select
+              id="explore-request-filter"
+              name="request-filter"
               value={filters.requestAmount}
               onChange={(event) =>
                 onSessionChange(
@@ -281,6 +296,8 @@ export function Explore({
           <label>
             <span>Sort projects</span>
             <select
+              id="explore-sort"
+              name="project-sort"
               value={session.presentation.sort}
               onChange={(event) =>
                 onSessionChange(
@@ -297,19 +314,23 @@ export function Explore({
               <option value="NAME">Project name — alphabetical</option>
             </select>
           </label>
+
+          <button
+            type="button"
+            className="filter-reset-button"
+            disabled={!hasActiveFilters}
+            onClick={() => onSessionChange(resetExploreFilters(session))}
+          >
+            Clear filters
+          </button>
         </div>
       </section>
 
-      <section className="priority-explainer" aria-label="Funding Priority explanation">
-        <strong>How Funding Priority works</strong>
-        <span>
-          It is the official January 21, 2026 PRB Grand Total and is used as an
-          ordinal project-priority measure. Equal scores share the same competition
-          rank; within-tie display order has no analytical meaning.
-        </span>
-      </section>
-
       <div className="explore-workspace">
+        <AustinContextMap
+          mapContext={mapContext}
+          publicConfiguration={publicConfiguration}
+        />
         <section className="projects-panel" aria-labelledby="projects-heading">
           <div className="projects-heading">
             <div>
@@ -393,26 +414,44 @@ export function Explore({
           )}
         </section>
 
-        <div className="detail-panel-region" aria-live="polite">
-          {selectedProject === null ? (
-            <aside className="project-detail project-detail-empty">
-              <p className="eyebrow">Project detail</p>
-              <h2>Select a project</h2>
-              <p>
-                Choose any project from the list to inspect its governed request,
-                official Funding Priority, PRB components, context, and provenance.
-              </p>
-            </aside>
-          ) : (
+        {selectedProject !== null && (
+          <div className="detail-panel-region" aria-live="polite">
             <ProjectDetail
               project={selectedProject}
               onClose={() =>
                 onSessionChange(selectExploreProject(session, null))
               }
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
+
+      <section className="priority-explainer" aria-label="Funding Priority explanation">
+        <strong>How Funding Priority works</strong>
+        <span>
+          It is the official January 21, 2026 PRB Grand Total and is used as an
+          ordinal project-priority measure. Equal scores share the same competition
+          rank; within-tie display order has no analytical meaning.
+        </span>
+      </section>
+
+      <section className="explore-plan-strip" aria-label="Current Funding Plan status">
+        <div>
+          <span className="metric-icon metric-icon-purple" aria-hidden="true">▥</span>
+          <span><strong>Current Funding Plan</strong><small>Governed full-request projects</small></span>
+        </div>
+        {session.latest_plan_result === null ? (
+          <strong>No evaluated plan in this session</strong>
+        ) : (
+          <strong>
+            {session.latest_plan_result.selected_projects.length} projects ·{' '}
+            {formatDollars(session.latest_plan_result.included_total_dollars)} selected
+          </strong>
+        )}
+        <button type="button" className="primary-outline-button" onClick={onOpenFundingPlan}>
+          View Funding Plan <span aria-hidden="true">→</span>
+        </button>
+      </section>
 
       <section className="disclaimer" aria-label="Prototype disclaimer">
         <strong>Historical decision-support prototype.</strong>

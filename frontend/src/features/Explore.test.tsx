@@ -15,6 +15,7 @@ function Harness() {
     <Explore
       catalog={bootstrap.data.catalog}
       mapContext={bootstrap.data.map_context}
+      publicConfiguration={bootstrap.data.public_configuration}
       session={session}
       onSessionChange={setSession}
     />
@@ -165,17 +166,16 @@ describe('Explore', () => {
     )
   })
 
-  it('shows a truthful zero-geometry state without a project map or pins', () => {
+  it('shows an Austin context map with truthful zero-geometry treatment and no pins', () => {
     render(<Harness />)
 
     expect(
-      screen.getByRole('heading', {
-        name: /project-level map locations are unavailable/i,
-      }),
+      screen.getByRole('heading', { name: /explore the city/i }),
     ).toBeInTheDocument()
-    expect(screen.getByText(/0 mapped and 106 unmapped projects/i)).toBeInTheDocument()
-    expect(screen.getByText(/no coordinates or project pins are inferred/i)).toBeInTheDocument()
+    expect(screen.getByText(/0 mapped · 106 unmapped/i)).toBeInTheDocument()
+    expect(screen.getByText(/pins are withheld/i)).toBeInTheDocument()
     expect(screen.queryByRole('img', { name: /project map/i })).toBeNull()
+    expect(document.querySelector('.leaflet-marker-icon')).toBeNull()
   })
 
   it('shows a distinct no-results state and clears all filters', async () => {

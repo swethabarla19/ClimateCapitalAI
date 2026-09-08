@@ -84,10 +84,10 @@ describe('ClimateCapital application shell', () => {
       await screen.findByRole('heading', { name: 'Explore projects' }),
     ).toBeInTheDocument()
     expect(screen.getByLabelText('106 of 106 projects')).toBeInTheDocument()
-    expect(screen.getByText('$1,973,520,000')).toBeInTheDocument()
-    expect(screen.getByText(/0 mapped and 106 unmapped projects/i)).toBeInTheDocument()
+    expect(screen.getAllByText('$1,973,520,000')).toHaveLength(2)
+    expect(screen.getByText(/0 mapped · 106 unmapped/i)).toBeInTheDocument()
     expect(
-      screen.getByText('Austin 2026 Bond Program · January 21, 2026'),
+      screen.getByText('Austin Climate Investment Plan'),
     ).toBeInTheDocument()
     expect(screen.queryByText(/12 projects/i)).not.toBeInTheDocument()
   })

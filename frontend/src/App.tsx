@@ -11,6 +11,7 @@ import {
   type HistoricalBenchmarkLoader,
 } from './features/HistoricalBenchmark'
 import { formatDollars } from './lib/format'
+import { AppIcon } from './components/AppIcon'
 import type {
   BrowserSessionState,
   PresentationState,
@@ -26,27 +27,32 @@ const navigation: Array<{
   label: string
   href: string
   route: PresentationState['route']
+  icon: 'explore' | 'plan' | 'benchmark' | 'methodology' | 'help'
 }> = [
-  { label: 'Explore', href: '#explore', route: 'EXPLORE' },
+  { label: 'Explore', href: '#explore', route: 'EXPLORE', icon: 'explore' },
   {
     label: 'Funding Plan',
     href: '#funding-plan',
     route: 'FUNDING_PLAN',
+    icon: 'plan',
   },
   {
     label: 'Historical Benchmark',
     href: '#historical-benchmark',
     route: 'HISTORICAL_BENCHMARK',
+    icon: 'benchmark',
   },
   {
     label: 'Data & Methodology',
     href: '#data-methodology',
     route: 'DATA_METHODOLOGY',
+    icon: 'methodology',
   },
   {
     label: 'Help & Resources',
     href: '#help-resources',
     route: 'HELP_RESOURCES',
+    icon: 'help',
   },
 ]
 
@@ -168,6 +174,9 @@ function App({
   const { bootstrap, session } = state
   const { catalog, map_context: mapContext } = bootstrap.data
   const notice = sessionNotice(state.sessionInitialization)
+  const currentRouteLabel =
+    navigation.find((item) => item.route === session.presentation.route)?.label ??
+    'Explore'
 
   const updateSession = (nextSession: BrowserSessionState) => {
     setState((current) =>
@@ -196,8 +205,14 @@ function App({
 
       <aside className="sidebar">
         <div className="brand">
-          <strong>ClimateCapital</strong>
-          <span>AI</span>
+          <span className="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="17" />
+              <path d="M9 23c5-9 10 1 16-7 2-3 4-3 6-2" />
+              <path d="M13 28c5-2 9-6 13-12" />
+            </svg>
+          </span>
+          <span className="brand-name"><strong>ClimateCapital</strong><span>AI</span></span>
         </div>
 
         <nav aria-label="Primary navigation">
@@ -218,6 +233,7 @@ function App({
                       navigate(item.route)
                     }}
                   >
+                    <AppIcon name={item.icon} />
                     {item.label}
                   </a>
                 </li>
@@ -225,24 +241,34 @@ function App({
             })}
           </ul>
         </nav>
+
+        <div className="analyst-profile" aria-label="Current workspace role">
+          <span className="analyst-avatar" aria-hidden="true">SA</span>
+          <span><strong>S. Analyst</strong><small>Capital Planning</small></span>
+        </div>
       </aside>
 
       <div className="workspace">
         <header className="decision-header">
-          <div>
-            <span className="context-label">Historical snapshot</span>
-            <strong>Austin 2026 Bond Program · January 21, 2026</strong>
+          <div className="header-title">
+            <span className="context-label">Historical decision workspace</span>
+            <strong>Austin Climate Investment Plan</strong>
+            <span className="header-date">January 21, 2026 snapshot</span>
           </div>
-          <div>
+          <div className="header-context-pill">
             <span className="context-label">Workspace</span>
-            <strong>Funding Plan</strong>
+            <strong>{currentRouteLabel}</strong>
           </div>
-          <div>
+          <div className="header-budget">
             <span className="context-label">Available Project Budget</span>
             <strong>
               {formatDollars(session.working_plan.available_budget_dollars)}
             </strong>
           </div>
+          <button className="gemini-preview-button" type="button" disabled>
+            <AppIcon name="sparkle" size={18} />
+            Gemini
+          </button>
         </header>
 
         {notice && (
@@ -274,8 +300,10 @@ function App({
           <Explore
             catalog={catalog}
             mapContext={mapContext}
+            publicConfiguration={bootstrap.data.public_configuration}
             session={session}
             onSessionChange={updateSession}
+            onOpenFundingPlan={() => navigate('FUNDING_PLAN')}
           />
         )}
       </div>
