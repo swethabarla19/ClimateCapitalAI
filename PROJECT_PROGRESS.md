@@ -50,16 +50,32 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-07
-- **Project stage:** The frozen M3.8 backend baseline is published at `720b66a`, and frontend F1 integration, F2 Explore, F3 Funding Plan, and F4 Historical Benchmark are implemented and verified. Product completion/polish and mandatory Gemini integration remain before final QA and deployment.
-- **Current milestone:** Frontend F4 complete and approved — the January 21, 2026 Historical Benchmark is isolated from Funding Plan construction and available for retrospective comparison only.
-- **Next gate:** F5A — Product Completion, Navigation, UX Coherence & Frontend Quality; followed immediately by F5B — mandatory Gemini integration as an explanation-assistance layer.
-- **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
-- **Working state:** Git repository is on `main`. Frontend F1–F4 is now tracked as a coherent checkpoint; the unrelated untracked `.node-version` remains untouched. Backend analytical/runtime methodology remains frozen at the published M3.8 baseline.
+- **Last updated:** 2026-09-08
+- **Project stage:** GIS governance/runtime-v3 is published at `7d9dcaf` and the
+  focused frontend visual refinement is published at `71d92e3`. The frontend
+  runtime-v3 map-integration checkpoint is complete and verified locally.
+  Mandatory Gemini integration remains before final QA and deployment.
+- **Current milestone:** Frontend runtime-v3 map integration complete locally —
+  Explore renders and synchronizes the 74 governed source-native features while
+  retaining all 32 location-unavailable projects in list, detail, and plan paths.
+- **Next gate:** Review/approve, commit, and push the frontend map-integration
+  checkpoint, then immediately begin F5B mandatory Gemini explanation integration.
+- **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
+- **Working state:** Git repository is on `main` at `71d92e3`, matching
+  `origin/main`. The frontend map-integration files and this handoff update remain
+  unstaged and uncommitted. The unrelated untracked `.node-version` remains
+  untouched.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
-- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for the M3.8 runtime-v2 release. Earlier M3.7 governed artifacts retain `runtime_integration_authorized=false` as correct historical checkpoint provenance.
-- **M3 runtime state:** Standard `/api/v1/bootstrap` now serves the 106-project runtime-v2 catalog and governed map context; `/api/v1/plans/evaluate` executes the M3.7D priority-constrained analyst-governed portfolio state machine; `/api/v1/benchmark` serves the isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable rather than mixing retired Watershed semantics with the cross-category runtime.
-- **Most recent verification:** Frontend F4: 7 test files and 67 tests pass, including 10 focused Historical Benchmark tests; `npm run build` and `npm run lint` pass under Node 22.23.2/npm 11.19.1. The targeted backend runtime-bundle/standard-API files contribute 33 passing tests with one known Starlette/AnyIO deprecation warning. A rendered browser connection remained unavailable, so responsive/visual behavior has automated and direct-source evidence but no screenshot-based verification. The frozen backend release remains `efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207`.
+- **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
+- **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
+- **Most recent verification:** The complete frontend suite passes 8 files / 80
+  tests; ESLint, the TypeScript/Vite production build, and `git diff --check`
+  pass under Node 22.23.2. Chrome DevTools QA covered desktop and 400×748
+  responsive layouts, all 74 governed features, the legend and role styling,
+  filter synchronization, mapped point/polygon selection and focus, Project
+  Detail evidence, and no-movement/location-unavailable behavior for an unmapped
+  project. No application console errors were present. Active runtime-v3 release
+  ID is `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`.
 
 ## Approved Locks
 
@@ -86,7 +102,7 @@ access to prior chat conversations.
   cheapest-first, project-count maximization, budget-utilization maximization,
   unsupported category quotas, and hidden analytical tiebreakers are prohibited.
   Cross-category ranking and portfolio-selection methodology are authorized;
-  runtime integration remains unauthorized.
+  runtime integration is authorized through the immutable runtime release.
 - **Architecture Lock — Minimal reproducible P0:** Controlled source preparation
   produces a reviewed four-file release-data bundle; one small public Cloud Run
   container serves the SPA/API with one worker, no application database, no
@@ -109,27 +125,31 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Migrate the frontend in reviewable checkpoints onto the activated
-  106-project runtime without changing the frozen analytical/backend baseline.
-- **Status:** F1–F4 are complete locally. Explore and Funding Plan retain their
-  existing runtime paths; Historical Benchmark loads independently from the
-  standard benchmark endpoint and never enters plan input or persisted plan state.
+- **Goal:** Complete the frontend integration of the active governed runtime-v3
+  map without changing analytical or portfolio behavior.
+- **Status:** Complete locally. Explore renders governed points, polygons, and the
+  multipolygon with explicit project/facility/park roles, keeps filters and list
+  selection synchronized with the map, and preserves truthful unavailable states
+  for all 32 projects without governed geometry.
 - **Session boundary:** Persisted analyst input may be restored only when
   `data_version`, release ID, and catalog contract match. Persisted evaluation
   output is cleared and must be requested again. Stale-release plan state resets.
 - **Request boundary:** Plan calls have AbortController cancellation plus request
   generation checks so late responses cannot replace newer analyst inputs.
-- **Authority:** Backend runtime, PRB ranking, portfolio construction, governed
-  artifacts, and historical benchmark isolation remain unchanged at `720b66a`.
-- **Working-tree boundary:** Frontend F1–F4 is tracked as a coherent implementation
-  checkpoint; `.node-version` remains unrelated and untouched.
-- **Exit condition:** F1–F4 are complete and approved. Proceed next through the
-  separately gated F5A product-completion/polish checkpoint and mandatory F5B
-  Gemini explanation integration before final QA and deployment.
+- **Authority:** Geometry authority is isolated in the D-116 governance artifact,
+  runtime-v3 map, and manifest. The runtime-v3 catalog and benchmark are
+  byte-identical to runtime-v2; analytical/portfolio contracts are unchanged.
+- **Working-tree boundary:** This checkpoint changes only frontend contracts,
+  validation, fixtures, map/Explore/Project Detail presentation and interaction,
+  frontend tests/styles, and this canonical handoff. Backend methodology,
+  governed runtime artifacts, Funding Priority, Funding Plan, Historical
+  Benchmark, and `.node-version` remain untouched.
+- **Exit condition:** Review/approve and publish this checkpoint, then begin F5B.
 
 ## Next Actions
 
-1. Complete F5A — Product Completion, Navigation, UX Coherence & Frontend Quality.
+1. Review/approve, commit, and push the frontend runtime-v3 map-integration
+   checkpoint without staging `.node-version`.
 2. Complete F5B — mandatory Gemini integration as a grounded explanation-assistance
    layer. Gemini must remain outside scoring, ranking, and deterministic portfolio
    construction.
@@ -141,6 +161,150 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-08 — Frontend runtime-v3 governed map integration
+
+- **Work completed:** Added the typed map-context v3 frontend contract and
+  fail-closed client parsing, including feature identity, catalog membership,
+  uniqueness, geometry structure/range, role/type agreement, counts, and release
+  hashes. The runtime-v3 bootstrap fixture now contains the governed 74-feature
+  mix: 64 points, 9 polygons, and 1 multipolygon.
+- **Explore/map behavior:** Renders only governed source-native geometry, styles
+  Project location, Facility/site context, and Park/site context distinctly,
+  exposes the roles and construction-footprint caveat in the legend, and raises
+  selected geometry above the other features. Search/category/priority/request
+  filters update both map and list; a map selection selects and scrolls the
+  corresponding project row; a list selection opens Project Detail and focuses
+  its mapped point or polygon.
+- **Unmapped behavior:** All 32 projects without governed geometry remain in the
+  list and Project Detail with explicit `Location unavailable` / `Map location
+  unavailable` evidence. Selecting them opens detail but does not move the map or
+  fabricate a point, footprint, address-derived location, or other proxy.
+- **Responsive/browser QA:** Chrome DevTools covered the actual running frontend
+  and runtime-v3 API at desktop and 400×748 responsive widths. Verified OSM
+  tiles/attribution, 74/32 counts, feature-role styling and legend, filtered map/
+  list synchronization, mapped polygon focus/detail, unmapped no-movement/detail,
+  responsive stacking, and console state. No application console errors were
+  present; the only visible console content was React's development-tools tip.
+- **Verification:** The complete frontend suite passes 8 files / 80 tests,
+  including client contract regressions and dedicated map interaction/focus/
+  no-movement tests. ESLint, the TypeScript/Vite production build (78 modules),
+  and `git diff --check` pass under Node 22.23.2. The live bootstrap reports
+  runtime-v3 release
+  `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`,
+  106 analytical projects, 74 mapped, 32 location unavailable, and
+  `fabricated_geometry=false`.
+- **Scope:** No backend methodology, governed artifact, Funding Priority, Funding
+  Plan, benchmark, cloud, deployment, `.node-version`, staging, commit, or push
+  change. No new durable decision was required; implementation follows D-116.
+- **Recommended next milestone:** Review/approve and publish this checkpoint, then
+  immediately begin F5B mandatory Gemini explanation integration.
+
+### 2026-09-08 — D-116 cross-category project geometry governance
+
+- **Decision:** Reviewed all 74 governance-eligible candidates individually and
+  promoted all 74 because each has HIGH-confidence, source-native official
+  geometry with a unique project/facility/park/parcel/asset linkage and a truthful
+  display role. Kept the other 32 explicitly unmapped.
+- **Coverage:** Watershed 35/37, Parks & Open Space 21/22, Transportation 1/9,
+  and Community Facilities 17/38. The governed map contains 64 points, 9
+  polygons, and 1 multipolygon: 42 `PROJECT_DISPLAY_POINT`, 22 `FACILITY_SITE_CONTEXT`, 8
+  `PARK_SITE_CONTEXT`, 1 `PROJECT_SITE`, and 1 `PROJECT_PARCEL`.
+- **Held/rejected:** Watershed `5789.127` retains its scope/name conflict;
+  citywide `5789.150` has no feature; EMS Demand 1/2 retain conflicting official
+  locations; Bolm Maintenance Center retains its overbroad whole-park mismatch;
+  all remaining medium, low, address-only, and no-match cases remain unmapped.
+  Exact per-project dispositions are in the D-116 governance artifact and
+  [governance report](docs/delivery/cross-category-project-geometry-governance-2026-09-08.md).
+- **Historical fit:** Thirty-five WPD display points use the exact snapshot date,
+  18 features are supported by pre-snapshot sources, and 21 later-refreshed
+  features are governed only for stable-location context. Later project status,
+  scope, budget, schedule, and other facts are excluded.
+- **Runtime/contracts:** Added strict geometry-governance, map-context v3, and
+  manifest v3 contracts/schemas; created immutable runtime-v3; activated the
+  standard backend loader against it; and preserved runtime-v2 unchanged.
+  Runtime-v3 catalog and benchmark bytes exactly equal runtime-v2. Narrow
+  `.gitignore` exceptions expose only the governed runtime-v3 map and the labeled
+  candidate source-geometry snapshot for durable review.
+- **Verification:** 51 focused governance/runtime/API tests pass. Full Python
+  regression passes 458 tests plus 137 subtests. Deterministic builders are
+  idempotent; schema generation/check, compilation, dependency check, Markdown
+  checks, and `git diff --check` are recorded in the Verification Record.
+- **Scope:** No frontend, Funding Priority, Funding Plan evaluator, analytical
+  universe, governed requests, PRB scores/ranks, Historical Benchmark semantics,
+  `.node-version`, cloud, stage, commit, push, or deployment change.
+
+### 2026-09-08 — External GIS evidence investigation for all 106 projects
+
+- **Work completed:** Reconciled every governed `decision_unit_id` against
+  authoritative City of Austin project, departmental GIS, facility, park,
+  station, library, capital-project, and parcel sources. Added one candidate CSV
+  row per project, a machine-readable summary, and a detailed research report;
+  all are conspicuously labeled `CANDIDATE / RESEARCH / NOT YET GOVERNED`.
+- **Result:** 76 HIGH source-native geometry candidates, 0 HIGH official-address-
+  derived geometries, 13 MEDIUM candidates, 2 LOW candidates, and 15 NO_MATCH.
+  Seventy-four can proceed to explicit governance review; 32 remain held or
+  unmapped. Primary representations are 68 points, 12 polygons, 1 address-only,
+  and 25 with no geometry. No trustworthy project line was found.
+- **Watershed:** The official WPD “Points for display only” layer reconciles all
+  37 exact canonical CIP IDs and carries a January 21, 2026 feature FME timestamp.
+  Twenty-nine have one or more later polygon representations in CPE/RNA. Exact-ID
+  source/name conflict `5789.127` and citywide-program display semantics for
+  `5789.150` remain held; later polygons remain secondary candidates.
+- **Other categories:** Parks has 21 HIGH site/asset/project candidates and one
+  MEDIUM whole-park/context mismatch; Transportation has one HIGH CPE bridge
+  polygon and eight MEDIUM official corridor/asset matches without geometry;
+  Community Facilities has 17 HIGH, 4 MEDIUM, 2 LOW, and 15 NO_MATCH, including a
+  uniquely proven Canyon Creek APD parcel and unresolved EMS Demand 1/2 conflicts.
+- **Historical fit:** WPD display points, APR CIP, fire, EMS, library, and Canyon
+  Creek evidence align at or before the snapshot. CPE, RNA, park/PARD, and AFM
+  sources have post-snapshot refreshes; only stable location may be considered,
+  and later project attributes/geometry evolution require isolation and review.
+- **Verification/scope:** Asserted 106 rows and 106 unique IDs, exact category,
+  confidence, geometry, ambiguity, multiple-feature, eligibility, and not-governed
+  labeling totals; inspected final CSV/JSON/report and Git scope. Governed runtime
+  remains 0 mapped / 106 unmapped with `fabricated_geometry=false`. No runtime,
+  backend, methodology, contract, Funding Plan, Funding Priority, benchmark,
+  `.node-version`, staging, commit, push, or deployment change. No durable decision
+  ID was created because no geometry was approved.
+- **Recommended next step:** User governance review of the candidate report before
+  any promotion; otherwise resume F5B from the published/locally refined frontend
+  baseline.
+
+### 2026-09-07 — Focused post-F5A frontend visual refinement
+
+- **Work completed:** Recast the application as a compact historical decision
+  workspace with the approved dark navigation shell, branded route-aware header,
+  stronger card hierarchy, consistent purple/green status accents, iconography,
+  analyst context, and responsive stacking. Refined Explore, Project Detail,
+  Funding Plan, Historical Benchmark, methodology, and help surfaces without
+  changing governed product content or analytical behavior.
+- **Explore/map:** Added the configured OpenStreetMap Austin basemap through
+  Leaflet, tile attribution, zoom controls, neutral fallback styling, a responsive
+  layers disclosure, map/list split, compact project rows, clear selection state,
+  fixed detail drawer, visible filter reset, and current-plan summary strip. The
+  runtime contract reports 0 mapped and 106 unmapped projects, so the map renders
+  no pins and explicitly explains that project coordinates are unavailable.
+- **Funding/benchmark:** Added a compact plan utilization bar and restyled budget
+  presets, summaries, boundary states, selected projects, historical package
+  reconciliation, category comparisons, and project evidence as approved-style
+  decision cards. Existing plan evaluation and benchmark isolation are unchanged.
+- **Tests/results:** 7 frontend test files and 69 tests pass; `npm run lint`,
+  `npm run build`, and `git diff --check` pass with Node 22.23.2/npm 11.19.1.
+  Focused Explore/App tests pass 19/19.
+- **Browser verification:** Chrome DevTools covered full-width and responsive
+  400px layouts, map tile rendering/attribution, zero-marker state, filters and
+  reset, layers disclosure, project selection/detail/close, the $332M governed
+  reference evaluation (18 projects, $331,825,000 selected, $175,000 remaining),
+  Historical Benchmark navigation/content, and console state. No application
+  errors were present; the only console message was React's development-tools tip,
+  and the final DevTools Issues audit reported 0 page errors, 0 breaking changes,
+  and 0 possible improvements.
+- **Scope/deviations:** No backend, methodology, data contract, project facts,
+  Funding Priority logic, plan-selection behavior, benchmark authority, cloud,
+  deployment, `.node-version`, commit, push, or staging change. No durable decision
+  ID was required.
+- **Recommended next milestone:** F5B mandatory Gemini explanation integration.
 
 ### 2026-09-07 — Frontend F4 January 21 Historical Benchmark
 
@@ -351,6 +515,23 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Completed Milestones
 
+- **2026-09-08 — Frontend runtime-v3 map integration completed locally:** The
+  frontend consumes the active v3 contract, validates and renders all 74 governed
+  point/polygon features, synchronizes filters and map/list/detail selection,
+  distinguishes project, facility, and park/site evidence, and preserves all 32
+  unavailable-location paths without map movement or fabricated geometry. Chrome
+  desktop/responsive interaction QA, 8 files / 80 tests, lint, build, and diff
+  checks pass. Review/commit/push remains pending before F5B.
+
+- **2026-09-07 — Frontend F5A published and focused visual refinement completed
+  locally:** F5A product completion is published at `fe66a49`. The follow-on
+  refinement aligns the governed 106-project experience with the approved visual
+  direction across the shell, Explore, Project Detail, Funding Plan, Historical
+  Benchmark, and responsive layouts. A configured Austin OSM basemap is present,
+  but the frozen runtime's 0/106 trustworthy-geometry state is honored with no
+  fabricated pins. Chrome interaction/responsive QA, 69 tests, lint, build, and
+  diff checks pass; F5B remains next.
+
 - **2026-09-03 — M3 Core APIs explicitly approved and complete:** Implemented
   local FastAPI startup/runtime loading, `/healthz`, bootstrap, deterministic
   current/reference plan evaluation, isolated benchmark retrieval/comparison,
@@ -482,8 +663,9 @@ contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 The approved September 2 feature-freeze gate remains at critical schedule risk.
-The frozen backend runtime and frontend F1–F4 are implemented; Gemini explanation,
-deployment, and final release verification remain on the critical path.
+The frozen backend runtime and frontend F1–F5A plus focused visual refinement are
+implemented; Gemini explanation, deployment, and final release verification remain
+on the critical path.
 
 ## Blockers
 
@@ -494,6 +676,19 @@ deployment, and final release verification remain on the critical path.
 
 ## Active Risks
 
+- D-116 governs 74 source-native project map features, but later-refreshed CPE,
+  park/PARD, and AFM features are authoritative only for stable-location display.
+  A silent source refresh could import post-snapshot shape or project-fact changes;
+  new bytes require a new governance review.
+- Official park boundaries, facility points, and the Canyon Creek parcel are
+  contextual representations, not necessarily construction footprints. Frontend
+  rendering must retain explicit `display_role` labels and support mixed points
+  and polygons rather than normalizing everything into pins.
+- Thirty-two decision units remain explicitly unmapped, including eight
+  Transportation rows without official geometry, 15 Community Facilities
+  NO_MATCH rows, two LOW facility-campus contexts, four MEDIUM Community
+  candidates, Bolm Maintenance Center, and Watershed `5789.127`/`5789.150`.
+  Visual completeness is not authority to infer a location.
 - Source-license/reuse terms remain explicitly `UNVERIFIED` for the governed
   sources, including RNA, FEMA layer 8, EAZ 2021, and Problem Score documentary
   context. The focused review and canonical metadata agree; reviewed-release use
@@ -502,9 +697,11 @@ deployment, and final release verification remain on the critical path.
 - RNA Projects layer 8 and the current FloodPro services do not establish their
   January 2026 geometry/data state. RNA geometry is research-only for governed
   analysis; FEMA is current contextual hazard evidence only.
-- Twenty-two of the 37 governed projects, including 7/12 local-drainage family
-  records, have no exact ID geometry match in the captured live RNA snapshot.
-  Missing geometry is not evidence of low need and does not remove a family record.
+- Twenty-two of the 37 Watershed projects still have no exact-ID polygon match in
+  the captured live RNA snapshot. D-116 instead governs 35 exact-ID official WPD
+  points strictly as `PROJECT_DISPLAY_POINT`; they are not engineering footprints.
+  `5789.127` and `5789.150` remain unmapped. Missing richer geometry is not
+  evidence of low need.
 - Three of the 15 exact-ID GIS matches have non-identical project names. Names were
   retained as evidence but did not affect matching; project identity still needs
   source-specific review wherever later analytical use is contemplated.
@@ -520,9 +717,9 @@ deployment, and final release verification remain on the critical path.
 - EAZ 2021 is a 2019-ACS-based Austin Transportation vulnerability snapshot with
   defensible project-level location context for only 5/12 family records. It is not
   current-2026 vulnerability or a project-beneficiary measure.
-- Project 5789.150 is a citywide renewal program. Treating it like one discrete
-  footprint would create false location, hazard, vulnerability, or beneficiary
-  precision.
+- Project 5789.150 is a citywide renewal program. D-116 explicitly rejects its
+  otherwise exact-ID official display point because a single feature would create
+  false location, hazard, vulnerability, or beneficiary precision.
 - BigQuery does not enforce project-ID uniqueness, source sequence, totals, or the
   semantic fingerprint as table constraints. The loader refuses an existing table,
   but any separately authorized mutation by another tool or user requires rerunning
@@ -594,8 +791,12 @@ deployment, and final release verification remain on the critical path.
 
 ### Evidence and methodology
 
-- No evidence or methodology decision remains open for P0. Source licensing/reuse
-  remains unverified operational metadata, not a reason to broaden reconnaissance.
+- No analytical-methodology or current map-governance decision remains open for
+  P0. D-116 governs 74 source-native features with explicit roles and keeps 32
+  projects unmapped. Any future promotion among those 32 or refresh of governed
+  source bytes requires new official evidence and a new review.
+- Source licensing/reuse remains unverified operational metadata, not authority to
+  promote the candidate sources.
 - Any later metric proposal requires an explicit methodology revision documenting
   source, vintage, historical fit, coverage, comparability, missingness,
   transformation, and effect; it is not part of the current handoff.
@@ -635,8 +836,9 @@ Established and locked:
 - server-evaluated cross-category Funding Plans with exact integer arithmetic,
   analyst-supplied budget and boundary-resolution inputs, isolated Historical
   Benchmark, and no client-authoritative analytical results;
-- governed runtime map context with zero project features, zero mapped and 106
-  unmapped analytical projects, and no fabricated coordinates or project pins;
+- governed runtime-v3 map context with 74 source-native project features and 32
+  explicitly unmapped analytical projects; mixed points/polygons, contextual
+  display roles, and no fabricated, geocoded, inferred, or centroid geometry;
 - required bounded Gemini explanation through the global standard on-demand
   publisher endpoint and ADC; proposal is post-core stretch; and
 - external manifest checksum plus separate code/data/image release identity,
@@ -725,6 +927,29 @@ The minimal foundation is established:
 - data/reconnaissance/city_austin/rna_projects/layer_8/20260901T183323Z/project_id_geometry_matches.csv —
   Git-tracked 37-project exact-ID match artifact with 15 single matches, 22 zero
   matches, and no multiple matches in the captured live snapshot.
+- data/reconnaissance/external_gis/2026-09-08/CANDIDATE_NOT_GOVERNED_project_geometry_reconciliation.csv —
+  research-only all-106 external-GIS candidate table keyed by `decision_unit_id`;
+  it records source IDs/features, geometry role/origin, vintage, historical fit,
+  matching evidence, confidence, ambiguity, and governance eligibility and is not
+  consumed by runtime.
+- data/reconnaissance/external_gis/2026-09-08/CANDIDATE_NOT_GOVERNED_summary.json —
+  machine-readable reconciliation totals proving exact 106-project coverage while
+  recording the pre-governance 0 mapped / 106 unmapped state.
+- data/reconnaissance/external_gis/2026-09-08/CANDIDATE_NOT_GOVERNED_source_geometries.geojson —
+  research-only snapshot of the 80 candidate source-native features used for
+  D-116 review, with source-payload checksums; it is not itself a governed runtime
+  artifact.
+- docs/reference/CANDIDATE-external-gis-evidence-investigation-2026-09-08.md —
+  evidence report, category findings, source-vintage assessment, explicit unmapped
+  set, and mixed-geometry recommendation; research only, not an approved spec.
+- data/governed/cross_category/reconciliation/project-geometry-governance.json —
+  D-116 all-106 promotion/hold/rejection decisions with source/feature identity,
+  historical fit, display roles, caveats, and pinned research hashes.
+- data/governed/cross_category/runtime_v3/ — immutable active four-file runtime
+  bundle with 74 mapped / 32 unmapped; catalog and benchmark bytes are identical
+  to runtime-v2, while map-context and manifest advance to version 3 contracts.
+- docs/delivery/cross-category-project-geometry-governance-2026-09-08.md — detailed
+  authoritative D-116 reconciliation and all 32 unmapped dispositions.
 - data/staging/raw/city_austin/watershed_bond_projects/2025-11-21/source.pdf —
   ignored local raw source-universe snapshot.
 - data/staging/raw/city_austin/initial_draft_recommendation/2026-01-21/source.pdf —
@@ -828,7 +1053,8 @@ remains explicit.
 - backend/climatecapital/contracts/ — initial strict contract constants/models and
   deterministic schema export.
 - backend/climatecapital/release/ — fail-closed four-file bundle validator.
-- contracts/schemas/ — 22 generated versioned JSON Schemas.
+- contracts/schemas/ — 32 generated versioned JSON Schemas, including D-116
+  geometry-governance, map-context v3, and manifest v3 contracts.
 - scripts/release/generate_schemas.py — generate/check tracked schema bytes.
 - scripts/release/validate_bundle.py — reviewed-release-default validator CLI with
   an explicit development-fixture mode.
@@ -837,12 +1063,24 @@ remains explicit.
 - backend/climatecapital/plans/ — deterministic M2B Funding Plan evaluator.
 - tests/application/ and tests/release/ — contract, evaluator, validator, and
   direct persistent-fixture tests.
+- scripts/data/build_cross_category_geometry_governance.py — deterministic,
+  explicit-allowlist builder for the all-106 D-116 reconciliation.
+- scripts/data/build_cross_category_geometry_runtime_bundle.py — create-only
+  runtime-v3 builder that imports only promoted source-native features and copies
+  the protected runtime-v2 catalog/benchmark bytes unchanged.
+- data/governed/cross_category/runtime_v3/ — active immutable map-governance
+  release with 74 mapped / 32 unmapped and pinned artifact identities.
 - frontend/src/api/ and frontend/src/session/ — activated cross-category v2
   standard-endpoint transport, defensive parsing, version-bound browser state,
   and stale plan-response protection.
 - frontend/src/features/Explore.tsx and frontend/src/components/ProjectDetail.tsx
   — project-first governed discovery and evidence review for all 106 projects,
-  with truthful zero-geometry treatment and no project pins.
+  with non-map access preserved; D-116 feature rendering is intentionally deferred
+  to a separate frontend checkpoint.
+- frontend/src/components/AustinContextMap.tsx and frontend/src/components/AppIcon.tsx
+  — configured Austin OSM context map plus the lightweight navigation/map icon
+  system used by the approved-style workspace; mixed D-116 point/polygon rendering
+  and contextual role labels are not implemented by this governance checkpoint.
 - frontend/src/features/FundingPlan.tsx and frontend/src/components/BoundaryResolution.tsx
   — server-evaluated analyst budgets, authoritative plan presentation, and exact
   equal-priority boundary resolution without client-side portfolio construction.
@@ -981,7 +1219,10 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
   testing/release gates, and normal/abuse/billing/shutdown cost controls.
 - D-096 locks post-schema parallel data/application tracks, exact-schema fixture
   constraints, reviewed-data final integration, and the Compare/proposal cut order.
-- Next available decision ID: **D-107**.
+- D-097–D-116 govern the cross-category analytical universe, PRB reconciliation,
+  model eligibility, Funding Priority, portfolio construction, runtime-v2/API
+  activation, and runtime-v3 project geometry.
+- Next available decision ID: **D-117**.
 
 ## Verification Record
 
@@ -989,6 +1230,10 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-08 | Frontend runtime-v3 governed map integration | Exercised the actual running frontend/API in Chrome DevTools at desktop and 400×748 responsive widths; checked the live bootstrap identity/counts/types, OSM tiles/attribution, legend/role styling, filter synchronization, mapped list selection/polygon focus/detail, unmapped list selection/no map movement/detail, responsive stacking, and console; ran all frontend tests, ESLint, TypeScript/Vite production build, and `git diff --check` under Node 22.23.2 | Passed: live release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; 106 projects, 74 mapped, 32 location unavailable, 64 points, 9 polygons, 1 multipolygon, `fabricated_geometry=false`; 8 test files / 80 tests; lint; 78-module build; diff check; no application console errors. No backend methodology, governed artifact, Funding Priority, Funding Plan, benchmark, `.node-version`, stage, commit, push, or deployment change |
+| 2026-09-08 | D-116 cross-category project geometry governance | Validated all 106 governance decisions and the 80-feature candidate source snapshot; regenerated governed reconciliation and runtime-v3 deterministically; checked exact category/geometry/display-role/status/reason totals, source and governance hashes, runtime-v2 immutability, runtime-v3 catalog/benchmark byte equality, map/catalog identity, citywide exclusion, Austin-region coordinates, role/type failures, runtime cross-artifact drift rejection, standard API activation, and protected plan/benchmark regressions; ran focused/full pytest, schema generation/check, Python compilation, `pip check`, Markdown checks, Git scope/status, and `git diff --check` | Passed: 74 promoted and 32 unmapped; 64 points, 9 polygons, and 1 multipolygon; 51 focused tests; 458 full tests plus 137 subtests; 32 schemas match; deterministic builders are idempotent; runtime-v2 remains 0/106; active release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; no frontend, analytical, Funding Priority, Funding Plan, request, PRB, benchmark, `.node-version`, cloud, stage, commit, push, or deployment change |
+| 2026-09-08 | External GIS evidence investigation for governed 106-project universe | Reconciled catalog identities against official City CPE, WPD/RNA, PARD/APR, AFM, fire, EMS, library, bridge/ACT, APD design, and TCAD parcel evidence; generated and re-read candidate CSV/JSON; asserted row/ID/category/confidence/geometry/eligibility totals; inspected source IDs, feature IDs, vintages, historical fit, report links, runtime geometry contract, Git diff/status, and whitespace | Passed: 106 rows and 106 unique `decision_unit_id`; exact 9/22/37/38 category coverage; 76 HIGH source-native, 0 HIGH address-derived, 13 MEDIUM, 2 LOW, 15 NO_MATCH; 68 point, 12 polygon, 1 address-only, 25 no geometry; 74 eligible for governance review and 32 held/unmapped. Every row is candidate/not-governed; runtime remains 0 mapped / 106 unmapped and `fabricated_geometry=false`; no governed data, backend, methodology, Funding Priority, Funding Plan, benchmark, `.node-version`, staging, commit, push, or deployment change |
+| 2026-09-07 | Focused post-F5A frontend visual refinement | Inspected the application repeatedly in Chrome DevTools at full width, docked/tablet width, and 400×748 responsive emulation; exercised Explore filters/reset, layers, project detail open/close, Funding Plan $332M evaluation, Historical Benchmark navigation/content, OSM tiles/attribution, and console; ran focused and complete frontend tests, ESLint, TypeScript/Vite production build, Git whitespace/status review | Passed: 19/19 focused Explore/App tests and 7 files/69 tests overall; `npm run lint`; `npm run build` (78 modules); `git diff --check`. Austin tiles and attribution rendered; no project markers rendered for the governed 0 mapped/106 unmapped contract; $332M evaluation completed with 18 projects, $331,825,000 selected, and $175,000 remaining; responsive shell/map/list/drawer reflowed without horizontal content overflow; console had no application errors. No backend, methodology, contract, data, `.node-version`, stage, commit, push, or deployment change |
 | 2026-09-07 | Frontend F4 January 21 Historical Benchmark | Ran 10 focused Historical Benchmark tests, the complete frontend suite, TypeScript/Vite production build, ESLint, targeted backend runtime-bundle/standard-API suites, contract/route/isolation scans, direct responsive-source review, and Git whitespace/status checks with Node 22.23.2/npm 11.19.1; attempted rendered browser verification | Passed: 7 frontend test files and 67 tests; 10 focused benchmark tests; `npm run build` (32 modules); `npm run lint`; 33 targeted backend tests with one known Starlette/AnyIO deprecation warning. Covered lazy standard-endpoint loading, 700/332/368 reconciliation, four categories, 20 decision-unit joins, outcome/Priority separation, false input flags, local failure/retry, runtime identity, plan/boundary isolation, and presentation-only overlap. Browser runtime exposed no available connection, so no screenshot-based visual check. No backend, `.node-version`, staging, commit, or remote change |
 | 2026-09-07 | Frontend F3 governed Funding Plan workspace | Ran 13 focused Funding Plan tests, the complete frontend suite, TypeScript/Vite production build, ESLint, two targeted backend evaluator/standard-API suites, prohibited-language/endpoint scans, direct source/status review, and `git diff --check` with Node 22.23.2/npm 11.19.1 | Passed: 6 frontend test files and 53 tests; 13 focused Funding Plan tests; `npm run build` (31 modules); `npm run lint`; 26 targeted backend tests with one known Starlette/AnyIO deprecation warning. Covered exact 332M/700M/750M scenarios, custom input, decision-unit joins, shared ranks, boundary choices and acknowledgement, repeated boundaries, stale-response suppression, structured recovery, safe persistence, and no arbitrary membership or benchmark selection input. No backend, `.node-version`, staging, commit, or remote change |
 | 2026-09-07 | Frontend F2 governed cross-category Explore | Ran the focused Explore/App suites, complete frontend suite, TypeScript/Vite production build, ESLint, direct source/contract and stale-term scans, scope/status review, and `git diff --check` with Node 22.23.2/npm 11.19.1; attempted rendered browser verification | Passed: 5 test files and 36 tests, including 9 focused Explore tests; `npm run build`; `npm run lint`; governed 106 and 9/22/37/38 facts, combined filtering, all required sorts, shared rank, half-point display, decision-unit selection, six rubric maxima, zero geometry/no pins, no-results recovery, and bootstrap retry covered. Browser runtime exposed no available connection, so no screenshot-based visual check. No backend, `.node-version`, staging, commit, or remote change |
@@ -1025,6 +1270,133 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-08 — Finish frontend runtime-v3 governed map integration
+
+- **Objective/continuity:** Resumed the partially completed uncommitted frontend
+  checkpoint from disk after `71d92e3`; inspected Git, the active runtime-v3 map
+  contract/data, governing product/architecture decisions, and existing frontend
+  implementation. Preserved the prior work and untouched untracked `.node-version`.
+- **Implementation:** Finished strict client validation and release fixtures;
+  governed point, polygon, and multipolygon rendering; distinct project,
+  facility/site, and park/site styles; legend and caveat; selected geometry focus;
+  filter-aware map/list synchronization; map-to-row scrolling; list-to-detail/map
+  selection; Project Detail evidence/unavailable states; and responsive map/card
+  reflow. Updated obsolete 0/106 frontend expectations to 74/32 and added focused
+  client, map interaction/focus/no-movement, and Explore detail regressions.
+- **Browser QA:** Against the live runtime-v3 application, Chrome DevTools showed
+  74 governed features and 32 unavailable locations with OSM attribution. Verified
+  a mapped project-site polygon focuses and exposes governed source/caveat detail;
+  an unmapped project opens `Map location unavailable` without changing map
+  extent; project search reduces map and list together; the role legend is
+  legible; and desktop plus 400×748 layouts avoid horizontal overflow. No
+  application console errors appeared.
+- **Verification:** `npm test -- --run` passes 8 files / 80 tests; `npm run lint`
+  passes; `npm run build` passes with 78 modules; `git diff --check` passes. Live
+  `/api/v1/bootstrap` identity is
+  `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`
+  with 106 projects, 74 mapped, 32 unavailable, 64 points, 9 polygons, 1
+  multipolygon, and no fabricated geometry.
+- **Scope/handoff:** No backend, methodology, governed data, Funding Priority,
+  Funding Plan, benchmark, cloud, stage, commit, push, or deployment change. The
+  checkpoint is ready for review/commit/push, followed immediately by F5B.
+
+### 2026-09-08 — Govern cross-category project map evidence under D-116
+
+- **Objective:** Review every governance-eligible candidate conservatively,
+  promote only defensible project map evidence, preserve all analytical contracts,
+  and stop before frontend rendering.
+- **Continuity:** Inspected and preserved the existing frontend refinement,
+  candidate investigation artifacts, and untracked `.node-version`. Reused the
+  completed official-source research without repeating acquisition or matching.
+- **Decision:** Promoted 74 HIGH-confidence source-native features: 35 Watershed,
+  21 Parks & Open Space, 17 Community Facilities, and 1 Transportation. Governed
+  roles are 42 project display points, 22 facility-site context points, 8
+  park-site context polygons, 1 project-site polygon, and 1 project parcel.
+- **Unmapped:** Kept 32 projects unmapped. This includes both disputed Watershed
+  rows, both conflicting EMS Demand locations, the overbroad Bolm Maintenance
+  polygon, every unresolved Transportation corridor/asset, all low-confidence
+  campus context, all address-only/no-match candidates, and the ambiguous
+  Elisabet Ney representations.
+- **Implementation:** Added an all-106 governance contract/artifact, captured the
+  80 candidate source geometries as an explicitly research-only snapshot, added
+  map-context/manifest v3 contracts and schemas, created immutable runtime-v3,
+  strengthened runtime cross-artifact validation, and activated the standard API
+  against runtime-v3. Added narrow Git allowlist exceptions for the two required
+  GeoJSON artifacts. Runtime-v2 remains unchanged.
+- **Protected behavior:** Runtime-v3 catalog and benchmark are byte-identical to
+  runtime-v2. Funding Priority, ranks, requests, plan evaluator/state machine,
+  analytical universe, and Historical Benchmark are unchanged. No fabricated,
+  geocoded, inferred, or centroid geometry exists.
+- **Verification:** 51 focused tests and the 458-test full Python suite plus 137
+  subtests pass; 32 generated schemas match; builders reproduce exact bytes and
+  are idempotent; compilation, dependency integrity, Markdown checks, and diff
+  checks pass. The known Starlette/AnyIO deprecation warning remains non-failing.
+- **Handoff:** Review D-116. Map rendering is a separate frontend checkpoint and
+  must support points/polygons plus contextual role labeling while leaving all 32
+  unmapped projects accessible through list/detail/plan paths.
+
+### 2026-09-08 — Investigate external GIS evidence for all 106 projects
+
+- **Objective:** Resume the interrupted evidence investigation without repeating
+  completed work, determine trustworthy project-specific map candidates, and stop
+  before any governed/runtime promotion.
+- **Continuity:** Inspected the working tree first; preserved the complete unstaged
+  post-F5A frontend refinement, untouched untracked `.node-version`, and the prior
+  temporary official-source downloads/queries. Continued from the unresolved
+  source-vintage, unmatched-project, and all-project artifact step.
+- **Investigation:** Queried official City CPE and ArcGIS services; reconciled WPD
+  CIP, RNA, park boundaries, PARD facilities, APR capital projects, AFM facilities,
+  fire, EMS, libraries, official bridge/ACT and facility records, APD design
+  evidence, and the TCAD parcel service. Avoided inferred coordinates and generic
+  geographic proxies.
+- **Key finding:** Decimal canonicalization resolves trailing-zero IDs in the City
+  APIs. All 37 Watershed IDs have one exact official display point on the January
+  21 snapshot date; 29 also have later polygon representations. `5789.127` remains
+  held for a source-name/scope conflict, and citywide `5789.150` remains held so a
+  display point cannot imply false program extent.
+- **Artifacts/result:** Added a 106-row candidate CSV, summary JSON, and detailed
+  report. Totals are 76 HIGH source-native, 0 HIGH official-address-derived, 13
+  MEDIUM, 2 LOW, and 15 NO_MATCH; 74 may proceed to explicit governance review and
+  32 remain held/unmapped. Primary representations are 68 points, 12 polygons, 1
+  address-only, and 25 no geometry.
+- **Verification/scope:** Re-read and asserted all artifact totals and unique IDs,
+  inspected source/feature metadata and historical-fit notes, checked documentation
+  and Git scope, and confirmed runtime geometry remains 0/106 with no fabricated
+  coordinates. No source promotion, production pins, analytical change, backend,
+  `.node-version`, staging, commit, push, or deployment action occurred.
+- **Handoff:** Stop here for user review. A later governance task should define
+  accepted geometry roles and snapshot isolation before importing any of the 74
+  eligible candidates; the other 32 must remain explicitly unmapped meanwhile.
+
+### 2026-09-07 — Refine the published F5A frontend against approved designs
+
+- **Objective:** Compare the published F5A application at `fe66a49` with the
+  approved design screenshots, implement a focused frontend visual refinement,
+  and preserve the governed 106-project product and all analytical contracts.
+- **Implementation:** Added a dark compact navigation shell, route-aware workspace
+  header, analyst profile, icon system, denser decision cards, approved purple and
+  green visual language, responsive layouts, a fixed Project Detail drawer,
+  clearer Explore/filter/list states, Funding Plan utilization treatment, and
+  stronger Historical Benchmark presentation. Added stable form IDs/names after a
+  DevTools accessibility/autofill audit.
+- **Map evidence:** Reconciled the repository and runtime contract before coding.
+  The API reports `NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE`, zero mapped projects,
+  106 unmapped projects, empty features, and `fabricated_geometry=false`. Added the
+  configured Austin OSM context map and attribution with no project pins; the UI
+  states the limitation in both the map overlay and layers disclosure. Historical
+  RNA matches remain research-only and were not promoted or transformed.
+- **Browser verification:** Repeated Chrome DevTools checks covered full-width,
+  docked/tablet, and 400×748 responsive layouts; map rendering and zoom controls;
+  layers; active filter reset; project selection/detail/close; governed $332M plan
+  evaluation; Historical Benchmark navigation/content; and console output. No
+  application console errors occurred; the final Issues audit was 0/0/0.
+- **Automated verification:** Focused Explore/App tests pass 19/19; the full suite
+  passes 7 files/69 tests; ESLint, TypeScript/Vite build, and `git diff --check`
+  pass with Node 22.23.2/npm 11.19.1.
+- **Handoff:** Proceed to F5B. All refinement changes remain unstaged and
+  uncommitted; no backend, methodology, data, cloud, deployment, `.node-version`,
+  push, or durable decision change occurred.
 
 ### 2026-09-07 — Implement frontend F4 January Historical Benchmark
 

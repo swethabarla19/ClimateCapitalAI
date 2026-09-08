@@ -1,11 +1,9 @@
-import type { RuntimeProject } from '../api/contracts'
-import {
-  formatDollars,
-  formatFundingPriority,
-} from '../lib/format'
+import type { RuntimeMapFeature, RuntimeProject } from '../api/contracts'
+import { formatDollars, formatFundingPriority } from '../lib/format'
 
 interface ProjectDetailProps {
   project: RuntimeProject
+  mapFeature: RuntimeMapFeature | null
   onClose: () => void
 }
 
@@ -45,7 +43,27 @@ function councilDistrictLabel(project: RuntimeProject): string {
     : `Districts ${districts.join(', ')}`
 }
 
-export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+function mapEvidenceRole(feature: RuntimeMapFeature): string {
+  if (feature.properties.display_role === 'PARK_SITE_CONTEXT') {
+    return 'Park/site context'
+  }
+  if (feature.properties.display_role === 'FACILITY_SITE_CONTEXT') {
+    return 'Facility/site context'
+  }
+  if (feature.properties.display_role === 'PROJECT_PARCEL') {
+    return 'Project location · official parcel'
+  }
+  if (feature.properties.display_role === 'PROJECT_SITE') {
+    return 'Project location · official site'
+  }
+  return 'Project location · official display point'
+}
+
+export function ProjectDetail({
+  project,
+  mapFeature,
+  onClose,
+}: ProjectDetailProps) {
   const headingId = `project-detail-${project.decision_unit_id.replace(
     /[^A-Za-z0-9_-]/g,
     '-',
@@ -99,6 +117,44 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
             A governed request-version conflict is preserved for this project.
             The displayed model request follows the runtime’s governed authority.
           </p>
+        )}
+      </section>
+
+      <section aria-labelledby={`${headingId}-map`}>
+        <h3 id={`${headingId}-map`}>Map evidence</h3>
+        {mapFeature === null ? (
+          <div className="map-evidence-unavailable" role="note">
+            <strong>Map location unavailable</strong>
+            <p>
+              This project has no governed geometry in the January 21, 2026
+              snapshot. It remains available for evidence review and Funding Plan
+              analysis; the map does not move to or invent a location.
+            </p>
+          </div>
+        ) : (
+          <>
+            <p className="map-evidence-role">
+              <span aria-hidden="true">●</span>
+              <strong>{mapEvidenceRole(mapFeature)}</strong>
+            </p>
+            <dl className="detail-list">
+              <div>
+                <dt>Geometry source</dt>
+                <dd>
+                  {mapFeature.properties.source_agency} ·{' '}
+                  {mapFeature.properties.source_title}
+                </dd>
+              </div>
+              <div>
+                <dt>Evidence status</dt>
+                <dd>High-confidence, governed source-native geometry</dd>
+              </div>
+              <div className="detail-list-wide">
+                <dt>Geometry limitation</dt>
+                <dd>{mapFeature.properties.caveats.join(' ')}</dd>
+              </div>
+            </dl>
+          </>
         )}
       </section>
 
@@ -183,10 +239,6 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
           <div>
             <dt>Provenance references</dt>
             <dd>{project.provenance_refs.join(', ')}</dd>
-          </div>
-          <div>
-            <dt>Project map location</dt>
-            <dd>Unavailable in the governed January 21, 2026 snapshot</dd>
           </div>
         </dl>
       </section>

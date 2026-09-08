@@ -8,6 +8,7 @@ import {
   type HistoricalBenchmarkSuccessEnvelope,
   type PresentationCategory,
   type RuntimeProject,
+  type RuntimeMapFeature,
 } from '../api/contracts'
 
 export const TEST_DATA_VERSION =
@@ -161,7 +162,96 @@ export function runtimeProjectsFixture(): RuntimeProject[] {
   )
 }
 
+function runtimeMapFeaturesFixture(
+  projects: RuntimeProject[],
+): RuntimeMapFeature[] {
+  return projects.slice(0, 74).map((project, index) => {
+    const longitude = -97.82 + (index % 10) * 0.015
+    const latitude = 30.20 + Math.floor(index / 10) * 0.015
+
+    const displayRole =
+      index < 42
+        ? 'PROJECT_DISPLAY_POINT'
+        : index < 64
+          ? 'FACILITY_SITE_CONTEXT'
+          : index < 72
+            ? 'PARK_SITE_CONTEXT'
+            : index === 72
+              ? 'PROJECT_SITE'
+              : 'PROJECT_PARCEL'
+
+    let geometry: RuntimeMapFeature['geometry']
+
+    if (index < 64) {
+      geometry = {
+        type: 'Point',
+        coordinates: [longitude, latitude],
+      }
+    } else if (index < 73) {
+      geometry = {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [longitude, latitude],
+            [longitude + 0.004, latitude],
+            [longitude + 0.004, latitude + 0.004],
+            [longitude, latitude + 0.004],
+            [longitude, latitude],
+          ],
+        ],
+      }
+    } else {
+      geometry = {
+        type: 'MultiPolygon',
+        coordinates: [
+          [
+            [
+              [longitude, latitude],
+              [longitude + 0.004, latitude],
+              [longitude + 0.004, latitude + 0.004],
+              [longitude, latitude + 0.004],
+              [longitude, latitude],
+            ],
+          ],
+        ],
+      }
+    }
+
+    return {
+      type: 'Feature',
+      id: project.decision_unit_id,
+      geometry,
+      properties: {
+        decision_unit_id: project.decision_unit_id,
+        governed_name: project.governed_name,
+        presentation_category: project.presentation_category,
+        display_role: displayRole,
+        geometry_type: geometry.type === 'Point' ? 'point' : 'polygon',
+        geometry_origin: 'SOURCE_NATIVE_FEATURE',
+        confidence: 'HIGH',
+        governance_decision_id: 'D-116',
+        caveats:
+          displayRole === 'PROJECT_DISPLAY_POINT'
+            ? [
+                'Official project display point; it is not an engineering or construction footprint.',
+              ]
+            : [
+                'Context geometry; do not imply a capital construction footprint.',
+              ],
+        historical_fit_class: 'PRE_SNAPSHOT_SOURCE',
+        historical_fit_judgment: 'Fixture governed historical-fit evidence.',
+        source_agency: 'City of Austin',
+        source_title: 'Fixture governed GIS source',
+        source_feature_id: String(index + 1),
+        source_url: 'https://example.invalid/governed-gis-fixture',
+      },
+    }
+  })
+}
+
 export function bootstrapFixture(): BootstrapSuccessEnvelope {
+  const projects = runtimeProjectsFixture()
+  const mapFeatures = runtimeMapFeaturesFixture(projects)
   return {
     endpoint: '/api/v1/bootstrap',
     status: 'SUCCESS',
@@ -194,7 +284,7 @@ export function bootstrapFixture(): BootstrapSuccessEnvelope {
         unique_funding_priority_score_count: 35,
         tied_score_group_count: 24,
         projects_in_tied_score_groups: 95,
-        projects: runtimeProjectsFixture(),
+        projects,
       },
       map_context: {
         type: 'FeatureCollection',
@@ -203,18 +293,24 @@ export function bootstrapFixture(): BootstrapSuccessEnvelope {
         historical_decision_snapshot_date: '2026-01-21',
         project_identity_key: 'decision_unit_id',
         geometry_authority: 'GOVERNED_RUNTIME_GEOMETRY_ONLY',
-        mapping_status: 'NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE',
+        mapping_status: 'PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE',
         analytical_project_count: 106,
-        mapped_project_count: 0,
-        unmapped_project_count: 106,
+        mapped_project_count: 74,
+        unmapped_project_count: 32,
         geometry_required_for_model_eligibility: false,
         geometry_required_for_portfolio_selection: false,
         fabricated_geometry: false,
-        crs_contract: 'RFC_7946_EPSG_4326_IF_GEOMETRY_PRESENT',
+        derived_geocoded_geometry: false,
+        inferred_or_centroid_geometry: false,
+        crs_contract: 'RFC_7946_EPSG_4326',
+        governance_decision_id: 'D-116',
+        governance_reconciliation_sha256: 'a'.repeat(64),
+        candidate_geometry_snapshot_sha256: 'b'.repeat(64),
         limitations: [
-          'No governed cross-category runtime geometry is available.',
+          'Only governed source-native geometry may be displayed.',
+          'Projects without governed geometry remain available outside the map.',
         ],
-        features: [],
+        features: mapFeatures,
       },
       public_configuration: {
         environment_label: 'test',

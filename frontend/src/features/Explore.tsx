@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import type {
   RuntimeCatalog,
   RuntimeMapContext,
@@ -99,6 +99,19 @@ function sortProjects(
   })
 }
 
+function mapEvidenceLabel(
+  feature: RuntimeMapContext['features'][number] | undefined,
+): string {
+  if (feature === undefined) return 'Location unavailable'
+  if (feature.properties.display_role === 'PARK_SITE_CONTEXT') {
+    return 'Park/site context'
+  }
+  if (feature.properties.display_role === 'FACILITY_SITE_CONTEXT') {
+    return 'Facility/site context'
+  }
+  return 'Project location'
+}
+
 export function Explore({
   catalog,
   mapContext,
@@ -107,6 +120,8 @@ export function Explore({
   onSessionChange,
   onOpenFundingPlan = () => undefined,
 }: ExploreProps) {
+  const projectButtonRefs = useRef(new Map<string, HTMLButtonElement>())
+  const pendingMapSelection = useRef<string | null>(null)
   const filters = readExploreFilters(session.presentation)
   const normalizedSearch = session.presentation.search_text.trim().toLocaleLowerCase()
 
@@ -141,6 +156,48 @@ export function Explore({
             project.decision_unit_id ===
             session.presentation.selected_decision_unit_id,
         ) ?? null
+
+  const selectedMapFeature =
+    selectedProject === null
+      ? null
+      : mapContext.features.find(
+          (feature) =>
+            feature.properties.decision_unit_id ===
+            selectedProject.decision_unit_id,
+        ) ?? null
+
+  const mapFeatureByDecisionUnitId = useMemo(
+    () =>
+      new Map(
+        mapContext.features.map((feature) => [
+          feature.properties.decision_unit_id,
+          feature,
+        ]),
+      ),
+    [mapContext.features],
+  )
+
+  const visibleDecisionUnitIds = useMemo(
+    () => new Set(visibleProjects.map((project) => project.decision_unit_id)),
+    [visibleProjects],
+  )
+
+  useEffect(() => {
+    const selectedDecisionUnitId =
+      session.presentation.selected_decision_unit_id
+
+    if (
+      selectedDecisionUnitId === null ||
+      pendingMapSelection.current !== selectedDecisionUnitId
+    ) {
+      return
+    }
+
+    projectButtonRefs.current
+      .get(selectedDecisionUnitId)
+      ?.scrollIntoView?.({ block: 'nearest' })
+    pendingMapSelection.current = null
+  }, [session.presentation.selected_decision_unit_id])
 
   const hasActiveFilters =
     session.presentation.search_text.length > 0 ||
@@ -330,6 +387,16 @@ export function Explore({
         <AustinContextMap
           mapContext={mapContext}
           publicConfiguration={publicConfiguration}
+          visibleDecisionUnitIds={visibleDecisionUnitIds}
+          selectedDecisionUnitId={
+            session.presentation.selected_decision_unit_id
+          }
+          onSelectProject={(decisionUnitId) => {
+            pendingMapSelection.current = decisionUnitId
+            onSessionChange(
+              selectExploreProject(session, decisionUnitId),
+            )
+          }}
         />
         <section className="projects-panel" aria-labelledby="projects-heading">
           <div className="projects-heading">
@@ -363,6 +430,10 @@ export function Explore({
                 const selected =
                   project.decision_unit_id ===
                   session.presentation.selected_decision_unit_id
+                const mapFeature = mapFeatureByDecisionUnitId.get(
+                  project.decision_unit_id,
+                )
+                const evidenceLabel = mapEvidenceLabel(mapFeature)
 
                 return (
                   <li key={project.decision_unit_id}>
@@ -375,6 +446,18 @@ export function Explore({
                       }
                       aria-pressed={selected}
                       aria-label={`View details for ${project.governed_name}`}
+                      ref={(element) => {
+                        if (element === null) {
+                          projectButtonRefs.current.delete(
+                            project.decision_unit_id,
+                          )
+                        } else {
+                          projectButtonRefs.current.set(
+                            project.decision_unit_id,
+                            element,
+                          )
+                        }
+                      }}
                       onClick={() =>
                         onSessionChange(
                           selectExploreProject(session, project.decision_unit_id),
@@ -388,6 +471,24 @@ export function Explore({
                         </span>
                       </span>
                       <span className="project-source">{project.source_department}</span>
+                      <span
+                        className={
+                          mapFeature === undefined
+                            ? 'project-map-status project-map-status-unavailable'
+                            : `project-map-status ${
+                                mapFeature.properties.display_role ===
+                                'PARK_SITE_CONTEXT'
+                                  ? 'project-map-status-park'
+                                  : mapFeature.properties.display_role ===
+                                      'FACILITY_SITE_CONTEXT'
+                                    ? 'project-map-status-facility'
+                                    : 'project-map-status-project'
+                              }`
+                        }
+                      >
+                        <span aria-hidden="true">●</span>
+                        {evidenceLabel}
+                      </span>
                       <span className="project-card-metrics">
                         <span>
                           <small>Governed request</small>
@@ -418,6 +519,7 @@ export function Explore({
           <div className="detail-panel-region" aria-live="polite">
             <ProjectDetail
               project={selectedProject}
+              mapFeature={selectedMapFeature}
               onClose={() =>
                 onSessionChange(selectExploreProject(session, null))
               }

@@ -2607,9 +2607,33 @@ body {
   border-radius: 3px;
 }
 
-.layer-swatch-map {
-  border-color: #4d87ba;
-  background: #dcecf8;
+.layer-swatch-project {
+  border-color: #ffffff;
+  border-radius: 50%;
+  background: #6557e8;
+  box-shadow: 0 0 0 1px #493bbd;
+}
+
+.layer-swatch-facility {
+  border-color: #a65b13;
+  background: #f5ad54;
+}
+
+.layer-swatch-park {
+  border-color: #197249;
+  background: #66bd86;
+}
+
+.layer-swatch-selected {
+  border-color: #ffffff;
+  border-radius: 50%;
+  background: #141b2d;
+  box-shadow: 0 0 0 2px #7568ff;
+}
+
+.layer-row-selected {
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
 }
 
 .map-layers-popover p {
@@ -2625,6 +2649,11 @@ body {
   position: relative;
   min-height: 0;
   isolation: isolate;
+}
+
+.map-canvas {
+  position: absolute;
+  inset: 0;
 }
 
 .map-neutral-fallback {
@@ -2654,6 +2683,67 @@ body {
 .austin-map .leaflet-control-zoom a {
   color: #26384d;
   border-color: #d7e0ea;
+}
+
+.austin-map .governed-map-feature {
+  cursor: pointer;
+  transition:
+    fill-opacity 140ms ease,
+    stroke-width 140ms ease,
+    filter 140ms ease;
+}
+
+.austin-map .map-feature-project {
+  fill: #6557e8;
+  fill-opacity: 0.88;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+}
+
+.austin-map .map-feature-project-site {
+  fill: #7769ed;
+  fill-opacity: 0.32;
+  stroke: #4c3dc5;
+  stroke-dasharray: 5 3;
+  stroke-width: 2;
+}
+
+.austin-map .map-feature-facility-context {
+  fill: #f5ad54;
+  fill-opacity: 0.4;
+  stroke: #9d5512;
+  stroke-width: 2;
+}
+
+.austin-map .map-feature-park-context {
+  fill: #66bd86;
+  fill-opacity: 0.42;
+  stroke: #176943;
+  stroke-width: 2;
+}
+
+.austin-map .governed-map-feature:hover,
+.austin-map .governed-map-feature:focus {
+  fill-opacity: 0.76;
+  filter: drop-shadow(0 1px 3px rgb(18 29 47 / 0.5));
+  outline: none;
+  stroke-width: 3;
+}
+
+.austin-map .governed-map-feature-selected {
+  fill-opacity: 0.9;
+  filter: drop-shadow(0 2px 5px rgb(23 18 74 / 0.65));
+  stroke: #171d2c;
+  stroke-width: 4;
+}
+
+.austin-map .leaflet-tooltip {
+  padding: 0.5rem 0.6rem;
+  color: var(--ink);
+  border: 1px solid #d7deea;
+  border-radius: 0.45rem;
+  box-shadow: 0 8px 22px rgb(20 38 68 / 0.16);
+  font: 0.74rem/1.4 inherit;
 }
 
 .map-location-card {
@@ -2758,6 +2848,32 @@ body {
   font-size: 0.7rem;
 }
 
+.project-map-status {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  width: fit-content;
+  color: #4c3dc5;
+  font-size: 0.66rem;
+  font-weight: 750;
+}
+
+.project-map-status-facility {
+  color: #8d4b0c;
+}
+
+.project-map-status-park {
+  color: #176943;
+}
+
+.project-map-status-unavailable {
+  color: #6b7889;
+}
+
+.project-map-status-unavailable > span {
+  color: #aab3bf;
+}
+
 .category-badge,
 .tie-badge {
   font-size: 0.62rem;
@@ -2817,6 +2933,40 @@ body {
 .project-detail-heading h2 {
   font-size: 1.1rem;
   line-height: 1.3;
+}
+
+.map-evidence-role {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0 0 0.85rem;
+  padding: 0.35rem 0.6rem;
+  color: #4434c8;
+  border-radius: 999px;
+  background: var(--purple-soft);
+  font-size: 0.76rem;
+}
+
+.map-evidence-unavailable {
+  padding: 0.8rem;
+  color: #526174;
+  border: 1px solid #dbe1e8;
+  border-radius: 0.55rem;
+  background: #f7f9fb;
+}
+
+.map-evidence-unavailable strong {
+  color: #303d4f;
+}
+
+.map-evidence-unavailable p {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.detail-list-wide {
+  grid-column: 1 / -1;
 }
 
 .priority-summary > div {
@@ -3277,13 +3427,28 @@ body {
 
   .map-panel,
   .map-panel .austin-map-frame {
-    min-height: 430px;
+    min-height: 560px;
+  }
+
+  .map-canvas {
+    position: relative;
+    inset: auto;
+    min-height: 350px;
+  }
+
+  .austin-map {
+    position: relative;
+    inset: auto;
+    min-height: 350px;
   }
 
   .map-location-card {
-    top: 0.65rem;
-    left: 0.65rem;
-    width: calc(100% - 1.3rem);
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 2;
+    width: auto;
+    margin: 0.65rem;
   }
 
   .explore-plan-strip {

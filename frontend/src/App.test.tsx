@@ -85,7 +85,9 @@ describe('ClimateCapital application shell', () => {
     ).toBeInTheDocument()
     expect(screen.getByLabelText('106 of 106 projects')).toBeInTheDocument()
     expect(screen.getAllByText('$1,973,520,000')).toHaveLength(2)
-    expect(screen.getByText(/0 mapped · 106 unmapped/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/74 mapped · 32 location unavailable/i),
+    ).toBeInTheDocument()
     expect(
       screen.getByText('Austin Climate Investment Plan'),
     ).toBeInTheDocument()

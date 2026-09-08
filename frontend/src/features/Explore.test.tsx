@@ -166,16 +166,78 @@ describe('Explore', () => {
     )
   })
 
-  it('shows an Austin context map with truthful zero-geometry treatment and no pins', () => {
+  it('shows governed map coverage and distinguishes each evidence role', async () => {
+    const user = userEvent.setup()
     render(<Harness />)
 
     expect(
-      screen.getByRole('heading', { name: /explore the city/i }),
+      screen.getByRole('heading', { name: /explore project locations/i }),
     ).toBeInTheDocument()
-    expect(screen.getByText(/0 mapped · 106 unmapped/i)).toBeInTheDocument()
-    expect(screen.getByText(/pins are withheld/i)).toBeInTheDocument()
-    expect(screen.queryByRole('img', { name: /project map/i })).toBeNull()
-    expect(document.querySelector('.leaflet-marker-icon')).toBeNull()
+    expect(
+      screen.getByText(/74 mapped · 32 location unavailable/i),
+    ).toBeInTheDocument()
+    expect(screen.getByText(/showing 74 mapped results/i)).toBeInTheDocument()
+
+    await user.click(screen.getByText('Layers'))
+
+    const legend = document.querySelector('.map-layers-popover')
+    expect(legend).not.toBeNull()
+    expect(within(legend as HTMLElement).getByText('Project location')).toBeInTheDocument()
+    expect(
+      within(legend as HTMLElement).getByText('Facility/site context'),
+    ).toBeInTheDocument()
+    expect(
+      within(legend as HTMLElement).getByText('Park/site context'),
+    ).toBeInTheDocument()
+    expect(within(legend as HTMLElement).getByText('Selected project')).toBeInTheDocument()
+    expect(
+      within(legend as HTMLElement).getByText(
+        /must not be interpreted as a capital-project/i,
+      ),
+    ).toBeInTheDocument()
+  })
+
+  it('opens mapped project detail with governed role, source, and caveat', async () => {
+    const user = userEvent.setup()
+    render(<Harness />)
+
+    const mappedProject = screen.getByRole('button', {
+      name: 'View details for Transportation fixture project 1',
+    })
+    expect(within(mappedProject).getByText('Project location')).toBeInTheDocument()
+
+    await user.click(mappedProject)
+
+    const detail = screen.getByRole('complementary', {
+      name: 'Transportation fixture project 1',
+    })
+    expect(within(detail).getByText('Map evidence')).toBeInTheDocument()
+    expect(
+      within(detail).getByText('Project location · official display point'),
+    ).toBeInTheDocument()
+    expect(detail).toHaveTextContent('City of Austin · Fixture governed GIS source')
+    expect(detail).toHaveTextContent(/not an engineering or construction footprint/i)
+  })
+
+  it('keeps an unmapped project in the list and gives it no invented map evidence', async () => {
+    const user = userEvent.setup()
+    render(<Harness />)
+
+    const unmappedProject = screen.getByRole('button', {
+      name: 'View details for Community Facilities fixture project 38',
+    })
+    expect(
+      within(unmappedProject).getByText('Location unavailable'),
+    ).toBeInTheDocument()
+
+    await user.click(unmappedProject)
+
+    const detail = screen.getByRole('complementary', {
+      name: 'Community Facilities fixture project 38',
+    })
+    expect(within(detail).getByText('Map location unavailable')).toBeInTheDocument()
+    expect(detail).toHaveTextContent(/the map does not move to or invent a location/i)
+    expect(within(detail).queryByText('Geometry source')).toBeNull()
   })
 
   it('shows a distinct no-results state and clears all filters', async () => {

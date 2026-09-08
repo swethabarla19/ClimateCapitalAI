@@ -69,10 +69,129 @@ describe('cross-category API client', () => {
       1_973_520_000,
     )
     expect(result.data.map_context).toMatchObject({
-      mapped_project_count: 0,
-      unmapped_project_count: 106,
+      mapping_status: 'PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE',
+      mapped_project_count: 74,
+      unmapped_project_count: 32,
       fabricated_geometry: false,
-      project_identity_key: 'decision_unit_id',
+      derived_geocoded_geometry: false,
+      inferred_or_centroid_geometry: false,
+      governance_decision_id: 'D-116',
+    })
+    expect(result.data.map_context.features).toHaveLength(74)
+    expect(
+      new Set(
+        result.data.map_context.features.map(
+          (feature) => feature.properties.decision_unit_id,
+        ),
+      ).size,
+    ).toBe(74)
+  })
+
+  it('rejects governed map features with invalid coordinates', async () => {
+    const payload = bootstrapFixture()
+    const feature = payload.data.map_context.features[0]
+
+    if (feature === undefined || feature.geometry.type !== 'Point') {
+      throw new Error('Expected a point fixture.')
+    }
+
+    feature.geometry.coordinates = [999, 30]
+
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+
+    const error = await fetchBootstrap().catch((caught: unknown) => caught)
+
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      status: 200,
+      errorCode: 'UNEXPECTED_PAYLOAD',
+    })
+  })
+
+  it('rejects an unclosed governed polygon ring', async () => {
+    const payload = bootstrapFixture()
+    const feature = payload.data.map_context.features[64]
+
+    if (feature === undefined || feature.geometry.type !== 'Polygon') {
+      throw new Error('Expected a polygon fixture.')
+    }
+
+    feature.geometry.coordinates[0]![4] = [-97.7, 30.3]
+
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+
+    const error = await fetchBootstrap().catch((caught: unknown) => caught)
+
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      status: 200,
+      errorCode: 'UNEXPECTED_PAYLOAD',
+    })
+  })
+
+  it('rejects geometry metadata that disagrees with the GeoJSON geometry', async () => {
+    const payload = bootstrapFixture()
+    const feature = payload.data.map_context.features[0]
+
+    if (feature === undefined) {
+      throw new Error('Expected a mapped feature fixture.')
+    }
+
+    feature.properties.geometry_type = 'polygon'
+
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+
+    const error = await fetchBootstrap().catch((caught: unknown) => caught)
+
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      status: 200,
+      errorCode: 'UNEXPECTED_PAYLOAD',
+    })
+  })
+
+  it('rejects duplicate governed map project identities', async () => {
+    const payload = bootstrapFixture()
+    const first = payload.data.map_context.features[0]
+    const second = payload.data.map_context.features[1]
+
+    if (first === undefined || second === undefined) {
+      throw new Error('Expected mapped feature fixtures.')
+    }
+
+    second.id = first.id
+    second.properties.decision_unit_id = first.properties.decision_unit_id
+
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+
+    const error = await fetchBootstrap().catch((caught: unknown) => caught)
+
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      status: 200,
+      errorCode: 'UNEXPECTED_PAYLOAD',
+    })
+  })
+
+  it('rejects governed map features that do not belong to the project catalog', async () => {
+    const payload = bootstrapFixture()
+    const feature = payload.data.map_context.features[0]
+
+    if (feature === undefined) {
+      throw new Error('Expected a mapped feature fixture.')
+    }
+
+    feature.id = 'unknown/project'
+    feature.properties.decision_unit_id = 'unknown/project'
+
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+
+    const error = await fetchBootstrap().catch((caught: unknown) => caught)
+
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      status: 200,
+      errorCode: 'UNEXPECTED_PAYLOAD',
     })
   })
 

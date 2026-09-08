@@ -2,14 +2,14 @@
  * Frontend transport contracts for the activated cross-category runtime.
  *
  * The backend Pydantic models and generated JSON Schemas remain authoritative.
- * These types intentionally mirror only governed v2 fields consumed by the SPA.
+ * These types intentionally mirror only governed runtime fields consumed by the SPA.
  */
 
 export const API_NAMESPACE = '/api/v1' as const
 export const CATALOG_CONTRACT_VERSION =
   'p0-cross-category-catalog/2.0.0' as const
 export const MAP_CONTEXT_CONTRACT_VERSION =
-  'p0-cross-category-map-context/2.0.0' as const
+  'p0-cross-category-map-context/3.0.0' as const
 export const FUNDING_PLAN_CONTRACT_VERSION =
   'p0-cross-category-funding-plan/2.0.0' as const
 export const BENCHMARK_CONTRACT_VERSION =
@@ -121,6 +121,53 @@ export interface RuntimeCatalog {
   projects: RuntimeProject[]
 }
 
+export type RuntimeMapDisplayRole =
+  | 'PROJECT_DISPLAY_POINT'
+  | 'PROJECT_SITE'
+  | 'PROJECT_PARCEL'
+  | 'PARK_SITE_CONTEXT'
+  | 'FACILITY_SITE_CONTEXT'
+
+export interface RuntimeMapFeatureProperties {
+  decision_unit_id: string
+  governed_name: string
+  presentation_category: PresentationCategory
+  display_role: RuntimeMapDisplayRole
+  geometry_type: 'point' | 'polygon'
+  geometry_origin: 'SOURCE_NATIVE_FEATURE'
+  confidence: 'HIGH'
+  governance_decision_id: 'D-116'
+  caveats: string[]
+  historical_fit_class: string
+  historical_fit_judgment: string
+  source_agency: string
+  source_title: string
+  source_feature_id: string
+  source_url: string
+  [key: string]: unknown
+}
+
+export type RuntimeMapGeometry =
+  | {
+      type: 'Point'
+      coordinates: [number, number]
+    }
+  | {
+      type: 'Polygon'
+      coordinates: number[][][]
+    }
+  | {
+      type: 'MultiPolygon'
+      coordinates: number[][][][]
+    }
+
+export interface RuntimeMapFeature {
+  type: 'Feature'
+  id: string
+  geometry: RuntimeMapGeometry
+  properties: RuntimeMapFeatureProperties
+}
+
 export interface RuntimeMapContext {
   type: 'FeatureCollection'
   contract_version: typeof MAP_CONTEXT_CONTRACT_VERSION
@@ -128,16 +175,21 @@ export interface RuntimeMapContext {
   historical_decision_snapshot_date: '2026-01-21'
   project_identity_key: 'decision_unit_id'
   geometry_authority: 'GOVERNED_RUNTIME_GEOMETRY_ONLY'
-  mapping_status: 'NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE'
+  mapping_status: 'PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE'
   analytical_project_count: number
   mapped_project_count: number
   unmapped_project_count: number
   geometry_required_for_model_eligibility: false
   geometry_required_for_portfolio_selection: false
   fabricated_geometry: false
-  crs_contract: 'RFC_7946_EPSG_4326_IF_GEOMETRY_PRESENT'
+  derived_geocoded_geometry: false
+  inferred_or_centroid_geometry: false
+  crs_contract: 'RFC_7946_EPSG_4326'
+  governance_decision_id: 'D-116'
+  governance_reconciliation_sha256: string
+  candidate_geometry_snapshot_sha256: string
   limitations: string[]
-  features: Array<Record<string, unknown>>
+  features: RuntimeMapFeature[]
 }
 
 export interface PublicConfiguration {

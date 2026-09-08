@@ -11,6 +11,7 @@ import {
   type HistoricalBenchmarkSuccessEnvelope,
   type OfficialPrbComponents,
   type ResponseIdentity,
+  type RuntimeMapFeature,
 } from './contracts'
 
 export type ApiClientErrorKind =
@@ -70,6 +71,119 @@ function isFiniteNumber(value: unknown): value is number {
   return typeof value === 'number' && Number.isFinite(value)
 }
 
+function isSha256(value: unknown): value is string {
+  return typeof value === 'string' && /^[0-9a-f]{64}$/.test(value)
+}
+
+function isGeoJsonPosition(value: unknown): value is [number, number] {
+  return (
+    Array.isArray(value) &&
+    value.length === 2 &&
+    isFiniteNumber(value[0]) &&
+    isFiniteNumber(value[1]) &&
+    value[0] >= -180 &&
+    value[0] <= 180 &&
+    value[1] >= -90 &&
+    value[1] <= 90
+  )
+}
+
+function isGeoJsonLinearRing(value: unknown): boolean {
+  if (
+    !Array.isArray(value) ||
+    value.length < 4 ||
+    !value.every(isGeoJsonPosition)
+  ) {
+    return false
+  }
+
+  const first = value[0]
+  const last = value[value.length - 1]
+
+  return first[0] === last[0] && first[1] === last[1]
+}
+
+function isGeoJsonPolygonCoordinates(value: unknown): boolean {
+  return (
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.every(isGeoJsonLinearRing)
+  )
+}
+
+function validateRuntimeMapFeature(value: unknown): value is RuntimeMapFeature {
+  if (
+    !isRecord(value) ||
+    value.type !== 'Feature' ||
+    typeof value.id !== 'string' ||
+    !isRecord(value.geometry) ||
+    !isRecord(value.properties)
+  ) {
+    return false
+  }
+
+  const geometry = value.geometry
+  const properties = value.properties
+
+  const validGeometry =
+    (geometry.type === 'Point' &&
+      isGeoJsonPosition(geometry.coordinates)) ||
+    (geometry.type === 'Polygon' &&
+      isGeoJsonPolygonCoordinates(geometry.coordinates)) ||
+    (geometry.type === 'MultiPolygon' &&
+      Array.isArray(geometry.coordinates) &&
+      geometry.coordinates.length > 0 &&
+      geometry.coordinates.every(isGeoJsonPolygonCoordinates))
+
+  const validDisplayRole =
+    properties.display_role === 'PROJECT_DISPLAY_POINT' ||
+    properties.display_role === 'PROJECT_SITE' ||
+    properties.display_role === 'PROJECT_PARCEL' ||
+    properties.display_role === 'PARK_SITE_CONTEXT' ||
+    properties.display_role === 'FACILITY_SITE_CONTEXT'
+
+  const validPresentationCategory =
+    properties.presentation_category === 'Transportation' ||
+    properties.presentation_category === 'Parks & Open Space' ||
+    properties.presentation_category === 'Watershed' ||
+    properties.presentation_category === 'Community Facilities'
+
+  const expectedGeometryType =
+    geometry.type === 'Point' ? 'point' : 'polygon'
+
+  return (
+    validGeometry &&
+    validDisplayRole &&
+    validPresentationCategory &&
+    value.id.length > 0 &&
+    typeof properties.decision_unit_id === 'string' &&
+    properties.decision_unit_id.length > 0 &&
+    properties.decision_unit_id === value.id &&
+    typeof properties.governed_name === 'string' &&
+    properties.governed_name.length > 0 &&
+    properties.geometry_type === expectedGeometryType &&
+    properties.geometry_origin === 'SOURCE_NATIVE_FEATURE' &&
+    properties.confidence === 'HIGH' &&
+    properties.governance_decision_id === 'D-116' &&
+    Array.isArray(properties.caveats) &&
+    properties.caveats.length > 0 &&
+    properties.caveats.every(
+      (entry) => typeof entry === 'string' && entry.length > 0,
+    ) &&
+    typeof properties.historical_fit_class === 'string' &&
+    properties.historical_fit_class.length > 0 &&
+    typeof properties.historical_fit_judgment === 'string' &&
+    properties.historical_fit_judgment.length > 0 &&
+    typeof properties.source_agency === 'string' &&
+    properties.source_agency.length > 0 &&
+    typeof properties.source_title === 'string' &&
+    properties.source_title.length > 0 &&
+    typeof properties.source_feature_id === 'string' &&
+    properties.source_feature_id.length > 0 &&
+    typeof properties.source_url === 'string' &&
+    properties.source_url.length > 0
+  )
+}
 function isWholeNumber(value: unknown): value is number {
   return isFiniteNumber(value) && Number.isInteger(value)
 }
@@ -333,16 +447,22 @@ export function parseBootstrap(
     mapContext.historical_decision_snapshot_date !== '2026-01-21' ||
     mapContext.project_identity_key !== 'decision_unit_id' ||
     mapContext.geometry_authority !== 'GOVERNED_RUNTIME_GEOMETRY_ONLY' ||
-    mapContext.mapping_status !== 'NO_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE' ||
+    mapContext.mapping_status !== 'PARTIAL_GOVERNED_RUNTIME_GEOMETRY_AVAILABLE' ||
     !isWholeNumber(mapContext.analytical_project_count) ||
     !isWholeNumber(mapContext.mapped_project_count) ||
     !isWholeNumber(mapContext.unmapped_project_count) ||
     mapContext.geometry_required_for_model_eligibility !== false ||
     mapContext.geometry_required_for_portfolio_selection !== false ||
     mapContext.fabricated_geometry !== false ||
-    mapContext.crs_contract !== 'RFC_7946_EPSG_4326_IF_GEOMETRY_PRESENT' ||
+    mapContext.derived_geocoded_geometry !== false ||
+    mapContext.inferred_or_centroid_geometry !== false ||
+    mapContext.governance_decision_id !== 'D-116' ||
+    !isSha256(mapContext.governance_reconciliation_sha256) ||
+    !isSha256(mapContext.candidate_geometry_snapshot_sha256) ||
+    mapContext.crs_contract !== 'RFC_7946_EPSG_4326' ||
     !isStringArray(mapContext.limitations) ||
-    !Array.isArray(mapContext.features)
+    !Array.isArray(mapContext.features) ||
+    !mapContext.features.every(validateRuntimeMapFeature)
   ) {
     return malformed('Bootstrap map context was malformed.', status)
   }
@@ -353,6 +473,24 @@ export function parseBootstrap(
       mapContext.analytical_project_count
   ) {
     return malformed('Bootstrap map counts did not reconcile.', status)
+  }
+  const mapFeatureIds = mapContext.features.map(
+    (feature) => (feature as RuntimeMapFeature).properties.decision_unit_id,
+  )
+
+  const catalogDecisionUnitIds = new Set(
+    projects.map(
+      (project) =>
+        (project as Record<string, unknown>).decision_unit_id as string,
+    ),
+  )
+
+  if (
+    mapContext.features.length !== mapContext.mapped_project_count ||
+    new Set(mapFeatureIds).size !== mapFeatureIds.length ||
+    mapFeatureIds.some((decisionUnitId) => !catalogDecisionUnitIds.has(decisionUnitId))
+  ) {
+    return malformed('Bootstrap map features did not reconcile with the catalog.', status)
   }
 
   if (
