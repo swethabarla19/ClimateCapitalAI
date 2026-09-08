@@ -274,13 +274,13 @@ export function HistoricalBenchmark({
     <main id="historical-benchmark" className="main-content benchmark-workspace">
       <section className="benchmark-intro" aria-labelledby="benchmark-heading">
         <div>
-          <p className="eyebrow">Observed historical outcome · {dateLabel}</p>
+          <p className="eyebrow">Historical reference · {dateLabel}</p>
           <h1 id="benchmark-heading">{dateLabel} Historical Benchmark</h1>
           <p>
-            Historical Benchmark represents the City of Austin {dateLabel}{' '}
-            Initial Draft Recommendation snapshot. It is retained for retrospective
-            comparison only and does not influence ClimateCapital Funding Priority
-            or Funding Plan construction.
+            This page shows the City of Austin&apos;s {dateLabel} Initial Draft
+            Recommendation as a historical reference. It can be compared with a
+            ClimateCapital Funding Plan, but it never changes project scores, ranks,
+            or selections.
           </p>
         </div>
         <div className="benchmark-role-badge">
@@ -291,23 +291,24 @@ export function HistoricalBenchmark({
 
       <section className="benchmark-governance" aria-labelledby="benchmark-role-heading">
         <div>
-          <p className="eyebrow">Benchmark isolation</p>
-          <h2 id="benchmark-role-heading">Historical outcome, not model input</h2>
+          <p className="eyebrow">How this benchmark is used</p>
+          <h2 id="benchmark-role-heading">
+            Historical outcome, not a Funding Plan input
+          </h2>
           <p>
-            Historical recommendation data does not change project eligibility,
-            Funding Priority, project rank, Funding Plan selection, boundary
-            resolution, or analyst acknowledgement behavior.
+            Historical recommendation information is used only for comparison.
+            It does not change Funding Priority, project rank, Funding Plan
+            selection, or Analyst Resolution.
           </p>
         </div>
         <dl>
           <div>
-            <dt>Ranking input</dt>
-            <dd>Ranking input: {benchmark.ranking_input ? 'Yes' : 'No'}</dd>
+            <dt>Changes Funding Priority?</dt>
+            <dd>{benchmark.ranking_input ? 'Yes' : 'No'}</dd>
           </div>
           <div>
-            <dt>Portfolio-selection input</dt>
+            <dt>Changes Funding Plan selection?</dt>
             <dd>
-              Funding Plan selection input:{' '}
               {benchmark.portfolio_selection_input ? 'Yes' : 'No'}
             </dd>
           </div>
@@ -338,13 +339,16 @@ export function HistoricalBenchmark({
             <strong className="benchmark-stat-value">
               {formatCompactDollars(benchmark.matched_analytical_cohort_dollars)}
             </strong>
-            <span>Recommendation attached to the same 106-project cohort</span>
+            <span>
+              Recommendation associated with projects in ClimateCapital&apos;s
+              106-project universe
+            </span>
           </article>
           <article>
             <strong className="benchmark-stat-value">
               {formatCompactDollars(benchmark.outside_analytical_cohort_dollars)}
             </strong>
-            <span>Recommendation outside the analytical cohort</span>
+            <span>Recommendation outside that project-level universe</span>
           </article>
           <article>
             <strong className="benchmark-stat-value">
@@ -369,7 +373,7 @@ export function HistoricalBenchmark({
             The full {formatCompactDollars(benchmark.full_initial_recommendation_dollars)}{' '}
             citywide package included{' '}
             {formatCompactDollars(benchmark.matched_analytical_cohort_dollars)} attached
-            to projects in ClimateCapital&apos;s 106-project analytical cohort and{' '}
+            to projects in ClimateCapital&apos;s 106-project universe and{' '}
             {formatCompactDollars(benchmark.outside_analytical_cohort_dollars)} outside
             this project-level cohort. This does not establish a model budget.
           </p>

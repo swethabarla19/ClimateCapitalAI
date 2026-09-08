@@ -116,13 +116,14 @@ describe('January 21 Historical Benchmark', () => {
     await screen.findByRole('heading', {
       name: 'January 21, 2026 Historical Benchmark',
     })
-    expect(screen.getByText('Ranking input: No')).toBeInTheDocument()
-    expect(screen.getByText('Funding Plan selection input: No')).toBeInTheDocument()
+    expect(screen.getByText('Changes Funding Priority?')).toBeInTheDocument()
+    expect(screen.getByText('Changes Funding Plan selection?')).toBeInTheDocument()
+    expect(screen.getAllByText('No')).toHaveLength(2)
     expect(document.body).toHaveTextContent(
-      /retrospective comparison only/i,
+      /historical recommendation information is used only for comparison/i,
     )
     expect(document.body).toHaveTextContent(
-      /does not influence.*Funding Priority.*Funding Plan construction/i,
+      /does not change Funding Priority.*Funding Plan selection.*Analyst Resolution/i,
     )
   })
 
@@ -200,7 +201,9 @@ describe('January 21 Historical Benchmark', () => {
     renderBenchmark()
 
     expect(
-      await screen.findByText(/City of Austin January 21, 2026/i),
+      await screen.findByRole('heading', {
+      name: 'January 21, 2026 Historical Benchmark',
+      }),
     ).toBeInTheDocument()
     expect(document.body).not.toHaveTextContent(/February 2026|March 2026/)
   })

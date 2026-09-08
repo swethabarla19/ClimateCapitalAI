@@ -20,6 +20,61 @@ describe('ClimateCapital application shell', () => {
     expect(
       screen.getByText(/loading governed release data/i),
     ).toBeInTheDocument()
+})
+  it('presents plain-language Data & Methodology guidance and the Gemini decision boundary', async () => {
+  const user = userEvent.setup()
+
+  render(<App bootstrapLoader={async () => bootstrapFixture()} />)
+
+  await user.click(
+    await screen.findByRole('link', { name: 'Data & Methodology' }),
+  )
+
+  expect(
+    screen.getByRole('heading', { name: 'Data & Methodology' }),
+  ).toBeInTheDocument()
+
+  expect(
+    screen.getByRole('heading', { name: 'What is Funding Priority?' }),
+  ).toBeInTheDocument()
+
+  expect(
+    screen.getByText(/PRB stands for Project Review Board/i),
+  ).toBeInTheDocument()
+
+  expect(document.body).toHaveTextContent(
+    /ClimateCapital calculates the Funding Plan; Gemini helps you understand it/i,
+  )
+
+  expect(document.body).toHaveTextContent(
+    /not an official City of Austin recommendation/i,
+  )
+})
+
+  it('provides first-time-user Help & Resources guidance without giving Gemini decision authority', async () => {
+    const user = userEvent.setup()
+
+    render(<App bootstrapLoader={async () => bootstrapFixture()} />)
+
+    await user.click(
+      await screen.findByRole('link', { name: 'Help & Resources' }),
+    )
+
+    expect(
+      screen.getByRole('heading', { name: 'Help & Resources' }),
+    ).toBeInTheDocument()
+
+    expect(
+      screen.getByRole('heading', { name: 'Quick Start' }),
+    ).toBeInTheDocument()
+
+    expect(document.body).toHaveTextContent(
+      /Gemini explains the information; it does not make funding decisions/i,
+    )
+
+    expect(document.body).toHaveTextContent(
+      /The final choice remains an analyst decision/i,
+    )
   })
 
   it('initializes from the activated cross-category bootstrap shape', async () => {
@@ -32,7 +87,7 @@ describe('ClimateCapital application shell', () => {
     expect(screen.getByText('$1,973,520,000')).toBeInTheDocument()
     expect(screen.getByText(/0 mapped and 106 unmapped projects/i)).toBeInTheDocument()
     expect(
-      screen.getByText('Austin Cross-Category · January 21, 2026'),
+      screen.getByText('Austin 2026 Bond Program · January 21, 2026'),
     ).toBeInTheDocument()
     expect(screen.queryByText(/12 projects/i)).not.toBeInTheDocument()
   })

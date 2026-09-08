@@ -51,14 +51,14 @@ const budgetPresets: BudgetPreset[] = [
     amountLabel: '$332M',
     label: 'Historical matched-cohort reference',
     description:
-      '$332M is the apples-to-apples historical recommendation amount attached to the same 106-project analytical cohort.',
+      '$332M is the historical recommendation amount associated with projects in the same 106-project universe modeled by ClimateCapital.',
   },
   {
     dollars: 700_000_000,
     amountLabel: '$700M',
     label: 'Full January Initial Draft Recommendation reference',
     description:
-      '$700M is the full historical Initial Draft Recommendation package and includes $368M outside the 106-project analytical cohort.',
+      '$700M is the full historical Initial Draft Recommendation package and includes $368M outside the 106-project universe modeled by ClimateCapital.',
   },
   {
     dollars: 750_000_000,
@@ -225,7 +225,7 @@ function PlanResult({
       <section className="plan-summary-panel" aria-label="Plan summary">
         <div className="plan-result-heading">
           <div>
-            <p className="eyebrow">Authoritative backend evaluation</p>
+            <p className="eyebrow">Funding Plan result</p>
             <h2>
               {result.status === 'COMPLETE'
                 ? 'Plan evaluation complete'
@@ -332,7 +332,7 @@ function PlanResult({
       <section className="selected-projects-panel" aria-labelledby="selected-heading">
         <div className="selected-projects-heading">
           <div>
-            <p className="eyebrow">Backend-selected plan membership</p>
+            <p className="eyebrow">Projects in this Funding Plan</p>
             <h2 id="selected-heading">Selected projects</h2>
           </div>
           <strong>{selectedProjects.length}</strong>
@@ -498,18 +498,18 @@ export function FundingPlan({
     <main id="funding-plan" className="main-content funding-plan-workspace">
       <section className="funding-plan-intro" aria-labelledby="funding-plan-heading">
         <div>
-          <p className="eyebrow">Priority-constrained decision support</p>
+          <p className="eyebrow">Build a funding scenario</p>
           <h1 id="funding-plan-heading">Funding Plan</h1>
           <p>
-            Set an Available Project Budget. The governed backend processes
-            official Funding Priority tiers from highest to lowest and pauses for
-            analyst resolution when equal-priority choices cannot be resolved by
-            budget feasibility alone.
+            Choose an Available Project Budget. ClimateCapital works through
+            projects from higher to lower Funding Priority. When equally ranked
+            projects cannot all fit and more than one valid choice remains, the
+            application asks for Analyst Resolution.
           </p>
         </div>
         <div className="method-badge">
           <span>Method</span>
-          <strong>Analyst-governed</strong>
+          <strong>Transparent rules + analyst judgment</strong>
         </div>
       </section>
 
@@ -595,7 +595,7 @@ export function FundingPlan({
       {loading && (
         <div className="plan-loading" role="status" aria-live="polite">
           <strong>Evaluating Funding Plan…</strong>
-          <span>The governed backend is applying the priority-tier workflow.</span>
+          <span>ClimateCapital is applying the Funding Priority rules to this budget.</span>
         </div>
       )}
 
@@ -641,8 +641,9 @@ export function FundingPlan({
         <section className="plan-empty-state">
           <h2>Choose an Available Project Budget</h2>
           <p>
-            Evaluation begins with a preset or custom whole-dollar budget. No
-            project membership is selected locally.
+            Choose a reference budget or enter a custom whole-dollar amount to
+            evaluate a Funding Plan. Project selections come from ClimateCapital&apos;s
+            Funding Priority rules and any required Analyst Resolution.
           </p>
         </section>
       )}

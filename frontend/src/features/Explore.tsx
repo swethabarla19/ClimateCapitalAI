@@ -152,16 +152,16 @@ export function Explore({
       <section className="explore-intro" aria-labelledby="explore-heading">
         <div>
           <p className="eyebrow">
-            Governed project catalog · {catalog.historical_decision_snapshot_date}
+            January 21, 2026 project snapshot
           </p>
           <h1 id="explore-heading">Explore projects</h1>
           <p>
-            Review all {catalog.project_count} analytical projects across four
-            presentation categories. Filters and sorting change presentation only.
+            Explore all {catalog.project_count} projects across four categories.
+            Search, filters, and sorting only change how the projects are displayed.
           </p>
         </div>
         <div className="catalog-total">
-          <span>Governed requests</span>
+          <span>Total project requests</span>
           <strong>{formatDollars(catalog.governed_request_total_dollars)}</strong>
         </div>
       </section>

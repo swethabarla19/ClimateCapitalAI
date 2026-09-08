@@ -4,6 +4,8 @@ import { fetchBootstrap } from './api/client'
 import type { BootstrapSuccessEnvelope } from './api/contracts'
 import { Explore } from './features/Explore'
 import { FundingPlan } from './features/FundingPlan'
+import { DataMethodology } from './features/DataMethodology'
+import { HelpResources } from './features/HelpResources'
 import {
   HistoricalBenchmark,
   type HistoricalBenchmarkLoader,
@@ -228,12 +230,12 @@ function App({
       <div className="workspace">
         <header className="decision-header">
           <div>
-            <span className="context-label">Decision</span>
-            <strong>Austin Cross-Category · January 21, 2026</strong>
+            <span className="context-label">Historical snapshot</span>
+            <strong>Austin 2026 Bond Program · January 21, 2026</strong>
           </div>
           <div>
-            <span className="context-label">Plan</span>
-            <strong>Working Plan</strong>
+            <span className="context-label">Workspace</span>
+            <strong>Funding Plan</strong>
           </div>
           <div>
             <span className="context-label">Available Project Budget</span>
@@ -265,18 +267,9 @@ function App({
             loader={historicalBenchmarkLoader}
           />
         ) : session.presentation.route === 'DATA_METHODOLOGY' ? (
-          <main id="data-methodology" className="main-content app-state">
-            <h1>Data &amp; Methodology</h1>
-            <p>
-              The activated runtime uses official PRB Funding Priority and the
-              governed priority-constrained analyst workflow.
-            </p>
-          </main>
+          <DataMethodology />
         ) : session.presentation.route === 'HELP_RESOURCES' ? (
-          <main id="help-resources" className="main-content app-state">
-            <h1>Help &amp; Resources</h1>
-            <p>Manual guidance remains available without Gemini.</p>
-          </main>
+          <HelpResources />
         ) : (
           <Explore
             catalog={catalog}
