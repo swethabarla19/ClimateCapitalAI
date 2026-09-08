@@ -50,16 +50,16 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-06
-- **Project stage:** M3.8 cross-category runtime integration is complete and verified. The governed 106-project runtime-v2 release now serves the standard FastAPI bootstrap, Funding Plan, and historical benchmark endpoints; frontend integration is next.
-- **Current milestone:** M3.8 — cross-category runtime-v2 contracts, 106-project catalog, portfolio evaluator, governed release bundle, and standard FastAPI activation complete and ready for checkpoint publication.
-- **Next gate:** Integrate the activated 106-project runtime-v2 APIs with frontend Explore and Funding Plan, preserving analyst-governed boundary resolution, zero fabricated geometry, and historical benchmark isolation.
+- **Last updated:** 2026-09-07
+- **Project stage:** The frozen M3.8 backend baseline is published at `720b66a`, and frontend F1 integration, F2 Explore, F3 Funding Plan, and F4 Historical Benchmark are implemented and verified. Product completion/polish and mandatory Gemini integration remain before final QA and deployment.
+- **Current milestone:** Frontend F4 complete and approved — the January 21, 2026 Historical Benchmark is isolated from Funding Plan construction and available for retrospective comparison only.
+- **Next gate:** F5A — Product Completion, Navigation, UX Coherence & Frontend Quality; followed immediately by F5B — mandatory Gemini integration as an explanation-assistance layer.
 - **Delivery context:** The completed/deployed application remains the delivery goal. This analytical-methodology reopening does not change Product, Architecture, evidence provenance, or historical-snapshot authority.
-- **Working state:** Git repository is on `main`. M3.8A-C is published to `origin/main` at `16b0809`. M3.8D runtime/API activation is verified locally and ready for checkpoint commit/push. Unrelated `.node-version` and `frontend/` work remain outside this backend checkpoint.
+- **Working state:** Git repository is on `main`. Frontend F1–F4 is now tracked as a coherent checkpoint; the unrelated untracked `.node-version` remains untouched. Backend analytical/runtime methodology remains frozen at the published M3.8 baseline.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for the M3.8 runtime-v2 release. Earlier M3.7 governed artifacts retain `runtime_integration_authorized=false` as correct historical checkpoint provenance.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` now serves the 106-project runtime-v2 catalog and governed map context; `/api/v1/plans/evaluate` executes the M3.7D priority-constrained analyst-governed portfolio state machine; `/api/v1/benchmark` serves the isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable rather than mixing retired Watershed semantics with the cross-category runtime.
-- **Most recent verification:** Full repository: 440 passed plus 137 subtests, with one known non-blocking Starlette/AnyIO deprecation warning. `pip check` reports no broken requirements. Twenty-nine JSON schemas verify deterministically. The activated runtime-v2 catalog and release bundle both regenerate as `unchanged`; `git diff --check` passes. Final activated release ID: `efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207`.
+- **Most recent verification:** Frontend F4: 7 test files and 67 tests pass, including 10 focused Historical Benchmark tests; `npm run build` and `npm run lint` pass under Node 22.23.2/npm 11.19.1. The targeted backend runtime-bundle/standard-API files contribute 33 passing tests with one known Starlette/AnyIO deprecation warning. A rendered browser connection remained unavailable, so responsive/visual behavior has automated and direct-source evidence but no screenshot-based verification. The frozen backend release remains `efb3783b2f4c7568012fb9ae590ff40dbf5a46d18a3ff1942a22d424a4b52207`.
 
 ## Approved Locks
 
@@ -109,43 +109,176 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Publish the completed M3.7D methodology checkpoint and immediately
-  begin runtime/frontend integration of the governed 106-project analytical model.
-- **Status:** Budget-scope, rank-cost-frontier, official portfolio-consideration,
-  deterministic methodology, focused regression, combined regression, full-suite,
-  dependency, and determinism verification all pass.
-- **Analytical result:** Portfolio-selection methodology is authorized as
-  Priority-Constrained Analyst-Governed Portfolio Construction.
-- **Budget result:** Available Project Budget is analyst supplied. `$332M` is the
-  historical matched-cohort benchmark scenario; `$700M` and `$750M` are broader
-  historical references and are not the 106-project model budget.
-- **Tie result:** Complete higher-priority tiers are automatic when feasible.
-  Unique budget feasibility can resolve a boundary project; genuinely ambiguous
-  equal-priority choices require analyst resolution.
-- **Authority:** Cross-category ranking and portfolio-selection methodology are
-  authorized. Runtime integration is not yet authorized.
-- **Parallel repository note:** `.node-version` and `frontend/` remain separate
-  work and must not accidentally enter the M3.7D methodology checkpoint.
-- **Exit condition:** Commit and publish M3.7D, then start cross-category
-  runtime/frontend integration.
+- **Goal:** Migrate the frontend in reviewable checkpoints onto the activated
+  106-project runtime without changing the frozen analytical/backend baseline.
+- **Status:** F1–F4 are complete locally. Explore and Funding Plan retain their
+  existing runtime paths; Historical Benchmark loads independently from the
+  standard benchmark endpoint and never enters plan input or persisted plan state.
+- **Session boundary:** Persisted analyst input may be restored only when
+  `data_version`, release ID, and catalog contract match. Persisted evaluation
+  output is cleared and must be requested again. Stale-release plan state resets.
+- **Request boundary:** Plan calls have AbortController cancellation plus request
+  generation checks so late responses cannot replace newer analyst inputs.
+- **Authority:** Backend runtime, PRB ranking, portfolio construction, governed
+  artifacts, and historical benchmark isolation remain unchanged at `720b66a`.
+- **Working-tree boundary:** Frontend F1–F4 is tracked as a coherent implementation
+  checkpoint; `.node-version` remains unrelated and untouched.
+- **Exit condition:** F1–F4 are complete and approved. Proceed next through the
+  separately gated F5A product-completion/polish checkpoint and mandatory F5B
+  Gemini explanation integration before final QA and deployment.
 
 ## Next Actions
 
-1. Commit and publish the verified M3.8 backend runtime/API activation checkpoint.
-2. Integrate frontend Explore with the 106-project runtime-v2 bootstrap catalog;
-   preserve truthful zero governed project geometry rather than fabricating map
-   locations.
-3. Integrate frontend Funding Plan with the activated priority-constrained portfolio
-   evaluator, including Available Project Budget, boundary states, and explicit
-   analyst resolution.
-4. Integrate the isolated January historical benchmark into the appropriate UI;
-   keep `/api/v1/benchmark/compare` unavailable unless a separate cross-category
-   comparison contract is explicitly governed.
-5. Run frontend/backend end-to-end QA, then freeze features and proceed to UI polish,
-   deployment, Gemini integration where approved, and submission preparation.
+1. Complete F5A — Product Completion, Navigation, UX Coherence & Frontend Quality.
+2. Complete F5B — mandatory Gemini integration as a grounded explanation-assistance
+   layer. Gemini must remain outside scoring, ranking, and deterministic portfolio
+   construction.
+3. Complete F6 — full frontend/backend regression and live visual/functional QA,
+   including Explore, Funding Plan boundary resolution, Historical Benchmark,
+   responsive behavior, API-unavailable states, and Gemini behavior.
+4. Complete F7 — GCP deployment and deployed end-to-end QA.
+5. Complete F8 — submission package, demo flow, screenshots, and final documentation.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-07 — Frontend F4 January 21 Historical Benchmark
+
+- **Work completed:** Added a dedicated, lazy-loaded Historical Benchmark route
+  backed only by `GET /api/v1/benchmark`. Presented the API-sourced $700M full
+  package, $332M matched project cohort, $368M outside-cohort amount, 20 historical
+  analytical projects, explicit arithmetic, governed outcome flags, provenance,
+  and runtime identity.
+- **Category/project context:** Rendered the four API category summaries alongside
+  bootstrap-derived governed request totals. Joined all 20 recommended outcomes to
+  catalog evidence by `decision_unit_id`, with historical recommendation dollars
+  visibly separate from governed request and Funding Priority score/rank. Display
+  order is category/name only and is labeled non-analytical.
+- **Isolation/comparison:** Benchmark state is component-local, unpersisted, and
+  loaded only when its route is entered. Failure does not affect Explore or Funding
+  Plan. A current-plan overlap count uses only already-loaded benchmark membership
+  and the authoritative current plan; it is labeled presentation-only and never
+  enters plan evaluation or boundary state.
+- **Contract limitation:** The frozen category summaries expose matched-cohort
+  recommendation totals and counts, not per-category full-package/outside-cohort
+  amounts. The UI states this and does not hard-code or invent the missing category
+  partition; the $368M outside-cohort amount remains citywide.
+- **Tests/results:** 7 frontend test files and 67 tests pass, including 10 focused
+  Historical Benchmark tests; `npm run build` and `npm run lint` pass under Node
+  22.23.2/npm 11.19.1. The targeted backend runtime-bundle/standard-API suites pass
+  33 tests with one known Starlette/AnyIO deprecation warning.
+- **Deviations/unresolved issues:** No backend or methodology change. The browser
+  runtime exposed no available connection, so screenshot-based visual QA remains
+  deferred to F6 live visual/functional QA.
+- **Decisions:** No durable decision ID created; F4 implements the frozen governed
+  benchmark contract and explicit user scope.
+- **Recommended next milestone:** F5A product completion and frontend quality/polish,
+  followed immediately by mandatory F5B Gemini explanation integration.
+
+### 2026-09-07 — Frontend F3 governed Funding Plan workspace
+
+- **Work completed:** Replaced the transition surface with an analyst-facing
+  Funding Plan workspace driven exclusively by `POST /api/v1/plans/evaluate`.
+  Added the three explanatory reference presets, validated custom whole-dollar
+  budgets, authoritative result summaries, selected-project catalog joins, warnings,
+  applied analyst resolutions, and readable selection-source labels.
+- **Boundary workflow:** Added an explicit equal-priority boundary panel showing all
+  candidates and backend feasibility, a running analyst-selected amount, local
+  prevention of plainly over-budget choices, and the exact conditional same-tier
+  advancement acknowledgement. Each choice is sent back to the backend with the
+  current budget and accumulated resolutions. Exact-input retries preserve the
+  expected fingerprint, while changed boundary inputs clear it because they produce
+  a new deterministic evaluation; the frontend never completes or constructs the
+  portfolio locally.
+- **Session/error boundary:** Safe persisted input contains budget and boundary
+  resolutions but never treats a stored evaluation as current. Budget/runtime
+  changes clear stale resolution and fingerprint state. Abort/generation ordering
+  remains active, structured API/network/malformed-response failures have distinct
+  recovery, and version conflicts reload the active governed runtime.
+- **Tests/results:** 6 frontend test files and 53 tests pass, including 13 focused
+  Funding Plan tests; `npm run build` and `npm run lint` pass under Node
+  22.23.2/npm 11.19.1. The two targeted backend evaluator/standard-API suites pass
+  26 tests with one known Starlette/AnyIO deprecation warning.
+- **Deviations/unresolved issues:** No backend or methodology change. Restored safe
+  inputs require an explicit new evaluation rather than automatically posting on
+  reload. Historical benchmark presentation remains absent by F3 scope. The in-app
+  browser runtime exposed no available browser connection, so no screenshot-based
+  visual QA was possible.
+- **Decisions:** No durable decision ID created; F3 implements the already-governed
+  evaluator contract and explicit user scope.
+- **Recommended next milestone:** F4 historical benchmark presentation after
+  explicit authorization.
+
+### 2026-09-07 — Frontend F2 governed cross-category Explore
+
+- **Work completed:** Replaced the bootstrap placeholder with a project-first
+  Explore experience for all 106 governed analytical projects. Added project-name
+  search; presentation-category, competition-rank, and non-overlapping governed-
+  request filters; four explicitly presentational sorts; visible result/request
+  totals; clear/reset behavior; and `decision_unit_id`-keyed selection.
+- **Project evidence:** Added focused detail for governed identity/source, request,
+  official PRB total and competition rank, tie state, all six official PRB
+  components against their own 8/8/20/20/24/20 maxima, Council District and O&M
+  context, authority/source identifiers, provenance, optional canonical ID, and
+  request-version-conflict disclosure.
+- **Geometry/method boundary:** No map or project pin is rendered. Explore states
+  the governed 0 mapped/106 unmapped coverage directly and explains that projects
+  remain available for evidence review and Funding Plan analysis. Sorting/filtering
+  is presentational only; equal scores retain shared ranks and use
+  `decision_unit_id` only for deterministic within-tie display.
+- **Session/application:** Reused the F1 bootstrap and version-bound session state;
+  search, filters, sort, and selected decision unit persist through the existing
+  storage seam. Added retry to the existing fail-closed bootstrap error surface.
+- **Tests/results:** 5 frontend test files and 36 tests pass, including 9 focused
+  Explore tests. `npm run build` and `npm run lint` pass with Node 22.23.2/npm
+  11.19.1. Focused coverage proves the 106-project/category facts, combined
+  discovery, sorts, tied rank, half-point score, identity selection, PRB maxima,
+  zero-geometry/no-pin state, no-results recovery, and reset behavior.
+- **Deviations/unresolved issues:** No backend or methodology change. Source-
+  department/domain filtering was intentionally omitted to keep discovery focused;
+  these fields remain visible in summary/detail. The in-app browser runtime had no
+  available browser connection, so no screenshot-based visual QA was possible.
+  Funding Plan interaction and benchmark presentation remain intentionally absent.
+- **Decisions:** No durable decision ID created; F2 implements the explicit user
+  scope and already-governed runtime semantics.
+- **Recommended next milestone:** F3 Funding Plan after explicit authorization.
+
+### 2026-09-07 — Frontend F1 cross-category API, contract, and session integration
+
+- **Work completed:** Replaced legacy Watershed v1 transport definitions with the
+  activated cross-category v2 bootstrap, Funding Plan, map-context, benchmark, and
+  typed error envelopes. Added defensive standard-endpoint clients for
+  `/api/v1/bootstrap`, `/api/v1/plans/evaluate`, and `/api/v1/benchmark`; no alias or
+  benchmark-compare client exists.
+- **Session migration:** Replaced the v1 12-project/current-reference browser model
+  with runtime identity, analyst budget, boundary-resolution input, latest backend
+  result, fingerprint, and structured request state. A new v2 session-storage key
+  ignores legacy state; same-release restoration retains safe inputs but discards
+  evaluated output, while identity changes reset plan state.
+- **Concurrency/error handling:** Added AbortController plus generation-based late
+  response suppression. Structured API status, code, field path, retryability, and
+  response identity survive client errors; network and malformed-success failures
+  are distinct.
+- **Application wiring:** Bootstrap now initializes directly from runtime-v2 without
+  map defaults, deployment identity, active-family summaries, or legacy context
+  layers. The old Funding Plan UI is replaced by an explicit F1 transition surface;
+  full analyst interaction remains F3.
+- **Tests/results:** 4 frontend test files and 26 tests pass. `npm run build` and
+  `npm run lint` pass under Node 22.23.2/npm 11.19.1. Tests cover 106 projects,
+  9/22/37/38 category counts, `$1,973,520,000`, zero mapped/106 unmapped, no
+  fabricated geometry, `decision_unit_id`, half-point scores, benchmark isolation,
+  typed failures, safe restoration, and stale-response suppression.
+- **Files/components:** `frontend/src/api/`; `frontend/src/session/`; minimum
+  `frontend/src/App.tsx` wiring; transitional `frontend/src/features/FundingPlan.tsx`;
+  and cross-category frontend fixtures/tests. Obsolete v1 scenario, confirmed-plan
+  restoration, and ScenarioSettings modules/tests were removed.
+- **Deviations/unresolved issues:** No backend or methodology change. Explore,
+  Funding Plan controls, and benchmark presentation remain intentionally absent.
+  The host default Node 24 binary cannot load the existing signed Rolldown native
+  binding; verification therefore used the repository-declared Node 22.23.2 binary.
+- **Decisions:** No durable decision ID created; F1 implements already-governed
+  runtime contracts and explicit user scope.
+- **Recommended next milestone:** F2 Explore after explicit authorization.
 
 ### 2026-09-03 — M3 implementation checkpoint; awaiting explicit re-audit/approval
 
@@ -349,9 +482,8 @@ contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 The approved September 2 feature-freeze gate remains at critical schedule risk.
-M1 is approved and complete, and every post-schema data/
-application milestone and the reviewed release, manual core, Gemini explanation,
-and deployment remain unstarted.
+The frozen backend runtime and frontend F1–F4 are implemented; Gemini explanation,
+deployment, and final release verification remain on the critical path.
 
 ## Blockers
 
@@ -406,10 +538,9 @@ and deployment remain unstarted.
 - The source says projects are sorted by project ID, but published row order places
   5789.150 before 5789.145 and 5789.146. Extraction preserves rather than repairs
   this source-level inconsistency.
-- The current delivery remains at critical schedule risk: M1 is approved and
-  complete, while the reviewed release-data bundle, plan/API/
-  frontend behavior, manual core, required Gemini explanation, and deployment do
-  not yet exist.
+- The current delivery remains at critical schedule risk: the backend runtime and
+  frontend F1–F4 exist, while required Gemini explanation, deployment, and final
+  release verification remain.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
 - Post-schema data/application implementation is now on the critical path and must
@@ -501,11 +632,11 @@ Established and locked:
   acquisition is separate and release builds make no live source requests;
 - no runtime BigQuery, Cloud Storage, GIS, application database, or server session
   store; browser `sessionStorage` holds bounded current-session workflow state;
-- independently recomputed current/reference Funding Plans with exact integer
-  arithmetic, isolated Historical Benchmark, and no client-authoritative results;
-- direct configurable OSM with required safeguards; RNA display geometry on where
-  available, FEMA/EAZ off by default, no Fully Developed FloodPro, and no fabricated
-  `5789.150` geography;
+- server-evaluated cross-category Funding Plans with exact integer arithmetic,
+  analyst-supplied budget and boundary-resolution inputs, isolated Historical
+  Benchmark, and no client-authoritative analytical results;
+- governed runtime map context with zero project features, zero mapped and 106
+  unmapped analytical projects, and no fabricated coordinates or project pins;
 - required bounded Gemini explanation through the global standard on-demand
   publisher endpoint and ADC; proposal is post-core stretch; and
 - external manifest checksum plus separate code/data/image release identity,
@@ -706,6 +837,18 @@ remains explicit.
 - backend/climatecapital/plans/ — deterministic M2B Funding Plan evaluator.
 - tests/application/ and tests/release/ — contract, evaluator, validator, and
   direct persistent-fixture tests.
+- frontend/src/api/ and frontend/src/session/ — activated cross-category v2
+  standard-endpoint transport, defensive parsing, version-bound browser state,
+  and stale plan-response protection.
+- frontend/src/features/Explore.tsx and frontend/src/components/ProjectDetail.tsx
+  — project-first governed discovery and evidence review for all 106 projects,
+  with truthful zero-geometry treatment and no project pins.
+- frontend/src/features/FundingPlan.tsx and frontend/src/components/BoundaryResolution.tsx
+  — server-evaluated analyst budgets, authoritative plan presentation, and exact
+  equal-priority boundary resolution without client-side portfolio construction.
+- frontend/src/features/HistoricalBenchmark.tsx — independently loaded historical
+  outcome summary, category/project context, and presentation-only current-plan
+  overlap with explicit benchmark isolation.
 
 Local branch: main. Public GitHub remote:
 https://github.com/swethabarla19/ClimateCapitalAI.git.
@@ -726,10 +869,11 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   ADC; no credential material is stored in the repository. The earlier Python 3.12
   source-fetch runtime lacked a default CA bundle; `/etc/ssl/cert.pem` was used for
   verified HTTPS without disabling certificate verification.
-- The M1 application contract environment is pinned to Python 3.14.7 and Pydantic
-  2.13.5 in the ignored `.venv`; dependency integrity passes. No application server
-  or frontend environment exists. Frontend package-manager/runtime setup remains
-  deferred to M4, the first frontend application work unit.
+- The backend application contract environment is pinned to Python 3.14.7 and
+  Pydantic 2.13.5 in the ignored `.venv`; dependency integrity passes. The local
+  frontend is React/TypeScript/Vite with Node 22.23.2 and npm 11.19.1 declared in
+  `frontend/package.json`; F1 transport/session, F2 Explore, F3 Funding Plan, and
+  F4 Historical Benchmark checks pass locally.
 - No Cloud Run, Artifact Registry, Cloud Build, runtime IAM, Gemini configuration,
   billing-control, or deployment change has been made; the Architecture Lock is
   documentation only.
@@ -845,6 +989,10 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-07 | Frontend F4 January 21 Historical Benchmark | Ran 10 focused Historical Benchmark tests, the complete frontend suite, TypeScript/Vite production build, ESLint, targeted backend runtime-bundle/standard-API suites, contract/route/isolation scans, direct responsive-source review, and Git whitespace/status checks with Node 22.23.2/npm 11.19.1; attempted rendered browser verification | Passed: 7 frontend test files and 67 tests; 10 focused benchmark tests; `npm run build` (32 modules); `npm run lint`; 33 targeted backend tests with one known Starlette/AnyIO deprecation warning. Covered lazy standard-endpoint loading, 700/332/368 reconciliation, four categories, 20 decision-unit joins, outcome/Priority separation, false input flags, local failure/retry, runtime identity, plan/boundary isolation, and presentation-only overlap. Browser runtime exposed no available connection, so no screenshot-based visual check. No backend, `.node-version`, staging, commit, or remote change |
+| 2026-09-07 | Frontend F3 governed Funding Plan workspace | Ran 13 focused Funding Plan tests, the complete frontend suite, TypeScript/Vite production build, ESLint, two targeted backend evaluator/standard-API suites, prohibited-language/endpoint scans, direct source/status review, and `git diff --check` with Node 22.23.2/npm 11.19.1 | Passed: 6 frontend test files and 53 tests; 13 focused Funding Plan tests; `npm run build` (31 modules); `npm run lint`; 26 targeted backend tests with one known Starlette/AnyIO deprecation warning. Covered exact 332M/700M/750M scenarios, custom input, decision-unit joins, shared ranks, boundary choices and acknowledgement, repeated boundaries, stale-response suppression, structured recovery, safe persistence, and no arbitrary membership or benchmark selection input. No backend, `.node-version`, staging, commit, or remote change |
+| 2026-09-07 | Frontend F2 governed cross-category Explore | Ran the focused Explore/App suites, complete frontend suite, TypeScript/Vite production build, ESLint, direct source/contract and stale-term scans, scope/status review, and `git diff --check` with Node 22.23.2/npm 11.19.1; attempted rendered browser verification | Passed: 5 test files and 36 tests, including 9 focused Explore tests; `npm run build`; `npm run lint`; governed 106 and 9/22/37/38 facts, combined filtering, all required sorts, shared rank, half-point display, decision-unit selection, six rubric maxima, zero geometry/no pins, no-results recovery, and bootstrap retry covered. Browser runtime exposed no available connection, so no screenshot-based visual check. No backend, `.node-version`, staging, commit, or remote change |
+| 2026-09-07 | Frontend F1 cross-category API/contract/session integration | Ran the four focused/full frontend test files, TypeScript production build, ESLint, stale v1 term/route scans, direct source/status review, and `git diff --check` using the declared Node 22.23.2/npm 11.19.1 toolchain | Passed: 4 test files and 26 tests; `npm run build`; `npm run lint`; no active v1 project-family, fixed-budget, arbitrary-membership, legacy route, or benchmark-compare dependency remains; only expected negative-test references matched the stale scan; no backend, `.node-version`, staging, commit, or remote change |
 | 2026-09-03 | M2A/M2B closure-audit correction checkpoint | Corrected only findings 1–5; ran the 17-test focused correction set, application and release suites, full repository suite, schema check, dependency check, diff/status review, fixture tracking/validator checks, and later-scope scan | Passed: 17 focused tests, 54 application tests, 39 release tests, and 140 total tests; 22 schemas match; `pip check` passes. The full suite initially caught an attempted edit to the immutable uploaded RNA manifest; that edit was removed and the generation-verified bytes again pass. Final diff/status/scope checks are clean within M2A/M2B. No evaluator, M3/later implementation, cloud, staging, commit, or push change; M2A/M2B remain unapproved pending re-audit |
 | 2026-09-02 | Independent M1 closure approval | Independent closure audit reported by the user after the corrected M1 verification | A — APPROVE M1; no changes required; recommendation to approve and commit M1. Approval recording changes status only and introduces no implementation, authority, reviewed-data, M2, or cloud change |
 | 2026-09-02 | Second independent M1-audit correction pass | Corrected only published-schema parity, fingerprint truth, current/reference comparison derivation, and API deployment/artifact release-tier agreement; ran the four focused adversarial tests, application and release suites, full repository tests, deterministic schema check, compilation, dependency integrity, `git diff --check`, scope/authority scans, and final Git inspection | Passed: 4/4 focused regressions, 31 application tests, 33 release tests, and 110 total tests; 22 schemas match generated output; compilation and `pip check` pass; M1 remains unapproved pending re-review; no authority, M2, reviewed data, cloud, stage, commit, or push change |
@@ -877,6 +1025,107 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-07 — Implement frontend F4 January Historical Benchmark
+
+- **Objective:** Add the isolated January 21, 2026 historical outcome experience
+  without beginning Gemini, deployment, final release work, or backend changes.
+- **Implementation:** Added a dedicated navigation route and component-local
+  benchmark loader with retry and runtime/catalog identity validation. Presented
+  API-sourced package reconciliation, false ranking/selection input flags, four
+  historical category summaries, 20 catalog-joined recommended outcomes, source
+  provenance, and a restrained CSS composition treatment.
+- **Isolation:** The benchmark is not persisted, does not gate bootstrap or Funding
+  Plan, and never enters evaluator requests or boundary resolutions. Optional
+  current-plan overlap is a count-only, presentation-only set intersection from
+  already authoritative client data.
+- **Contract boundary:** The API does not expose per-category full-package or
+  outside-cohort dollars. F4 displays matched category outcomes and governed catalog
+  requests, explicitly keeps the outside-cohort amount citywide, and invents no
+  missing partition.
+- **Verification:** 7 frontend test files/67 tests, including 10 focused benchmark
+  tests, build, and lint pass under Node 22.23.2/npm 11.19.1. Targeted backend
+  runtime-bundle/standard-API suites pass 33 tests with one known warning. Direct
+  route, isolation, responsive-source, and prohibited-language scans pass. No
+  browser connection was available for screenshot-based visual QA.
+- **Handoff:** Stop for F4 review. F5 is the next separately authorized checkpoint.
+  Frontend remains untracked/unstaged, `.node-version` is untouched, and no commit
+  or push occurred.
+
+### 2026-09-07 — Implement frontend F3 governed Funding Plan
+
+- **Objective:** Build the priority-constrained analyst Funding Plan workflow on the
+  standard evaluator without starting benchmark presentation, Gemini, deployment,
+  or backend work.
+- **Implementation:** Added 332M, 700M, and 750M reference presets, custom budget
+  validation, authoritative plan summaries, selected-project joins, readable
+  warnings/selection sources, and a responsive boundary-resolution panel. Boundary
+  submissions use the exact backend resolution structure and accumulated decisions.
+  Exact-input retries retain the expected fingerprint; changed analyst decisions
+  clear it before their new deterministic evaluation. Same-tier advancement is
+  never acknowledged silently.
+- **Method boundary:** Added no project-membership editor, local portfolio logic,
+  score-per-dollar measure, hidden tiebreak, optimization claim, or benchmark input.
+  Equal official ranks remain equal, and remaining budget is reported neutrally.
+- **Session/error behavior:** Persisted inputs are version-bound while evaluation
+  results are re-requested. New budgets clear prior resolutions; runtime conflicts
+  reload governed bootstrap; fingerprint conflicts re-evaluate safely; and existing
+  abort/generation guards prevent older responses replacing newer analyst input.
+- **Verification:** 6 frontend test files/53 tests, including 13 focused Funding Plan
+  tests, build, and lint pass under Node 22.23.2/npm 11.19.1. The two targeted
+  backend suites pass 26 tests with one known deprecation warning. Direct route,
+  language, source, and scope scans pass. No browser connection was available for
+  screenshot-based visual QA.
+- **Handoff:** Stop for F3 review. F4 is the next separately authorized checkpoint.
+  Frontend remains untracked/unstaged, `.node-version` is untouched, and no commit
+  or push occurred.
+
+### 2026-09-07 — Implement frontend F2 governed Explore
+
+- **Objective:** Build a polished, project-first Explore experience for the
+  activated 106-project runtime, without beginning Funding Plan interaction,
+  benchmark presentation, Gemini, deployment, or backend work.
+- **Implementation:** Added search, category/rank/request filtering, four governed-
+  field sorts, result and request totals, clear/no-results states, accessible
+  project cards, and a responsive project-detail surface keyed by
+  `decision_unit_id`. Detail presents the governed request, official Funding
+  Priority/tie semantics, six components on their own rubric maxima, source and
+  context fields, optional canonical provenance, and request-conflict disclosure.
+- **Geometry/method:** Rendered no project map or pins and explicitly communicates
+  0 mapped/106 unmapped. No new score, weighting, optimizer, historical-outcome
+  influence, geocoding, or analytical tiebreak was introduced.
+- **Session/application:** Reused F1 bootstrap and persistence; no second fetch or
+  state framework. Added same-loader bootstrap retry. Explore inputs and selected
+  decision unit restore only within the F1 runtime-identity boundary.
+- **Verification:** 5 test files/36 tests, build, and lint pass under declared Node
+  22.23.2/npm 11.19.1. Direct scope/stale-term review and repository checks pass.
+  Browser-based rendering was attempted, but no browser connection was available.
+- **Handoff:** Stop for F2 review. F3 is the next separately authorized checkpoint.
+  Frontend remains untracked/unstaged, `.node-version` is untouched, and no commit
+  or push occurred.
+
+### 2026-09-07 — Implement frontend F1 cross-category integration
+
+- **Objective:** Replace the legacy Watershed frontend data/API/session layer with
+  the activated 106-project runtime-v2 integration, without beginning F2–F4 or
+  changing the frozen backend.
+- **Implementation:** Added schema-aligned bootstrap, project, map, Funding Plan,
+  benchmark, response-identity, and error types; defensive same-origin standard API
+  clients; version-bound session storage; safe input-only restoration; structured
+  request state; and abort/generation request-order protection.
+- **Application boundary:** Updated only enough application wiring to initialize
+  from runtime-v2 and hold all 106 projects. Replaced the incompatible v1 Funding
+  Plan interaction with a clearly marked transition surface pending F3. No Explore
+  list/detail/filter, map UX, budget presets, boundary controls, or benchmark cards
+  were implemented.
+- **Verification:** 4 test files and 26 tests pass; production build and lint pass;
+  stale-contract scan has only deliberate negative-test matches; `git diff --check`
+  passes. The package commands used the declared Node 22.23.2/npm 11.19.1 toolchain
+  because the host-default Node 24 process cannot load the existing signed Rolldown
+  native binding.
+- **Handoff:** Stop for F1 review. F2 is the next separately authorized checkpoint.
+  Frontend remains untracked/unstaged, `.node-version` is untouched, and no commit
+  or push occurred.
 
 ### 2026-09-03 — Correct M2A/M2B closure-audit findings
 
