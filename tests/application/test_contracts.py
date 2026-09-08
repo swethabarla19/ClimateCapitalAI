@@ -15,7 +15,10 @@ if str(BACKEND_ROOT) not in sys.path:
 from climatecapital.contracts.api import ApiErrorEnvelope  # noqa: E402
 from climatecapital.contracts.artifacts import CatalogArtifact  # noqa: E402
 from climatecapital.contracts.common import EvidenceItem  # noqa: E402
-from climatecapital.contracts.gemini import GeminiExplainRequest  # noqa: E402
+from climatecapital.contracts.gemini import (  # noqa: E402
+    GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
+    GeminiExplanationRequest,
+)
 from climatecapital.contracts.plans import (  # noqa: E402
     EvaluatedPlan,
     PlanInput,
@@ -287,19 +290,19 @@ class SessionApiAndGeminiContractTests(unittest.TestCase):
 
     def test_gemini_request_accepts_references_not_client_grounding(self) -> None:
         request = {
-            "contract_version": GEMINI_EXPLAIN_CONTRACT_VERSION,
+            "contract_version": GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
             "data_version": "m1-contract-test-1",
-            "context_type": "PROJECT",
-            "project_ids": ["5789.075"],
-            "current_plan": None,
-            "reference_plan": None,
-            "expected_fingerprints": None,
-            "user_question": "What evidence is available?",
+            "release_id": "active-release",
+            "surface": "PROJECT",
+            "project_ids": ["watershed/5789.075"],
+            "funding_plan_input": None,
+            "question": "What evidence is available?",
+            "history": [],
         }
-        validate_json(GeminiExplainRequest, request)
+        validate_json(GeminiExplanationRequest, request)
         request["grounding_facts"] = {"priority": 99}
         with self.assertRaises(ValidationError):
-            validate_json(GeminiExplainRequest, request)
+            validate_json(GeminiExplanationRequest, request)
 
 
 if __name__ == "__main__":

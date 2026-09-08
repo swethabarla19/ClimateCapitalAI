@@ -57,7 +57,7 @@ One public Cloud Run service, us-central1, min 0 / max 1
   │  ├─ loads immutable release-data bundle                  │
   │  ├─ independently evaluates current/reference plans      │
   │  ├─ exposes isolated benchmark comparison                │
-  │  └─ mediates bounded Gemini 3.6 Flash explanations       │
+  │  └─ mediates bounded Gemini 3.5 Flash explanations       │
   └──────────────────────────────────────────────────────────┘
         ▲                         │
         │ same-origin HTTPS       └── Google Cloud publisher endpoint
@@ -292,27 +292,26 @@ API, upload API, or administrative API is required.
 
 ### Required capability and model access
 
-- Use `gemini-3.6-flash` through the Google Cloud/Agent Platform publisher
-  endpoint with global standard on-demand model access.
+- Use the configurable `gemini-3.5-flash` default through Vertex AI global
+  standard on-demand model access with the official Python Google Gen AI SDK.
 - Use the Cloud Run service account through workload identity/ADC. Do not use an
   AI Studio API key.
 - Do not opt into Priority or Provisioned Throughput.
-- Use `thinking_level=MINIMAL`.
+- Use `thinking_level=LOW`.
 - Use a non-streaming structured response and no automatic model fallback.
-- Start with an approximately 2,000-token total constructed input limit. Increase
-  toward 3,000 only if tests demonstrate that the required explanation quality
-  cannot fit.
-- Target about 350 visible output tokens and enforce a 400-token maximum.
+- Construct one bounded surface-specific grounding packet and enforce a 1,200-token
+  provider output maximum.
 - Make model calls only after explicit user action; never call Gemini on page load.
 - `GEMINI_ENABLED=false` disables all model calls while deterministic/manual P0
   remains usable.
 
-The server accepts context references and a bounded user question, then selects
-the minimum governed fields from its own catalog. It re-evaluates any plan inputs,
-constructs the grounding package, calls the model, validates the structured
-response, rejects unknown citations or unsupported numeric claims, and renders
-sanitized text. The model never receives authority to create facts, totals,
-membership, scores, ranks, benefits, or missing evidence.
+The server accepts runtime identity and context handles plus bounded conversation
+history and a bounded question, then selects the minimum governed fields from its
+own catalog/map/benchmark. It re-evaluates any Funding Plan input, constructs the
+grounding packet, calls the model without tools, validates the private structured
+response, and constructs the public identity and grounding metadata itself. The
+model never receives authority to create facts, totals, membership, scores,
+ranks, benefits, geometry, provenance, or missing evidence.
 
 ### Rate and abuse controls
 
@@ -494,7 +493,7 @@ and milestone plans are approved.
 | Cloud Build | Reproducible test/build/deploy pipeline |
 | Artifact Registry | One bounded container repository with current + rollback retention |
 | Cloud Run | Single public scale-to-zero SPA/API deployment |
-| Gemini publisher endpoint | Required grounded explanation through `gemini-3.6-flash` |
+| Gemini publisher endpoint | Required grounded explanation through configurable `gemini-3.5-flash` default |
 | IAM/workload identity | Deployment authorization and keyless runtime model access |
 | Cloud Logging and built-in Cloud Run metrics | Bounded operational and token-usage evidence |
 | Cloud Billing controls | Existing alerts/budgets/spend caps where available, after inspection |
@@ -546,20 +545,16 @@ and billing-account aggregation must be verified rather than assumed.
 
 ### Gemini thinking-token uncertainty
 
-Current Gemini 3.6 Flash standard global pricing is $0.75 per million input tokens
-and $3.75 per million output/reasoning tokens through the published pricing period.
-Reasoning/thinking tokens are billable. A 2,000-input/350-visible-output call is
-approximately $0.00281 using visible tokens only; this is an estimate, not a
-maximum. The earlier 3,000-input/400-visible-output shape is approximately $0.00375
-using visible tokens only and likewise is not a maximum. Actual cost can be higher
-because provider-reported reasoning tokens are billed even when not visible.
+Gemini input, output, and reasoning/thinking tokens may be billable. Pricing is
+time-sensitive and must be rechecked against the configured model before
+deployment; visible-output estimates are not maximum-cost guarantees because
+provider-reported reasoning tokens may be billed even when not visible.
 
 ### Public-abuse risk and application controls
 
 At a continuous 2 calls/minute, the theoretical steady-state exposure is about
-2,880 calls/day, or approximately $8.10/day using the 2,000/350 visible-token
-estimate before reasoning tokens and Cloud Run cost. Burst behavior, retries,
-process restarts, and billable thinking mean this is not a hard ceiling. Maximum
+2,880 calls/day. Model pricing, burst behavior, retries, process restarts, and
+billable thinking mean this is not a hard cost ceiling. Maximum
 instances 1, one worker, global burst/sustained/concurrency limits, bounded input
 and output, per-client best-effort protection, the kill switch, and no automatic
 calls reduce exposure but do not replace account-level billing controls.

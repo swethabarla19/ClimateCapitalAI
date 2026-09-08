@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import hashlib
+
 from fastapi import (
     APIRouter,
     Request,
@@ -9,11 +11,29 @@ from fastapi import (
 
 from climatecapital.api.http import (
     error_response,
+    request_id,
     response_identity,
 )
 from climatecapital.contracts.api import (
+    GeminiExplainSuccessEnvelope,
     HealthResponseData,
     HealthSuccessEnvelope,
+)
+from climatecapital.contracts.gemini import (
+    GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+    GeminiExplanationRequest,
+)
+from climatecapital.gemini.provider import (
+    GeminiProviderInvalidResponse,
+    GeminiProviderRateLimited,
+    GeminiProviderUnavailable,
+)
+from climatecapital.gemini.service import (
+    GeminiContextInvalidError,
+    GeminiContextMismatchError,
+    GeminiApplicationRateLimitedError,
+    GeminiDisabledError,
+    GeminiTimeoutError,
 )
 from climatecapital.contracts.cross_category_api import (
     CrossCategoryBenchmarkResponseData,
@@ -69,7 +89,7 @@ def health(
                 .contract_versions
             ),
             gemini_enabled=(
-                runtime.gemini_enabled
+                request.app.state.gemini_settings.enabled
             ),
         ),
     )
@@ -339,4 +359,102 @@ def benchmark_compare(
             "checkpoint."
         ),
         retryable=False,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Gemini explanation
+# ---------------------------------------------------------------------------
+
+
+@router.post(
+    "/api/v1/gemini/explain",
+    response_model=GeminiExplainSuccessEnvelope,
+)
+async def gemini_explain(
+    request: Request,
+    payload: GeminiExplanationRequest,
+):
+    service = request.app.state.gemini_service
+    active_request_id = request_id(request)
+    try:
+        client_host = request.client.host if request.client is not None else "unknown"
+        client_key = hashlib.sha256(client_host.encode("utf-8")).hexdigest()
+        result = await service.explain(
+            payload,
+            request_id=active_request_id,
+            client_key=client_key,
+        )
+    except GeminiContextMismatchError:
+        return error_response(
+            request,
+            status_code=409,
+            error_code="GEMINI_CONTEXT_MISMATCH",
+            message=(
+                "Gemini context identity does not match the active governed runtime."
+            ),
+            field_path=["data_version", "release_id"],
+        )
+    except GeminiContextInvalidError as error:
+        return error_response(
+            request,
+            status_code=422,
+            error_code="GEMINI_CONTEXT_INVALID",
+            message=str(error) or "Gemini context is invalid.",
+        )
+    except GeminiDisabledError:
+        return error_response(
+            request,
+            status_code=503,
+            error_code="GEMINI_DISABLED",
+            message=(
+                "Gemini explanations are disabled. Deterministic application "
+                "features remain available."
+            ),
+        )
+    except (GeminiProviderRateLimited, GeminiApplicationRateLimitedError):
+        return error_response(
+            request,
+            status_code=429,
+            error_code="GEMINI_RATE_LIMITED",
+            message="Gemini is rate limited. Try the question again shortly.",
+            retryable=True,
+        )
+    except GeminiProviderInvalidResponse:
+        return error_response(
+            request,
+            status_code=502,
+            error_code="GEMINI_INVALID_RESPONSE",
+            message="Gemini returned an invalid structured response.",
+        )
+    except GeminiProviderUnavailable:
+        return error_response(
+            request,
+            status_code=503,
+            error_code="GEMINI_UNAVAILABLE",
+            message=(
+                "Gemini is temporarily unavailable. Project evidence and Funding "
+                "Plan calculations remain available."
+            ),
+            retryable=True,
+        )
+    except GeminiTimeoutError:
+        return error_response(
+            request,
+            status_code=504,
+            error_code="GEMINI_TIMEOUT",
+            message="Gemini did not respond before the configured timeout.",
+            retryable=True,
+        )
+
+    return GeminiExplainSuccessEnvelope(
+        endpoint="/api/v1/gemini/explain",
+        status="SUCCESS",
+        identity=response_identity(
+            request,
+            contract_version=GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+            data_version=result.data_version,
+            release_id=result.release_id,
+        ),
+        data=result,
     )

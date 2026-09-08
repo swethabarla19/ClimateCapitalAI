@@ -94,6 +94,9 @@ Additional Google Cloud services are already part of the approved architecture a
 | **IAM / Workload Identity** | Keyless authorization for the Cloud Run service to invoke Gemini | M8–M9 |
 | **Cloud Logging** | Bounded operational and Gemini token-usage telemetry | M9 |
 
+Local and Cloud Run Gemini configuration is documented in
+[`docs/delivery/gemini-vertex-ai-configuration.md`](docs/delivery/gemini-vertex-ai-configuration.md).
+
 
 ---
 
@@ -136,11 +139,11 @@ Additional Google Cloud services are already part of the approved architecture a
 - Local benchmark failure containment.
 - Typed API errors and bounded request bodies.
 
-### In progress
+### Current application checkpoint
 
-**M4 — Application-track frontend and required product surfaces**
+**Frontend through F5B — complete locally, awaiting checkpoint publication**
 
-The next implementation layer is the React/TypeScript/Vite/Leaflet application, including:
+The React/TypeScript/Vite/Leaflet application now includes:
 
 - Explore
 - Funding Plan
@@ -152,8 +155,11 @@ The next implementation layer is the React/TypeScript/Vite/Leaflet application, 
 - isolated Historical Benchmark
 - accessible keyboard-first interaction
 - conspicuous fixture-mode presentation during development
+- bounded, context-aware Gemini explanations through the backend
 
-Gemini integration, reviewed-data release integration, containerization, and deployment belong to later milestones and have not been prematurely added.
+The required F5B Gemini explanation integration is implemented behind the
+server-side Vertex AI boundary. Containerization and deployment remain later
+milestones; no browser credential or direct frontend model call is used.
 
 ---
 

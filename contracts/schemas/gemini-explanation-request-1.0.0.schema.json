@@ -1,0 +1,203 @@
+{
+  "$defs": {
+    "BoundaryResolutionInput": {
+      "additionalProperties": false,
+      "properties": {
+        "advance_with_feasible_same_tier_project_acknowledged": {
+          "title": "Advance With Feasible Same Tier Project Acknowledged",
+          "type": "boolean"
+        },
+        "funding_priority_rank": {
+          "maximum": 106,
+          "minimum": 1,
+          "title": "Funding Priority Rank",
+          "type": "integer"
+        },
+        "funding_priority_score": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 100,
+          "title": "Funding Priority Score"
+        },
+        "selected_decision_unit_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "maxItems": 106,
+          "title": "Selected Decision Unit Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "funding_priority_score",
+        "funding_priority_rank",
+        "advance_with_feasible_same_tier_project_acknowledged"
+      ],
+      "title": "BoundaryResolutionInput",
+      "type": "object"
+    },
+    "CrossCategoryPlanInput": {
+      "additionalProperties": false,
+      "properties": {
+        "available_budget_dollars": {
+          "maximum": 1973520000,
+          "minimum": 0,
+          "title": "Available Budget Dollars",
+          "type": "integer"
+        },
+        "boundary_resolutions": {
+          "items": {
+            "$ref": "#/$defs/BoundaryResolutionInput"
+          },
+          "maxItems": 35,
+          "title": "Boundary Resolutions",
+          "type": "array"
+        },
+        "contract_version": {
+          "const": "p0-cross-category-funding-plan/2.0.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "data_version": {
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+          "title": "Data Version",
+          "type": "string"
+        },
+        "expected_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Fingerprint"
+        }
+      },
+      "required": [
+        "contract_version",
+        "data_version",
+        "available_budget_dollars"
+      ],
+      "title": "CrossCategoryPlanInput",
+      "type": "object"
+    },
+    "GeminiHistoryMessage": {
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Content",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/GeminiHistoryRole"
+        }
+      },
+      "required": [
+        "role",
+        "content"
+      ],
+      "title": "GeminiHistoryMessage",
+      "type": "object"
+    },
+    "GeminiHistoryRole": {
+      "enum": [
+        "USER",
+        "ASSISTANT"
+      ],
+      "title": "GeminiHistoryRole",
+      "type": "string"
+    },
+    "GeminiSurface": {
+      "enum": [
+        "PROJECT",
+        "FUNDING_PLAN",
+        "BOUNDARY",
+        "BENCHMARK",
+        "METHODOLOGY"
+      ],
+      "title": "GeminiSurface",
+      "type": "string"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/gemini-explanation-request-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "p0-gemini-explanation-request/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "funding_plan_input": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CrossCategoryPlanInput"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "history": {
+      "items": {
+        "$ref": "#/$defs/GeminiHistoryMessage"
+      },
+      "maxItems": 6,
+      "title": "History",
+      "type": "array"
+    },
+    "project_ids": {
+      "items": {
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+        "type": "string"
+      },
+      "maxItems": 2,
+      "title": "Project Ids",
+      "type": "array"
+    },
+    "question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "release_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Release Id",
+      "type": "string"
+    },
+    "surface": {
+      "$ref": "#/$defs/GeminiSurface"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "release_id",
+    "surface",
+    "question"
+  ],
+  "title": "GeminiExplanationRequest",
+  "type": "object"
+}

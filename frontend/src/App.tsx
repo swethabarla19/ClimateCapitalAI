@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { fetchBootstrap } from './api/client'
 import type { BootstrapSuccessEnvelope } from './api/contracts'
@@ -12,6 +12,11 @@ import {
 } from './features/HistoricalBenchmark'
 import { formatDollars } from './lib/format'
 import { AppIcon } from './components/AppIcon'
+import {
+  GeminiDrawer,
+  type GeminiContext,
+  type GeminiExplainer,
+} from './components/GeminiDrawer'
 import type {
   BrowserSessionState,
   PresentationState,
@@ -64,6 +69,7 @@ interface AppProps {
   bootstrapLoader?: BootstrapLoader
   fundingPlanEvaluator?: FundingPlanEvaluator
   historicalBenchmarkLoader?: HistoricalBenchmarkLoader
+  geminiExplainer?: GeminiExplainer
 }
 
 type AppState =
@@ -102,9 +108,12 @@ function App({
   bootstrapLoader = fetchBootstrap,
   fundingPlanEvaluator,
   historicalBenchmarkLoader,
+  geminiExplainer,
 }: AppProps) {
   const [state, setState] = useState<AppState>({ status: 'LOADING' })
   const [bootstrapAttempt, setBootstrapAttempt] = useState(0)
+  const [geminiOpen, setGeminiOpen] = useState(false)
+  const geminiButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const controller = new AbortController()
@@ -195,8 +204,102 @@ function App({
     setBootstrapAttempt((attempt) => attempt + 1)
   }
 
+  const selectedProject =
+    session.presentation.selected_decision_unit_id === null
+      ? null
+      : catalog.projects.find(
+          (project) =>
+            project.decision_unit_id ===
+            session.presentation.selected_decision_unit_id,
+        ) ?? null
+  const selectedFeature =
+    selectedProject === null
+      ? null
+      : mapContext.features.find(
+          (feature) => feature.id === selectedProject.decision_unit_id,
+        ) ?? null
+
+  let geminiContext: GeminiContext
+  if (session.presentation.route === 'EXPLORE' && selectedProject !== null) {
+    const locationLabel =
+      selectedFeature === null
+        ? 'Location unavailable'
+        : selectedFeature.properties.display_role === 'FACILITY_SITE_CONTEXT'
+          ? 'Facility/site context'
+          : selectedFeature.properties.display_role === 'PARK_SITE_CONTEXT'
+            ? 'Park/site context'
+            : 'Project location'
+    geminiContext = {
+      key: [
+        session.runtime_identity.release_id,
+        'PROJECT',
+        selectedProject.decision_unit_id,
+      ].join(':'),
+      label: `Project · ${selectedProject.governed_name} · ${locationLabel}`,
+      surface: 'PROJECT',
+      projectIds: [selectedProject.decision_unit_id],
+      fundingPlanInput: null,
+      dataVersion: session.runtime_identity.data_version,
+      releaseId: session.runtime_identity.release_id,
+      visibleFacts: [
+        selectedProject.presentation_category,
+        `${formatDollars(selectedProject.model_request_dollars)} request`,
+        `Funding Priority ${selectedProject.funding_priority_score} · Rank ${selectedProject.funding_priority_rank}`,
+      ],
+    }
+  } else if (session.presentation.route === 'FUNDING_PLAN') {
+    const result = session.latest_plan_result
+    const isBoundary = result?.status === 'ANALYST_RESOLUTION_REQUIRED'
+    const budgetMillions = session.working_plan.available_budget_dollars / 1_000_000
+    const budgetLabel = `$${Number.isInteger(budgetMillions) ? budgetMillions : budgetMillions.toFixed(1)}M`
+    geminiContext = {
+      key: [
+        session.runtime_identity.release_id,
+        isBoundary ? 'BOUNDARY' : 'FUNDING_PLAN',
+        JSON.stringify(session.working_plan),
+      ].join(':'),
+      label: isBoundary
+        ? `Funding Plan · ${budgetLabel} · Analyst Resolution Required`
+        : `Funding Plan · ${budgetLabel}`,
+      surface: isBoundary ? 'BOUNDARY' : 'FUNDING_PLAN',
+      projectIds: [],
+      fundingPlanInput: session.working_plan,
+      dataVersion: session.runtime_identity.data_version,
+      releaseId: session.runtime_identity.release_id,
+    }
+  } else if (session.presentation.route === 'HISTORICAL_BENCHMARK') {
+    geminiContext = {
+      key: `${session.runtime_identity.release_id}:BENCHMARK`,
+      label: 'Historical Benchmark · January 21, 2026',
+      surface: 'BENCHMARK',
+      projectIds: [],
+      fundingPlanInput: null,
+      dataVersion: session.runtime_identity.data_version,
+      releaseId: session.runtime_identity.release_id,
+    }
+  } else {
+    const topic =
+      session.presentation.route === 'HELP_RESOURCES'
+        ? 'Help & Resources'
+        : 'Funding Priority'
+    geminiContext = {
+      key: `${session.runtime_identity.release_id}:METHODOLOGY:${topic}`,
+      label: `Methodology · ${topic}`,
+      surface: 'METHODOLOGY',
+      projectIds: [],
+      fundingPlanInput: null,
+      dataVersion: session.runtime_identity.data_version,
+      releaseId: session.runtime_identity.release_id,
+    }
+  }
+
+  const closeGemini = () => {
+    setGeminiOpen(false)
+    window.setTimeout(() => geminiButtonRef.current?.focus(), 0)
+  }
+
   return (
-    <div className="app-shell">
+    <div className={geminiOpen ? 'app-shell app-shell-gemini-open' : 'app-shell'}>
       {bootstrap.data.public_configuration.fixture_mode && (
         <div className="fixture-banner" role="status">
           DEVELOPMENT FIXTURE · Not reviewed release data
@@ -215,32 +318,62 @@ function App({
           <span className="brand-name"><strong>ClimateCapital</strong><span>AI</span></span>
         </div>
 
-        <nav aria-label="Primary navigation">
-          <ul className="nav-list">
-            {navigation.map((item) => {
-              const current = session.presentation.route === item.route
+        <div className="sidebar-navigation">
+          <nav aria-label="Primary workspace navigation">
+            <ul className="nav-list nav-list-primary">
+              {navigation.slice(0, 2).map((item) => {
+                const current = session.presentation.route === item.route
 
-              return (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    aria-current={current ? 'page' : undefined}
-                    className={
-                      current ? 'nav-link nav-link-active' : 'nav-link'
-                    }
-                    onClick={(event) => {
-                      event.preventDefault()
-                      navigate(item.route)
-                    }}
-                  >
-                    <AppIcon name={item.icon} />
-                    {item.label}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
+                return (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      aria-current={current ? 'page' : undefined}
+                      className={
+                        current ? 'nav-link nav-link-active' : 'nav-link'
+                      }
+                      onClick={(event) => {
+                        event.preventDefault()
+                        navigate(item.route)
+                      }}
+                    >
+                      <AppIcon name={item.icon} />
+                      {item.label}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+
+          <nav className="reference-navigation" aria-label="Reference navigation">
+            <span className="navigation-group-label">Reference</span>
+            <ul className="nav-list nav-list-reference">
+              {navigation.slice(2).map((item) => {
+                const current = session.presentation.route === item.route
+
+                return (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      aria-current={current ? 'page' : undefined}
+                      className={
+                        current ? 'nav-link nav-link-active' : 'nav-link'
+                      }
+                      onClick={(event) => {
+                        event.preventDefault()
+                        navigate(item.route)
+                      }}
+                    >
+                      <AppIcon name={item.icon} />
+                      {item.label}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+        </div>
 
         <div className="analyst-profile" aria-label="Current workspace role">
           <span className="analyst-avatar" aria-hidden="true">SA</span>
@@ -265,9 +398,16 @@ function App({
               {formatDollars(session.working_plan.available_budget_dollars)}
             </strong>
           </div>
-          <button className="gemini-preview-button" type="button" disabled>
+          <button
+            ref={geminiButtonRef}
+            className="gemini-preview-button"
+            type="button"
+            aria-expanded={geminiOpen}
+            aria-controls="gemini-assistant-panel"
+            onClick={() => setGeminiOpen(true)}
+          >
             <AppIcon name="sparkle" size={18} />
-            Gemini
+            Ask Gemini
           </button>
         </header>
 
@@ -307,6 +447,17 @@ function App({
           />
         )}
       </div>
+      {geminiOpen && (
+        <div className="gemini-overlay" onClick={closeGemini}>
+          <div id="gemini-assistant-panel">
+            <GeminiDrawer
+              context={geminiContext}
+              onClose={closeGemini}
+              explainer={geminiExplainer}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

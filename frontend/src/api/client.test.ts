@@ -2,10 +2,15 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   ApiClientError,
   evaluateFundingPlan,
+  explainWithGemini,
   fetchBootstrap,
   fetchHistoricalBenchmark,
 } from './client'
-import { FUNDING_PLAN_CONTRACT_VERSION } from './contracts'
+import {
+  FUNDING_PLAN_CONTRACT_VERSION,
+  GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
+  GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+} from './contracts'
 import {
   TEST_DATA_VERSION,
   TEST_RELEASE_ID,
@@ -48,6 +53,112 @@ function governedError(status: number, errorCode: string) {
 afterEach(() => vi.unstubAllGlobals())
 
 describe('cross-category API client', () => {
+  it('posts the bounded Gemini handle contract and parses authoritative grounding', async () => {
+    const payload = {
+      endpoint: '/api/v1/gemini/explain',
+      status: 'SUCCESS',
+      identity: {
+        request_id: '123e4567-e89b-42d3-a456-426614174000',
+        api_namespace: '/api/v1',
+        contract_version: GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+        data_version: TEST_DATA_VERSION,
+        release_id: TEST_RELEASE_ID,
+      },
+      data: {
+        contract_version: GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+        data_version: TEST_DATA_VERSION,
+        release_id: TEST_RELEASE_ID,
+        request_id: '123e4567-e89b-42d3-a456-426614174000',
+        status: 'COMPLETE',
+        answer: 'A governed explanation.',
+        provider: 'vertex_ai',
+        model: 'gemini-3.5-flash',
+        grounding: {
+          snapshot_date: '2026-01-21',
+          surface: 'PROJECT',
+          decision_unit_ids: ['transportation/fixture/project-1'],
+          plan_fingerprint: null,
+          benchmark_effective_date: null,
+          evidence_sources: ['RUNTIME_CATALOG'],
+        },
+        warnings: [],
+      },
+    }
+    const fetchMock = vi.fn(
+      async (input: RequestInfo | URL, init?: RequestInit) => {
+        void input
+        void init
+        return response(payload)
+      },
+    )
+    vi.stubGlobal('fetch', fetchMock)
+    const request = {
+      contract_version: GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
+      data_version: TEST_DATA_VERSION,
+      release_id: TEST_RELEASE_ID,
+      surface: 'PROJECT' as const,
+      question: 'Explain this project.',
+      project_ids: ['transportation/fixture/project-1'],
+      funding_plan_input: null,
+      history: [],
+    }
+    const result = await explainWithGemini(request)
+    expect(fetchMock).toHaveBeenCalledWith(
+      '/api/v1/gemini/explain',
+      expect.objectContaining({ method: 'POST' }),
+    )
+    expect(JSON.parse(String(fetchMock.mock.calls[0]?.[1]?.body))).toEqual(request)
+    expect(result.data.grounding.evidence_sources).toEqual(['RUNTIME_CATALOG'])
+  })
+
+  it('fails closed on Gemini metadata authored by the model or malformed transport', async () => {
+    const payload = {
+      endpoint: '/api/v1/gemini/explain',
+      status: 'SUCCESS',
+      identity: {
+        request_id: '123e4567-e89b-42d3-a456-426614174000',
+        api_namespace: '/api/v1',
+        contract_version: GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+        data_version: TEST_DATA_VERSION,
+        release_id: TEST_RELEASE_ID,
+      },
+      data: {
+        contract_version: GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+        data_version: TEST_DATA_VERSION,
+        release_id: 'model-invented-release',
+        request_id: '123e4567-e89b-42d3-a456-426614174000',
+        status: 'COMPLETE',
+        answer: 'Unsafe metadata.',
+        provider: 'vertex_ai',
+        model: 'gemini-3.5-flash',
+        grounding: {
+          snapshot_date: '2026-01-21',
+          surface: 'METHODOLOGY',
+          decision_unit_ids: [],
+          plan_fingerprint: null,
+          benchmark_effective_date: null,
+          evidence_sources: ['INVENTED_SOURCE'],
+        },
+        warnings: [],
+      },
+    }
+    vi.stubGlobal('fetch', vi.fn(async () => response(payload)))
+    const error = await explainWithGemini({
+      contract_version: GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
+      data_version: TEST_DATA_VERSION,
+      release_id: TEST_RELEASE_ID,
+      surface: 'METHODOLOGY',
+      question: 'Explain priority.',
+      project_ids: [],
+      funding_plan_input: null,
+      history: [],
+    }).catch((caught: unknown) => caught)
+    expect(error).toMatchObject({
+      kind: 'UNEXPECTED_PAYLOAD',
+      errorCode: 'UNEXPECTED_PAYLOAD',
+    })
+  })
+
   it('loads and validates all 106 bootstrap projects from the standard endpoint', async () => {
     const fetchMock = vi.fn(async () => response(bootstrapFixture()))
     vi.stubGlobal('fetch', fetchMock)

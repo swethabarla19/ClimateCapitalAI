@@ -3,11 +3,15 @@ import {
   BENCHMARK_CONTRACT_VERSION,
   CATALOG_CONTRACT_VERSION,
   FUNDING_PLAN_CONTRACT_VERSION,
+  GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
   MAP_CONTEXT_CONTRACT_VERSION,
   type ApiErrorEnvelope,
   type BootstrapSuccessEnvelope,
   type FundingPlanInput,
   type FundingPlanSuccessEnvelope,
+  type GeminiEvidenceSource,
+  type GeminiExplanationRequest,
+  type GeminiExplanationSuccessEnvelope,
   type HistoricalBenchmarkSuccessEnvelope,
   type OfficialPrbComponents,
   type ResponseIdentity,
@@ -801,6 +805,70 @@ export function parseHistoricalBenchmark(
   return payload as HistoricalBenchmarkSuccessEnvelope
 }
 
+const geminiSurfaces = new Set([
+  'PROJECT',
+  'FUNDING_PLAN',
+  'BOUNDARY',
+  'BENCHMARK',
+  'METHODOLOGY',
+])
+
+const geminiEvidenceSources = new Set<GeminiEvidenceSource>([
+  'RUNTIME_CATALOG',
+  'FUNDING_PLAN_EVALUATOR',
+  'HISTORICAL_BENCHMARK',
+  'GOVERNED_METHODOLOGY',
+])
+
+export function parseGeminiExplanation(
+  payload: unknown,
+  status = 200,
+): GeminiExplanationSuccessEnvelope {
+  const { identity, data } = requireCommonSuccessEnvelope(
+    payload,
+    '/api/v1/gemini/explain',
+    GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+    status,
+  )
+  const grounding = data.grounding
+  if (
+    data.contract_version !== GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION ||
+    data.data_version !== identity.data_version ||
+    data.release_id !== identity.release_id ||
+    data.request_id !== identity.request_id ||
+    !['COMPLETE', 'INSUFFICIENT_CONTEXT', 'SAFETY_BLOCKED'].includes(
+      String(data.status),
+    ) ||
+    typeof data.answer !== 'string' ||
+    data.answer.trim().length === 0 ||
+    data.provider !== 'vertex_ai' ||
+    typeof data.model !== 'string' ||
+    data.model.length === 0 ||
+    !isRecord(grounding) ||
+    grounding.snapshot_date !== '2026-01-21' ||
+    !geminiSurfaces.has(String(grounding.surface)) ||
+    !isStringArray(grounding.decision_unit_ids) ||
+    !(
+      grounding.plan_fingerprint === null ||
+      isSha256(grounding.plan_fingerprint)
+    ) ||
+    !(
+      grounding.benchmark_effective_date === null ||
+      grounding.benchmark_effective_date === '2026-01-21'
+    ) ||
+    !Array.isArray(grounding.evidence_sources) ||
+    grounding.evidence_sources.length === 0 ||
+    !grounding.evidence_sources.every(
+      (source) => geminiEvidenceSources.has(source as GeminiEvidenceSource),
+    ) ||
+    !isStringArray(data.warnings)
+  ) {
+    return malformed('Gemini explanation response was malformed.', status)
+  }
+
+  return payload as GeminiExplanationSuccessEnvelope
+}
+
 function isAbortError(error: unknown): boolean {
   return (
     (error instanceof DOMException && error.name === 'AbortError') ||
@@ -924,5 +992,24 @@ export function fetchHistoricalBenchmark(
       signal,
     },
     parseHistoricalBenchmark,
+  )
+}
+
+export function explainWithGemini(
+  request: GeminiExplanationRequest,
+  signal?: AbortSignal,
+): Promise<GeminiExplanationSuccessEnvelope> {
+  return requestJson(
+    '/api/v1/gemini/explain',
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(request),
+      signal,
+    },
+    parseGeminiExplanation,
   )
 }

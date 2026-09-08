@@ -21,6 +21,9 @@ from climatecapital.contracts.cross_category_runtime import (
     CROSS_CATEGORY_CATALOG_CONTRACT_VERSION,
     CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION,
 )
+from climatecapital.contracts.gemini import (
+    GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+)
 from climatecapital.contracts.versions import (
     API_NAMESPACE,
     BENCHMARK_CONTRACT_VERSION,
@@ -65,6 +68,9 @@ def contract_version_for_path(
             CROSS_CATEGORY_BENCHMARK_CONTRACT_VERSION
         )
 
+    if path == "/api/v1/gemini/explain":
+        return GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION
+
     return None
 
 
@@ -78,6 +84,7 @@ def data_version_for_path(
         "/api/v1/benchmark/compare",
         "/api/v1/cross-category/bootstrap",
         "/api/v1/cross-category/plans/evaluate",
+        "/api/v1/gemini/explain",
     }:
         runtime = getattr(
             request.app.state,
@@ -103,6 +110,7 @@ def release_id_for_path(
         "/api/v1/benchmark/compare",
         "/api/v1/cross-category/bootstrap",
         "/api/v1/cross-category/plans/evaluate",
+        "/api/v1/gemini/explain",
     }:
         runtime = getattr(
             request.app.state,
@@ -207,6 +215,14 @@ async def request_validation_handler(
 
     error_type = first.get("type", "")
     input_value = first.get("input")
+    if request.url.path == "/api/v1/gemini/explain":
+        return error_response(
+            request,
+            status_code=422,
+            error_code="GEMINI_CONTEXT_INVALID",
+            message="Gemini request context is invalid.",
+            field_path=location,
+        )
     if (
         location
         and location[-1] in {

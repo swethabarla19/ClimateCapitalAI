@@ -27,7 +27,10 @@ from climatecapital.contracts.artifacts import (  # noqa: E402
     PublishedProjectTreatment,
 )
 from climatecapital.contracts.common import EvidenceItem  # noqa: E402
-from climatecapital.contracts.gemini import GeminiExplainRequest  # noqa: E402
+from climatecapital.contracts.gemini import (  # noqa: E402
+    GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
+    GeminiExplanationRequest,
+)
 from climatecapital.contracts.plans import (  # noqa: E402
     BenchmarkComparisonRequest,
     BenchmarkComparisonResponseData,
@@ -246,19 +249,17 @@ class AuditContractRegressionTests(unittest.TestCase):
         parsed = BrowserSessionState.model_validate(state, strict=True)
         self.assertEqual(parsed.reviewed_draft.validated_identity, parsed.validated_identity)
 
-    def test_contradictory_gemini_fingerprints_fail(self) -> None:
-        plan = self.plan_input()
-        plan["expected_fingerprint"] = "a" * 64
+    def test_browser_supplied_gemini_result_fields_fail(self) -> None:
         candidate = {
-            "contract_version": GEMINI_EXPLAIN_CONTRACT_VERSION,
+            "contract_version": GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
             "data_version": "m1-contract-test-1",
-            "context_type": "PLAN",
-            "current_plan": plan,
-            "expected_fingerprints": {"current": "b" * 64},
-            "user_question": "Explain the governed plan.",
+            "release_id": "active-release",
+            "surface": "METHODOLOGY",
+            "question": "Explain the governed methodology.",
+            "selected_project_ids": ["watershed/5789.075"],
         }
         with self.assertRaises(ValidationError):
-            GeminiExplainRequest.model_validate(candidate, strict=True)
+            GeminiExplanationRequest.model_validate(candidate, strict=True)
 
     def test_benchmark_fields_have_independent_partial_availability(self) -> None:
         summary = PublishedPortfolioSummary.model_validate_json(

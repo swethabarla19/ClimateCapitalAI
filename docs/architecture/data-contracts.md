@@ -39,7 +39,8 @@ The first implementation uses these semantic identifiers:
 | Historical benchmark | `p0-benchmark/1.0.0` |
 | Funding Plan evaluation | `p0-funding-plan/1.0.0` |
 | Browser session | `p0-browser-session/1.0.0` |
-| Gemini grounding/response | `p0-gemini-explain/1.0.0` |
+| Gemini explanation request | `p0-gemini-explanation-request/1.0.0` |
+| Gemini explanation result | `p0-gemini-explanation-result/1.0.0` |
 | HTTP API namespace | `/api/v1` |
 
 An incompatible field, meaning, enum, or validation change requires a major
@@ -688,25 +689,27 @@ record is created.
 
 ## Gemini Grounding Contract
 
-The server-built grounding package is allowlisted by context and contains only the
-minimum required:
+The server-built grounding package is allowlisted by `PROJECT`, `FUNDING_PLAN`,
+`BOUNDARY`, `BENCHMARK`, or `METHODOLOGY` surface and contains only the minimum
+required:
 
 - deployment/data/contract identity;
 - public methodology constraints and terminology;
 - selected governed project facts and explicit evidence states/provenance;
 - freshly evaluated plan results and supported differences;
 - separately selected benchmark facts only for benchmark context; and
-- the bounded user question.
+- bounded, explicitly untrusted prior conversation; and
+- the bounded current user question.
 
-The constructed input starts with an approximately 2,000-token application limit.
-Increasing it toward 3,000 requires recorded test evidence. `thinking_level` is
-`MINIMAL`; visible output targets about 350 tokens and may not exceed 400.
+The provider uses `thinking_level=LOW`, one candidate, and at most 1,200 output
+tokens. It must return the private structured shape `{answer,
+insufficient_context}`. ClimateCapital, not Gemini, constructs runtime identity,
+grounding metadata, evidence-source lists, plan fingerprints, dates, provider
+identity, and public status.
 
 Post-validation requires:
 
 - response matches the structured schema;
-- cited evidence/source IDs exist in the supplied grounding;
-- numeric claims are either exact strings from deterministic grounding or omitted;
 - no project recommendation, rank, score, benefit, beneficiary, invented evidence,
   or missing-as-zero claim;
 - no mutation/action in an explanation response; and
@@ -720,7 +723,10 @@ state. It never falls back to an unvalidated model or text-only response.
 Validated non-secret runtime configuration includes:
 
 - `GEMINI_ENABLED`;
-- Gemini model fixed initially to `gemini-3.6-flash`;
+- `GOOGLE_CLOUD_PROJECT` (default `climatecapital-ai`);
+- `GOOGLE_CLOUD_LOCATION` (default `global`);
+- `GEMINI_MODEL` (default `gemini-3.5-flash`);
+- `GEMINI_TIMEOUT_SECONDS` (default `20`);
 - publisher endpoint/location fixed to global standard on-demand access;
 - input/output/thinking/rate/concurrency/retry limits;
 - `DATA_VERSION`, `MANIFEST_SHA256`, `CODE_GIT_SHA`,
@@ -728,9 +734,9 @@ Validated non-secret runtime configuration includes:
 - OSM/configurable tile URL and exact attribution string; and
 - environment label.
 
-Production refuses missing identity values, invalid bounds, unknown model/location,
-fixture release tier, or disagreement with manifest data version. ADC/workload
-identity is the only model credential path; no API key variable exists.
+Production rejects invalid configuration bounds or runtime identity disagreement.
+ADC/workload identity is the only model credential path; no API key variable
+exists and no credential file is loaded by application code.
 
 ## Validation and Release Gates
 

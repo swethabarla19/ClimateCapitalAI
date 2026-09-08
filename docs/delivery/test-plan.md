@@ -135,11 +135,11 @@ canary when explicitly authorized.
 - Context allowlists select the minimum governed grounding.
 - Plan grounding always comes from fresh server evaluation.
 - Benchmark facts enter only `BENCHMARK` context.
-- Constructed input stays near the initial 2,000-token bound; visible output does
-  not exceed 400 tokens; `thinking_level=MINIMAL` and the fixed model/location are
-  enforced.
-- Citations resolve only to supplied evidence/source IDs and numeric claims match
-  exact grounding strings.
+- Constructed input is surface-specific and bounded; provider output does not
+  exceed 1,200 tokens; `thinking_level=LOW`, one candidate, structured JSON, and
+  configurable model/global location are enforced.
+- Public identity, grounding sources, decision IDs, fingerprints, and dates are
+  constructed by ClimateCapital rather than accepted from the provider.
 - Recommendation, rank, score, benefit, beneficiary, missing-as-zero, unknown
   citation, mutation, or invented evidence responses are discarded.
 - Disabled, refusal, invalid response, timeout, transient retry exhaustion,

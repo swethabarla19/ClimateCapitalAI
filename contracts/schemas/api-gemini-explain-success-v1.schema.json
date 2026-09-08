@@ -1,52 +1,26 @@
 {
   "$defs": {
-    "GeminiCitation": {
-      "additionalProperties": false,
-      "properties": {
-        "citation_id": {
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
-          "title": "Citation Id",
-          "type": "string"
-        },
-        "evidence_id": {
-          "anyOf": [
-            {
-              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Evidence Id"
-        },
-        "source_id": {
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
-          "title": "Source Id",
-          "type": "string"
-        }
-      },
-      "required": [
-        "citation_id",
-        "source_id"
+    "GeminiEvidenceSource": {
+      "enum": [
+        "RUNTIME_CATALOG",
+        "FUNDING_PLAN_EVALUATOR",
+        "HISTORICAL_BENCHMARK",
+        "GOVERNED_METHODOLOGY"
       ],
-      "title": "GeminiCitation",
-      "type": "object"
+      "title": "GeminiEvidenceSource",
+      "type": "string"
     },
-    "GeminiExplainResponse": {
+    "GeminiExplanationResult": {
       "additionalProperties": false,
       "properties": {
-        "citations": {
-          "items": {
-            "$ref": "#/$defs/GeminiCitation"
-          },
-          "maxItems": 30,
-          "title": "Citations",
-          "type": "array"
+        "answer": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Answer",
+          "type": "string"
         },
         "contract_version": {
-          "const": "p0-gemini-explain/1.0.0",
+          "const": "p0-gemini-explanation-result/1.0.0",
           "title": "Contract Version",
           "type": "string"
         },
@@ -55,137 +29,143 @@
           "title": "Data Version",
           "type": "string"
         },
-        "limitations": {
+        "grounding": {
+          "$ref": "#/$defs/GeminiGroundingMetadata"
+        },
+        "model": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Model",
+          "type": "string"
+        },
+        "provider": {
+          "const": "vertex_ai",
+          "title": "Provider",
+          "type": "string"
+        },
+        "release_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Release Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/GeminiExplanationStatus"
+        },
+        "warnings": {
           "items": {
             "maxLength": 4000,
             "minLength": 1,
             "type": "string"
           },
-          "maxItems": 20,
-          "minItems": 1,
-          "title": "Limitations",
+          "maxItems": 10,
+          "title": "Warnings",
           "type": "array"
-        },
-        "model_identity": {
-          "$ref": "#/$defs/GeminiModelIdentity"
-        },
-        "mutates_state": {
-          "const": false,
-          "title": "Mutates State",
-          "type": "boolean"
-        },
-        "sanitized_visible_text": {
-          "maxLength": 8000,
-          "minLength": 1,
-          "title": "Sanitized Visible Text",
-          "type": "string"
-        },
-        "status": {
-          "enum": [
-            "ANSWER",
-            "REFUSAL"
-          ],
-          "title": "Status",
-          "type": "string"
-        },
-        "usage": {
-          "anyOf": [
-            {
-              "$ref": "#/$defs/GeminiUsage"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null
         }
       },
       "required": [
         "contract_version",
         "data_version",
+        "release_id",
+        "request_id",
         "status",
-        "sanitized_visible_text",
-        "citations",
-        "limitations",
-        "model_identity",
-        "mutates_state"
-      ],
-      "title": "GeminiExplainResponse",
-      "type": "object"
-    },
-    "GeminiModelIdentity": {
-      "additionalProperties": false,
-      "properties": {
-        "access_tier": {
-          "const": "STANDARD_ON_DEMAND",
-          "title": "Access Tier",
-          "type": "string"
-        },
-        "location": {
-          "const": "global",
-          "title": "Location",
-          "type": "string"
-        },
-        "model": {
-          "const": "gemini-3.6-flash",
-          "title": "Model",
-          "type": "string"
-        },
-        "thinking_level": {
-          "const": "MINIMAL",
-          "title": "Thinking Level",
-          "type": "string"
-        }
-      },
-      "required": [
+        "answer",
+        "provider",
         "model",
-        "location",
-        "access_tier",
-        "thinking_level"
+        "grounding"
       ],
-      "title": "GeminiModelIdentity",
+      "title": "GeminiExplanationResult",
       "type": "object"
     },
-    "GeminiUsage": {
+    "GeminiExplanationStatus": {
+      "enum": [
+        "COMPLETE",
+        "INSUFFICIENT_CONTEXT",
+        "SAFETY_BLOCKED"
+      ],
+      "title": "GeminiExplanationStatus",
+      "type": "string"
+    },
+    "GeminiGroundingMetadata": {
       "additionalProperties": false,
       "properties": {
-        "input_tokens": {
-          "minimum": 0,
-          "title": "Input Tokens",
-          "type": "integer"
-        },
-        "reasoning_tokens": {
+        "benchmark_effective_date": {
           "anyOf": [
             {
-              "minimum": 0,
-              "type": "integer"
+              "const": "2026-01-21",
+              "type": "string"
             },
             {
               "type": "null"
             }
           ],
           "default": null,
-          "title": "Reasoning Tokens"
+          "title": "Benchmark Effective Date"
         },
-        "total_tokens": {
-          "minimum": 0,
-          "title": "Total Tokens",
-          "type": "integer"
+        "decision_unit_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "maxItems": 106,
+          "title": "Decision Unit Ids",
+          "type": "array"
         },
-        "visible_output_tokens": {
-          "maximum": 400,
-          "minimum": 0,
-          "title": "Visible Output Tokens",
-          "type": "integer"
+        "evidence_sources": {
+          "items": {
+            "$ref": "#/$defs/GeminiEvidenceSource"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Evidence Sources",
+          "type": "array"
+        },
+        "plan_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Fingerprint"
+        },
+        "snapshot_date": {
+          "const": "2026-01-21",
+          "title": "Snapshot Date",
+          "type": "string"
+        },
+        "surface": {
+          "$ref": "#/$defs/GeminiSurface"
         }
       },
       "required": [
-        "input_tokens",
-        "visible_output_tokens",
-        "total_tokens"
+        "snapshot_date",
+        "surface",
+        "decision_unit_ids",
+        "evidence_sources"
       ],
-      "title": "GeminiUsage",
+      "title": "GeminiGroundingMetadata",
       "type": "object"
+    },
+    "GeminiSurface": {
+      "enum": [
+        "PROJECT",
+        "FUNDING_PLAN",
+        "BOUNDARY",
+        "BENCHMARK",
+        "METHODOLOGY"
+      ],
+      "title": "GeminiSurface",
+      "type": "string"
     },
     "ResponseIdentity": {
       "additionalProperties": false,
@@ -239,7 +219,7 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "$ref": "#/$defs/GeminiExplainResponse"
+      "$ref": "#/$defs/GeminiExplanationResult"
     },
     "endpoint": {
       "const": "/api/v1/gemini/explain",

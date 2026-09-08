@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { ApiClientError } from './api/client'
@@ -14,6 +14,150 @@ import {
 beforeEach(() => window.sessionStorage.clear())
 
 describe('ClimateCapital application shell', () => {
+  it('groups workspace and reference navigation while keeping the profile last', async () => {
+    render(<App bootstrapLoader={async () => bootstrapFixture()} />)
+    await screen.findByRole('heading', { name: 'Explore projects' })
+
+    const primary = screen.getByRole('navigation', {
+      name: 'Primary workspace navigation',
+    })
+    const reference = screen.getByRole('navigation', {
+      name: 'Reference navigation',
+    })
+    expect(within(primary).getAllByRole('link').map((link) => link.textContent)).toEqual([
+      'Explore',
+      'Funding Plan',
+    ])
+    expect(
+      within(reference).getAllByRole('link').map((link) => link.textContent),
+    ).toEqual([
+      'Historical Benchmark',
+      'Data & Methodology',
+      'Help & Resources',
+    ])
+    const profile = screen.getByLabelText('Current workspace role')
+    expect(
+      reference.compareDocumentPosition(profile) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
+  })
+
+  it('activates Ask Gemini without making a request when the drawer opens', async () => {
+    const user = userEvent.setup()
+    const geminiExplainer = vi.fn()
+    render(
+      <App
+        bootstrapLoader={async () => bootstrapFixture()}
+        geminiExplainer={geminiExplainer}
+      />,
+    )
+
+    const button = await screen.findByRole('button', { name: 'Ask Gemini' })
+    expect(button).toBeVisible()
+    await user.click(button)
+    expect(
+      screen.getByRole('heading', { name: 'ClimateCapital Gemini' }),
+    ).toBeInTheDocument()
+    expect(geminiExplainer).not.toHaveBeenCalled()
+  })
+
+  it('uses the same governed project handle for list selection and shows mapped evidence', async () => {
+    const user = userEvent.setup()
+    const geminiExplainer = vi.fn()
+    render(
+      <App
+        bootstrapLoader={async () => bootstrapFixture()}
+        geminiExplainer={geminiExplainer}
+      />,
+    )
+    await user.click(
+      await screen.findByRole('button', {
+        name: 'View details for Transportation fixture project 1',
+      }),
+    )
+    expect(geminiExplainer).not.toHaveBeenCalled()
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Project · Transportation fixture project 1 · Project location',
+    )
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Funding Priority 83 · Rank 1',
+    )
+    expect(
+      screen.getByRole('heading', { name: 'Transportation fixture project 1' }),
+    ).toBeInTheDocument()
+    expect(screen.getByRole('dialog')).toBeInTheDocument()
+    expect(document.querySelector('.app-shell-gemini-open')).not.toBeNull()
+
+    await user.click(screen.getByRole('button', { name: 'Close Gemini' }))
+    expect(
+      screen.getByRole('heading', { name: 'Transportation fixture project 1' }),
+    ).toBeInTheDocument()
+    expect(document.querySelector('.app-shell-gemini-open')).toBeNull()
+  })
+
+  it('keeps unmapped project context explicitly location unavailable', async () => {
+    const user = userEvent.setup()
+    render(<App bootstrapLoader={async () => bootstrapFixture()} />)
+    await user.click(
+      await screen.findByRole('button', {
+        name: 'View details for Community Facilities fixture project 7',
+      }),
+    )
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Location unavailable',
+    )
+  })
+
+  it('shows Funding Plan and authoritative boundary contexts without automatic Gemini calls', async () => {
+    const user = userEvent.setup()
+    const geminiExplainer = vi.fn()
+    render(
+      <App
+        bootstrapLoader={async () => bootstrapFixture()}
+        fundingPlanEvaluator={async () => boundary700PlanFixture()}
+        geminiExplainer={geminiExplainer}
+      />,
+    )
+    await user.click(await screen.findByRole('link', { name: 'Funding Plan' }))
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Funding Plan · $0M',
+    )
+    await user.click(screen.getByRole('button', { name: 'Close Gemini' }))
+    await user.click(screen.getByRole('button', { name: /\$700M/i }))
+    await screen.findByRole('heading', { name: 'Boundary priority tier' })
+    expect(geminiExplainer).not.toHaveBeenCalled()
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Funding Plan · $700M · Analyst Resolution Required',
+    )
+  })
+
+  it('shows benchmark and methodology contexts without automatic navigation calls', async () => {
+    const user = userEvent.setup()
+    const geminiExplainer = vi.fn()
+    render(
+      <App
+        bootstrapLoader={async () => bootstrapFixture()}
+        historicalBenchmarkLoader={async () => benchmarkFixture()}
+        geminiExplainer={geminiExplainer}
+      />,
+    )
+    await user.click(await screen.findByRole('link', { name: 'Historical Benchmark' }))
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Historical Benchmark · January 21, 2026',
+    )
+    await user.click(screen.getByRole('button', { name: 'Close Gemini' }))
+    await user.click(screen.getByRole('link', { name: 'Data & Methodology' }))
+    await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
+    expect(screen.getByLabelText('Current Gemini context')).toHaveTextContent(
+      'Methodology · Funding Priority',
+    )
+    expect(geminiExplainer).not.toHaveBeenCalled()
+  })
+
   it('shows a bounded loading state before bootstrap completes', () => {
     render(<App bootstrapLoader={() => new Promise(() => undefined)} />)
 
@@ -84,10 +228,10 @@ describe('ClimateCapital application shell', () => {
       await screen.findByRole('heading', { name: 'Explore projects' }),
     ).toBeInTheDocument()
     expect(screen.getByLabelText('106 of 106 projects')).toBeInTheDocument()
-    expect(screen.getAllByText('$1,973,520,000')).toHaveLength(2)
-    expect(
-      screen.getByText(/74 mapped · 32 location unavailable/i),
-    ).toBeInTheDocument()
+    expect(screen.getByText('$1,973,520,000')).toBeInTheDocument()
+    expect(screen.getByLabelText('Project portfolio summary')).toHaveTextContent(
+      '74 mapped · 32 location unavailable',
+    )
     expect(
       screen.getByText('Austin Climate Investment Plan'),
     ).toBeInTheDocument()

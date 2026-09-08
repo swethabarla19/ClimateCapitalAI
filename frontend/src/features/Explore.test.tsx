@@ -173,9 +173,9 @@ describe('Explore', () => {
     expect(
       screen.getByRole('heading', { name: /explore project locations/i }),
     ).toBeInTheDocument()
-    expect(
-      screen.getByText(/74 mapped · 32 location unavailable/i),
-    ).toBeInTheDocument()
+    expect(screen.getByLabelText('Project portfolio summary')).toHaveTextContent(
+      '74 mapped · 32 location unavailable',
+    )
     expect(screen.getByText(/showing 74 mapped results/i)).toBeInTheDocument()
 
     await user.click(screen.getByText('Layers'))

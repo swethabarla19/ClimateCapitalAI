@@ -20,6 +20,7 @@ from climatecapital.api.cross_category_runtime import (
 )
 from climatecapital.api.routes import router
 from climatecapital.api.runtime import load_runtime_state
+from climatecapital.gemini import GeminiExplanationService, GeminiSettings
 
 
 @asynccontextmanager
@@ -27,6 +28,11 @@ async def lifespan(app: FastAPI):
     app.state.runtime = load_runtime_state()
     app.state.cross_category_runtime = (
         load_cross_category_runtime_state()
+    )
+    app.state.gemini_settings = GeminiSettings.from_environment()
+    app.state.gemini_service = GeminiExplanationService(
+        runtime=app.state.cross_category_runtime,
+        settings=app.state.gemini_settings,
     )
     yield
 

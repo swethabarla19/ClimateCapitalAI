@@ -212,6 +212,10 @@ export function AustinContextMap({
         <div>
           <p className="eyebrow">Austin project map</p>
           <h2 id="map-heading">Explore project locations</h2>
+          <span className="map-result-count">
+            Showing {visibleFeatures.length} mapped result
+            {visibleFeatures.length === 1 ? '' : 's'}
+          </span>
         </div>
 
         <details className="map-layers-control">
@@ -346,25 +350,6 @@ export function AustinContextMap({
           </MapContainer>
         </div>
 
-        <div className="map-location-card" role="note">
-          <div className="map-location-icon" aria-hidden="true">
-            <AppIcon name="map" size={20} />
-          </div>
-
-          <div>
-            <strong>Governed project geography</strong>
-            <span>
-              {mapContext.mapped_project_count} mapped ·{' '}
-              {mapContext.unmapped_project_count} location unavailable
-            </span>
-            <p>
-              Showing {visibleFeatures.length} mapped result
-              {visibleFeatures.length === 1 ? '' : 's'}. Only approved
-              source-native geometry is shown; projects without it remain in the
-              list.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

@@ -219,36 +219,33 @@ export function Explore({
           </p>
           <h1 id="explore-heading">Explore projects</h1>
           <p>
-            Explore all {catalog.project_count} projects across four categories.
-            Search, filters, and sorting only change how the projects are displayed.
+            Search, filter, and inspect governed projects across the map and list.
+            Display controls do not change analytical results.
           </p>
         </div>
-        <div className="catalog-total">
-          <span>Total project requests</span>
-          <strong>{formatDollars(catalog.governed_request_total_dollars)}</strong>
-        </div>
-      </section>
-
-      <section className="explore-stat-grid" aria-label="Project portfolio summary">
-        <article>
-          <span className="metric-icon metric-icon-purple" aria-hidden="true">#</span>
-          <div><strong>{catalog.project_count}</strong><span>Governed projects</span></div>
-        </article>
-        <article>
-          <span className="metric-icon metric-icon-amber" aria-hidden="true">$</span>
-          <div><strong>{formatDollars(catalog.governed_request_total_dollars)}</strong><span>Total project requests</span></div>
-        </article>
-        <article>
-          <span className="metric-icon metric-icon-green" aria-hidden="true">◎</span>
-          <div><strong>{mapContext.mapped_project_count} of {mapContext.analytical_project_count}</strong><span>Supported map locations</span></div>
-        </article>
-      </section>
-
-      <section className="category-summary" aria-label="Project category counts">
-        <span>Transportation <strong>{catalog.category_counts.transportation}</strong></span>
-        <span>Parks &amp; Open Space <strong>{catalog.category_counts.parks_open_space}</strong></span>
-        <span>Watershed <strong>{catalog.category_counts.watershed}</strong></span>
-        <span>Community Facilities <strong>{catalog.category_counts.community_facilities}</strong></span>
+        <aside className="explore-snapshot-summary" aria-label="Project portfolio summary">
+          <div className="snapshot-metrics">
+            <span><strong>{catalog.project_count}</strong> governed projects</span>
+            <span>
+              <strong>{formatDollars(catalog.governed_request_total_dollars)}</strong>{' '}
+              requests
+            </span>
+            <span>
+              <strong>{mapContext.mapped_project_count} mapped</strong> ·{' '}
+              {mapContext.unmapped_project_count} location unavailable
+            </span>
+          </div>
+          <div
+            className="snapshot-categories"
+            role="region"
+            aria-label="Project category counts"
+          >
+            <span>Transportation <strong>{catalog.category_counts.transportation}</strong></span>
+            <span>Parks &amp; Open Space <strong>{catalog.category_counts.parks_open_space}</strong></span>
+            <span>Watershed <strong>{catalog.category_counts.watershed}</strong></span>
+            <span>Community Facilities <strong>{catalog.category_counts.community_facilities}</strong></span>
+          </div>
+        </aside>
       </section>
 
       <section className="explore-controls" aria-labelledby="discovery-heading">

@@ -1,156 +1,244 @@
-"""Grounded Gemini explain request and structured response contracts."""
+"""Strict contracts for bounded Gemini explanation requests and results."""
 
 from __future__ import annotations
 
+from enum import StrEnum
 from typing import Annotated, Literal
 
-from pydantic import Field, StringConstraints, model_validator
+from pydantic import Field, StringConstraints, field_validator, model_validator
 
-from .common import (
-    Count,
-    DataVersion,
-    NonEmptyString,
-    ProjectId,
-    StableIdentifier,
-    StrictModel,
+from .common import DataVersion, NonEmptyString, StableIdentifier, StrictModel
+from .cross_category_runtime import CrossCategoryPlanInput
+
+
+GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION = (
+    "p0-gemini-explanation-request/1.0.0"
 )
-from .plans import PlanInput
-from .versions import GEMINI_EXPLAIN_CONTRACT_VERSION
+GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION = (
+    "p0-gemini-explanation-result/1.0.0"
+)
+
+MAX_GEMINI_QUESTION_CHARACTERS = 2_000
+MAX_GEMINI_PROJECT_IDS = 2
+MAX_GEMINI_HISTORY_MESSAGES = 6
+MAX_GEMINI_HISTORY_MESSAGE_CHARACTERS = 1_000
+MAX_GEMINI_HISTORY_CHARACTERS = 6_000
+
+BoundedQuestion = Annotated[
+    str,
+    StringConstraints(
+        min_length=1,
+        max_length=MAX_GEMINI_QUESTION_CHARACTERS,
+        strip_whitespace=True,
+    ),
+]
+
+BoundedHistoryContent = Annotated[
+    str,
+    StringConstraints(
+        min_length=1,
+        max_length=MAX_GEMINI_HISTORY_MESSAGE_CHARACTERS,
+        strip_whitespace=True,
+    ),
+]
 
 
-class GeminiExpectedFingerprints(StrictModel):
-    current: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
-    reference: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+class GeminiSurface(StrEnum):
+    PROJECT = "PROJECT"
+    FUNDING_PLAN = "FUNDING_PLAN"
+    BOUNDARY = "BOUNDARY"
+    BENCHMARK = "BENCHMARK"
+    METHODOLOGY = "METHODOLOGY"
 
 
-class GeminiExplainRequest(StrictModel):
-    contract_version: Literal[GEMINI_EXPLAIN_CONTRACT_VERSION]
-    data_version: DataVersion
-    context_type: Literal[
-        "PROJECT",
-        "PLAN",
-        "SCENARIO_COMPARISON",
-        "BENCHMARK",
-        "METHODOLOGY",
-        "PROVENANCE",
+class GeminiHistoryRole(StrEnum):
+    USER = "USER"
+    ASSISTANT = "ASSISTANT"
+
+
+class GeminiHistoryMessage(StrictModel):
+    role: GeminiHistoryRole
+    content: BoundedHistoryContent
+
+    @field_validator("role", mode="before")
+    @classmethod
+    def parse_role(cls, value):
+        if isinstance(value, str):
+            return GeminiHistoryRole(value)
+        return value
+
+
+class GeminiExplanationRequest(StrictModel):
+    contract_version: Literal[
+        GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION
     ]
-    project_ids: list[ProjectId] = Field(default_factory=list, max_length=12)
-    current_plan: PlanInput | None = None
-    reference_plan: PlanInput | None = None
-    expected_fingerprints: GeminiExpectedFingerprints | None = None
-    user_question: Annotated[str, StringConstraints(min_length=1, max_length=1_000)]
-
-    @model_validator(mode="after")
-    def context_requires_minimum_references(self) -> GeminiExplainRequest:
-        if len(self.project_ids) != len(set(self.project_ids)):
-            raise ValueError("project IDs must be unique")
-        if self.context_type == "PROJECT" and len(self.project_ids) != 1:
-            raise ValueError("PROJECT context requires exactly one project ID")
-        if self.context_type == "PLAN" and self.current_plan is None:
-            raise ValueError("PLAN context requires a current plan input")
-        if self.context_type == "SCENARIO_COMPARISON" and (
-            self.current_plan is None or self.reference_plan is None
-        ):
-            raise ValueError("SCENARIO_COMPARISON requires current and reference plan inputs")
-        if self.reference_plan is not None and self.current_plan is None:
-            raise ValueError("a reference plan cannot be supplied without a current plan")
-        for label, plan in (
-            ("current", self.current_plan),
-            ("reference", self.reference_plan),
-        ):
-            if plan is not None and plan.data_version != self.data_version:
-                raise ValueError(f"{label} plan data version must match Gemini request")
-        if self.expected_fingerprints is not None:
-            for label, plan in (
-                ("current", self.current_plan),
-                ("reference", self.reference_plan),
-            ):
-                expected = getattr(self.expected_fingerprints, label)
-                if expected is not None and plan is None:
-                    raise ValueError(f"{label} fingerprint requires a {label} plan")
-                if (
-                    expected is not None
-                    and plan is not None
-                    and plan.expected_fingerprint is not None
-                    and expected != plan.expected_fingerprint
-                ):
-                    raise ValueError(
-                        f"{label} expected fingerprints disagree across request fields"
-                    )
-        return self
-
-
-class GeminiCitation(StrictModel):
-    citation_id: StableIdentifier
-    source_id: StableIdentifier
-    evidence_id: StableIdentifier | None = None
-
-
-class GeminiModelIdentity(StrictModel):
-    model: Literal["gemini-3.6-flash"]
-    location: Literal["global"]
-    access_tier: Literal["STANDARD_ON_DEMAND"]
-    thinking_level: Literal["MINIMAL"]
-
-
-class GeminiUsage(StrictModel):
-    input_tokens: Count
-    visible_output_tokens: Count = Field(le=400)
-    reasoning_tokens: Count | None = None
-    total_tokens: Count
-
-    @model_validator(mode="after")
-    def token_total_reconciles(self) -> GeminiUsage:
-        expected = self.input_tokens + self.visible_output_tokens + (self.reasoning_tokens or 0)
-        if self.total_tokens != expected:
-            raise ValueError("provider token counts must reconcile")
-        return self
-
-
-class GeminiExplainResponse(StrictModel):
-    contract_version: Literal[GEMINI_EXPLAIN_CONTRACT_VERSION]
     data_version: DataVersion
-    status: Literal["ANSWER", "REFUSAL"]
-    sanitized_visible_text: Annotated[str, StringConstraints(min_length=1, max_length=8_000)]
-    citations: list[GeminiCitation] = Field(max_length=30)
-    limitations: list[NonEmptyString] = Field(min_length=1, max_length=20)
-    model_identity: GeminiModelIdentity
-    usage: GeminiUsage | None = None
-    mutates_state: Literal[False]
-
-    @model_validator(mode="after")
-    def refusal_has_no_citations(self) -> GeminiExplainResponse:
-        if self.status == "REFUSAL" and self.citations:
-            raise ValueError("bounded refusals cannot assert evidence citations")
-        return self
-
-
-class GeminiGroundingReference(StrictModel):
-    reference_id: StableIdentifier
-    source_ids: list[StableIdentifier]
-    exact_numeric_strings: list[str]
-    public_text: NonEmptyString
-
-
-class GeminiGroundingPackage(StrictModel):
-    contract_version: Literal[GEMINI_EXPLAIN_CONTRACT_VERSION]
-    data_version: DataVersion
-    context_type: Literal[
-        "PROJECT",
-        "PLAN",
-        "SCENARIO_COMPARISON",
-        "BENCHMARK",
-        "METHODOLOGY",
-        "PROVENANCE",
+    release_id: Annotated[
+        str,
+        StringConstraints(min_length=1, max_length=200),
     ]
-    methodology_constraints: list[NonEmptyString] = Field(min_length=1)
-    references: list[GeminiGroundingReference] = Field(min_length=1)
-    bounded_user_question: Annotated[str, StringConstraints(min_length=1, max_length=1_000)]
-    constructed_input_token_limit: Literal[2_000]
-    benchmark_data_included: bool = Field(strict=True)
+    surface: GeminiSurface
+    question: BoundedQuestion
+    project_ids: list[StableIdentifier] = Field(
+        default_factory=list,
+        max_length=MAX_GEMINI_PROJECT_IDS,
+    )
+    funding_plan_input: CrossCategoryPlanInput | None = None
+    history: list[GeminiHistoryMessage] = Field(
+        default_factory=list,
+        max_length=MAX_GEMINI_HISTORY_MESSAGES,
+    )
+
+    @field_validator("surface", mode="before")
+    @classmethod
+    def parse_surface(cls, value):
+        if isinstance(value, str):
+            return GeminiSurface(value)
+        return value
+
+    @field_validator("project_ids")
+    @classmethod
+    def project_ids_are_unique(
+        cls,
+        value: list[str],
+    ) -> list[str]:
+        if len(value) != len(set(value)):
+            raise ValueError("project_ids must be unique")
+        return value
 
     @model_validator(mode="after")
-    def benchmark_data_is_context_scoped(self) -> GeminiGroundingPackage:
-        if self.benchmark_data_included != (self.context_type == "BENCHMARK"):
-            raise ValueError("benchmark grounding is permitted only for BENCHMARK context")
+    def surface_context_is_bounded(
+        self,
+    ) -> GeminiExplanationRequest:
+        if self.surface == GeminiSurface.PROJECT:
+            if not 1 <= len(self.project_ids) <= MAX_GEMINI_PROJECT_IDS:
+                raise ValueError("PROJECT requires one or two project_ids")
+            if self.funding_plan_input is not None:
+                raise ValueError("PROJECT does not accept funding_plan_input")
+        elif self.surface in {
+            GeminiSurface.FUNDING_PLAN,
+            GeminiSurface.BOUNDARY,
+        }:
+            if self.funding_plan_input is None:
+                raise ValueError(
+                    f"{self.surface} requires funding_plan_input"
+                )
+            if self.project_ids:
+                raise ValueError(
+                    f"{self.surface} does not accept project_ids"
+                )
+        else:
+            if self.project_ids or self.funding_plan_input is not None:
+                raise ValueError(
+                    f"{self.surface} does not accept project or plan handles"
+                )
+
+        if (
+            self.funding_plan_input is not None
+            and self.funding_plan_input.data_version != self.data_version
+        ):
+            raise ValueError(
+                "funding_plan_input data_version must match request data_version"
+            )
+
+        if len(self.history) % 2 != 0:
+            raise ValueError("history must contain complete prior exchanges")
+        for index, message in enumerate(self.history):
+            expected = (
+                GeminiHistoryRole.USER
+                if index % 2 == 0
+                else GeminiHistoryRole.ASSISTANT
+            )
+            if message.role != expected:
+                raise ValueError("history must alternate USER then ASSISTANT")
+        if sum(len(message.content) for message in self.history) > (
+            MAX_GEMINI_HISTORY_CHARACTERS
+        ):
+            raise ValueError("history exceeds the total character limit")
+
         return self
+
+
+class GeminiExplanationStatus(StrEnum):
+    COMPLETE = "COMPLETE"
+    INSUFFICIENT_CONTEXT = "INSUFFICIENT_CONTEXT"
+    SAFETY_BLOCKED = "SAFETY_BLOCKED"
+
+
+class GeminiEvidenceSource(StrEnum):
+    RUNTIME_CATALOG = "RUNTIME_CATALOG"
+    FUNDING_PLAN_EVALUATOR = "FUNDING_PLAN_EVALUATOR"
+    HISTORICAL_BENCHMARK = "HISTORICAL_BENCHMARK"
+    GOVERNED_METHODOLOGY = "GOVERNED_METHODOLOGY"
+
+
+class GeminiGroundingMetadata(StrictModel):
+    snapshot_date: Literal["2026-01-21"]
+    surface: GeminiSurface
+    decision_unit_ids: list[StableIdentifier] = Field(max_length=106)
+    plan_fingerprint: Annotated[
+        str,
+        StringConstraints(pattern=r"^[0-9a-f]{64}$"),
+    ] | None = None
+    benchmark_effective_date: Literal["2026-01-21"] | None = None
+    evidence_sources: list[GeminiEvidenceSource] = Field(
+        min_length=1,
+        max_length=4,
+    )
+
+    @model_validator(mode="after")
+    def grounding_metadata_is_consistent(
+        self,
+    ) -> GeminiGroundingMetadata:
+        if len(self.decision_unit_ids) != len(set(self.decision_unit_ids)):
+            raise ValueError("grounding decision_unit_ids must be unique")
+        if len(self.evidence_sources) != len(set(self.evidence_sources)):
+            raise ValueError("grounding evidence_sources must be unique")
+        if (
+            self.benchmark_effective_date is not None
+            and self.surface != GeminiSurface.BENCHMARK
+        ):
+            raise ValueError("benchmark_effective_date is BENCHMARK-only")
+        if (
+            self.plan_fingerprint is not None
+            and self.surface
+            not in {GeminiSurface.FUNDING_PLAN, GeminiSurface.BOUNDARY}
+        ):
+            raise ValueError("plan_fingerprint is plan-surface-only")
+        return self
+
+
+class GeminiExplanationResult(StrictModel):
+    contract_version: Literal[
+        GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION
+    ]
+    data_version: DataVersion
+    release_id: Annotated[
+        str,
+        StringConstraints(min_length=1, max_length=200),
+    ]
+    request_id: Annotated[
+        str,
+        StringConstraints(
+            pattern=(
+                r"^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-"
+                r"[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+            )
+        ),
+    ]
+    status: GeminiExplanationStatus
+    answer: NonEmptyString
+    provider: Literal["vertex_ai"]
+    model: Annotated[str, StringConstraints(min_length=1, max_length=100)]
+    grounding: GeminiGroundingMetadata
+    warnings: list[NonEmptyString] = Field(default_factory=list, max_length=10)
+
+
+class GeminiProviderResponse(StrictModel):
+    """Private structured generation schema; never returned directly."""
+
+    answer: Annotated[
+        str,
+        StringConstraints(min_length=1, max_length=4_000, strip_whitespace=True),
+    ]
+    insufficient_context: bool = Field(strict=True)

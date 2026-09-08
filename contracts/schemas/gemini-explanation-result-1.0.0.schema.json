@@ -1,0 +1,171 @@
+{
+  "$defs": {
+    "GeminiEvidenceSource": {
+      "enum": [
+        "RUNTIME_CATALOG",
+        "FUNDING_PLAN_EVALUATOR",
+        "HISTORICAL_BENCHMARK",
+        "GOVERNED_METHODOLOGY"
+      ],
+      "title": "GeminiEvidenceSource",
+      "type": "string"
+    },
+    "GeminiExplanationStatus": {
+      "enum": [
+        "COMPLETE",
+        "INSUFFICIENT_CONTEXT",
+        "SAFETY_BLOCKED"
+      ],
+      "title": "GeminiExplanationStatus",
+      "type": "string"
+    },
+    "GeminiGroundingMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark_effective_date": {
+          "anyOf": [
+            {
+              "const": "2026-01-21",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Benchmark Effective Date"
+        },
+        "decision_unit_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}$",
+            "type": "string"
+          },
+          "maxItems": 106,
+          "title": "Decision Unit Ids",
+          "type": "array"
+        },
+        "evidence_sources": {
+          "items": {
+            "$ref": "#/$defs/GeminiEvidenceSource"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Evidence Sources",
+          "type": "array"
+        },
+        "plan_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Fingerprint"
+        },
+        "snapshot_date": {
+          "const": "2026-01-21",
+          "title": "Snapshot Date",
+          "type": "string"
+        },
+        "surface": {
+          "$ref": "#/$defs/GeminiSurface"
+        }
+      },
+      "required": [
+        "snapshot_date",
+        "surface",
+        "decision_unit_ids",
+        "evidence_sources"
+      ],
+      "title": "GeminiGroundingMetadata",
+      "type": "object"
+    },
+    "GeminiSurface": {
+      "enum": [
+        "PROJECT",
+        "FUNDING_PLAN",
+        "BOUNDARY",
+        "BENCHMARK",
+        "METHODOLOGY"
+      ],
+      "title": "GeminiSurface",
+      "type": "string"
+    }
+  },
+  "$id": "https://climatecapital.ai/contracts/schemas/gemini-explanation-result-1.0.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "answer": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "p0-gemini-explanation-result/1.0.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_version": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$",
+      "title": "Data Version",
+      "type": "string"
+    },
+    "grounding": {
+      "$ref": "#/$defs/GeminiGroundingMetadata"
+    },
+    "model": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Model",
+      "type": "string"
+    },
+    "provider": {
+      "const": "vertex_ai",
+      "title": "Provider",
+      "type": "string"
+    },
+    "release_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Release Id",
+      "type": "string"
+    },
+    "request_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/GeminiExplanationStatus"
+    },
+    "warnings": {
+      "items": {
+        "maxLength": 4000,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "data_version",
+    "release_id",
+    "request_id",
+    "status",
+    "answer",
+    "provider",
+    "model",
+    "grounding"
+  ],
+  "title": "GeminiExplanationResult",
+  "type": "object"
+}

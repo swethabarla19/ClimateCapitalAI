@@ -13,13 +13,15 @@ from .artifacts import (
     MapContextArtifact,
 )
 from .common import DataVersion, NonEmptyString, ReleaseTier, Sha256, StrictModel
-from .gemini import GeminiExplainResponse
+from .gemini import (
+    GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
+    GeminiExplanationResult,
+)
 from .plans import BenchmarkComparisonResponseData, PlanEvaluationResponseData
 from .versions import (
     API_NAMESPACE,
     BENCHMARK_CONTRACT_VERSION,
     FUNDING_PLAN_CONTRACT_VERSION,
-    GEMINI_EXPLAIN_CONTRACT_VERSION,
 )
 
 RequestId = Annotated[
@@ -176,11 +178,14 @@ class GeminiExplainSuccessEnvelope(StrictModel):
     endpoint: Literal["/api/v1/gemini/explain"]
     status: Literal["SUCCESS"]
     identity: ResponseIdentity
-    data: GeminiExplainResponse
+    data: GeminiExplanationResult
 
     @model_validator(mode="after")
     def identity_agrees(self) -> GeminiExplainSuccessEnvelope:
-        if self.identity.contract_version != GEMINI_EXPLAIN_CONTRACT_VERSION:
+        if (
+            self.identity.contract_version
+            != GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION
+        ):
             raise ValueError("Gemini response contract identity is inconsistent")
         if self.identity.data_version != self.data.data_version:
             raise ValueError("Gemini envelope data identity is inconsistent")
@@ -215,6 +220,13 @@ class ApiErrorDetail(StrictModel):
         "RATE_LIMITED",
         "OPTIONAL_DEPENDENCY_DISABLED",
         "OPTIONAL_DEPENDENCY_UNAVAILABLE",
+        "GEMINI_CONTEXT_MISMATCH",
+        "GEMINI_CONTEXT_INVALID",
+        "GEMINI_RATE_LIMITED",
+        "GEMINI_INVALID_RESPONSE",
+        "GEMINI_UNAVAILABLE",
+        "GEMINI_DISABLED",
+        "GEMINI_TIMEOUT",
         "UNEXPECTED_FAILURE",
     ]
     message: NonEmptyString

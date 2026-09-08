@@ -39,7 +39,7 @@ from .common import (
     EVIDENCE_TYPE_ROLES,
     EvidenceType,
 )
-from .gemini import GeminiExplainRequest, GeminiExplainResponse, GeminiGroundingPackage
+from .gemini import GeminiExplanationRequest, GeminiExplanationResult
 from .plans import (
     EvaluatedPlan,
     BenchmarkComparisonRequest,
@@ -115,9 +115,14 @@ SCHEMA_EXPORTS: tuple[tuple[str, type[BaseModel]], ...] = (
     ("api-benchmark-comparison-success-v1.schema.json", BenchmarkComparisonSuccessEnvelope),
     ("api-gemini-explain-success-v1.schema.json", GeminiExplainSuccessEnvelope),
     ("api-error-envelope-v1.schema.json", ApiErrorEnvelope),
-    ("gemini-explain-request-1.0.0.schema.json", GeminiExplainRequest),
-    ("gemini-explain-response-1.0.0.schema.json", GeminiExplainResponse),
-    ("gemini-grounding-1.0.0.schema.json", GeminiGroundingPackage),
+    (
+        "gemini-explanation-request-1.0.0.schema.json",
+        GeminiExplanationRequest,
+    ),
+    (
+        "gemini-explanation-result-1.0.0.schema.json",
+        GeminiExplanationResult,
+    ),
 )
 
 

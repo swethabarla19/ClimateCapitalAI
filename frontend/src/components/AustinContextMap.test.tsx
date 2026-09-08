@@ -112,6 +112,15 @@ describe('AustinContextMap', () => {
       expect.stringContaining('map-feature-project-site'),
     )
     expect(screen.getByText(/showing 4 mapped results/i)).toBeInTheDocument()
+    expect(screen.queryByText('Governed project geography')).not.toBeInTheDocument()
+  })
+
+  it('keeps geometry interpretation caveats in the compact Layers legend', () => {
+    renderMap(null)
+    fireEvent.click(screen.getByText('Layers'))
+    expect(
+      screen.getByText(/must not be interpreted as a capital-project construction footprint/i),
+    ).toBeInTheDocument()
   })
 
   it('selects a project from governed map geometry', () => {

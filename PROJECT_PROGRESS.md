@@ -51,30 +51,34 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-08
-- **Project stage:** GIS governance/runtime-v3 is published at `7d9dcaf` and the
-  focused frontend visual refinement is published at `71d92e3`. The frontend
-  runtime-v3 map-integration checkpoint is complete and verified locally.
-  Mandatory Gemini integration remains before final QA and deployment.
-- **Current milestone:** Frontend runtime-v3 map integration complete locally —
-  Explore renders and synchronizes the 74 governed source-native features while
-  retaining all 32 location-unavailable projects in list, detail, and plan paths.
-- **Next gate:** Review/approve, commit, and push the frontend map-integration
-  checkpoint, then immediately begin F5B mandatory Gemini explanation integration.
+- **Project stage:** F5A is published at `fe66a49`; GIS governance/runtime-v3,
+  visual refinement, and frontend map integration are published through
+  `851aa0b`. F5B mandatory Gemini on Vertex AI integration is complete and
+  verified locally. F6 has not started.
+- **Current milestone:** F5B complete locally — the FastAPI application resolves
+  governed evidence and uses the official `google-genai` SDK in Vertex AI mode;
+  the frontend exposes explicit, context-bound Gemini explanations without
+  changing deterministic ClimateCapital state.
+- **Next gate:** Review/approve, commit, and push the unstaged F5B checkpoint,
+  then begin F6 full regression and live visual/functional QA.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
-- **Working state:** Git repository is on `main` at `71d92e3`, matching
-  `origin/main`. The frontend map-integration files and this handoff update remain
-  unstaged and uncommitted. The unrelated untracked `.node-version` remains
-  untouched.
+- **Working state:** Git repository is on `main` at `851aa0b`, matching
+  `origin/main`. F5B backend, frontend, contract, schema, dependency, test, and
+  documentation changes remain unstaged and uncommitted. The unrelated untracked
+  `.node-version` remains untouched.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** The complete frontend suite passes 8 files / 80
-  tests; ESLint, the TypeScript/Vite production build, and `git diff --check`
-  pass under Node 22.23.2. Chrome DevTools QA covered desktop and 400×748
-  responsive layouts, all 74 governed features, the legend and role styling,
-  filter synchronization, mapped point/polygon selection and focus, Project
-  Detail evidence, and no-movement/location-unavailable behavior for an unmapped
-  project. No application console errors were present. Active runtime-v3 release
+- **Most recent verification:** 486 Python tests and 9 frontend files / 108 tests
+  pass; 31 generated schemas verify; `pip check`, ESLint, the TypeScript/Vite
+  production build, and Git whitespace checks pass. Chrome and Chrome DevTools
+  acceptance covered desktop, 900px, and 390px layouts, Project/Funding Plan/
+  Boundary/Benchmark/Methodology Gemini contexts, localized failure behavior,
+  fixed sidebar/profile behavior, compact map-first Explore, and coordinated
+  Project Detail + Gemini panes. Four bounded live acceptance calls in this
+  session (PROJECT, FUNDING_PLAN, BOUNDARY, BENCHMARK) and the earlier real
+  METHODOLOGY smoke returned governed Vertex AI explanations; the $700M answer
+  preserved analyst judgment and selected no project. Active runtime-v3 release
   ID is `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`.
 
 ## Approved Locks
@@ -125,42 +129,84 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Complete the frontend integration of the active governed runtime-v3
-  map without changing analytical or portfolio behavior.
-- **Status:** Complete locally. Explore renders governed points, polygons, and the
-  multipolygon with explicit project/facility/park roles, keeps filters and list
-  selection synchronized with the map, and preserves truthful unavailable states
-  for all 32 projects without governed geometry.
+- **Goal:** Close F5B as a real, bounded Gemini on Vertex AI explanation layer
+  without changing analytical, portfolio, benchmark, or geometry authority.
+- **Status:** Complete locally. The single public Gemini endpoint resolves current
+  runtime evidence server-side, re-runs the deterministic Funding Plan evaluator
+  for plan/boundary questions, loads the governed benchmark itself, and returns
+  structured explanations through a lazy Vertex AI provider. The frontend sends
+  context handles and authoritative plan input only; it never sends analytical
+  result fields or map coordinates as authority.
 - **Session boundary:** Persisted analyst input may be restored only when
   `data_version`, release ID, and catalog contract match. Persisted evaluation
   output is cleared and must be requested again. Stale-release plan state resets.
 - **Request boundary:** Plan calls have AbortController cancellation plus request
   generation checks so late responses cannot replace newer analyst inputs.
-- **Authority:** Geometry authority is isolated in the D-116 governance artifact,
-  runtime-v3 map, and manifest. The runtime-v3 catalog and benchmark are
-  byte-identical to runtime-v2; analytical/portfolio contracts are unchanged.
-- **Working-tree boundary:** This checkpoint changes only frontend contracts,
-  validation, fixtures, map/Explore/Project Detail presentation and interaction,
-  frontend tests/styles, and this canonical handoff. Backend methodology,
-  governed runtime artifacts, Funding Priority, Funding Plan, Historical
-  Benchmark, and `.node-version` remain untouched.
-- **Exit condition:** Review/approve and publish this checkpoint, then begin F5B.
+- **Authority:** ClimateCapital remains authoritative for runtime identity,
+  projects, PRB values, Funding Priority, plan results, boundaries, benchmark,
+  methodology, and governed geometry. Gemini explains those values and cannot
+  rank, select, resolve a boundary, mutate application state, browse, or infer
+  missing locations.
+- **Working-tree boundary:** This checkpoint adds the bounded Gemini API/provider,
+  contracts/schemas/configuration documentation, deterministic tests, and compact
+  assistant UI plus the five requested acceptance refinements. Backend methodology,
+  governed runtime artifacts, Funding Priority, the evaluator, Historical
+  Benchmark semantics, geometry governance, and `.node-version` remain untouched.
+- **Exit condition:** Review/approve and publish F5B; do not begin F6 before that
+  checkpoint is accepted.
 
 ## Next Actions
 
-1. Review/approve, commit, and push the frontend runtime-v3 map-integration
+1. Review/approve, commit, and push the completed F5B Gemini on Vertex AI
    checkpoint without staging `.node-version`.
-2. Complete F5B — mandatory Gemini integration as a grounded explanation-assistance
-   layer. Gemini must remain outside scoring, ranking, and deterministic portfolio
-   construction.
-3. Complete F6 — full frontend/backend regression and live visual/functional QA,
+2. Complete F6 — full frontend/backend regression and live visual/functional QA,
    including Explore, Funding Plan boundary resolution, Historical Benchmark,
    responsive behavior, API-unavailable states, and Gemini behavior.
-4. Complete F7 — GCP deployment and deployed end-to-end QA.
-5. Complete F8 — submission package, demo flow, screenshots, and final documentation.
+3. Complete F7 — GCP deployment and deployed end-to-end QA.
+4. Complete F8 — submission package, demo flow, screenshots, and final documentation.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-08 — F5B mandatory Gemini on Vertex AI integration
+
+- **Backend/API:** Implemented `POST /api/v1/gemini/explain` with strict request
+  and response contracts, current-runtime identity checks, bounded history,
+  surface-specific validation, authoritative grounding, structured provider
+  output, safe error mapping, timeout, concurrency and application rate limits,
+  and lazy Vertex initialization. One user request consumes one application rate
+  token; the internal one-time provider retry does not consume another token.
+- **Grounding:** PROJECT resolves up to two governed decision units and only their
+  approved runtime-v3 geometry role/provenance or explicit location-unavailable
+  state. FUNDING_PLAN and BOUNDARY re-run the deterministic evaluator from the
+  authoritative input; BOUNDARY requires an unresolved authoritative boundary.
+  BENCHMARK loads the isolated January benchmark in the backend. METHODOLOGY uses
+  a small canonical governed context. Browser-supplied results, coordinates, later
+  facts, external knowledge, Search, Maps, tools, and function calling are absent.
+- **Frontend/acceptance refinements:** Activated the compact Ask Gemini control and
+  context-bound drawer/sheet with starter questions, bounded in-memory follow-up,
+  grounding markers, disclaimer, reset and localized failure states. Split desktop
+  sidebar navigation into primary and reference groups, pinned the profile while
+  the workspace scrolls, compressed Explore totals into a side summary, removed
+  the dominant map overlay while retaining its legend caveat, and coordinated
+  Project Detail with Gemini as non-overlapping desktop panes and a context-rich
+  responsive sheet.
+- **Live acceptance:** Real Vertex calls through the running application passed for
+  mapped PROJECT, `$332M` FUNDING_PLAN, `$700M` BOUNDARY, BENCHMARK, and the earlier
+  METHODOLOGY smoke. The boundary call received authoritative rank 28 / Funding
+  Priority 67 evidence, explained the `$108.275M` versus `$113M` boundary, required
+  analyst judgment, and selected no candidate. The benchmark explanation remained
+  retrospective. Chrome DevTools reported no application console errors.
+- **Verification:** 28 focused Gemini backend tests; 486 full Python tests with two
+  dependency deprecation warnings; 31 schemas; clean `pip check`; 9 frontend files
+  / 108 tests; passing production build and ESLint. Chrome/DevTools checks at
+  desktop, 900px, and exact 390px reported no document overflow, a fixed
+  full-height desktop sidebar, and non-overlapping 420px Project Detail / 440px
+  Gemini panes. Git whitespace checks pass.
+- **Scope/handoff:** No deterministic methodology, project universe, request,
+  official PRB value, Funding Priority/rank, evaluator rule, benchmark meaning,
+  governed geometry, deployment, stage, commit, or push changed. F5B is ready for
+  user approval and publication; F6 has not started.
 
 ### 2026-09-08 — Frontend runtime-v3 governed map integration
 
@@ -515,6 +561,16 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Completed Milestones
 
+- **2026-09-08 — F5B mandatory Gemini on Vertex AI integration completed
+  locally:** Added the real server-side `google-genai` Vertex provider, bounded
+  governed grounding, structured contracts/errors, runtime guard, deterministic
+  evaluator re-runs, isolated benchmark/methodology context, and the accessible
+  context-aware frontend drawer/sheet. The five requested UI acceptance
+  refinements and live Project/Plan/Boundary/Benchmark/Methodology checks pass.
+  Final verification is 486 Python tests, 31 schemas, clean dependencies, 9
+  frontend files / 108 tests, build, lint, browser QA, security scan, and Git
+  whitespace checks. Review/commit/push remains pending before F6.
+
 - **2026-09-08 — Frontend runtime-v3 map integration completed locally:** The
   frontend consumes the active v3 contract, validates and renders all 74 governed
   point/polygon features, synchronizes filters and map/list/detail selection,
@@ -663,9 +719,9 @@ contingency. Conditional SP0-1 Compare is the first cut. P1 cannot begin early
 unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 The approved September 2 feature-freeze gate remains at critical schedule risk.
-The frozen backend runtime and frontend F1–F5A plus focused visual refinement are
-implemented; Gemini explanation, deployment, and final release verification remain
-on the critical path.
+The frozen backend runtime, frontend F1–F5A, focused visual/map work, and F5B
+Gemini explanation are implemented; deployment and final release verification
+remain on the critical path.
 
 ## Blockers
 
@@ -735,9 +791,9 @@ on the critical path.
 - The source says projects are sorted by project ID, but published row order places
   5789.150 before 5789.145 and 5789.146. Extraction preserves rather than repairs
   this source-level inconsistency.
-- The current delivery remains at critical schedule risk: the backend runtime and
-  frontend F1–F4 exist, while required Gemini explanation, deployment, and final
-  release verification remain.
+- The current delivery remains at critical schedule risk: the backend runtime,
+  frontend F1–F5B, and targeted F5B acceptance exist, while F6 regression,
+  deployment, and final release verification remain.
 - Required P0 remains ambitious for the September 2 feature freeze; optional scope
   must not erode testing or recovery time.
 - Post-schema data/application implementation is now on the critical path and must
@@ -751,9 +807,9 @@ on the critical path.
 - The Historical Decision Snapshot, Historical Envelope, Historical City
   Recommendation, Current Confirmed Plan, and Session Reference Plan may be
   confused if the locked terminology is not implemented consistently.
-- Gemini or map work could consume disproportionate effort; deterministic/manual
-  paths, non-map access, and required grounded explanation remain release
-  priorities; proposal is post-core stretch.
+- Gemini provider availability, application restart-local limits, and live-call
+  cost remain operational risks; deterministic/manual paths and all governed
+  evidence remain usable when Gemini is disabled or unavailable.
 - A fixture bundle could be mistaken for reviewed evidence. Release validation
   must reject fixture tier and `NOT_EVALUATED_FIXTURE` states.
 - M1 deliberately has no positive reviewed-bundle test because the approved test
@@ -839,8 +895,8 @@ Established and locked:
 - governed runtime-v3 map context with 74 source-native project features and 32
   explicitly unmapped analytical projects; mixed points/polygons, contextual
   display roles, and no fabricated, geocoded, inferred, or centroid geometry;
-- required bounded Gemini explanation through the global standard on-demand
-  publisher endpoint and ADC; proposal is post-core stretch; and
+- implemented bounded Gemini explanation through the global standard on-demand
+  Vertex endpoint and ADC, with no browser credentials or provider tools; and
 - external manifest checksum plus separate code/data/image release identity,
   bounded observability/images/costs, no-traffic verification, and rollback.
 
@@ -1112,9 +1168,12 @@ https://github.com/swethabarla19/ClimateCapitalAI.git.
   frontend is React/TypeScript/Vite with Node 22.23.2 and npm 11.19.1 declared in
   `frontend/package.json`; F1 transport/session, F2 Explore, F3 Funding Plan, and
   F4 Historical Benchmark checks pass locally.
-- No Cloud Run, Artifact Registry, Cloud Build, runtime IAM, Gemini configuration,
-  billing-control, or deployment change has been made; the Architecture Lock is
-  documentation only.
+- Local ADC, billing, the Vertex AI API, and quota project were verified for
+  `climatecapital-ai`; the application uses `global` and configurable
+  `gemini-3.5-flash`. A bounded real application call returned HTTP 200 and a
+  structured governed explanation. No credential file or API key is stored in the
+  repository or React, and no Cloud Run, Artifact Registry, Cloud Build, service
+  account/IAM, billing-control, or deployment change has been made.
 - The local process-job Stop hook lacks the node runtime it expects.
 
 ### Common Commands
@@ -1230,6 +1289,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-08 | F5B mandatory Gemini on Vertex AI integration and acceptance refinements | Ran 28 focused Gemini tests and all 486 Python tests; checked all 31 generated schemas and dependencies; ran 9 frontend files / 108 tests, ESLint, and the production build; exercised Project, `$332M` Plan, `$700M` Boundary, Benchmark, and Methodology contexts in the running application; used Chrome DevTools for the full boundary text/safeguard, console, 1440/900/390 layout metrics, independent workspace scroll, fixed sidebar/profile, pane geometry, and overflow checks; reviewed security and Git state | Passed: four bounded live calls in this session plus the earlier real Methodology smoke used Vertex AI `gemini-3.5-flash`; Project and plan explanations were governed; the Boundary response used rank 28 / score 67, required analyst judgment, and matched no project-selection/recommendation pattern; Benchmark remained retrospective; 486 tests passed with only the Starlette/AnyIO and google-genai/Python 3.14 deprecation warnings; 31 schemas verified; no broken requirements; 108 frontend tests, build, lint, and Git whitespace checks pass; no console application error or horizontal overflow; `.node-version` untouched; nothing staged, committed, pushed, or deployed; F6 not started |
 | 2026-09-08 | Frontend runtime-v3 governed map integration | Exercised the actual running frontend/API in Chrome DevTools at desktop and 400×748 responsive widths; checked the live bootstrap identity/counts/types, OSM tiles/attribution, legend/role styling, filter synchronization, mapped list selection/polygon focus/detail, unmapped list selection/no map movement/detail, responsive stacking, and console; ran all frontend tests, ESLint, TypeScript/Vite production build, and `git diff --check` under Node 22.23.2 | Passed: live release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; 106 projects, 74 mapped, 32 location unavailable, 64 points, 9 polygons, 1 multipolygon, `fabricated_geometry=false`; 8 test files / 80 tests; lint; 78-module build; diff check; no application console errors. No backend methodology, governed artifact, Funding Priority, Funding Plan, benchmark, `.node-version`, stage, commit, push, or deployment change |
 | 2026-09-08 | D-116 cross-category project geometry governance | Validated all 106 governance decisions and the 80-feature candidate source snapshot; regenerated governed reconciliation and runtime-v3 deterministically; checked exact category/geometry/display-role/status/reason totals, source and governance hashes, runtime-v2 immutability, runtime-v3 catalog/benchmark byte equality, map/catalog identity, citywide exclusion, Austin-region coordinates, role/type failures, runtime cross-artifact drift rejection, standard API activation, and protected plan/benchmark regressions; ran focused/full pytest, schema generation/check, Python compilation, `pip check`, Markdown checks, Git scope/status, and `git diff --check` | Passed: 74 promoted and 32 unmapped; 64 points, 9 polygons, and 1 multipolygon; 51 focused tests; 458 full tests plus 137 subtests; 32 schemas match; deterministic builders are idempotent; runtime-v2 remains 0/106; active release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; no frontend, analytical, Funding Priority, Funding Plan, request, PRB, benchmark, `.node-version`, cloud, stage, commit, push, or deployment change |
 | 2026-09-08 | External GIS evidence investigation for governed 106-project universe | Reconciled catalog identities against official City CPE, WPD/RNA, PARD/APR, AFM, fire, EMS, library, bridge/ACT, APD design, and TCAD parcel evidence; generated and re-read candidate CSV/JSON; asserted row/ID/category/confidence/geometry/eligibility totals; inspected source IDs, feature IDs, vintages, historical fit, report links, runtime geometry contract, Git diff/status, and whitespace | Passed: 106 rows and 106 unique `decision_unit_id`; exact 9/22/37/38 category coverage; 76 HIGH source-native, 0 HIGH address-derived, 13 MEDIUM, 2 LOW, 15 NO_MATCH; 68 point, 12 polygon, 1 address-only, 25 no geometry; 74 eligible for governance review and 32 held/unmapped. Every row is candidate/not-governed; runtime remains 0 mapped / 106 unmapped and `fabricated_geometry=false`; no governed data, backend, methodology, Funding Priority, Funding Plan, benchmark, `.node-version`, staging, commit, push, or deployment change |
@@ -1270,6 +1330,35 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-08 — Complete F5B Gemini/Vertex integration and acceptance
+
+- **Continuity:** Resumed the interrupted unstaged F5B tree at published baseline
+  `851aa0b`. Preserved the existing architecture and the manual correction that
+  acquires one application rate-limit token before the provider retry loop. Added
+  a regression proving an internal retry cannot consume a second user token.
+- **Implementation closeout:** Completed the five requested UI refinements:
+  primary/reference sidebar grouping, viewport-pinned desktop sidebar/profile,
+  compact side-oriented Explore snapshot, removal of the large redundant map
+  overlay, and coordinated Project Detail + Gemini layouts. Mobile keeps selected
+  project category/request/Priority/rank and governed location status inside the
+  full-width assistant sheet.
+- **Browser/live QA:** The running app preserved `$332M` as COMPLETE with 18
+  projects, `$331,825,000` selected, and `$175,000` remaining; `$700M` remained
+  ANALYST_RESOLUTION_REQUIRED at rank 28 / score 67. Real Vertex explanations
+  passed for mapped Project, Funding Plan, Boundary, Historical Benchmark, and
+  the previously completed Methodology smoke. Chrome DevTools confirmed the
+  boundary answer required analyst judgment and selected no project; the console
+  contained only React's development-tools notice. Exact 1440/900/390 metrics
+  showed no document overflow, desktop pane overlap, or sidebar/profile drift.
+- **Verification:** 28 Gemini backend tests and all 486 Python tests pass with the
+  two known dependency deprecations; 31 schemas verify; `pip check` reports no
+  broken requirements; all 9 frontend files / 108 tests, build, and lint pass.
+  Git whitespace and security checks pass.
+- **Scope/handoff:** No analytical method, governed project/request/PRB/rank,
+  deterministic evaluator, benchmark semantics, or geometry governance changed.
+  `.node-version` is untouched; nothing is staged, committed, pushed, or deployed.
+  F5B is ready for user approval. F6 has not started.
 
 ### 2026-09-08 — Finish frontend runtime-v3 governed map integration
 

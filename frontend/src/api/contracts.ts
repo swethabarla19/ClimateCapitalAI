@@ -14,6 +14,10 @@ export const FUNDING_PLAN_CONTRACT_VERSION =
   'p0-cross-category-funding-plan/2.0.0' as const
 export const BENCHMARK_CONTRACT_VERSION =
   'p0-cross-category-benchmark/2.0.0' as const
+export const GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION =
+  'p0-gemini-explanation-request/1.0.0' as const
+export const GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION =
+  'p0-gemini-explanation-result/1.0.0' as const
 
 export type PresentationCategory =
   | 'Transportation'
@@ -337,4 +341,67 @@ export interface HistoricalBenchmarkSuccessEnvelope {
   data: {
     benchmark: HistoricalBenchmark
   }
+}
+
+export type GeminiSurface =
+  | 'PROJECT'
+  | 'FUNDING_PLAN'
+  | 'BOUNDARY'
+  | 'BENCHMARK'
+  | 'METHODOLOGY'
+
+export interface GeminiHistoryMessage {
+  role: 'USER' | 'ASSISTANT'
+  content: string
+}
+
+export interface GeminiExplanationRequest {
+  contract_version: typeof GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION
+  data_version: string
+  release_id: string
+  surface: GeminiSurface
+  question: string
+  project_ids: string[]
+  funding_plan_input: FundingPlanInput | null
+  history: GeminiHistoryMessage[]
+}
+
+export type GeminiExplanationStatus =
+  | 'COMPLETE'
+  | 'INSUFFICIENT_CONTEXT'
+  | 'SAFETY_BLOCKED'
+
+export type GeminiEvidenceSource =
+  | 'RUNTIME_CATALOG'
+  | 'FUNDING_PLAN_EVALUATOR'
+  | 'HISTORICAL_BENCHMARK'
+  | 'GOVERNED_METHODOLOGY'
+
+export interface GeminiGroundingMetadata {
+  snapshot_date: '2026-01-21'
+  surface: GeminiSurface
+  decision_unit_ids: string[]
+  plan_fingerprint: string | null
+  benchmark_effective_date: '2026-01-21' | null
+  evidence_sources: GeminiEvidenceSource[]
+}
+
+export interface GeminiExplanationResult {
+  contract_version: typeof GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION
+  data_version: string
+  release_id: string
+  request_id: string
+  status: GeminiExplanationStatus
+  answer: string
+  provider: 'vertex_ai'
+  model: string
+  grounding: GeminiGroundingMetadata
+  warnings: string[]
+}
+
+export interface GeminiExplanationSuccessEnvelope {
+  endpoint: '/api/v1/gemini/explain'
+  status: 'SUCCESS'
+  identity: ResponseIdentity
+  data: GeminiExplanationResult
 }
