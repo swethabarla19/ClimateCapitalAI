@@ -2915,7 +2915,10 @@
           "$ref": "#/$defs/HealthResponseData"
         },
         "endpoint": {
-          "const": "/healthz",
+          "enum": [
+            "/health",
+            "/healthz"
+          ],
           "title": "Endpoint",
           "type": "string"
         },
@@ -4926,6 +4929,7 @@
       "/api/v1/bootstrap": "#/$defs/BootstrapSuccessEnvelope",
       "/api/v1/gemini/explain": "#/$defs/GeminiExplainSuccessEnvelope",
       "/api/v1/plans/evaluate": "#/$defs/PlanEvaluationSuccessEnvelope",
+      "/health": "#/$defs/HealthSuccessEnvelope",
       "/healthz": "#/$defs/HealthSuccessEnvelope"
     },
     "propertyName": "endpoint"

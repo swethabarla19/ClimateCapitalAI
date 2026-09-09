@@ -92,7 +92,8 @@ expected totals from governed request dollars. Cover:
 Use in-process FastAPI contract tests for HTTP status, stable typed errors,
 request/release identity, strict request shapes, and safe error content.
 
-- `/healthz` performs no dependency fan-out and exposes required identity.
+- `/health` performs no dependency fan-out and exposes required identity;
+  `/healthz` remains covered as a local/backward-compatible alias.
 - Bootstrap contains catalog/map/configuration but no benchmark treatment.
 - Benchmark API failure does not affect bootstrap or plans.
 - Plan evaluation preserves the current-side result when an optional reference is
@@ -179,7 +180,7 @@ their absence cannot fail the core release.
 - Runtime is non-root, same-origin, one worker, and starts only after bundle and
   identity validation.
 - CSP and standard security headers allow only locked application needs.
-- `/healthz`, manifest bytes, environment/revision configuration, code Git SHA,
+- `/health`, manifest bytes, environment/revision configuration, code Git SHA,
   external manifest checksum, image digest, data version, and release ID reconcile.
 - No-traffic smoke tests include golden current/reference plan and benchmark
   isolation, then the full manual core with Gemini disabled.

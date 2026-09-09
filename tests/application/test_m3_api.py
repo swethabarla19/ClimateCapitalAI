@@ -81,10 +81,11 @@ def test_health_ready_and_schema(
 ):
     with _client(monkeypatch) as client:
         response = client.get(
-            "/healthz"
+            "/health"
         )
 
     assert response.status_code == 200
+    assert response.json()["endpoint"] == "/health"
 
     parsed = (
         HealthSuccessEnvelope

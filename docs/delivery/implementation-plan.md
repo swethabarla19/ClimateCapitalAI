@@ -180,7 +180,8 @@ Implement the server-side plan evaluator:
 
 ### M3 — Core same-origin APIs
 
-Implement startup bundle loading, `/healthz`, bootstrap, plan evaluation, and the
+Implement startup bundle loading, authoritative production `/health` with the
+local/backward-compatible `/healthz` alias, bootstrap, plan evaluation, and the
 isolated benchmark repository/API/comparator. Keep typed errors and request
 identity stable. Benchmark failures remain local; the plan engine cannot import
 benchmark data. Gemini endpoints are not part of M3.

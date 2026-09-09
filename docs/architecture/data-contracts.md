@@ -221,7 +221,7 @@ Deployment identity is generated outside `manifest.json` and contains:
 The image build receives code/data/manifest identity as labels or files. The image
 digest is bound in the Cloud Run revision configuration after push because putting
 the digest into its own image would be circular. Release verification compares the
-Cloud Run revision's deployed digest and configured identity with `/healthz`.
+Cloud Run revision's deployed digest and configured identity with `/health`.
 
 ## `catalog.json`
 
@@ -561,7 +561,7 @@ Plan comparison is present only when both independently evaluated sides are
 `VALID`. An invalid reference never prevents the response from preserving the
 fresh current-side evaluation.
 
-### `GET /healthz`
+### `GET /health`
 
 Returns success only after the application has loaded and validated the reviewed
 bundle. It does not contact Gemini, BigQuery, Cloud Storage, OSM, or source
@@ -580,6 +580,10 @@ Required identity fields:
 
 Fixture tier is acceptable only in local/test health responses. A deployed release
 candidate must report `REVIEWED_RELEASE`.
+
+`GET /healthz` remains an exact local/backward-compatible alias with the same
+validated health data and identity semantics. Cloud Run deployment verification
+uses `/health` because its frontend reserves some paths ending in `z`.
 
 ### `GET /api/v1/bootstrap`
 

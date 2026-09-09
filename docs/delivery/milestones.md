@@ -184,7 +184,7 @@ failure tests pass with mocked provider calls. No proposal endpoint is required.
 scale-to-zero Cloud Run service and promoted only after no-traffic verification.
 
 **Acceptance:** Existing billing controls are inspected before changes; the image
-and logs remain bounded; `/healthz` and revision identity reconcile code, data,
+and logs remain bounded; `/health` and revision identity reconcile code, data,
 manifest, image, and release; manual core passes with Gemini off; one authorized
 canary and token-log inspection pass; rollback remains available.
 

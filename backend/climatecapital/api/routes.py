@@ -16,6 +16,7 @@ from climatecapital.api.http import (
 )
 from climatecapital.contracts.api import (
     GeminiExplainSuccessEnvelope,
+    HealthEndpoint,
     HealthResponseData,
     HealthSuccessEnvelope,
 )
@@ -64,12 +65,10 @@ router = APIRouter()
 # ---------------------------------------------------------------------------
 
 
-@router.get(
-    "/healthz",
-    response_model=HealthSuccessEnvelope,
-)
-def health(
+def _health_response(
     request: Request,
+    *,
+    endpoint: HealthEndpoint,
 ) -> HealthSuccessEnvelope:
     runtime = (
         request.app.state
@@ -77,7 +76,7 @@ def health(
     )
 
     return HealthSuccessEnvelope(
-        endpoint="/healthz",
+        endpoint=endpoint,
         status="SUCCESS",
         identity=response_identity(
             request
@@ -95,6 +94,32 @@ def health(
                 request.app.state.gemini_settings.enabled
             ),
         ),
+    )
+
+
+@router.get(
+    "/health",
+    response_model=HealthSuccessEnvelope,
+)
+def health(
+    request: Request,
+) -> HealthSuccessEnvelope:
+    return _health_response(
+        request,
+        endpoint="/health",
+    )
+
+
+@router.get(
+    "/healthz",
+    response_model=HealthSuccessEnvelope,
+)
+def healthz(
+    request: Request,
+) -> HealthSuccessEnvelope:
+    return _health_response(
+        request,
+        endpoint="/healthz",
     )
 
 

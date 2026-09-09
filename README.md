@@ -128,7 +128,8 @@ Local and Cloud Run Gemini configuration is documented in
 - No geometry-derived membership, fabricated evidence, score, ranking, or optimization logic.
 
 **M3 — Core FastAPI APIs**
-- `GET /healthz`
+- `GET /health` (authoritative production health; `/healthz` remains a local/
+  backward-compatible alias)
 - `GET /api/v1/bootstrap`
 - `POST /api/v1/plans/evaluate`
 - `GET /api/v1/benchmark`

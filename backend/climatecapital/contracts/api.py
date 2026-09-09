@@ -110,8 +110,11 @@ class BenchmarkResponseData(StrictModel):
         return self
 
 
+HealthEndpoint = Literal["/health", "/healthz"]
+
+
 class HealthSuccessEnvelope(StrictModel):
-    endpoint: Literal["/healthz"]
+    endpoint: HealthEndpoint
     status: Literal["SUCCESS"]
     identity: ResponseIdentity
     data: HealthResponseData

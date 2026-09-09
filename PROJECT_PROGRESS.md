@@ -51,29 +51,27 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-09
-- **Project stage:** F6 is complete and published; F7A is accepted; and F7A.1
-  bounded pre-deployment remediation is complete and accepted. No deployment has
-  occurred.
-- **Current milestone:** F7A.1 complete — the accepted single-container Cloud Run
-  source/configuration boundary is implemented and verified.
-- **Next gate:** F7B actual GCP deployment from the exact frozen Git commit that
-  contains the accepted F7A.1 patch.
+- **Project stage:** F6, F7A, and F7A.1 are complete and accepted. F7B.1 has
+  corrected the confirmed Cloud Run health-path incompatibility; F7B remains
+  paused until the correction is published at a new exact frozen SHA.
+- **Current milestone:** F7B.1 Cloud Run-safe health remediation is complete and
+  accepted. The existing `fda9176` image and private core revision remain
+  superseded for final production and must not be promoted.
+- **Next gate:** Resume F7B only from the exact Git SHA containing the accepted
+  F7B.1 correction. F7C has not begun.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
-- **Working state:** The accepted F7A.1 patch supersedes frozen baseline `1e30c2d`
-  for deployment. F7B must use the exact Git SHA produced by publication of this
-  patch. The pre-existing unrelated untracked `.node-version` remains untouched.
+- **Working state:** Frozen deployment SHA `fda9176bc7eaf05dd1951744c94a24ad5e408517`
+  is superseded for final production by the accepted F7B.1 health correction. F7B must rebuild and resume from the exact Git SHA produced when this correction
+  is published. The pre-existing unrelated `.node-version` remains untouched.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** F7A.1 passed 73 focused backend/deployment/Gemini
-  tests, 506 full pytest tests plus 137 subtests, 152 legacy unittest tests,
-  31-schema parity, explicit fixture validation, Python compilation/imports,
-  `pip check`, 9 frontend files / 108 tests, ESLint, and the 79-module production
-  build under Node 22.23.2/npm 11.19.1. A real production-mode Uvicorn smoke
-  served the compiled SPA and verified robots, health, 106 projects, 74 mapped
-  contexts, `fixture_mode=false`, the unchanged 18-project `$332M` plan, security
-  headers, and disabled docs/OpenAPI. Docker is not installed locally, so F7B
-  Cloud Build remains the authoritative container build/run check.
+- **Most recent verification:** 57 focused tests passed, all 31 generated schemas
+  match, and production-mode Uvicorn returned 200 for authoritative `/health`,
+  backward-compatible `/healthz`, bootstrap, root, robots, and the production JS
+  asset. Health remained READY with validated runtime-v3 identity and locked
+  security headers; bootstrap remained 106 projects / 74 mapped /
+  `fixture_mode=false`; an unknown API path remained a JSON 404.
 
 ## Approved Locks
 
@@ -125,36 +123,99 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 - **Goal:** Complete F7 sequentially without changing locked product, methodology,
   governed data, deterministic Funding Plan behavior, or Gemini authority.
-- **Status:** F7A.1 passes locally. FastAPI now serves the compiled SPA, runtime-v3
-  is the sole application startup/health authority, production identity is
-  fail-closed, the multi-stage non-root image boundary exists, production crawler/
-  header/docs controls are active, and Gemini completion logs include bounded
-  usage metadata without content.
-- **Readiness boundary:** The source/configuration P1 findings are corrected. F7B
-  remains pending only user review, manual commit/push, and a new frozen exact SHA;
-  the old `1e30c2d` SHA must never label the remediated build.
-- **Cloud state:** Project `climatecapital-ai` is active with billing enabled;
-  local gcloud and ADC work; Vertex AI, Logging, and Monitoring APIs are enabled.
-  Cloud Run, Artifact Registry, and Cloud Build APIs are disabled, and no relevant
-  service, repository, build, or user-managed runtime service account exists.
-  These are normal F7B configuration actions, not product defects.
-- **Authority:** Only the bounded F7A.1 application/configuration/tests/schemas and
-  handoff documentation changed. No dependency, methodology, governed data, cloud
-  resource, IAM policy, credential, commit, push, or deployment changed.
-- **Exit condition:** Stop after F7A.1 for manual review. Do not begin F7B until
-  the accepted patch is manually committed/pushed and its exact SHA is frozen.
+- **Status:** F7B.1 passes locally. `/health` is now the production-authoritative
+  runtime-v3 health route; `/healthz` remains a strict local/backward-compatible
+  alias. F7B remains blocked until this patch is reviewed, published, and frozen.
+- **Readiness boundary:** The user explicitly authorized bucket-only
+  `roles/storage.objectViewer` for the effective build account, and the already-
+  authorized repository-only Artifact Registry Writer grant was applied after its
+  exact push denial. The subsequent build passed. Cloud Run rejected `--no-traffic`
+  for first-service creation, so the core revision was created with 100% private
+  traffic and Invoker IAM enforcement; anonymous access returns 403.
+- **Authority:** F7B.1 changes only the health route/strict contract, affected
+  generated schemas, focused tests, directly affected documentation, D-118, and
+  this progress record. No Dockerfile, methodology, governed data, Gemini,
+  credential, cloud resource, commit, or push changed.
+- **Exit condition:** Stop for manual review, commit/push, and a new frozen SHA.
+  Never promote the superseded `fda9176` image/revision as the final release, and
+  do not begin F7C.
 
 ## Next Actions
 
-1. Manually review the complete unstaged F7A.1 patch, then commit and push it if
-   accepted; do not label the remediated tree with `1e30c2d`.
-2. Record the resulting exact Git SHA and explicitly authorize F7B actual GCP
-   deployment; deployment has not started.
-3. Complete F8 submission package, demo flow, screenshots, and final documentation
+1. Manually review the narrow F7B.1 health-route patch and its verification record.
+2. Commit and push the accepted patch, confirm `HEAD == origin/main`, and freeze
+   the new exact Git SHA before rebuilding and resuming F7B.
+3. Begin F7C only after F7B passes; complete F8 submission materials
    only after the applicable release gates.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-09 — F7B.1 Cloud Run-safe health endpoint remediation
+
+- **Starting state and issue:** Preserved `main`, `HEAD`, and `origin/main` at
+  `fda9176bc7eaf05dd1951744c94a24ad5e408517`, the accurate F7B blocked progress
+  change, and untouched `.node-version`. Build
+  `c9c52f26-0f9c-4c11-837c-cbb852eff1b7` and digest
+  `sha256:aeeddd6438ada123b6b924dda298f437c4280d4f015c678b02acc32e30039a64`
+  remain valid evidence for the superseded source, and the private core revision
+  proved container startup, injected port, root, assets, favicon, and robots.
+  Cloud Run intercepted `/healthz` as a reserved z-ending path before FastAPI.
+- **Correction:** Added authoritative `GET /health`, retained `GET /healthz` as a
+  local/backward-compatible alias, and routed both through one unchanged
+  runtime-v3 health constructor with truthful endpoint values. The strict success
+  contract and generated schemas permit exactly `/health` and `/healthz`;
+  production deployment instructions now use `/health`.
+- **Verification:** 57 focused health/API/deployment tests passed with only two
+  known dependency deprecations; all 31 generated schemas match. Production-mode
+  Uvicorn returned 200/READY for `/health` and 200 for `/healthz` with equivalent
+  stable health semantics, all locked security headers, and the expected explicit
+  safe local deployment identity. Bootstrap returned 106 projects, 74 mapped,
+  `fixture_mode=false`, and the same runtime-v3 data version. Root, robots, and the
+  production JS asset returned 200; an unknown `/api/v1/...` remained a JSON 404.
+- **Handoff:** **PASS locally; F7B remains blocked pending publication.** No Cloud
+  Build, deploy, IAM/resource/public-access/traffic mutation, Vertex call, commit,
+  push, or F7C work occurred during F7B.1. The user must review, commit, push, and
+  freeze a new exact SHA before F7B resumes. The old `fda9176` image and revision
+  must never be promoted as the final release.
+
+### 2026-09-09 — F7B built and privately deployed; blocked on `/healthz`
+
+- **Frozen gate:** Confirmed `main`, `HEAD`, `origin/main`, and merge base at exact
+  `fda9176bc7eaf05dd1951744c94a24ad5e408517`; no tracked/staged change existed and
+  only the untouched `.node-version` was untracked. Recomputed runtime-v3 identity:
+  data version `climatecapital-austin-2026-01-21-cross-category-v2`, release ID
+  `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`,
+  manifest SHA-256
+  `089d8f54108530d3a2483b25239b446bda236d98b4d554a8dd25cdd2934c3d8a`,
+  106 projects, 74 mapped, and `fixture_mode=false`.
+- **Authorized setup:** Enabled only Cloud Run, Artifact Registry, and Cloud Build;
+  created the one `us-central1` Docker repository and keyless
+  `climatecapital-runtime` service account; granted only `roles/aiplatform.user`.
+  Direct permission testing confirmed the deployer already has runtime-account
+  `iam.serviceAccounts.actAs`, so no Service Account User grant or JSON key was
+  added.
+- **Build boundary/result:** Built a temporary context from `git archive` of the
+  exact SHA and listed its 87-file/1.2 MiB upload set. A temporary upload-only rule
+  included the frozen Dockerfile and `.dockerignore`; forbidden local, credential,
+  fixture, raw/staging, Git, virtualenv, node_modules, and build-output paths were
+  absent. The user explicitly authorized bucket-only `roles/storage.objectViewer`
+  for the effective Compute build account. Build `4622278e...` then built the image
+  but proved the expected repository upload denial; repository-only
+  `roles/artifactregistry.writer` was applied under the original F7B authority.
+  Retry build `c9c52f26-0f9c-4c11-837c-cbb852eff1b7` passed in 89.45 seconds and
+  pushed `app:git-fda9176` at digest
+  `sha256:aeeddd6438ada123b6b924dda298f437c4280d4f015c678b02acc32e30039a64`.
+- **Private core/result:** Cloud Run does not support `--no-traffic` for the first
+  service. The bounded fallback created `climatecapital-ai-core-fda9176` with the
+  Invoker IAM check enforced; unauthenticated access returns 403. The container
+  became healthy, listened on `0.0.0.0:8080`, and served root, JS/CSS, favicon,
+  and robots with 200. Exact `/healthz` instead returned Google Frontend HTML 404
+  before reaching the container; no corresponding application/request log exists.
+- **Handoff:** **BLOCKED — SOURCE REMEDIATION REQUIRED.** Cloud Run reserves this
+  path, so the accepted public health gate cannot pass without a source route/test
+  correction and new frozen SHA. No Gemini revision, Vertex canary, public access,
+  final promotion, commit, push, service-account key, or F7C work occurred.
 
 ### 2026-09-09 — F7A.1 pre-deployment remediation and local production verification
 
@@ -953,9 +1014,9 @@ separate authorization.
 
 ## Blockers
 
-- F7B is blocked only on manual review, commit/push, and freezing the resulting
-  exact F7A.1 Git SHA. The remediated working tree must not be built or advertised
-  as frozen baseline `1e30c2d`.
+- F7B.1 has corrected the Cloud Run-incompatible `/healthz` production path
+  locally. F7B remains blocked until the patch is manually reviewed, committed,
+  pushed, and frozen at a new exact SHA for rebuild and deployment.
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed. They urgently block submission-dependent work and
   final submission-package planning. They did not block M1 and do not silently
@@ -963,9 +1024,9 @@ separate authorization.
 
 ## Active Risks
 
-- Deploying the uncommitted F7A.1 tree while advertising `CODE_GIT_SHA=1e30c2d`
-  would make release identity false. The corrected tree must receive a new exact
-  frozen Git SHA before image construction and no-traffic deployment.
+- The private core revision and immutable `fda9176` image must not be publicly
+  promoted as the final release. The verified F7B.1 correction requires manual
+  review, commit/push, a new exact SHA, and a new image digest.
 - D-116 governs 74 source-native project map features, but later-refreshed CPE,
   park/PARD, and AFM features are authoritative only for stable-location display.
   A silent source refresh could import post-snapshot shape or project-fact changes;
@@ -1065,7 +1126,7 @@ separate authorization.
 - Direct OSM tiles create an external demo dependency and policy obligation;
   attribution, normal Referer/cache behavior, no prefetch/bulk use, configurable
   provider, noindex/robots discouragement, and neutral fallback are mandatory.
-- Code/data/manifest/image identity could drift unless `/healthz`, the Cloud Run
+- Code/data/manifest/image identity could drift unless `/health`, the Cloud Run
   revision, external manifest checksum, and deployed image digest reconcile before
   traffic promotion.
 - Failed recalculation must not overwrite the last successful deterministic result.
@@ -1515,7 +1576,7 @@ The authoritative history is [docs/decisions.md](docs/decisions.md).
 - D-097–D-116 govern the cross-category analytical universe, PRB reconciliation,
   model eligibility, Funding Priority, portfolio construction, runtime-v2/API
   activation, and runtime-v3 project geometry.
-- Next available decision ID: **D-117**.
+- Next available decision ID: **D-119**.
 
 ## Verification Record
 
@@ -1523,6 +1584,8 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-09 | F7B.1 Cloud Run-safe health endpoint remediation | Ran focused health/API/contract/deployment tests, regenerated and checked affected schemas through the repository generator, started production-mode Uvicorn with explicit safe identity values and the compiled frontend, checked `/health`, `/healthz`, bootstrap, root, robots, production JS, security headers, and an unknown API path, then stopped the server and checked Git whitespace/status | PASS: 57 focused tests; 31 schemas match; `/health` returns 200/READY with endpoint `/health`, validated runtime-v3 deployment identity, and locked production headers; `/healthz` returns 200 with equivalent stable semantics and endpoint `/healthz`; bootstrap remains 106 projects / 74 mapped / `fixture_mode=false`; root/robots/asset return 200 and unknown API remains JSON 404. No cloud mutation, build/deploy, Vertex call, commit, push, or F7C work |
+| 2026-09-09 | F7B frozen-source build and private core deployment gate | Reconciled Git/runtime identity; applied explicitly authorized bucket-only source Viewer and demonstrated repository-only Writer grants; built exact SHA `fda9176`; resolved its immutable digest; handled first-service no-traffic rejection by retaining Invoker IAM enforcement; tested anonymous denial and authenticated root/assets/favicon/robots; inspected exact revision startup/request logs and `/healthz` response | BLOCKED — SOURCE REMEDIATION REQUIRED: build `c9c52f26-0f9c-4c11-837c-cbb852eff1b7` succeeded and private core revision `climatecapital-ai-core-fda9176` is healthy on port 8080, but Cloud Run intercepts `/healthz` with a Google-generated 404 before FastAPI. No Gemini revision, Vertex call, public access, promotion, commit, push, or F7C work occurred |
 | 2026-09-09 | F7A.1 bounded pre-deployment remediation | Added and ran focused deployment/runtime/static/security/Gemini tests; ran full pytest and legacy unittest; regenerated/checked 31 schemas; validated the explicit fixture; ran compilation, imports, runtime-v3 checks, and `pip check`; ran all frontend tests, lint, and production build under exact Node 22.23.2/npm 11.19.1; started production-mode Uvicorn against the actual compiled SPA and checked root, robots, health, bootstrap, `$332M` plan, headers, and disabled docs; inspected Git/secret/artifact hygiene and Docker availability | PASS: 73 focused tests, 506 pytest tests plus 137 subtests, 152 legacy tests, 31 schemas, fixture/compilation/import/dependency checks, 9 frontend files / 108 tests, lint, and 79-module build all pass. Production smoke reports 106 projects, 74 mapped, `fixture_mode=false`, and unchanged 18 / `$331.825M` / `$175K` plan facts. Docker is not installed, so local image build/run is unavailable and F7B Cloud Build remains authoritative. No cloud mutation, deployment, commit, push, governed-data change, or `.node-version` change |
 | 2026-09-09 | F7A GCP deployment-readiness and configuration audit | Reconciled frozen Git baseline and deployment docs/source; inspected container/build/static/routing/configuration/runtime-v3/Gemini/security surfaces; queried gcloud account/project/billing/API/resource/IAM/ADC state read-only; checked current official Cloud Run, Artifact Registry, Cloud Build, Vertex pricing/IAM guidance; directly probed health/bootstrap/root/docs/robots/security headers; ran 53 focused backend tests and the production frontend build with exact Node/npm; checked manifest identity and Git hygiene | READY WITH PRE-DEPLOYMENT FIXES: locked one-service Cloud Run topology remains correct, project/ADC/Vertex are ready, and frontend/runtime/Gemini checks pass, but root is 404, health reports legacy `FIXTURE` plus zero identities while bootstrap is runtime-v3, required container and release web controls are absent, and token counts are not logged. Cloud Run/Artifact Registry/Cloud Build APIs, repository, runtime service account, and service are expected F7B setup. No cloud mutation, deployment, product/data change, commit, push, or `.node-version` change |
 | 2026-09-09 | F6D final regression and release-candidate smoke | Reconciled branch/HEAD/upstream/diff/untracked scope; ran `.venv/bin/python -m pytest -q`, legacy unittest discovery, 31-schema parity, explicit fixture validation, `compileall`, public backend imports, `pip check`, full frontend tests, ESLint, and the TypeScript/Vite build under pinned Node 22.23.2/npm 11.19.1; ran Git hygiene checks; started the real FastAPI/Vite runtime and smoke-tested Explore/Barton Springs detail, a `$332M` plan, one live plan-grounded Gemini explanation, Explore/Funding Plan navigation, Historical Benchmark, health/bootstrap/title, request outcomes, and backend logs | PASS: 486 pytest tests plus 137 subtests; 152 legacy tests; 31 schemas; valid explicit fixture; compilation/import/dependencies clean; 9 frontend files / 108 tests; lint; 79-module build; diff check. Live health/bootstrap/plan/Gemini/benchmark requests returned 200; runtime-v3 served 106 projects / 74 map features with `fixture_mode=false`; title was `ClimateCapital AI`; `$332M` produced 18 projects / `$331.825M` selected / `$175K` remaining; Gemini stated it did not select or change projects and product state persisted. Initial `create_app` probe and signed-host Node/WASI failures were verification-environment issues; corrected public imports and pinned child PATH passed. Temporary ignored packages were removed. No additional defect, artifact, secret, deployment, commit, or push |
@@ -1570,6 +1633,37 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-09 — Complete F7B.1 Cloud Run-safe health remediation
+
+- **Correction:** Added `/health` as the authoritative production route while
+  retaining `/healthz` as a local/backward-compatible alias. Both routes share
+  the unchanged validated runtime-v3 health construction and report their exact
+  endpoint. Updated only the strict health contract, affected generated schemas,
+  focused tests, production-health documentation, D-118, and this handoff.
+- **Evidence:** 57 focused tests and all 31 schema parity checks passed.
+  Production-mode Uvicorn returned 200/READY for `/health`, 200 for `/healthz`,
+  equivalent stable health semantics, the locked headers, 106 projects, 74 mapped
+  contexts, `fixture_mode=false`, working root/robots/assets, and JSON 404 for an
+  unknown API route.
+- **Stop:** No cloud mutation, build/deploy, Vertex call, commit, push, or F7C work
+  occurred. Manual review/commit/push and a new frozen SHA are mandatory before
+  F7B resumes; the `fda9176` image/revision must not be promoted as final.
+
+### 2026-09-09 — Resume F7B and stop at Cloud Run `/healthz` blocker
+
+- **Execution:** Preserved frozen `fda9176`; applied only the newly authorized
+  Cloud Build bucket Viewer binding and the previously authorized repository-only
+  Writer binding after its exact demonstrated denial; completed the immutable
+  image build and created one private Gemini-disabled core revision.
+- **Evidence:** Build and startup passed; the container listens on port 8080 and
+  the compiled SPA/static surface works. The first-service no-traffic command was
+  rejected before creation, so the supported fallback kept Invoker IAM enabled;
+  unauthenticated access is denied. Cloud Run itself intercepts `/healthz` with a
+  Google HTML 404, and revision logs prove the request never reaches FastAPI.
+- **Stop:** Source remediation and a new frozen SHA are required. No Gemini
+  revision, Vertex canary, public-access enablement, final promotion, application
+  change, commit, push, key, or F7C work occurred.
 
 ### 2026-09-09 — Complete F7A.1 pre-deployment remediation
 

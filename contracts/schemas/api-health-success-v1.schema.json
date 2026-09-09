@@ -220,7 +220,10 @@
       "$ref": "#/$defs/HealthResponseData"
     },
     "endpoint": {
-      "const": "/healthz",
+      "enum": [
+        "/health",
+        "/healthz"
+      ],
       "title": "Endpoint",
       "type": "string"
     },

@@ -8,6 +8,7 @@ from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
+from pydantic import ValidationError
 from starlette.routing import Mount
 
 from climatecapital.api.cross_category_runtime import (
@@ -16,6 +17,10 @@ from climatecapital.api.cross_category_runtime import (
 )
 from climatecapital.contracts.cross_category_runtime import (
     CROSS_CATEGORY_FUNDING_PLAN_CONTRACT_VERSION,
+)
+from climatecapital.contracts.api import (
+    ApiSuccessEnvelope,
+    HealthSuccessEnvelope,
 )
 from climatecapital.main import create_app
 
@@ -91,7 +96,7 @@ def test_production_serves_spa_assets_and_keeps_api_routes_owned(
         asset = client.get("/assets/app.js")
         favicon = client.get("/favicon.svg")
         robots = client.get("/robots.txt")
-        health = client.get("/healthz")
+        health = client.get("/health")
         bootstrap = client.get("/api/v1/bootstrap")
         unknown_api = client.get("/api/v1/not-a-route")
 
@@ -125,7 +130,7 @@ def test_production_health_uses_validated_runtime_v3_identity(monkeypatch, tmp_p
     application = create_app(static_directory=_static_bundle(tmp_path))
 
     with TestClient(application) as client:
-        health = client.get("/healthz").json()
+        health = client.get("/health").json()
         bootstrap = client.get("/api/v1/bootstrap").json()
         runtime = application.state.cross_category_runtime
 
@@ -146,6 +151,45 @@ def test_production_health_uses_validated_runtime_v3_identity(monkeypatch, tmp_p
     assert bootstrap["data"]["map_context"]["mapped_project_count"] == 74
     assert bootstrap["data"]["public_configuration"]["fixture_mode"] is False
     assert health["data"]["contract_versions"] == MANIFEST["contract_versions"]
+
+
+def test_health_routes_are_strict_and_semantically_equivalent(monkeypatch, tmp_path):
+    _set_production_identity(monkeypatch)
+    application = create_app(static_directory=_static_bundle(tmp_path))
+
+    with TestClient(application) as client:
+        production_response = client.get("/health")
+        legacy_response = client.get("/healthz")
+
+    assert production_response.status_code == 200
+    assert legacy_response.status_code == 200
+    production = production_response.json()
+    legacy = legacy_response.json()
+    assert production["endpoint"] == "/health"
+    assert legacy["endpoint"] == "/healthz"
+    assert production["data"]["status"] == "READY"
+    assert production["data"] == legacy["data"]
+    production_identity = dict(production["identity"])
+    legacy_identity = dict(legacy["identity"])
+    production_identity.pop("request_id")
+    legacy_identity.pop("request_id")
+    assert production_identity == legacy_identity
+
+    for response in (production_response, legacy_response):
+        HealthSuccessEnvelope.model_validate_json(response.content, strict=True)
+        ApiSuccessEnvelope.model_validate_json(response.content, strict=True)
+
+    invalid = dict(production)
+    invalid["endpoint"] = "/ready"
+    with pytest.raises(ValidationError):
+        HealthSuccessEnvelope.model_validate(invalid, strict=True)
+    with pytest.raises(ValidationError):
+        ApiSuccessEnvelope.model_validate(invalid, strict=True)
+
+    endpoint_schema = HealthSuccessEnvelope.model_json_schema()["properties"][
+        "endpoint"
+    ]
+    assert set(endpoint_schema["enum"]) == {"/health", "/healthz"}
 
 
 @pytest.mark.parametrize(
@@ -210,7 +254,7 @@ def test_production_security_crawler_and_docs_boundary(monkeypatch, tmp_path):
 
     with TestClient(application) as client:
         root = client.get("/")
-        health = client.get("/healthz")
+        health = client.get("/health")
         docs = client.get("/docs")
         redoc = client.get("/redoc")
         openapi = client.get("/openapi.json")

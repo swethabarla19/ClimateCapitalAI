@@ -272,7 +272,7 @@ All endpoints use same-origin HTTPS and `/api/v1` contracts. Details are in
 
 | Endpoint | P0 purpose |
 | --- | --- |
-| `GET /healthz` | Health plus deployment/runtime identity; no dependency fan-out |
+| `GET /health` | Authoritative production health plus deployment/runtime identity; no dependency fan-out (`/healthz` remains a local/backward-compatible alias) |
 | `GET /api/v1/bootstrap` | Versioned catalog, map context, map defaults, evidence/source metadata, and UI configuration |
 | `GET /api/v1/benchmark` | Separately loaded benchmark identity and published treatment |
 | `POST /api/v1/plans/evaluate` | Independently evaluate current and optional reference inputs and return supported differences |
@@ -374,7 +374,7 @@ Deployment/runtime identity separately exposes:
 
 The image digest is known only after image creation/push and is injected or bound
 at deployment time; it is not embedded circularly into the image contents.
-`GET /healthz`, the Cloud Run revision configuration, and release verification must
+`GET /health`, the Cloud Run revision configuration, and release verification must
 agree on all four identities. A mismatch blocks traffic promotion.
 
 ## Authentication, Security, and Configuration
@@ -404,7 +404,7 @@ protected.
 
 P0 observability is intentionally small:
 
-- `GET /healthz` reports healthy startup and deployment identity without querying
+- `GET /health` reports healthy startup and deployment identity without querying
   external services;
 - built-in Cloud Run request, latency, instance, error, and resource metrics;
 - bounded structured Cloud Logging for request IDs, route/status/latency, failure
@@ -457,7 +457,7 @@ Deployment verification order:
 3. run the full repository test/build/check suite;
 4. build without live source acquisition or source-service access;
 5. push by immutable image digest and create a no-traffic Cloud Run revision;
-6. reconcile `/healthz`, revision configuration, data manifest, and image digest;
+6. reconcile `/health`, revision configuration, data manifest, and image digest;
 7. run golden current/reference plan and benchmark-isolation checks;
 8. run the complete manual core journey with `GEMINI_ENABLED=false`;
 9. enable Gemini if authorized and run one grounded explanation canary;
@@ -605,7 +605,7 @@ Official pricing/control references:
 | Gemini invents or overspends | Server grounding/post-validation, bounded tokens/rates/concurrency, kill switch, token logs without content, and billing controls |
 | Public crawler/tile traffic | Noindex/robots discouragement, direct compliant browser use, no prefetch, configurable provider, neutral fallback |
 | Cloud Run cold start or external outage | Small image, no runtime data dependencies, manual core path, local failures, deployment canary and rollback |
-| Identity drift | External manifest checksum plus separate code/data/image identity reconciled by `/healthz` and release verification |
+| Identity drift | External manifest checksum plus separate code/data/image identity reconciled by `/health` and release verification |
 | Deadline pressure | Core manual plan and required explanation first; cut Compare and proposal stretch before required contracts or QA |
 
 ## Implementation Work Units in Dependency Order
