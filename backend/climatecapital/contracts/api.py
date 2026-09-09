@@ -17,6 +17,9 @@ from .gemini import (
     GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
     GeminiExplanationResult,
 )
+from .cross_category_release import (
+    CrossCategoryReleaseContractVersionsV3,
+)
 from .plans import BenchmarkComparisonResponseData, PlanEvaluationResponseData
 from .versions import (
     API_NAMESPACE,
@@ -54,7 +57,10 @@ class DeploymentIdentityData(StrictModel):
 class HealthResponseData(StrictModel):
     status: Literal["READY"]
     deployment_identity: DeploymentIdentityData
-    contract_versions: ContractVersionSet
+    contract_versions: (
+        ContractVersionSet
+        | CrossCategoryReleaseContractVersionsV3
+    )
     gemini_enabled: bool = Field(strict=True)
 
 

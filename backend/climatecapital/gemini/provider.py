@@ -142,6 +142,7 @@ class VertexGeminiProvider:
             for public_name, sdk_name in (
                 ("prompt_tokens", "prompt_token_count"),
                 ("response_tokens", "candidates_token_count"),
+                ("reasoning_tokens", "thoughts_token_count"),
                 ("total_tokens", "total_token_count"),
             ):
                 value = getattr(usage, sdk_name, None)

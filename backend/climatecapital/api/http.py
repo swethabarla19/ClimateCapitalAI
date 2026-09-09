@@ -131,8 +131,9 @@ def response_identity(
     data_version: str | None = None,
     release_id: str | None = None,
 ) -> ResponseIdentity:
-    legacy_runtime = (
-        request.app.state.runtime
+    runtime = (
+        request.app.state
+        .cross_category_runtime
     )
 
     return ResponseIdentity(
@@ -143,13 +144,11 @@ def response_identity(
         contract_version=contract_version,
         data_version=(
             data_version
-            or legacy_runtime
-            .manifest
-            .data_version
+            or runtime.catalog.data_version
         ),
         release_id=(
             release_id
-            or legacy_runtime.release_id
+            or runtime.release_id
         ),
     )
 

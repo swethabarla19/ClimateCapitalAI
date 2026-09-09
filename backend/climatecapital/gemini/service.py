@@ -29,6 +29,7 @@ from climatecapital.plans.cross_category_evaluator import (
 
 from .config import GeminiSettings
 from .provider import (
+    GeminiProviderError,
     GeminiProvider,
     GeminiProviderSafetyBlocked,
     GeminiProviderUnavailable,
@@ -551,6 +552,9 @@ class GeminiExplanationService:
             raise GeminiDisabledError
 
         started = time.monotonic()
+        model = self.settings.model
+        retry_count = 0
+        token_usage: dict[str, int] = {}
         grounded = self.ground(request)
         await self._acquire_rate_limit(client_key)
         try:
@@ -566,8 +570,18 @@ class GeminiExplanationService:
                         except GeminiProviderUnavailable:
                             if attempt == 1:
                                 raise
+                            retry_count += 1
                             await asyncio.sleep(0.05)
         except TimeoutError as error:
+            self._log_completion(
+                request_id=request_id,
+                surface=request.surface,
+                model=model,
+                started=started,
+                status="TIMEOUT",
+                retry_count=retry_count,
+                token_usage=token_usage,
+            )
             raise GeminiTimeoutError from error
         except GeminiProviderSafetyBlocked:
             status = GeminiExplanationStatus.SAFETY_BLOCKED
@@ -575,7 +589,17 @@ class GeminiExplanationService:
                 "Gemini could not answer this question because the provider "
                 "blocked the response for safety."
             )
-            model = self.settings.model
+        except GeminiProviderError as error:
+            self._log_completion(
+                request_id=request_id,
+                surface=request.surface,
+                model=model,
+                started=started,
+                status=type(error).__name__,
+                retry_count=retry_count,
+                token_usage=token_usage,
+            )
+            raise
         else:
             status = (
                 GeminiExplanationStatus.INSUFFICIENT_CONTEXT
@@ -584,16 +608,16 @@ class GeminiExplanationService:
             )
             answer = generation.response.answer
             model = generation.model
+            token_usage = generation.token_usage
 
-        latency_ms = round((time.monotonic() - started) * 1_000)
-        LOGGER.info(
-            "Gemini explanation completed request_id=%s surface=%s model=%s "
-            "latency_ms=%s status=%s",
-            request_id,
-            request.surface,
-            model,
-            latency_ms,
-            status,
+        self._log_completion(
+            request_id=request_id,
+            surface=request.surface,
+            model=model,
+            started=started,
+            status=str(status),
+            retry_count=retry_count,
+            token_usage=token_usage,
         )
         return GeminiExplanationResult(
             contract_version=GEMINI_EXPLANATION_RESULT_CONTRACT_VERSION,
@@ -606,4 +630,32 @@ class GeminiExplanationService:
             model=model,
             grounding=grounded.grounding,
             warnings=[],
+        )
+
+    @staticmethod
+    def _log_completion(
+        *,
+        request_id: str,
+        surface: GeminiSurface,
+        model: str,
+        started: float,
+        status: str,
+        retry_count: int,
+        token_usage: dict[str, int],
+    ) -> None:
+        latency_ms = round((time.monotonic() - started) * 1_000)
+        LOGGER.info(
+            "Gemini explanation completed request_id=%s surface=%s model=%s "
+            "latency_ms=%s status=%s retry_count=%s prompt_tokens=%s "
+            "response_tokens=%s reasoning_tokens=%s total_tokens=%s",
+            request_id,
+            surface,
+            model,
+            latency_ms,
+            status,
+            retry_count,
+            token_usage.get("prompt_tokens"),
+            token_usage.get("response_tokens"),
+            token_usage.get("reasoning_tokens"),
+            token_usage.get("total_tokens"),
         )

@@ -1679,6 +1679,51 @@
       "title": "ContractVersionSet",
       "type": "object"
     },
+    "CrossCategoryReleaseContractVersionsV3": {
+      "additionalProperties": false,
+      "properties": {
+        "benchmark": {
+          "const": "p0-cross-category-benchmark/2.0.0",
+          "title": "Benchmark",
+          "type": "string"
+        },
+        "catalog": {
+          "const": "p0-cross-category-catalog/2.0.0",
+          "title": "Catalog",
+          "type": "string"
+        },
+        "funding_plan": {
+          "const": "p0-cross-category-funding-plan/2.0.0",
+          "title": "Funding Plan",
+          "type": "string"
+        },
+        "geometry_governance": {
+          "const": "p0-cross-category-geometry-governance/1.0.0",
+          "title": "Geometry Governance",
+          "type": "string"
+        },
+        "manifest": {
+          "const": "p0-cross-category-release-manifest/3.0.0",
+          "title": "Manifest",
+          "type": "string"
+        },
+        "map_context": {
+          "const": "p0-cross-category-map-context/3.0.0",
+          "title": "Map Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalog",
+        "map_context",
+        "benchmark",
+        "funding_plan",
+        "manifest",
+        "geometry_governance"
+      ],
+      "title": "CrossCategoryReleaseContractVersionsV3",
+      "type": "object"
+    },
     "CrsContract": {
       "additionalProperties": false,
       "properties": {
@@ -2831,7 +2876,15 @@
       "additionalProperties": false,
       "properties": {
         "contract_versions": {
-          "$ref": "#/$defs/ContractVersionSet"
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ContractVersionSet"
+            },
+            {
+              "$ref": "#/$defs/CrossCategoryReleaseContractVersionsV3"
+            }
+          ],
+          "title": "Contract Versions"
         },
         "deployment_identity": {
           "$ref": "#/$defs/DeploymentIdentityData"

@@ -71,7 +71,10 @@ router = APIRouter()
 def health(
     request: Request,
 ) -> HealthSuccessEnvelope:
-    runtime = request.app.state.runtime
+    runtime = (
+        request.app.state
+        .cross_category_runtime
+    )
 
     return HealthSuccessEnvelope(
         endpoint="/healthz",

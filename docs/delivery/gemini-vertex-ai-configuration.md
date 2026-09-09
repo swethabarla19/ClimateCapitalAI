@@ -43,6 +43,16 @@ required Vertex permission, expected to be `roles/aiplatform.user`. Workload
 identity/ADC supplies credentials automatically; no API Studio key or Secret
 Manager entry is required for Gemini under this design.
 
+Before deployment, verify that the deployment identity has
+`iam.serviceAccounts.actAs` on that specific runtime service account. Grant
+`roles/iam.serviceAccountUser` on only that account if the permission is absent;
+do not infer the permission from a broad project role name. Attach the account to
+Cloud Run and use its keyless ADC. Never create or download a service-account JSON
+key, set `GOOGLE_APPLICATION_CREDENTIALS` in Cloud Run, or place credentials in
+the image, environment, or frontend. For the public service, prefer Cloud Run's
+supported no-Invoker-IAM-check mechanism when F7B verifies it is appropriate,
+rather than adding a broad invoker binding preemptively.
+
 ## Governed provider boundary
 
 - `POST /api/v1/gemini/explain` is the only public Gemini endpoint.

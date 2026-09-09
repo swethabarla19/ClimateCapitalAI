@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from climatecapital.api.runtime import RuntimeLoadError
+from climatecapital.api.runtime import RuntimeLoadError, load_runtime_state
 from climatecapital.contracts.api import (
     HealthSuccessEnvelope,
 )
@@ -549,11 +549,11 @@ def test_chunked_oversized_body_is_413(
     )
 
 
-def test_legacy_core_bundle_corruption_still_fails_startup(
+def test_legacy_core_bundle_corruption_still_fails_legacy_loader(
     monkeypatch,
     tmp_path,
 ):
-    """Legacy runtime remains loaded during the transition and must fail closed."""
+    """Historical fixture validation remains fail closed outside app startup."""
 
     bundle = (
         tmp_path
@@ -590,5 +590,4 @@ def test_legacy_core_bundle_corruption_still_fails_startup(
     with pytest.raises(
         RuntimeLoadError
     ):
-        with TestClient(app):
-            pass
+        load_runtime_state()

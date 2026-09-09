@@ -10,7 +10,11 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from climatecapital.contracts.api import PublicConfiguration
+from climatecapital.contracts.api import (
+    DeploymentIdentityData,
+    PublicConfiguration,
+)
+from climatecapital.contracts.common import ReleaseTier
 
 from climatecapital.contracts.cross_category_release import (
     CrossCategoryBenchmarkArtifact,
@@ -52,6 +56,7 @@ class CrossCategoryRuntimeState:
 
     manifest_sha256: str
     release_id: str
+    deployment_identity: DeploymentIdentityData
     public_configuration: PublicConfiguration
 
 
@@ -70,6 +75,20 @@ def default_bundle_directory() -> Path:
         / "governed"
         / "cross_category"
         / "runtime_v3"
+    )
+
+
+def is_production_environment() -> bool:
+    """Use the existing environment label as the production trust boundary."""
+
+    return (
+        os.getenv(
+            "ENVIRONMENT_LABEL",
+            "",
+        )
+        .strip()
+        .lower()
+        == "production"
     )
 
 
@@ -433,6 +452,71 @@ def load_cross_category_runtime_state(
         )
     )
 
+    production = is_production_environment()
+    identity_names = (
+        "CODE_GIT_SHA",
+        "DATA_VERSION",
+        "MANIFEST_SHA256",
+        "CONTAINER_IMAGE_DIGEST",
+        "RELEASE_ID",
+    )
+    if production:
+        missing = [
+            name
+            for name in identity_names
+            if not os.getenv(name)
+        ]
+        if missing:
+            raise CrossCategoryRuntimeLoadError(
+                "production deployment identity is incomplete: "
+                + ", ".join(missing)
+            )
+
+    configured_data_version = os.getenv(
+        "DATA_VERSION",
+        manifest.data_version,
+    )
+    if configured_data_version != manifest.data_version:
+        raise CrossCategoryRuntimeLoadError(
+            "DATA_VERSION does not match the governed runtime"
+        )
+
+    configured_manifest_sha256 = os.getenv(
+        "MANIFEST_SHA256",
+        manifest_sha256,
+    )
+    if configured_manifest_sha256 != manifest_sha256:
+        raise CrossCategoryRuntimeLoadError(
+            "MANIFEST_SHA256 does not match the governed runtime"
+        )
+
+    configured_release_id = os.getenv(
+        "RELEASE_ID",
+        manifest.release_id,
+    )
+    if configured_release_id != manifest.release_id:
+        raise CrossCategoryRuntimeLoadError(
+            "RELEASE_ID does not match the governed runtime"
+        )
+
+    try:
+        deployment_identity = DeploymentIdentityData(
+            code_git_sha=os.getenv(
+                "CODE_GIT_SHA",
+                "0" * 40,
+            ),
+            manifest_sha256=configured_manifest_sha256,
+            container_image_digest=os.getenv(
+                "CONTAINER_IMAGE_DIGEST",
+                "sha256:" + ("0" * 64),
+            ),
+            release_tier=ReleaseTier.REVIEWED_RELEASE,
+        )
+    except ValidationError as error:
+        raise CrossCategoryRuntimeLoadError(
+            "deployment identity has an invalid shape"
+        ) from error
+
     public_configuration = PublicConfiguration(
         environment_label=os.getenv(
             "ENVIRONMENT_LABEL",
@@ -461,5 +545,6 @@ def load_cross_category_runtime_state(
         manifest_path=manifest_path,
         manifest_sha256=manifest_sha256,
         release_id=manifest.release_id,
+        deployment_identity=deployment_identity,
         public_configuration=public_configuration,
     )

@@ -1,12 +1,14 @@
-"""ClimateCapital AI FastAPI entry point for the M3 local API surface."""
+"""ClimateCapital AI FastAPI entry point for local and Cloud Run execution."""
 
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
+from pathlib import Path
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from climatecapital.api.http import (
     MAX_REQUEST_BYTES,
@@ -16,16 +18,64 @@ from climatecapital.api.http import (
     unexpected_error_handler,
 )
 from climatecapital.api.cross_category_runtime import (
+    is_production_environment,
     load_cross_category_runtime_state,
 )
 from climatecapital.api.routes import router
-from climatecapital.api.runtime import load_runtime_state
 from climatecapital.gemini import GeminiExplanationService, GeminiSettings
+
+
+CONTENT_SECURITY_POLICY = "; ".join(
+    (
+        "default-src 'self'",
+        "script-src 'self'",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self' data: https://tile.openstreetmap.org",
+        "font-src 'self' data:",
+        "connect-src 'self'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'self'",
+        "frame-ancestors 'none'",
+        "manifest-src 'self'",
+    )
+)
+
+
+def default_frontend_dist_directory() -> Path:
+    return (
+        Path(__file__).resolve().parents[2]
+        / "frontend"
+        / "dist"
+    )
+
+
+def _has_compiled_frontend(directory: Path) -> bool:
+    return (
+        directory.is_dir()
+        and not directory.is_symlink()
+        and (directory / "index.html").is_file()
+    )
+
+
+def _frontend_file(directory: Path, filename: str) -> FileResponse:
+    path = directory / filename
+    if path.is_symlink() or not path.is_file():
+        raise HTTPException(status_code=404)
+    return FileResponse(path)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.runtime = load_runtime_state()
+    if (
+        app.state.production
+        and not _has_compiled_frontend(
+            app.state.frontend_dist_directory
+        )
+    ):
+        raise RuntimeError(
+            "production requires a compiled frontend/dist bundle"
+        )
     app.state.cross_category_runtime = (
         load_cross_category_runtime_state()
     )
@@ -37,53 +87,171 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(
-    title="ClimateCapital AI",
-    version="1.0.0",
-    lifespan=lifespan,
-)
-
-
-@app.middleware("http")
-async def request_boundary(request: Request, call_next):
+async def _request_boundary(request: Request, call_next):
     request_id(request)
     content_length = request.headers.get("content-length")
     if content_length:
         try:
             declared = int(content_length)
         except ValueError:
-            return error_response(
+            return _with_security_headers(
                 request,
-                status_code=422,
-                error_code="MALFORMED_REQUEST",
-                message="Invalid Content-Length header.",
+                error_response(
+                    request,
+                    status_code=422,
+                    error_code="MALFORMED_REQUEST",
+                    message="Invalid Content-Length header.",
+                ),
             )
         if declared > MAX_REQUEST_BYTES:
-            return error_response(
+            return _with_security_headers(
                 request,
-                status_code=413,
-                error_code="BODY_TOO_LARGE",
-                message="Request body exceeds the endpoint limit.",
+                error_response(
+                    request,
+                    status_code=413,
+                    error_code="BODY_TOO_LARGE",
+                    message="Request body exceeds the endpoint limit.",
+                ),
             )
     if request.method in {"POST", "PUT", "PATCH"}:
         body = await request.body()
         if len(body) > MAX_REQUEST_BYTES:
-            return error_response(
+            return _with_security_headers(
                 request,
-                status_code=413,
-                error_code="BODY_TOO_LARGE",
-                message="Request body exceeds the endpoint limit.",
+                error_response(
+                    request,
+                    status_code=413,
+                    error_code="BODY_TOO_LARGE",
+                    message="Request body exceeds the endpoint limit.",
+                ),
             )
 
-    return await call_next(request)
+    response = await call_next(request)
+    return _with_security_headers(
+        request,
+        response,
+    )
 
 
-app.add_exception_handler(
-    RequestValidationError,
-    request_validation_handler,
-)
-app.add_exception_handler(
-    Exception,
-    unexpected_error_handler,
-)
-app.include_router(router)
+def _with_security_headers(request: Request, response):
+    if request.app.state.production:
+        response.headers["Content-Security-Policy"] = (
+            CONTENT_SECURITY_POLICY
+        )
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        response.headers["X-Frame-Options"] = "DENY"
+        response.headers["Referrer-Policy"] = (
+            "strict-origin-when-cross-origin"
+        )
+        response.headers["Strict-Transport-Security"] = (
+            "max-age=31536000"
+        )
+        response.headers["X-Robots-Tag"] = (
+            "noindex, nofollow, noarchive"
+        )
+    return response
+
+
+def create_app(
+    *,
+    static_directory: Path | None = None,
+) -> FastAPI:
+    """Create the API and expose only the compiled frontend's known surfaces."""
+
+    production = is_production_environment()
+    frontend_directory = (
+        static_directory
+        if static_directory is not None
+        else default_frontend_dist_directory()
+    )
+    application = FastAPI(
+        title="ClimateCapital AI",
+        version="1.0.0",
+        lifespan=lifespan,
+        docs_url=None if production else "/docs",
+        redoc_url=None if production else "/redoc",
+        openapi_url=None if production else "/openapi.json",
+    )
+    application.state.production = production
+    application.state.frontend_dist_directory = frontend_directory
+    application.middleware("http")(_request_boundary)
+    application.add_exception_handler(
+        RequestValidationError,
+        request_validation_handler,
+    )
+    application.add_exception_handler(
+        Exception,
+        unexpected_error_handler,
+    )
+    application.include_router(router)
+
+    if _has_compiled_frontend(frontend_directory):
+        @application.get(
+            "/",
+            include_in_schema=False,
+        )
+        def frontend_index() -> FileResponse:
+            return _frontend_file(
+                frontend_directory,
+                "index.html",
+            )
+
+        @application.get(
+            "/favicon.svg",
+            include_in_schema=False,
+        )
+        def frontend_favicon() -> FileResponse:
+            return _frontend_file(
+                frontend_directory,
+                "favicon.svg",
+            )
+
+        @application.get(
+            "/icons.svg",
+            include_in_schema=False,
+        )
+        def frontend_icons() -> FileResponse:
+            return _frontend_file(
+                frontend_directory,
+                "icons.svg",
+            )
+
+        @application.get(
+            "/robots.txt",
+            include_in_schema=False,
+        )
+        def frontend_robots() -> FileResponse:
+            return _frontend_file(
+                frontend_directory,
+                "robots.txt",
+            )
+
+        assets_directory = frontend_directory / "assets"
+        application.mount(
+            "/assets",
+            StaticFiles(
+                directory=assets_directory,
+            ),
+            name="frontend-assets",
+        )
+    else:
+        @application.get(
+            "/",
+            include_in_schema=False,
+        )
+        def frontend_not_built() -> JSONResponse:
+            return JSONResponse(
+                status_code=503,
+                content={
+                    "status": "UNAVAILABLE",
+                    "message": (
+                        "Compiled frontend is not available; "
+                        "use the Vite development server or build frontend/dist."
+                    ),
+                },
+            )
+
+    return application
+
+
+app = create_app()

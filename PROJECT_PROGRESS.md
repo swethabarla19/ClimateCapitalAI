@@ -51,34 +51,29 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-09
-- **Project stage:** F5A and F5B are published through frozen baseline `be78a78`.
-  F6A automated regression, F6B core live browser acceptance, and F6C Gemini plus
-  cross-feature live acceptance are complete and accepted. F6D final regression
-  and critical-path smoke passed; F6 is complete. F7 has not started.
-- **Current milestone:** F6D complete — the reconciled current-tree release
-  candidate passed the full authoritative automated surface and one concise live
-  Explore → Funding Plan → Gemini → Historical Benchmark smoke.
-- **Next gate:** Freeze the committed and pushed F6 closeout as the F7 deployment
-  baseline, then begin F7 GCP deployment and deployed end-to-end QA. No deployment
-  has occurred.
+- **Project stage:** F6 is complete and published; F7A is accepted; and F7A.1
+  bounded pre-deployment remediation is complete and accepted. No deployment has
+  occurred.
+- **Current milestone:** F7A.1 complete — the accepted single-container Cloud Run
+  source/configuration boundary is implemented and verified.
+- **Next gate:** F7B actual GCP deployment from the exact frozen Git commit that
+  contains the accepted F7A.1 patch.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
-- **Working state:** F6 was executed from frozen F5 baseline `be78a78`. The accepted
-  F6 closeout contains only this progress record and the one-line
-  `frontend/index.html` browser-title correction from `frontend` to
-  `ClimateCapital AI`. The pre-existing unrelated untracked `.node-version`
-  remains untouched.
+- **Working state:** The accepted F7A.1 patch supersedes frozen baseline `1e30c2d`
+  for deployment. F7B must use the exact Git SHA produced by publication of this
+  patch. The pre-existing unrelated untracked `.node-version` remains untouched.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** F6D passed 486 pytest tests plus 137 subtests, 152
-  legacy unittest tests, 31-schema parity, explicit fixture validation, Python
-  compilation/imports, `pip check`, 9 frontend files / 108 tests, ESLint, and the
-  79-module production build. The live smoke confirmed `/healthz`, 106 projects,
-  74 map features, the accepted tab title, Barton Springs detail, a completed
-  `$332M` plan at 18 projects / `$331.825M` selected / `$175K` remaining, one
-  explanation-only live Vertex response, navigation, and benchmark loading. All
-  critical requests returned 200. Active runtime-v3 release ID remains
-  `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`.
+- **Most recent verification:** F7A.1 passed 73 focused backend/deployment/Gemini
+  tests, 506 full pytest tests plus 137 subtests, 152 legacy unittest tests,
+  31-schema parity, explicit fixture validation, Python compilation/imports,
+  `pip check`, 9 frontend files / 108 tests, ESLint, and the 79-module production
+  build under Node 22.23.2/npm 11.19.1. A real production-mode Uvicorn smoke
+  served the compiled SPA and verified robots, health, 106 projects, 74 mapped
+  contexts, `fixture_mode=false`, the unchanged 18-project `$332M` plan, security
+  headers, and disabled docs/OpenAPI. Docker is not installed locally, so F7B
+  Cloud Build remains the authoritative container build/run check.
 
 ## Approved Locks
 
@@ -128,37 +123,122 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Complete F6 sequential regression and live acceptance without
-  reopening locked methodology, architecture, product design, or accepted F5
-  implementation.
-- **Status:** F6 is complete. F6A passed; F6B passed with the accepted one-line
-  browser-title fix; F6C passed without a product change; F6D passed the final
-  full regression and concise live critical-path smoke without an additional
-  defect.
-- **Verification boundary:** F6D reconciled the exact current tree, reran the
-  complete Python, contract/schema/release/data, compilation/import/dependency,
-  frontend test/lint/build, and Git-hygiene surfaces, then smoke-tested the real
-  local runtime through Explore, project detail, one deterministic Funding Plan,
-  one live grounded Vertex explanation, and Historical Benchmark navigation.
-- **Authority:** No scoring/model methodology, governed universe, eligibility,
-  deterministic Funding Plan behavior, navigation, Gemini design, or deployment
-  boundary changed.
-- **Working-tree boundary:** This canonical checkpoint record and
-  `frontend/index.html` are modified. The latter remains the accepted F6B
-  browser-title fix. The pre-existing untracked `.node-version` remains untouched;
-  no methodology, governed data, architecture, dependency, cloud, commit, or push
-  change was made.
-- **Exit condition:** Stop after F6D and await explicit authorization for F7.
+- **Goal:** Complete F7 sequentially without changing locked product, methodology,
+  governed data, deterministic Funding Plan behavior, or Gemini authority.
+- **Status:** F7A.1 passes locally. FastAPI now serves the compiled SPA, runtime-v3
+  is the sole application startup/health authority, production identity is
+  fail-closed, the multi-stage non-root image boundary exists, production crawler/
+  header/docs controls are active, and Gemini completion logs include bounded
+  usage metadata without content.
+- **Readiness boundary:** The source/configuration P1 findings are corrected. F7B
+  remains pending only user review, manual commit/push, and a new frozen exact SHA;
+  the old `1e30c2d` SHA must never label the remediated build.
+- **Cloud state:** Project `climatecapital-ai` is active with billing enabled;
+  local gcloud and ADC work; Vertex AI, Logging, and Monitoring APIs are enabled.
+  Cloud Run, Artifact Registry, and Cloud Build APIs are disabled, and no relevant
+  service, repository, build, or user-managed runtime service account exists.
+  These are normal F7B configuration actions, not product defects.
+- **Authority:** Only the bounded F7A.1 application/configuration/tests/schemas and
+  handoff documentation changed. No dependency, methodology, governed data, cloud
+  resource, IAM policy, credential, commit, push, or deployment changed.
+- **Exit condition:** Stop after F7A.1 for manual review. Do not begin F7B until
+  the accepted patch is manually committed/pushed and its exact SHA is frozen.
 
 ## Next Actions
 
-1. Complete F7 GCP deployment and deployed end-to-end QA only after its separate
-   authorization; deployment has not started.
-2. Complete F8 submission package, demo flow, screenshots, and final documentation
+1. Manually review the complete unstaged F7A.1 patch, then commit and push it if
+   accepted; do not label the remediated tree with `1e30c2d`.
+2. Record the resulting exact Git SHA and explicitly authorize F7B actual GCP
+   deployment; deployment has not started.
+3. Complete F8 submission package, demo flow, screenshots, and final documentation
    only after the applicable release gates.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-09 — F7A.1 pre-deployment remediation and local production verification
+
+- **Starting state:** Began from frozen `1e30c2d` with only the accepted F7A
+  `PROJECT_PROGRESS.md` change plus the pre-existing untouched `.node-version`.
+- **Six bounded corrections:** Added same-process compiled-SPA serving; made
+  governed runtime-v3 authoritative for startup, response identity, and health;
+  added fail-closed five-value production identity; added the pinned multi-stage
+  non-root Dockerfile and whitelist `.dockerignore`; added robots/noindex,
+  production security headers, and production-disabled FastAPI docs/OpenAPI; and
+  added bounded Gemini retry/token logs plus focused tests, regenerated schemas,
+  and the narrow IAM/ADC handoff note.
+- **Verification:** Passed 73 focused tests and a final 48-test affected rerun;
+  506 full pytest tests plus 137 subtests; 152 legacy unittest tests; 31 schemas;
+  explicit fixture validation; Python compilation/import/runtime-v3 checks;
+  `pip check`; 9 frontend files / 108 tests; ESLint; and the 79-module build under
+  exact Node 22.23.2/npm 11.19.1. Git whitespace, secret, artifact, and ignored-
+  output checks pass. A real production-mode Uvicorn smoke returned 200 for the
+  built SPA, robots, health, bootstrap, and the unchanged `$332M` plan; reported
+  106/74/false runtime facts; emitted all required headers; and returned 404 for
+  docs, ReDoc, and OpenAPI.
+- **Container limitation:** Docker is not installed on this host, so no local
+  image build/run occurred. The exact official Node and Python base tags exist;
+  F7B Cloud Build must perform the authoritative image build, non-root/PORT smoke,
+  and final image-content inspection.
+- **Handoff:** **PASS**. No cloud/IAM mutation, deployment, commit, or push
+  occurred. The user must manually review, commit, and push; F7B remains pending
+  until that publication produces a new exact frozen SHA.
+
+### 2026-09-09 — F7A GCP deployment-readiness and configuration audit
+
+- **Frozen baseline:** Confirmed `main`, `HEAD`, and `origin/main` at
+  `1e30c2dd62729bfec2a487cb30d43d4ac18260ad`; the initial tracked tree was clean,
+  `git diff --check` passed, and only the pre-existing `.node-version` was
+  untracked and untouched.
+- **Selected architecture:** Retained D-080's one public request-billed Cloud Run
+  service in `us-central1`: one non-root multi-stage image, one FastAPI/Uvicorn
+  worker serving the compiled Vite SPA and relative `/api/v1` calls, runtime-v3
+  packaged in the image, minimum 0 / maximum 1 instance, 1 vCPU / 512 MiB, no
+  runtime database/BigQuery/GCS/GIS dependency, and keyless Vertex ADC through a
+  dedicated runtime service account.
+- **Cloud audit:** Active account `swethabarla08@gmail.com` has the existing Owner
+  role; project `climatecapital-ai` is active and billed; ADC refresh succeeds;
+  Vertex AI, Logging, Monitoring, BigQuery, and Storage APIs are enabled. Cloud
+  Run, Artifact Registry, Cloud Build, Secret Manager, and Billing Budget APIs are
+  disabled. No Cloud Run service, Artifact Registry repository, Cloud Build
+  history, Secret Manager dependency, or user-managed service account is present.
+  The existing `us-central1` raw bucket and 37-row BigQuery raw table remain
+  preparation-only and require no runtime IAM.
+- **P1 findings:** The current FastAPI root returns 404 and does not serve
+  `frontend/dist`; no Dockerfile, `.dockerignore`, or tracked `robots.txt` exists.
+  No Cloud Build config exists, but F7B can use the Dockerfile directly with
+  `gcloud builds submit`. `/healthz` returns the legacy
+  `m2b-development-fixture-1` identity with `FIXTURE` tier and zero Git/image
+  values while bootstrap returns runtime-v3 with `fixture_mode=false`. Framework
+  docs/OpenAPI are public, locked crawler/security headers are absent, and Gemini
+  provider token counts are collected but omitted from the bounded completion log.
+  These require a small separately authorized pre-deployment correction.
+- **P2 configuration:** Enable only Cloud Run, Artifact Registry, and Cloud Build;
+  create one regional Docker repository and one runtime service account with only
+  `roles/aiplatform.user`; build and push from the exact frozen corrected tree;
+  deploy the immutable digest to a tagged no-traffic revision with production
+  identity/Gemini environment values; verify health, core APIs, same-origin SPA,
+  and one Vertex canary before promotion. Secret Manager, runtime BigQuery/GCS,
+  VPC, load balancer, CDN, database, and separate frontend hosting are not needed.
+- **Verification:** Direct TestClient evidence reproduced the 404 root and
+  fixture/runtime identity split; `/docs`, `/redoc`, and `/openapi.json` returned
+  200, while `/robots.txt` returned 404 and required security headers were absent.
+  The 53 focused runtime/standard-API/Gemini tests passed with two known dependency
+  deprecations. The production frontend build passed at 79 modules under the exact
+  Node 22.23.2/npm 11.19.1 toolchain after the known signed-host Node mismatch was
+  isolated. Runtime-v3's manifest SHA-256 is
+  `089d8f54108530d3a2483b25239b446bda236d98b4d554a8dd25cdd2934c3d8a`.
+- **Cost/security:** Request-based minimum-zero Cloud Run and low demo traffic
+  should remain near zero compute cost; one small image should remain within or
+  near Artifact Registry's 0.5 GiB allowance; one short build should remain within
+  Cloud Build's monthly free minutes. Gemini is the material variable cost and
+  retains explicit action, bounded input/output, concurrency/rate limits, and a
+  kill switch. No hard-coded secret, tracked credential, API key, service-account
+  JSON, or browser cloud credential was found.
+- **Result/handoff:** **READY WITH PRE-DEPLOYMENT FIXES; F7B NOT READY** until the
+  P1 corrections are implemented, verified, and frozen. No deployment, API enable,
+  resource creation, IAM grant, cloud mutation, application change, commit, or push
+  occurred.
 
 ### 2026-09-09 — F6D final regression and F6 closeout
 
@@ -873,6 +953,9 @@ separate authorization.
 
 ## Blockers
 
+- F7B is blocked only on manual review, commit/push, and freezing the resulting
+  exact F7A.1 Git SHA. The remediated working tree must not be built or advertised
+  as frozen baseline `1e30c2d`.
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed. They urgently block submission-dependent work and
   final submission-package planning. They did not block M1 and do not silently
@@ -880,6 +963,9 @@ separate authorization.
 
 ## Active Risks
 
+- Deploying the uncommitted F7A.1 tree while advertising `CODE_GIT_SHA=1e30c2d`
+  would make release identity false. The corrected tree must receive a new exact
+  frozen Git SHA before image construction and no-traffic deployment.
 - D-116 governs 74 source-native project map features, but later-refreshed CPE,
   park/PARD, and AFM features are authoritative only for stable-location display.
   A silent source refresh could import post-snapshot shape or project-fact changes;
@@ -1437,6 +1523,8 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-09 | F7A.1 bounded pre-deployment remediation | Added and ran focused deployment/runtime/static/security/Gemini tests; ran full pytest and legacy unittest; regenerated/checked 31 schemas; validated the explicit fixture; ran compilation, imports, runtime-v3 checks, and `pip check`; ran all frontend tests, lint, and production build under exact Node 22.23.2/npm 11.19.1; started production-mode Uvicorn against the actual compiled SPA and checked root, robots, health, bootstrap, `$332M` plan, headers, and disabled docs; inspected Git/secret/artifact hygiene and Docker availability | PASS: 73 focused tests, 506 pytest tests plus 137 subtests, 152 legacy tests, 31 schemas, fixture/compilation/import/dependency checks, 9 frontend files / 108 tests, lint, and 79-module build all pass. Production smoke reports 106 projects, 74 mapped, `fixture_mode=false`, and unchanged 18 / `$331.825M` / `$175K` plan facts. Docker is not installed, so local image build/run is unavailable and F7B Cloud Build remains authoritative. No cloud mutation, deployment, commit, push, governed-data change, or `.node-version` change |
+| 2026-09-09 | F7A GCP deployment-readiness and configuration audit | Reconciled frozen Git baseline and deployment docs/source; inspected container/build/static/routing/configuration/runtime-v3/Gemini/security surfaces; queried gcloud account/project/billing/API/resource/IAM/ADC state read-only; checked current official Cloud Run, Artifact Registry, Cloud Build, Vertex pricing/IAM guidance; directly probed health/bootstrap/root/docs/robots/security headers; ran 53 focused backend tests and the production frontend build with exact Node/npm; checked manifest identity and Git hygiene | READY WITH PRE-DEPLOYMENT FIXES: locked one-service Cloud Run topology remains correct, project/ADC/Vertex are ready, and frontend/runtime/Gemini checks pass, but root is 404, health reports legacy `FIXTURE` plus zero identities while bootstrap is runtime-v3, required container and release web controls are absent, and token counts are not logged. Cloud Run/Artifact Registry/Cloud Build APIs, repository, runtime service account, and service are expected F7B setup. No cloud mutation, deployment, product/data change, commit, push, or `.node-version` change |
 | 2026-09-09 | F6D final regression and release-candidate smoke | Reconciled branch/HEAD/upstream/diff/untracked scope; ran `.venv/bin/python -m pytest -q`, legacy unittest discovery, 31-schema parity, explicit fixture validation, `compileall`, public backend imports, `pip check`, full frontend tests, ESLint, and the TypeScript/Vite build under pinned Node 22.23.2/npm 11.19.1; ran Git hygiene checks; started the real FastAPI/Vite runtime and smoke-tested Explore/Barton Springs detail, a `$332M` plan, one live plan-grounded Gemini explanation, Explore/Funding Plan navigation, Historical Benchmark, health/bootstrap/title, request outcomes, and backend logs | PASS: 486 pytest tests plus 137 subtests; 152 legacy tests; 31 schemas; valid explicit fixture; compilation/import/dependencies clean; 9 frontend files / 108 tests; lint; 79-module build; diff check. Live health/bootstrap/plan/Gemini/benchmark requests returned 200; runtime-v3 served 106 projects / 74 map features with `fixture_mode=false`; title was `ClimateCapital AI`; `$332M` produced 18 projects / `$331.825M` selected / `$175K` remaining; Gemini stated it did not select or change projects and product state persisted. Initial `create_app` probe and signed-host Node/WASI failures were verification-environment issues; corrected public imports and pinned child PATH passed. Temporary ignored packages were removed. No additional defect, artifact, secret, deployment, commit, or push |
 | 2026-09-09 | F6C Gemini and cross-feature live acceptance | Reconciled the interrupted working tree; reused FastAPI at `127.0.0.1:8000` and Vite at `127.0.0.1:5173`; checked `/healthz` and bootstrap; exercised real ADC-backed Vertex Gemini in product/methodology, mapped Barton Springs Bridge, unmapped Bolm Maintenance Center, and completed `$700M` Funding Plan contexts; tested project/plan transitions, official-score/location/optimization/recommendation boundaries, empty and pending submission behavior, desktop and narrower effective Safari layouts, browser console, request outcomes, and backend logs; inspected the existing safe error/retry presentation rather than sabotaging credentials | PASS: live Gemini responses preserved governed facts, explicit unavailable geometry, deterministic plan authority, and the 31-project `$699.975M` / `$25K` plan state; unsupported score, geometry, optimization, weighting, and official-recommendation requests were not claimed as actions; context updated without stale attribution or state corruption; observed Gemini and plan requests returned 200; no application console error, exception, runaway call, contract mismatch, secret exposure, implementation defect, or F6C code change. Browser-control detachment was tooling-only; F6D/deployment/commit/push not started |
 | 2026-09-08 | F6B core live browser acceptance | Started FastAPI at `127.0.0.1:8000` and Vite at `127.0.0.1:5173`; exercised the non-Gemini shell, Explore/filter/reset, mapped and unavailable-location projects, detail switching, map legend/zoom, deterministic `$332M` and `$700M` plan paths including analyst resolution and invalid input, all three supporting pages, desktop/831px/390px responsive states, Chrome console, request/backend logs, and title retest; ran `npm test -- src/App.test.tsx`, `npm run build`, live health/title checks, `git diff --check`, and status review | PASS WITH FIXES: all core journeys passed; 106 projects, 74 supported map locations, and 32 unavailable-location paths rendered coherently; `$332M` completed at `$331.825M` / 18 projects and `$700M` completed at `$699.975M` / 31 projects after explicit rank-28 analyst resolution; bootstrap, benchmark, and plan requests returned 200; console had only the standard React development notice; corrected only `<title>frontend</title>` to `ClimateCapital AI`; 16 focused tests and 79-module build passed; `.node-version` untouched; no Gemini conversation, deployment, commit, or push |
@@ -1482,6 +1570,39 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-09 — Complete F7A.1 pre-deployment remediation
+
+- **Continuity:** Preserved frozen `1e30c2d`, the accepted F7A progress checkpoint,
+  and untouched `.node-version`; inspected the existing tree before editing.
+- **Implementation:** Completed only the six bounded P1 deployment corrections:
+  same-origin SPA serving, runtime-v3 health/identity authority and fail-closed
+  production identity, pinned non-root multi-stage container boundary, crawler/
+  security/docs controls, content-free Gemini usage logs, and related tests,
+  schemas, and IAM/ADC documentation.
+- **Verification/handoff:** All focused/full backend, legacy, schema, fixture,
+  compile/import/dependency, frontend test/lint/build, hygiene, and real local
+  production Uvicorn smoke checks pass with the counts above. Docker is not
+  installed, so F7B Cloud Build must supply the remote image evidence. No cloud
+  or IAM mutation, deployment, commit, or push occurred. Stop for user review,
+  manual publication, and freezing a new exact SHA before F7B.
+
+### 2026-09-09 — Complete F7A deployment-readiness audit
+
+- **Audit:** Verified frozen `1e30c2d`, inspected only the deployment/runtime
+  surface, queried GCP read-only, and retained the locked one-container Cloud Run
+  design. Project billing, local auth/ADC, and Vertex are ready; the expected
+  Cloud Run, Artifact Registry, Cloud Build, repository, runtime identity, and
+  service setup does not yet exist.
+- **Finding:** Classified no P0 blocker, a bounded set of P1 source/configuration
+  fixes, normal P2 cloud setup, and optional later billing/image-retention polish.
+  Direct probes proved the missing SPA root, legacy fixture health identity,
+  exposed framework docs, absent crawler/security controls, and missing token-count
+  logging; focused backend tests and the exact-toolchain frontend build passed.
+- **Handoff:** Do not deploy `1e30c2d` as-is. After separate authorization, apply
+  and verify only the P1 correction, freeze its true Git SHA, then execute the
+  documented F7B no-traffic build/deploy/verify/promote sequence. No cloud or
+  application mutation, deployment, commit, or push occurred in F7A.
 
 ### 2026-09-09 — Complete F6D final regression and F6 closeout
 

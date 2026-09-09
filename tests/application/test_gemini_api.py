@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
 from dataclasses import dataclass, field
 
 import pytest
@@ -66,7 +67,12 @@ class FakeProvider:
                 insufficient_context=self.insufficient,
             ),
             model="gemini-3.5-flash",
-            token_usage={"total_tokens": 12},
+            token_usage={
+                "prompt_tokens": 7,
+                "response_tokens": 3,
+                "reasoning_tokens": 2,
+                "total_tokens": 12,
+            },
         )
 
 
@@ -304,6 +310,96 @@ def test_insufficient_and_safety_statuses_are_application_constructed():
     assert blocked.status == "SAFETY_BLOCKED"
 
 
+def test_completion_log_contains_bounded_usage_and_no_content(caplog):
+    provider = FakeProvider(answer="PRIVATE_PROVIDER_RESPONSE")
+    request = parsed_request(question="PRIVATE_USER_QUESTION")
+
+    with caplog.at_level(logging.INFO, logger="climatecapital.gemini.service"):
+        asyncio.run(
+            service(provider).explain(
+                request,
+                request_id="123e4567-e89b-42d3-a456-426614174000",
+                client_key="RAW_IP_MUST_NOT_APPEAR",
+            )
+        )
+
+    log = caplog.text
+    assert "request_id=123e4567-e89b-42d3-a456-426614174000" in log
+    assert "surface=METHODOLOGY" in log
+    assert "model=gemini-3.5-flash" in log
+    assert "status=COMPLETE" in log
+    assert "retry_count=0" in log
+    assert "prompt_tokens=7" in log
+    assert "response_tokens=3" in log
+    assert "reasoning_tokens=2" in log
+    assert "total_tokens=12" in log
+    for forbidden in (
+        "PRIVATE_USER_QUESTION",
+        "PRIVATE_PROVIDER_RESPONSE",
+        "RAW_IP_MUST_NOT_APPEAR",
+        "authoritative_climatecapital_evidence",
+        "untrusted_prior_conversation",
+        "SYSTEM_INSTRUCTION",
+    ):
+        assert forbidden not in log
+
+
+def test_absent_token_usage_and_safety_block_logging_are_safe(caplog):
+    class NoUsageProvider(FakeProvider):
+        async def generate(self, *, system_instruction: str, contents: str):
+            self.calls.append((system_instruction, contents))
+            return GeminiGeneration(
+                response=GeminiProviderResponse(
+                    answer=self.answer,
+                    insufficient_context=True,
+                ),
+                model="gemini-3.5-flash",
+                token_usage={},
+            )
+
+    with caplog.at_level(logging.INFO, logger="climatecapital.gemini.service"):
+        result = asyncio.run(
+            service(NoUsageProvider()).explain(
+                parsed_request(),
+                request_id="123e4567-e89b-42d3-a456-426614174000",
+            )
+        )
+        blocked = asyncio.run(
+            service(FakeProvider(error=GeminiProviderSafetyBlocked())).explain(
+                parsed_request(),
+                request_id="123e4567-e89b-42d3-a456-426614174001",
+            )
+        )
+
+    assert result.status == "INSUFFICIENT_CONTEXT"
+    assert blocked.status == "SAFETY_BLOCKED"
+    assert "status=INSUFFICIENT_CONTEXT" in caplog.text
+    assert "status=SAFETY_BLOCKED" in caplog.text
+    assert "prompt_tokens=None" in caplog.text
+
+
+def test_provider_error_log_is_bounded_and_records_retry_count(caplog):
+    provider = FakeProvider(
+        answer="NEVER_LOGGED_RESPONSE",
+        error=GeminiProviderUnavailable("PRIVATE_PROVIDER_ERROR"),
+    )
+
+    with caplog.at_level(logging.INFO, logger="climatecapital.gemini.service"):
+        with pytest.raises(GeminiProviderUnavailable):
+            asyncio.run(
+                service(provider).explain(
+                    parsed_request(question="PRIVATE_ERROR_QUESTION"),
+                    request_id="123e4567-e89b-42d3-a456-426614174000",
+                )
+            )
+
+    assert "status=GeminiProviderUnavailable" in caplog.text
+    assert "retry_count=1" in caplog.text
+    assert "total_tokens=None" in caplog.text
+    assert "PRIVATE_PROVIDER_ERROR" not in caplog.text
+    assert "PRIVATE_ERROR_QUESTION" not in caplog.text
+
+
 @pytest.mark.parametrize(
     ("error", "status_code", "code", "retryable"),
     [
@@ -414,6 +510,51 @@ def test_vertex_configuration_is_structured_json_low_thinking_and_tool_free(monk
     assert config.max_output_tokens == 1_200
     assert config.response_mime_type == "application/json"
     assert config.tools is None
+
+
+def test_vertex_provider_collects_visible_and_reasoning_token_metadata(monkeypatch):
+    class Models:
+        async def generate_content(self, **kwargs):
+            return type(
+                "Response",
+                (),
+                {
+                    "candidates": [],
+                    "parsed": {
+                        "answer": "Grounded.",
+                        "insufficient_context": False,
+                    },
+                    "usage_metadata": type(
+                        "Usage",
+                        (),
+                        {
+                            "prompt_token_count": 10,
+                            "candidates_token_count": 4,
+                            "thoughts_token_count": 6,
+                            "total_token_count": 20,
+                        },
+                    )(),
+                },
+            )()
+
+    class Client:
+        def __init__(self, **kwargs):
+            self.aio = type("Async", (), {"models": Models()})()
+
+    monkeypatch.setattr("climatecapital.gemini.provider.genai.Client", Client)
+    generation = asyncio.run(
+        VertexGeminiProvider(settings()).generate(
+            system_instruction="rules",
+            contents="context",
+        )
+    )
+
+    assert generation.token_usage == {
+        "prompt_tokens": 10,
+        "response_tokens": 4,
+        "reasoning_tokens": 6,
+        "total_tokens": 20,
+    }
 
 
 def test_success_api_constructs_authoritative_metadata(monkeypatch):
