@@ -37,7 +37,7 @@ from climatecapital.gemini.service import (
     METHODOLOGY_CONTEXT,
     SYSTEM_INSTRUCTION,
 )
-from climatecapital.main import app
+from climatecapital.main import app, create_app
 
 
 RUNTIME = load_cross_category_runtime_state()
@@ -342,6 +342,81 @@ def test_completion_log_contains_bounded_usage_and_no_content(caplog):
         "SYSTEM_INSTRUCTION",
     ):
         assert forbidden not in log
+
+
+def test_production_completion_log_emits_without_test_level_override(
+    monkeypatch,
+    tmp_path,
+    capsys,
+):
+    for name, value in {
+        "ENVIRONMENT_LABEL": "production",
+        "GEMINI_ENABLED": "true",
+        "CODE_GIT_SHA": "a" * 40,
+        "DATA_VERSION": DATA_VERSION,
+        "MANIFEST_SHA256": (
+            "089d8f54108530d3a2483b25239b446b"
+            "da236d98b4d554a8dd25cdd2934c3d8a"
+        ),
+        "CONTAINER_IMAGE_DIGEST": f"sha256:{'b' * 64}",
+        "RELEASE_ID": RELEASE_ID,
+    }.items():
+        monkeypatch.setenv(name, value)
+
+    static_directory = tmp_path / "dist"
+    static_directory.mkdir()
+    (static_directory / "assets").mkdir()
+    (static_directory / "index.html").write_text(
+        "<!doctype html><title>ClimateCapital AI</title>",
+        encoding="utf-8",
+    )
+    application = create_app(static_directory=static_directory)
+    provider = FakeProvider(answer="PRIVATE_PROVIDER_RESPONSE")
+    application_logger = logging.getLogger("climatecapital")
+    root_logger = logging.getLogger()
+    uvicorn_logger = logging.getLogger("uvicorn.error")
+    application_state = (
+        application_logger.level,
+        tuple(application_logger.handlers),
+        application_logger.propagate,
+    )
+    root_state = (root_logger.level, tuple(root_logger.handlers))
+    uvicorn_state = (uvicorn_logger.level, tuple(uvicorn_logger.handlers))
+
+    with TestClient(application) as client:
+        application.state.gemini_service = service(provider)
+        response = client.post(
+            "/api/v1/gemini/explain",
+            json=request_payload(question="PRIVATE_USER_QUESTION"),
+        )
+
+    emitted = capsys.readouterr().err
+    assert response.status_code == 200
+    assert emitted.count("Gemini explanation completed") == 1
+    assert "surface=METHODOLOGY" in emitted
+    assert "model=gemini-3.5-flash" in emitted
+    assert "status=COMPLETE" in emitted
+    assert "retry_count=0" in emitted
+    assert "prompt_tokens=7" in emitted
+    assert "response_tokens=3" in emitted
+    assert "reasoning_tokens=2" in emitted
+    assert "total_tokens=12" in emitted
+    for forbidden in (
+        "PRIVATE_USER_QUESTION",
+        "PRIVATE_PROVIDER_RESPONSE",
+        "RAW_IP_MUST_NOT_APPEAR",
+        "authoritative_climatecapital_evidence",
+        "untrusted_prior_conversation",
+        "SYSTEM_INSTRUCTION",
+    ):
+        assert forbidden not in emitted
+    assert (
+        application_logger.level,
+        tuple(application_logger.handlers),
+        application_logger.propagate,
+    ) == application_state
+    assert (root_logger.level, tuple(root_logger.handlers)) == root_state
+    assert (uvicorn_logger.level, tuple(uvicorn_logger.handlers)) == uvicorn_state
 
 
 def test_absent_token_usage_and_safety_block_logging_are_safe(caplog):

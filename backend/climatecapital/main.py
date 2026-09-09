@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from contextlib import asynccontextmanager
+import logging
+from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
@@ -41,6 +42,35 @@ CONTENT_SECURITY_POLICY = "; ".join(
     )
 )
 
+APPLICATION_LOGGER_NAME = "climatecapital"
+APPLICATION_LOG_FORMAT = "%(levelname)s:%(name)s:%(message)s"
+
+
+@contextmanager
+def _production_application_logging(enabled: bool):
+    """Emit bounded application INFO events without changing Uvicorn logging."""
+
+    if not enabled:
+        yield
+        return
+
+    application_logger = logging.getLogger(APPLICATION_LOGGER_NAME)
+    previous_level = application_logger.level
+    previous_propagate = application_logger.propagate
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.INFO)
+    handler.setFormatter(logging.Formatter(APPLICATION_LOG_FORMAT))
+    application_logger.addHandler(handler)
+    application_logger.setLevel(logging.INFO)
+    application_logger.propagate = False
+    try:
+        yield
+    finally:
+        application_logger.removeHandler(handler)
+        handler.close()
+        application_logger.setLevel(previous_level)
+        application_logger.propagate = previous_propagate
+
 
 def default_frontend_dist_directory() -> Path:
     return (
@@ -67,24 +97,25 @@ def _frontend_file(directory: Path, filename: str) -> FileResponse:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    if (
-        app.state.production
-        and not _has_compiled_frontend(
-            app.state.frontend_dist_directory
+    with _production_application_logging(app.state.production):
+        if (
+            app.state.production
+            and not _has_compiled_frontend(
+                app.state.frontend_dist_directory
+            )
+        ):
+            raise RuntimeError(
+                "production requires a compiled frontend/dist bundle"
+            )
+        app.state.cross_category_runtime = (
+            load_cross_category_runtime_state()
         )
-    ):
-        raise RuntimeError(
-            "production requires a compiled frontend/dist bundle"
+        app.state.gemini_settings = GeminiSettings.from_environment()
+        app.state.gemini_service = GeminiExplanationService(
+            runtime=app.state.cross_category_runtime,
+            settings=app.state.gemini_settings,
         )
-    app.state.cross_category_runtime = (
-        load_cross_category_runtime_state()
-    )
-    app.state.gemini_settings = GeminiSettings.from_environment()
-    app.state.gemini_service = GeminiExplanationService(
-        runtime=app.state.cross_category_runtime,
-        settings=app.state.gemini_settings,
-    )
-    yield
+        yield
 
 
 async def _request_boundary(request: Request, call_next):

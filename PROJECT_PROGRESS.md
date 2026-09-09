@@ -51,27 +51,32 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-09
-- **Project stage:** F6, F7A, and F7A.1 are complete and accepted. F7B.1 has
-  corrected the confirmed Cloud Run health-path incompatibility; F7B remains
-  paused until the correction is published at a new exact frozen SHA.
-- **Current milestone:** F7B.1 Cloud Run-safe health remediation is complete and
-  accepted. The existing `fda9176` image and private core revision remain
-  superseded for final production and must not be promoted.
+**Project stage:** F6, F7A, F7A.1, F7B.1, and F7B.2 are complete and accepted.
+  F7B remains paused until the accepted F7B.2 correction is published at a new
+  exact frozen SHA.
+- **Current milestone:** F7B.2 production Gemini logging remediation is complete
+  and accepted. Existing cloud candidates remain private and superseded for final
+  production.
 - **Next gate:** Resume F7B only from the exact Git SHA containing the accepted
-  F7B.1 correction. F7C has not begun.
+  F7B.2 correction. One replacement Vertex canary is authorized solely to verify
+  repaired Cloud Logging/token metadata. F7C has not begun.
+- **Working state:** The prior deployment SHA
+  `ed4f14b94f0ba469ccc4ef04c3c3d7552abfbd1f` is superseded for final production
+  by the accepted F7B.2 logging correction. F7B must rebuild from the exact Git
+  SHA produced when this correction is published. `.node-version` remains
+  untouched.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
-- **Working state:** Frozen deployment SHA `fda9176bc7eaf05dd1951744c94a24ad5e408517`
-  is superseded for final production by the accepted F7B.1 health correction. F7B must rebuild and resume from the exact Git SHA produced when this correction
-  is published. The pre-existing unrelated `.node-version` remains untouched.
+
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** 57 focused tests passed, all 31 generated schemas
-  match, and production-mode Uvicorn returned 200 for authoritative `/health`,
-  backward-compatible `/healthz`, bootstrap, root, robots, and the production JS
-  asset. Health remained READY with validated runtime-v3 identity and locked
-  security headers; bootstrap remained 106 projects / 74 mapped /
-  `fixture_mode=false`; an unknown API path remained a JSON 404.
+- **Most recent verification:** The new production-style regression first failed
+  with zero emitted records, then passed after centralized configuration. All 50
+  focused Gemini and deployment-readiness tests pass with two known dependency
+  warnings. The captured stderr record appears exactly once with request, surface,
+  model, status, latency/retry/token metadata and no prompt, response, grounding,
+  raw client key, or hidden instruction content; Uvicorn/root logger state is
+  unchanged and the application logger is restored after shutdown.
 
 ## Approved Locks
 
@@ -123,33 +128,90 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 - **Goal:** Complete F7 sequentially without changing locked product, methodology,
   governed data, deterministic Funding Plan behavior, or Gemini authority.
-- **Status:** F7B.1 passes locally. `/health` is now the production-authoritative
-  runtime-v3 health route; `/healthz` remains a strict local/backward-compatible
-  alias. F7B remains blocked until this patch is reviewed, published, and frozen.
+- **Status:** F7B.2 passes locally. F7B remains paused until this source patch is
+  reviewed, committed, pushed, frozen, rebuilt, and privately reverified.
 - **Readiness boundary:** The user explicitly authorized bucket-only
   `roles/storage.objectViewer` for the effective build account, and the already-
   authorized repository-only Artifact Registry Writer grant was applied after its
   exact push denial. The subsequent build passed. Cloud Run rejected `--no-traffic`
   for first-service creation, so the core revision was created with 100% private
   traffic and Invoker IAM enforcement; anonymous access returns 403.
-- **Authority:** F7B.1 changes only the health route/strict contract, affected
-  generated schemas, focused tests, directly affected documentation, D-118, and
-  this progress record. No Dockerfile, methodology, governed data, Gemini,
-  credential, cloud resource, commit, or push changed.
-- **Exit condition:** Stop for manual review, commit/push, and a new frozen SHA.
-  Never promote the superseded `fda9176` image/revision as the final release, and
-  do not begin F7C.
+- **Authority:** F7B.2 changes only centralized production application logging,
+  one focused test, and this progress record. It does not change the Gemini event,
+  authority/model/methodology, Uvicorn behavior, governed data, cloud state,
+  credentials, commit, or push.
+- **Exit condition:** Stop for manual review/commit/push and a new frozen SHA. Do
+  not rebuild/deploy or use the one replacement canary until F7B resumes.
 
 ## Next Actions
 
-1. Manually review the narrow F7B.1 health-route patch and its verification record.
-2. Commit and push the accepted patch, confirm `HEAD == origin/main`, and freeze
-   the new exact Git SHA before rebuilding and resuming F7B.
+1. Manually review the narrow F7B.2 production logging patch and verification.
+2. Commit/push the accepted patch, confirm `HEAD == origin/main`, and freeze the
+   new exact SHA before resuming F7B. Use at most the one explicitly authorized
+   replacement canary solely for end-to-end Cloud Logging/token verification.
 3. Begin F7C only after F7B passes; complete F8 submission materials
    only after the applicable release gates.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-09 — F7B.2 production Gemini logging remediation
+
+- **Starting state:** Preserved `main`, `HEAD`, and `origin/main` at
+  `ed4f14b94f0ba469ccc4ef04c3c3d7552abfbd1f`, the accurate F7B blocked progress
+  record, and untouched `.node-version`. No cloud or Vertex action occurred.
+- **Correction:** Centralized production application logging in the FastAPI
+  lifespan. Production installs one INFO-level stderr handler for only the
+  `climatecapital` namespace, disables propagation there to prevent duplicates,
+  and restores prior logger state on shutdown. Root/Uvicorn configuration and the
+  existing bounded Gemini completion message are unchanged; DEBUG is not enabled.
+- **Verification:** A production-mode regression using the real application
+  lifespan and captured stderr, without `caplog` or a test logger-level override,
+  first reproduced zero output and now proves exactly one completion record. It
+  contains request ID, surface, model, status, latency, retry count, and all token
+  fields while excluding prompt, response, grounding, raw client key, and hidden
+  instructions. All 50 focused Gemini/deployment tests pass with only the two
+  known dependency deprecations; `git diff --check` passes.
+- **Handoff:** **PASS locally.** No GCP mutation, build/deploy, Vertex call,
+  commit, push, model/authority/methodology change, or F7C work occurred. Manual
+  review/commit/push and a new exact frozen SHA are mandatory before F7B resumes.
+  One replacement live canary is authorized only to verify repaired completion
+  and token metadata in Cloud Logging.
+
+### 2026-09-09 — Resumed F7B blocked on production Gemini completion logging
+
+- **Frozen build:** Reconciled clean `main`, `HEAD`, `origin/main`, and merge base
+  at `ed4f14b94f0ba469ccc4ef04c3c3d7552abfbd1f`; only `.node-version` was
+  untracked and untouched. Recomputed the unchanged runtime-v3 data version,
+  manifest SHA, release ID, 106 projects, 74 mapped contexts, and
+  `fixture_mode=false`. An exact `git archive` plus reviewed upload allowlist sent
+  87 files / 1.2 MiB with all forbidden local/raw/fixture material excluded.
+- **Image and candidates:** Cloud Build
+  `d429898d-0b21-48ad-a7e6-48d7bc4b1052` passed in 84.45 seconds under the
+  existing Compute build identity and pushed 62,140,474-byte immutable digest
+  `sha256:df9e1ed9783f264d3f1b98dc2527f7bae5c2f1f326828f633b4ae6ef5431dd49`.
+  Zero-traffic private revisions `climatecapital-ai-core-ed4f14b` and
+  `climatecapital-ai-gemini-ed4f14b` use that same digest, the dedicated runtime
+  account, 1 CPU / 512 MiB, min 0 / max 1, concurrency 20, and exact identities.
+- **Private verification:** Both candidates passed authoritative `/health`, root,
+  JS/CSS, favicon, robots, bootstrap, strict API 404, disabled docs/OpenAPI,
+  locked headers, exact identity, 106/74/false, and the deterministic 18-project
+  `$331,825,000` selected / `$175,000` remaining result. Logs show one PID-1
+  Uvicorn worker on `0.0.0.0:8080`, a one-attempt startup probe, and no error loop.
+- **Single canary:** Exactly one methodology request returned HTTP 200/COMPLETE
+  from `gemini-3.5-flash` in 4.761 seconds, request ID
+  `cb2920c3-ef03-4a9d-b44c-59dafceaa3ec`, grounded only in
+  `GOVERNED_METHODOLOGY`. Its response kept Gemini explanation-only and denied
+  funding decisions, recommendations, alterations, and optimization. A temporary
+  wrapper exited nonzero only because it tested the exact substring `explain`
+  rather than accepting `explanation`; the provider result itself passed and was
+  not repeated.
+- **Blocker/handoff:** **BLOCKED — SOURCE REMEDIATION REQUIRED.** Cloud Logging
+  recorded the 200 request and an SDK advisory but no `Gemini explanation
+  completed` application entry, so latency/retry/token metadata and content-free
+  logging cannot be verified. The service remains private; both new candidates
+  remain at zero traffic and old `fda9176` remains private evidence only. No new
+  IAM, public access, promotion, commit, push, or F7C work occurred.
 
 ### 2026-09-09 — F7B.1 Cloud Run-safe health endpoint remediation
 
@@ -1014,9 +1076,9 @@ separate authorization.
 
 ## Blockers
 
-- F7B.1 has corrected the Cloud Run-incompatible `/healthz` production path
-  locally. F7B remains blocked until the patch is manually reviewed, committed,
-  pushed, and frozen at a new exact SHA for rebuild and deployment.
+- F7B.2 has corrected production Gemini INFO-log emission locally. F7B remains
+  paused until manual review/commit/push produces a new exact frozen SHA for build,
+  private verification, and the one authorized replacement canary.
 - Official judging criteria, submission artifacts, and conditional live-demo
   details remain unconfirmed. They urgently block submission-dependent work and
   final submission-package planning. They did not block M1 and do not silently
@@ -1024,9 +1086,10 @@ separate authorization.
 
 ## Active Risks
 
-- The private core revision and immutable `fda9176` image must not be publicly
-  promoted as the final release. The verified F7B.1 correction requires manual
-  review, commit/push, a new exact SHA, and a new image digest.
+- Neither `ed4f14b` candidate may be promoted as final because it lacks production
+  completion-log evidence. The superseded `fda9176` image/revision also remains
+  evidence only. F7B.2 requires review, commit/push, a new exact SHA/digest, and
+  one replacement canary solely for repaired log verification.
 - D-116 governs 74 source-native project map features, but later-refreshed CPE,
   park/PARD, and AFM features are authoritative only for stable-location display.
   A silent source refresh could import post-snapshot shape or project-fact changes;
@@ -1584,6 +1647,8 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-09 | F7B.2 production Gemini logging remediation | Added a production-mode stderr regression without `caplog`/logger-level override; reproduced zero emitted records; configured one lifecycle-scoped INFO stderr handler for only `climatecapital`; reran the focused Gemini and deployment-readiness suites; inspected content exclusion, logger restoration, Git scope, and whitespace | PASS: the regression now emits exactly one unchanged completion record containing request/surface/model/status/latency/retry/token metadata and no prompt, response, grounding, raw client key, or hidden instructions; all 50 focused tests pass with two known dependency warnings; root/Uvicorn behavior is preserved. No GCP mutation, build/deploy, Vertex call, commit, push, or F7C work |
+| 2026-09-09 | Resumed F7B exact-SHA build, private candidates, and single Vertex canary | Reconciled clean `ed4f14b` source/runtime identity; listed the exact 87-file upload; built and resolved the immutable image; deployed Gemini-off and Gemini-on zero-traffic private revisions; authenticated-smoked `/health`, SPA/static, bootstrap, `$332M` plan, security/docs, and identity; issued exactly one methodology canary; inspected exact revision/request/error/completion logs | BLOCKED — SOURCE REMEDIATION REQUIRED: build `d429898d-0b21-48ad-a7e6-48d7bc4b1052`, digest `sha256:df9e1ed9…1dd49`, core, deterministic Gemini smoke, and one HTTP 200/COMPLETE grounded canary pass. The production logger emits no INFO completion entry, so retry/token/content-free completion evidence cannot be verified. Both new revisions remain private at zero traffic; no IAM, public access, promotion, commit, push, second canary, or F7C work occurred |
 | 2026-09-09 | F7B.1 Cloud Run-safe health endpoint remediation | Ran focused health/API/contract/deployment tests, regenerated and checked affected schemas through the repository generator, started production-mode Uvicorn with explicit safe identity values and the compiled frontend, checked `/health`, `/healthz`, bootstrap, root, robots, production JS, security headers, and an unknown API path, then stopped the server and checked Git whitespace/status | PASS: 57 focused tests; 31 schemas match; `/health` returns 200/READY with endpoint `/health`, validated runtime-v3 deployment identity, and locked production headers; `/healthz` returns 200 with equivalent stable semantics and endpoint `/healthz`; bootstrap remains 106 projects / 74 mapped / `fixture_mode=false`; root/robots/asset return 200 and unknown API remains JSON 404. No cloud mutation, build/deploy, Vertex call, commit, push, or F7C work |
 | 2026-09-09 | F7B frozen-source build and private core deployment gate | Reconciled Git/runtime identity; applied explicitly authorized bucket-only source Viewer and demonstrated repository-only Writer grants; built exact SHA `fda9176`; resolved its immutable digest; handled first-service no-traffic rejection by retaining Invoker IAM enforcement; tested anonymous denial and authenticated root/assets/favicon/robots; inspected exact revision startup/request logs and `/healthz` response | BLOCKED — SOURCE REMEDIATION REQUIRED: build `c9c52f26-0f9c-4c11-837c-cbb852eff1b7` succeeded and private core revision `climatecapital-ai-core-fda9176` is healthy on port 8080, but Cloud Run intercepts `/healthz` with a Google-generated 404 before FastAPI. No Gemini revision, Vertex call, public access, promotion, commit, push, or F7C work occurred |
 | 2026-09-09 | F7A.1 bounded pre-deployment remediation | Added and ran focused deployment/runtime/static/security/Gemini tests; ran full pytest and legacy unittest; regenerated/checked 31 schemas; validated the explicit fixture; ran compilation, imports, runtime-v3 checks, and `pip check`; ran all frontend tests, lint, and production build under exact Node 22.23.2/npm 11.19.1; started production-mode Uvicorn against the actual compiled SPA and checked root, robots, health, bootstrap, `$332M` plan, headers, and disabled docs; inspected Git/secret/artifact hygiene and Docker availability | PASS: 73 focused tests, 506 pytest tests plus 137 subtests, 152 legacy tests, 31 schemas, fixture/compilation/import/dependency checks, 9 frontend files / 108 tests, lint, and 79-module build all pass. Production smoke reports 106 projects, 74 mapped, `fixture_mode=false`, and unchanged 18 / `$331.825M` / `$175K` plan facts. Docker is not installed, so local image build/run is unavailable and F7B Cloud Build remains authoritative. No cloud mutation, deployment, commit, push, governed-data change, or `.node-version` change |
@@ -1633,6 +1698,35 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-09 — Complete F7B.2 production Gemini logging remediation
+
+- **Correction:** Added one production-lifespan INFO stderr handler for the
+  `climatecapital` logger namespace, disabled propagation to prevent duplicate
+  records, and restored prior application-logger state at shutdown. The existing
+  completion message and Uvicorn/root logging remain unchanged.
+- **Evidence:** The no-`caplog` production regression failed with zero records
+  before the correction and now captures exactly one bounded content-free event.
+  All 50 focused Gemini/deployment-readiness tests and `git diff --check` pass.
+- **Stop:** No cloud mutation, build/deploy, Vertex call, commit, push, or F7C work
+  occurred. F7B awaits manual review/publication/new SHA; one replacement canary
+  is authorized only for repaired Cloud Logging/token verification.
+
+### 2026-09-09 — Resume F7B and stop at Gemini completion-log blocker
+
+- **Build/deploy:** Preserved clean frozen `ed4f14b`, submitted only the 87-file
+  exact-SHA context, and completed build `d429898d-0b21-48ad-a7e6-48d7bc4b1052`
+  at immutable digest `sha256:df9e1ed9…1dd49`. Created private zero-traffic core
+  and Gemini revisions on the same image and locked runtime configuration.
+- **Evidence:** Both candidates passed `/health`, release identity, static/API,
+  security/docs, 106/74/false, and exact `$332M` deterministic checks. The sole
+  canary returned 200/COMPLETE in 4.761 seconds, used the governed methodology
+  surface, and preserved explanation-only authority.
+- **Stop:** The existing bounded completion logger is INFO-level but production
+  emits no application INFO record; exact Cloud Logging searches found only the
+  request/access record and SDK advisory. Token/retry and content-free completion
+  evidence cannot pass. No new IAM, public access, traffic promotion, second
+  canary, source change, commit, push, or F7C work occurred.
 
 ### 2026-09-09 — Complete F7B.1 Cloud Run-safe health remediation
 
