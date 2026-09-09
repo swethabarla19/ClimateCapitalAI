@@ -50,36 +50,35 @@ access to prior chat conversations.
 
 ## Current Snapshot
 
-- **Last updated:** 2026-09-08
-- **Project stage:** F5A is published at `fe66a49`; GIS governance/runtime-v3,
-  visual refinement, and frontend map integration are published through
-  `851aa0b`. F5B mandatory Gemini on Vertex AI integration is complete and
-  verified locally. F6 has not started.
-- **Current milestone:** F5B complete locally — the FastAPI application resolves
-  governed evidence and uses the official `google-genai` SDK in Vertex AI mode;
-  the frontend exposes explicit, context-bound Gemini explanations without
-  changing deterministic ClimateCapital state.
-- **Next gate:** Review/approve, commit, and push the unstaged F5B checkpoint,
-  then begin F6 full regression and live visual/functional QA.
+- **Last updated:** 2026-09-09
+- **Project stage:** F5A and F5B are published through frozen baseline `be78a78`.
+  F6A automated regression, F6B core live browser acceptance, and F6C Gemini plus
+  cross-feature live acceptance are complete and accepted. F6D final regression
+  and critical-path smoke passed; F6 is complete. F7 has not started.
+- **Current milestone:** F6D complete — the reconciled current-tree release
+  candidate passed the full authoritative automated surface and one concise live
+  Explore → Funding Plan → Gemini → Historical Benchmark smoke.
+- **Next gate:** Freeze the committed and pushed F6 closeout as the F7 deployment
+  baseline, then begin F7 GCP deployment and deployed end-to-end QA. No deployment
+  has occurred.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
-- **Working state:** Git repository is on `main` at `851aa0b`, matching
-  `origin/main`. F5B backend, frontend, contract, schema, dependency, test, and
-  documentation changes remain unstaged and uncommitted. The unrelated untracked
-  `.node-version` remains untouched.
+- **Working state:** F6 was executed from frozen F5 baseline `be78a78`. The accepted
+  F6 closeout contains only this progress record and the one-line
+  `frontend/index.html` browser-title correction from `frontend` to
+  `ClimateCapital AI`. The pre-existing unrelated untracked `.node-version`
+  remains untouched.
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** 486 Python tests and 9 frontend files / 108 tests
-  pass; 31 generated schemas verify; `pip check`, ESLint, the TypeScript/Vite
-  production build, and Git whitespace checks pass. Chrome and Chrome DevTools
-  acceptance covered desktop, 900px, and 390px layouts, Project/Funding Plan/
-  Boundary/Benchmark/Methodology Gemini contexts, localized failure behavior,
-  fixed sidebar/profile behavior, compact map-first Explore, and coordinated
-  Project Detail + Gemini panes. Four bounded live acceptance calls in this
-  session (PROJECT, FUNDING_PLAN, BOUNDARY, BENCHMARK) and the earlier real
-  METHODOLOGY smoke returned governed Vertex AI explanations; the $700M answer
-  preserved analyst judgment and selected no project. Active runtime-v3 release
-  ID is `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`.
+- **Most recent verification:** F6D passed 486 pytest tests plus 137 subtests, 152
+  legacy unittest tests, 31-schema parity, explicit fixture validation, Python
+  compilation/imports, `pip check`, 9 frontend files / 108 tests, ESLint, and the
+  79-module production build. The live smoke confirmed `/healthz`, 106 projects,
+  74 map features, the accepted tab title, Barton Springs detail, a completed
+  `$332M` plan at 18 projects / `$331.825M` selected / `$175K` remaining, one
+  explanation-only live Vertex response, navigation, and benchmark loading. All
+  critical requests returned 200. Active runtime-v3 release ID remains
+  `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`.
 
 ## Approved Locks
 
@@ -129,44 +128,160 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Current Workstream
 
-- **Goal:** Close F5B as a real, bounded Gemini on Vertex AI explanation layer
-  without changing analytical, portfolio, benchmark, or geometry authority.
-- **Status:** Complete locally. The single public Gemini endpoint resolves current
-  runtime evidence server-side, re-runs the deterministic Funding Plan evaluator
-  for plan/boundary questions, loads the governed benchmark itself, and returns
-  structured explanations through a lazy Vertex AI provider. The frontend sends
-  context handles and authoritative plan input only; it never sends analytical
-  result fields or map coordinates as authority.
-- **Session boundary:** Persisted analyst input may be restored only when
-  `data_version`, release ID, and catalog contract match. Persisted evaluation
-  output is cleared and must be requested again. Stale-release plan state resets.
-- **Request boundary:** Plan calls have AbortController cancellation plus request
-  generation checks so late responses cannot replace newer analyst inputs.
-- **Authority:** ClimateCapital remains authoritative for runtime identity,
-  projects, PRB values, Funding Priority, plan results, boundaries, benchmark,
-  methodology, and governed geometry. Gemini explains those values and cannot
-  rank, select, resolve a boundary, mutate application state, browse, or infer
-  missing locations.
-- **Working-tree boundary:** This checkpoint adds the bounded Gemini API/provider,
-  contracts/schemas/configuration documentation, deterministic tests, and compact
-  assistant UI plus the five requested acceptance refinements. Backend methodology,
-  governed runtime artifacts, Funding Priority, the evaluator, Historical
-  Benchmark semantics, geometry governance, and `.node-version` remain untouched.
-- **Exit condition:** Review/approve and publish F5B; do not begin F6 before that
-  checkpoint is accepted.
+- **Goal:** Complete F6 sequential regression and live acceptance without
+  reopening locked methodology, architecture, product design, or accepted F5
+  implementation.
+- **Status:** F6 is complete. F6A passed; F6B passed with the accepted one-line
+  browser-title fix; F6C passed without a product change; F6D passed the final
+  full regression and concise live critical-path smoke without an additional
+  defect.
+- **Verification boundary:** F6D reconciled the exact current tree, reran the
+  complete Python, contract/schema/release/data, compilation/import/dependency,
+  frontend test/lint/build, and Git-hygiene surfaces, then smoke-tested the real
+  local runtime through Explore, project detail, one deterministic Funding Plan,
+  one live grounded Vertex explanation, and Historical Benchmark navigation.
+- **Authority:** No scoring/model methodology, governed universe, eligibility,
+  deterministic Funding Plan behavior, navigation, Gemini design, or deployment
+  boundary changed.
+- **Working-tree boundary:** This canonical checkpoint record and
+  `frontend/index.html` are modified. The latter remains the accepted F6B
+  browser-title fix. The pre-existing untracked `.node-version` remains untouched;
+  no methodology, governed data, architecture, dependency, cloud, commit, or push
+  change was made.
+- **Exit condition:** Stop after F6D and await explicit authorization for F7.
 
 ## Next Actions
 
-1. Review/approve, commit, and push the completed F5B Gemini on Vertex AI
-   checkpoint without staging `.node-version`.
-2. Complete F6 — full frontend/backend regression and live visual/functional QA,
-   including Explore, Funding Plan boundary resolution, Historical Benchmark,
-   responsive behavior, API-unavailable states, and Gemini behavior.
-3. Complete F7 — GCP deployment and deployed end-to-end QA.
-4. Complete F8 — submission package, demo flow, screenshots, and final documentation.
+1. Complete F7 GCP deployment and deployed end-to-end QA only after its separate
+   authorization; deployment has not started.
+2. Complete F8 submission package, demo flow, screenshots, and final documentation
+   only after the applicable release gates.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-09 — F6D final regression and F6 closeout
+
+- **Candidate reconciliation:** Confirmed `main`, `HEAD`, `origin/main`, and the
+  merge base at `be78a783c125b943d4da4441f9a290a1c875bc15`. The only tracked
+  candidate changes are this canonical F6 record and the accepted one-line
+  `frontend/index.html` title correction. Nothing is staged; the pre-existing
+  untracked `.node-version` remains untouched; no test/browser artifact, log,
+  credential, secret, environment file, or unrelated change is present.
+- **Full regression:** Passed 486 pytest tests plus 137 subtests and 152 legacy
+  unittest tests; verified 31 generated schemas; validated the explicit
+  development fixture and manifest checksum; passed Python compilation, corrected
+  public-module imports, `pip check`, 9 frontend files / 108 tests, ESLint, the
+  79-module TypeScript/Vite production build, and Git whitespace/status checks.
+  The known two Python dependency deprecations and non-writable pip-cache warning
+  remain non-blocking.
+- **Environment classification:** An initial import probe named nonexistent
+  `create_app`; the corrected public `app`/runtime imports passed. Frontend commands
+  first inherited the signed automation host's Node 24, which could not load native
+  Rolldown under macOS library validation. After diagnosing and removing a
+  temporary ignored WASI fallback, the entire frontend surface passed using the
+  pinned Node 22.23.2/npm 11.19.1 child PATH. No manifest, lockfile, source, or
+  final working-tree change resulted.
+- **Critical-path smoke:** The real FastAPI/Vite runtime returned 200 for health,
+  bootstrap, plan evaluation, Gemini explanation, and benchmark. Safari showed
+  106 projects and 74 mapped contexts; opened Barton Springs Bridge with its
+  governed `$12M`, Priority 80/rank 2 evidence; completed the `$332M` plan with 18
+  projects, `$331,825,000` selected, and `$175,000` remaining; and received one
+  live Vertex explanation that correctly stated Gemini neither selected nor
+  changed projects. Closing Gemini preserved plan/detail state; Explore ↔ Funding
+  Plan and Historical Benchmark navigation remained usable.
+- **Health and closeout:** The served title was exactly `ClimateCapital AI`, the
+  bootstrap release was runtime-v3 with `fixture_mode=false`, and no application
+  error surface, backend exception, runaway call, contract mismatch, or exposed
+  secret was observed. All services stopped cleanly. The SDK emitted one
+  non-blocking advisory about direct automatic-function-calling invocation even
+  though the bounded product request completed successfully. No additional F6D
+  defect or implementation fix was required. F6 is complete; F7 remains
+  unauthorized and undeployed.
+
+### 2026-09-09 — F6C Gemini and cross-feature live acceptance
+
+- **Runtime:** Reused the real FastAPI service at `http://127.0.0.1:8000` and
+  Vite frontend at `http://127.0.0.1:5173`. `/healthz` returned 200/SUCCESS with
+  Gemini enabled; bootstrap returned the governed 106-project runtime-v3 release.
+  The configured ADC-backed Vertex Gemini path was live; no secret was recorded.
+- **Gemini acceptance:** Live responses rendered for product/methodology, mapped
+  Barton Springs Bridge, unmapped Building Renovation and Replacement Program -
+  Bolm Maintenance Center, and evaluated `$700M` Funding Plan contexts. Gemini
+  preserved project identity, request/Priority facts, Bolm's explicit `Location
+  unavailable` state, plan totals, and analyst-controlled deterministic authority.
+- **Plan and boundaries:** The real plan completed with 31 projects,
+  `$699,975,000` selected, and `$25,000` remaining after explicit analyst boundary
+  resolution. Gemini explained the total, remaining budget, and Canyon Creek
+  Northwest Substation's role without changing membership; it declined requests
+  to change an official PRB score, fabricate geometry, optimize membership, add
+  weights, or present its explanation as an official City recommendation.
+- **State, recovery, and visual health:** Project-to-project and
+  project-to-plan transitions updated Gemini context without stale attribution or
+  state loss. Empty submit remained disabled; the live pending state disabled
+  duplicate submission; implemented user-safe error/retry presentation was
+  inspected because inducing a Vertex failure would have required prohibited
+  credential/configuration sabotage. Desktop and a narrower effective Safari
+  viewport kept the drawer, input, scrolling, and close control usable.
+- **Runtime health/scope:** Observed Gemini and plan requests returned 200; browser
+  console evidence contained only the standard React development notice, and
+  frontend/backend logs showed no uncaught exception, runaway call, contract
+  mismatch, or exposed secret. Intermittent Chrome/Safari automation detachment
+  was tooling-only and did not reproduce as an application fault. No F6C product
+  defect or code fix was required; no targeted automated rerun was therefore
+  needed. F6D, deployment, commit, and push did not begin.
+
+### 2026-09-08 — F6B core live browser product acceptance
+
+- **Runtime:** Started the repository's real FastAPI backend on
+  `http://127.0.0.1:8000` and Vite frontend on `http://127.0.0.1:5173` with the
+  existing Python environment and pinned Node 22.23.2/npm 11.19.1 toolchain.
+  Health, bootstrap, benchmark, and plan-evaluation requests succeeded.
+- **Core acceptance:** Chrome exercised the global primary/reference navigation,
+  compact 106-project Explore summary, all-category catalog, 74 supported map
+  locations, 32 explicit unavailable-location states, search/reset, mapped and
+  unmapped project details, project switching/closing, map legend and zoom,
+  deterministic `$332M` and `$700M` Funding Plans, invalid budget input, analyst
+  resolution, and plan persistence across supporting-page navigation.
+- **Supporting and responsive acceptance:** Historical Benchmark, Data &
+  Methodology, and Help & Resources loaded with correct headings and readable
+  content. Desktop plus 831px and 390px responsive emulation showed coherent
+  reflow without observed clipping, overlap, or horizontal overflow; the desktop
+  sticky shell retained the profile control while workspace content scrolled.
+- **Runtime health:** Chrome DevTools showed no application console errors or
+  issues; only the expected React development-tools notice was present. Backend
+  logs showed successful 200 responses without exceptions or repeated failures.
+- **Defect/fix:** Corrected the low-severity stale browser-tab title from
+  `frontend` to `ClimateCapital AI` in `frontend/index.html`. No other defect was
+  found. Focused App tests (16), the production build (79 modules), live HTML
+  title check, backend health check, and Git whitespace check passed.
+- **Scope/handoff:** No Gemini conversation, methodology, governed data,
+  architecture, product-scope, dependency, deployment, F6C/F6D/F7, commit, or push
+  work occurred. F6C remains subject to separate authorization.
+
+### 2026-09-08 — F6A baseline and automated full regression
+
+- **Baseline:** Confirmed `main` at `be78a783c125b943d4da4441f9a290a1c875bc15`,
+  exactly matching `origin/main` and the accepted F5B publication commit. The only
+  initial working-tree difference was the documented untracked `.node-version`;
+  it remained untouched.
+- **Regression:** Passed 486 pytest tests plus 137 subtests, including source/data,
+  application/API, Gemini mock, contract, runtime, and release coverage. The
+  legacy documented unittest discovery command also passed its 152 collected
+  tests. Verified all 31 generated schemas, Python compilation, package imports,
+  dependency integrity, explicit development-fixture CLI validation, 9 frontend
+  files / 108 tests, ESLint, and the 79-module TypeScript/Vite production build.
+- **Warnings:** Retained the known Starlette/AnyIO and google-genai/Python 3.14
+  deprecation warnings plus the environment-only non-writable pip-cache warning.
+  None affects F6A acceptance.
+- **Defects/changes:** No regression was found and no implementation fix was
+  required. The initial direct backend import omitted the repository's required
+  `PYTHONPATH=backend`; the corrected import passed. The shell's default Node/npm
+  differed from the pinned frontend toolchain, so frontend checks used the
+  existing Node 22.23.2/npm 11.19.1 binaries and passed.
+- **Scope/handoff:** No browser acceptance, real Vertex call, service start,
+  deployment, F7 work, commit, or push occurred. F6B is ready only after explicit
+  user authorization.
 
 ### 2026-09-08 — F5B mandatory Gemini on Vertex AI integration
 
@@ -561,15 +676,46 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 ## Completed Milestones
 
+- **2026-09-09 — F6D final regression and F6 closeout complete:** The exact
+  current-tree candidate passed 486 pytest tests plus 137 subtests, 152 legacy
+  unittest tests, 31 schemas, explicit fixture validation, compilation/import and
+  dependency checks, 9 frontend files / 108 tests, ESLint, the 79-module build,
+  Git hygiene, and a real critical-path browser/Vertex smoke. The only reconciled
+  F6 product fix remains the accepted `ClimateCapital AI` browser title. F6 is
+  complete and ready for separately authorized F7 deployment work.
+
+- **2026-09-09 — F6C Gemini and cross-feature live acceptance complete:** The
+  real ADC-backed Vertex path passed general, methodology, mapped/unmapped project,
+  evaluated Funding Plan, cross-feature, product-boundary, supported recovery,
+  responsive, console, request, and backend-log acceptance. The completed `$700M`
+  plan remained 31 projects / `$699.975M` selected / `$25K` remaining throughout
+  Gemini explanations. No implementation defect or F6C code fix was required;
+  F6D remains separately authorized.
+
+- **2026-09-08 — F6B core live browser acceptance complete with one narrow fix:**
+  The real local backend/frontend passed non-Gemini shell, Explore, map/project,
+  detail, Funding Plan, benchmark, methodology, help, responsive, console,
+  network, and backend-log acceptance. Replaced only the stale browser-tab title
+  `frontend` with `ClimateCapital AI`; 16 focused App tests, the 79-module build,
+  live title/health checks, and Git whitespace checks pass. F6C subsequently
+  completed without an additional fix.
+
+- **2026-09-08 — F6A baseline and automated full regression complete:** Frozen
+  baseline `be78a78` passed 486 pytest tests plus 137 subtests, 152 legacy
+  unittest-discovered tests, 31-schema parity, compilation, imports, dependency
+  integrity, explicit fixture validation, 9 frontend files / 108 tests, ESLint,
+  the 79-module production build, and Git whitespace checks. No defect or source
+  fix was required; F6B subsequently completed with its narrow title fix.
+
 - **2026-09-08 — F5B mandatory Gemini on Vertex AI integration completed
-  locally:** Added the real server-side `google-genai` Vertex provider, bounded
+  and published at `be78a78`:** Added the real server-side `google-genai` Vertex provider, bounded
   governed grounding, structured contracts/errors, runtime guard, deterministic
   evaluator re-runs, isolated benchmark/methodology context, and the accessible
   context-aware frontend drawer/sheet. The five requested UI acceptance
   refinements and live Project/Plan/Boundary/Benchmark/Methodology checks pass.
   Final verification is 486 Python tests, 31 schemas, clean dependencies, 9
   frontend files / 108 tests, build, lint, browser QA, security scan, and Git
-  whitespace checks. Review/commit/push remains pending before F6.
+  whitespace checks.
 
 - **2026-09-08 — Frontend runtime-v3 map integration completed locally:** The
   frontend consumes the active v3 contract, validates and renders all 74 governed
@@ -720,8 +866,10 @@ unless required P0 is at least 24 hours ahead and 10 contingency hours remain.
 
 The approved September 2 feature-freeze gate remains at critical schedule risk.
 The frozen backend runtime, frontend F1–F5A, focused visual/map work, and F5B
-Gemini explanation are implemented; deployment and final release verification
-remain on the critical path.
+Gemini explanation are implemented and published. F6A automated regression, F6B
+core browser acceptance, F6C Gemini/cross-feature acceptance, and F6D final
+closeout are complete. F7 deployment remains on the critical path and requires
+separate authorization.
 
 ## Blockers
 
@@ -1289,6 +1437,10 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-09 | F6D final regression and release-candidate smoke | Reconciled branch/HEAD/upstream/diff/untracked scope; ran `.venv/bin/python -m pytest -q`, legacy unittest discovery, 31-schema parity, explicit fixture validation, `compileall`, public backend imports, `pip check`, full frontend tests, ESLint, and the TypeScript/Vite build under pinned Node 22.23.2/npm 11.19.1; ran Git hygiene checks; started the real FastAPI/Vite runtime and smoke-tested Explore/Barton Springs detail, a `$332M` plan, one live plan-grounded Gemini explanation, Explore/Funding Plan navigation, Historical Benchmark, health/bootstrap/title, request outcomes, and backend logs | PASS: 486 pytest tests plus 137 subtests; 152 legacy tests; 31 schemas; valid explicit fixture; compilation/import/dependencies clean; 9 frontend files / 108 tests; lint; 79-module build; diff check. Live health/bootstrap/plan/Gemini/benchmark requests returned 200; runtime-v3 served 106 projects / 74 map features with `fixture_mode=false`; title was `ClimateCapital AI`; `$332M` produced 18 projects / `$331.825M` selected / `$175K` remaining; Gemini stated it did not select or change projects and product state persisted. Initial `create_app` probe and signed-host Node/WASI failures were verification-environment issues; corrected public imports and pinned child PATH passed. Temporary ignored packages were removed. No additional defect, artifact, secret, deployment, commit, or push |
+| 2026-09-09 | F6C Gemini and cross-feature live acceptance | Reconciled the interrupted working tree; reused FastAPI at `127.0.0.1:8000` and Vite at `127.0.0.1:5173`; checked `/healthz` and bootstrap; exercised real ADC-backed Vertex Gemini in product/methodology, mapped Barton Springs Bridge, unmapped Bolm Maintenance Center, and completed `$700M` Funding Plan contexts; tested project/plan transitions, official-score/location/optimization/recommendation boundaries, empty and pending submission behavior, desktop and narrower effective Safari layouts, browser console, request outcomes, and backend logs; inspected the existing safe error/retry presentation rather than sabotaging credentials | PASS: live Gemini responses preserved governed facts, explicit unavailable geometry, deterministic plan authority, and the 31-project `$699.975M` / `$25K` plan state; unsupported score, geometry, optimization, weighting, and official-recommendation requests were not claimed as actions; context updated without stale attribution or state corruption; observed Gemini and plan requests returned 200; no application console error, exception, runaway call, contract mismatch, secret exposure, implementation defect, or F6C code change. Browser-control detachment was tooling-only; F6D/deployment/commit/push not started |
+| 2026-09-08 | F6B core live browser acceptance | Started FastAPI at `127.0.0.1:8000` and Vite at `127.0.0.1:5173`; exercised the non-Gemini shell, Explore/filter/reset, mapped and unavailable-location projects, detail switching, map legend/zoom, deterministic `$332M` and `$700M` plan paths including analyst resolution and invalid input, all three supporting pages, desktop/831px/390px responsive states, Chrome console, request/backend logs, and title retest; ran `npm test -- src/App.test.tsx`, `npm run build`, live health/title checks, `git diff --check`, and status review | PASS WITH FIXES: all core journeys passed; 106 projects, 74 supported map locations, and 32 unavailable-location paths rendered coherently; `$332M` completed at `$331.825M` / 18 projects and `$700M` completed at `$699.975M` / 31 projects after explicit rank-28 analyst resolution; bootstrap, benchmark, and plan requests returned 200; console had only the standard React development notice; corrected only `<title>frontend</title>` to `ClimateCapital AI`; 16 focused tests and 79-module build passed; `.node-version` untouched; no Gemini conversation, deployment, commit, or push |
+| 2026-09-08 | F6A frozen-baseline and automated full regression | Confirmed `main`, `HEAD`, `origin/main`, commit `be78a78`, and initial working tree; ran `.venv/bin/python -m pytest -q`, legacy `.venv/bin/python -m unittest discover -s tests -v`, schema parity, Python compilation, direct backend/package imports, `pip check`, explicit fixture CLI validation, frontend `npm test`, ESLint, the TypeScript/Vite production build under Node 22.23.2/npm 11.19.1, and Git whitespace/status checks | Passed: HEAD exactly equals `be78a78` and `origin/main`; initial tree contained only the documented untracked `.node-version`; 486 pytest tests plus 137 subtests and 152 unittest-discovered tests passed; 31 schemas verified; imports, compilation, dependencies, fixture validation, 9 frontend files / 108 tests, lint, 79-module build, and whitespace checks passed. Only the two known dependency deprecations and the environment-only pip-cache warning remain. No browser, real Vertex, deployment, commit, push, or implementation change; only this required progress record changed |
 | 2026-09-08 | F5B mandatory Gemini on Vertex AI integration and acceptance refinements | Ran 28 focused Gemini tests and all 486 Python tests; checked all 31 generated schemas and dependencies; ran 9 frontend files / 108 tests, ESLint, and the production build; exercised Project, `$332M` Plan, `$700M` Boundary, Benchmark, and Methodology contexts in the running application; used Chrome DevTools for the full boundary text/safeguard, console, 1440/900/390 layout metrics, independent workspace scroll, fixed sidebar/profile, pane geometry, and overflow checks; reviewed security and Git state | Passed: four bounded live calls in this session plus the earlier real Methodology smoke used Vertex AI `gemini-3.5-flash`; Project and plan explanations were governed; the Boundary response used rank 28 / score 67, required analyst judgment, and matched no project-selection/recommendation pattern; Benchmark remained retrospective; 486 tests passed with only the Starlette/AnyIO and google-genai/Python 3.14 deprecation warnings; 31 schemas verified; no broken requirements; 108 frontend tests, build, lint, and Git whitespace checks pass; no console application error or horizontal overflow; `.node-version` untouched; nothing staged, committed, pushed, or deployed; F6 not started |
 | 2026-09-08 | Frontend runtime-v3 governed map integration | Exercised the actual running frontend/API in Chrome DevTools at desktop and 400×748 responsive widths; checked the live bootstrap identity/counts/types, OSM tiles/attribution, legend/role styling, filter synchronization, mapped list selection/polygon focus/detail, unmapped list selection/no map movement/detail, responsive stacking, and console; ran all frontend tests, ESLint, TypeScript/Vite production build, and `git diff --check` under Node 22.23.2 | Passed: live release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; 106 projects, 74 mapped, 32 location unavailable, 64 points, 9 polygons, 1 multipolygon, `fabricated_geometry=false`; 8 test files / 80 tests; lint; 78-module build; diff check; no application console errors. No backend methodology, governed artifact, Funding Priority, Funding Plan, benchmark, `.node-version`, stage, commit, push, or deployment change |
 | 2026-09-08 | D-116 cross-category project geometry governance | Validated all 106 governance decisions and the 80-feature candidate source snapshot; regenerated governed reconciliation and runtime-v3 deterministically; checked exact category/geometry/display-role/status/reason totals, source and governance hashes, runtime-v2 immutability, runtime-v3 catalog/benchmark byte equality, map/catalog identity, citywide exclusion, Austin-region coordinates, role/type failures, runtime cross-artifact drift rejection, standard API activation, and protected plan/benchmark regressions; ran focused/full pytest, schema generation/check, Python compilation, `pip check`, Markdown checks, Git scope/status, and `git diff --check` | Passed: 74 promoted and 32 unmapped; 64 points, 9 polygons, and 1 multipolygon; 51 focused tests; 458 full tests plus 137 subtests; 32 schemas match; deterministic builders are idempotent; runtime-v2 remains 0/106; active release `3a626c11d7e9af503c49be7f9b9cc67ead5c42ac998da7b9bcdcb09172feade1`; no frontend, analytical, Funding Priority, Funding Plan, request, PRB, benchmark, `.node-version`, cloud, stage, commit, push, or deployment change |
@@ -1330,6 +1482,85 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-09 — Complete F6D final regression and F6 closeout
+
+- **Reconciliation:** Confirmed `main`, `HEAD`, `origin/main`, and merge base at
+  `be78a783c125b943d4da4441f9a290a1c875bc15`. Accounted for only the accepted
+  F6 progress record and one-line browser-title fix; kept `.node-version`
+  untouched and found no staged, secret, temporary, generated, or unrelated path.
+- **Automated closeout:** Passed the complete current-tree Python, legacy unittest,
+  schema/release/fixture, compilation/import/dependency, frontend test/lint/build,
+  and Git-hygiene surfaces with the exact counts recorded above. A mistaken import
+  symbol and the signed host's native-module restriction were environment/probe
+  issues; the correct public imports and pinned Node 22 child PATH passed. All
+  temporary ignored fallback files were removed.
+- **Live smoke:** Verified real local health/bootstrap/title, 106/74 Explore data,
+  representative Barton Springs detail, the deterministic `$332M` plan, one live
+  explanation-only Vertex response, Explore/Funding Plan navigation, Historical
+  Benchmark, and successful request/backend health. Product state remained intact
+  after Gemini closed; services stopped cleanly.
+- **Result/handoff:** No additional F6D defect or implementation fix was required.
+  F6A PASS, F6B PASS WITH FIXES, F6C PASS, and F6D PASS make F6 complete. F7 is
+  ready only after explicit authorization; nothing was deployed, committed, or
+  pushed.
+
+### 2026-09-09 — Complete F6C Gemini and cross-feature live acceptance
+
+- **Continuity:** Resumed the interrupted F6C run without repeating accepted F6A,
+  F6B, or completed F6C checks. Confirmed the worktree still contained only this
+  intentional progress change, the accepted F6B `frontend/index.html` title fix,
+  and the untouched pre-existing `.node-version`.
+- **Live completion:** Finished the unmapped Bolm location-grounding path, a real
+  analyst-resolved `$700M` Funding Plan, project/plan cross-feature transitions,
+  product-authority boundary prompts, safe supported recovery checks, narrower
+  Gemini layout inspection, and final console/request/backend-log review. The
+  Vertex-backed responses and application state remained coherent and governed.
+- **Result:** F6C passed with no implementation defect or F6C code change.
+  Browser-automation detachment was an external tooling issue, not an application
+  failure. No targeted automated tests were required because no code changed.
+- **Scope/handoff:** No methodology, governed data, deterministic plan semantics,
+  Gemini architecture, dependency, deployment, F6D/F7, commit, or push work
+  occurred. F6D is ready only after explicit user authorization.
+
+### 2026-09-08 — Complete F6B core live browser product acceptance
+
+- **Continuity:** Continued from accepted F6A without repeating it, retained
+  `main` at `be78a78`, preserved the intentional F6A progress change, and left the
+  pre-existing untracked `.node-version` untouched.
+- **Live acceptance:** Ran the real backend/frontend and exercised the non-Gemini
+  product in Chrome. Verified the primary/reference shell, compact Explore totals,
+  all-category project data, filters/reset, 74 supported map contexts, explicit
+  unavailable-location behavior, representative detail/provenance and project
+  switching, map controls/legend, deterministic plan construction, analyst
+  resolution, invalid input, benchmark, methodology, help, responsive reflow,
+  desktop profile/sticky shell, console, network calls, and backend logs.
+- **Defect correction:** Found the browser tab exposed the development placeholder
+  title `frontend`. Changed only `frontend/index.html` to use
+  `ClimateCapital AI`, then verified the served title, 16 focused App tests, and
+  the 79-module production build. No other implementation defect was found.
+- **Scope/handoff:** No Gemini conversation, F6C/F6D, methodology, architecture,
+  governed data, product-scope, dependency, deployment, F7, commit, or push work
+  occurred. F6C is ready only after explicit user authorization.
+
+### 2026-09-08 — Complete F6A baseline and automated full regression
+
+- **Baseline:** Verified `main` and `origin/main` at frozen accepted F5 commit
+  `be78a783c125b943d4da4441f9a290a1c875bc15`. Initial status contained only the
+  previously documented untracked `.node-version`, which remained untouched.
+- **Automated evidence:** Passed 486 pytest tests plus 137 subtests and the legacy
+  152-test unittest discovery command; verified 31 schemas, Python compilation,
+  backend/package imports, dependency integrity, the development-fixture CLI, 9
+  frontend files / 108 tests, ESLint, and the 79-module TypeScript/Vite build.
+- **Classification:** No application regression or defect was found. A failed
+  preflight import was an invocation setup issue corrected by using the repository
+  source path. The default shell Node/npm mismatch was avoided by using the
+  existing pinned Node 22.23.2/npm 11.19.1 toolchain. Known dependency
+  deprecations and the disabled pip-cache warning remain non-blocking.
+- **Scope/handoff:** Changed only this required canonical progress record. Did not
+  start services, perform browser/manual acceptance, call Vertex, alter product or
+  analytical behavior, deploy, commit, or push. F6B core live browser product
+  acceptance is ready only after explicit user authorization.
 
 ### 2026-09-08 — Complete F5B Gemini/Vertex integration and acceptance
 
