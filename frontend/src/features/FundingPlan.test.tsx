@@ -45,9 +45,52 @@ function deferred<T>() {
   return { promise, resolve }
 }
 
+async function evaluateCustomBudget(
+  user: ReturnType<typeof userEvent.setup>,
+  dollars: number,
+) {
+  const input = screen.getByLabelText('Custom Available Project Budget')
+  await user.clear(input)
+  await user.type(input, String(dollars))
+  await user.click(
+    screen.getByRole('button', { name: /evaluate custom budget/i }),
+  )
+}
+
 beforeEach(() => window.sessionStorage.clear())
 
 describe('Funding Plan', () => {
+  it('offers only the $332M matched-cohort historical preset', () => {
+    const evaluator = vi.fn<FundingPlanEvaluator>()
+    render(<Harness evaluator={evaluator} />)
+
+    expect(
+      screen.getByRole('button', {
+        name: /\$332m historical matched-cohort reference/i,
+      }),
+    ).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /\$700m/i })).toBeNull()
+    expect(screen.queryByRole('button', { name: /\$750m/i })).toBeNull()
+    expect(document.body).toHaveTextContent(
+      /whole dollars from \$0 through \$1,973,520,000/i,
+    )
+  })
+
+  it('accepts the governed project-request total as a custom budget', async () => {
+    const user = userEvent.setup()
+    const evaluator = vi.fn<FundingPlanEvaluator>(async () =>
+      complete332PlanFixture(),
+    )
+    render(<Harness evaluator={evaluator} />)
+
+    await evaluateCustomBudget(user, 1_973_520_000)
+
+    expect(evaluator).toHaveBeenCalledWith(
+      expect.objectContaining({ available_budget_dollars: 1_973_520_000 }),
+      expect.any(AbortSignal),
+    )
+  })
+
   it('evaluates the $332M matched-cohort preset and presents remaining budget neutrally', async () => {
     const user = userEvent.setup()
     const evaluator = vi.fn<FundingPlanEvaluator>(async () =>
@@ -97,10 +140,11 @@ describe('Funding Plan', () => {
     )
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
+    await evaluateCustomBudget(user, 700_000_000)
+
+    expect(evaluator).toHaveBeenCalledWith(
+      expect.objectContaining({ available_budget_dollars: 700_000_000 }),
+      expect.any(AbortSignal),
     )
 
     const boundary = await screen.findByRole('region', {
@@ -128,10 +172,11 @@ describe('Funding Plan', () => {
     )
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$750m pre-snapshot citywide financial-capacity reference/i,
-      }),
+    await evaluateCustomBudget(user, 750_000_000)
+
+    expect(evaluator).toHaveBeenCalledWith(
+      expect.objectContaining({ available_budget_dollars: 750_000_000 }),
+      expect.any(AbortSignal),
     )
 
     const boundary = await screen.findByRole('region', {
@@ -175,11 +220,7 @@ describe('Funding Plan', () => {
     const projects = runtimeProjectsFixture()
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
 
     expect(
       await screen.findByText(projects[0].governed_name),
@@ -202,11 +243,7 @@ describe('Funding Plan', () => {
       )
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
 
     const boundary = await screen.findByRole('region', {
       name: /boundary priority tier/i,
@@ -257,11 +294,7 @@ describe('Funding Plan', () => {
     )
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
     const boundary = await screen.findByRole('region', {
       name: /boundary priority tier/i,
     })
@@ -295,11 +328,7 @@ describe('Funding Plan', () => {
       .mockResolvedValueOnce(resolved700PlanFixture(selectedIds, false))
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
     const boundary = await screen.findByRole('region', {
       name: /boundary priority tier/i,
     })
@@ -362,11 +391,7 @@ describe('Funding Plan', () => {
       .mockResolvedValueOnce(resolved700PlanFixture(firstSelectedIds, false))
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
     let boundary = await screen.findByRole('region', {
       name: /boundary priority tier/i,
     })
@@ -418,11 +443,7 @@ describe('Funding Plan', () => {
     const evaluator = vi.fn<FundingPlanEvaluator>().mockResolvedValue(response)
     render(<Harness evaluator={evaluator} />)
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
 
     const panel = await screen.findByRole('region', {
       name: /boundary priority tier/i,
@@ -454,11 +475,7 @@ describe('Funding Plan', () => {
         name: /\$332m historical matched-cohort reference/i,
       }),
     )
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
 
     second.resolve(boundary700PlanFixture())
     expect(
@@ -528,11 +545,7 @@ describe('Funding Plan', () => {
       screen.getByRole('button', { name: /evaluate custom budget/i }),
     ).toBeDisabled()
 
-    await user.click(
-      screen.getByRole('button', {
-        name: /\$700m full january initial draft recommendation reference/i,
-      }),
-    )
+    await evaluateCustomBudget(user, 700_000_000)
     expect(
       await screen.findByRole('heading', { name: /runtime data changed/i }),
     ).toBeInTheDocument()

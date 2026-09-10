@@ -51,21 +51,7 @@ const budgetPresets: BudgetPreset[] = [
     amountLabel: '$332M',
     label: 'Historical matched-cohort reference',
     description:
-      '$332M is the historical recommendation amount associated with projects in the same 106-project universe modeled by ClimateCapital.',
-  },
-  {
-    dollars: 700_000_000,
-    amountLabel: '$700M',
-    label: 'Full January Initial Draft Recommendation reference',
-    description:
-      '$700M is the full historical Initial Draft Recommendation package and includes $368M outside the 106-project universe modeled by ClimateCapital.',
-  },
-  {
-    dollars: 750_000_000,
-    amountLabel: '$750M',
-    label: 'Pre-snapshot citywide financial-capacity reference',
-    description:
-      '$750M is a broader citywide financial-capacity reference and is not an automatically authorized project-cohort budget.',
+      '$332M is the historical recommendation amount associated with projects represented in ClimateCapital\'s governed 106-project analytical universe.',
   },
 ]
 
@@ -522,10 +508,10 @@ export function FundingPlan({
           <p className="eyebrow">Build a funding scenario</p>
           <h1 id="funding-plan-heading">Funding Plan</h1>
           <p>
-            Choose an Available Project Budget. ClimateCapital works through
-            projects from higher to lower Funding Priority. When equally ranked
-            projects cannot all fit and more than one valid choice remains, the
-            application asks for Analyst Resolution.
+            Set an Available Project Budget. ClimateCapital automatically evaluates
+            indivisible full-request projects from higher to lower official Funding
+            Priority. Analyst input is required only when a tied boundary leaves
+            multiple valid choices.
           </p>
         </div>
         <div className="method-badge">
@@ -545,8 +531,9 @@ export function FundingPlan({
           </strong>
         </div>
         <p>
-          Reference presets populate the budget only. They do not preload project
-          membership, category allocations, or historical decisions.
+          The historical preset populates the budget only. It does not preload
+          project membership, category allocations, or historical decisions. Enter
+          any other whole-dollar scenario below.
         </p>
 
         <div className="budget-presets">
@@ -597,8 +584,8 @@ export function FundingPlan({
               }}
             />
           </label>
-          <button type="submit" disabled={parsedBudget.dollars === null || loading}>
-            {loading ? 'Evaluating…' : 'Evaluate custom budget'}
+          <button type="submit" disabled={parsedBudget.dollars === null}>
+            Evaluate custom budget
           </button>
           <p
             id="custom-budget-guidance"
@@ -664,9 +651,10 @@ export function FundingPlan({
         <section className="plan-empty-state">
           <h2>Choose an Available Project Budget</h2>
           <p>
-            Choose a reference budget or enter a custom whole-dollar amount to
-            evaluate a Funding Plan. Project selections come from ClimateCapital&apos;s
-            Funding Priority rules and any required Analyst Resolution.
+            Choose the historical matched-cohort reference or enter a custom
+            whole-dollar amount to evaluate a Funding Plan. Project selections come
+            from ClimateCapital&apos;s Funding Priority rules and any required Analyst
+            Resolution.
           </p>
         </section>
       )}

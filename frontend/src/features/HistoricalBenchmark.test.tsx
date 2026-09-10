@@ -48,11 +48,18 @@ describe('January 21 Historical Benchmark', () => {
       }),
     ).toBeInTheDocument()
     expect(loader).toHaveBeenCalledTimes(1)
-    expect(screen.getByText('$700M')).toBeInTheDocument()
+    expect(screen.getAllByText('$700M')).toHaveLength(2)
+    expect(screen.getByText('$750M')).toBeInTheDocument()
     expect(screen.getByText('$332M')).toBeInTheDocument()
     expect(screen.getByText('$368M')).toBeInTheDocument()
     expect(screen.getByText('20', { selector: '.benchmark-stat-value' })).toBeInTheDocument()
     expect(screen.getByText('$332M + $368M = $700M')).toBeInTheDocument()
+    expect(document.body).toHaveTextContent(
+      /broader citywide recommendation package.*outside ClimateCapital.*not a like-for-like modeled-cohort Funding Plan preset/i,
+    )
+    expect(document.body).toHaveTextContent(
+      /pre-snapshot citywide financial-capacity reference.*not an automatically authorized project-cohort selection budget/i,
+    )
   })
 
   it('renders category summaries from benchmark data as historical context', async () => {

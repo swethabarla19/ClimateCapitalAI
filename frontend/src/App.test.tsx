@@ -125,7 +125,11 @@ describe('ClimateCapital application shell', () => {
       'Funding Plan · $0M',
     )
     await user.click(screen.getByRole('button', { name: 'Close Gemini' }))
-    await user.click(screen.getByRole('button', { name: /\$700M/i }))
+    const customBudget = screen.getByLabelText('Custom Available Project Budget')
+    await user.type(customBudget, '700000000')
+    await user.click(
+      screen.getByRole('button', { name: /evaluate custom budget/i }),
+    )
     await screen.findByRole('heading', { name: 'Boundary priority tier' })
     expect(geminiExplainer).not.toHaveBeenCalled()
     await user.click(screen.getByRole('button', { name: 'Ask Gemini' }))
@@ -338,7 +342,11 @@ describe('ClimateCapital application shell', () => {
     )
 
     await user.click(await screen.findByRole('link', { name: 'Funding Plan' }))
-    await user.click(screen.getByRole('button', { name: /\$700M/i }))
+    const customBudget = screen.getByLabelText('Custom Available Project Budget')
+    await user.type(customBudget, '700000000')
+    await user.click(
+      screen.getByRole('button', { name: /evaluate custom budget/i }),
+    )
     expect(
       await screen.findByRole('heading', { name: 'Boundary priority tier' }),
     ).toBeInTheDocument()

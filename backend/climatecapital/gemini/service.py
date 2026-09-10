@@ -407,6 +407,9 @@ class GeminiExplanationService:
                         "governed_request_dollars": item.model_request_dollars,
                         "funding_priority_score": item.funding_priority_score,
                         "competition_rank": item.funding_priority_rank,
+                        "prb_components": catalog_index[
+                            item.decision_unit_id
+                        ].prb_components.model_dump(mode="json"),
                         "individually_budget_feasible": (
                             item.individually_budget_feasible
                         ),

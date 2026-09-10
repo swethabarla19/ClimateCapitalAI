@@ -96,6 +96,23 @@ def plan_input(budget: int = 700_000_000) -> dict:
     }
 
 
+def plan_input_at_500m_rank_68_boundary() -> dict:
+    payload = plan_input(500_000_000)
+    payload["boundary_resolutions"] = [
+        {
+            "funding_priority_score": 69,
+            "funding_priority_rank": 19,
+            "selected_decision_unit_ids": [
+                "community-facilities/library/colony-park-branch-library",
+                "parks/garrison-pool",
+                "watershed/5282.150",
+            ],
+            "advance_with_feasible_same_tier_project_acknowledged": False,
+        }
+    ]
+    return payload
+
+
 def request_payload(surface: str = "METHODOLOGY", **updates) -> dict:
     payload = {
         "contract_version": GEMINI_EXPLANATION_REQUEST_CONTRACT_VERSION,
@@ -256,6 +273,99 @@ def test_boundary_re_evaluation_builds_hero_rank_28_priority_67_context():
     assert result["unresolved_boundary"]["competition_rank"] == 28
     assert result["unresolved_boundary"]["funding_priority_score"] == 67
     assert result["unresolved_boundary"]["analyst_resolution_required"] is True
+
+
+def test_boundary_grounding_exposes_governed_prb_components_and_maxima():
+    grounded = service(FakeProvider()).ground(
+        parsed_request(
+            "BOUNDARY",
+            funding_plan_input=plan_input_at_500m_rank_68_boundary(),
+        )
+    )
+    boundary = grounded.evidence["authoritative_evaluator_result"][
+        "unresolved_boundary"
+    ]
+    candidates = {
+        candidate["decision_unit_id"]: candidate
+        for candidate in boundary["candidates"]
+    }
+
+    assert boundary["funding_priority_score"] == 68
+    assert candidates["watershed/5282.162"]["prb_components"] == {
+        "strategic_alignment": 8,
+        "critical_asset": 7,
+        "community_consideration": 12,
+        "efficiency": 16,
+        "timeliness_readiness": 13,
+        "climate_resilience": 12,
+    }
+    assert candidates["watershed/5789.145"]["prb_components"] == {
+        "strategic_alignment": 8,
+        "critical_asset": 5,
+        "community_consideration": 19,
+        "efficiency": 14,
+        "timeliness_readiness": 13,
+        "climate_resilience": 9,
+    }
+    assert METHODOLOGY_CONTEXT["funding_priority"]["component_maxima"] == {
+        "strategic_alignment": 8,
+        "critical_asset": 8,
+        "community_consideration": 20,
+        "efficiency": 20,
+        "timeliness_readiness": 24,
+        "climate_resilience": 20,
+    }
+    for candidate in candidates.values():
+        assert sum(candidate["prb_components"].values()) == candidate[
+            "funding_priority_score"
+        ]
+
+
+def test_boundary_provider_receives_component_comparison_without_decision_authority():
+    provider = FakeProvider(
+        answer=(
+            "The governed component values differ, but these projects share "
+            "Funding Priority 68 and the final choice requires analyst judgment."
+        )
+    )
+    result = asyncio.run(
+        service(provider).explain(
+            parsed_request(
+                "BOUNDARY",
+                funding_plan_input=plan_input_at_500m_rank_68_boundary(),
+                question=(
+                    "Compare the official PRB components for Colorado River "
+                    "and Williamson Creek without choosing a winner."
+                ),
+            ),
+            request_id="123e4567-e89b-42d3-a456-426614174000",
+        )
+    )
+    system, contents = provider.calls[0]
+    supplied = json.loads(contents)["authoritative_climatecapital_evidence"]
+    candidates = supplied["authoritative_evaluator_result"][
+        "unresolved_boundary"
+    ]["candidates"]
+
+    assert all("prb_components" in candidate for candidate in candidates)
+    assert "Never:\n\n- select a project for the analyst" in system
+    assert "Describe differences without selecting a winner." in system
+    assert "final choice requires analyst judgment" in result.answer
+
+
+def test_boundary_missing_context_remains_explicitly_insufficient():
+    result = asyncio.run(
+        service(FakeProvider(insufficient=True)).explain(
+            parsed_request(
+                "BOUNDARY",
+                funding_plan_input=plan_input_at_500m_rank_68_boundary(),
+                question="Explain a detail not present in governed context.",
+            ),
+            request_id="123e4567-e89b-42d3-a456-426614174000",
+        )
+    )
+
+    assert result.status == "INSUFFICIENT_CONTEXT"
 
 
 def test_boundary_rejects_a_complete_authoritative_result():

@@ -315,6 +315,42 @@ export function HistoricalBenchmark({
         </dl>
       </section>
 
+      <section
+        className="benchmark-governance"
+        aria-labelledby="broader-citywide-references-heading"
+      >
+        <div>
+          <p className="eyebrow">Broader historical context</p>
+          <h2 id="broader-citywide-references-heading">
+            Citywide references are not modeled-cohort presets
+          </h2>
+          <p>
+            These broader citywide figures provide historical context. Neither is
+            an official Available Project Budget for ClimateCapital&apos;s governed
+            106-project analytical universe.
+          </p>
+        </div>
+        <dl>
+          <div>
+            <dt>$700M</dt>
+            <dd>
+              January Initial Draft Recommendation reference: a broader citywide
+              recommendation package that includes funding outside ClimateCapital&apos;s
+              governed analytical universe, so it is not a like-for-like
+              modeled-cohort Funding Plan preset.
+            </dd>
+          </div>
+          <div>
+            <dt>$750M</dt>
+            <dd>
+              Pre-snapshot citywide financial-capacity reference: broader citywide
+              financial-planning context, not an automatically authorized
+              project-cohort selection budget.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
       <section className="benchmark-summary" aria-labelledby="snapshot-summary-heading">
         <div className="benchmark-section-heading">
           <div>
