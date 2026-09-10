@@ -2,13 +2,6 @@
 
 **ClimateCapital AI helps cities make transparent, evidence-based capital investment decisions under limited budgets by combining governed public data, deterministic analytics, interactive planning, and explainable AI.**
 
-## Live Demo
-
-**Deployed App:**  
-https://climatecapital-ai-ksojl5xdtq-uc.a.run.app
-
-No login or installation is required.
-
 ---
 
 ## What is ClimateCapital AI?
