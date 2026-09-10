@@ -1,7 +1,10 @@
 # ClimateCapital AI P0 Delivery Milestones
 
 > **Status:** Delivery baseline approved 2026-09-02; M0 and M1 explicitly approved
-> 2026-09-02; M2A, M2B, and M3 explicitly approved 2026-09-03
+> 2026-09-02; M2A, M2B, and M3 explicitly approved 2026-09-03; the M9 container,
+> deployment, verification, and promotion outcome is complete through F7D on
+> 2026-09-10. Earlier rows retain their approval-time sequencing; current status
+> remains authoritative in `PROJECT_PROGRESS.md`.
 > **Rule:** Milestones are dependency-ordered. Approval of one milestone does not
 > silently authorize cloud mutation, deployment, commit, push, P1, or Later work.
 
@@ -26,7 +29,7 @@
 | M6 | Reviewed-data integration and fixture removal | Blocked by M4 and M5 | None; local build only |
 | M7 | Manual-core, recovery, accessibility, and E2E gate | Blocked by M6 | None; local only |
 | M8 | Required grounded Gemini explanation | Blocked by M7 | Mocked locally; one later authorized canary |
-| M9 | Container, no-traffic deployment, verification, promotion | Blocked by M8 and explicit cloud authorization | Bounded locked GCP services |
+| M9 | Container, no-traffic deployment, verification, promotion | Complete through F7D 2026-09-10 | Bounded locked GCP services |
 | M10 | P0-9 / SP0-1 stretch evaluation | Blocked by core candidate and contingency | No new infrastructure |
 
 ## M0 — Delivery Plan Gate

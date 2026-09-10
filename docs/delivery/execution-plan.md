@@ -1,7 +1,8 @@
 # ClimateCapital AI Execution Plan
 
 > **Status:** Approved delivery baseline, reconciled through Methodology and
-> Architecture Locks; M0 and M1 explicitly approved and complete on 2026-09-02
+> Architecture Locks; required-P0 implementation, deployment, and production QA
+> are complete through F7D as of 2026-09-10; demo/submission closeout remains F8
 > **Authority:** This is the current high-level delivery sequencing, deadline, and
 > release-gate plan. It is not an implementation plan, test plan, or architectural
 > design.
@@ -41,8 +42,8 @@ analytical credibility, testing time, and a low Google Cloud cost profile.
 | 6 | Evidence feasibility and Methodology Lock | Reviewed sources, purpose family, evidence roles, missingness, supported arithmetic, and unsupported metrics | Complete; locked 2026-09-01 |
 | 7 | Architecture planning and lock | Investigated and explicitly approved architecture, data design, cloud cost plan, and lineage | Complete; locked 2026-09-01 |
 | 8 | Implementation and test planning | Milestones, implementation plan, test plan, and architecture-informed execution refinement | Complete; M0 approved 2026-09-02 |
-| 9 | Required-P0 implementation | Integrated deterministic and UI/Gemini functionality inside the locked boundary | Not started |
-| 10 | Release, QA, demo, and submission | Deployed release candidate, validation, rehearsal, freeze, and verified submission | Not started |
+| 9 | Required-P0 implementation | Integrated deterministic and UI/Gemini functionality inside the locked boundary | Complete through accepted production release |
+| 10 | Release, QA, demo, and submission | Deployed release candidate, validation, rehearsal, freeze, and verified submission | Deployment, production QA, and release closeout complete through F7D; demo/submission remains F8 |
 
 The approved architecture is authoritative in
 [p0-architecture.md](../architecture/p0-architecture.md) and

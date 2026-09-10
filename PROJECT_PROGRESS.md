@@ -51,32 +51,33 @@ access to prior chat conversations.
 ## Current Snapshot
 
 - **Last updated:** 2026-09-10
-- **Project stage:** F6 through F7C are complete. F7C production acceptance is
-  **PASS** on exact deployed SHA `40d575c361bfee1ac9749bf95c20341ea74b9293`;
-  F7D is ready but has not begun.
-- **Current milestone:** F7C deployed production E2E, bounded remediation, and
-  final affected/unfinished acceptance are complete.
-- **Next gate:** Await explicit authorization for F7D final release closeout. Do
-  not commit or push the uncommitted F7C progress checkpoint unless directed.
+- **Project stage:** F6 and all of F7 are complete. F7D final production release
+  closeout is **PASS** for executable release
+  `40d575c361bfee1ac9749bf95c20341ea74b9293`; F8 is ready but has not begun.
+- **Current milestone:** F7 deployment, production acceptance, operational
+  reconciliation, and release closeout are complete.
+- **Next gate:** Await explicit authorization for F8. Do not begin README,
+  submission, or other F8 work from this checkpoint.
 - **Working state:** Public production serves revision
   `climatecapital-ai-gemini-40d575c` at 100% from immutable digest
   `sha256:0e1aed9c…338588`; `climatecapital-ai-core-40d575c` is retained at zero
-  traffic as the current rollback revision. Only this progress file is modified;
-  `.node-version` remains untouched and untracked. No source, IAM, service-account,
-  public-access, methodology, evaluator, governed-data, or Gemini-authority change
-  occurred during final F7C deployment/acceptance.
+  traffic as the current rollback revision. Only this tracker and two delivery-plan
+  status summaries are modified; `.node-version` remains untouched and untracked.
+  Repository HEAD `93198ae…` adds only the post-F7C progress record over the
+  accepted executable SHA. F7D changes only release-status documentation; no
+  source, IAM, service-account, public-access, methodology, evaluator,
+  governed-data, or Gemini-authority change occurred.
 - **Delivery context:** The completed/deployed application remains the delivery goal. Geometry promotion changes map evidence only and does not change Product methodology, analytical authority, Funding Plan, Funding Priority, requests, PRB values, or Historical Benchmark.
 
 - **Data/methodology state:** All 106 projects remain model-eligible and ordinally ranked by official PRB Grand Total. M3.7D authorizes Priority-Constrained Analyst-Governed Portfolio Construction using full-request project costs and analyst-supplied Available Project Budget. The $332M matched-cohort amount is a benchmark scenario; $700M and $750M remain broader historical references.
 - **Runtime boundary:** `cross_category_ranking_authorized=true`; `portfolio_selection_authorized=true`; `runtime_integration_authorized=true` for active runtime-v3. Runtime-v2 remains immutable historical release provenance; earlier M3.7 artifacts correctly retain `runtime_integration_authorized=false`.
 - **M3 runtime state:** Standard `/api/v1/bootstrap` serves the unchanged 106-project catalog plus D-116 runtime-v3 map context; `/api/v1/plans/evaluate` executes the unchanged M3.7D state machine; `/api/v1/benchmark` serves the byte-identical isolated January historical outcome. `/api/v1/benchmark/compare` remains explicitly unavailable.
-- **Most recent verification:** Exact-SHA Cloud Build
-  `2b4361f2-5ca6-474b-910e-02e1ffb531a7` succeeded; same-digest Core and Gemini
-  candidates passed `/health`, 106/74/32/false runtime identity, the exact `$332M`
-  result, static/security/docs checks, all supported direct hashes and Funding Plan
-  refresh, corrected reference copy, desktop and 390px responsive checks, and
-  browser console/network checks. Exact Gemini revision `gemini-40d575c` now serves
-  100%; anonymous smoke and Cloud Run logs pass without a new Vertex call.
+- **Most recent verification:** F7D reconfirmed exact Gemini revision
+  `climatecapital-ai-gemini-40d575c` at 100% and retained same-digest Core rollback
+  `climatecapital-ai-core-40d575c`. Live root, `/health`, 106/74/32/false bootstrap,
+  exact `$332M`, security/docs, runtime configuration, Artifact Registry/Cloud
+  Build/source inventories, scoped IAM/key metadata, and Cloud Run logs pass. Two
+  scale-to-zero cold starts are healthy; no 5xx/error/restart loop is present.
 
 ## Approved Locks
 
@@ -128,10 +129,9 @@ comparison; the $125 million figure is historical/default context, not eligibili
 
 - **Goal:** Complete F7 sequentially without changing locked product, methodology,
   governed data, deterministic Funding Plan behavior, or Gemini authority.
-- **Status:** F7C is complete and passes production acceptance. The published
-  F7C.2 corrections are verified on exact serving revision
-  `climatecapital-ai-gemini-40d575c`: current Help/Data & Methodology guidance,
-  all five supported direct hashes, and route preservation on refresh pass.
+- **Status:** F7 is complete. F7D reconciled the accepted serving/rollback pair,
+  immutable release identity, bounded runtime configuration, public/security
+  boundary, cloud inventory, scoped IAM, and operational logs without mutation.
 - **Readiness boundary:** Existing bucket-only `roles/storage.objectViewer` and
   repository-only `roles/artifactregistry.writer` for the effective build account,
   plus `roles/aiplatform.user` on the dedicated runtime account, were reused
@@ -144,18 +144,56 @@ comparison; the $125 million figure is historical/default context, not eligibili
   while `$700M` and `$750M` are labeled broader citywide context in Historical
   Benchmark. Evaluator, data, ranking, ties, Gemini authority, and cloud topology
   are unchanged.
-- **Exit condition:** Stop after the F7C checkpoint. F7D requires separate explicit
-  authorization; do not commit, push, rebuild, redeploy, or begin F7D.
+- **Exit condition:** Stop after the F7D checkpoint. F8 requires separate explicit
+  authorization; do not commit, push, rebuild, redeploy, or begin F8.
 
 ## Next Actions
 
-1. Review the completed F7C production checkpoint and deployed release identity.
-2. Await explicit authorization for F7D final release closeout.
+1. Review the completed F7D production-release checkpoint.
+2. Await explicit authorization for F8.
 3. Preserve the exact serving and rollback revisions; do not commit, push, rebuild,
-   redeploy, or begin F7D without authorization.
+   redeploy, rewrite README, or begin submission work without authorization.
 
 
 ## Active Implementation Checkpoint
+
+### 2026-09-10 — F7D final production release closeout
+
+- **Repository/release identity:** Reconciled clean `main`, `HEAD`, and
+  `origin/main` at documentation-only SHA
+  `93198ae51b04320164511757471f86bf37efd6d2`; its only change from accepted
+  executable SHA `40d575c361bfee1ac9749bf95c20341ea74b9293` is the committed F7C progress
+  record. Production remains on immutable image
+  `sha256:0e1aed9c0f384581bff5f709980bb40d911262fbe1ebd48c14c215f8ed338588`.
+- **Serving/rollback/configuration:** `climatecapital-ai-gemini-40d575c` remains
+  READY at 100% traffic; same-digest `climatecapital-ai-core-40d575c` remains READY
+  at zero traffic as rollback. Runtime account, global `gemini-3.5-flash`, 1 CPU,
+  512 MiB, concurrency 20, min 0/default, max 1, request CPU throttling, port 8080,
+  and keyless ADC configuration show no unexpected drift.
+- **Final smoke/security/logs:** Public root and `/health` return 200/READY;
+  bootstrap remains 106 projects / 74 mapped / 32 unavailable /
+  `fixture_mode=false`; `$332M` remains COMPLETE with 18 projects, `$331,825,000`
+  selected, and `$175,000` remaining. Locked headers remain present and public
+  docs/ReDoc/OpenAPI return 404. Serving-revision logs contain no error/5xx record;
+  two healthy PID-1 startups approximately 45 minutes apart reflect scale-to-zero
+  cold starts rather than a restart loop. No F7D Vertex call or sensitive Gemini
+  content record exists.
+- **Cloud/IAM hygiene:** Nine READY historical/current revisions exist; only the
+  accepted Gemini revision has service traffic. Five immutable tagged images and
+  seven recorded builds remain as deployment/audit evidence. Nine build-source
+  archives total 2,104,146 bytes in the Cloud Build bucket. Runtime IAM remains
+  only project-scoped `roles/aiplatform.user`; the build principal retains only
+  bucket-scoped `roles/storage.objectViewer` and repository-scoped
+  `roles/artifactregistry.writer`. Public access remains no-Invoker-IAM-check with
+  no Cloud Run `allUsers` policy binding. The runtime account has no user-managed
+  key; `GOOGLE_APPLICATION_CREDENTIALS` is absent.
+- **Cleanup/documentation/stop:** Performed no cleanup. Current serving/rollback
+  artifacts are protected; prior revisions/images/builds and the 2.01 MiB source
+  archive set remain for submission/audit evidence. After F8 or an approved
+  retention decision, old tags/revisions/images and source archives may be reviewed
+  for bounded cleanup. Corrected only the materially stale F7 deployment status in
+  `docs/delivery/execution-plan.md`, `docs/delivery/milestones.md`, and this tracker;
+  README is untouched. F7 is complete; stop pending explicit F8 authorization.
 
 ### 2026-09-10 — F7C final production acceptance passes on `40d575c`
 
@@ -1252,8 +1290,8 @@ The frozen backend runtime, frontend F1–F5A, focused visual/map work, and F5B
 Gemini explanation are implemented and published. F6A automated regression, F6B
 core browser acceptance, F6C Gemini/cross-feature acceptance, and F6D final
 closeout are complete. F7B deployment is complete. F7C deployed production
-acceptance is complete; F7D final release closeout is next and requires separate
-authorization.
+acceptance and F7D final release closeout are complete. F8 is next and requires
+separate authorization.
 
 ## Blockers
 
@@ -1268,7 +1306,8 @@ authorization.
   `climatecapital-ai-gemini-40d575c`. Superseded `fda9176`, `ed4f14b`, `3b4f367`,
   and `b11032b` images/revisions remain evidence only and must not receive
   production traffic. Retain `climatecapital-ai-core-40d575c` and immutable
-  `sha256:0e1aed9c…338588` as the verified current rollback pair through F7D.
+  `sha256:0e1aed9c…338588` as the verified current rollback pair through F8 or an
+  explicitly approved retention/cleanup decision.
 - D-116 governs 74 source-native project map features, but later-refreshed CPE,
   park/PARD, and AFM features are authoritative only for stable-location display.
   A silent source refresh could import post-snapshot shape or project-fact changes;
@@ -1826,6 +1865,7 @@ Record only checks that were actually run. Newest entries go first.
 
 | Date | Scope | Command or Check | Result |
 | --- | --- | --- | --- |
+| 2026-09-10 | F7D final production release reconciliation, cloud/IAM hygiene, smoke, logs, and documentation closeout | Reconciled documentation-only HEAD `93198ae` against executable `40d575c`; described service/revisions/configuration/traffic; inventoried Artifact Registry images, builds, and source archives; inspected service/project/repository/bucket/runtime-account IAM and key metadata; smoked root, `/health`, bootstrap, `$332M`, headers, and docs; queried serving-revision startup/error/5xx/Gemini-sensitive logs; reviewed deployment-status documentation and ran final Git hygiene checks | PASS: exact `gemini-40d575c` remains 100% and same-digest `core-40d575c` rollback remains READY/zero traffic; identity, 1 CPU/512 MiB/min 0/max 1/concurrency 20/runtime account/model/location/false fixture mode reconcile. Smoke, headers/docs, and logs pass; two separated starts are scale-to-zero cold starts, not a loop. Five images, seven build records, nine revisions, and nine 2.01 MiB source archives are expected audit evidence. No unexpected IAM, allUsers binding, user-managed key, credential env, cleanup, rebuild/deploy, Vertex call, IAM change, source change, commit, push, README, submission, or F8 work |
 | 2026-09-10 | F7C exact-SHA rebuild, F7C.2 deployed acceptance, promotion, and public smoke | Reconciled clean `40d575c` Git/runtime identity; built the reviewed 87-file exact-SHA archive; deployed same-digest zero-traffic Core/Gemini revisions; checked `/health`, 106/74/32/false, exact `$332M`, static/security/docs/API boundaries; exercised all five direct hashes, Funding Plan refresh, corrected reference pages, desktop/390px responsive layout, and browser console/network; reconciled logs/traffic and explicitly promoted the verified revision | PASS: build `2b4361f2-5ca6-474b-910e-02e1ffb531a7` produced 62,152,762-byte `sha256:0e1aed9c…338588`; exact `gemini-40d575c` serves 100% and `core-40d575c` is retained for rollback. Anonymous production smoke, release identity, security/docs, and Cloud Run runtime logs pass. No Vertex call was needed because the artifact differs from accepted `b11032b` only by the published F7C.2 frontend/reference patch. Existing IAM/public access was reused; no source, key, IAM, commit, push, or F7D work |
 | 2026-09-10 | F7C.2 reference-copy and direct/hash-navigation remediation | Reconciled exact `b11032b` Git state; added focused reference-page and five-route hash/refresh regressions; ran `npm test -- src/App.test.tsx`, ESLint, and the production build with exact Node 22.23.2/npm 11.19.1; scanned for superseded copy; inspected the complete source diff and ran `git diff --check` | PASS locally: the pre-fix slice reproduced 7 failures and now passes all 22 tests; `$332M` is the sole historical preset, custom budgets remain analyst-entered, the pages report 106/74/32 location behavior, every supported direct hash initializes its requested route, in-app navigation updates the hash, and refresh preserves Funding Plan. Lint, 79-module build, stale-copy scan, scope review, and whitespace checks pass. No cloud/IAM mutation, Cloud Build/deploy, Vertex call, commit, push, promotion, or F7D work |
 | 2026-09-09 | Resumed F7C exact-SHA build, private remediation candidates, one Boundary Vertex call, and unfinished UI acceptance | Reconciled clean `b11032b` source/runtime identity; corrected only the temporary upload allowlist after a pre-Docker failure; built the reviewed 87-file context; deployed same-digest zero-traffic core/Gemini revisions; checked `/health`, identity, 106/74/32/false, static/security/docs, `$332M`, the real priority-68 boundary, exact one-call Gemini output/logs, Funding Plan custom controls, Historical Benchmark context, Data & Methodology, Help, and direct `#funding-plan` navigation; rechecked traffic and candidate errors | BLOCKED: build `416f02ab-2033-4c71-b7cc-9fd8de6e5816` produced 62,152,425-byte `sha256:d5a39938…b85b`; private gates and the one component canary pass with exact official values/maxima, analyst authority, one content-free 3,683/336/610/4,629-token completion log, and zero candidate errors. Funding Plan/Benchmark UI corrections pass, but Data & Methodology/Help retain plural preset guidance, Help contradicts the deployed 74 mapped contexts, and direct `#funding-plan` navigation loads Explore. New revisions remain zero traffic; old verified revision remains 100%; no IAM, source, public-access, promotion, commit, push, or F7D change |
@@ -1882,6 +1922,24 @@ Record only checks that were actually run. Newest entries go first.
 ## Session Log
 
 Add new entries immediately below this guidance so the newest session is first.
+
+### 2026-09-10 — Close F7 with final production reconciliation
+
+- **Live release:** Confirmed exact application SHA `40d575c`, immutable digest
+  `sha256:0e1aed9c…338588`, and `gemini-40d575c` at 100%; retained same-digest
+  `core-40d575c` at zero traffic. Runtime resources, identity, keyless Vertex ADC,
+  and no-Invoker-IAM-check public access match the accepted release.
+- **Operations/security:** Final root, `/health`, 106/74/32/false bootstrap,
+  `$332M`, headers, and disabled docs/OpenAPI smoke passes. No serving-revision
+  error/5xx/restart loop or sensitive Gemini log record exists. Scoped runtime,
+  bucket, and repository IAM is unchanged; no allUsers binding or user-managed
+  runtime key exists.
+- **Inventory/closeout:** Retained nine revisions, five immutable image digests,
+  seven build records, and nine 2.01 MiB Cloud Build source archives for rollback
+  and audit evidence; performed no cleanup. Corrected only stale F7 status in the
+  execution/milestone plans and this tracker; README remains untouched. F7 is
+  complete and F8 is ready. No source, rebuild/deploy, Vertex, IAM, commit, push,
+  submission, or F8 action occurred.
 
 ### 2026-09-10 — Complete F7C on deployed `40d575c`
 
