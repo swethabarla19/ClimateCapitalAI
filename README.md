@@ -1,168 +1,123 @@
+# ClimateCapital AI — Explainable Climate-Resilient Capital Planning for Cities
 
-# ClimateCapital AI
+**ClimateCapital AI helps cities make transparent, evidence-based capital investment decisions under limited budgets by combining governed public data, deterministic analytics, interactive planning, and explainable AI.**
 
-**ClimateCapital AI** is an evidence-first decision-support prototype for exploring climate-relevant capital investments and building transparent funding scenarios.
+## Live Demo
 
-The P0 pilot uses a **historical Austin Watershed planning context** to demonstrate how governed public-sector evidence, deterministic budget validation, geospatial context, and bounded AI explanation can support an analyst without pretending to produce an official recommendation.
+**Deployed App:**  
+https://climatecapital-ai-ksojl5xdtq-uc.a.run.app
 
-> **Current status — September 3, 2026:** M0 through M3 are complete and explicitly approved. The deterministic backend and core APIs are implemented and verified. **M4 frontend implementation is now underway.**
-
----
-
-## What ClimateCapital AI Does
-
-ClimateCapital AI is designed around a simple principle:
-
-**AI may explain governed evidence, but deterministic software remains authoritative for facts, membership validation, and budget arithmetic.**
-
-For the Austin Watershed P0 pilot:
-
-- The governed source universe contains **37 Watershed projects** with **$327,970,000** in historical Department Requests.
-- A documented methodology derives an exact **12-project P0 analytical family** totaling **$143,005,000**.
-- The historical **$125,000,000 Watershed Projects envelope** provides the default decision context.
-- Analysts control which complete project requests are included in a Funding Plan.
-- Server-side deterministic logic validates project membership and calculates exact totals, remainder, overage, fingerprints, and supported scenario differences.
-- The published January 2026 **Historical City Recommendation** is kept structurally separate and used only as a descriptive benchmark.
-
-ClimateCapital AI does **not** currently produce a Funding Priority score, project rank, Importance weight, optimizer-selected portfolio, expected flood-reduction benefit, or beneficiary estimate because the governed evidence does not support those claims consistently enough for P0.
-
----
-# Google Cloud Integration
-
-Google Cloud is part of the project architecture from source governance through final deployment.
-
-The project deliberately separates:
-
-1. **controlled data preparation and validation**, and
-2. **the eventual application runtime**.
-
-That means Google Cloud services are used where they provide a clear architectural purpose rather than being added simply for breadth.
-
-## Google Cloud services used so far
-
-| Google Cloud service | Current use |
-| --- | --- |
-| **BigQuery** | Governed raw Watershed project data validation, reconciliation, and deterministic SQL quality gates |
-| **Cloud Storage** | Immutable, checksum-verified preservation of controlled source snapshots and approved source artifacts |
-
-### BigQuery
-
-BigQuery is used as a governed validation layer for the historical Watershed project source data.
-
-The project has already:
-
-- loaded the governed **37-project source universe** into the existing raw BigQuery environment;
-- validated the exact **37 rows**;
-- reconciled the exact **$327,970,000** historical request total;
-- run persistent SQL quality checks;
-- verified source sequence and project-level facts;
-- used deterministic semantic fingerprints to detect unexpected changes.
-
-BigQuery is intentionally **not** queried by the application at runtime.
-
-That separation prevents a live warehouse change from silently changing the behavior of a released decision-support application.
-
-### Cloud Storage
-
-Google Cloud Storage is used for immutable preservation of controlled source material.
-
-The project has already used Cloud Storage to preserve approved source snapshots with:
-
-- exact source identity;
-- SHA-256 checksums;
-- object generations;
-- create-only preservation behavior;
-- provenance metadata;
-- deterministic verification against local source bytes.
-
-Cloud Storage is also intentionally **not** a runtime application dependency.
-
-The final application will consume a reviewed, immutable release-data bundle rather than querying live source storage.
+No login or installation is required.
 
 ---
 
-## Locked Google Cloud deployment path
+## What is ClimateCapital AI?
 
-Additional Google Cloud services are already part of the approved architecture and will be introduced only in their dependency-ordered milestones.
+Cities often have more infrastructure needs than available capital funding, while the information required to evaluate those investments is fragmented across project lists, funding requests, scoring data, maps, reports, and other public records.
 
-| Google Cloud service | Planned P0 role | Milestone |
-| --- | --- | --- |
-| **Cloud Run** | One public, scale-to-zero service hosting the React SPA and FastAPI API | M9 |
-| **Artifact Registry** | Immutable storage for the built application container image | M9 |
-| **Cloud Build** | Reproducible test, build, container, and deployment workflow | M9 |
-| **Gemini on Google Cloud** | Grounded, bounded explanation of governed project/plan evidence | M8 |
-| **IAM / Workload Identity** | Keyless authorization for the Cloud Run service to invoke Gemini | M8–M9 |
-| **Cloud Logging** | Bounded operational and Gemini token-usage telemetry | M9 |
+ClimateCapital AI brings this information into one governed decision-support environment.
 
-Local and Cloud Run Gemini configuration is documented in
-[`docs/delivery/gemini-vertex-ai-configuration.md`](docs/delivery/gemini-vertex-ai-configuration.md).
+The prototype uses **Austin, Texas and its 2026 capital-planning process** as a historical scenario. It includes **106 project-level proposals** across:
 
+- Transportation
+- Parks & Open Space
+- Watershed
+- Community Facilities
 
----
+Users can explore projects, review evidence and funding requests, test different budgets, build reproducible Funding Plans, and use Gemini to better understand the results.
 
-## Current Implementation
-
-### Completed
-
-**M0 — Delivery and architecture-informed implementation planning**
-- Approved implementation, test, milestone, and execution plans.
-
-**M1 — Versioned contracts and fail-closed release validation**
-- Strict Pydantic artifact, API, plan, session, benchmark, and Gemini contracts.
-- 22 generated JSON/GeoJSON schemas.
-- Fail-closed four-file release-bundle validation.
-- Cross-file identity, checksum, provenance, reconciliation, missingness, benchmark-isolation, and forbidden-field enforcement.
-
-**M2A — Controlled data prerequisites**
-- Governed provenance and source metadata for the Watershed project source universe and approved contextual/benchmark inputs.
-- Explicit historical-fit, evidence-role, limitation, and reuse metadata.
-
-**M2B — Development fixture and deterministic Funding Plan engine**
-- Conspicuous four-file `FIXTURE` release bundle:
-  - `catalog.json`
-  - `map-context.geojson`
-  - `benchmark.json`
-  - `manifest.json`
-- Exact all-37 governed universe and exact 12-project P0 family.
-- Deterministic plan evaluator tested across all **4,096 subsets** of the active family.
-- No geometry-derived membership, fabricated evidence, score, ranking, or optimization logic.
-
-**M3 — Core FastAPI APIs**
-- `GET /health` (authoritative production health; `/healthz` remains a local/
-  backward-compatible alias)
-- `GET /api/v1/bootstrap`
-- `POST /api/v1/plans/evaluate`
-- `GET /api/v1/benchmark`
-- `POST /api/v1/benchmark/compare`
-- Fail-closed core startup validation.
-- Independent current/reference plan evaluation.
-- One-way Historical Benchmark dependency.
-- Local benchmark failure containment.
-- Typed API errors and bounded request bodies.
-
-### Current application checkpoint
-
-**Frontend through F5B — complete locally, awaiting checkpoint publication**
-
-The React/TypeScript/Vite/Leaflet application now includes:
-
-- Explore
-- Funding Plan
-- Project Detail
-- Scenario/session lifecycle
-- Data & Methodology
-- Help & Resources
-- map layers and non-map fallback behavior
-- isolated Historical Benchmark
-- accessible keyboard-first interaction
-- conspicuous fixture-mode presentation during development
-- bounded, context-aware Gemini explanations through the backend
-
-The required F5B Gemini explanation integration is implemented behind the
-server-side Vertex AI boundary. Containerization and deployment remain later
-milestones; no browser credential or direct frontend model call is used.
+ClimateCapital AI is a historical decision-support prototype and does not represent an official City of Austin funding recommendation.
 
 ---
 
+## How It Works
 
-        +-- browser sessionStorage only
+### 1. Explore projects
+Browse and filter all 106 governed projects, inspect project evidence, and explore available geographic context through an interactive map.
+
+**74 projects have supported map context**, while **32 remain fully available with an explicit “Location unavailable” state**.
+
+### 2. Set an Available Budget
+In **Funding Plan**, analysts can use the **$332M historical matched-cohort reference preset** or enter a custom budget.
+
+### 3. Construct a reproducible Funding Plan
+ClimateCapital AI automatically processes eligible projects from higher to lower official **PRB Funding Priority**, using complete project funding requests.
+
+For the $332M reference scenario, the application produces:
+
+- **18 projects selected**
+- **$331,825,000 funded**
+- **$175,000 remaining**
+
+### 4. Keep human judgment explicit
+If multiple projects have the same Funding Priority and the remaining budget cannot fund the entire tied group, ClimateCapital AI does not invent a hidden tie-breaker.
+
+Instead, it presents an **Analyst Resolution**. The analyst reviews the tied projects and makes the decision before deterministic plan construction continues.
+
+### 5. Use Gemini for explanation
+**Gemini on Vertex AI** can explain project evidence, compare PRB scoring components, interpret Funding Plan results, explain tied boundaries, and clarify methodology.
+
+Gemini does **not** change official scores, invent missing evidence, resolve tied funding decisions, or independently create the authoritative Funding Plan.
+
+> **AI explains. Analysts decide. Results are reproducible.**
+
+---
+
+## System Architecture
+
+![ClimateCapital AI System Architecture](docs/architecture/climatecapital-ai-system-architecture.png)
+
+ClimateCapital AI separates data governance, authoritative decision logic, and generative AI.
+
+**Public data → GCS & BigQuery preparation → governed historical dataset → FastAPI deterministic services → React interface → Gemini explanation → Cloud Run**
+
+Google Cloud Storage and BigQuery support **data preparation, reconciliation, and governance**. They are not queried directly by the live application.
+
+The deployed application uses a validated, versioned dataset packaged with the release.
+
+---
+
+## Google Cloud & Tech Stack
+
+| Area | Technology |
+|---|---|
+| Frontend | React, TypeScript, Vite |
+| Mapping | Leaflet |
+| Backend | Python, FastAPI |
+| AI | Gemini 3.5 Flash on Vertex AI |
+| Data preparation | BigQuery, Google Cloud Storage |
+| Build | Google Cloud Build |
+| Container registry | Artifact Registry |
+| Deployment | Google Cloud Run |
+| Security | IAM & Service Accounts |
+| Observability | Cloud Logging |
+
+---
+
+## Responsible AI Design
+
+ClimateCapital AI deliberately separates AI explanation from authoritative decision-making:
+
+- **Governed data establishes the facts**
+- **Deterministic code performs the calculations**
+- **Analysts resolve genuinely ambiguous decisions**
+- **Gemini explains the evidence**
+
+This keeps the planning process transparent, reproducible, and auditable while still benefiting from generative AI.
+
+---
+
+## Historical Scenario
+
+The prototype uses a **January 21, 2026 historical decision snapshot** so later recommendations or outcomes do not influence the analysis.
+
+The purpose is to demonstrate how governed public data, deterministic analytics, human judgment, and explainable AI can work together in real-world municipal capital planning.
+
+---
+
+## Try It
+
+**Explore a project → review its evidence → set an Available Budget → review the Funding Plan → resolve a tied boundary if one appears → ask Gemini to explain the result.**
+
+**Live App:**  
+https://climatecapital-ai-ksojl5xdtq-uc.a.run.app
