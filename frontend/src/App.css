@@ -2123,43 +2123,14 @@ body {
 }
 
 .brand {
-  gap: 0.65rem;
-  align-items: center;
-  margin: 0 0.25rem 2rem;
-  color: #ffffff;
+  display: block;
+  margin: 0 0 2rem;
 }
 
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  place-items: center;
-  color: #20d687;
-}
-
-.brand-mark svg {
+.brand-image {
+  display: block;
   width: 100%;
-  height: 100%;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-.brand-name {
-  display: grid;
-  gap: 0;
-  line-height: 1.05;
-}
-
-.brand-name strong {
-  font-size: 0.98rem;
-}
-
-.brand-name span {
-  color: #89a0b7;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  height: auto;
 }
 
 .sidebar-navigation {
@@ -3617,19 +3588,8 @@ body {
   }
 
   .brand {
-    margin: 0;
-  }
-
-  .brand-mark {
-    width: 32px;
-    height: 32px;
-    flex-basis: 32px;
-  }
-
-  .brand-name {
-    display: flex;
-    gap: 0.3rem;
-    align-items: baseline;
+    width: min(270px, 100%);
+    margin: 0 0 0.85rem;
   }
 
   .sidebar-navigation {

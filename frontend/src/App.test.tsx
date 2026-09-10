@@ -20,6 +20,11 @@ describe('ClimateCapital application shell', () => {
   it('groups workspace and reference navigation while keeping the profile last', async () => {
     render(<App bootstrapLoader={async () => bootstrapFixture()} />)
     await screen.findByRole('heading', { name: 'Explore projects' })
+    expect(
+      screen.getByRole('img', {
+        name: 'ClimateCapital AI — Data for a more resilient tomorrow',
+      }),
+    ).toBeVisible()
 
     const primary = screen.getByRole('navigation', {
       name: 'Primary workspace navigation',

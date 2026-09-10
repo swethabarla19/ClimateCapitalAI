@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { fetchBootstrap } from './api/client'
 import type { BootstrapSuccessEnvelope } from './api/contracts'
+import climateCapitalSidebarBrand from './assets/climatecapital-sidebar-brand.png'
 import { Explore } from './features/Explore'
 import { FundingPlan } from './features/FundingPlan'
 import { DataMethodology } from './features/DataMethodology'
@@ -371,14 +372,11 @@ function App({
 
       <aside className="sidebar">
         <div className="brand">
-          <span className="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="17" />
-              <path d="M9 23c5-9 10 1 16-7 2-3 4-3 6-2" />
-              <path d="M13 28c5-2 9-6 13-12" />
-            </svg>
-          </span>
-          <span className="brand-name"><strong>ClimateCapital</strong><span>AI</span></span>
+          <img
+            className="brand-image"
+            src={climateCapitalSidebarBrand}
+            alt="ClimateCapital AI — Data for a more resilient tomorrow"
+          />
         </div>
 
         <div className="sidebar-navigation">
