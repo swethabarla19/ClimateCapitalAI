@@ -11,7 +11,10 @@ import {
   complete332PlanFixture,
 } from './test/bootstrapFixture'
 
-beforeEach(() => window.sessionStorage.clear())
+beforeEach(() => {
+  window.sessionStorage.clear()
+  window.history.replaceState(null, '', '/')
+})
 
 describe('ClimateCapital application shell', () => {
   it('groups workspace and reference navigation while keeping the profile last', async () => {
@@ -197,6 +200,14 @@ describe('ClimateCapital application shell', () => {
   expect(document.body).toHaveTextContent(
     /not an official City of Austin recommendation/i,
   )
+
+  expect(document.body).toHaveTextContent(
+    /\$332M historical matched-cohort reference preset/i,
+  )
+  expect(document.body).toHaveTextContent(
+    /74 of the 106 projects.*remaining 32 projects/i,
+  )
+  expect(document.body).not.toHaveTextContent(/reference budgets/i)
 })
 
   it('provides first-time-user Help & Resources guidance without giving Gemini decision authority', async () => {
@@ -223,6 +234,60 @@ describe('ClimateCapital application shell', () => {
     expect(document.body).toHaveTextContent(
       /The final choice remains an analyst decision/i,
     )
+
+    expect(document.body).toHaveTextContent(
+      /\$332M historical matched-cohort reference preset/i,
+    )
+    expect(document.body).toHaveTextContent(
+      /74 governed mapped project contexts.*remaining 32 projects/i,
+    )
+    expect(document.body).not.toHaveTextContent(/reference budgets/i)
+    expect(document.body).not.toHaveTextContent(
+      /project locations displayed on a map/i,
+    )
+  })
+
+  it.each([
+    ['#explore', 'Explore projects'],
+    ['#funding-plan', 'Funding Plan'],
+    ['#historical-benchmark', 'January 21, 2026 Historical Benchmark'],
+    ['#data-methodology', 'Data & Methodology'],
+    ['#help-resources', 'Help & Resources'],
+  ])('opens the supported direct route %s', async (hash, heading) => {
+    window.history.replaceState(null, '', hash)
+
+    render(
+      <App
+        bootstrapLoader={async () => bootstrapFixture()}
+        historicalBenchmarkLoader={async () => benchmarkFixture()}
+      />,
+    )
+
+    expect(
+      await screen.findByRole('heading', { name: heading }),
+    ).toBeInTheDocument()
+  })
+
+  it('writes the selected route hash and restores it on refresh', async () => {
+    const user = userEvent.setup()
+    const app = (
+      <App bootstrapLoader={async () => bootstrapFixture()} />
+    )
+    const { unmount } = render(app)
+
+    await user.click(await screen.findByRole('link', { name: 'Funding Plan' }))
+    expect(window.location.hash).toBe('#funding-plan')
+    expect(
+      screen.getByRole('heading', { name: 'Funding Plan' }),
+    ).toBeInTheDocument()
+
+    unmount()
+    window.sessionStorage.clear()
+    render(app)
+
+    expect(
+      await screen.findByRole('heading', { name: 'Funding Plan' }),
+    ).toBeInTheDocument()
   })
 
   it('initializes from the activated cross-category bootstrap shape', async () => {

@@ -36,10 +36,11 @@ export function HelpResources() {
             <li>
               <strong>Choose an Available Project Budget</strong>
               <span>
-                Open Funding Plan and choose one of the reference budgets or
-                enter your own. Reference presets only populate the budget.
-                They do not reproduce historical project selections or impose
-                historical category allocations.
+                Open Funding Plan and select the $332M historical
+                matched-cohort reference preset, or enter your own custom
+                Available Project Budget. The preset only populates the
+                budget; it does not reproduce historical project selections
+                or impose historical category allocations.
               </span>
             </li>
 
@@ -190,13 +191,20 @@ export function HelpResources() {
 
             <details>
               <summary>
-                Why aren&apos;t project locations displayed on a map?
+                Why are some project locations unavailable on the map?
               </summary>
               <p>
-                Governed project-level geometry is not available in the
-                historical snapshot.
+                Explore displays <strong>74 governed mapped project contexts</strong>{' '}
+                across the 106-project universe. The remaining{' '}
+                <strong>32 projects</strong> stay available in Explore,
+                project details, and Funding Plan with an explicit Location
+                unavailable state.
               </p>
-              <p>ClimateCapital does not fabricate project locations.</p>
+              <p>
+                ClimateCapital labels the role of available source-native
+                location evidence and does not fabricate missing project
+                locations.
+              </p>
             </details>
 
             <details>

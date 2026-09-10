@@ -237,8 +237,9 @@ export function DataMethodology() {
             <li>
               <strong>Set a budget</strong>
               <span>
-                Choose one of the reference budgets or enter your own
-                Available Project Budget.
+                Select the $332M historical matched-cohort reference preset,
+                or enter a custom Available Project Budget for the scenario
+                you want to evaluate.
               </span>
             </li>
 
@@ -384,31 +385,24 @@ export function DataMethodology() {
           <h2 id="geometry-method-heading">What about project locations?</h2>
 
           <p>
-            Project-level mapped locations are not available in the governed
-            January 21 dataset used by ClimateCapital.
+            Explore shows governed map context for{' '}
+            <strong>74 of the 106 projects</strong>. These source-native
+            locations are labeled by their display role and may represent a
+            project location, facility or site context, park or site context,
+            or a parcel rather than a construction footprint.
           </p>
 
           <p>
-            Rather than guessing where a project belongs, ClimateCapital
-            leaves its location unmarked.
-          </p>
-
-          <p>
-            <strong>
-              0 of 106 projects currently have governed project geometry in
-              this historical dataset.
-            </strong>
-          </p>
-
-          <p>
-            Projects remain fully available for evidence review and Funding
-            Plan analysis.
+            The remaining <strong>32 projects</strong> stay fully available
+            for evidence review and Funding Plan analysis with an explicit{' '}
+            <strong>Location unavailable</strong> state.
           </p>
 
           <p>
             ClimateCapital does not create coordinates from project names,
-            convert Council Districts into project locations, or add estimated
-            map pins.
+            convert Council Districts into project locations, add estimated
+            map pins, or omit a governed project because its location is
+            unavailable.
           </p>
         </section>
 

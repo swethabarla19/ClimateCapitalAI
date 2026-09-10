@@ -61,6 +61,18 @@ const navigation: Array<{
   },
 ]
 
+function routeFromHash(
+  hash: string,
+): PresentationState['route'] | null {
+  return navigation.find((item) => item.href === hash)?.route ?? null
+}
+
+function hashForRoute(route: PresentationState['route']): string {
+  return (
+    navigation.find((item) => item.route === route)?.href ?? '#explore'
+  )
+}
+
 type BootstrapLoader = (
   signal?: AbortSignal,
 ) => Promise<BootstrapSuccessEnvelope>
@@ -121,11 +133,17 @@ function App({
     void bootstrapLoader(controller.signal)
       .then((bootstrap) => {
         const initialization = initializeSessionFromBootstrap(bootstrap)
+        const requestedRoute = routeFromHash(window.location.hash)
+        const session =
+          requestedRoute !== null &&
+          requestedRoute !== initialization.session.presentation.route
+            ? setPresentationRoute(initialization.session, requestedRoute)
+            : initialization.session
 
         setState({
           status: 'READY',
           bootstrap,
-          session: initialization.session,
+          session,
           sessionInitialization: initialization.status,
         })
       })
@@ -148,6 +166,38 @@ function App({
 
     return () => controller.abort()
   }, [bootstrapAttempt, bootstrapLoader])
+
+  useEffect(() => {
+    const applyHashRoute = () => {
+      const requestedRoute = routeFromHash(window.location.hash)
+
+      if (requestedRoute === null) {
+        return
+      }
+
+      setState((current) => {
+        if (
+          current.status !== 'READY' ||
+          current.session.presentation.route === requestedRoute
+        ) {
+          return current
+        }
+
+        return {
+          ...current,
+          session: setPresentationRoute(current.session, requestedRoute),
+        }
+      })
+    }
+
+    window.addEventListener('hashchange', applyHashRoute)
+    window.addEventListener('popstate', applyHashRoute)
+
+    return () => {
+      window.removeEventListener('hashchange', applyHashRoute)
+      window.removeEventListener('popstate', applyHashRoute)
+    }
+  }, [])
 
   if (state.status === 'LOADING') {
     return (
@@ -196,7 +246,20 @@ function App({
   }
 
   const navigate = (route: PresentationState['route']) => {
-    updateSession(setPresentationRoute(session, route))
+    const href = hashForRoute(route)
+
+    if (window.location.hash !== href) {
+      window.history.pushState(null, '', href)
+    }
+
+    setState((current) =>
+      current.status === 'READY'
+        ? {
+            ...current,
+            session: setPresentationRoute(current.session, route),
+          }
+        : current,
+    )
   }
 
   const reloadRuntime = () => {
